@@ -1,0 +1,2807 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="he" xml:lang="he" dir="rtl"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>19&nbsp; Magic Items – מערכת פנטזיה בסיסית לשחקני תפקידים, מהדורה 4</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./gm01.html" rel="next">
+<link href="./treasure.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-cee3e496ba8b573501d842b8d7792f9a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "אין תוצאות",
+    "search-matching-documents-text": "מסמכים תואמים",
+    "search-copy-link-title": "העתק קישור לחיפוש",
+    "search-hide-matches-text": "הסתר התאמות נוספות",
+    "search-more-match-text": "התאמה נוספת במסמך זה",
+    "search-more-matches-text": "התאמות נוספות במסמך זה",
+    "search-clear-button-title": "נקה",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "בטל",
+    "search-submit-button-title": "שלח",
+    "search-label": "חפש"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JS65M33XZB"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
+</script>
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre">
+<script src="../../translator/lang-switch.js"></script>
+
+
+<link rel="stylesheet" href="custom.css">
+<link rel="stylesheet" href="custom-rtl.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="הצג/הסתר את סרגל הניווט" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./treasure.html">Treasure</a></li><li class="breadcrumb-item"><a href="./magicItems.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Magic Items</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="הצג/הסתר את סרגל הניווט" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="חפש" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">מערכת פנטזיה בסיסית לשחקני תפקידים, מהדורה 4</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="חפש"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Introduction</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./whatIsThis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Player Characters</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./char-creation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Player Characters</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./abilities.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Character Abilities</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./races.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Character Races</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./class.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Character Classes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./equipment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Equipment</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./vehicles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Vehicles</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Magic</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./spells.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Spells</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./allSpells.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Spells, Alphabetical</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Adventure</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dungeonAdventures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Dungeon Adventures</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./wildAdventures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Wilderness Adventures</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hirelings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Hirelings</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./advancement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Advancement</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Encounters</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./combat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Combat Encounters</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Monsters</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./monsters.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Monsters Intro</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./monstersAll.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Monster Descriptions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./monstersTab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Monsters Index</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Treasure</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./treasure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Treasure</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./magicItems.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Magic Items</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+ <span class="menu-text">GM Information</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./gm01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Managing Encounters</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./gm02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Crafting Adventures</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendix</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix_interactive.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Interactive tools</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendixMapmaker.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Dungeon Maker</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./char_sheet.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Character Sheet</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
+ <span class="menu-text">Extra</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./extraClasses.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Additional Classes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./extraRaces.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Additional Races</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./extraRules.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Aditional and Alternate Rules</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./he/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">הקדמה</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true">
+ <span class="menu-text">מבוא</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./he/whatIsThis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">מבוא</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true">
+ <span class="menu-text">דמויות שחקן</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./he/char-creation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">דמויות שחקן</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true">
+ <span class="menu-text">מפגשים</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./he/combat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">מפגשי קרב</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">תוכן עניינים</h2>
+   
+  <ul>
+  <li><a href="#magic-weapons" id="toc-magic-weapons" class="nav-link active" data-scroll-target="#magic-weapons">Magic Weapons</a></li>
+  <li><a href="#magic-armor" id="toc-magic-armor" class="nav-link" data-scroll-target="#magic-armor">Magic Armor</a></li>
+  <li><a href="#potions" id="toc-potions" class="nav-link" data-scroll-target="#potions">Potions</a></li>
+  <li><a href="#scrolls" id="toc-scrolls" class="nav-link" data-scroll-target="#scrolls">Scrolls</a></li>
+  <li><a href="#rings" id="toc-rings" class="nav-link" data-scroll-target="#rings">Rings</a></li>
+  <li><a href="#wands-staves-and-rods" id="toc-wands-staves-and-rods" class="nav-link" data-scroll-target="#wands-staves-and-rods">Wands, Staves and Rods</a></li>
+  <li><a href="#miscellaneous-magic-items" id="toc-miscellaneous-magic-items" class="nav-link" data-scroll-target="#miscellaneous-magic-items">Miscellaneous Magic Items</a>
+  <ul>
+  <li><a href="#effect-subtables" id="toc-effect-subtables" class="nav-link" data-scroll-target="#effect-subtables"><strong>Effect Subtables</strong></a></li>
+  <li><a href="#effect-subtable-1" id="toc-effect-subtable-1" class="nav-link" data-scroll-target="#effect-subtable-1"><strong>Effect Subtable 1</strong></a></li>
+  <li><a href="#effect-subtable-2" id="toc-effect-subtable-2" class="nav-link" data-scroll-target="#effect-subtable-2"><strong>Effect Subtable 2</strong></a></li>
+  <li><a href="#form-of-item" id="toc-form-of-item" class="nav-link" data-scroll-target="#form-of-item">Form of Item</a></li>
+  <li><a href="#rare-items" id="toc-rare-items" class="nav-link" data-scroll-target="#rare-items">Rare Items</a></li>
+  </ul></li>
+  <li><a href="#devices-of-summoning-elementals" id="toc-devices-of-summoning-elementals" class="nav-link" data-scroll-target="#devices-of-summoning-elementals">Devices of Summoning Elementals</a></li>
+  <li><a href="#explanation-of-magic-items" id="toc-explanation-of-magic-items" class="nav-link" data-scroll-target="#explanation-of-magic-items">Explanation of Magic Items</a>
+  <ul>
+  <li><a href="#using-magic-items" id="toc-using-magic-items" class="nav-link" data-scroll-target="#using-magic-items">Using Magic Items</a></li>
+  <li><a href="#magic-weapons-1" id="toc-magic-weapons-1" class="nav-link" data-scroll-target="#magic-weapons-1">Magic Weapons</a></li>
+  <li><a href="#magic-armor-1" id="toc-magic-armor-1" class="nav-link" data-scroll-target="#magic-armor-1">Magic Armor</a></li>
+  <li><a href="#potions-1" id="toc-potions-1" class="nav-link" data-scroll-target="#potions-1">Potions</a></li>
+  <li><a href="#scrolls-1" id="toc-scrolls-1" class="nav-link" data-scroll-target="#scrolls-1">Scrolls</a>
+  <ul class="collapse">
+  <li><a href="#spell-scrolls-spell-level" id="toc-spell-scrolls-spell-level" class="nav-link" data-scroll-target="#spell-scrolls-spell-level">Spell Scrolls: Spell Level</a></li>
+  </ul></li>
+  <li><a href="#rings-1" id="toc-rings-1" class="nav-link" data-scroll-target="#rings-1">Rings</a></li>
+  <li><a href="#wands-staves-and-rods-1" id="toc-wands-staves-and-rods-1" class="nav-link" data-scroll-target="#wands-staves-and-rods-1">Wands, Staves and Rods</a></li>
+  <li><a href="#miscellaneous-items" id="toc-miscellaneous-items" class="nav-link" data-scroll-target="#miscellaneous-items">Miscellaneous Items</a></li>
+  <li><a href="#miscellaneous-item-effects" id="toc-miscellaneous-item-effects" class="nav-link" data-scroll-target="#miscellaneous-item-effects">Miscellaneous Item Effects</a></li>
+  <li><a href="#rare-items-1" id="toc-rare-items-1" class="nav-link" data-scroll-target="#rare-items-1">Rare Items</a></li>
+  <li><a href="#devices-for-summoning-elementals" id="toc-devices-for-summoning-elementals" class="nav-link" data-scroll-target="#devices-for-summoning-elementals">Devices for Summoning Elementals</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./treasure.html">Treasure</a></li><li class="breadcrumb-item"><a href="./magicItems.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Magic Items</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Magic Items</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Determine the sort of item found by rolling on the following table:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="7" data-source-offset="-2"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 6;"><span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {generalTableSelect<span class="op">,</span> highlightTableRow} <span class="im">from</span> <span class="st">"./custom.js"</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>viewof form <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">form</span>(</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">button1</span><span class="op">:</span> Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"Any"</span><span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> </span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="dt">reduce</span><span class="op">:</span> () <span class="kw">=&gt;</span> <span class="fu">highlightTableRow</span>(<span class="st">"#armor-weapon-table"</span><span class="op">,</span> </span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>            <span class="fu">generalTableSelect</span>([<span class="dv">1</span><span class="op">,</span><span class="dv">100</span><span class="op">,</span><span class="dv">0</span>]<span class="op">,</span>[[<span class="dv">1</span><span class="op">,</span><span class="dv">25</span>]<span class="op">,</span>[<span class="dv">26</span><span class="op">,</span><span class="dv">35</span>]<span class="op">,</span>[<span class="dv">36</span><span class="op">,</span><span class="dv">55</span>]<span class="op">,</span>[<span class="dv">56</span><span class="op">,</span><span class="dv">85</span>]<span class="op">,</span>[<span class="dv">86</span><span class="op">,</span><span class="dv">90</span>]<span class="op">,</span>[<span class="dv">91</span><span class="op">,</span><span class="dv">95</span>]<span class="op">,</span>[<span class="dv">96</span><span class="op">,</span><span class="dv">100</span>]]))})<span class="op">,</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="dt">button2</span><span class="op">:</span> Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"Weapon or Armor"</span><span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> </span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        <span class="dt">reduce</span><span class="op">:</span> () <span class="kw">=&gt;</span> <span class="fu">highlightTableRow</span>(<span class="st">"#armor-weapon-table"</span><span class="op">,</span> </span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>            <span class="fu">generalTableSelect</span>([<span class="dv">1</span><span class="op">,</span><span class="dv">100</span><span class="op">,</span><span class="dv">0</span>]<span class="op">,</span>[[<span class="dv">1</span><span class="op">,</span><span class="dv">70</span>]<span class="op">,</span> [<span class="dv">71</span><span class="op">,</span><span class="dv">100</span>]]))})<span class="op">,</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="dt">button3</span><span class="op">:</span> Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"Any Except Weapon"</span><span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> </span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        <span class="dt">reduce</span><span class="op">:</span> () <span class="kw">=&gt;</span> <span class="fu">highlightTableRow</span>(<span class="st">"#armor-weapon-table"</span><span class="op">,</span> </span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>            <span class="fu">generalTableSelect</span>([<span class="dv">1</span><span class="op">,</span><span class="dv">100</span><span class="op">,</span><span class="dv">0</span>]<span class="op">,</span>[[<span class="op">-</span><span class="dv">2</span><span class="op">,-</span><span class="dv">1</span>]<span class="op">,</span>[<span class="dv">1</span><span class="op">,</span><span class="dv">12</span>]<span class="op">,</span>[<span class="dv">13</span><span class="op">,</span><span class="dv">40</span>]<span class="op">,</span>[<span class="dv">41</span><span class="op">,</span><span class="dv">79</span>]<span class="op">,</span>[<span class="dv">80</span><span class="op">,</span><span class="dv">86</span>]<span class="op">,</span>[<span class="dv">87</span><span class="op">,</span><span class="dv">93</span>]<span class="op">,</span>[<span class="dv">94</span><span class="op">,</span><span class="dv">100</span>]]))})<span class="op">,</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span> </span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="dt">template</span><span class="op">:</span> (formParts) <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="vs">     &lt;div&gt;</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="vs">       &lt;div style="</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="vs">         display: grid;</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="vs">         grid-template-columns: 15% 30% 30%;</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="vs">         column-gap: 10px</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="vs">       "&gt;</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="vs">         </span><span class="sc">${</span><span class="bu">Object</span><span class="op">.</span><span class="fu">values</span>(formParts)<span class="sc">}</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="vs">       &lt;/div&gt;</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="vs">     &lt;/div&gt;`</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  })</span></code></pre></div><button title="העתק ללוח" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div id="armor-weapon-table">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Any</strong></th>
+<th><strong>Weapon or Armor</strong></th>
+<th><strong>Any Except Weapons</strong></th>
+<th><strong>Type of Item</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>01-25</td>
+<td>01-70</td>
+<td></td>
+<td>Weapon</td>
+</tr>
+<tr class="even">
+<td>26-35</td>
+<td>71-00</td>
+<td>01-12</td>
+<td>Armor</td>
+</tr>
+<tr class="odd">
+<td>36-55</td>
+<td></td>
+<td>13-40</td>
+<td>Potion</td>
+</tr>
+<tr class="even">
+<td>56-85</td>
+<td></td>
+<td>41-79</td>
+<td>Scroll</td>
+</tr>
+<tr class="odd">
+<td>86-90</td>
+<td></td>
+<td>80-86</td>
+<td>Ring</td>
+</tr>
+<tr class="even">
+<td>91-95</td>
+<td></td>
+<td>87-93</td>
+<td>Wand, Staff, or Rod</td>
+</tr>
+<tr class="odd">
+<td>96-00</td>
+<td></td>
+<td>94-00</td>
+<td>Miscellaneous Magic</td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="magic-weapons" class="level2">
+<h2 class="anchored" data-anchor-id="magic-weapons">Magic Weapons</h2>
+<p>First, roll d% on the following table to determine the weapon type:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="55" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 54;"><span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"Roll on Table"</span><span class="op">,</span> </span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>{<span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> </span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a><span class="dt">reduce</span><span class="op">:</span> () <span class="kw">=&gt;</span> <span class="fu">highlightTableRow</span>(<span class="st">"#weapon-type-table"</span><span class="op">,</span> </span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a><span class="fu">generalTableSelect</span>([<span class="dv">1</span><span class="op">,</span><span class="dv">100</span><span class="op">,</span><span class="dv">0</span>]<span class="op">,</span>[[<span class="dv">1</span><span class="op">,</span><span class="dv">2</span>]<span class="op">,</span>[<span class="dv">3</span><span class="op">,</span><span class="dv">9</span>]<span class="op">,</span>[<span class="dv">10</span><span class="op">,</span><span class="dv">11</span>]<span class="op">,</span>[<span class="dv">12</span><span class="op">,</span><span class="dv">19</span>]<span class="op">,</span>[<span class="dv">20</span><span class="op">,</span><span class="dv">27</span>]<span class="op">,</span>[<span class="dv">28</span><span class="op">,</span><span class="dv">31</span>]<span class="op">,</span>[<span class="dv">32</span><span class="op">,</span><span class="dv">35</span>]<span class="op">,</span>[<span class="dv">36</span><span class="op">,</span><span class="dv">43</span>]<span class="op">,</span>[<span class="dv">44</span><span class="op">,</span><span class="dv">47</span>]<span class="op">,</span>[<span class="dv">48</span><span class="op">,</span><span class="dv">59</span>]<span class="op">,</span>[<span class="dv">60</span><span class="op">,</span><span class="dv">65</span>]<span class="op">,</span>[<span class="dv">66</span><span class="op">,</span><span class="dv">79</span>]<span class="op">,</span>[<span class="dv">80</span><span class="op">,</span><span class="dv">81</span>]<span class="op">,</span>[<span class="dv">82</span><span class="op">,</span><span class="dv">83</span>]<span class="op">,</span>[<span class="dv">84</span><span class="op">,</span><span class="dv">86</span>]<span class="op">,</span>[<span class="dv">87</span><span class="op">,</span><span class="dv">94</span>]<span class="op">,</span>[<span class="dv">95</span><span class="op">,</span><span class="dv">95</span>]<span class="op">,</span>[<span class="dv">96</span><span class="op">,</span><span class="dv">96</span>]<span class="op">,</span>[<span class="dv">97</span><span class="op">,</span><span class="dv">97</span>]<span class="op">,</span>[<span class="dv">98</span><span class="op">,</span><span class="dv">100</span>]]))})</span></code></pre></div><button title="העתק ללוח" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-2" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div id="weapon-type-table">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>d%</strong></th>
+<th><strong>Weapon Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>01-02</td>
+<td>Great Axe</td>
+</tr>
+<tr class="even">
+<td>03-09</td>
+<td>Battle Axe</td>
+</tr>
+<tr class="odd">
+<td>10-11</td>
+<td>Hand Axe</td>
+</tr>
+<tr class="even">
+<td>12-19</td>
+<td>Shortbow</td>
+</tr>
+<tr class="odd">
+<td>20-27</td>
+<td>Shortbow Arrow</td>
+</tr>
+<tr class="even">
+<td>28-31</td>
+<td>Longbow</td>
+</tr>
+<tr class="odd">
+<td>32-35</td>
+<td>Longbow Arrow</td>
+</tr>
+<tr class="even">
+<td>36-43</td>
+<td>Light Quarrel</td>
+</tr>
+<tr class="odd">
+<td>44-47</td>
+<td>Heavy Quarrel</td>
+</tr>
+<tr class="even">
+<td>48-59</td>
+<td>Dagger</td>
+</tr>
+<tr class="odd">
+<td>60-65</td>
+<td>Shortsword</td>
+</tr>
+<tr class="even">
+<td>66-79</td>
+<td>Longsword</td>
+</tr>
+<tr class="odd">
+<td>80-81</td>
+<td>Scimitar</td>
+</tr>
+<tr class="even">
+<td>82-83</td>
+<td>Two-Handed Sword</td>
+</tr>
+<tr class="odd">
+<td>84-86</td>
+<td>Warhammer</td>
+</tr>
+<tr class="even">
+<td>87-94</td>
+<td>Mace</td>
+</tr>
+<tr class="odd">
+<td>95</td>
+<td>Maul</td>
+</tr>
+<tr class="even">
+<td>96</td>
+<td>Pole Arm</td>
+</tr>
+<tr class="odd">
+<td>97</td>
+<td>Sling Bullet</td>
+</tr>
+<tr class="even">
+<td>98-00</td>
+<td>Spear</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Next, roll on the Weapon Bonus tables. Follow the directions given if a roll on the Special Enemy or Special Ability tables are indicated; generally multiple rolls on the Special Ability table should be ignored when rolled.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="93" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 92;"><span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">form</span>(</span>
+<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a>    <span class="dt">button1</span><span class="op">:</span> Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"d% Melee"</span><span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> </span>
+<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a>        <span class="dt">reduce</span><span class="op">:</span> () <span class="kw">=&gt;</span> <span class="fu">highlightTableRow</span>(<span class="st">"#melee-missile-weapon"</span><span class="op">,</span> </span>
+<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a>            <span class="fu">generalTableSelect</span>([<span class="dv">1</span><span class="op">,</span><span class="dv">100</span><span class="op">,</span><span class="dv">0</span>]<span class="op">,</span>[[<span class="dv">1</span><span class="op">,</span><span class="dv">40</span>]<span class="op">,</span>[<span class="dv">41</span><span class="op">,</span><span class="dv">50</span>]<span class="op">,</span>[<span class="dv">51</span><span class="op">,</span><span class="dv">55</span>]<span class="op">,</span>[<span class="dv">56</span><span class="op">,</span><span class="dv">57</span>]<span class="op">,</span>[<span class="dv">58</span><span class="op">,</span><span class="dv">58</span>]<span class="op">,</span>[<span class="dv">59</span><span class="op">,</span><span class="dv">75</span>]<span class="op">,</span>[<span class="dv">76</span><span class="op">,</span><span class="dv">85</span>]<span class="op">,</span>[<span class="dv">86</span><span class="op">,</span><span class="dv">95</span>]<span class="op">,</span>[<span class="dv">96</span><span class="op">,</span><span class="dv">98</span>]<span class="op">,</span>[<span class="dv">99</span><span class="op">,</span><span class="dv">100</span>]]))})<span class="op">,</span></span>
+<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a>    <span class="dt">button2</span><span class="op">:</span> Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"d% Missile"</span><span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> </span>
+<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a>        <span class="dt">reduce</span><span class="op">:</span> () <span class="kw">=&gt;</span> <span class="fu">highlightTableRow</span>(<span class="st">"#melee-missile-weapon"</span><span class="op">,</span> </span>
+<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a>            <span class="fu">generalTableSelect</span>([<span class="dv">1</span><span class="op">,</span><span class="dv">100</span><span class="op">,</span><span class="dv">0</span>]<span class="op">,</span>[[<span class="dv">1</span><span class="op">,</span><span class="dv">40</span>]<span class="op">,</span>[<span class="dv">47</span><span class="op">,</span><span class="dv">58</span>]<span class="op">,</span>[<span class="dv">59</span><span class="op">,</span><span class="dv">64</span>]<span class="op">,</span>[<span class="op">-</span><span class="dv">2</span><span class="op">,-</span><span class="dv">1</span>]<span class="op">,</span>[<span class="op">-</span><span class="dv">2</span><span class="op">,-</span><span class="dv">1</span>]<span class="op">,</span>[<span class="dv">65</span><span class="op">,</span><span class="dv">82</span>]<span class="op">,</span>[<span class="dv">83</span><span class="op">,</span><span class="dv">94</span>]<span class="op">,</span>[<span class="op">-</span><span class="dv">2</span><span class="op">,-</span><span class="dv">1</span>]<span class="op">,</span>[<span class="dv">95</span><span class="op">,</span><span class="dv">98</span>]<span class="op">,</span>[<span class="dv">99</span><span class="op">,</span><span class="dv">100</span>]]))})<span class="op">,</span></span>
+<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span> </span>
+<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a>    <span class="dt">template</span><span class="op">:</span> (formParts) <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`</span></span>
+<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a><span class="vs">     &lt;div&gt;</span></span>
+<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a><span class="vs">       &lt;div style="</span></span>
+<span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a><span class="vs">         display: grid;</span></span>
+<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a><span class="vs">         grid-template-columns: 30% 30% ;</span></span>
+<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a><span class="vs">         column-gap: 10px</span></span>
+<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a><span class="vs">       "&gt;</span></span>
+<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a><span class="vs">         </span><span class="sc">${</span><span class="bu">Object</span><span class="op">.</span><span class="fu">values</span>(formParts)<span class="sc">}</span></span>
+<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a><span class="vs">       &lt;/div&gt;</span></span>
+<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a><span class="vs">     &lt;/div&gt;`</span></span>
+<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a>  })</span></code></pre></div><button title="העתק ללוח" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-3" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div id="melee-missile-weapon">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>d% Melee</strong></th>
+<th><strong>d% Missile</strong></th>
+<th><strong>Weapon Bonus</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>01-40</td>
+<td>01-46</td>
+<td>+1</td>
+</tr>
+<tr class="even">
+<td>41-50</td>
+<td>47-58</td>
+<td>+2</td>
+</tr>
+<tr class="odd">
+<td>51-55</td>
+<td>59-64</td>
+<td>+3</td>
+</tr>
+<tr class="even">
+<td>56-57</td>
+<td></td>
+<td>+4</td>
+</tr>
+<tr class="odd">
+<td>58</td>
+<td></td>
+<td>+5</td>
+</tr>
+<tr class="even">
+<td>59-75</td>
+<td>65-82</td>
+<td>+1, +2 vs.&nbsp;Special Enemy</td>
+</tr>
+<tr class="odd">
+<td>76-85</td>
+<td>83-94</td>
+<td>+1, +3 vs.&nbsp;Special Enemy</td>
+</tr>
+<tr class="even">
+<td>86-95</td>
+<td></td>
+<td>Roll Again + Special Ability</td>
+</tr>
+<tr class="odd">
+<td>96-98</td>
+<td>95-98</td>
+<td>Cursed, -1*</td>
+</tr>
+<tr class="even">
+<td>99-00</td>
+<td>99-00</td>
+<td>Cursed, -2*</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>* If cursed weapons are rolled along with special abilities, ignore the special ability roll.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb4" data-startfrom="139" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 138;"><span id="cb4-139"><a href="#cb4-139" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"Roll on Table"</span><span class="op">,</span> </span>
+<span id="cb4-140"><a href="#cb4-140" aria-hidden="true" tabindex="-1"></a>{<span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> </span>
+<span id="cb4-141"><a href="#cb4-141" aria-hidden="true" tabindex="-1"></a><span class="dt">reduce</span><span class="op">:</span> () <span class="kw">=&gt;</span> <span class="fu">highlightTableRow</span>(<span class="st">"#special-enemy-table"</span><span class="op">,</span> </span>
+<span id="cb4-142"><a href="#cb4-142" aria-hidden="true" tabindex="-1"></a><span class="fu">generalTableSelect</span>([<span class="dv">1</span><span class="op">,</span><span class="dv">6</span><span class="op">,</span><span class="dv">0</span>]<span class="op">,</span>[[<span class="dv">1</span><span class="op">,</span><span class="dv">1</span>]<span class="op">,</span>[<span class="dv">2</span><span class="op">,</span><span class="dv">2</span>]<span class="op">,</span>[<span class="dv">3</span><span class="op">,</span><span class="dv">3</span>]<span class="op">,</span>[<span class="dv">4</span><span class="op">,</span><span class="dv">4</span>]<span class="op">,</span>[<span class="dv">5</span><span class="op">,</span><span class="dv">5</span>]<span class="op">,</span>[<span class="dv">6</span><span class="op">,</span><span class="dv">6</span>]]))})</span></code></pre></div><button title="העתק ללוח" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-4" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div id="special-enemy-table">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>1d6</strong></th>
+<th><strong>Special Enemy</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Dragons</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Enchanted</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Lycanthropes</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Regenerators</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Spell Users</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Undead</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb5" data-startfrom="162" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 161;"><span id="cb5-162"><a href="#cb5-162" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"Roll on Table"</span><span class="op">,</span> </span>
+<span id="cb5-163"><a href="#cb5-163" aria-hidden="true" tabindex="-1"></a>{<span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> </span>
+<span id="cb5-164"><a href="#cb5-164" aria-hidden="true" tabindex="-1"></a><span class="dt">reduce</span><span class="op">:</span> () <span class="kw">=&gt;</span> <span class="fu">highlightTableRow</span>(<span class="st">"#special-ability-table"</span><span class="op">,</span> </span>
+<span id="cb5-165"><a href="#cb5-165" aria-hidden="true" tabindex="-1"></a><span class="fu">generalTableSelect</span>([<span class="dv">1</span><span class="op">,</span><span class="dv">20</span><span class="op">,</span><span class="dv">0</span>]<span class="op">,</span>[[<span class="dv">1</span><span class="op">,</span><span class="dv">9</span>]<span class="op">,</span>[<span class="dv">10</span><span class="op">,</span><span class="dv">11</span>]<span class="op">,</span>[<span class="dv">12</span><span class="op">,</span><span class="dv">12</span>]<span class="op">,</span>[<span class="dv">13</span><span class="op">,</span><span class="dv">16</span>]<span class="op">,</span>[<span class="dv">17</span><span class="op">,</span><span class="dv">19</span>]<span class="op">,</span>[<span class="dv">20</span><span class="op">,</span><span class="dv">20</span>]]))})</span></code></pre></div><button title="העתק ללוח" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-5" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div id="special-ability-table">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>1d20</strong></th>
+<th><strong>Special Ability</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>01-09</td>
+<td>Casts Light on Command</td>
+</tr>
+<tr class="even">
+<td>10-11</td>
+<td>Charm Person</td>
+</tr>
+<tr class="odd">
+<td>12</td>
+<td>Drains Energy</td>
+</tr>
+<tr class="even">
+<td>13-16</td>
+<td>Flames on Command</td>
+</tr>
+<tr class="odd">
+<td>17-19</td>
+<td>Locate Objects</td>
+</tr>
+<tr class="even">
+<td>20</td>
+<td>Wishes</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="magic-armor" class="level2">
+<h2 class="anchored" data-anchor-id="magic-armor">Magic Armor</h2>
+<p>Generate the type and bonus of each item of magic armor on the tables below.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb6" data-startfrom="188" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 187;"><span id="cb6-188"><a href="#cb6-188" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">form</span>(</span>
+<span id="cb6-189"><a href="#cb6-189" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb6-190"><a href="#cb6-190" aria-hidden="true" tabindex="-1"></a>    <span class="dt">button1</span><span class="op">:</span> Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"d% Armor Type"</span><span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> </span>
+<span id="cb6-191"><a href="#cb6-191" aria-hidden="true" tabindex="-1"></a>        <span class="dt">reduce</span><span class="op">:</span> () <span class="kw">=&gt;</span> <span class="fu">highlightTableRow</span>(<span class="st">"#magic-armor-table"</span><span class="op">,</span> </span>
+<span id="cb6-192"><a href="#cb6-192" aria-hidden="true" tabindex="-1"></a>            <span class="fu">generalTableSelect</span>([<span class="dv">1</span><span class="op">,</span><span class="dv">100</span><span class="op">,</span><span class="dv">0</span>]<span class="op">,</span>[[<span class="dv">1</span><span class="op">,</span><span class="dv">9</span>]<span class="op">,</span>[<span class="dv">10</span><span class="op">,</span><span class="dv">28</span>]<span class="op">,</span>[<span class="dv">29</span><span class="op">,</span><span class="dv">43</span>]<span class="op">,</span>[<span class="dv">44</span><span class="op">,</span><span class="dv">100</span>]]))})<span class="op">,</span></span>
+<span id="cb6-193"><a href="#cb6-193" aria-hidden="true" tabindex="-1"></a>    <span class="dt">button2</span><span class="op">:</span> Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"d% Armor Bonus"</span><span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> </span>
+<span id="cb6-194"><a href="#cb6-194" aria-hidden="true" tabindex="-1"></a>        <span class="dt">reduce</span><span class="op">:</span> () <span class="kw">=&gt;</span> <span class="fu">highlightTableRow</span>(<span class="st">"#magic-armor-table"</span><span class="op">,</span> </span>
+<span id="cb6-195"><a href="#cb6-195" aria-hidden="true" tabindex="-1"></a>            <span class="fu">generalTableSelect</span>([<span class="dv">1</span><span class="op">,</span><span class="dv">100</span><span class="op">,</span><span class="dv">0</span>]<span class="op">,</span>[[<span class="dv">1</span><span class="op">,</span><span class="dv">50</span>]<span class="op">,</span>[<span class="dv">51</span><span class="op">,</span><span class="dv">80</span>]<span class="op">,</span>[<span class="dv">81</span><span class="op">,</span><span class="dv">90</span>]<span class="op">,</span>[<span class="dv">91</span><span class="op">,</span><span class="dv">95</span>]<span class="op">,</span>[<span class="dv">92</span><span class="op">,</span><span class="dv">100</span>]]))})<span class="op">,</span></span>
+<span id="cb6-196"><a href="#cb6-196" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span> </span>
+<span id="cb6-197"><a href="#cb6-197" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb6-198"><a href="#cb6-198" aria-hidden="true" tabindex="-1"></a>    <span class="dt">template</span><span class="op">:</span> (formParts) <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`</span></span>
+<span id="cb6-199"><a href="#cb6-199" aria-hidden="true" tabindex="-1"></a><span class="vs">     &lt;div&gt;</span></span>
+<span id="cb6-200"><a href="#cb6-200" aria-hidden="true" tabindex="-1"></a><span class="vs">       &lt;div style="</span></span>
+<span id="cb6-201"><a href="#cb6-201" aria-hidden="true" tabindex="-1"></a><span class="vs">         display: grid;</span></span>
+<span id="cb6-202"><a href="#cb6-202" aria-hidden="true" tabindex="-1"></a><span class="vs">         grid-template-columns: 40% 40% ;</span></span>
+<span id="cb6-203"><a href="#cb6-203" aria-hidden="true" tabindex="-1"></a><span class="vs">         column-gap: 10px</span></span>
+<span id="cb6-204"><a href="#cb6-204" aria-hidden="true" tabindex="-1"></a><span class="vs">       "&gt;</span></span>
+<span id="cb6-205"><a href="#cb6-205" aria-hidden="true" tabindex="-1"></a><span class="vs">         </span><span class="sc">${</span><span class="bu">Object</span><span class="op">.</span><span class="fu">values</span>(formParts)<span class="sc">}</span></span>
+<span id="cb6-206"><a href="#cb6-206" aria-hidden="true" tabindex="-1"></a><span class="vs">       &lt;/div&gt;</span></span>
+<span id="cb6-207"><a href="#cb6-207" aria-hidden="true" tabindex="-1"></a><span class="vs">     &lt;/div&gt;`</span></span>
+<span id="cb6-208"><a href="#cb6-208" aria-hidden="true" tabindex="-1"></a>  })</span></code></pre></div><button title="העתק ללוח" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-6" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div id="magic-armor-table">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>d%</strong></th>
+<th><strong>Armor Type</strong></th>
+<th><strong>d%</strong></th>
+<th><strong>Armor Bonus</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>01-09</td>
+<td>Leather Armor</td>
+<td>01-50</td>
+<td>+1</td>
+</tr>
+<tr class="even">
+<td>10-28</td>
+<td>Chain Mail</td>
+<td>51-80</td>
+<td>+2</td>
+</tr>
+<tr class="odd">
+<td>29-43</td>
+<td>Plate Mail</td>
+<td>81-90</td>
+<td>+3</td>
+</tr>
+<tr class="even">
+<td>44-00</td>
+<td>Shield</td>
+<td>91-95</td>
+<td>Cursed *</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>96-00</td>
+<td>Cursed, AC 11 **</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>* If Cursed armor is rolled, roll again and reverse the bonus (e.g., -1 instead of +1).</p>
+<p>** This armor has AC 11 but appears to be +1 when tested.</p>
+</section>
+<section id="potions" class="level2">
+<h2 class="anchored" data-anchor-id="potions">Potions</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb7" data-startfrom="232" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 231;"><span id="cb7-232"><a href="#cb7-232" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"Roll on Table"</span><span class="op">,</span> </span>
+<span id="cb7-233"><a href="#cb7-233" aria-hidden="true" tabindex="-1"></a>{<span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> </span>
+<span id="cb7-234"><a href="#cb7-234" aria-hidden="true" tabindex="-1"></a><span class="dt">reduce</span><span class="op">:</span> () <span class="kw">=&gt;</span> <span class="fu">highlightTableRow</span>(<span class="st">"#potions-random-table"</span><span class="op">,</span> </span>
+<span id="cb7-235"><a href="#cb7-235" aria-hidden="true" tabindex="-1"></a><span class="fu">generalTableSelect</span>([<span class="dv">1</span><span class="op">,</span><span class="dv">100</span><span class="op">,</span><span class="dv">0</span>]<span class="op">,</span>[[<span class="dv">1</span><span class="op">,</span><span class="dv">3</span>]<span class="op">,</span> [<span class="dv">4</span><span class="op">,</span><span class="dv">6</span>]<span class="op">,</span> [<span class="dv">7</span><span class="op">,</span><span class="dv">8</span>]<span class="op">,</span> [<span class="dv">9</span><span class="op">,</span><span class="dv">11</span>]<span class="op">,</span> [<span class="dv">12</span><span class="op">,</span><span class="dv">13</span>]<span class="op">,</span> [<span class="dv">14</span><span class="op">,</span><span class="dv">16</span>]<span class="op">,</span> [<span class="dv">17</span><span class="op">,</span><span class="dv">19</span>]<span class="op">,</span> [<span class="dv">20</span><span class="op">,</span><span class="dv">22</span>]<span class="op">,</span> [<span class="dv">23</span><span class="op">,</span><span class="dv">25</span>]<span class="op">,</span> [<span class="dv">26</span><span class="op">,</span><span class="dv">32</span>]<span class="op">,</span> [<span class="dv">33</span><span class="op">,</span><span class="dv">35</span>]<span class="op">,</span> [<span class="dv">36</span><span class="op">,</span><span class="dv">39</span>]<span class="op">,</span> [<span class="dv">40</span><span class="op">,</span><span class="dv">43</span>]<span class="op">,</span> [<span class="dv">44</span><span class="op">,</span><span class="dv">47</span>]<span class="op">,</span> [<span class="dv">48</span><span class="op">,</span><span class="dv">51</span>]<span class="op">,</span> [<span class="dv">52</span><span class="op">,</span><span class="dv">55</span>]<span class="op">,</span> [<span class="dv">56</span><span class="op">,</span><span class="dv">59</span>]<span class="op">,</span> [<span class="dv">60</span><span class="op">,</span><span class="dv">63</span>]<span class="op">,</span> [<span class="dv">64</span><span class="op">,</span><span class="dv">68</span>]<span class="op">,</span> [<span class="dv">69</span><span class="op">,</span><span class="dv">72</span>]<span class="op">,</span> [<span class="dv">73</span><span class="op">,</span><span class="dv">76</span>]<span class="op">,</span> [<span class="dv">77</span><span class="op">,</span><span class="dv">80</span>]<span class="op">,</span> [<span class="dv">81</span><span class="op">,</span><span class="dv">84</span>]<span class="op">,</span> [<span class="dv">85</span><span class="op">,</span><span class="dv">86</span>]<span class="op">,</span> [<span class="dv">87</span><span class="op">,</span><span class="dv">89</span>]<span class="op">,</span> [<span class="dv">90</span><span class="op">,</span><span class="dv">97</span>]<span class="op">,</span> [<span class="dv">98</span><span class="op">,</span><span class="dv">100</span>]]))})</span></code></pre></div><button title="העתק ללוח" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-7" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div id="potions-random-table">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>d%</strong></th>
+<th><strong>Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>01-03</td>
+<td>Clairaudience</td>
+</tr>
+<tr class="even">
+<td>04-06</td>
+<td>Clairvoyance</td>
+</tr>
+<tr class="odd">
+<td>07-08</td>
+<td>Cold Resistance</td>
+</tr>
+<tr class="even">
+<td>09-11</td>
+<td>Control Animal</td>
+</tr>
+<tr class="odd">
+<td>12-13</td>
+<td>Control Dragon</td>
+</tr>
+<tr class="even">
+<td>14-16</td>
+<td>Control Giant</td>
+</tr>
+<tr class="odd">
+<td>17-19</td>
+<td>Control Human</td>
+</tr>
+<tr class="even">
+<td>20-22</td>
+<td>Control Plant</td>
+</tr>
+<tr class="odd">
+<td>23-25</td>
+<td>Control Undead</td>
+</tr>
+<tr class="even">
+<td>26-32</td>
+<td>Delusion</td>
+</tr>
+<tr class="odd">
+<td>33-35</td>
+<td>Diminution</td>
+</tr>
+<tr class="even">
+<td>36-39</td>
+<td>Fire Resistance</td>
+</tr>
+<tr class="odd">
+<td>40-43</td>
+<td>Flying</td>
+</tr>
+<tr class="even">
+<td>44-47</td>
+<td>Gaseous Form</td>
+</tr>
+<tr class="odd">
+<td>48-51</td>
+<td>Giant Strength</td>
+</tr>
+<tr class="even">
+<td>52-55</td>
+<td>Growth</td>
+</tr>
+<tr class="odd">
+<td>56-59</td>
+<td>Healing</td>
+</tr>
+<tr class="even">
+<td>60-63</td>
+<td>Heroism</td>
+</tr>
+<tr class="odd">
+<td>64-68</td>
+<td>Invisibility</td>
+</tr>
+<tr class="even">
+<td>69-72</td>
+<td>Invulnerability</td>
+</tr>
+<tr class="odd">
+<td>73-76</td>
+<td>Levitation</td>
+</tr>
+<tr class="even">
+<td>77-80</td>
+<td>Longevity</td>
+</tr>
+<tr class="odd">
+<td>81-84</td>
+<td>Mind Reading</td>
+</tr>
+<tr class="even">
+<td>85-86</td>
+<td>Poison</td>
+</tr>
+<tr class="odd">
+<td>87-89</td>
+<td>Polymorph Self</td>
+</tr>
+<tr class="even">
+<td>90-97</td>
+<td>Speed</td>
+</tr>
+<tr class="odd">
+<td>98-00</td>
+<td>Treasure Finding</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="scrolls" class="level2">
+<h2 class="anchored" data-anchor-id="scrolls">Scrolls</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb8" data-startfrom="277" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 276;"><span id="cb8-277"><a href="#cb8-277" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"Roll on Table"</span><span class="op">,</span> </span>
+<span id="cb8-278"><a href="#cb8-278" aria-hidden="true" tabindex="-1"></a>{<span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> </span>
+<span id="cb8-279"><a href="#cb8-279" aria-hidden="true" tabindex="-1"></a><span class="dt">reduce</span><span class="op">:</span> () <span class="kw">=&gt;</span> <span class="fu">highlightTableRow</span>(<span class="st">"#scrolls-table"</span><span class="op">,</span> </span>
+<span id="cb8-280"><a href="#cb8-280" aria-hidden="true" tabindex="-1"></a><span class="fu">generalTableSelect</span>([<span class="dv">1</span><span class="op">,</span><span class="dv">100</span><span class="op">,</span><span class="dv">0</span>]<span class="op">,</span>[[<span class="dv">1</span><span class="op">,</span><span class="dv">3</span>]<span class="op">,</span> [<span class="dv">4</span><span class="op">,</span><span class="dv">6</span>]<span class="op">,</span> [<span class="dv">7</span><span class="op">,</span><span class="dv">8</span>]<span class="op">,</span> [<span class="dv">9</span><span class="op">,</span><span class="dv">9</span> ]<span class="op">,</span> [<span class="dv">10</span><span class="op">,</span><span class="dv">15</span>]<span class="op">,</span> [<span class="dv">16</span><span class="op">,</span><span class="dv">20</span>]<span class="op">,</span> [<span class="dv">21</span><span class="op">,</span><span class="dv">25</span>]<span class="op">,</span> [<span class="dv">26</span><span class="op">,</span><span class="dv">29</span>]<span class="op">,</span> [<span class="dv">30</span><span class="op">,</span><span class="dv">32</span>]<span class="op">,</span> [<span class="dv">33</span><span class="op">,</span><span class="dv">34</span>]<span class="op">,</span> [<span class="dv">35</span><span class="op">,</span><span class="dv">35</span>  ]<span class="op">,</span> [<span class="dv">36</span><span class="op">,</span><span class="dv">40</span>]<span class="op">,</span> [<span class="dv">41</span><span class="op">,</span><span class="dv">46</span>]<span class="op">,</span> [<span class="dv">47</span><span class="op">,</span><span class="dv">56</span>]<span class="op">,</span> [<span class="dv">57</span><span class="op">,</span><span class="dv">61</span>]<span class="op">,</span> [<span class="dv">62</span><span class="op">,</span><span class="dv">75</span>]<span class="op">,</span> [<span class="dv">76</span><span class="op">,</span><span class="dv">85</span>]<span class="op">,</span> [<span class="dv">86</span><span class="op">,</span><span class="dv">89</span>]<span class="op">,</span> [<span class="dv">90</span><span class="op">,</span><span class="dv">92</span>]<span class="op">,</span> [<span class="dv">93</span><span class="op">,</span><span class="dv">100</span>]]))})</span></code></pre></div><button title="העתק ללוח" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-8" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div id="scrolls-table">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>d%</strong></th>
+<th><strong>General Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>01-03</td>
+<td>Cleric Spell Scroll (1 Spell)</td>
+</tr>
+<tr class="even">
+<td>04-06</td>
+<td>Cleric Spell Scroll (2 Spells)</td>
+</tr>
+<tr class="odd">
+<td>07-08</td>
+<td>Cleric Spell Scroll (3 Spells)</td>
+</tr>
+<tr class="even">
+<td>09</td>
+<td>Cleric Spell Scroll (4 Spells)</td>
+</tr>
+<tr class="odd">
+<td>10-15</td>
+<td>Magic-User Spell Scroll (1 Spell)</td>
+</tr>
+<tr class="even">
+<td>16-20</td>
+<td>Magic-User Spell Scroll (2 Spells)</td>
+</tr>
+<tr class="odd">
+<td>21-25</td>
+<td>Magic-User Spell Scroll (3 Spells)</td>
+</tr>
+<tr class="even">
+<td>26-29</td>
+<td>Magic-User Spell Scroll (4 Spells)</td>
+</tr>
+<tr class="odd">
+<td>30-32</td>
+<td>Magic-User Spell Scroll (5 Spells)</td>
+</tr>
+<tr class="even">
+<td>33-34</td>
+<td>Magic-User Spell Scroll (6 Spells)</td>
+</tr>
+<tr class="odd">
+<td>35</td>
+<td>Magic-User Spell Scroll (7 Spells)</td>
+</tr>
+<tr class="even">
+<td>36-40</td>
+<td>Cursed Scroll</td>
+</tr>
+<tr class="odd">
+<td>41-46</td>
+<td>Protection from Elementals</td>
+</tr>
+<tr class="even">
+<td>47-56</td>
+<td>Protection from Lycanthropes</td>
+</tr>
+<tr class="odd">
+<td>57-61</td>
+<td>Protection from Magic</td>
+</tr>
+<tr class="even">
+<td>62-75</td>
+<td>Protection from Undead</td>
+</tr>
+<tr class="odd">
+<td>76-85</td>
+<td>Map to Treasure Type A</td>
+</tr>
+<tr class="even">
+<td>86-89</td>
+<td>Map to Treasure Type E</td>
+</tr>
+<tr class="odd">
+<td>90-92</td>
+<td>Map to Treasure Type G</td>
+</tr>
+<tr class="even">
+<td>93-00</td>
+<td>Map to 1d4 Magic Items</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="rings" class="level2">
+<h2 class="anchored" data-anchor-id="rings">Rings</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb9" data-startfrom="315" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 314;"><span id="cb9-315"><a href="#cb9-315" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"Roll on Table"</span><span class="op">,</span> </span>
+<span id="cb9-316"><a href="#cb9-316" aria-hidden="true" tabindex="-1"></a>{<span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> </span>
+<span id="cb9-317"><a href="#cb9-317" aria-hidden="true" tabindex="-1"></a><span class="dt">reduce</span><span class="op">:</span> () <span class="kw">=&gt;</span> <span class="fu">highlightTableRow</span>(<span class="st">"#rings-table"</span><span class="op">,</span> </span>
+<span id="cb9-318"><a href="#cb9-318" aria-hidden="true" tabindex="-1"></a><span class="fu">generalTableSelect</span>([<span class="dv">1</span><span class="op">,</span><span class="dv">100</span><span class="op">,</span><span class="dv">0</span>]<span class="op">,</span>[[<span class="dv">1</span><span class="op">,</span><span class="dv">6</span>]<span class="op">,</span>[<span class="dv">7</span><span class="op">,</span><span class="dv">12</span>]<span class="op">,</span>[<span class="dv">13</span><span class="op">,</span><span class="dv">19</span>]<span class="op">,</span>[<span class="dv">20</span><span class="op">,</span><span class="dv">30</span>]<span class="op">,</span>[<span class="dv">31</span><span class="op">,</span><span class="dv">33</span>]<span class="op">,</span>[<span class="dv">34</span><span class="op">,</span><span class="dv">44</span>]<span class="op">,</span>[<span class="dv">45</span><span class="op">,</span><span class="dv">57</span>]<span class="op">,</span>[<span class="dv">58</span><span class="op">,</span><span class="dv">66</span>]<span class="op">,</span>[<span class="dv">67</span><span class="op">,</span><span class="dv">70</span>]<span class="op">,</span>[<span class="dv">71</span><span class="op">,</span><span class="dv">71</span>]<span class="op">,</span>[<span class="dv">72</span><span class="op">,</span><span class="dv">73</span>]<span class="op">,</span>[<span class="dv">74</span><span class="op">,</span><span class="dv">75</span>]<span class="op">,</span>[<span class="dv">76</span><span class="op">,</span><span class="dv">81</span>]<span class="op">,</span>[<span class="dv">82</span><span class="op">,</span><span class="dv">83</span>]<span class="op">,</span>[<span class="dv">84</span><span class="op">,</span><span class="dv">90</span>]<span class="op">,</span>[<span class="dv">91</span><span class="op">,</span><span class="dv">97</span>]<span class="op">,</span>[<span class="dv">98</span><span class="op">,</span><span class="dv">98</span>]<span class="op">,</span>[<span class="dv">99</span><span class="op">,</span><span class="dv">100</span>]]))})</span></code></pre></div><button title="העתק ללוח" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-9" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div id="rings-table">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>d%</strong></th>
+<th><strong>Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>01-06</td>
+<td>Control Animal</td>
+</tr>
+<tr class="even">
+<td>07-12</td>
+<td>Control Human</td>
+</tr>
+<tr class="odd">
+<td>13-19</td>
+<td>Control Plant</td>
+</tr>
+<tr class="even">
+<td>20-30</td>
+<td>Delusion</td>
+</tr>
+<tr class="odd">
+<td>31-33</td>
+<td>Djinni Summoning</td>
+</tr>
+<tr class="even">
+<td>34-44</td>
+<td>Fire Resistance</td>
+</tr>
+<tr class="odd">
+<td>45-57</td>
+<td>Invisibility</td>
+</tr>
+<tr class="even">
+<td>58-66</td>
+<td>Protection +1</td>
+</tr>
+<tr class="odd">
+<td>67-70</td>
+<td>Protection +2</td>
+</tr>
+<tr class="even">
+<td>71</td>
+<td>Protection +3</td>
+</tr>
+<tr class="odd">
+<td>72-73</td>
+<td>Regeneration</td>
+</tr>
+<tr class="even">
+<td>74-75</td>
+<td>Spell Storing</td>
+</tr>
+<tr class="odd">
+<td>76-81</td>
+<td>Spell Turning</td>
+</tr>
+<tr class="even">
+<td>82-83</td>
+<td>Telekinesis</td>
+</tr>
+<tr class="odd">
+<td>84-90</td>
+<td>Water Walking</td>
+</tr>
+<tr class="even">
+<td>91-97</td>
+<td>Weakness</td>
+</tr>
+<tr class="odd">
+<td>98</td>
+<td>Wishes</td>
+</tr>
+<tr class="even">
+<td>99-00</td>
+<td>X-Ray Vision</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="wands-staves-and-rods" class="level2">
+<h2 class="anchored" data-anchor-id="wands-staves-and-rods">Wands, Staves and Rods</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb10" data-startfrom="351" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 350;"><span id="cb10-351"><a href="#cb10-351" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"Roll on Table"</span><span class="op">,</span> </span>
+<span id="cb10-352"><a href="#cb10-352" aria-hidden="true" tabindex="-1"></a>{<span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> </span>
+<span id="cb10-353"><a href="#cb10-353" aria-hidden="true" tabindex="-1"></a><span class="dt">reduce</span><span class="op">:</span> () <span class="kw">=&gt;</span> <span class="fu">highlightTableRow</span>(<span class="st">"#wands-table"</span><span class="op">,</span> </span>
+<span id="cb10-354"><a href="#cb10-354" aria-hidden="true" tabindex="-1"></a><span class="fu">generalTableSelect</span>([<span class="dv">1</span><span class="op">,</span><span class="dv">100</span><span class="op">,</span><span class="dv">0</span>]<span class="op">,</span>[[<span class="dv">1</span><span class="op">,</span><span class="dv">8</span>]<span class="op">,</span>[<span class="dv">9</span><span class="op">,</span><span class="dv">13</span>]<span class="op">,</span>[<span class="dv">14</span><span class="op">,</span><span class="dv">17</span>]<span class="op">,</span>[<span class="dv">18</span><span class="op">,</span><span class="dv">28</span>]<span class="op">,</span>[<span class="dv">29</span><span class="op">,</span><span class="dv">30</span>]<span class="op">,</span>[<span class="dv">31</span><span class="op">,</span><span class="dv">34</span>]<span class="op">,</span>[<span class="dv">35</span><span class="op">,</span><span class="dv">35</span>]<span class="op">,</span>[<span class="dv">36</span><span class="op">,</span><span class="dv">40</span>]<span class="op">,</span>[<span class="dv">41</span><span class="op">,</span><span class="dv">45</span>]<span class="op">,</span>[<span class="dv">46</span><span class="op">,</span><span class="dv">50</span>]<span class="op">,</span>[<span class="dv">51</span><span class="op">,</span><span class="dv">55</span>]<span class="op">,</span>[<span class="dv">56</span><span class="op">,</span><span class="dv">60</span>]<span class="op">,</span>[<span class="dv">61</span><span class="op">,</span><span class="dv">65</span>]<span class="op">,</span>[<span class="dv">66</span><span class="op">,</span><span class="dv">73</span>]<span class="op">,</span>[<span class="dv">74</span><span class="op">,</span><span class="dv">79</span>]<span class="op">,</span>[<span class="dv">80</span><span class="op">,</span><span class="dv">84</span>]<span class="op">,</span>[<span class="dv">85</span><span class="op">,</span><span class="dv">92</span>]<span class="op">,</span>[<span class="dv">93</span><span class="op">,</span><span class="dv">100</span>]]))})</span></code></pre></div><button title="העתק ללוח" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-10" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div id="wands-table">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>d%</strong></th>
+<th><strong>Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>01-08</td>
+<td>Rod of Cancellation</td>
+</tr>
+<tr class="even">
+<td>09-13</td>
+<td>Snake Staff</td>
+</tr>
+<tr class="odd">
+<td>14-17</td>
+<td>Staff of Commanding</td>
+</tr>
+<tr class="even">
+<td>18-28</td>
+<td>Staff of Healing</td>
+</tr>
+<tr class="odd">
+<td>29-30</td>
+<td>Staff of Power</td>
+</tr>
+<tr class="even">
+<td>31-34</td>
+<td>Staff of Striking</td>
+</tr>
+<tr class="odd">
+<td>35</td>
+<td>Staff of Wizardry</td>
+</tr>
+<tr class="even">
+<td>36-40</td>
+<td>Wand of Cold</td>
+</tr>
+<tr class="odd">
+<td>41-45</td>
+<td>Wand of Enemy Detection</td>
+</tr>
+<tr class="even">
+<td>46-50</td>
+<td>Wand of Fear</td>
+</tr>
+<tr class="odd">
+<td>51-55</td>
+<td>Wand of Fireballs</td>
+</tr>
+<tr class="even">
+<td>56-60</td>
+<td>Wand of Illusion</td>
+</tr>
+<tr class="odd">
+<td>61-65</td>
+<td>Wand of Lightning Bolts</td>
+</tr>
+<tr class="even">
+<td>66-73</td>
+<td>Wand of Magic Detection</td>
+</tr>
+<tr class="odd">
+<td>74-79</td>
+<td>Wand of Paralyzation</td>
+</tr>
+<tr class="even">
+<td>80-84</td>
+<td>Wand of Polymorph</td>
+</tr>
+<tr class="odd">
+<td>85-92</td>
+<td>Wand of Secret Door Detection</td>
+</tr>
+<tr class="even">
+<td>93-00</td>
+<td>Wand of Trap Detection</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="miscellaneous-magic-items" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="miscellaneous-magic-items">Miscellaneous Magic Items</h2>
+<p>Effect Subtables d% Subtable 01-57 Effect Subtable 1 58-00 Effect Subtable 2</p>
+<section id="effect-subtables" class="level3">
+<h3 class="anchored" data-anchor-id="effect-subtables"><strong>Effect Subtables</strong></h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>d%</th>
+<th>Subtable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>01-57</td>
+<td>Effect Subtable 1</td>
+</tr>
+<tr class="even">
+<td>58-00</td>
+<td>Effect Subtable 2</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="effect-subtable-1" class="level3">
+<h3 class="anchored" data-anchor-id="effect-subtable-1"><strong>Effect Subtable 1</strong></h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>d%</th>
+<th>Effect</th>
+<th>Form</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>01</td>
+<td>Blasting</td>
+<td>G</td>
+</tr>
+<tr class="even">
+<td>02-05</td>
+<td>Blending</td>
+<td>F</td>
+</tr>
+<tr class="odd">
+<td>06-13</td>
+<td>Cold Resistance</td>
+<td>F</td>
+</tr>
+<tr class="even">
+<td>14-17</td>
+<td>Comprehension</td>
+<td>E</td>
+</tr>
+<tr class="odd">
+<td>18-22</td>
+<td>Control Animal</td>
+<td>C</td>
+</tr>
+<tr class="even">
+<td>23-29</td>
+<td>Control Human</td>
+<td>C</td>
+</tr>
+<tr class="odd">
+<td>30-35</td>
+<td>Control Plant</td>
+<td>C</td>
+</tr>
+<tr class="even">
+<td>36-37</td>
+<td>Courage</td>
+<td>G</td>
+</tr>
+<tr class="odd">
+<td>38-40</td>
+<td>Deception</td>
+<td>F</td>
+</tr>
+<tr class="even">
+<td>41-52</td>
+<td>Delusion</td>
+<td>A</td>
+</tr>
+<tr class="odd">
+<td>53-55</td>
+<td>Djinni Summoning</td>
+<td>C</td>
+</tr>
+<tr class="even">
+<td>56</td>
+<td>Doom</td>
+<td>G</td>
+</tr>
+<tr class="odd">
+<td>57-67</td>
+<td>Fire Resistance</td>
+<td>F</td>
+</tr>
+<tr class="even">
+<td>68-80</td>
+<td>Invisibility</td>
+<td>F</td>
+</tr>
+<tr class="odd">
+<td>81-85</td>
+<td>Levitation</td>
+<td>B</td>
+</tr>
+<tr class="even">
+<td>86-95</td>
+<td>Mind Reading</td>
+<td>C</td>
+</tr>
+<tr class="odd">
+<td>96-97</td>
+<td>Panic</td>
+<td>G</td>
+</tr>
+<tr class="even">
+<td>98-00</td>
+<td>Penetrating Vision</td>
+<td>D</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="effect-subtable-2" class="level3">
+<h3 class="anchored" data-anchor-id="effect-subtable-2"><strong>Effect Subtable 2</strong></h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>d%</th>
+<th>Effect</th>
+<th>Form</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>01-07</td>
+<td>Protection +1</td>
+<td>F</td>
+</tr>
+<tr class="even">
+<td>08-10</td>
+<td>Protection +2</td>
+<td>F</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>Protection +3</td>
+<td>F</td>
+</tr>
+<tr class="even">
+<td>12-14</td>
+<td>Protection from Energy Drain</td>
+<td>F</td>
+</tr>
+<tr class="odd">
+<td>15-20</td>
+<td>Protection from Scrying</td>
+<td>F</td>
+</tr>
+<tr class="even">
+<td>21-23</td>
+<td>Regeneration</td>
+<td>C</td>
+</tr>
+<tr class="odd">
+<td>24-29</td>
+<td>Scrying</td>
+<td>H</td>
+</tr>
+<tr class="even">
+<td>30-32</td>
+<td>Scrying, Superior</td>
+<td>H</td>
+</tr>
+<tr class="odd">
+<td>33-39</td>
+<td>Speed</td>
+<td>B</td>
+</tr>
+<tr class="even">
+<td>40-42</td>
+<td>Spell Storing</td>
+<td>C</td>
+</tr>
+<tr class="odd">
+<td>43-50</td>
+<td>Spell Turning</td>
+<td>F</td>
+</tr>
+<tr class="even">
+<td>51-69</td>
+<td>Stealth</td>
+<td>B</td>
+</tr>
+<tr class="odd">
+<td>70-72</td>
+<td>Telekinesis</td>
+<td>C</td>
+</tr>
+<tr class="even">
+<td>73-74</td>
+<td>Telepathy</td>
+<td>C</td>
+</tr>
+<tr class="odd">
+<td>75-76</td>
+<td>Teleportation</td>
+<td>C</td>
+</tr>
+<tr class="even">
+<td>77-78</td>
+<td>True Seeing</td>
+<td>D</td>
+</tr>
+<tr class="odd">
+<td>79-88</td>
+<td>Water Walking</td>
+<td>B</td>
+</tr>
+<tr class="even">
+<td>89-99</td>
+<td>Weakness</td>
+<td>C</td>
+</tr>
+<tr class="odd">
+<td>00</td>
+<td>Wishes</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+<p>Roll on the first table above to select a subtable, then roll again on the selected subtable to determine the exact effect. Finally, roll on the specified column of the Form table to determine the physical form of the item.</p>
+</section>
+<section id="form-of-item" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="form-of-item">Form of Item</h3>
+<div class="table-responsive column-screen-right">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>D</th>
+<th>E</th>
+<th>F</th>
+<th>G</th>
+<th>H</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Bell (or Chime)</td>
+<td>01-02</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>01-17</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Belt or Girdle</td>
+<td>03-05</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>01-07</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Boots</td>
+<td>06-13</td>
+<td>01-25</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Bowl</td>
+<td>14-15</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>01-17</td>
+</tr>
+<tr class="odd">
+<td>Cloak</td>
+<td>16-28</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>08-38</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Crystal Ball or Orb</td>
+<td>29-31</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>18-67</td>
+</tr>
+<tr class="odd">
+<td>Drums</td>
+<td>32-33</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>18-50</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Helm</td>
+<td>34-38</td>
+<td></td>
+<td></td>
+<td></td>
+<td>01-40</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Horn</td>
+<td>39-43</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>51-00</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Lens</td>
+<td>44-46</td>
+<td></td>
+<td></td>
+<td>01-17</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Mirror</td>
+<td>47-49</td>
+<td></td>
+<td></td>
+<td>18-17</td>
+<td></td>
+<td></td>
+<td></td>
+<td>68-00</td>
+</tr>
+<tr class="even">
+<td>Pendant</td>
+<td>50-67</td>
+<td>26-50</td>
+<td>01-40</td>
+<td>18-50</td>
+<td>41-80</td>
+<td>39-50</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Ring</td>
+<td>68-00</td>
+<td>51-00</td>
+<td>41-00</td>
+<td>51-00</td>
+<td>81-00</td>
+<td>51-00</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="rare-items" class="level3">
+<h3 class="anchored" data-anchor-id="rare-items">Rare Items</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>d%</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>01-05</td>
+<td>Bag of Devouring</td>
+</tr>
+<tr class="even">
+<td>06-20</td>
+<td>Bag of Holding</td>
+</tr>
+<tr class="odd">
+<td>21-32</td>
+<td>Boots of Traveling and Leaping</td>
+</tr>
+<tr class="even">
+<td>33-47</td>
+<td>Broom of Flying</td>
+</tr>
+<tr class="odd">
+<td>48-57</td>
+<td>Device of Summoning Elementals (see below)</td>
+</tr>
+<tr class="even">
+<td>58-59</td>
+<td>Efreeti Bottle</td>
+</tr>
+<tr class="odd">
+<td>60-64</td>
+<td>Flying Carpet</td>
+</tr>
+<tr class="even">
+<td>65-81</td>
+<td>Gauntlets of Ogre Power</td>
+</tr>
+<tr class="odd">
+<td>82-86</td>
+<td>Girdle of Giant Strength</td>
+</tr>
+<tr class="even">
+<td>87-88</td>
+<td>Mirror of Imprisonment</td>
+</tr>
+<tr class="odd">
+<td>89-00</td>
+<td>Rope of Climbing</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="devices-of-summoning-elementals" class="level2">
+<h2 class="anchored" data-anchor-id="devices-of-summoning-elementals">Devices of Summoning Elementals</h2>
+<p>Review the information for <a href="./monstersAll.html#elemental">Elementals</a> before randomly selecting any of these items, as you may not wish to allow all types of elementals in your campaign.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>1d8</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Bowl of Summoning Water Elementals</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Brazier of Summoning Fire Elementals</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Censer of Summoning Air Elementals</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Crucible of Summoning Metal Elementals</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Mallet of Summoning Wood Elementals</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Marble Plate of Summoning Cold Elementals</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Rod of Summoning Lightning Elementals</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Stone of Summoning Earth Elementals</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="explanation-of-magic-items" class="level2">
+<h2 class="anchored" data-anchor-id="explanation-of-magic-items">Explanation of Magic Items</h2>
+<section id="using-magic-items" class="level3">
+<h3 class="anchored" data-anchor-id="using-magic-items">Using Magic Items</h3>
+<p>To use a magic item, it must be activated, although sometimes activation simply means putting a ring on your finger. Some items, once donned, function constantly.</p>
+<p>Many items are activated just by using them. For instance, a character has to drink a potion, swing a sword, interpose a shield to deflect a blow in combat, wear a ring, or don a cloak. Activation of these items is generally straightforward and self-explanatory. This doesn’t mean that if you use such an item, you automatically know what it can do. You must know (or at least guess) what the item can do and then use the item in order to activate it, unless the benefit of the item comes automatically, such as from drinking a potion or swinging a sword.</p>
+<p>If no activation method is suggested either in the magic item description or by the nature of the item, assume that a command word is needed to activate it. Command word activation means that a character speaks the word and the item activates. No other special knowledge is needed.</p>
+<p>A command word can be a real word, but when this is the case, the holder of the item runs the risk of activating the item accidentally by speaking the word in normal conversation. More often, the command word is some seemingly nonsensical word, or a word or phrase from an ancient language no longer in common use. Note that many magic items must be held in the hand (or otherwise specially handled or worn) to be used; the risk of accidental activation is less significant for such items.</p>
+<p>Learning the command word for an item may be easy (sometimes the word is actually inscribed on the item) or it may be difficult, requiring the services of a powerful wizard or sage, or some other means of discovery.</p>
+<p>Only the character holding or wearing a magic item may activate it. A character who has been gagged or silenced may not activate a magic item which requires a command word.</p>
+<p>When an article of magic armor, clothing or jewelry (including a ring) is discovered, size is not usually an issue. Such items magically adjust themselves for wearers from as small as Halflings to as large as Humans. This effect is called&nbsp;<strong>accommodation</strong>. The GM may create “primitive” items lacking this power if he or she wishes.</p>
+<p>Generally only one magical item of a given type may be worn at the same time. For example, a character can normally only wear one suit of armor, wear one necklace and carry one shield at a time. In the case of rings, a character may wear one magical ring per hand. If a character wears more items of a given type than would normally be practical, the items will usually fail to function due to interference with one another; for instance, wearing two rings on the same hand normally results in both rings failing to operate.&nbsp;<strong>Note, however,</strong>&nbsp;that this limitation cannot be used to disable cursed magic items. For example, wearing a cursed ring would prevent another magic ring from being worn and used on that hand, but the curse would not be lifted by donning a second magic ring.</p>
+</section>
+<section id="magic-weapons-1" class="level3">
+<h3 class="anchored" data-anchor-id="magic-weapons-1">Magic Weapons</h3>
+<p>Magic weapons are created with a variety of powers and will usually aid the wielder in combat. A magical weapon’s bonus is applied to all attack and damage rolls made with the weapon.</p>
+<p><strong>Casts Light on Command:</strong>&nbsp;By drawing the weapon and uttering a command word, the wielder may cause it to glow; it will then shed light with the same radius as a&nbsp;<strong>light</strong>&nbsp;spell. Sheathing or laying down the weapon, or speaking the command word again, dispels the effect. This power may be used as often as desired.</p>
+<p><strong>Charm Person:</strong>&nbsp;This power allows the wielder to cast&nbsp;<strong>charm person</strong>&nbsp;once per day, as if by an 8<sup>th</sup>&nbsp;level Magic-User, by brandishing the weapon, speaking a command word and gazing at the target creature. (The wielder’s gaze does not have to be met for the spell to be cast.) The target creature is allowed saving throws just as described in the spell description.</p>
+<p><strong>Drains Energy:</strong>&nbsp;A weapon with this power drains one life energy level on a hit, as described under&nbsp;<strong>Energy Drain</strong>&nbsp;in the&nbsp;<strong>Encounter</strong>&nbsp;section; up to 2d4 levels can be drained by a weapon with this power, after which time the weapon loses this power but retains any other magical effects or bonuses.</p>
+<p><strong>Flames on Command:</strong>&nbsp;Upon command, the weapon will be sheathed in fire. The fire does not harm the wielder. The effect remains until the command is given again, or until the weapon is dropped or sheathed. While it flames, all damage done by the weapon is treated as fire damage, and an additional +1 bonus (in addition to the weapon’s normal bonus) is added to damage when fighting trolls, treants, and other creatures especially vulnerable to fire. It casts light and burns just as if it were a torch.</p>
+<p><strong>Locate Objects:</strong>&nbsp;This power allows the wielder to cast the spell&nbsp;<strong>locate object</strong>&nbsp;once per day, as if by an 8<sup>th</sup>&nbsp;level Magic-User.</p>
+<p><strong>Special Enemy:</strong>&nbsp;These weapons are created to combat a specific sort of creature, as rolled on the Special Ability table. When used against that specific enemy, the second listed bonus applies instead of the first; so a sword +1, +3 vs.&nbsp;Undead would provide +1 attack and damage against giant rats, but +3 attack and damage rolls against zombies.</p>
+<p><strong>Wishes:</strong>&nbsp;Weapons with this power have the ability to grant 1d4 wishes. The GM must adjudicate all wishes, and instructions are given in the&nbsp;<strong>Game Master</strong>&nbsp;section regarding this. After these wishes have been made, the weapon loses this power, but retains any other bonuses and powers.</p>
+<p><strong>Cursed Weapons</strong>&nbsp;inflict a penalty to the wielder’s attack rolls, as rolled on the Weapon Bonus table. The curse causes the afflicted character to be unable to get rid of the weapon. There are two possible forms the curse may take: Obsession and Affliction. The GM may decide which to use at his or her option.</p>
+<p><strong>Obsession:</strong>&nbsp;Regardless of how severe the penalty is, the character wielding the weapon will believe it is a bonus and refuse to use any other weapon in combat. A&nbsp;<strong>remove curse</strong>&nbsp;spell is the only way to rid a character of such a weapon; but as he or she will believe the weapon is the best magical weapon ever, the character receives a saving throw vs.&nbsp;Spells to resist.</p>
+<p><strong>Affliction:</strong>&nbsp;The character knows the weapon is cursed as soon as he or she uses it in combat; however, any attempt to throw it away fails, as the weapon magically appears back in the character’s hand whenever he or she tries to draw any other weapon. In this case, the&nbsp;<strong>remove curse</strong>&nbsp;spell needed to rid the character of the weapon will be unopposed (i.e.&nbsp;no saving throw).</p>
+</section>
+<section id="magic-armor-1" class="level3">
+<h3 class="anchored" data-anchor-id="magic-armor-1">Magic Armor</h3>
+<p>Magic armor (including shields) offers improved, magical protection to the wearer. In general, magic armor grants the normal Armor Class for its type, plus the magical armor bonus, as rolled on the Magic Armor table; for example, Plate Mail +2 provides an Armor Class of 19.</p>
+<p>There are two varieties of&nbsp;<strong>cursed armor</strong>: Cursed Armor -1 and Cursed Armor AC 11. The first variety’s AC is reduced by the rolled penalty; for example, Plate Mail -1 grants Armor Class 16. The second type is much worse, for regardless of the type, it only provides Armor Class 11. Dexterity and shield bonuses still apply.</p>
+<p>Cursed armor cannot be removed from the wearer once the curse is proven, that is, once the wearer is hit in combat. Once the curse has taken effect, only a&nbsp;<strong>remove curse</strong>&nbsp;spell, or some more powerful magic (such as a wish), will enable the wearer to remove it. The armor will detect as magical, like any other magic armor; the curse cannot be detected by any means other than wearing the armor in combat.</p>
+</section>
+<section id="potions-1" class="level3">
+<h3 class="anchored" data-anchor-id="potions-1">Potions</h3>
+<p>A potion is an elixir concocted with a spell-like effect that affects only the drinker. Unless otherwise noted, a potion grants its benefits for 1d6+6 turns (even if the duration of an associated spell is longer or shorter).</p>
+<p><strong>Clairaudience:</strong>&nbsp;This potion enables the drinker to hear sounds in another area through the ears of a living creature in that area, up to a maximum 60’ away. This effect otherwise functions just as the spell&nbsp;<strong>clairvoyance</strong>.</p>
+<p><strong>Clairvoyance:</strong>&nbsp;This potion grants the imbiber the effect of the&nbsp;<strong>clairvoyance</strong>spell.</p>
+<p><strong>Cold Resistance:</strong>&nbsp;This potion grants the imbiber the power of the spell&nbsp;<strong>resist cold</strong>.</p>
+<p><strong>Control Animal:</strong>&nbsp;This potion functions like a&nbsp;<strong>control human</strong>&nbsp;potion, but affects only normal, non-magical animals.</p>
+<p><strong>Control Dragon:</strong>&nbsp;This potion functions like a&nbsp;<strong>control human</strong>&nbsp;potion, but affects only dragons.</p>
+<p><strong>Control Giant:</strong>&nbsp;This potion functions like a&nbsp;<strong>control human</strong>&nbsp;potion, but affects only giants.</p>
+<p><strong>Control Human:</strong>&nbsp;This potion allows the drinker to charm a human, demi-human, or humanoid by gazing at them. The effect functions like the&nbsp;<strong>charm person</strong>&nbsp;spell. If the charm is resisted, the drinker can attempt to charm up to two more targets before the potion’s benefit is exhausted.</p>
+<p><strong>Control Plant:</strong>&nbsp;This potion grants the drinker control over one or more plants or plant creatures within a 10’ square area up to 50’ away. Normal plants become animated, having a movement rate of 10’, and obey the drinker’s commands. If ordered to attack, only the largest plants can do any real harm, attacking with a +0 attack bonus and inflicting 1d4 points of damage per hit. Affected plant creatures (who fail to save vs.&nbsp;Spells) can understand the drinker, and behave as if under a&nbsp;<strong>charm monster</strong>&nbsp;spell.</p>
+<p><strong>Control Undead:</strong>&nbsp;This potion grants the drinker command of 3d6 hit dice of undead monsters. A save vs.&nbsp;Spells is allowed to resist the effect. Mindless undead follow the drinker’s commands exactly; free-willed undead act as if under a&nbsp;<strong>charm person</strong>&nbsp;spell.</p>
+<p><strong>Delusion:</strong>&nbsp;This cursed potion will appear, if tested or analyzed, to be one of the other potions (other than poison). When imbibed, the drinker will briefly believe he has received the benefits of the “other” potion, but the illusion will be swiftly exposed…</p>
+<p><strong>Diminution:</strong>&nbsp;This potion reduces the drinker and all items worn or carried to one-twelfth of his or her original height (so that a 6’ tall character becomes 6” tall). The drinker’s weight is divided by 1,728; this makes an armed warrior weigh less than 2.5 ounces. The affected creature cannot make an effective attack against any creature bigger than a house cat, but may be able to slip under doors or into cracks and has a 90% chance of moving about undetected (both in terms of sound and vision).</p>
+<p><strong>Fire Resistance:</strong>&nbsp;This potion grants the imbiber the power of the spell&nbsp;<strong>resist fire</strong>.</p>
+<p><strong>Flying:</strong>&nbsp;This spell grants the power of the spell&nbsp;<strong>fly</strong>.</p>
+<p><strong>Gaseous Form:</strong>&nbsp;The drinker and all of his or her gear become insubstantial, misty, and translucent. He or she becomes immune to non-magical weapons, and has an Armor Class of 22 vs.&nbsp;magical weapons. The imbiber can’t attack or cast spells while in gaseous form. The drinker also loses supernatural abilities while in gaseous form. A gaseous creature can fly at a speed of 10’, and can pass through small holes or narrow openings, even mere cracks, as long as the potion persists. The gaseous creature is subject to the effects of wind, and can’t enter water or other liquid. Objects cannot be manipulated in this form, even those brought along when the potion was imbibed. The drinker cannot resume material form at will, but must wait for the potion to expire; however, the potion may be quaffed in thirds, in which case each drink lasts 1d4+1 turns.</p>
+<p><strong>Giant Strength:</strong>&nbsp;This potion grants the imbiber the Strength of a giant. For the duration, the drinker gains a bonus of +5 on attack and damage rolls with melee or thrown weapons, and can throw large stones just as a stone giant can.</p>
+<p><strong>Growth:</strong>&nbsp;The drinker of this potion (with all equipment worn or carried) becomes twice normal height and eight times normal weight. The enlarged character is treated as having the Strength of a Stone Giant (but without the rock-throwing ability), gaining +5 on attack and damage rolls.</p>
+<p><strong>Healing:</strong>&nbsp;The imbiber of this potion receives 1d6+1 hit points of healing (as the spell&nbsp;<strong>cure light wounds</strong>).</p>
+<p><strong>Heroism:</strong>&nbsp;This potion improves the fighting ability of the drinker. Fighters of less than 3<sup>rd</sup>&nbsp;level gain +3 to attack bonus as well as gaining 3 hit dice. Fighters of 4<sup>th</sup>&nbsp;to 5<sup>th</sup>&nbsp;level gain +2 to attack bonus and 2 hit dice. Fighters of 6<sup>th</sup>&nbsp;or 7<sup>th</sup>&nbsp;level gain +1 to attack bonus and 1 hit die. Fighters of 8<sup>th</sup>&nbsp;level or higher, as well as non-Fighter class characters, gain no hit dice, but still receive +1 to attack bonus. Hit dice gained are only temporary, and damage received is deducted from those hit dice first; any that remain when the potion expires are simply lost.</p>
+<p><strong>Invisibility:</strong>&nbsp;This potion makes the imbiber invisible (as the spell). This potion may be quaffed in thirds, in which case each drink lasts 1d4+1 turns.</p>
+<p><strong>Invulnerability:</strong>&nbsp;This potion grants a bonus of +2 to Armor Class.</p>
+<p><strong>Levitation:</strong>&nbsp;This potion grants the power of the spell&nbsp;<strong>levitate</strong>.</p>
+<p><strong>Longevity:</strong>&nbsp;The drinker of this potion becomes younger by 1d10 years.</p>
+<p><strong>Mind Reading</strong>: This potion grants the power of the spell of the same name.</p>
+<p><strong>Poison:</strong>&nbsp;This isn’t a potion at all, it’s a trap. The drinker must save vs.&nbsp;Poison or die, even if only a sip was imbibed.</p>
+<p><strong>Polymorph Self:</strong>&nbsp;This potion grants the power of the spell of the same name.</p>
+<p><strong>Speed:</strong>&nbsp;This potion gives the drinker the benefits of the spell&nbsp;<strong>haste</strong>.</p>
+<p><strong>Treasure Finding:</strong>&nbsp;The imbiber of this potion will immediately know the direction and approximate distance to the largest treasure hoard in a 300’ spherical radius. This potion specifically detects platinum, gold, electrum, silver, and copper; gemstones and magic items are not detected.</p>
+</section>
+<section id="scrolls-1" class="level3">
+<h3 class="anchored" data-anchor-id="scrolls-1">Scrolls</h3>
+<p>Most scrolls contain some sort of magic which is activated when read, and which may only be used once; the characters burn away as the words are read.</p>
+<p><strong>Spell Scrolls</strong>&nbsp;are enchanted with one or more Cleric or Magic-User spells (never both sorts on the same scroll). Each spell can be used just once, though of course the same spell may appear multiple times on a single scroll. Use the table below to determine the spell level of each spell on a scroll. Only a Cleric can use a Clerical scroll, and only a Magic-User can use a Magic-User scroll.</p>
+<p>Magic-Users must cast&nbsp;<strong>read magic</strong>&nbsp;on a spell scroll before being able to use it; each scroll needs to be treated in this way just once, and the effect lasts indefinitely thereafter. If a Magic-User attempts to cast a spell from a scroll, and he or she does not know that spell, there is a 10% chance the spell will fail. If a spell on a scroll is of higher level than the highest level spell the Magic-User can cast, for each spell level of difference, add 10% to the chance of failure. For example, Aura the 3<sup>rd</sup>&nbsp;level Magic-User attempts to cast&nbsp;<strong>polymorph self</strong>&nbsp;from a scroll. Aura is able to cast, at most, 2<sup>nd</sup>&nbsp;level spells.&nbsp;<strong>Polymorph self</strong>&nbsp;is a 4<sup>th</sup>&nbsp;level spell, so Aura has a chance of failure of 10% (she doesn’t know the spell) plus 20% (2<sup>nd</sup>&nbsp;level maximum vs.&nbsp;4<sup>th</sup>&nbsp;level spell), for a total of 30%.</p>
+<p>Clerical scrolls are written in a normal language (being just specially enchanted prayers), so the Cleric merely needs to know the language in which the scroll is written in order to use it. Clerics suffer the same chance of failure as do Magic-Users, save that the 10% penalty assigned for not knowing the spell does not apply.</p>
+<section id="spell-scrolls-spell-level" class="level4">
+<h4 class="anchored" data-anchor-id="spell-scrolls-spell-level">Spell Scrolls: Spell Level</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>d%</strong></th>
+<th><strong>Level of Spell</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>01-30</td>
+<td>1st</td>
+</tr>
+<tr class="even">
+<td>31-55</td>
+<td>2nd</td>
+</tr>
+<tr class="odd">
+<td>56-75</td>
+<td>3rd</td>
+</tr>
+<tr class="even">
+<td>76-88</td>
+<td>4th</td>
+</tr>
+<tr class="odd">
+<td>89-97</td>
+<td>5th</td>
+</tr>
+<tr class="even">
+<td>98-00</td>
+<td>6th</td>
+</tr>
+</tbody>
+</table>
+<p>A&nbsp;<strong>Cursed Scroll</strong>&nbsp;inflicts some curse upon whoever reads it. It need not be read completely; in fact, merely glancing at the text is enough to inflict the curse. A saving throw may or may not be allowed, as determined by the GM (though a save vs.&nbsp;Spells should usually be allowed). The GM is encouraged to be creative when creating curses; the spell&nbsp;<strong>bestow curse</strong>&nbsp;(the reverse of&nbsp;<strong>remove curse</strong>) can be used for inspiration, but cursed scrolls can contain more powerful or inventive curses at the GM’s discretion.</p>
+<p><strong>Protection Scrolls</strong>&nbsp;can be read by any character class, assuming the character can read the language the scroll is written in (see the notes under&nbsp;<strong>Language</strong>&nbsp;in the&nbsp;<strong>Character</strong>&nbsp;section for details). When read, a protection scroll creates a 10’ radius protective circle around the reader; preventing the warded creatures from entering. The circle moves with the reader. Any creature other than the sort the scroll wards may enter, including of course the allies of the scroll-reader, who are themselves protected so long as they remain entirely within the circle. If any creature within the circle performs a melee attack against any of the warded creatures, the circle is broken and the warded creatures may freely attack. Normal protection scrolls last for 2 turns after being read.</p>
+<p><strong>Protection from Magic</strong>&nbsp;scrolls are special, as they protect against magic spells and items rather than creatures. No magical effect can cross the 10’ circle of protection in either direction for 1d4 turns. As with the other protection scrolls, the circle created by this scroll moves with the reader.</p>
+<p><strong>Treasure Maps</strong>&nbsp;are generally non-magical. They must be created by the GM, although he or she may delay creating the map until the characters can actually use it. The treasure indicated on the map will normally be guarded by some sort of monster, determined by the GM as desired.</p>
+</section>
+</section>
+<section id="rings-1" class="level3">
+<h3 class="anchored" data-anchor-id="rings-1">Rings</h3>
+<p>A ring is a circular metal band worn on the finger (no more than one ring per hand) that has a spell-like power (often a constant effect that affects the wearer).</p>
+<p><strong>Control Animal:</strong>&nbsp;The wearer of this ring can charm up to 6 hit dice of animals. The effect works much like a&nbsp;<strong>charm person</strong>&nbsp;spell, but only affects animals (including giant-sized animals, but excluding fantastic creatures as well as anything more intelligent than a dog or cat). The wearer can activate the power at will, targeting any animal within 60’ that he or she can see. The wearer may choose to end the effect for one or more controlled creatures at any time, in order to “free” enough hit dice to control a new target.</p>
+<p><strong>Control Human:</strong>&nbsp;The wearer of this ring may cast the spell&nbsp;<strong>charm person</strong>&nbsp;at any target he or she can see within 60’. The wearer can use this power once per round, at will, but cannot control more than 6 hit dice of creatures at a time; however, the wearer may choose to end the effect for one or more controlled creatures at any time, in order to “free” enough hit dice to control a new target.</p>
+<p><strong>Control Plant:</strong>&nbsp;The wearer of this ring may create an effect equivalent to a&nbsp;<strong>potion of plant control</strong>&nbsp;at will, affecting plants or plant creatures within 60’ that he or she can see. The effect lasts as long as the wearer remains within 60’ of the plants or plant creatures. A saving throw is allowed just as for the potion.</p>
+<p><strong>Delusion:</strong>&nbsp;This ring appears to be some other sort of ring (roll again on the rings table to determine what sort). Whoever wears it believes it is working, and behaves thus (so a character who believes he is wearing a&nbsp;<strong>ring of invisibility</strong>&nbsp;will believe himself to actually be invisible). Unlike the potion of the same name, the ring’s effect is not dispelled by the wearer taking damage; in fact, the only way to rid a character of this cursed item is with the spell&nbsp;<strong>remove curse</strong>.</p>
+<p><strong>Djinni Summoning:</strong>&nbsp;This ring serves as a special gate by means of which a specific djinni can be called from the Elemental Plane of Air. When the ring is rubbed, the djinni appears on the next round. The djinni faithfully obeys and serves the wearer of the ring, but never for more than 1 hour per day. If the djinni of the ring is ever killed, the ring becomes non-magical and worthless.</p>
+<p><strong>Fire Resistance:</strong>&nbsp;The wearer of this ring receives protection as the spell&nbsp;<strong>resist fire</strong>, but the protection works continually.</p>
+<p><strong>Invisibility:</strong>&nbsp;By activating this simple silver ring, the wearer can benefit from&nbsp;<strong>invisibility</strong>, as the spell. If the invisibility is dispelled (as described for the spell), the ring may not be reactivated for one full turn. The invisibility effect otherwise lasts for 24 hours.</p>
+<p><strong>Protection:</strong>&nbsp;This ring offers continual magical protection in the form of a bonus to the Armor Class of the wearer (varying from +1 to +3 as shown on the table). This bonus is also applied to the wearer’s saving throw die rolls.</p>
+<p><strong>Regeneration:</strong>&nbsp;This ring grants the wearer the power of regeneration, exactly as described in the description of the troll, including the weakness with respect to acid and fire damage. However, only damage taken while wearing the ring is regenerated.</p>
+<p><strong>Spell Storing:</strong>&nbsp;A ring of spell storing contains a number of Magic-User spells that the wearer can cast. Each spell has a caster level equal to the minimum level needed to cast that spell. Any class may wear and use this ring, but it can only be recharged by a Magic-User casting the appropriate spell into it. A table is provided below to determine how many spells, and what levels they are. A ring of spell storing must be recharged with the same spells that were placed into it when it was made; so a ring of two spell storing containing&nbsp;<strong>fireball</strong>&nbsp;and&nbsp;<strong>fly</strong>&nbsp;can only be recharged with those two spells. The ring magically imparts to the wearer the names of all spells stored within it. A ring found in a treasure hoard may be completely charged, or discharged, or partially charged, at the GM’s option.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>d%</strong></th>
+<th><strong># of Spells</strong></th>
+<th><strong>d%</strong></th>
+<th><strong>Level of Spell</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>01-24</td>
+<td>1</td>
+<td>01-30</td>
+<td>1st</td>
+</tr>
+<tr class="even">
+<td>25-48</td>
+<td>2</td>
+<td>31-55</td>
+<td>2nd</td>
+</tr>
+<tr class="odd">
+<td>49-67</td>
+<td>3</td>
+<td>56-75</td>
+<td>3rd</td>
+</tr>
+<tr class="even">
+<td>68-81</td>
+<td>4</td>
+<td>76-85</td>
+<td>4th</td>
+</tr>
+<tr class="odd">
+<td>82-91</td>
+<td>5</td>
+<td>86-97</td>
+<td>5th</td>
+</tr>
+<tr class="even">
+<td>92-96</td>
+<td>6</td>
+<td>98-00</td>
+<td>6th</td>
+</tr>
+<tr class="odd">
+<td>97-00</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Spell Turning:</strong>&nbsp;This ring reflects spells cast directly at the wearer, but not area effect spells, back at the caster; so a&nbsp;<strong>hold person</strong>&nbsp;spell would be reflected, but not a&nbsp;<strong>fireball</strong>. It will reflect up to 2d6 spells before its power is exhausted.</p>
+<p><strong>Telekinesis:</strong>&nbsp;The wearer of this ring can use the power of the spell&nbsp;<strong>telekinesis</strong>, as if cast by a 12<sup>th</sup>&nbsp;level Magic-User. The effect may be used as many times per day as the wearer wishes, but lasts only as long as the wearer concentrates on it.</p>
+<p><strong>Water Walking:</strong>&nbsp;This ring allows the wearer to walk on any liquid as if it were firm ground. Mud, oil, snow, quicksand, running water, ice, and even lava can be traversed easily, since the wearer’s feet hover an inch or two above the surface. Molten lava will still cause the wearer damage from the heat since he or she is still near it. The wearer can walk, run, or otherwise move across the surface as if it were normal ground.</p>
+<p><strong>Weakness:</strong>&nbsp;Whoever puts this ring on is cursed; his or her Strength score is reduced immediately to 3. The ring can only be removed with&nbsp;<strong>remove curse</strong>.</p>
+<p><strong>Wishes:</strong>&nbsp;A ring of wishes contains the power to grant wishes to the wearer. 1d4 wishes will remain within the ring when it is found. The GM must adjudicate all wishes, and instructions are given in the&nbsp;<strong>Game Master</strong>&nbsp;section regarding this.</p>
+<p><strong>X-Ray Vision:</strong>&nbsp;On command, this ring gives its possessor the ability to see into and through solid matter. Vision range is 20 feet, with the viewer seeing as if he were looking at something in normal light even if there is no illumination. X-ray vision can penetrate 1 foot of stone, 1 inch of common metal, or up to 3 feet of wood or dirt. Thicker substances or a thin sheet of lead or gold blocks the vision. The ring may be used three times per day, and each use lasts at most one turn (or until the wearer ceases to concentrate upon it).</p>
+</section>
+<section id="wands-staves-and-rods-1" class="level3">
+<h3 class="anchored" data-anchor-id="wands-staves-and-rods-1">Wands, Staves and Rods</h3>
+<p>A wand is a short stick, generally 12 to 18 inches long, imbued with the power to cast a specific spell or spell-like effect. A newly created wand has 20 charges, and each use of the wand depletes one of those charges; a wand found in a treasure hoard will have 2d10 charges remaining. If a wand generates an effect equivalent to a spell, assume the spell functions as if cast by a 6<sup>th</sup>&nbsp;level caster, or the lowest level caster who could cast that spell (whichever is higher), unless otherwise noted. Wands are generally usable only by Magic-Users. Saving throws are rolled as normal, but on the Magic Wands column rather than the Spells column.</p>
+<p>A staff has a number of different (but often related) spell effects. A newly created staff has 30 charges, and each use of the staff depletes one or more of those charges. A staff found in a treasure hoard will have 3d10 charges remaining. Spell effects generated by a staff operate at 8<sup>th</sup>&nbsp;level, or the lowest caster level the spell could be cast by, whichever is higher, unless otherwise stated. Staves are usable only by Magic-Users, except where noted. Saving throws against magic from a staff are rolled on the Spells column.</p>
+<p>A rod is a scepter-like item with a special power unlike that of any known spell. Rods are normally usable by any class.</p>
+<p><strong>Rod of Cancellation:</strong>&nbsp;This dreaded rod is a bane to magic items, for its touch drains an item of all magical properties. If the item is held by a creature, an attack roll is needed to touch it. Upon draining an item, the rod itself becomes brittle and cannot be used again. Drained items are only restorable by a&nbsp;<strong>wish</strong>.</p>
+<p><strong>Snake Staff:</strong>&nbsp;This item is a walking staff +1. When used by a Cleric, the user may command the staff to transform into a constrictor snake (instead of causing damage) on a successful hit. The snake will wrap around a target up to man sized and hold him or her fast for 1d4 turns, unless a save vs.&nbsp;Spells is made. The snake does not attack in any other way, nor cause any damage. The snake may be recalled by the user at any point, in which case it returns to his or her hand and returns to staff form. It also returns in this way when the duration expires, or if the save is made. The snake has Armor Class 15, moves 20’ per round and has 20 hit points; any hit points of damage taken are healed completely when the snake returns to staff form; if killed in snake form, the magic is destroyed and it turns into a broken stick. The staff may be used any number of times per day, and neither has nor uses charges.</p>
+<p><strong>Staff of Commanding:</strong>&nbsp;This staff can cast&nbsp;<strong>charm person</strong>&nbsp;and&nbsp;<strong>charm monster</strong>&nbsp;spells, and can grant a power equivalent to a&nbsp;<strong>potion of plant control</strong>. Each function uses one charge.</p>
+<p><strong>Staff of Healing:</strong>&nbsp;This staff can heal 1d6+1 hit points per charge expended, as the spell&nbsp;<strong>cure light wounds</strong>. Alternately, with an expenditure of two charges, the staff can cast&nbsp;<strong>cure disease</strong>. This staff is only usable by a Cleric.</p>
+<p><strong>Staff of Power:</strong>&nbsp;This is a very potent magic item, with offensive and defensive abilities. It is usually topped with a glistening gem, its shaft straight and smooth. It has the following powers costing one charge per use:&nbsp;<strong>lightning bolt</strong>(6d6 damage),&nbsp;<strong>fireball</strong>&nbsp;(6d6 damage),&nbsp;<strong>cone of cold</strong>&nbsp;(as the wand, for 6d6 damage),&nbsp;<strong>continual light</strong>, and&nbsp;<strong>telekinesis</strong>&nbsp;(as the ring, lasting at most 1d6 turns). The staff is also a +2 walking staff, and can be used exactly as a&nbsp;<strong>staff of striking</strong>. A staff of power can be used for a retributive strike, requiring it to be broken by its wielder. All charges currently in the staff are instantly released in a 30’ radius, doing 1d6 damage per charge remaining (save vs.&nbsp;Spells for half damage). All within the area, including the wielder, are affected by this.</p>
+<p>After all charges are used up from the staff, it remains a +2 walking staff. Once empty of charges, it cannot be used for a retributive strike.</p>
+<p><strong>Staff of Striking:</strong>&nbsp;This staff has no attack bonus, but is treated as a +1 weapon with respect to what sorts of monsters it can hit (and is usable by any class in that mode). This staff’s primary power may only be used if wielded by a Cleric: By uttering a command word, the Cleric may create an effect similar to the spell&nbsp;<strong>striking</strong>. Expenditure of one charge adds 1d6 damage to the weapon’s next strike; expenditure of two charges adds 2d6, and expenditure of three charges adds 3d6 damage. If the weapon is not successfully used after the command word has been spoken, the effect dissipates after one turn.</p>
+<p><strong>Staff of Wizardry:</strong>&nbsp;This staff is equivalent to the<strong>&nbsp;staff of power</strong>, above, and has the following powers as well:&nbsp;<strong>invisibility</strong>,&nbsp;<strong>passwall</strong>,&nbsp;<strong>web</strong>, and&nbsp;<strong>conjure elementals</strong>&nbsp;(as the spell, but conjuring staff elementals as described in the&nbsp;<strong>Monsters</strong>&nbsp;section). These powers each use one charge when activated.</p>
+<p><strong>Wand of Cold:</strong>&nbsp;This wand generates a conical blast of cold doing 6d8 damage (save vs.&nbsp;Magic Wands for half damage). The cone spreads from the tip of the wand to a width of 30’ at a distance of 40’ away.</p>
+<p><strong>Wand of Enemy Detection:</strong>&nbsp;The effect of this wand is to make all enemies of the user within 60’ glow with a greenish white light for one round. Even hidden or invisible enemies glow in this way, revealing them, but enemies completely out of sight (such as behind a wall) may not be seen by the user. An “enemy” is any creature which is thinking of or otherwise intending to harm the user; also, all undead monsters and animated constructs within range will glow in this way regardless of intent or thoughts (or lack thereof).</p>
+<p><strong>Wand of Fear:</strong>&nbsp;This wand generates the effect of the spell&nbsp;<strong>cause fear</strong>&nbsp;(the reverse of the spell&nbsp;<strong>remove fear</strong>).</p>
+<p><strong>Wand of Fireballs:</strong>&nbsp;This wand generates&nbsp;<strong>fireball</strong>s, exactly as the spell, doing 6d6 damage.</p>
+<p><strong>Wand of Illusion:</strong>&nbsp;This wand allows the user to create illusions equivalent to the spell&nbsp;<strong>phantasmal force</strong>.</p>
+<p><strong>Wand of Lightning Bolts:</strong>&nbsp;This wand generates&nbsp;<strong>lightning bolts</strong>, exactly as the spell, doing 6d6 damage.</p>
+<p><strong>Wand of Magic Detection:</strong>&nbsp;This wand grants the user a power equivalent to the spell&nbsp;<strong>detect magic</strong>.</p>
+<p><strong>Wand of Paralyzation:</strong>&nbsp;This wand creates the effect of the spell&nbsp;<strong>hold person</strong>.</p>
+<p><strong>Wand of Polymorph:</strong>&nbsp;This wand can be used to cast either&nbsp;<strong>polymorph self</strong>&nbsp;or&nbsp;<strong>polymorph other</strong>.</p>
+<p><strong>Wand of Secret Door Detection:</strong>&nbsp;This wand grants the user a power similar to the spell&nbsp;<strong>find traps</strong>, but which reveals secret doors rather than traps.</p>
+<p><strong>Wand of Trap Detection:</strong>&nbsp;This wand grants the user a power equivalent to the spell&nbsp;<strong>find traps</strong>.</p>
+</section>
+<section id="miscellaneous-items" class="level3">
+<h3 class="anchored" data-anchor-id="miscellaneous-items">Miscellaneous Items</h3>
+<p>These items may take any of several forms, and have a variety of effects; when randomly rolled, the effect is determined first (as explained with the tables above) and then the form is rolled on a separate table. Generally, such an item is written as a [<strong>Form</strong>] of [<strong>Effect</strong>], for example, a <strong>Cloak of Fire Resistance</strong>.</p>
+<p>Items with forms meant to be worn are limited in that only a normal number may be used at one time: at most two rings (one on each hand), one cloak, a pair of boots, one helm, and one pendant. If a character is wearing two items that grant the same continuous effect, such as <strong>Cold Resistance</strong> or <strong>Protection</strong>, only one such item will function. If the items have differing levels of effect, such as a <strong>Cloak of Protection +1</strong> and a <strong>Ring of Protection +3</strong>, only the more powerful item will operate (in this case, the ring).</p>
+<p>While the tables on page 167 provide standard forms for miscellaneous items, the Game Master is in no way limited to what appears on the Form of Item table; items may be created with forms not normally allowed there, or indeed even in forms that are not there at all.</p>
+</section>
+<section id="miscellaneous-item-effects" class="level3">
+<h3 class="anchored" data-anchor-id="miscellaneous-item-effects">Miscellaneous Item Effects</h3>
+<p><strong>Blasting</strong>: When this device is played (as appropriate for its form), it creates a powerful blast of sound filling a cone 10’ long and 2’ wide at the base. Those within the area of effect suffer 2d6 points of damage and are deafened for 1 full turn. A successful saving throw vs. Death Ray reduces damage by half and reduces the period of deafness to a single round.</p>
+<p>The device can also be used to damage or destroy buildings, fortifications, etc. Double the damage listed above when this item is used against a structure. The <a href="./gm02.html#strongholds">Stronghold</a> rules in the Game Master section contains further guidance on this.</p>
+<p><strong>Blending</strong>: The wearer of this item becomes nearly invisible, granting an 80% chance that the wearer can move about unnoticed. If detected by onlookers, the wearer can be attacked without significant penalty.</p>
+<p><strong>Cold Resistance</strong>: The wearer of this device receives protection as the spell resist cold, but the protection works continually.</p>
+<p><strong>Comprehension</strong>: The wearer of this device is granted the ability to read any language, including any form of magical script. Being able to read magic does not confer magical abilities upon the wearer, but if worn by a magic-user it grants the effects of <strong>read magic</strong> constantly. Note that when reading non-magical texts, the limitations described under the spell <strong>read languages</strong> apply to this device also.</p>
+<p><strong>Control Animal</strong>: The wearer of this device can charm up to 6 hit dice of animals. The effect works much like a <a href="./allSpells.html#charm-animal">charm person</a> spell, but only affects animals (including giant-sized animals, but excluding fantastic creatures as well as anything more intelligent than a dog or cat). The wearer can activate the power at will, targeting any animal within 60’ that they can see. The wearer may choose to end the effect for one or more controlled creatures at any time, in order to “free” enough hit dice to control a new target.</p>
+<p><strong>Control Human</strong>: The wearer of this device may cast the spell <a href="./allSpells.html#charm-person">charm person</a> at any target they can see within 60’. The wearer can use this power once per round, at will. If more than one humanoid is to be affected, the wearer cannot control more than 6 hit dice or levels of humanoids at a time; however, the wearer may choose to end the effect for one or more controlled creatures at any time, in order to “free” enough hit dice or levels to control a new target.</p>
+<p><strong>Control Plant</strong>: The wearer of this device may create an effect equivalent to a <strong>Potion of Plant Control</strong> at will, affecting plants or plant creatures within 60’ that they can see. The effect lasts as long as the wearer remains within 60’ of the plants or plant creatures. A saving throw is allowed just as for the potion.</p>
+<p><strong>Courage</strong>: When this device is played, all characters and creatures friendly to the user within 60 feet are affected as by the spell <a href="./allSpells.html#remove-fear">remove fear</a>.</p>
+<p>Deception: This device grants to the wearer the power of the Deceiver (as described on page 75). Any attacker will believe the wearer is 3 feet from their true location, and the attacker’s first strike will always miss. Thereafter, the attacker suffers a penalty of -2 on all attack rolls. This ring does not affect mindless creatures, constructs such as golems or living statues, or any sort of undead. Living creatures which are not mindless will be affected even if they do not use sight to target the wearer.</p>
+<p>Delusion: Whoever wears this device believes it is some other form of useful magical device, and behaves thus (so for example, if Darion believes he is wearing a <strong>Ring of Invisibility</strong> he will believe himself to actually be invisible). Unlike the potion of the same name, the device’s effect is not dispelled by the wearer suffering damage; in fact, the only way to rid a character of this cursed item is with the spell <a href="./allSpells.html#remove-curse">remove curse</a>.</p>
+<p><strong>Djinni Summoning</strong>: Each device of this type has a specific djinni bound to it, which will be summoned to the wearer’s location when they rub the device while wearing it. The djinni appears in the next round and protects, serves, and obeys the wearer. The djinni will serve at most 1 hour per day, and can be summoned at most once per day. If the djinni bound to a device is ever slain, the ring loses all magical properties.</p>
+<p><strong>Doom</strong>: When this device is played (as appropriate for its form), this device will create animated skeletons or zombies as if by the spell <a href="./allSpells.html#animate-dead">animate dead</a>. Up to 3d6 hit dice of undead monsters will be so created from remains within a 60’ radius of the character who activated the device. If both skeletal and fleshy remains are available in the area of effect, skeletons will be animated in preference over zombies. If the user is a magic-user or cleric, the created undead may be controlled so long as that character retains the device. If played by a fighter or thief, the undead created will be uncontrolled, and will attack any living creatures nearby. The device may be used once per day, but no more than 18 hit dice of undead created by it may exist at any one time.</p>
+<p><strong>Fire Resistance</strong>: The wearer of this device receives protection as the spell <a href="./allSpells.html#resist-fire">resist fire</a>, but the protection works continually.</p>
+<p><strong>Invisibility</strong>: The wearer of this device can become invisible (as the spell <a href="./allSpells.html#invisibility">invisibility</a>) on command. If the invisibility is dispelled (as described for the spell), the device may not be reactivated for one full turn. The invisibility effect otherwise lasts for 24 hours. Levitation: The wearer of this device may levitate (as the spell) at will by concentrating. There is no limit to how long this device may be used.</p>
+<p><strong>Mind Reading</strong>: Whoever wears this device has access to a permanent form of the spell <a href="./allSpells.html#mind-reading">mind reading</a>; it is always available but only activates when the wearer spends a full round concentrating upon it, and persists until the wearer ceases to use it. The effect can be activated as many times per day as the wearer wants.</p>
+<p><strong>Panic</strong>: When this device is played (as appropriate for its form), all creatures more than 20 feet from the user but not over 120 feet away must save vs.&nbsp;Spells or be affected as by the spell <a href="./allSpells.html#remove-fear">cause fear</a>.</p>
+<p><strong>Penetrating Vision</strong>: On command, and for so long thereafter that the wearer concentrates on it, this device confers the power to see through solid matter as if it were transparent as glass. The effect extends at most 20 feet, and the wearer sees as if in normal light even if they are in fact in total darkness.</p>
+<p>This effect is blocked by certain materials; the wearer can see through at most 3 feet of wood or soil, 1 foot of stone, or 1 inch of most metals. Gold or lead no thicker than foil will completely block the effect.</p>
+<p>The device may be used three times per day, and each use lasts at most one turn.</p>
+<p><strong>Protection</strong>: The wearer of an item with this power receives the listed benefit (from +1 to +3) to their Armor Class for so long as the ring is worn. This bonus is also applied to the wearer’s saving throw die rolls.</p>
+<p><strong>Protection from Energy Drain</strong>: This device has the power to absorb and neutralize energy-draining attacks, death spells or effects (such as slay living), and curses that would otherwise affect the wearer. The device has 2d6 charges when found, and each negative level, curse, or spell absorbed consumes one charge. When the device’s charges are exhausted it disintegrates into golden sparkles and disappears.</p>
+<p><strong>Protection from Scrying</strong>: The wearer of this item is immune to all forms of scrying (including crystal balls, clairvoyance, clairaudience, and any other means of location or spying at a distance) as well as any form of mind reading. Other characters who are within 30’ of the wearer are also immune to scrying, but not to mind reading</p>
+<p><strong>Regeneration</strong>: This device grants the wearer the power of regeneration, exactly as described in the description of the Troll on page 151, including the weakness with respect to acid and fire damage. Note that this device will only heal damage suffered while it is worn; pre-existing damage is not healed by putting on the device.</p>
+<p><strong>Scrying</strong>: This device can be used to spy upon other people or locations, regardless of distance. A scrying device may only be used by Magic-Users. It can be used three times per day, for up to a turn each time. The chance of success when using a scrying device is as shown below. Total chances equal to or greater than 100% do not require a roll.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>Knowledge and Connection</strong></th>
+<th><strong>Chance</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Secondhand Knowledge (heard of)</td>
+<td>25%</td>
+</tr>
+<tr class="even">
+<td>Firsthand Knowledge (seen briefly)</td>
+<td>55%</td>
+</tr>
+<tr class="odd">
+<td>Familiar (known well)</td>
+<td>95%</td>
+</tr>
+<tr class="even">
+<td>Possession or garment</td>
+<td>+25%</td>
+</tr>
+<tr class="odd">
+<td>Body part, lock of hair, bit of nail, etc.</td>
+<td>+50%</td>
+</tr>
+</tbody>
+</table>
+<p>The user of the device is the only one who will see the image. No sound will be heard normally. <strong>Detect magic, detect evil, and mind reading</strong> have a 3% chance per level of the caster of operating correctly if used with a scrying device.</p>
+<p><strong>Scrying, Superior</strong>: This item works exactly like a standard scrying device, as described above, but also allows the user to hear any sounds in the location viewed as if they were there.</p>
+<p><strong>Speed</strong>: The wearer of this device can activate it with a command word (or by clicking their heels together, if the item takes the form of boots) and gain the effect of a <a href="./allSpells.html#haste">haste</a> spell, and can end the effect the same way. The effect can be used for a total of 10 rounds each day.</p>
+<p><strong>Spell Storing</strong>: These much sought-after devices each contain a number of spells which can be cast by the wearer. Most of them contain Magic-User spells, but 1 in 10 contains Clerical spells instead. <em>No device may contain spells of both types</em>! Each spell stored in the device is cast as if by the lowest-level character who could normally cast the spell, but not less than 6th level in any case.</p>
+<p>Any class may wear and use this device, but it can only be recharged by casting the appropriate spell into it. A table is provided below to determine how many spells, and what levels they are. A spell storing device must be recharged with the same spells that were placed into it when it was made; so a <strong>Pendant of Two Spell Storing</strong> containing fireball and fly can only be recharged with those two spells.</p>
+<p>The wearer of one of these devices automatically knows the names of the spells stored within it, but is not granted detailed knowledge of how each spell works. If the wearer is not a magic-user and no such character is available to advise the wearer, there may be some difficulty in using it successfully (and safely).</p>
+<p>A device of this type found in a treasure hoard may be completely charged, or discharged, or partially charged, at the GM’s option.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>d%</th>
+<th>no of Spells</th>
+<th>d%</th>
+<th>Level of Spell</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>01-24</td>
+<td>1</td>
+<td>01-30</td>
+<td>1st</td>
+</tr>
+<tr class="even">
+<td>25-48</td>
+<td>2</td>
+<td>31-55</td>
+<td>2nd</td>
+</tr>
+<tr class="odd">
+<td>49-67</td>
+<td>3</td>
+<td>56-75</td>
+<td>3rd</td>
+</tr>
+<tr class="even">
+<td>68-81</td>
+<td>4</td>
+<td>76-85</td>
+<td>4th</td>
+</tr>
+<tr class="odd">
+<td>82-91</td>
+<td>5</td>
+<td>86-97</td>
+<td>5th</td>
+</tr>
+<tr class="even">
+<td>92-96</td>
+<td>6</td>
+<td>98-00</td>
+<td>6th</td>
+</tr>
+<tr class="odd">
+<td>97-00</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Spell Turning</strong>: This device reflects spells cast directly at the wearer, but not area effect spells, back at the caster; so a <a href="./allSpells.html#hold-person">hold person</a> spell would be reflected, but not a <a href="./allSpells.html#fireball">fireball</a>. It will reflect up to 2d6 spells before its power is exhausted.</p>
+<p><strong>Stealth</strong>: The wearer of this device can move quietly in virtually any surroundings, granting a 90% chance of success when moving silently (as the Thief ability of the same name).</p>
+<p><strong>Telekinesis</strong>: The wearer of this device can use the power of the spell <a href="./allSpells.html#telekinesis">telekinesis</a>, as if cast by a 12th level Magic-User. The effect may be used as many times per day as the wearer wishes, but lasts only as long as the wearer concentrates on it.</p>
+<p><strong>Telepathy</strong>: Three times per day this item can be activated by use of its command word, at which point it will grant the wearer the power of a special version of the <a href="./allSpells.html#mind-reading">mind reading</a> spell which has a range of 90 feet and lasts for 1 turn. During this time the wearer can send thoughts to the mind of any creature whose thoughts the wearer is already reading, allowing communication.</p>
+<p><strong>Teleportation</strong>: Upon command the wearer of this item may cast the spell <a href="./allSpells.html#teleport">teleportation</a> as if by a wizard of the 12th level of ability. This power can be used up to 3 times per day.</p>
+<p><strong>True Seeing</strong>: Three times per day this device can grant the user the power of the spell <a href="./allSpells.html#true-seeing">true seeing</a>. Each use lasts at most one turn.</p>
+<p><strong>Water Walking</strong>: This device allows the wearer to walk on any liquid as if it were firm ground. Mud, oil, snow, quicksand, running water, ice, and even lava can be traversed easily, since the wearer’s feet hover an inch or two above the surface. Molten lava will still cause the wearer damage from the heat since they are still near it. The wearer can walk, run, or otherwise move across the surface as if it were normal ground.</p>
+<p><strong>Weakness</strong>: Whoever puts this device on is cursed; their Strength score is reduced immediately to 3. The device can only be removed with remove curse.</p>
+<p><strong>Wishes</strong>: This device contains the power to grant wishes to the wearer. 1d4 wishes will remain within the ring when it is found. The GM must adjudicate all wishes, and instructions are given in the <strong>Game Master</strong> section regarding this.</p>
+</section>
+<section id="rare-items-1" class="level3">
+<h3 class="anchored" data-anchor-id="rare-items-1">Rare Items</h3>
+<p><strong>Bag of Devouring</strong>: This device appears, to all tests, to be a normal <strong>Bag of Holding</strong>, and in fact it performs exactly like one at first. However, all items placed within disappear forever 1d6+6 turns later. The bag continues to weigh whatever it did after the items were placed within it (that is, one-tenth the total weight of the items), until it is opened and discovered to be empty.</p>
+<p><strong>Bag of Holding</strong>: This device is a bag which appears to be about 2 feet wide and 4 feet deep. It opens into an extradimensional space, and is able to hold more than should be possible: up to 500 pounds of weight, and up to 70 cubic feet of volume. The bag weighs one-tenth as much as the total of the objects held within. Any object to be stored in the bag must fit through the opening, which has a circumference of 4 feet.</p>
+<p>Puncturing or tearing the bag will destroy its magic and cause all contents to be lost forever. If this item is turned inside out all contents are dumped. The bag is unharmed, but it will no longer work until it is turned right side out again. If living creatures are placed inside they will suffocate within a turn (with exceptions for creatures resistant to suffocation as determined by the GM). The bag’s volume cannot be overfilled (as excess items simply cannot be put inside), but if overloaded above 500 pounds and then lifted it will be torn.</p>
+<p>Getting any particular item from the bag requires the bearer to spend a round searching during which no movement may be made.</p>
+<p><strong>Boots of Traveling and Leaping</strong>: These boots allow the wearer to make great leaps, jumping up to 10’ high and/or 30’ across. They improve the wearer’s movement so greatly that they also increase their movement rate on land by an additional 10’ per round.</p>
+<p><strong>Broom of Flying</strong>: This broom is able to fly through the air for up to 9 hours per day (split up as its owner desires). The broom can carry 200 pounds and fly at a speed of 40 feet, or up to 400 pounds at a speed at 30 feet. In addition, the broom can travel alone to any destination named by the owner as long as they have a good idea of the location and layout of that destination. It comes to its owner from as far away as 300 yards when the command word is spoken.</p>
+<p><strong>Efreeti Bottle</strong>: This item may appear as an ornate bottle, or sometimes as a magic lamp. It can be activated once per day, by opening it if it takes the form of a bottle or by rubbing it if it takes the form of a lamp. When activated, smoke pours out and forms into an efreeti.</p>
+<p>The efreeti released was trapped in the bottle and forced to serve whoever activates it. However, an efreeti who has spent too long in a bottle may have lost its mind, and if this happens the efreeti will begin a frenzied attack upon whoever activated the bottle, disappearing when either the user of the bottle or the efreeti is dead. There is, fortunately, only a 1 in 10 chance this will happen.</p>
+<p>On the other hand, there is also a 1 in 10 chance that the efreeti of the bottle is able to grant three wishes to the user. If this is the case, the efreeti will perform no other service, and cannot return to the bottle after it is activated until the user makes a wish. Subsequent wishes require additional activations, and upon the final wish being granted the efreeti disappears for good.</p>
+<p>Roll 1d10 when the bottle is first activated; on a roll of 1, the efreeti is insane, while on a roll of 0 the efreeti has three wishes to grant. If neither of these results is rolled, the efreeti will serve the user for up to one hour per day for 101 days, after which time it is freed and will disappear. Note that after the first activation, every day that passes is counted toward the 101 days whether or not the user activates the bottle.</p>
+<p><strong>Flying Carpet</strong>: This item appears to be a fancy rug of the sort found in the castle of a king. It has the power to fly, carrying those upon it as if they stand upon a solid surface. A flying carpet is typically 5’ x 8’ in size and can carry up to 500 pounds at a movement rate of 100’ per round, or up to 1,000 pounds (its maximum capacity) at a rate of 50’ per round. A flying carpet can fly at any speed up to its maximum, and can hover on command.</p>
+<p><strong>Gauntlets of Ogre Power</strong>: These thick leather gloves grant the wearer a Strength bonus of +4 (instead of their own Strength bonus). Both gauntlets must be worn for the magic to be effective.</p>
+<p><strong>Girdle of Giant Strength</strong>: This broad leather belt grants the wearer the strength of a giant. For so long as it is worn, the wearer gains a Strength bonus of +5 (instead of their own Strength bonus), and can throw large stones just as a stone giant does.</p>
+<p><strong>Mirror of Imprisonment</strong>: This item can appear as any style of full-length or larger mirror. It is a form of magical trap, which can be set or deactivated by speaking a command word followed by “activate” or “deactivate.”</p>
+<p>When in its active state, any character or creature who stands within 30 feet of the mirror and sees its reflection must save vs.&nbsp;Spells or be drawn bodily into the mirror, including all items worn or carried. The victim is placed within one of 20 metaphysical cells inside the mirror. Those trapped in the mirror are mere reflections and are unable to take any action. The last character who spoke the command word to the mirror is immune to its power, as are undead, constructs, and any creature that lacks eyes.</p>
+<p>A character who speaks the command word and then calls the number of a cell will cause the reflection of the occupant of that cell to appear in the mirror. The trapped creature can move and speak, but cannot cast spells or take any other real action. The controlling character may interrogate the trapped victim if desired, though the mirror does not compel the victim to respond or to be truthful. The controller may at any time speak the command word again and say “return” and the victim will be returned to its cell; or, the controller can say the command word followed by “come out” to free the victim, who appears standing beside the controller.</p>
+<p>Should all cells be full when a creature is drawn inside, one cell chosen at random will be emptied with the freed creature appearing where the trapped one had been standing. The freed creature is safe from the mirror for one turn thereafter before it can again be trapped. All victims will be freed instantly if the mirror is broken.</p>
+<p><strong>Rope of Climbing</strong>: This 50 foot long rope is about ½ inch in diameter, but is capable of supporting up to 3,000 pounds if tied to a secure anchor point. When the user holds one end of the rope and speaks the command word, the rope animates, moving like a snake at a rate of 10’ per round in whatever direction the user commands. The rope is even able to move into a completely vertical position if so ordered. It can be commanded to tie itself to any anchor point within reach (since the user must continue holding one end of the rope, it can reach no more than 50 feet from that point). The rope has no real strength and thus cannot lift or support any weight if not tied to an anchor point.</p>
+</section>
+<section id="devices-for-summoning-elementals" class="level3">
+<h3 class="anchored" data-anchor-id="devices-for-summoning-elementals">Devices for Summoning Elementals</h3>
+<p>These devices all grant the power to summon and control an elemental. As noted, the GM is likely to choose to allow only certain types of Elementals, so not all of these devices may be available in your campaign.</p>
+<p>When one of these devices is activated in accordance with the summoning rules described for the Elemental monster entry on page 88, an appropriate elemental appears and follows the summoner’s commands.</p>
+<p><strong>Bowl of Summoning Water Elementals</strong>: This device is about the size of a punch bowl, and will be made of precious metals set with jewels. To activate this device, it must be filled with fresh water (at least a quart) and the command words inscribed around its rim must be spoken, which requires a full round to complete.</p>
+<p><strong>Brazier of Summoning Fire Elementals</strong>: This device appears to be a small brazier, a metal bowl with legs and cage-like sides which stands about a 1½ feet tall. Braziers are meant to hold fire. To activate this device, a fire must be built in this brazier and the command words inscribed around its rim-band must be spoken, which requires a full round to complete.</p>
+<p><strong>Censer of Summoning Air Elementals</strong>: This device appears to be an ornate but ordinary censer, a kind of bowl with a perforated lid and a chain which is used to lift and swing the device. These are normally used in worship, but this device is made for a different purpose. To activate this device, incense must be placed in the bowl, lit, and covered, and the command words inscribed around the edge of the lid must be spoken, which requires a full round to complete.</p>
+<p><strong>Crucible of Summoning Metal Elementals</strong>: This device appears to be a small crucible, an open-topped vessel used for melting metal. To activate this device, it must be placed on a solid, adequately heat-resistant surface and the command words inscribed around the edge of the lid must be spoken, which requires a full round to complete.</p>
+<p>The crucible becomes very hot while the metal elemental is present, causing 2d8 points of damage to any character who dares to touch it barehanded and 2d6 points even if wearing armor or ordinary fabric or leather gloves. The crucible requires a full turn to cool after use.</p>
+<p><strong>Mallet of Summoning Wood Elementals</strong>: This is a wooden mallet of the sort used by builders to drive in pegs; though it could be used as a weapon, it is a poor excuse for one as it does just 1d4 points of damage on a hit and is not treated as a magic weapon. To activate this device, it must be held in the hand and the command words inscribed on one side of the hammer- head must then be spoken, which requires a full round to complete.</p>
+<p><strong>Marble Plate of Summoning Cold Elementals</strong>: This device is a circular plate of marble about 9 inches in diameter and about ¾ of an inch thick. To activate this device, it must be placed level on a solid, stable surface and a full skin of fresh water must be poured upon it; as the water touches the base it magically freezes into a small sculpture of a cold elemental. The command words inscribed around the rim of the plate must then be spoken, which requires a full round to complete.</p>
+<p><strong>Rod of Summoning Lightning Elementals</strong>: This device appears as a copper rod about ¾ inch thick and 2 feet long, tipped with a polished ball of amber. The rod will have a smooth, polished green surface (a thin coating of verdigris) but will not be pitted or damaged by the corrosion. To activate this device it must be held in the hand and the command words inscribed on the length of the rod must then be spoken, which requires a full round to complete.</p>
+<p><strong>Stone of Summoning Earth Elementals</strong>: This device is a roughly-cut but highly-polished stone in which a vein or cluster of precious or semi-precious stones is visible. To activate this device, it must be held in the user’s hands and the command words inscribed on the smoothest area of the stone must be spoken, which requires a full round to complete.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlxyXG5pbXBvcnQge2dlbmVyYWxUYWJsZVNlbGVjdCwgaGlnaGxpZ2h0VGFibGVSb3d9IGZyb20gXCIuL2N1c3RvbS5qc1wiXHJcblxyXG52aWV3b2YgZm9ybSA9IElucHV0cy5mb3JtKFxyXG4gIHtcclxuICAgIGJ1dHRvbjE6IElucHV0cy5idXR0b24oXCJBbnlcIiwge3ZhbHVlOiAwLCBcclxuICAgICAgICByZWR1Y2U6ICgpID0+IGhpZ2hsaWdodFRhYmxlUm93KFwiI2FybW9yLXdlYXBvbi10YWJsZVwiLCBcclxuICAgICAgICAgICAgZ2VuZXJhbFRhYmxlU2VsZWN0KFsxLDEwMCwwXSxbWzEsMjVdLFsyNiwzNV0sWzM2LDU1XSxbNTYsODVdLFs4Niw5MF0sWzkxLDk1XSxbOTYsMTAwXV0pKX0pLFxyXG4gICAgYnV0dG9uMjogSW5wdXRzLmJ1dHRvbihcIldlYXBvbiBvciBBcm1vclwiLCB7dmFsdWU6IDAsIFxyXG4gICAgICAgIHJlZHVjZTogKCkgPT4gaGlnaGxpZ2h0VGFibGVSb3coXCIjYXJtb3Itd2VhcG9uLXRhYmxlXCIsIFxyXG4gICAgICAgICAgICBnZW5lcmFsVGFibGVTZWxlY3QoWzEsMTAwLDBdLFtbMSw3MF0sIFs3MSwxMDBdXSkpfSksXHJcbiAgICBidXR0b24zOiBJbnB1dHMuYnV0dG9uKFwiQW55IEV4Y2VwdCBXZWFwb25cIiwge3ZhbHVlOiAwLCBcclxuICAgICAgICByZWR1Y2U6ICgpID0+IGhpZ2hsaWdodFRhYmxlUm93KFwiI2FybW9yLXdlYXBvbi10YWJsZVwiLCBcclxuICAgICAgICAgICAgZ2VuZXJhbFRhYmxlU2VsZWN0KFsxLDEwMCwwXSxbWy0yLC0xXSxbMSwxMl0sWzEzLDQwXSxbNDEsNzldLFs4MCw4Nl0sWzg3LDkzXSxbOTQsMTAwXV0pKX0pLFxyXG4gIH0sIFxyXG4gIHtcclxuICAgIHRlbXBsYXRlOiAoZm9ybVBhcnRzKSA9PiBodGwuaHRtbGBcclxuICAgICA8ZGl2PlxyXG4gICAgICAgPGRpdiBzdHlsZT1cIlxyXG4gICAgICAgICBkaXNwbGF5OiBncmlkO1xyXG4gICAgICAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDE1JSAzMCUgMzAlO1xyXG4gICAgICAgICBjb2x1bW4tZ2FwOiAxMHB4XHJcbiAgICAgICBcIj5cclxuICAgICAgICAgJHtPYmplY3QudmFsdWVzKGZvcm1QYXJ0cyl9XHJcbiAgICAgICA8L2Rpdj5cclxuICAgICA8L2Rpdj5gXHJcbiAgfSlcclxuXHJcblxyXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcclxuSW5wdXRzLmJ1dHRvbihcIlJvbGwgb24gVGFibGVcIiwgXHJcbnt2YWx1ZTogMCwgXHJcbnJlZHVjZTogKCkgPT4gaGlnaGxpZ2h0VGFibGVSb3coXCIjd2VhcG9uLXR5cGUtdGFibGVcIiwgXHJcbmdlbmVyYWxUYWJsZVNlbGVjdChbMSwxMDAsMF0sW1sxLDJdLFszLDldLFsxMCwxMV0sWzEyLDE5XSxbMjAsMjddLFsyOCwzMV0sWzMyLDM1XSxbMzYsNDNdLFs0NCw0N10sWzQ4LDU5XSxbNjAsNjVdLFs2Niw3OV0sWzgwLDgxXSxbODIsODNdLFs4NCw4Nl0sWzg3LDk0XSxbOTUsOTVdLFs5Niw5Nl0sWzk3LDk3XSxbOTgsMTAwXV0pKX0pXHJcblxyXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcclxuSW5wdXRzLmZvcm0oXHJcbiAge1xyXG4gICAgYnV0dG9uMTogSW5wdXRzLmJ1dHRvbihcImQlIE1lbGVlXCIsIHt2YWx1ZTogMCwgXHJcbiAgICAgICAgcmVkdWNlOiAoKSA9PiBoaWdobGlnaHRUYWJsZVJvdyhcIiNtZWxlZS1taXNzaWxlLXdlYXBvblwiLCBcclxuICAgICAgICAgICAgZ2VuZXJhbFRhYmxlU2VsZWN0KFsxLDEwMCwwXSxbWzEsNDBdLFs0MSw1MF0sWzUxLDU1XSxbNTYsNTddLFs1OCw1OF0sWzU5LDc1XSxbNzYsODVdLFs4Niw5NV0sWzk2LDk4XSxbOTksMTAwXV0pKX0pLFxyXG4gICAgYnV0dG9uMjogSW5wdXRzLmJ1dHRvbihcImQlIE1pc3NpbGVcIiwge3ZhbHVlOiAwLCBcclxuICAgICAgICByZWR1Y2U6ICgpID0+IGhpZ2hsaWdodFRhYmxlUm93KFwiI21lbGVlLW1pc3NpbGUtd2VhcG9uXCIsIFxyXG4gICAgICAgICAgICBnZW5lcmFsVGFibGVTZWxlY3QoWzEsMTAwLDBdLFtbMSw0MF0sWzQ3LDU4XSxbNTksNjRdLFstMiwtMV0sWy0yLC0xXSxbNjUsODJdLFs4Myw5NF0sWy0yLC0xXSxbOTUsOThdLFs5OSwxMDBdXSkpfSksXHJcbiAgfSwgXHJcbiAge1xyXG4gICAgdGVtcGxhdGU6IChmb3JtUGFydHMpID0+IGh0bC5odG1sYFxyXG4gICAgIDxkaXY+XHJcbiAgICAgICA8ZGl2IHN0eWxlPVwiXHJcbiAgICAgICAgIGRpc3BsYXk6IGdyaWQ7XHJcbiAgICAgICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMzAlIDMwJSA7XHJcbiAgICAgICAgIGNvbHVtbi1nYXA6IDEwcHhcclxuICAgICAgIFwiPlxyXG4gICAgICAgICAke09iamVjdC52YWx1ZXMoZm9ybVBhcnRzKX1cclxuICAgICAgIDwvZGl2PlxyXG4gICAgIDwvZGl2PmBcclxuICB9KVxyXG5cclxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC00IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiXHJcbklucHV0cy5idXR0b24oXCJSb2xsIG9uIFRhYmxlXCIsIFxyXG57dmFsdWU6IDAsIFxyXG5yZWR1Y2U6ICgpID0+IGhpZ2hsaWdodFRhYmxlUm93KFwiI3NwZWNpYWwtZW5lbXktdGFibGVcIiwgXHJcbmdlbmVyYWxUYWJsZVNlbGVjdChbMSw2LDBdLFtbMSwxXSxbMiwyXSxbMywzXSxbNCw0XSxbNSw1XSxbNiw2XV0pKX0pXHJcblxyXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTUiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcclxuSW5wdXRzLmJ1dHRvbihcIlJvbGwgb24gVGFibGVcIiwgXHJcbnt2YWx1ZTogMCwgXHJcbnJlZHVjZTogKCkgPT4gaGlnaGxpZ2h0VGFibGVSb3coXCIjc3BlY2lhbC1hYmlsaXR5LXRhYmxlXCIsIFxyXG5nZW5lcmFsVGFibGVTZWxlY3QoWzEsMjAsMF0sW1sxLDldLFsxMCwxMV0sWzEyLDEyXSxbMTMsMTZdLFsxNywxOV0sWzIwLDIwXV0pKX0pXHJcblxyXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTYiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcclxuSW5wdXRzLmZvcm0oXHJcbiAge1xyXG4gICAgYnV0dG9uMTogSW5wdXRzLmJ1dHRvbihcImQlIEFybW9yIFR5cGVcIiwge3ZhbHVlOiAwLCBcclxuICAgICAgICByZWR1Y2U6ICgpID0+IGhpZ2hsaWdodFRhYmxlUm93KFwiI21hZ2ljLWFybW9yLXRhYmxlXCIsIFxyXG4gICAgICAgICAgICBnZW5lcmFsVGFibGVTZWxlY3QoWzEsMTAwLDBdLFtbMSw5XSxbMTAsMjhdLFsyOSw0M10sWzQ0LDEwMF1dKSl9KSxcclxuICAgIGJ1dHRvbjI6IElucHV0cy5idXR0b24oXCJkJSBBcm1vciBCb251c1wiLCB7dmFsdWU6IDAsIFxyXG4gICAgICAgIHJlZHVjZTogKCkgPT4gaGlnaGxpZ2h0VGFibGVSb3coXCIjbWFnaWMtYXJtb3ItdGFibGVcIiwgXHJcbiAgICAgICAgICAgIGdlbmVyYWxUYWJsZVNlbGVjdChbMSwxMDAsMF0sW1sxLDUwXSxbNTEsODBdLFs4MSw5MF0sWzkxLDk1XSxbOTIsMTAwXV0pKX0pLFxyXG4gIH0sIFxyXG4gIHtcclxuICAgIHRlbXBsYXRlOiAoZm9ybVBhcnRzKSA9PiBodGwuaHRtbGBcclxuICAgICA8ZGl2PlxyXG4gICAgICAgPGRpdiBzdHlsZT1cIlxyXG4gICAgICAgICBkaXNwbGF5OiBncmlkO1xyXG4gICAgICAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDQwJSA0MCUgO1xyXG4gICAgICAgICBjb2x1bW4tZ2FwOiAxMHB4XHJcbiAgICAgICBcIj5cclxuICAgICAgICAgJHtPYmplY3QudmFsdWVzKGZvcm1QYXJ0cyl9XHJcbiAgICAgICA8L2Rpdj5cclxuICAgICA8L2Rpdj5gXHJcbiAgfSlcclxuXHJcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlxyXG5JbnB1dHMuYnV0dG9uKFwiUm9sbCBvbiBUYWJsZVwiLCBcclxue3ZhbHVlOiAwLCBcclxucmVkdWNlOiAoKSA9PiBoaWdobGlnaHRUYWJsZVJvdyhcIiNwb3Rpb25zLXJhbmRvbS10YWJsZVwiLCBcclxuZ2VuZXJhbFRhYmxlU2VsZWN0KFsxLDEwMCwwXSxbWzEsM10sIFs0LDZdLCBbNyw4XSwgWzksMTFdLCBbMTIsMTNdLCBbMTQsMTZdLCBbMTcsMTldLCBbMjAsMjJdLCBbMjMsMjVdLCBbMjYsMzJdLCBbMzMsMzVdLCBbMzYsMzldLCBbNDAsNDNdLCBbNDQsNDddLCBbNDgsNTFdLCBbNTIsNTVdLCBbNTYsNTldLCBbNjAsNjNdLCBbNjQsNjhdLCBbNjksNzJdLCBbNzMsNzZdLCBbNzcsODBdLCBbODEsODRdLCBbODUsODZdLCBbODcsODldLCBbOTAsOTddLCBbOTgsMTAwXV0pKX0pXHJcblxyXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTgiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcclxuSW5wdXRzLmJ1dHRvbihcIlJvbGwgb24gVGFibGVcIiwgXHJcbnt2YWx1ZTogMCwgXHJcbnJlZHVjZTogKCkgPT4gaGlnaGxpZ2h0VGFibGVSb3coXCIjc2Nyb2xscy10YWJsZVwiLCBcclxuZ2VuZXJhbFRhYmxlU2VsZWN0KFsxLDEwMCwwXSxbWzEsM10sIFs0LDZdLCBbNyw4XSwgWzksOSBdLCBbMTAsMTVdLCBbMTYsMjBdLCBbMjEsMjVdLCBbMjYsMjldLCBbMzAsMzJdLCBbMzMsMzRdLCBbMzUsMzUgIF0sIFszNiw0MF0sIFs0MSw0Nl0sIFs0Nyw1Nl0sIFs1Nyw2MV0sIFs2Miw3NV0sIFs3Niw4NV0sIFs4Niw4OV0sIFs5MCw5Ml0sIFs5MywxMDBdXSkpfSlcclxuXHJcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtOSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlxyXG5JbnB1dHMuYnV0dG9uKFwiUm9sbCBvbiBUYWJsZVwiLCBcclxue3ZhbHVlOiAwLCBcclxucmVkdWNlOiAoKSA9PiBoaWdobGlnaHRUYWJsZVJvdyhcIiNyaW5ncy10YWJsZVwiLCBcclxuZ2VuZXJhbFRhYmxlU2VsZWN0KFsxLDEwMCwwXSxbWzEsNl0sWzcsMTJdLFsxMywxOV0sWzIwLDMwXSxbMzEsMzNdLFszNCw0NF0sWzQ1LDU3XSxbNTgsNjZdLFs2Nyw3MF0sWzcxLDcxXSxbNzIsNzNdLFs3NCw3NV0sWzc2LDgxXSxbODIsODNdLFs4NCw5MF0sWzkxLDk3XSxbOTgsOThdLFs5OSwxMDBdXSkpfSlcclxuXHJcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTAiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcclxuSW5wdXRzLmJ1dHRvbihcIlJvbGwgb24gVGFibGVcIiwgXHJcbnt2YWx1ZTogMCwgXHJcbnJlZHVjZTogKCkgPT4gaGlnaGxpZ2h0VGFibGVSb3coXCIjd2FuZHMtdGFibGVcIiwgXHJcbmdlbmVyYWxUYWJsZVNlbGVjdChbMSwxMDAsMF0sW1sxLDhdLFs5LDEzXSxbMTQsMTddLFsxOCwyOF0sWzI5LDMwXSxbMzEsMzRdLFszNSwzNV0sWzM2LDQwXSxbNDEsNDVdLFs0Niw1MF0sWzUxLDU1XSxbNTYsNjBdLFs2MSw2NV0sWzY2LDczXSxbNzQsNzldLFs4MCw4NF0sWzg1LDkyXSxbOTMsMTAwXV0pKX0pXHJcblxyXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ2Zvcm0nKSJ9XX0=
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "הועתק!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "הועתק!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./treasure.html" class="pagination-link" aria-label="Treasure">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Treasure</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./gm01.html" class="pagination-link" aria-label="Managing Encounters">
+        <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Managing Encounters</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

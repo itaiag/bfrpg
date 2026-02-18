@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="he" xml:lang="he" dir="rtl"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Chris Gonnerman">
-<meta name="dcterms.date" content="2023-05-02">
 
-<title>Basic Fantasy RPG, 4th edition</title>
+<title>7&nbsp; Vehicles – מערכת פנטזיה בסיסית לשחקני תפקידים, מהדורה 4</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./whatIsThis.html" rel="next">
+<link href="./spells.html" rel="next">
+<link href="./equipment.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -43,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-588e16051b300ec69a1061866f9e49f5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-cee3e496ba8b573501d842b8d7792f9a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -58,17 +57,17 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "אין תוצאות",
+    "search-matching-documents-text": "מסמכים תואמים",
+    "search-copy-link-title": "העתק קישור לחיפוש",
+    "search-hide-matches-text": "הסתר התאמות נוספות",
+    "search-more-match-text": "התאמה נוספת במסמך זה",
+    "search-more-matches-text": "התאמות נוספות במסמך זה",
+    "search-clear-button-title": "נקה",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "בטל",
+    "search-submit-button-title": "שלח",
+    "search-label": "חפש"
   }
 }</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JS65M33XZB"></script>
@@ -80,11 +79,12 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 </script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caudex">
-<script src="translator/lang-switch.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre">
+<script src="../../translator/lang-switch.js"></script>
 
 
 <link rel="stylesheet" href="custom.css">
+<link rel="stylesheet" href="custom-rtl.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -93,13 +93,13 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="הצג/הסתר את סרגל הניווט" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./char-creation.html">Player Characters</a></li><li class="breadcrumb-item"><a href="./vehicles.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Vehicles</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="הצג/הסתר את סרגל הניווט" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="חפש" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -111,19 +111,19 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Basic Fantasy RPG, 4th edition</a> 
+      <a href="./">מערכת פנטזיה בסיסית לשחקני תפקידים, מהדורה 4</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="חפש"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
@@ -131,7 +131,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Introduction</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -148,7 +148,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Player Characters</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -185,7 +185,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./vehicles.html" class="sidebar-item-text sidebar-link">
+  <a href="./vehicles.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Vehicles</span></span></a>
   </div>
 </li>
@@ -195,7 +195,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Magic</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -218,7 +218,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Adventure</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -253,7 +253,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
  <span class="menu-text">Encounters</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -270,7 +270,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
  <span class="menu-text">Monsters</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -299,7 +299,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
  <span class="menu-text">Treasure</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -322,7 +322,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
  <span class="menu-text">GM Information</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -345,7 +345,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
  <span class="menu-text">Appendix</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -374,7 +374,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
  <span class="menu-text">Extra</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -399,6 +399,63 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 </li>
       </ul>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./he/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">הקדמה</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true">
+ <span class="menu-text">מבוא</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./he/whatIsThis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">מבוא</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true">
+ <span class="menu-text">דמויות שחקן</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./he/char-creation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">דמויות שחקן</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true">
+ <span class="menu-text">מפגשים</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./he/combat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">מפגשי קרב</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -406,38 +463,29 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">תוכן עניינים</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
+  <li><a href="#land-transportation" id="toc-land-transportation" class="nav-link active" data-scroll-target="#land-transportation">Land Transportation</a></li>
+  <li><a href="#water-transportation" id="toc-water-transportation" class="nav-link" data-scroll-target="#water-transportation">Water Transportation</a></li>
+  <li><a href="#notes-regarding-vehicles" id="toc-notes-regarding-vehicles" class="nav-link" data-scroll-target="#notes-regarding-vehicles">Notes Regarding Vehicles</a></li>
+  <li><a href="#siege-engines" id="toc-siege-engines" class="nav-link" data-scroll-target="#siege-engines">Siege Engines</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./char-creation.html">Player Characters</a></li><li class="breadcrumb-item"><a href="./vehicles.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Vehicles</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Basic Fantasy RPG, 4th edition</h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Vehicles</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Chris Gonnerman </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">May 2, 2023</p>
-    </div>
-  </div>
   
     
   </div>
@@ -447,51 +495,305 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 </header>
 
 
-<section id="preface" class="level1 unnumbered page-columns page-full">
-<h1 class="unnumbered">Preface</h1>
-<p><strong>Copyright © 2006-2023 Chris Gonnerman – All Rights Reserved</strong></p>
-<p><strong>Basic Fantasy Role-Playing Game</strong>: 4th Edition, Release 128</p>
-<p>All textual materials in this document, as well as all maps, floorplans, diagrams, charts, and forms included herein, are distributed under the terms of the <strong>Creative Commons Attribution-ShareAlike 4.0 International License</strong>. Most other artwork presented is property of the original artist and is used with permission. Note that you may not publish or otherwise distribute this work as is without permission of the original artists; you must remove all non-licensed artwork before doing so. The full license text can be viewed at:</p>
-<p>https://creativecommons.org/licenses/by-sa/4.0/</p>
-<p>Some text used in the development of this document was retrieved from Wikipedia, and was originally licensed under the Creative Commons Attribution-ShareAlike 3.0 license.</p>
-<p>Credits from the PDF:</p>
+<p>The following tables give details of various land and sea vehicles. Game Masters should feel free to create their own vehicles, in which case the table can be used for guidance. Some of the statistics given below are explained in detail later.</p>
+<section id="land-transportation" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="land-transportation">Land Transportation</h2>
 <div class="column-screen-inset-right">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 25%">
-<col style="width: 75%">
+<col style="width: 11%">
+<col style="width: 22%">
+<col style="width: 10%">
+<col style="width: 9%">
+<col style="width: 12%">
+<col style="width: 19%">
+<col style="width: 14%">
 </colgroup>
+<thead>
+<tr class="header">
+<th>Vehicle</th>
+<th>Length x width*</th>
+<th>Weight</th>
+<th>Cargo</th>
+<th>Movement</th>
+<th>Hardness / HP</th>
+<th>Cost (gp)</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Contributors:</td>
-<td style="text-align: left;">Ray Allen, William D. Smith, Jr., Nick Bogan, Evan Moore, Stuart Marshall, Emiliano Marchetti, Antonio Eleuteri, Luigi Castellani, Michael Hensley, Nazim N. Karaca, Arthur Reyes, Todd Roe, Jim Bobb, R. Kevin Smoot, Rachel Ghoul, Tom Hoyt, James Michael Spahn, Matt Sluis, Russ Westbrook, Martin Serena, Joe Ludlum, Aaron G. Motta, and Gabe Fua</td>
+<td>Chariot</td>
+<td>15’ x 6’</td>
+<td>300</td>
+<td>750 lbs</td>
+<td>60’ (10’)</td>
+<td>10 / 10</td>
+<td>400</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Cover Art:</td>
-<td style="text-align: left;">Erik Wilson</td>
+<td>Coach</td>
+<td>30’ x 8’</td>
+<td>1,000</td>
+<td>2,000 lbs</td>
+<td>40’ (15’)</td>
+<td>6 / 12</td>
+<td>1,500</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Artwork:</td>
-<td style="text-align: left;">Erik Wilson, Steve Zieser, Matt Finch, Dan Dalton, Luigi Castellani, Nick Bogan, Mike Hill, Kevin Cook, Sean Stone, Brian “Glad” Thomas, Tomas Arfert, Andy “ATOM” Taylor, Jason Braun, Martin “Wulfgarn” Siesto, Brian DeClercq, Martin Serena, Cory “Shonuff” Gelnett, Alexander Cook, Bruce Ripple, Gabe Fua, John Simcoe, LuckyCrafts, Jeremy Putnam, Francisco Chavez, William Henry Dvorak, Tony Grant Gittoes, Jose Kercado, Jody Claunch, Terance Crosby, S. Ender Thiel, Colin Richards, John Fredericks, Piotr Klimkowicz, Evan Griffiths, Hadrien Riel-Salvatore, and Benedikt Noir</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Proofreading:</td>
-<td style="text-align: left;">Tonya Allen, Daryl Burns, James Roberts, Serge Petitclerc, Benedict Wolf, Onno Tasler, Peter Cook, Derrick “Omote” Landwehr, Wes Brown, Troy Gravil, Garrett Rooney, K. David Ladage, James Lemon, Martin Serena, Joe Carruthers, Jonathan Nichol, Alister Fa, Joel Davis, Hadrien Riel-Salvatore, Mark Mealman, Alan Vetter, Jim Michnowicz, Timothy P. Fox, Piotr Klimkowicz, Daniel Collins, Thorin Schmidt, and feveredmonk</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Playtesters:</td>
-<td style="text-align: left;">Taylor Gonnerman, Alan Jett, Mike Brantner, Steve Zieser, Allan Zieser, Jonathon Foster, Adam Young, Michael Young, Jason Schmidt, Doug Wilson, Jessica Abramson, Tonya Allen, Bryan Christian, Chuck Schoonover, Natalie Schoonover, Brianna Schoonover, Jason Brentlinger, Chris Wolfmeyer, Josh Eaton, Audra Brentlinger, Tim McAfee, Ike Borden, Cody Drebenstedt, Joseph BierFauble, Emily Drebenstedt, John Lopez, Pedro Pablo Miron Pozo, Robert Odom, Sergio I. Nemirovsky, Will E. Sanders, Brian Scalise, Timothy J. Kuhn, and Jeanne Mayer Mitchell</td>
+<td>Wagon</td>
+<td>35’ x 8’</td>
+<td>2,000</td>
+<td>4,000 lbs</td>
+<td>20’ (15’)</td>
+<td>6 / 16</td>
+<td>500</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>Some tools to check out:</p>
-<ul>
-<li><a href="./monstersTab.html">Monster Index</a></li>
-<li><a href="./appendix_interactive.html">Interactive Tools</a></li>
-<li><a href="./appendixMapmaker.html">Dungeon Maker</a></li>
-</ul>
-<p>This website was created by John Atom (jmhimara). All its code and unique content are also distributed under the <strong>Creative Commons Attribution-ShareAlike 4.0 International License</strong>.</p>
+<p>*Includes hitched horses or mules.</p>
+</section>
+<section id="water-transportation" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="water-transportation">Water Transportation</h2>
+<div class="column-screen-inset-right">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Vehicle</th>
+<th>Length x Width</th>
+<th>Cargo</th>
+<th>Crew</th>
+<th>Movement</th>
+<th>Miles/Day</th>
+<th>Hardness / HP</th>
+<th>Cost (gp)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Canoe</td>
+<td>15’ x 4’</td>
+<td>½ ton</td>
+<td>1</td>
+<td>40’ (5’)</td>
+<td>30</td>
+<td>4 / 4</td>
+<td>50</td>
+</tr>
+<tr class="even">
+<td>Caravel</td>
+<td>55’ x 15’</td>
+<td>75 tons</td>
+<td>10</td>
+<td>20’ (20’)</td>
+<td>42</td>
+<td>8 / 75</td>
+<td>10,000</td>
+</tr>
+<tr class="odd">
+<td>Carrack</td>
+<td>60’ x 20’</td>
+<td>135 tons</td>
+<td>20</td>
+<td>30’ (30’)</td>
+<td>48</td>
+<td>10 / 120</td>
+<td>20,000</td>
+</tr>
+<tr class="even">
+<td>Galley, Small</td>
+<td>100’ x 15’</td>
+<td>210 tons</td>
+<td>90</td>
+<td>20’ (20’)</td>
+<td>36 / 24</td>
+<td>8 / 75</td>
+<td>15,000</td>
+</tr>
+<tr class="odd">
+<td>Galley, Large</td>
+<td>120’ x 20’</td>
+<td>375 tons</td>
+<td>160</td>
+<td>30’ (25’)</td>
+<td>42 / 24</td>
+<td>10 / 120</td>
+<td>30,000</td>
+</tr>
+<tr class="even">
+<td>Longship</td>
+<td>110’ x 15’</td>
+<td>10 tons</td>
+<td>70</td>
+<td>30’ (25’)</td>
+<td>42 / 24</td>
+<td>9 / 110</td>
+<td>25,000</td>
+</tr>
+<tr class="odd">
+<td>Raft/Barge</td>
+<td>per 10’ x 10’</td>
+<td>1 ton</td>
+<td>2</td>
+<td>40’ (10’)</td>
+<td>18</td>
+<td>6 / 12</td>
+<td>100</td>
+</tr>
+<tr class="even">
+<td>Riverboat</td>
+<td>50’ x 20’</td>
+<td>50 tons</td>
+<td>10</td>
+<td>20’ (20’)</td>
+<td>30</td>
+<td>8 / 30</td>
+<td>3,500</td>
+</tr>
+<tr class="odd">
+<td>Rowboat</td>
+<td>15’ x 6’</td>
+<td>1 ton</td>
+<td>1</td>
+<td>30’ (10’)</td>
+<td>24</td>
+<td>6 / 8</td>
+<td>60</td>
+</tr>
+<tr class="even">
+<td>Sailboat</td>
+<td>40’ x 8’</td>
+<td>5 tons</td>
+<td>1</td>
+<td>40’ (15’)</td>
+<td>36</td>
+<td>7 / 20</td>
+<td>2,000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="notes-regarding-vehicles" class="level2">
+<h2 class="anchored" data-anchor-id="notes-regarding-vehicles">Notes Regarding Vehicles</h2>
+<p>The<strong>&nbsp;Crew</strong>&nbsp;figure given reflects the minimum number of sailors and/or rowers needed to operate the ship. Officers are not counted among these numbers, and of course it is always a good idea to hire extra sailors and/or rowers to ensure that any casualties will not slow down the ship.</p>
+<p><strong>Cargo</strong>&nbsp;for wagons is given in pounds, while for ships it is given in tons. If the ship sails night and day, each passenger requires living space equivalent to one ton of cargo; in addition, provisions for one man for one month occupy 1/10 of a ton of space.</p>
+<p><strong>Movement</strong>&nbsp;is given separately here in feet (yards, actually; see&nbsp;<a href="./dungeonAdventures.html#time-and-scale">Time and Scale</a>&nbsp;for an explanation) as well as miles per day. The encounter movement of ships is not directly related to the long-distance travel rate, since the crew must work hard to make the ship move quickly in combat, and this level of effort cannot be maintained day and night.</p>
+<p>The parenthesized figure represents maneuverability; see&nbsp;<strong>Maneuverability</strong>&nbsp;in&nbsp;<strong>Part 5: The Encounter</strong>&nbsp;for details.</p>
+<p>See&nbsp;<strong>Attacking a Vehicle,</strong>&nbsp;also in the&nbsp;<a href="./combat.html#maneuverability">Encounter</a>&nbsp;section, for details on the&nbsp;<strong>Hardness</strong>&nbsp;and&nbsp;<strong>HP</strong>&nbsp;statistics.</p>
+<p>A&nbsp;<strong>chariot</strong>&nbsp;requires a single horse, generally a warhorse, to pull it. Both&nbsp;<strong>coaches</strong>&nbsp;and<strong>&nbsp;wagons</strong>&nbsp;require at least a pair of draft horses to pull them.</p>
+<p>A&nbsp;<strong>caravel</strong>&nbsp;is a highly maneuverable sailing ship with two or three masts. Though superficially similar to the larger carrack, caravels are capable of sailing up rivers, a task for which the larger ship is ill suited.</p>
+<p>A&nbsp;<strong>carrack</strong>&nbsp;is a large, ocean-going sailing ship with three or four masts.</p>
+<p><strong>Galleys</strong>&nbsp;are equipped with both sails and oars; the second listed movement rate for galleys is the rowing speed. A small galley will have around 20 rows of oars, with each oar pulled by two men (for a total of 80 rowers) while a large galley will have around 35 rows of oars (for a total of 140 rowers). Galleys are generally much more maneuverable than sailing ships such as the carrack or caravel, and may be outfitted with rams.</p>
+<p>The&nbsp;<strong>longship</strong>&nbsp;commonly used by northern raiders is very similar to the large galley. However, where more civilized nations have specialist rowers, sailors, and marines, the crew of a longship is more generalized; most crewmen will be qualified for all of these tasks.</p>
+</section>
+<section id="siege-engines" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="siege-engines">Siege Engines</h2>
+<p>These are weapons used to attack strongholds, or sometimes ships. Their cost may be up to twice as high in a remote location. A siege engine that throws missiles (a ballista, onager or trebuchet) must have a trained artillerist to fire it; this is the character who makes the attack rolls for the weapon. Missile-throwing engines have attack penalties, detailed below. Note: siege engines are not generally usable against individuals or monsters; the GM may make exceptions for very large monsters like giants or dragons. Review the rules in the <a href="./gm02.html#strongholds">Stronghold</a> section for details regarding attacking fortified buildings such as castles, towers, fortresses, and so on.</p>
+<div class="column-screen-inset-right">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Weapon</th>
+<th>Cost</th>
+<th>Rate of Fire</th>
+<th>Attack Penalty</th>
+<th>Damage</th>
+<th>Short Range (+1)</th>
+<th>Medium Range (+0)</th>
+<th>Long Range (-2)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ballista</td>
+<td>100 gp</td>
+<td>1/4</td>
+<td>-3</td>
+<td>2d8</td>
+<td>50’</td>
+<td>100’</td>
+<td>150’</td>
+</tr>
+<tr class="even">
+<td>Battering Ram</td>
+<td>200 gp</td>
+<td>1/3</td>
+<td>+0</td>
+<td>2d8</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td>Onager</td>
+<td>300 gp</td>
+<td>1/6</td>
+<td>-6</td>
+<td>2d12</td>
+<td>100’</td>
+<td>200’</td>
+<td>300’</td>
+</tr>
+<tr class="even">
+<td>Screw</td>
+<td>200 gp</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>1d8</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td>Sow</td>
+<td>100 gp</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td>Trebuchet</td>
+<td>400 gp</td>
+<td>1/10</td>
+<td>-8</td>
+<td>3d10</td>
+<td>N/A</td>
+<td>300’</td>
+<td>400’</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Ballista:</strong>&nbsp;This is effectively a very large crossbow that may fire a spear-like bolt or a large stone. It is usually mounted on a tripod or wagon, but may also be mounted on a ship. When firing bolts, a ballista cannot damage brick or stone. A ballista requires a crew of three to operate.</p>
+<p><strong>Battering Ram:</strong>&nbsp;These are usually operated under a sow (a sort of portable roof). They require a crew of eight or more.</p>
+<p><strong>Onager:</strong>&nbsp;This weapon throws a stone with a fairly flat trajectory. An onager requires a crew of four to operate.</p>
+<p><strong>Screw</strong>: This device may be used to attack a stronghold, by means of boring through the walls. A crew of at least eight is required to operate it. It is only used at the base of a wall, and it is usually operated under a sow.</p>
+<p><strong>Sow</strong>: This is a kind of portable roof, used for protection while performing slower attacks on a fortified building. Those under a sow will be harder to hit, receiving at least a +6 bonus to Armor Class against ranged attacks while taking cover under it. The sow itself has a hardness of 9 and 50 hit points.</p>
+<p><strong>Trebuchet:</strong>&nbsp;This mighty weapon uses a counterweight to fling a stone on a high, arcing path. It cannot fire at targets within 200 yards. If it is aimed at a target that is more than 20’ higher than the weapon, there is an additional –2 attack penalty. A trebuchet requires a crew of eight to operate.</p>
 
 
 </section>
@@ -522,12 +824,12 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "הועתק!");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "הועתק!");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
@@ -899,10 +1201,13 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./equipment.html" class="pagination-link" aria-label="Equipment">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Equipment</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./whatIsThis.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./spells.html" class="pagination-link" aria-label="Spells">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Spells</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="he-IL" xml:lang="he-IL" dir="rtl"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Chris Gonnerman">
-<meta name="dcterms.date" content="2023-05-02">
+<meta name="author" content="כריס גונרמן">
 
-<title>Basic Fantasy RPG, 4th edition</title>
+<title>מערכת פנטזיה בסיסית לשחקני תפקידים, מהדורה 4</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -43,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-588e16051b300ec69a1061866f9e49f5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-cee3e496ba8b573501d842b8d7792f9a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -58,33 +57,25 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "אין תוצאות",
+    "search-matching-documents-text": "מסמכים תואמים",
+    "search-copy-link-title": "העתק קישור לחיפוש",
+    "search-hide-matches-text": "הסתר התאמות נוספות",
+    "search-more-match-text": "התאמה נוספת במסמך זה",
+    "search-more-matches-text": "התאמות נוספות במסמך זה",
+    "search-clear-button-title": "נקה",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "בטל",
+    "search-submit-button-title": "שלח",
+    "search-label": "חפש"
   }
 }</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JS65M33XZB"></script>
-
-<script type="text/javascript">
-
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
-</script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caudex">
-<script src="translator/lang-switch.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre">
+<script src="../../translator/lang-switch.js"></script>
 
 
-<link rel="stylesheet" href="custom.css">
+<link rel="stylesheet" href="../custom.css">
+<link rel="stylesheet" href="../custom-rtl.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -93,13 +84,13 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="הצג/הסתר את סרגל הניווט" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">הקדמה</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="הצג/הסתר את סרגל הניווט" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="חפש" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -111,12 +102,12 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Basic Fantasy RPG, 4th edition</a> 
+      <a href="./">מערכת פנטזיה בסיסית לשחקני תפקידים, מהדורה 4</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="חפש"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -124,14 +115,14 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Preface</span></a>
+ <span class="menu-text">הקדמה</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Introduction</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+ <span class="menu-text">מבוא</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -139,7 +130,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./whatIsThis.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">מבוא</span></span></a>
   </div>
 </li>
       </ul>
@@ -147,8 +138,8 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Player Characters</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+ <span class="menu-text">דמויות שחקן</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -156,37 +147,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./char-creation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Player Characters</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./abilities.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Character Abilities</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./races.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Character Races</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./class.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Character Classes</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./equipment.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Equipment</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./vehicles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Vehicles</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">דמויות שחקן</span></span></a>
   </div>
 </li>
       </ul>
@@ -194,22 +155,16 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Magic</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+ <span class="menu-text">קסם</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./spells.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Spells</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./allSpells.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Spells, Alphabetical</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">לחשים, לפי סדר אלפביתי</span></span></a>
   </div>
 </li>
       </ul>
@@ -217,184 +172,16 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Adventure</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+ <span class="menu-text">מפגשים</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dungeonAdventures.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Dungeon Adventures</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./wildAdventures.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Wilderness Adventures</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./hirelings.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Hirelings</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./advancement.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Advancement</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">Encounters</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./combat.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Combat Encounters</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
- <span class="menu-text">Monsters</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./monsters.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Monsters Intro</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./monstersAll.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Monster Descriptions</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./monstersTab.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Monsters Index</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
- <span class="menu-text">Treasure</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./treasure.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Treasure</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./magicItems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Magic Items</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
- <span class="menu-text">GM Information</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./gm01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Managing Encounters</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./gm02.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Crafting Adventures</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
- <span class="menu-text">Appendix</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./appendix_interactive.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Interactive tools</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./appendixMapmaker.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Dungeon Maker</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./char_sheet.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Character Sheet</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
- <span class="menu-text">Extra</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./extraClasses.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Additional Classes</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./extraRaces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Additional Races</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./extraRules.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Aditional and Alternate Rules</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">מפגשי קרב</span></span></a>
   </div>
 </li>
       </ul>
@@ -406,10 +193,10 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">תוכן עניינים</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
+  <li><a href="#הקדמה" id="toc-הקדמה" class="nav-link active" data-scroll-target="#הקדמה">הקדמה</a></li>
   </ul>
 </nav>
     </div>
@@ -418,7 +205,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Basic Fantasy RPG, 4th edition</h1>
+<h1 class="title">מערכת פנטזיה בסיסית לשחקני תפקידים, מהדורה 4</h1>
 </div>
 
 
@@ -426,16 +213,16 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">כותב</div>
     <div class="quarto-title-meta-contents">
-             <p>Chris Gonnerman </p>
+             <p>כריס גונרמן </p>
           </div>
   </div>
     
     <div>
-    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-heading">פורסם</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 2, 2023</p>
+      <p class="date">2 במאי 2023</p>
     </div>
   </div>
   
@@ -447,14 +234,14 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 </header>
 
 
-<section id="preface" class="level1 unnumbered page-columns page-full">
-<h1 class="unnumbered">Preface</h1>
-<p><strong>Copyright © 2006-2023 Chris Gonnerman – All Rights Reserved</strong></p>
-<p><strong>Basic Fantasy Role-Playing Game</strong>: 4th Edition, Release 128</p>
-<p>All textual materials in this document, as well as all maps, floorplans, diagrams, charts, and forms included herein, are distributed under the terms of the <strong>Creative Commons Attribution-ShareAlike 4.0 International License</strong>. Most other artwork presented is property of the original artist and is used with permission. Note that you may not publish or otherwise distribute this work as is without permission of the original artists; you must remove all non-licensed artwork before doing so. The full license text can be viewed at:</p>
+<section id="הקדמה" class="level1 unnumbered page-columns page-full">
+<h1 class="unnumbered">הקדמה</h1>
+<p><strong>זכויות יוצרים © 2006-2023 כריס גונרמן – כל הזכויות שמורות</strong></p>
+<p><strong>משחק תפקידים בסיסי</strong>: מהדורה רביעית, שחרור 128</p>
+<p>כל החומרים הטקסטואליים במסמך זה, כמו גם כל המפות, התוכניות, הדיאגרמות, התרשימים והטפסים הכלולים בו, מופצים תחת תנאי <strong>רישיון Creative Commons Attribution-ShareAlike 4.0 International License</strong>. רוב האמנות האחרת המוצגת היא רכוש האמן המקורי ומשמשת באישור. שימו לב שאינכם רשאים לפרסם או להפיץ עבודה זו כפי שהיא ללא אישור מהאמנים המקוריים; עליכם להסיר את כל האמנות שאינה ברישיון לפני שתעשו זאת. ניתן לצפות בטקסט המלא של הרישיון בכתובת:</p>
 <p>https://creativecommons.org/licenses/by-sa/4.0/</p>
-<p>Some text used in the development of this document was retrieved from Wikipedia, and was originally licensed under the Creative Commons Attribution-ShareAlike 3.0 license.</p>
-<p>Credits from the PDF:</p>
+<p>חלק מהטקסט ששימש בפיתוח מסמך זה נלקח מוויקיפדיה, והיה במקור ברישיון Creative Commons Attribution-ShareAlike 3.0.</p>
+<p>קרדיטים מה-PDF:</p>
 <div class="column-screen-inset-right">
 <table class="caption-top table">
 <colgroup>
@@ -463,35 +250,35 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 </colgroup>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Contributors:</td>
-<td style="text-align: left;">Ray Allen, William D. Smith, Jr., Nick Bogan, Evan Moore, Stuart Marshall, Emiliano Marchetti, Antonio Eleuteri, Luigi Castellani, Michael Hensley, Nazim N. Karaca, Arthur Reyes, Todd Roe, Jim Bobb, R. Kevin Smoot, Rachel Ghoul, Tom Hoyt, James Michael Spahn, Matt Sluis, Russ Westbrook, Martin Serena, Joe Ludlum, Aaron G. Motta, and Gabe Fua</td>
+<td style="text-align: left;">תורמים:</td>
+<td style="text-align: left;">ריי אלן, ויליאם ד. סמית, ג’וניור, ניק בוגן, אבן מור, סטיוארט מרשל, אמיליאנו מרקטי, אנטוניו אליוטרי, לואיג’י קסטלני, מייקל הנסלי, נזים נ. קראקה, ארתור רייס, טוד רו, ג’ים בוב, ר. קווין סמוט, רייצ’ל גול, טום הויט, ג’יימס מייקל ספאן, מאט סלויס, רוס ווסטברוק, מרטין סרנה, ג’ו לודלם, אהרון ג. מוטה, וגייב פואה</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Cover Art:</td>
-<td style="text-align: left;">Erik Wilson</td>
+<td style="text-align: left;">אמנות עטיפה:</td>
+<td style="text-align: left;">אריק וילסון</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Artwork:</td>
-<td style="text-align: left;">Erik Wilson, Steve Zieser, Matt Finch, Dan Dalton, Luigi Castellani, Nick Bogan, Mike Hill, Kevin Cook, Sean Stone, Brian “Glad” Thomas, Tomas Arfert, Andy “ATOM” Taylor, Jason Braun, Martin “Wulfgarn” Siesto, Brian DeClercq, Martin Serena, Cory “Shonuff” Gelnett, Alexander Cook, Bruce Ripple, Gabe Fua, John Simcoe, LuckyCrafts, Jeremy Putnam, Francisco Chavez, William Henry Dvorak, Tony Grant Gittoes, Jose Kercado, Jody Claunch, Terance Crosby, S. Ender Thiel, Colin Richards, John Fredericks, Piotr Klimkowicz, Evan Griffiths, Hadrien Riel-Salvatore, and Benedikt Noir</td>
+<td style="text-align: left;">אמנות:</td>
+<td style="text-align: left;">אריק וילסון, סטיב זיזר, מאט פינץ’, דן דלטון, לואיג’י קסטלני, ניק בוגן, מייק היל, קווין קוק, שון סטון, בריאן “גלד” תומאס, תומאס ארפט, אנדי “אטום” טיילור, ג’ייסון בראון, מרטין “וולפגרן” סייסטו, בריאן דקלרק, מרטין סרנה, קורי “שונף” ג’לנט, אלכסנדר קוק, ברוס ריפל, גייב פואה, ג’ון סימקו, לאקי קראפטס, ג’רמי פוטנם, פרנסיסקו צ’אבז, ויליאם הנרי דבורק, טוני גרנט גיטוס, חוסה קרקאדו, ג’ודי קלונץ’, טרנס קרוסבי, ס. אנדר תיל, קולין ריצ’רדס, ג’ון פרדריקס, פיוטר קלימקוביץ’, אבן גריפית’ס, הדריאן ריאל-סלבדור, ובנדיקט נואר</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Proofreading:</td>
-<td style="text-align: left;">Tonya Allen, Daryl Burns, James Roberts, Serge Petitclerc, Benedict Wolf, Onno Tasler, Peter Cook, Derrick “Omote” Landwehr, Wes Brown, Troy Gravil, Garrett Rooney, K. David Ladage, James Lemon, Martin Serena, Joe Carruthers, Jonathan Nichol, Alister Fa, Joel Davis, Hadrien Riel-Salvatore, Mark Mealman, Alan Vetter, Jim Michnowicz, Timothy P. Fox, Piotr Klimkowicz, Daniel Collins, Thorin Schmidt, and feveredmonk</td>
+<td style="text-align: left;">הגהה:</td>
+<td style="text-align: left;">טוניה אלן, דאריל ברנס, ג’יימס רוברטס, סרג’ פטיטקלרק, בנדיקט וולף, אונו טסלר, פיטר קוק, דריק “אומוטה” לנדוור, וס בראון, טרוי גרוויל, גארט רוני, ק. דייוויד לדג’, ג’יימס למון, מרטין סרנה, ג’ו קארותרס, ג’ונתן ניקול, אליסטר פה, ג’ואל דייוויס, הדריאן ריאל-סלבדור, מארק מילמן, אלן וטר, ג’ים מיכנוביץ’, טימותי פ. פוקס, פיוטר קלימקוביץ’, דניאל קולינס, תורין שמידט, ופיברדמונק</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Playtesters:</td>
-<td style="text-align: left;">Taylor Gonnerman, Alan Jett, Mike Brantner, Steve Zieser, Allan Zieser, Jonathon Foster, Adam Young, Michael Young, Jason Schmidt, Doug Wilson, Jessica Abramson, Tonya Allen, Bryan Christian, Chuck Schoonover, Natalie Schoonover, Brianna Schoonover, Jason Brentlinger, Chris Wolfmeyer, Josh Eaton, Audra Brentlinger, Tim McAfee, Ike Borden, Cody Drebenstedt, Joseph BierFauble, Emily Drebenstedt, John Lopez, Pedro Pablo Miron Pozo, Robert Odom, Sergio I. Nemirovsky, Will E. Sanders, Brian Scalise, Timothy J. Kuhn, and Jeanne Mayer Mitchell</td>
+<td style="text-align: left;">בודקי משחק:</td>
+<td style="text-align: left;">טיילור גונרמן, אלן ג’ט, מייק ברנטנר, סטיב זיזר, אלן זיזר, ג’ונתן פוסטר, אדם יאנג, מייקל יאנג, ג’ייסון שמידט, דאג וילסון, ג’סיקה אברמסון, טוניה אלן, בריאן כריסטיאן, צ’אק שונובר, נטלי שונובר, בריאנה שונובר, ג’ייסון ברנטלינגר, כריס וולפמאייר, ג’וש איטון, אודרה ברנטלינגר, טים מקאפי, אייק בורדן, קודי דרבנסטדט, ג’וזף בירפאבל, אמילי דרבנסטדט, ג’ון לופז, פדרו פבלו מירון פוזו, רוברט אודום, סרג’יו א. נמירובסקי, וויל אי. סנדרס, בריאן סקאליס, טימותי ג’. קון, וג’ין מאייר מיטשל</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>Some tools to check out:</p>
+<p>כמה כלים לבדוק:</p>
 <ul>
-<li><a href="./monstersTab.html">Monster Index</a></li>
-<li><a href="./appendix_interactive.html">Interactive Tools</a></li>
-<li><a href="./appendixMapmaker.html">Dungeon Maker</a></li>
+<li><a href="monstersTab.qmd">אינדקס מפלצות</a></li>
+<li><a href="appendix_interactive.qmd">כלים אינטראקטיביים</a></li>
+<li><a href="appendixMapmaker.qmd">יוצר מבוכים</a></li>
 </ul>
-<p>This website was created by John Atom (jmhimara). All its code and unique content are also distributed under the <strong>Creative Commons Attribution-ShareAlike 4.0 International License</strong>.</p>
+<p>אתר זה נוצר על ידי ג’ון אטום (jmhimara). כל הקוד והתוכן הייחודי שלו מופצים גם הם תחת <strong>רישיון Creative Commons Attribution-ShareAlike 4.0 International License</strong>.</p>
 
 
 </section>
@@ -522,12 +309,12 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "הועתק!");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "הועתק!");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
@@ -901,8 +688,8 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
   <div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./whatIsThis.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./whatIsThis.html" class="pagination-link" aria-label="מבוא">
+        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">מבוא</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

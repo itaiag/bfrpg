@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="he" xml:lang="he" dir="rtl"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Chris Gonnerman">
-<meta name="dcterms.date" content="2023-05-02">
 
-<title>Basic Fantasy RPG, 4th edition</title>
+<title>11&nbsp; Wilderness Adventures – מערכת פנטזיה בסיסית לשחקני תפקידים, מהדורה 4</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -32,7 +65,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./whatIsThis.html" rel="next">
+<link href="./hirelings.html" rel="next">
+<link href="./dungeonAdventures.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -43,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-588e16051b300ec69a1061866f9e49f5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-cee3e496ba8b573501d842b8d7792f9a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -58,17 +92,17 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "אין תוצאות",
+    "search-matching-documents-text": "מסמכים תואמים",
+    "search-copy-link-title": "העתק קישור לחיפוש",
+    "search-hide-matches-text": "הסתר התאמות נוספות",
+    "search-more-match-text": "התאמה נוספת במסמך זה",
+    "search-more-matches-text": "התאמות נוספות במסמך זה",
+    "search-clear-button-title": "נקה",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "בטל",
+    "search-submit-button-title": "שלח",
+    "search-label": "חפש"
   }
 }</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JS65M33XZB"></script>
@@ -80,11 +114,14 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 </script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caudex">
-<script src="translator/lang-switch.js"></script>
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre">
+<script src="../../translator/lang-switch.js"></script>
 
 
 <link rel="stylesheet" href="custom.css">
+<link rel="stylesheet" href="custom-rtl.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -93,13 +130,13 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="הצג/הסתר את סרגל הניווט" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dungeonAdventures.html">Adventure</a></li><li class="breadcrumb-item"><a href="./wildAdventures.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Wilderness Adventures</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="הצג/הסתר את סרגל הניווט" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="חפש" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -111,19 +148,19 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Basic Fantasy RPG, 4th edition</a> 
+      <a href="./">מערכת פנטזיה בסיסית לשחקני תפקידים, מהדורה 4</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="חפש"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
@@ -131,7 +168,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Introduction</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -148,7 +185,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Player Characters</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -195,7 +232,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Magic</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -218,7 +255,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Adventure</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -231,7 +268,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./wildAdventures.html" class="sidebar-item-text sidebar-link">
+  <a href="./wildAdventures.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Wilderness Adventures</span></span></a>
   </div>
 </li>
@@ -253,7 +290,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
  <span class="menu-text">Encounters</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -270,7 +307,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
  <span class="menu-text">Monsters</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -299,7 +336,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
  <span class="menu-text">Treasure</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -322,7 +359,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
  <span class="menu-text">GM Information</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -345,7 +382,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
  <span class="menu-text">Appendix</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -374,7 +411,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
  <span class="menu-text">Extra</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -399,6 +436,63 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 </li>
       </ul>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./he/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">הקדמה</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true">
+ <span class="menu-text">מבוא</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./he/whatIsThis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">מבוא</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true">
+ <span class="menu-text">דמויות שחקן</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./he/char-creation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">דמויות שחקן</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true">
+ <span class="menu-text">מפגשים</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./he/combat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">מפגשי קרב</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -406,38 +500,30 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">תוכן עניינים</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
+  <li><a href="#wilderness-movement-rates" id="toc-wilderness-movement-rates" class="nav-link active" data-scroll-target="#wilderness-movement-rates">Wilderness Movement Rates</a></li>
+  <li><a href="#overland-travel" id="toc-overland-travel" class="nav-link" data-scroll-target="#overland-travel">Overland Travel</a></li>
+  <li><a href="#becoming-lost" id="toc-becoming-lost" class="nav-link" data-scroll-target="#becoming-lost">Becoming Lost</a></li>
+  <li><a href="#waterborne-travel" id="toc-waterborne-travel" class="nav-link" data-scroll-target="#waterborne-travel">Waterborne Travel</a></li>
+  <li><a href="#traveling-by-air" id="toc-traveling-by-air" class="nav-link" data-scroll-target="#traveling-by-air">Traveling by Air</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dungeonAdventures.html">Adventure</a></li><li class="breadcrumb-item"><a href="./wildAdventures.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Wilderness Adventures</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Basic Fantasy RPG, 4th edition</h1>
+<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Wilderness Adventures</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Chris Gonnerman </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">May 2, 2023</p>
-    </div>
-  </div>
   
     
   </div>
@@ -447,56 +533,269 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 </header>
 
 
-<section id="preface" class="level1 unnumbered page-columns page-full">
-<h1 class="unnumbered">Preface</h1>
-<p><strong>Copyright © 2006-2023 Chris Gonnerman – All Rights Reserved</strong></p>
-<p><strong>Basic Fantasy Role-Playing Game</strong>: 4th Edition, Release 128</p>
-<p>All textual materials in this document, as well as all maps, floorplans, diagrams, charts, and forms included herein, are distributed under the terms of the <strong>Creative Commons Attribution-ShareAlike 4.0 International License</strong>. Most other artwork presented is property of the original artist and is used with permission. Note that you may not publish or otherwise distribute this work as is without permission of the original artists; you must remove all non-licensed artwork before doing so. The full license text can be viewed at:</p>
-<p>https://creativecommons.org/licenses/by-sa/4.0/</p>
-<p>Some text used in the development of this document was retrieved from Wikipedia, and was originally licensed under the Creative Commons Attribution-ShareAlike 3.0 license.</p>
-<p>Credits from the PDF:</p>
-<div class="column-screen-inset-right">
+<section id="wilderness-movement-rates" class="level3">
+<h3 class="anchored" data-anchor-id="wilderness-movement-rates">Wilderness Movement Rates</h3>
+<p>Movement rates when traveling in the wilderness are related directly to encounter movement rates, as shown on the table below:</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 75%">
-</colgroup>
+<thead>
+<tr class="header">
+<th>Encounter Movement (Ft per Rnd)</th>
+<th>Wilderness Movement (Mls per Day)</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Contributors:</td>
-<td style="text-align: left;">Ray Allen, William D. Smith, Jr., Nick Bogan, Evan Moore, Stuart Marshall, Emiliano Marchetti, Antonio Eleuteri, Luigi Castellani, Michael Hensley, Nazim N. Karaca, Arthur Reyes, Todd Roe, Jim Bobb, R. Kevin Smoot, Rachel Ghoul, Tom Hoyt, James Michael Spahn, Matt Sluis, Russ Westbrook, Martin Serena, Joe Ludlum, Aaron G. Motta, and Gabe Fua</td>
+<td>10’</td>
+<td>6</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Cover Art:</td>
-<td style="text-align: left;">Erik Wilson</td>
+<td>20’</td>
+<td>12</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Artwork:</td>
-<td style="text-align: left;">Erik Wilson, Steve Zieser, Matt Finch, Dan Dalton, Luigi Castellani, Nick Bogan, Mike Hill, Kevin Cook, Sean Stone, Brian “Glad” Thomas, Tomas Arfert, Andy “ATOM” Taylor, Jason Braun, Martin “Wulfgarn” Siesto, Brian DeClercq, Martin Serena, Cory “Shonuff” Gelnett, Alexander Cook, Bruce Ripple, Gabe Fua, John Simcoe, LuckyCrafts, Jeremy Putnam, Francisco Chavez, William Henry Dvorak, Tony Grant Gittoes, Jose Kercado, Jody Claunch, Terance Crosby, S. Ender Thiel, Colin Richards, John Fredericks, Piotr Klimkowicz, Evan Griffiths, Hadrien Riel-Salvatore, and Benedikt Noir</td>
+<td>30’</td>
+<td>18</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Proofreading:</td>
-<td style="text-align: left;">Tonya Allen, Daryl Burns, James Roberts, Serge Petitclerc, Benedict Wolf, Onno Tasler, Peter Cook, Derrick “Omote” Landwehr, Wes Brown, Troy Gravil, Garrett Rooney, K. David Ladage, James Lemon, Martin Serena, Joe Carruthers, Jonathan Nichol, Alister Fa, Joel Davis, Hadrien Riel-Salvatore, Mark Mealman, Alan Vetter, Jim Michnowicz, Timothy P. Fox, Piotr Klimkowicz, Daniel Collins, Thorin Schmidt, and feveredmonk</td>
+<td>40’</td>
+<td>24</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Playtesters:</td>
-<td style="text-align: left;">Taylor Gonnerman, Alan Jett, Mike Brantner, Steve Zieser, Allan Zieser, Jonathon Foster, Adam Young, Michael Young, Jason Schmidt, Doug Wilson, Jessica Abramson, Tonya Allen, Bryan Christian, Chuck Schoonover, Natalie Schoonover, Brianna Schoonover, Jason Brentlinger, Chris Wolfmeyer, Josh Eaton, Audra Brentlinger, Tim McAfee, Ike Borden, Cody Drebenstedt, Joseph BierFauble, Emily Drebenstedt, John Lopez, Pedro Pablo Miron Pozo, Robert Odom, Sergio I. Nemirovsky, Will E. Sanders, Brian Scalise, Timothy J. Kuhn, and Jeanne Mayer Mitchell</td>
+<td>50’</td>
+<td>30</td>
+</tr>
+<tr class="even">
+<td>60’</td>
+<td>36</td>
+</tr>
+<tr class="odd">
+<td>70’</td>
+<td>42</td>
+</tr>
+<tr class="even">
+<td>80’</td>
+<td>48</td>
+</tr>
+<tr class="odd">
+<td>90’</td>
+<td>54</td>
+</tr>
+<tr class="even">
+<td>100’</td>
+<td>60</td>
+</tr>
+<tr class="odd">
+<td>110’</td>
+<td>66</td>
+</tr>
+<tr class="even">
+<td>120’</td>
+<td>72</td>
+</tr>
+</tbody>
+</table>
+<p>Naturally, any group traveling together moves at the rate of the slowest member.</p>
+</section>
+<section id="overland-travel" class="level3">
+<h3 class="anchored" data-anchor-id="overland-travel">Overland Travel</h3>
+<p>The movement rates shown on the table above are figured based on an 8 hour day of travel through open, clear terrain. The terrain type will alter the rate somewhat, as shown on this table:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>Terrain</strong></th>
+<th><strong>Adjustment</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Jungle, Mountains, Swamp</td>
+<td>×1/3</td>
+</tr>
+<tr class="even">
+<td>Desert, Forest, Hills</td>
+<td>×2/3</td>
+</tr>
+<tr class="odd">
+<td>Clear, Plains, Trail</td>
+<td>×1</td>
+</tr>
+<tr class="even">
+<td>Road (Paved)</td>
+<td>×1 1/3</td>
+</tr>
+</tbody>
+</table>
+<p>Characters may choose to perform a&nbsp;<strong>forced march</strong>, traveling 12 hours per day. If this is done, add an additional 50% to the distance traveled. Each day of forced march performed after the first inflicts 1d6 damage on the characters (and their animals, if any). A save vs.&nbsp;Death Ray with Constitution bonus applied is allowed to avoid this damage, but after this save is failed once, it is not rolled again for that character or creature. A day spent resting “restarts” the progression.</p>
+</section>
+<section id="becoming-lost" class="level3">
+<h3 class="anchored" data-anchor-id="becoming-lost">Becoming Lost</h3>
+<p>Though adventurers following roads, rivers, or other obvious landmarks are unlikely to become lost, striking out into trackless forest, windblown desert, and so on is another matter. Secretly roll a save vs.&nbsp;Death Ray, adjusted by the Wisdom of the party leader (i.e., whichever character seems to be leading). An Ability Roll against Wisdom may be rolled, if that optional rule is in use. The GM must determine the effects of failure</p>
+</section>
+<section id="waterborne-travel" class="level3">
+<h3 class="anchored" data-anchor-id="waterborne-travel">Waterborne Travel</h3>
+<p>Travel by water may be done in a variety of boats or ships; see the table in the&nbsp;<a href="./vehicles.html#water-transportation">Vehicles</a>&nbsp;section for details. Travel distances are based on a 12 hour day of travel, rather than the usual 8 hours per day given above. Note that sailed ships may travel 24 hours per day (if a qualified navigator is aboard), and so may be able to cover twice the normal distance per day of travel. This is in addition to the multiplier given below. If the ship stops each night, as is done by some vessels traveling along a coastline as well as those vessels having less than the minimum number of regular crewmen on board, the two-times multiplier does not apply.</p>
+<p>Movement of sailed ships varies depending on weather conditions, as shown on the following table.&nbsp;<strong>Sailing</strong>&nbsp;movement modifiers shown apply when sailing with the wind; sailing against the wind involves&nbsp;<strong>tacking</strong>&nbsp;(called “zigzagging” by landlubbers) which reduces movement rates as indicated on the table.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="56" data-source-offset="-2"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 55;"><span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {generalTableSelect<span class="op">,</span> highlightTableRow} <span class="im">from</span> <span class="st">"./custom.js"</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"Roll on Table"</span><span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">reduce</span><span class="op">:</span> () <span class="kw">=&gt;</span> <span class="fu">highlightTableRow</span>(<span class="st">"#wind-direction"</span><span class="op">,</span> <span class="fu">generalTableSelect</span>([<span class="dv">1</span><span class="op">,</span><span class="dv">12</span><span class="op">,</span><span class="dv">0</span>]<span class="op">,</span>[[<span class="dv">1</span><span class="op">,</span><span class="dv">1</span>]<span class="op">,</span>[<span class="dv">2</span><span class="op">,</span><span class="dv">2</span>]<span class="op">,</span>[<span class="dv">3</span><span class="op">,</span><span class="dv">3</span>]<span class="op">,</span>[<span class="dv">4</span><span class="op">,</span><span class="dv">4</span>]<span class="op">,</span>[<span class="dv">5</span><span class="op">,</span><span class="dv">5</span>]<span class="op">,</span>[<span class="dv">6</span><span class="op">,</span><span class="dv">6</span>]<span class="op">,</span>[<span class="dv">7</span><span class="op">,</span><span class="dv">7</span>]<span class="op">,</span>[<span class="dv">8</span><span class="op">,</span><span class="dv">8</span>]<span class="op">,</span>[<span class="dv">9</span><span class="op">,</span><span class="dv">12</span>]]))})</span></code></pre></div><button title="העתק ללוח" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+<div id="wind-direction">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>d12</strong></th>
+<th><strong>Wind Direction</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Northerly</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Northeasterly</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Easterly</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Southeasterly</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Southerly</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Southwesterly</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Westerly</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Northwesterly</td>
+</tr>
+<tr class="odd">
+<td>9-12</td>
+<td>Prevailing wind direction for this locale</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>Some tools to check out:</p>
-<ul>
-<li><a href="./monstersTab.html">Monster Index</a></li>
-<li><a href="./appendix_interactive.html">Interactive Tools</a></li>
-<li><a href="./appendixMapmaker.html">Dungeon Maker</a></li>
-</ul>
-<p>This website was created by John Atom (jmhimara). All its code and unique content are also distributed under the <strong>Creative Commons Attribution-ShareAlike 4.0 International License</strong>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="77" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 76;"><span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"Roll on Table"</span><span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">reduce</span><span class="op">:</span> () <span class="kw">=&gt;</span> <span class="fu">highlightTableRow</span>(<span class="st">"#wind-condition"</span><span class="op">,</span> <span class="fu">generalTableSelect</span>([<span class="dv">1</span><span class="op">,</span><span class="dv">100</span><span class="op">,</span><span class="dv">0</span>]<span class="op">,</span>[[<span class="dv">1</span><span class="op">,</span><span class="dv">5</span>]<span class="op">,</span>[<span class="dv">6</span><span class="op">,</span><span class="dv">13</span>]<span class="op">,</span>[<span class="dv">14</span><span class="op">,</span><span class="dv">25</span>]<span class="op">,</span>[<span class="dv">26</span><span class="op">,</span><span class="dv">40</span>]<span class="op">,</span>[<span class="dv">41</span><span class="op">,</span><span class="dv">70</span>]<span class="op">,</span>[<span class="dv">71</span><span class="op">,</span><span class="dv">85</span>]<span class="op">,</span>[<span class="dv">86</span><span class="op">,</span><span class="dv">96</span>]<span class="op">,</span>[<span class="dv">97</span><span class="op">,</span><span class="dv">100</span>]]))})</span></code></pre></div><button title="העתק ללוח" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-2" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div id="wind-condition">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>d%</strong></th>
+<th><strong>Wind Conditions</strong></th>
+<th><strong>Sailing</strong></th>
+<th><strong>Tacking</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>01-05</td>
+<td>Becalmed</td>
+<td>x0</td>
+<td>x0</td>
+</tr>
+<tr class="even">
+<td>06-13</td>
+<td>Very Light Breeze</td>
+<td>x1/3</td>
+<td>x0</td>
+</tr>
+<tr class="odd">
+<td>14-25</td>
+<td>Light Breeze</td>
+<td>x1/2</td>
+<td>x1/3</td>
+</tr>
+<tr class="even">
+<td>26-40</td>
+<td>Moderate Breeze</td>
+<td>x2/3</td>
+<td>x1/3</td>
+</tr>
+<tr class="odd">
+<td>41-70</td>
+<td>Average Winds</td>
+<td>x1</td>
+<td>x1/2</td>
+</tr>
+<tr class="even">
+<td>71-85</td>
+<td>Strong Winds</td>
+<td>x1 1/3</td>
+<td>x2/3</td>
+</tr>
+<tr class="odd">
+<td>86-96</td>
+<td>Very Strong Winds</td>
+<td>x1 1/2</td>
+<td>x0</td>
+</tr>
+<tr class="even">
+<td>97-00</td>
+<td>Gale</td>
+<td>x2</td>
+<td>x0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Notes:</strong></p>
+<p><strong>Becalmed:</strong>&nbsp;Sailing ships cannot move. Oared ships may move at the given rowing movement rate.</p>
+<p><strong>Very Strong Winds:</strong>&nbsp;Sailing against the wind (tacking) is not possible.</p>
+<p><strong>Gale:</strong>&nbsp;Sailing against the wind is not possible, and ships exposed to a gale may be damaged or sunk; apply 2d8 points of damage to any such ship, per hour sailed.</p>
+</section>
+<section id="traveling-by-air" class="level3">
+<h3 class="anchored" data-anchor-id="traveling-by-air">Traveling by Air</h3>
+<p>When traveling by air, overland movement rates are doubled, and all terrain effects are ignored. Most winged creatures must maintain at least one-third normal forward movement in order to remain airborne; however, devices such as&nbsp;<strong>flying carpets</strong>&nbsp;generally do not have this limitation.</p>
 
 
 </section>
 
 </main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlxyXG5pbXBvcnQge2dlbmVyYWxUYWJsZVNlbGVjdCwgaGlnaGxpZ2h0VGFibGVSb3d9IGZyb20gXCIuL2N1c3RvbS5qc1wiXHJcblxyXG5JbnB1dHMuYnV0dG9uKFwiUm9sbCBvbiBUYWJsZVwiLCB7dmFsdWU6IDAsIHJlZHVjZTogKCkgPT4gaGlnaGxpZ2h0VGFibGVSb3coXCIjd2luZC1kaXJlY3Rpb25cIiwgZ2VuZXJhbFRhYmxlU2VsZWN0KFsxLDEyLDBdLFtbMSwxXSxbMiwyXSxbMywzXSxbNCw0XSxbNSw1XSxbNiw2XSxbNyw3XSxbOCw4XSxbOSwxMl1dKSl9KVxyXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcclxuSW5wdXRzLmJ1dHRvbihcIlJvbGwgb24gVGFibGVcIiwge3ZhbHVlOiAwLCByZWR1Y2U6ICgpID0+IGhpZ2hsaWdodFRhYmxlUm93KFwiI3dpbmQtY29uZGl0aW9uXCIsIGdlbmVyYWxUYWJsZVNlbGVjdChbMSwxMDAsMF0sW1sxLDVdLFs2LDEzXSxbMTQsMjVdLFsyNiw0MF0sWzQxLDcwXSxbNzEsODVdLFs4Niw5Nl0sWzk3LDEwMF1dKSl9KVxyXG5cclxuIn1dfQ==
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -522,12 +821,12 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "הועתק!");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "הועתק!");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
@@ -899,10 +1198,13 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./dungeonAdventures.html" class="pagination-link" aria-label="Dungeon Adventures">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Dungeon Adventures</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./whatIsThis.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./hirelings.html" class="pagination-link" aria-label="Hirelings">
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Hirelings</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

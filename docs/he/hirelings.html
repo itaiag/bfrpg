@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="he" xml:lang="he" dir="rtl"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Chris Gonnerman">
-<meta name="dcterms.date" content="2023-05-02">
 
-<title>Basic Fantasy RPG, 4th edition</title>
+<title>12&nbsp; Hirelings – מערכת פנטזיה בסיסית לשחקני תפקידים, מהדורה 4</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -32,7 +65,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./whatIsThis.html" rel="next">
+<link href="./advancement.html" rel="next">
+<link href="./wildAdventures.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -43,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-588e16051b300ec69a1061866f9e49f5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-cee3e496ba8b573501d842b8d7792f9a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -58,17 +92,17 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "אין תוצאות",
+    "search-matching-documents-text": "מסמכים תואמים",
+    "search-copy-link-title": "העתק קישור לחיפוש",
+    "search-hide-matches-text": "הסתר התאמות נוספות",
+    "search-more-match-text": "התאמה נוספת במסמך זה",
+    "search-more-matches-text": "התאמות נוספות במסמך זה",
+    "search-clear-button-title": "נקה",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "בטל",
+    "search-submit-button-title": "שלח",
+    "search-label": "חפש"
   }
 }</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JS65M33XZB"></script>
@@ -80,11 +114,14 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 </script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caudex">
-<script src="translator/lang-switch.js"></script>
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre">
+<script src="../../translator/lang-switch.js"></script>
 
 
 <link rel="stylesheet" href="custom.css">
+<link rel="stylesheet" href="custom-rtl.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -93,13 +130,13 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="הצג/הסתר את סרגל הניווט" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dungeonAdventures.html">Adventure</a></li><li class="breadcrumb-item"><a href="./hirelings.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Hirelings</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="הצג/הסתר את סרגל הניווט" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="חפש" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -111,19 +148,19 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Basic Fantasy RPG, 4th edition</a> 
+      <a href="./">מערכת פנטזיה בסיסית לשחקני תפקידים, מהדורה 4</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="חפש"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
@@ -131,7 +168,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Introduction</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -148,7 +185,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Player Characters</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -195,7 +232,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Magic</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -218,7 +255,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Adventure</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -237,7 +274,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hirelings.html" class="sidebar-item-text sidebar-link">
+  <a href="./hirelings.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Hirelings</span></span></a>
   </div>
 </li>
@@ -253,7 +290,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
  <span class="menu-text">Encounters</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -270,7 +307,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
  <span class="menu-text">Monsters</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -299,7 +336,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
  <span class="menu-text">Treasure</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -322,7 +359,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
  <span class="menu-text">GM Information</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -345,7 +382,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
  <span class="menu-text">Appendix</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -374,7 +411,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
  <span class="menu-text">Extra</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -399,6 +436,63 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 </li>
       </ul>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./he/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">הקדמה</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true">
+ <span class="menu-text">מבוא</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./he/whatIsThis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">מבוא</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true">
+ <span class="menu-text">דמויות שחקן</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./he/char-creation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">דמויות שחקן</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true">
+ <span class="menu-text">מפגשים</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./he/combat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">מפגשי קרב</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -406,38 +500,28 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">תוכן עניינים</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
+  <li><a href="#retainers" id="toc-retainers" class="nav-link active" data-scroll-target="#retainers">Retainers</a></li>
+  <li><a href="#specialists" id="toc-specialists" class="nav-link" data-scroll-target="#specialists">Specialists</a></li>
+  <li><a href="#mercenaries" id="toc-mercenaries" class="nav-link" data-scroll-target="#mercenaries">Mercenaries</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dungeonAdventures.html">Adventure</a></li><li class="breadcrumb-item"><a href="./hirelings.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Hirelings</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Basic Fantasy RPG, 4th edition</h1>
+<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Hirelings</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Chris Gonnerman </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">May 2, 2023</p>
-    </div>
-  </div>
   
     
   </div>
@@ -447,56 +531,273 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 </header>
 
 
-<section id="preface" class="level1 unnumbered page-columns page-full">
-<h1 class="unnumbered">Preface</h1>
-<p><strong>Copyright © 2006-2023 Chris Gonnerman – All Rights Reserved</strong></p>
-<p><strong>Basic Fantasy Role-Playing Game</strong>: 4th Edition, Release 128</p>
-<p>All textual materials in this document, as well as all maps, floorplans, diagrams, charts, and forms included herein, are distributed under the terms of the <strong>Creative Commons Attribution-ShareAlike 4.0 International License</strong>. Most other artwork presented is property of the original artist and is used with permission. Note that you may not publish or otherwise distribute this work as is without permission of the original artists; you must remove all non-licensed artwork before doing so. The full license text can be viewed at:</p>
-<p>https://creativecommons.org/licenses/by-sa/4.0/</p>
-<p>Some text used in the development of this document was retrieved from Wikipedia, and was originally licensed under the Creative Commons Attribution-ShareAlike 3.0 license.</p>
-<p>Credits from the PDF:</p>
-<div class="column-screen-inset-right">
+<p>Player characters will sometimes want or need to hire NPCs (Non-Player Characters) to work for them. There are several categories of NPCs available for hire, as follows:</p>
+<section id="retainers" class="level3">
+<h3 class="anchored" data-anchor-id="retainers">Retainers</h3>
+<p>A retainer is a close associate of his employer. Retainers are hired for a share of treasure (typically at least 15% of the employer’s income) plus support costs (weapons, armor, rations, and basic equipment provided by the employer). Retainers are typically very loyal and are willing to take reasonable risks; in particular, they are the only sort of hireling who will generally accompany a player character into a dungeon, lair, or ruin.</p>
+<p>Hiring a retainer is more involved than hiring other NPCs. First, the player character must advertise for a retainer, typically by hiring a crier, posting notices in public places, or asking (and possibly paying) NPCs such as innkeepers or taverners to direct potential retainers to the player character. It is up to the Game Master to rule on what must be done, and how successful these activities are.</p>
+<p>If the player character is successful, one or more NPCs will present themselves to be interviewed. The Game Master should play out the interview with the player, and after all offers have been made and all questions asked, a reaction roll should be made. To check the potential retainer’s reaction, the Game Master rolls 2d6 and adds the player character’s Charisma bonus. In addition, the Game Master may apply any adjustments he or she feels are appropriate (a bonus of +1 for higher-than-average pay or the offer of a magic item such as a&nbsp;<strong>sword +1</strong>, or a penalty if the player character offers poor terms). The roll is read as follows:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="15" data-source-offset="-2"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 14;"><span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {generalTableSelect2<span class="op">,</span> highlightTableRowRet} <span class="im">from</span> <span class="st">"./custom.js"</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>viewof reaction <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"Roll on Table"</span><span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">reduce</span><span class="op">:</span> () <span class="kw">=&gt;</span> <span class="fu">highlightTableRowRet</span>(<span class="st">"#reaction-roll"</span><span class="op">,</span> <span class="fu">generalTableSelect2</span>([<span class="dv">2</span><span class="op">,</span><span class="dv">6</span><span class="op">,</span><span class="dv">0</span>]<span class="op">,</span>[[<span class="dv">2</span><span class="op">,</span><span class="dv">2</span>]<span class="op">,</span>[<span class="dv">3</span><span class="op">,</span><span class="dv">5</span>]<span class="op">,</span>[<span class="dv">6</span><span class="op">,</span><span class="dv">8</span>]<span class="op">,</span>[<span class="dv">9</span><span class="op">,</span><span class="dv">11</span>]<span class="op">,</span>[<span class="dv">12</span><span class="op">,</span><span class="dv">12</span>]]))})</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">md</span><span class="vs">`2d6: </span><span class="sc">${</span>reaction<span class="sc">}</span><span class="vs">`</span></span></code></pre></div><button title="העתק ללוח" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-3" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+<div id="reaction-roll">
 <table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 75%">
-</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Adjusted Die Roll</strong></th>
+<th><strong>Result</strong></th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Contributors:</td>
-<td style="text-align: left;">Ray Allen, William D. Smith, Jr., Nick Bogan, Evan Moore, Stuart Marshall, Emiliano Marchetti, Antonio Eleuteri, Luigi Castellani, Michael Hensley, Nazim N. Karaca, Arthur Reyes, Todd Roe, Jim Bobb, R. Kevin Smoot, Rachel Ghoul, Tom Hoyt, James Michael Spahn, Matt Sluis, Russ Westbrook, Martin Serena, Joe Ludlum, Aaron G. Motta, and Gabe Fua</td>
+<td>2 or less</td>
+<td>Refusal, -1 on further rolls</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Cover Art:</td>
-<td style="text-align: left;">Erik Wilson</td>
+<td>3-5</td>
+<td>Refusal</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Artwork:</td>
-<td style="text-align: left;">Erik Wilson, Steve Zieser, Matt Finch, Dan Dalton, Luigi Castellani, Nick Bogan, Mike Hill, Kevin Cook, Sean Stone, Brian “Glad” Thomas, Tomas Arfert, Andy “ATOM” Taylor, Jason Braun, Martin “Wulfgarn” Siesto, Brian DeClercq, Martin Serena, Cory “Shonuff” Gelnett, Alexander Cook, Bruce Ripple, Gabe Fua, John Simcoe, LuckyCrafts, Jeremy Putnam, Francisco Chavez, William Henry Dvorak, Tony Grant Gittoes, Jose Kercado, Jody Claunch, Terance Crosby, S. Ender Thiel, Colin Richards, John Fredericks, Piotr Klimkowicz, Evan Griffiths, Hadrien Riel-Salvatore, and Benedikt Noir</td>
+<td>6-8</td>
+<td>Try again</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Proofreading:</td>
-<td style="text-align: left;">Tonya Allen, Daryl Burns, James Roberts, Serge Petitclerc, Benedict Wolf, Onno Tasler, Peter Cook, Derrick “Omote” Landwehr, Wes Brown, Troy Gravil, Garrett Rooney, K. David Ladage, James Lemon, Martin Serena, Joe Carruthers, Jonathan Nichol, Alister Fa, Joel Davis, Hadrien Riel-Salvatore, Mark Mealman, Alan Vetter, Jim Michnowicz, Timothy P. Fox, Piotr Klimkowicz, Daniel Collins, Thorin Schmidt, and feveredmonk</td>
+<td>9-11</td>
+<td>Acceptance</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Playtesters:</td>
-<td style="text-align: left;">Taylor Gonnerman, Alan Jett, Mike Brantner, Steve Zieser, Allan Zieser, Jonathon Foster, Adam Young, Michael Young, Jason Schmidt, Doug Wilson, Jessica Abramson, Tonya Allen, Bryan Christian, Chuck Schoonover, Natalie Schoonover, Brianna Schoonover, Jason Brentlinger, Chris Wolfmeyer, Josh Eaton, Audra Brentlinger, Tim McAfee, Ike Borden, Cody Drebenstedt, Joseph BierFauble, Emily Drebenstedt, John Lopez, Pedro Pablo Miron Pozo, Robert Odom, Sergio I. Nemirovsky, Will E. Sanders, Brian Scalise, Timothy J. Kuhn, and Jeanne Mayer Mitchell</td>
+<td>12 or more</td>
+<td>Acceptance, +1 to Loyalty</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>Some tools to check out:</p>
-<ul>
-<li><a href="./monstersTab.html">Monster Index</a></li>
-<li><a href="./appendix_interactive.html">Interactive Tools</a></li>
-<li><a href="./appendixMapmaker.html">Dungeon Maker</a></li>
-</ul>
-<p>This website was created by John Atom (jmhimara). All its code and unique content are also distributed under the <strong>Creative Commons Attribution-ShareAlike 4.0 International License</strong>.</p>
+<p><strong>Refusal, -1 on further rolls</strong>&nbsp;means that all further reaction rolls made toward that player character in the given town or region will be at a penalty of -1 due to unkind words said by the NPC to his fellows. If the player character tries again in a different town, the penalty does not apply.</p>
+<p>If a&nbsp;<strong>Try again</strong>&nbsp;result is rolled, the potential retainer is reluctant, and needs more convincing; the player character must “sweeten” the deal in order to get an additional roll, such as by offering more pay, a magic item, etc. If the player character makes no better offer, treat&nbsp;<strong>Try again</strong>&nbsp;as a&nbsp;<strong>Refusal</strong>&nbsp;result.</p>
+<p><strong>Loyalty:</strong>&nbsp;All retainers have a Loyalty score, which is generally 7 plus the employer’s Charisma bonus (or penalty). The Loyalty score is used just as the Morale score of monsters or mercenaries is used.</p>
+<p>If a Loyalty check roll made in combat is a natural 2, the Loyalty of the retainer increases by +1 point. Note that a Loyalty of 12 is fanatical… the retainer will do virtually anything the player character asks, and never flee in combat. However, the Game Master should still apply penalties when the player character instructs the retainer to do something which appears very risky, making a failed check possible.</p>
+<p>In addition, the Game Master should roll a Loyalty check for each retainer at the end of each adventure, after&nbsp;treasure is divided, to determine if the retainer will remain with the player character. The GM may apply adjustments to this roll, probably no more than two points plus or minus, if the retainer is particularly well or poorly paid.</p>
+<p><strong>Maximum Number of Retainers:</strong>&nbsp;A player character may hire at most 4 retainers, adjusted by the character’s Charisma bonus or penalty. Any attempts to hire more than this number of retainers will be met with automatic refusals.</p>
+<p><strong>Level of Retainers:</strong>&nbsp;Normally, potential retainers will be one-half the level of the employer (or less). So, a first level character cannot hire retainers, second level PCs can only hire first level characters, and so on. Of course, there is no way for the retainers to directly know the level of the PC employer, nor for the employer to know the level of the potential retainer; but the Game Master should usually enforce this rule for purposes of game balance. It shouldn’t be surprising that first level characters can’t hire retainers, as they have no reputation to speak of yet.</p>
+<p><strong>Experience for Retainers:</strong>&nbsp;Unlike other hired NPCs, retainers do gain experience just as other adventurers do; however, as they are under the command of a player character, only one-half of a share of XP is allocated to each retainer. See&nbsp;<a href="./advancement.html#advancement">Character Advancement</a>.</p>
+</section>
+<section id="specialists" class="level3">
+<h3 class="anchored" data-anchor-id="specialists">Specialists</h3>
+<p>Specialists are NPCs who may be hired by player characters to perform various tasks. Specialists do not go on adventures or otherwise risk their lives fighting monsters, disarming traps, or any of the other dangerous things player characters and retainers may do. Rather, specialists perform services the player characters usually can’t perform for themselves, like designing and erecting castles, training animals, or operating ships.</p>
+<p>A player character is limited in the number of specialists he or she can hire only by the amount of money they cost; Charisma does not affect this.</p>
+<p><strong>Alchemist:</strong>&nbsp;<em>1,000 gp per month.</em>These characters are generally hired for one of two reasons: to make potions, or to assist a Magic-User with magical research.</p>
+<p>An alchemist can produce a potion, given the required materials and a sample or a written formula for the potion, in the same time and for the same cost as a Magic-User. They may also research new potions, but at twice the cost in time and materials as a Magic-User. Review the rules for <a href="./gm01.html#magical-research">Magical Research</a> for details.</p>
+<p>Alternately, a Magic-User seeking to create certain magic items may employ an alchemist as an assistant. In this case, the alchemist adds 15% to the Magic-User’s chance of success.</p>
+<p><strong>Animal Trainer:</strong>&nbsp;<em>250 to 750 gp per month.</em>&nbsp;Characters wishing to ride hippogriffs or employ carnivorous apes as guards will need the assistance of an animal trainer. The lowest cost above is for an average animal trainer, able to train one type of “normal” animal such as carnivorous apes; those able to train more than one sort of animal, or to train monstrous creatures such as hippogriffs, are more expensive to hire. The Game Master must decide how long it takes to train an animal; in some cases, animal training may take years, a fact the player characters may find inconvenient as well as expensive. A single animal trainer can train and manage no more than 5 animals at a time, though in most cases once an animal is fully trained, if it is put into service right away the animal trainer won’t be needed to handle it any longer.</p>
+<p><strong>Armorer (or Weaponsmith):</strong>&nbsp;<em>100 to 500 gp per month.</em>&nbsp;Characters hiring mercenaries, or having armed and armored followers to take care of, will need the services of an armorer. In general, for every 50 Fighters employed, one armorer is required to care for their gear. The armorer’s equipment is not included in the costs given above, but the cost to maintain his apprentices is included; most such characters will have 1d4 apprentices assisting.</p>
+<p>Higher priced armorers or weaponsmiths may be hired to assist in making magic weapons or armor; in this case, the character hired will be a specialist, an expert in making one particular type of armor or weapon, and will command a higher price (as shown above). Such characters will rarely agree to do the mundane work of maintaining weapons and armor for a military unit.</p>
+<p><strong>Engineer:</strong>&nbsp;<em>750 gp per month.</em>&nbsp;Any player character wishing to build a fortress, a ship, or any other mundane construction will need an engineer. Large projects may require several engineers, at the GM’s option.</p>
+<p><strong>Savant:</strong>&nbsp;<em>1,500 gp per month.</em>&nbsp;Savants are experts in ancient and obscure knowledge. Many savants have particular interests in very limited or focused areas (for example, “Elven migrations of the 2<sup>nd</sup>&nbsp;age”), but even these will know or have access to a lot of facts. The listed cost is the minimum required to maintain a savant with his library, collections, etc. If the savant’s patron asks a difficult question, there may be additional costs for materials or research to answer it.</p>
+<p><strong>Ship’s Crew:</strong>&nbsp;<em>Special.</em>&nbsp;A crew for a waterborne vessel involves several types of characters. At the very least, a complement of sailors and a Captain are needed; rowers will be needed aboard galleys, and a Navigator is required aboard ships going out of sight of land.</p>
+<p>Costs per month for each sort of character are given below:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Seaman Type</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Captain</td>
+<td>300 gp</td>
+</tr>
+<tr class="even">
+<td>Navigator</td>
+<td>200 gp</td>
+</tr>
+<tr class="odd">
+<td>Sailor</td>
+<td>10 gp</td>
+</tr>
+<tr class="even">
+<td>Rower</td>
+<td>3 gp</td>
+</tr>
+</tbody>
+</table>
+<p>In general, all such characters are normal men, and are not armored; they will usually be armed with clubs, daggers, or shortswords. Player characters with appropriate backgrounds may act as Captain, but unless experienced as a ship’s captain, they will have difficulty commanding respect from the regular sailors (lower the Morale of such regular sailors by -2 if led by an inexperienced Captain).</p>
+</section>
+<section id="mercenaries" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="mercenaries">Mercenaries</h3>
+<p>Mercenaries are hired warriors. They are generally hired in units as small as platoons: 32 to 48 Fighters, divided into two to four squads of soldiers; each squad is led by a corporal, while the platoon is led by a lieutenant plus a sergeant. Platoons are joined together into companies, each generally consisting of two to five platoons and led by a captain with a sergeant as his assistant (called a&nbsp;<strong>first sergeant</strong>).</p>
+<p>As mercenaries are almost always veteran troops, the average mercenary is a 1<sup>st</sup>&nbsp;level Fighter; 10% of corporals and 50% of sergeants are 2<sup>nd</sup>&nbsp;level. A mercenary lieutenant will generally be 2<sup>nd</sup>&nbsp;level, while a captain will be 2<sup>nd</sup>&nbsp;to 4<sup>th</sup>&nbsp;level and his first sergeant will be 2<sup>nd</sup>&nbsp;or 3<sup>rd</sup>&nbsp;level. Larger mercenary units will usually be beyond the reach of player characters until they have reached fairly high levels, and are left to the Game Master to detail.</p>
+<p>Mercenaries will virtually never go into a dungeon, lair, or ruin, at least until it has been fully cleared. Rather, they are used in outdoor military engagements; high level player characters may hire mercenaries to defend or help defend their castles or other holdings.</p>
+<p>Mercenaries housed in a player character’s stronghold require 200 square feet each but cost 25% less per month, as this is covered by their room and board. (Elven mercenaries, however, require 500 square feet of space each in order to reduce their pay, as they demand better living conditions.) See the&nbsp;<strong>Stronghold</strong>&nbsp;section for more details.</p>
+<p>Statistics are given below for the most common sorts of mercenaries; the statistics are for first level characters, and should be adjusted when higher level characters are indicated (as given above). In particular, multiply the given cost of each mercenary by his or her level. Listed costs are in gold pieces per month.</p>
+<div class="column-page-right">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 6%">
+<col style="width: 53%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Type of Mercenary</th>
+<th style="text-align: center;">Cost</th>
+<th style="text-align: left;">Equipment</th>
+<th style="text-align: center;">Morale</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Light Foot, Human</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Leather Armor, Shield, and Longsword</td>
+<td style="text-align: center;">8</td>
+</tr>
+<tr class="even">
+<td>Light Foot, Elf</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: left;">Leather Armor, Shield, and Longsword</td>
+<td style="text-align: center;">8</td>
+</tr>
+<tr class="odd">
+<td>Light Foot, Orc</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Leather Armor and Spear</td>
+<td style="text-align: center;">7</td>
+</tr>
+<tr class="even">
+<td>Heavy Foot, Human</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Chainmail, Shield, and Longsword</td>
+<td style="text-align: center;">8</td>
+</tr>
+<tr class="odd">
+<td>Heavy Foot, Dwarf</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Chainmail, Shield, and Shortsword</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr class="even">
+<td>Heavy Foot, Orc</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Chainmail, Shield, and Shortsword</td>
+<td style="text-align: center;">8</td>
+</tr>
+<tr class="odd">
+<td>Archer, Human</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Leather Armor, Shortbow, and Shortsword</td>
+<td style="text-align: center;">8</td>
+</tr>
+<tr class="even">
+<td>Archer, Elf</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: left;">Chainmail, Shortbow, and Shortsword</td>
+<td style="text-align: center;">8</td>
+</tr>
+<tr class="odd">
+<td>Archer, Orc</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Leather Armor, Shortbow, and Shortsword</td>
+<td style="text-align: center;">8</td>
+</tr>
+<tr class="even">
+<td>Crossbowman, Human</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Chainmail, Crossbow, and Shortsword</td>
+<td style="text-align: center;">8</td>
+</tr>
+<tr class="odd">
+<td>Crossbowman, Dwarf</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: left;">Platemail, Crossbow, and Shortsword</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr class="even">
+<td>Longbowman, Human</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: left;">Chainmail, Longbow, and Shortsword</td>
+<td style="text-align: center;">8</td>
+</tr>
+<tr class="odd">
+<td>Longbowman, Elf</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: left;">Chainmail, Longbow, and Longsword</td>
+<td style="text-align: center;">8</td>
+</tr>
+<tr class="even">
+<td>Light Horseman, Human</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: left;">Leather Armor, Shield, Lance, and Longsword</td>
+<td style="text-align: center;">8</td>
+</tr>
+<tr class="odd">
+<td>Light Horseman, Elf</td>
+<td style="text-align: center;">22</td>
+<td style="text-align: left;">Leather Armor, Lance, Shortbow, and Longsword</td>
+<td style="text-align: center;">8</td>
+</tr>
+<tr class="even">
+<td>Medium Horseman, Human</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: left;">Chainmail, Shield, Lance, and Longsword</td>
+<td style="text-align: center;">8</td>
+</tr>
+<tr class="odd">
+<td>Medium Horseman, Elf</td>
+<td style="text-align: center;">33</td>
+<td style="text-align: left;">Chainmail, Lance, Shortbow, and Longsword</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr class="even">
+<td>Heavy Horseman, Human</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: left;">Platemail, Shield, Lance, and Longsword</td>
+<td style="text-align: center;">8</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 
 </section>
 
 </main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlxyXG5pbXBvcnQge2dlbmVyYWxUYWJsZVNlbGVjdDIsIGhpZ2hsaWdodFRhYmxlUm93UmV0fSBmcm9tIFwiLi9jdXN0b20uanNcIlxyXG5cclxudmlld29mIHJlYWN0aW9uID0gSW5wdXRzLmJ1dHRvbihcIlJvbGwgb24gVGFibGVcIiwge3ZhbHVlOiAwLCByZWR1Y2U6ICgpID0+IGhpZ2hsaWdodFRhYmxlUm93UmV0KFwiI3JlYWN0aW9uLXJvbGxcIiwgZ2VuZXJhbFRhYmxlU2VsZWN0MihbMiw2LDBdLFtbMiwyXSxbMyw1XSxbNiw4XSxbOSwxMV0sWzEyLDEyXV0pKX0pXHJcbm1kYDJkNjogJHtyZWFjdGlvbn1gXHJcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgncmVhY3Rpb24nKSJ9XX0=
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -522,12 +823,12 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "הועתק!");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "הועתק!");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
@@ -899,10 +1200,13 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./wildAdventures.html" class="pagination-link" aria-label="Wilderness Adventures">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Wilderness Adventures</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./whatIsThis.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./advancement.html" class="pagination-link" aria-label="Advancement">
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Advancement</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

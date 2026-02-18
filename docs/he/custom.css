@@ -1,0 +1,61 @@
+.tableFixHead {
+    overflow-y: auto; /* make the table scrollable if height is more than 200 px  */
+    height: 400px; /* gives an initial height of 200px to the table */
+  }
+.tableFixHead thead th {
+    position: sticky; /* make the table heads sticky */
+    top: 0px; /* table head will be placed from the top of the table and sticks to it */
+    background-color: #eeeeee;
+}
+table {
+    border-collapse: collapse; /* make the table borders collapse to each other */
+    width: 100%;
+  }
+
+th,
+td {
+    padding: 0px 0px;
+    border: 0px solid #ccc;
+  }
+
+thead {
+    background: #f0ecec;
+  }
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.myHighlighted {
+  background-color: rgb(135, 179, 154);
+}
+
+.myHighlightedCell {
+  background-color: rgb(135, 179, 154) !important;
+}
+
+/* Language toggle button (English build) */
+.lang-toggle-btn {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  z-index: 9999;
+  background: #2c7a7b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.2s;
+  font-family: sans-serif;
+}
+
+.lang-toggle-btn:hover {
+  background: #285e61;
+}

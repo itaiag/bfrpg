@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="he" xml:lang="he" dir="rtl"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Chris Gonnerman">
-<meta name="dcterms.date" content="2023-05-02">
 
-<title>Basic Fantasy RPG, 4th edition</title>
+<title>4&nbsp; Character Races – מערכת פנטזיה בסיסית לשחקני תפקידים, מהדורה 4</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./whatIsThis.html" rel="next">
+<link href="./class.html" rel="next">
+<link href="./abilities.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -43,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-588e16051b300ec69a1061866f9e49f5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-cee3e496ba8b573501d842b8d7792f9a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -58,17 +57,17 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "אין תוצאות",
+    "search-matching-documents-text": "מסמכים תואמים",
+    "search-copy-link-title": "העתק קישור לחיפוש",
+    "search-hide-matches-text": "הסתר התאמות נוספות",
+    "search-more-match-text": "התאמה נוספת במסמך זה",
+    "search-more-matches-text": "התאמות נוספות במסמך זה",
+    "search-clear-button-title": "נקה",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "בטל",
+    "search-submit-button-title": "שלח",
+    "search-label": "חפש"
   }
 }</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JS65M33XZB"></script>
@@ -80,11 +79,12 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 </script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caudex">
-<script src="translator/lang-switch.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre">
+<script src="../../translator/lang-switch.js"></script>
 
 
 <link rel="stylesheet" href="custom.css">
+<link rel="stylesheet" href="custom-rtl.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -93,13 +93,13 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="הצג/הסתר את סרגל הניווט" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./char-creation.html">Player Characters</a></li><li class="breadcrumb-item"><a href="./races.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Character Races</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="הצג/הסתר את סרגל הניווט" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="חפש" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -111,19 +111,19 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Basic Fantasy RPG, 4th edition</a> 
+      <a href="./">מערכת פנטזיה בסיסית לשחקני תפקידים, מהדורה 4</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="חפש"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
@@ -131,7 +131,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Introduction</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -148,7 +148,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Player Characters</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -167,7 +167,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./races.html" class="sidebar-item-text sidebar-link">
+  <a href="./races.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Character Races</span></span></a>
   </div>
 </li>
@@ -195,7 +195,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Magic</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -218,7 +218,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Adventure</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -253,7 +253,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
  <span class="menu-text">Encounters</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -270,7 +270,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
  <span class="menu-text">Monsters</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -299,7 +299,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
  <span class="menu-text">Treasure</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -322,7 +322,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
  <span class="menu-text">GM Information</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -345,7 +345,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
  <span class="menu-text">Appendix</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -374,7 +374,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
  <span class="menu-text">Extra</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -399,6 +399,63 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 </li>
       </ul>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./he/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">הקדמה</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true">
+ <span class="menu-text">מבוא</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./he/whatIsThis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">מבוא</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true">
+ <span class="menu-text">דמויות שחקן</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./he/char-creation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">דמויות שחקן</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true">
+ <span class="menu-text">מפגשים</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./he/combat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">מפגשי קרב</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -406,38 +463,29 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">תוכן עניינים</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
+  <li><a href="#dwarves" id="toc-dwarves" class="nav-link active" data-scroll-target="#dwarves">Dwarves</a></li>
+  <li><a href="#elves" id="toc-elves" class="nav-link" data-scroll-target="#elves">Elves</a></li>
+  <li><a href="#halflings" id="toc-halflings" class="nav-link" data-scroll-target="#halflings">Halflings</a></li>
+  <li><a href="#humans" id="toc-humans" class="nav-link" data-scroll-target="#humans">Humans</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./char-creation.html">Player Characters</a></li><li class="breadcrumb-item"><a href="./races.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Character Races</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Basic Fantasy RPG, 4th edition</h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Character Races</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Chris Gonnerman </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">May 2, 2023</p>
-    </div>
-  </div>
   
     
   </div>
@@ -447,51 +495,33 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 </header>
 
 
-<section id="preface" class="level1 unnumbered page-columns page-full">
-<h1 class="unnumbered">Preface</h1>
-<p><strong>Copyright © 2006-2023 Chris Gonnerman – All Rights Reserved</strong></p>
-<p><strong>Basic Fantasy Role-Playing Game</strong>: 4th Edition, Release 128</p>
-<p>All textual materials in this document, as well as all maps, floorplans, diagrams, charts, and forms included herein, are distributed under the terms of the <strong>Creative Commons Attribution-ShareAlike 4.0 International License</strong>. Most other artwork presented is property of the original artist and is used with permission. Note that you may not publish or otherwise distribute this work as is without permission of the original artists; you must remove all non-licensed artwork before doing so. The full license text can be viewed at:</p>
-<p>https://creativecommons.org/licenses/by-sa/4.0/</p>
-<p>Some text used in the development of this document was retrieved from Wikipedia, and was originally licensed under the Creative Commons Attribution-ShareAlike 3.0 license.</p>
-<p>Credits from the PDF:</p>
-<div class="column-screen-inset-right">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 75%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Contributors:</td>
-<td style="text-align: left;">Ray Allen, William D. Smith, Jr., Nick Bogan, Evan Moore, Stuart Marshall, Emiliano Marchetti, Antonio Eleuteri, Luigi Castellani, Michael Hensley, Nazim N. Karaca, Arthur Reyes, Todd Roe, Jim Bobb, R. Kevin Smoot, Rachel Ghoul, Tom Hoyt, James Michael Spahn, Matt Sluis, Russ Westbrook, Martin Serena, Joe Ludlum, Aaron G. Motta, and Gabe Fua</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Cover Art:</td>
-<td style="text-align: left;">Erik Wilson</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Artwork:</td>
-<td style="text-align: left;">Erik Wilson, Steve Zieser, Matt Finch, Dan Dalton, Luigi Castellani, Nick Bogan, Mike Hill, Kevin Cook, Sean Stone, Brian “Glad” Thomas, Tomas Arfert, Andy “ATOM” Taylor, Jason Braun, Martin “Wulfgarn” Siesto, Brian DeClercq, Martin Serena, Cory “Shonuff” Gelnett, Alexander Cook, Bruce Ripple, Gabe Fua, John Simcoe, LuckyCrafts, Jeremy Putnam, Francisco Chavez, William Henry Dvorak, Tony Grant Gittoes, Jose Kercado, Jody Claunch, Terance Crosby, S. Ender Thiel, Colin Richards, John Fredericks, Piotr Klimkowicz, Evan Griffiths, Hadrien Riel-Salvatore, and Benedikt Noir</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Proofreading:</td>
-<td style="text-align: left;">Tonya Allen, Daryl Burns, James Roberts, Serge Petitclerc, Benedict Wolf, Onno Tasler, Peter Cook, Derrick “Omote” Landwehr, Wes Brown, Troy Gravil, Garrett Rooney, K. David Ladage, James Lemon, Martin Serena, Joe Carruthers, Jonathan Nichol, Alister Fa, Joel Davis, Hadrien Riel-Salvatore, Mark Mealman, Alan Vetter, Jim Michnowicz, Timothy P. Fox, Piotr Klimkowicz, Daniel Collins, Thorin Schmidt, and feveredmonk</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Playtesters:</td>
-<td style="text-align: left;">Taylor Gonnerman, Alan Jett, Mike Brantner, Steve Zieser, Allan Zieser, Jonathon Foster, Adam Young, Michael Young, Jason Schmidt, Doug Wilson, Jessica Abramson, Tonya Allen, Bryan Christian, Chuck Schoonover, Natalie Schoonover, Brianna Schoonover, Jason Brentlinger, Chris Wolfmeyer, Josh Eaton, Audra Brentlinger, Tim McAfee, Ike Borden, Cody Drebenstedt, Joseph BierFauble, Emily Drebenstedt, John Lopez, Pedro Pablo Miron Pozo, Robert Odom, Sergio I. Nemirovsky, Will E. Sanders, Brian Scalise, Timothy J. Kuhn, and Jeanne Mayer Mitchell</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Some tools to check out:</p>
-<ul>
-<li><a href="./monstersTab.html">Monster Index</a></li>
-<li><a href="./appendix_interactive.html">Interactive Tools</a></li>
-<li><a href="./appendixMapmaker.html">Dungeon Maker</a></li>
-</ul>
-<p>This website was created by John Atom (jmhimara). All its code and unique content are also distributed under the <strong>Creative Commons Attribution-ShareAlike 4.0 International License</strong>.</p>
+<section id="dwarves" class="level2">
+<h2 class="anchored" data-anchor-id="dwarves">Dwarves</h2>
+<p><strong>Description:</strong>&nbsp;Dwarves are a short, stocky race; both male and female Dwarves stand around four feet tall and typically weigh around 120 pounds. Their long hair and thick beards are dark brown, gray or black. They take great pride in their beards, sometimes braiding or forking them. They have a fair to ruddy complexion. Dwarves have stout frames and a strong, muscular build. They are rugged and resilient, with the capacity to endure great hardships. Dwarves are typically practical, stubborn and courageous. They can also be introspective, suspicious and possessive. They have a lifespan of three to four centuries.</p>
+<p><strong>Restrictions:</strong>&nbsp;Dwarves may become <a href="./class.html#cleric">Clerics</a>, <a href="./class.html#fighter">Fighters</a>, or <a href="./class.html#thief">Thieves</a>. They are required to have a minimum Constitution of 9. Due to their generally dour dispositions, they may not have a Charisma higher than 17. They may not employ Large weapons more than four feet in length (specifically, two-handed swords, polearms, and longbows).</p>
+<p><strong>Special Abilities:</strong>&nbsp;All Dwarves have <a href="./dungeonAdventures.html#darkvision">Darkvision</a> with a 60’ range, and are able to detect slanting passages, traps, shifting walls and new construction on a roll of 1-2 on 1d6; a search must be performed before this roll may be made.</p>
+<p><strong>Saving Throws:</strong>&nbsp;Dwarves gain a +4 vs.&nbsp;Death Ray or Poison, Magic Wands, Paralysis or Petrify, and Spells, and a +3 vs.&nbsp;Dragon Breath.</p>
+</section>
+<section id="elves" class="level2">
+<h2 class="anchored" data-anchor-id="elves">Elves</h2>
+<p><strong>Description:</strong> Elves are a slender race, with both genders standing around five feet tall and weighing around 130 pounds. Most have dark hair, with little or no body or facial hair. Their skin is pale, and they have pointed ears and delicate features. Elves are lithe and graceful. They have keen eyesight and hearing. Elves are typically inquisitive, passionate, self-assured, and sometimes haughty. Their typical lifespan is a dozen centuries or more.</p>
+<p><strong>Restrictions:</strong>&nbsp;Elves may become <a href="./class.html#cleric">Clerics</a>, <a href="./class.html#fighter">Fighters</a>, <a href="./class.html#magic-users">Magic -Users</a>, or <a href="./class.html#thief">Thieves</a>; they are also allowed to combine the classes of Fighter and Magic-User, and of Magic-User and Thief (see&nbsp;<a href="./class.html#combination-classes">Combination Classes</a>). They are required to have a minimum Intelligence of 9. Due to their generally delicate nature, they may not have a Constitution higher than 17. Elves never roll larger than six-sided dice (d6) for hit points.</p>
+<p><strong>Special Abilities:</strong>&nbsp;All Elves have <a href="./dungeonAdventures.html#darkvision">Darkvision</a> with a 60’ range. They are able to find secret doors more often than normal (1-2 on 1d6 rather than the usual 1 on 1d6). An Elf is so observant that one has a 1 on 1d6 chance to find a secret door with a cursory look. Elves are immune to the paralyzing attack of ghouls. Also, they are less likely to be surprised in combat, reducing the chance of surprise by 1 in 1d6.</p>
+<p><strong>Saving Throws:</strong>&nbsp;Elves save at +1 vs.&nbsp;Paralysis or Petrify, and +2 vs.&nbsp;Magic Wands and Spells.</p>
+</section>
+<section id="halflings" class="level2">
+<h2 class="anchored" data-anchor-id="halflings">Halflings</h2>
+<p><strong>Description:</strong>&nbsp;Halflings are small, slightly stocky folk who stand around three feet tall and weigh about 60 pounds. They have curly brown hair on their heads and feet, but rarely have facial hair. They are usually fair skinned, often with ruddy cheeks. Halflings are remarkably rugged for their small size. They are dexterous and nimble, capable of moving quietly and remaining very still. They usually go barefoot. Halflings are typically outgoing, unassuming and good-natured. They live about a hundred years.</p>
+<p><strong>Restrictions:</strong>&nbsp;Halflings may become <a href="./class.html#cleric">Clerics</a>, <a href="./class.html#fighter">Fighters</a>, or <a href="./class.html#thief">Thieves</a>. They are required to have a minimum Dexterity of 9. Due to their small stature, they may not have a Strength higher than 17. Halflings never roll larger than six-sided dice (d6) for hit points regardless of class. Halflings may not use Large weapons, and must wield Medium weapons with both hands.</p>
+<p><strong>Special Abilities:</strong>&nbsp;Halflings are unusually accurate with all sorts of ranged weapons, gaining a +1 attack bonus when employing them. When attacked in melee by creatures larger than man-sized, Halflings gain a +2 bonus to their Armor Class. Halflings are quick-witted, thus adding +1 to <a href="./combat.html#initiative">Initiative</a> die rolls. Outdoors in their preferred forest terrain, they are able to hide very effectively; so long as they remain still there is only a 10% chance they will be detected. Even indoors, in dungeons or in non-preferred terrain they are able to hide such that there is only a 30% chance of detection. Note that a Halfling Thief will roll only once, using either the Thief ability or the Halfling ability, whichever is better.</p>
+<p><strong>Saving Throws:</strong>&nbsp;Halflings save at +4 vs.&nbsp;Death Ray or Poison, Magic Wands, Paralysis or Petrify, and Spells, and at +3 vs.&nbsp;Dragon Breath.</p>
+</section>
+<section id="humans" class="level2">
+<h2 class="anchored" data-anchor-id="humans">Humans</h2>
+<p><strong>Description:</strong>&nbsp;Humans come in a broad variety of shapes and sizes; the Game Master must decide what sorts of Humans live in the game world. An average Human male in good health stands around six feet tall and weighs about 175 pounds. Most Humans live around 75 years.</p>
+<p><strong>Restrictions:</strong>&nbsp;Humans may be any single class. They have no minimum or maximum ability score requirements.</p>
+<p><strong>Special Abilities:</strong>&nbsp;Humans learn unusually quickly, gaining a bonus of 10% to all experience points earned.</p>
+<p><strong>Saving Throws:</strong>&nbsp;Humans are the “standard,” and thus have no saving throw bonuses.</p>
 
 
 </section>
@@ -522,12 +552,12 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "הועתק!");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "הועתק!");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
@@ -899,10 +929,13 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./abilities.html" class="pagination-link" aria-label="Character Abilities">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Character Abilities</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./whatIsThis.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./class.html" class="pagination-link" aria-label="Character Classes">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Character Classes</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

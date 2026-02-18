@@ -4,3 +4,9 @@
 test.py
 test.qdm
 test/
+.env
+node_modules/
+he-book/
+he/.quarto/
+he/_quarto.yml
+**/*.quarto_ipynb
