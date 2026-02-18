@@ -1,0 +1,11 @@
+{
+  "Strength": "כוח",
+  "Dexterity": "זריזות",
+  "Constitution": "חוסן",
+  "Intelligence": "אינטליגנציה",
+  "Wisdom": "חכמה",
+  "Charisma": "כריזמה",
+  "Game Master": "מנחה (נקבה)",
+  "Player": "שחקן (זכר)"
+  // Add more terms as needed
+}

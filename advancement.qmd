@@ -1,25 +1,27 @@
-# Advancement
+<div class="rtl">
+# התקדמות
 
-## Experience Points (XP)
+## נקודות נסיון (נק"נ)
 
-Experience points are given for monsters defeated, and for other challenges as the GM sees fit. The following table provides XP values for monsters. Where a monster has both a character level and hit dice given, use the larger value as the monster's level. Non-combat challenges may be assigned a level, or a flat XP value assigned, as the GM wishes.
+נקודות ניסיון ניתנות עבור מפלצות שהובסו, וכן עבור אתגרים אחרים לפי שיקול דעתו של המנחה. הטבלה הבאה מספקת ערכי נק״נ למפלצות. כאשר למפלצת מצוינים גם דרגת דמות וגם קוביות פגיעה, יש להשתמש בערך הגבוה מבין השניים כדרגת המפלצת. לאתגרים שאינם קרביים ניתן לשייך דרגה, או להעניק ערך נק״נ קבוע, לפי רצון המנחה.
 
-If asterisks appear after the hit dice listing for a monster, each asterisk adds the special ability bonus once; for example, a creature with a hit dice figure of 2** is worth 125 XP.
+אם מופיעות כוכביות אחרי ציון קוביות הפגיעה של מפלצת, כל כוכבית מוסיפה פעם אחת את בונוס היכולת המיוחדת; לדוגמה, יצור עם 2** קוביות פגיעה שווה 125 נק״נ.
 
-For monsters with more than 25 hit dice, add 750 XP to the XP Value and 25 XP to the Special Ability Bonus per additional hit die.
+למפלצות עם יותר מ־25 קוביות פגיעה, יש להוסיף 750 נק״נ לערך הנק״נ, ועוד 25 נק״נ לבונוס היכולת המיוחדת עבור כל קוביית פגיעה נוספת.
 
-NPCs should be treated as monsters of a number of hit dice equivalent to the character's level. Add a special ability bonus for Clerics and Magic-Users if they are able to cast useful spells during the encounter.
+יש להתייחס לדב״שים כמפלצות עם מספר קוביות פגיעה השווה לדרגת הדמות. יש להוסיף בונוס יכולת מיוחדת לכוהנים ולקוסמים אם הם מסוגלים להטיל לחשים שימושיים במהלך המפגש.
 
-After tallying the XP earned in a given adventure, the amount should be divided by the number of adventurers. As described above, each retainer should receive a one-half share; so a group with four player characters and a retainer is counted as having 4½ members. If 2,000 XP are earned by this group, one share is 444 XP, and the retainer receives 222 XP.
+לאחר חישוב סך הנק״נ שהורווחו בהרפתקה מסוימת, יש לחלק את הסכום במספר ההרפתקנים. כפי שתואר לעיל, כל בן־לוויה מקבל חצי חלק; לכן חבורה הכוללת ארבע דמויות שחקן ובן־לוויה נספרת כ־4½ חברים. אם הקבוצה צוברת 2,000 נק״נ, חלק אחד שווה 444 נק״נ, והבן־לוויה מקבל 222 נק״נ.
 
-No character may advance more than one level due to the experience points from a single adventure. For example, Barthal the Thief is 1st level and has 1,000 XP before going on an adventure; during the adventure, he earns 2,000 more XP (an amazing feat). This would make his total 3,000 XP, and he would be a 3rd level Thief. This is not allowed; instead, he advances to 2,499 XP, one short of the amount required for 3rd level, and starts his next adventure at 2nd level.
+אף דמות אינה רשאית לעלות יותר מדרגה אחת כתוצאה מנקודות הניסיון מהרפתקה אחת. לדוגמה, ברתאל הגנב הוא בדרגה 1 ויש לו 1,000 נק״נ לפני יציאה להרפתקה; במהלך ההרפתקה הוא מרוויח עוד 2,000 נק״נ (הישג מרשים). סך הכול יהיו לו 3,000 נק״נ, מה שהיה הופך אותו לגנב בדרגה 3. דבר זה אינו מותר; במקום זאת הוא מתקדם ל־2,499 נק״נ, נקודה אחת פחות מהנדרש לדרגה 3, ומתחיל את ההרפתקה הבאה שלו בדרגה 2.
 
+</div>
 
-<div class="tableFixHead">
+<div class="tableFixHead rtl">
 
-| **Monster Hit Dice** | **XP Value** | **Special Ability Bonus** |
+| **קוביות פגיעה של מפלצת** | **ערך נק"נ** | **בונוס יכולת מיוחדת** |
 |----|----|---|
-| less than 1 | 10 | 3 |
+| פחות מ־1 | 10 | 3 |
 | 1 | 25 | 12 |
 | 2 | 75 | 25 |
 | 3 | 145 | 30 |
@@ -46,6 +48,6 @@ No character may advance more than one level due to the experience points from a
 | 24 | 8,250 | 300 |
 | 25 | 9,000 | 325 |
 
-: Monster XP values {#tbl-monsterexp}
+: ערכי נק"נ למפלצות {#tbl-monsterexp}
 
 </div>

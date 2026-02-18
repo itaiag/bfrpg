@@ -1,3 +1,26 @@
+.rtl, [dir="rtl"] {
+  direction: rtl !important;
+  unicode-bidi: embed;
+  text-align: right;
+}
+
+body.rtl, body[dir="rtl"] {
+  direction: rtl !important;
+  unicode-bidi: embed;
+  text-align: right;
+}
+
+/* Optional: Flip sidebar for RTL */
+.rtl #quarto-sidebar, [dir="rtl"] #quarto-sidebar {
+  right: auto !important;
+  left: 0 !important;
+  border-right: 1px solid #ddd;
+  border-left: none;
+}
+.rtl .quarto-container, [dir="rtl"] .quarto-container {
+  margin-right: 0 !important;
+  margin-left: 300px !important;
+}
 .tableFixHead {
     overflow-y: auto; /* make the table scrollable if height is more than 200 px  */
     height: 400px; /* gives an initial height of 200px to the table */
@@ -35,4 +58,20 @@ thead {
 
 .myHighlightedCell {
   background-color: rgb(135, 179, 154) !important;
+}
+
+/* Move Quarto sidebar to the right */
+#quarto-sidebar {
+  left: auto !important;
+  right: 0 !important;
+  border-left: 1px solid #ddd;
+  border-right: none;
+  position: fixed !important;
+  top: 0 !important;
+  height: 100vh !important;
+  z-index: 1000;
+}
+.quarto-container {
+  margin-left: 0 !important;
+  margin-right: 300px !important; /* Adjust width as needed */
 }

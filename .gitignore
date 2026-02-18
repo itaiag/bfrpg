@@ -4,3 +4,9 @@
 test.py
 test.qdm
 test/
+
+docs/site_libs/
+node_modules/
+docs/site_libs/
+translator/.env
+**/*.quarto_ipynb
