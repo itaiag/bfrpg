@@ -43,23 +43,6 @@
     { "en": "Experience", "he": "ניסיון" },
     { "en": "Level", "he": "דרגה", "plural": "Levels", "plural_he": "דרגות" },
     { "en": "Basic Fantasy", "he": "בייסיק פנטזי"},
-    { "en": "Charm Person", "he": "הקסמת איש"},
-    { "en": "Caster", "he": "מטיל הלחש", "notes": "Male form"},
-    { "en": "Charm Animal", "he": "הקסמת חיה"},
-    { "en": "Charm Monster", "he": "הקסמת מפלצת"},
-    { "en": "Hold Person", "he": "עצירת איש"},
-    { "en": "Sleep", "he": "שינה"},
-    { "en": "Invisibility", "he": "היעלמות"},
-    { "en": "Detect Magic", "he": "גילוי קסם"},
-    { "en": "Light", "he": "אור"},
-    { "en": "Read Magic", "he": "קריאת קסם"},
-    { "en": "Magic Missile", "he": "קליע קסם"},
-    { "en": "Fireball", "he": "כדור אש"},
-    { "en": "Lightning Bolt", "he": "כדור ברק"},
-    { "en": "Magic Shield", "he": "מגן קסם"},
-    { "en": "Web", "he": "רשת"},
-    { "en": "Speak with Animals", "he": "דיבור עם חיות"}
-    
-    
+    { "en": "Caster", "he": "מטיל הלחש", "notes": "Male form"}
   ]
 }

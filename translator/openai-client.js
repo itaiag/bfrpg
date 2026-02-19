@@ -32,7 +32,7 @@ loadDotEnv();
 
 const SEGMENT_SEPARATOR = '---SEGMENT---';
 const MAX_TOKENS_PER_BATCH = 3000; // rough token budget for input text
-const MODEL = process.env.OPENAI_MODEL ?? 'gpt-4o-mini';
+const MODEL = process.env.OPENAI_MODEL ?? 'gpt-4o';
 
 let client = null;
 

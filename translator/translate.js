@@ -27,7 +27,7 @@ import {
 
 import { translateSegments } from './openai-client.js';
 import { applyUnitConversions } from './unit-converter.js';
-import { SYSTEM_PROMPT, EXCLUDED_FILES, ALL_FILES, BOOK_STRUCTURE } from './config.js';
+import { buildSystemPrompt, EXCLUDED_FILES, ALL_FILES, BOOK_STRUCTURE } from './config.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = join(__dirname, '..');
@@ -140,7 +140,7 @@ async function translateFile(filename) {
   // ── Translate all texts in one pass ─────────────────────────────────
   let translatedTexts = [];
   if (translateTexts.length > 0) {
-    translatedTexts = await translateSegments(translateTexts, SYSTEM_PROMPT);
+    translatedTexts = await translateSegments(translateTexts, buildSystemPrompt(filename));
   }
 
   // ── Apply translations back to segments ─────────────────────────────

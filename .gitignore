@@ -1,4 +1,5 @@
 /.quarto/
+/.claude/
 /_site/
 /_book/
 test.py

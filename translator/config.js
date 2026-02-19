@@ -9,18 +9,34 @@ function loadGlossary() {
   return JSON.parse(raw);
 }
 
-function buildGlossaryText() {
-  const { terms } = loadGlossary();
-  const lines = terms.map(t => {
+function loadSpellsGlossary() {
+  const raw = readFileSync(join(__dirname, 'glossary-spells.json'), 'utf8');
+  return JSON.parse(raw);
+}
+
+const SPELL_FILES = ['spells.qmd', 'allSpells.qmd'];
+
+function formatTerms(terms) {
+  return terms.map(t => {
     const abbr = t.abbr ? ` (${t.abbr})` : '';
     const notes = t.notes ? ` — ${t.notes}` : '';
     const plural = t.plural ? `; plural: "${t.plural}" → "${t.plural_he}"` : '';
     return `  • "${t.en}"${abbr} → "${t.he}"${plural}${notes}`;
-  });
-  return lines.join('\n');
+  }).join('\n');
 }
 
-export const SYSTEM_PROMPT = `You are a professional translator specializing in tabletop RPG content. Translate English text to Hebrew for a Basic Fantasy RPG rulebook. Follow these rules strictly:
+function buildGlossaryText(filename) {
+  const { terms } = loadGlossary();
+  let lines = formatTerms(terms);
+  if (filename && SPELL_FILES.includes(filename)) {
+    const { terms: spellTerms } = loadSpellsGlossary();
+    lines += '\n\n## Spell Names\n' + formatTerms(spellTerms);
+  }
+  return lines;
+}
+
+export function buildSystemPrompt(filename) {
+  return `You are a professional translator specializing in tabletop RPG content. Translate English text to Hebrew for a Basic Fantasy RPG rulebook. Follow these rules strictly:
 
 ## Language Rules
 - Translate naturally into Hebrew; use formal/literary register appropriate for a rulebook
@@ -33,7 +49,7 @@ export const SYSTEM_PROMPT = `You are a professional translator specializing in 
 - Do not translate "d" in dice context — Hebrew RPG convention keeps English d notation
 
 ## RPG Glossary (use these translations consistently)
-${buildGlossaryText()}
+${buildGlossaryText(filename)}
 
 ## Measurement Units
 - Keep all imperial measurements exactly as written: feet, foot, ft, ', miles, pounds, lbs
@@ -51,6 +67,7 @@ ${buildGlossaryText()}
 
 ## Output Format
 When given multiple segments separated by "---SEGMENT---", return the same number of translated segments separated by "---SEGMENT---". Preserve the exact segment count and order. Do not add explanations or comments.`;
+}
 
 // Patterns to find translatable strings inside OJS code blocks
 export const OJS_LABEL_PATTERNS = [
