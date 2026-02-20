@@ -35,8 +35,22 @@ function buildGlossaryText(filename) {
   return lines;
 }
 
+function getFileContext(filename) {
+  if (!filename) return '';
+  for (const entry of BOOK_STRUCTURE) {
+    if (entry.file === filename) {
+      return `\n## File Context\nYou are translating: **${filename}** (top-level book file)\n`;
+    }
+    if (entry.chapters && entry.chapters.includes(filename)) {
+      return `\n## File Context\nYou are translating: **${filename}**, part of the book section "${entry.part}"\n`;
+    }
+  }
+  return `\n## File Context\nYou are translating: **${filename}**\n`;
+}
+
 export function buildSystemPrompt(filename) {
   return `You are a professional translator specializing in tabletop RPG content. Translate English text to Hebrew for a Basic Fantasy RPG rulebook. Follow these rules strictly:
+${getFileContext(filename)}
 
 ## Language Rules
 - Translate naturally into Hebrew; use formal/literary register appropriate for a rulebook
@@ -64,6 +78,9 @@ ${buildGlossaryText(filename)}
 - Preserve all Quarto shortcodes: {{< ... >}}
 - Keep table structure intact; translate cell text only
 - Do NOT add or remove blank lines
+
+## Context
+You may receive previously translated segments for reference. Use them to maintain consistency in terminology, pronouns, and tone, but do NOT re-translate or include them in your output.
 
 ## Output Format
 When given multiple segments separated by "---SEGMENT---", return the same number of translated segments separated by "---SEGMENT---". Preserve the exact segment count and order. Do not add explanations or comments.`;

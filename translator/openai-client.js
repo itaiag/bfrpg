@@ -67,16 +67,23 @@ function sleep(ms) {
  * Send a batch of text segments to GPT-4o for translation.
  * @param {string[]} texts - Array of source strings (English)
  * @param {string} systemPrompt - System prompt from config
- * @param {number} retries - Number of retries remaining
+ * @param {object} [options] - Additional options
+ * @param {string[]} [options.contextBefore] - Previously translated segments for context
+ * @param {number} [options.retries] - Number of retries remaining
  * @returns {Promise<string[]>} - Translated strings in same order
  */
-export async function translateBatch(texts, systemPrompt, retries = 4) {
+export async function translateBatch(texts, systemPrompt, { contextBefore = [], retries = 4 } = {}) {
   const oai = getClient();
   const joined = texts.join(`\n${SEGMENT_SEPARATOR}\n`);
 
+  let contextBlock = '';
+  if (contextBefore.length > 0) {
+    contextBlock = `Here are the most recently translated segments for context (do NOT re-translate these, they are for reference only):\n\n${contextBefore.join('\n\n')}\n\n---\n\nNow translate the following:\n\n`;
+  }
+
   const userMessage = texts.length === 1
-    ? `Translate the following text to Hebrew:\n\n${joined}`
-    : `Translate each of the following ${texts.length} segments to Hebrew. ` +
+    ? `${contextBlock}Translate the following text to Hebrew:\n\n${joined}`
+    : `${contextBlock}Translate each of the following ${texts.length} segments to Hebrew. ` +
       `Keep them separated by "${SEGMENT_SEPARATOR}".\n\n${joined}`;
 
   for (let attempt = 0; attempt <= retries; attempt++) {
@@ -100,8 +107,9 @@ export async function translateBatch(texts, systemPrompt, retries = 4) {
         );
         // Fall back to individual calls
         const results = [];
-        for (const t of texts) {
-          const [r] = await translateBatch([t], systemPrompt, retries - 1);
+        for (let j = 0; j < texts.length; j++) {
+          const ctx = [...contextBefore, ...results].slice(-2);
+          const [r] = await translateBatch([texts[j]], systemPrompt, { contextBefore: ctx, retries: retries - 1 });
           results.push(r);
         }
         return results;
@@ -125,7 +133,13 @@ export async function translateBatch(texts, systemPrompt, retries = 4) {
 }
 
 /**
+ * Number of previously translated segments to include as context for each batch.
+ */
+const CONTEXT_WINDOW_SIZE = 2;
+
+/**
  * Translate an array of segment texts, batching to stay under token limits.
+ * Includes a sliding window of previously translated segments as context.
  * @param {string[]} texts - All TRANSLATE segment contents
  * @param {string} systemPrompt
  * @returns {Promise<string[]>} - Translated texts, same length and order
@@ -134,16 +148,23 @@ export async function translateSegments(texts, systemPrompt) {
   if (texts.length === 0) return [];
 
   const results = new Array(texts.length);
+  // Track all translated text results in order for sliding context
+  const translatedSoFar = [];
   let batch = [];
   let batchIndices = [];
   let batchTokens = 0;
 
+  function getContext() {
+    return translatedSoFar.slice(-CONTEXT_WINDOW_SIZE);
+  }
+
   async function flushBatch() {
     if (batch.length === 0) return;
     console.log(`  → Translating batch of ${batch.length} segment(s) (~${batchTokens} tokens)`);
-    const translated = await translateBatch(batch, systemPrompt);
+    const translated = await translateBatch(batch, systemPrompt, { contextBefore: getContext() });
     for (let k = 0; k < batchIndices.length; k++) {
       results[batchIndices[k]] = translated[k];
+      translatedSoFar.push(translated[k]);
     }
     batch = [];
     batchIndices = [];
@@ -158,8 +179,9 @@ export async function translateSegments(texts, systemPrompt) {
     if (tok > MAX_TOKENS_PER_BATCH) {
       await flushBatch();
       console.log(`  → Translating large segment (~${tok} tokens) individually`);
-      const [translated] = await translateBatch([t], systemPrompt);
+      const [translated] = await translateBatch([t], systemPrompt, { contextBefore: getContext() });
       results[i] = translated;
+      translatedSoFar.push(translated);
       continue;
     }
 
