@@ -1891,7 +1891,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 </div>
 
-<div class="spell" data-tag="Mind Reading" id="Mind Reading">
+<div class="spell" data-tag="Mind Control" id="Mind Control">
 
 ## תע"ח
 
