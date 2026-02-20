@@ -53,6 +53,7 @@
     { "en": "Ability Scores", "he": "ערכי תכונות" },
     { "en": "Stat Roller", "he": "מחולל תכונות" },
     { "en": "NPC", "he": "דמות מנחה" },
+    { "en": "Demi-Human", "he": "דמוי-אדם", "plural": "Demi-Humans", "plural_he": "דמויי-אדם" },
     { "en": "Common", "he": "מדוברת" ,"notes": "The common language of the world"}
 
     
