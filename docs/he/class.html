@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="he" xml:lang="he" dir="rtl"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="he-IL" xml:lang="he-IL" dir="rtl"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.8.27">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; Character Classes – מערכת פנטזיה בסיסית לשחקני תפקידים, מהדורה 4</title>
+<title>4&nbsp; דמויות מקצועות – מערכת פנטזיה בסיסית לשחקני תפקידים, מהדורה 4</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./equipment.html" rel="next">
-<link href="./races.html" rel="prev">
+<link href="./allSpells.html" rel="next">
+<link href="./abilities.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -70,21 +70,12 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "חפש"
   }
 }</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JS65M33XZB"></script>
-
-<script type="text/javascript">
-
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
-</script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre">
 <script src="../../translator/lang-switch.js"></script>
 
 
-<link rel="stylesheet" href="custom.css">
-<link rel="stylesheet" href="custom-rtl.css">
+<link rel="stylesheet" href="../custom.css">
+<link rel="stylesheet" href="../custom-rtl.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -96,7 +87,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="הצג/הסתר את סרגל הניווט" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./char-creation.html">Player Characters</a></li><li class="breadcrumb-item"><a href="./class.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Character Classes</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./char-creation.html">דמויות שחקן</a></li><li class="breadcrumb-item"><a href="./class.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">דמויות מקצועות</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="הצג/הסתר את סרגל הניווט" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="חפש" onclick="window.quartoOpenSearch();">
@@ -124,13 +115,13 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface</span></a>
+ <span class="menu-text">הקדמה</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Introduction</span></a>
+ <span class="menu-text">מבוא</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -139,7 +130,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./whatIsThis.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">מבוא</span></span></a>
   </div>
 </li>
       </ul>
@@ -147,7 +138,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Player Characters</span></a>
+ <span class="menu-text">דמויות שחקן</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -156,37 +147,19 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./char-creation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Player Characters</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">דמויות שחקן</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./abilities.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Character Abilities</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./races.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Character Races</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">תכונות דמות</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./class.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Character Classes</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./equipment.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Equipment</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./vehicles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Vehicles</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">דמויות מקצועות</span></span></a>
   </div>
 </li>
       </ul>
@@ -194,7 +167,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Magic</span></a>
+ <span class="menu-text">קסם</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -202,14 +175,8 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./spells.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Spells</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./allSpells.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Spells, Alphabetical</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">לחשים, לפי סדר אלפביתי</span></span></a>
   </div>
 </li>
       </ul>
@@ -217,7 +184,7 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Adventure</span></a>
+ <span class="menu-text">מפגשים</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -225,233 +192,8 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dungeonAdventures.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Dungeon Adventures</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./wildAdventures.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Wilderness Adventures</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./hirelings.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Hirelings</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./advancement.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Advancement</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">Encounters</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./combat.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Combat Encounters</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
- <span class="menu-text">Monsters</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./monsters.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Monsters Intro</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./monstersAll.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Monster Descriptions</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./monstersTab.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Monsters Index</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
- <span class="menu-text">Treasure</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./treasure.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Treasure</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./magicItems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Magic Items</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
- <span class="menu-text">GM Information</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./gm01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Managing Encounters</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./gm02.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Crafting Adventures</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
- <span class="menu-text">Appendix</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./appendix_interactive.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Interactive tools</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./appendixMapmaker.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Dungeon Maker</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./char_sheet.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Character Sheet</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
- <span class="menu-text">Extra</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./extraClasses.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Additional Classes</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./extraRaces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Additional Races</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./extraRules.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Aditional and Alternate Rules</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./he/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">הקדמה</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true">
- <span class="menu-text">מבוא</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./he/whatIsThis.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">מבוא</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true">
- <span class="menu-text">דמויות שחקן</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./he/char-creation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">דמויות שחקן</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true">
- <span class="menu-text">מפגשים</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./he/combat.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">מפגשי קרב</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">מפגשי קרב</span></span></a>
   </div>
 </li>
       </ul>
@@ -466,23 +208,23 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
     <h2 id="toc-title">תוכן עניינים</h2>
    
   <ul>
-  <li><a href="#cleric" id="toc-cleric" class="nav-link active" data-scroll-target="#cleric">Cleric</a></li>
-  <li><a href="#fighter" id="toc-fighter" class="nav-link" data-scroll-target="#fighter">Fighter</a></li>
-  <li><a href="#magic-users" id="toc-magic-users" class="nav-link" data-scroll-target="#magic-users">Magic Users</a></li>
-  <li><a href="#thief" id="toc-thief" class="nav-link" data-scroll-target="#thief">Thief</a>
+  <li><a href="#כוהן" id="toc-כוהן" class="nav-link active" data-scroll-target="#כוהן">כוהן</a></li>
+  <li><a href="#לוחם" id="toc-לוחם" class="nav-link" data-scroll-target="#לוחם">לוחם</a></li>
+  <li><a href="#קוסמים" id="toc-קוסמים" class="nav-link" data-scroll-target="#קוסמים">קוסמים</a></li>
+  <li><a href="#גנב" id="toc-גנב" class="nav-link" data-scroll-target="#גנב">גנב</a>
   <ul>
-  <li><a href="#thief-abilities" id="toc-thief-abilities" class="nav-link" data-scroll-target="#thief-abilities">Thief Abilities</a></li>
+  <li><a href="#יכולות-גנב" id="toc-יכולות-גנב" class="nav-link" data-scroll-target="#יכולות-גנב">יכולות גנב</a></li>
   </ul></li>
-  <li><a href="#combination-classes" id="toc-combination-classes" class="nav-link" data-scroll-target="#combination-classes">Combination Classes</a></li>
+  <li><a href="#מקצועות-משולבים" id="toc-מקצועות-משולבים" class="nav-link" data-scroll-target="#מקצועות-משולבים">מקצועות משולבים</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./char-creation.html">Player Characters</a></li><li class="breadcrumb-item"><a href="./class.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Character Classes</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./char-creation.html">דמויות שחקן</a></li><li class="breadcrumb-item"><a href="./class.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">דמויות מקצועות</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Character Classes</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">דמויות מקצועות</span></h1>
 </div>
 
 
@@ -499,295 +241,296 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 </header>
 
 
-<section id="cleric" class="level2">
-<h2 class="anchored" data-anchor-id="cleric">Cleric</h2>
+<section id="כוהן" class="level2">
+<h2 class="anchored" data-anchor-id="כוהן">כוהן</h2>
 <table class="caption-top table">
 <colgroup>
+<col style="width: 9%">
+<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
 <col style="width: 10%">
-<col style="width: 18%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 5%">
-<col style="width: 5%">
-<col style="width: 5%">
-<col style="width: 5%">
-<col style="width: 5%">
-<col style="width: 5%">
 </colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;"></th>
-<th style="text-align: right;"></th>
-<th style="text-align: center;"></th>
-<th style="text-align: center;"></th>
-<th colspan="3">Spell Lvl</th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-<tr class="even">
-<th style="text-align: left;">Level</th>
-<th style="text-align: right;">Exp. Points</th>
-<th style="text-align: center;">Hit Dice</th>
-<th style="text-align: center;">AB</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-<th>6</th>
-</tr>
-</thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: center;">1d6</td>
-<td style="text-align: center;">+1</td>
-<td>–</td>
-<td>–</td>
-<td>–</td>
-<td>–</td>
-<td>–</td>
-<td>–</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td colspan="3">Spell Lvl</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">2</td>
-<td style="text-align: right;">1,500</td>
-<td style="text-align: center;">2d6</td>
-<td style="text-align: center;">+1</td>
+<td rowspan="2">דרגה :====== 1</td>
+<td colspan="10" rowspan="2">נקודות ניסיון | קוביות פגיעה | בונוס תקיפה | 1 | 2 | 3 | 4 | 5 | 6 ============:+:========:+:========:+===+===+===+===+===+===+ 0 | 1d6 | +1 | – | – | – | – | – | – |</td>
+</tr>
+<tr class="odd">
+</tr>
+<tr class="even">
+<td>2</td>
+<td>1,500</td>
+<td>2d6</td>
+<td>+1</td>
 <td>1</td>
 <td>–</td>
 <td>–</td>
 <td>–</td>
 <td>–</td>
 <td>–</td>
+<td></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">3</td>
-<td style="text-align: right;">3,000</td>
-<td style="text-align: center;">3d6</td>
-<td style="text-align: center;">+2</td>
+<td>3</td>
+<td>3,000</td>
+<td>3d6</td>
+<td>+2</td>
 <td>2</td>
 <td>–</td>
 <td>–</td>
 <td>–</td>
 <td>–</td>
 <td>–</td>
+<td></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">4</td>
-<td style="text-align: right;">6,000</td>
-<td style="text-align: center;">4d6</td>
-<td style="text-align: center;">+2</td>
+<td>4</td>
+<td>6,000</td>
+<td>4d6</td>
+<td>+2</td>
 <td>2</td>
 <td>1</td>
 <td>–</td>
 <td>–</td>
 <td>–</td>
 <td>–</td>
+<td></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">5</td>
-<td style="text-align: right;">12,000</td>
-<td style="text-align: center;">5d6</td>
-<td style="text-align: center;">+3</td>
+<td>5</td>
+<td>12,000</td>
+<td>5d6</td>
+<td>+3</td>
 <td>2</td>
 <td>2</td>
 <td>–</td>
 <td>–</td>
 <td>–</td>
 <td>–</td>
+<td></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">6</td>
-<td style="text-align: right;">24,000</td>
-<td style="text-align: center;">6d6</td>
-<td style="text-align: center;">+3</td>
+<td>6</td>
+<td>24,000</td>
+<td>6d6</td>
+<td>+3</td>
 <td>2</td>
 <td>2</td>
 <td>1</td>
 <td>–</td>
 <td>–</td>
 <td>–</td>
+<td></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">7</td>
-<td style="text-align: right;">48,000</td>
-<td style="text-align: center;">7d6</td>
-<td style="text-align: center;">+4</td>
+<td>7</td>
+<td>48,000</td>
+<td>7d6</td>
+<td>+4</td>
 <td>3</td>
 <td>2</td>
 <td>2</td>
 <td>–</td>
 <td>–</td>
 <td>–</td>
+<td></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">8</td>
-<td style="text-align: right;">90,000</td>
-<td style="text-align: center;">8d6</td>
-<td style="text-align: center;">+4</td>
+<td>8</td>
+<td>90,000</td>
+<td>8d6</td>
+<td>+4</td>
 <td>3</td>
 <td>2</td>
 <td>2</td>
 <td>1</td>
 <td>–</td>
 <td>–</td>
+<td></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">9</td>
-<td style="text-align: right;">180,000</td>
-<td style="text-align: center;">9d6</td>
-<td style="text-align: center;">+5</td>
+<td>9</td>
+<td>180,000</td>
+<td>9d6</td>
+<td>+5</td>
 <td>3</td>
 <td>3</td>
 <td>2</td>
 <td>2</td>
 <td>–</td>
 <td>–</td>
+<td></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">10</td>
-<td style="text-align: right;">270,000</td>
-<td style="text-align: center;">9d6+1</td>
-<td style="text-align: center;">+5</td>
+<td>10</td>
+<td>270,000</td>
+<td>9d6+1</td>
+<td>+5</td>
 <td>3</td>
 <td>3</td>
 <td>2</td>
 <td>2</td>
 <td>1</td>
 <td>–</td>
+<td></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">11</td>
-<td style="text-align: right;">360,000</td>
-<td style="text-align: center;">9d6+2</td>
-<td style="text-align: center;">+5</td>
+<td>11</td>
+<td>360,000</td>
+<td>9d6+2</td>
+<td>+5</td>
 <td>4</td>
 <td>3</td>
 <td>3</td>
 <td>2</td>
 <td>2</td>
 <td>–</td>
+<td></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">12</td>
-<td style="text-align: right;">450,000</td>
-<td style="text-align: center;">9d6+3</td>
-<td style="text-align: center;">+6</td>
+<td>12</td>
+<td>450,000</td>
+<td>9d6+3</td>
+<td>+6</td>
 <td>4</td>
 <td>4</td>
 <td>3</td>
 <td>2</td>
 <td>2</td>
 <td>1</td>
+<td></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">13</td>
-<td style="text-align: right;">540,000</td>
-<td style="text-align: center;">9d6+4</td>
-<td style="text-align: center;">+6</td>
+<td>13</td>
+<td>540,000</td>
+<td>9d6+4</td>
+<td>+6</td>
 <td>4</td>
 <td>4</td>
 <td>3</td>
 <td>3</td>
 <td>2</td>
 <td>2</td>
+<td></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">14</td>
-<td style="text-align: right;">630,000</td>
-<td style="text-align: center;">9d6+5</td>
-<td style="text-align: center;">+6</td>
+<td>14</td>
+<td>630,000</td>
+<td>9d6+5</td>
+<td>+6</td>
 <td>4</td>
 <td>4</td>
 <td>4</td>
 <td>3</td>
 <td>2</td>
 <td>2</td>
+<td></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">15</td>
-<td style="text-align: right;">720,000</td>
-<td style="text-align: center;">9d6+6</td>
-<td style="text-align: center;">+7</td>
+<td>15</td>
+<td>720,000</td>
+<td>9d6+6</td>
+<td>+7</td>
 <td>4</td>
 <td>4</td>
 <td>4</td>
 <td>3</td>
 <td>3</td>
 <td>2</td>
+<td></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">16</td>
-<td style="text-align: right;">810,000</td>
-<td style="text-align: center;">9d6+7</td>
-<td style="text-align: center;">+7</td>
+<td>16</td>
+<td>810,000</td>
+<td>9d6+7</td>
+<td>+7</td>
 <td>5</td>
 <td>4</td>
 <td>4</td>
 <td>3</td>
 <td>3</td>
 <td>2</td>
+<td></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">17</td>
-<td style="text-align: right;">900,000</td>
-<td style="text-align: center;">9d6+8</td>
-<td style="text-align: center;">+7</td>
+<td>17</td>
+<td>900,000</td>
+<td>9d6+8</td>
+<td>+7</td>
 <td>5</td>
 <td>5</td>
 <td>4</td>
 <td>3</td>
 <td>3</td>
 <td>2</td>
+<td></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">18</td>
-<td style="text-align: right;">990,000</td>
-<td style="text-align: center;">9d6+9</td>
-<td style="text-align: center;">+8</td>
+<td>18</td>
+<td>990,000</td>
+<td>9d6+9</td>
+<td>+8</td>
 <td>5</td>
 <td>5</td>
 <td>4</td>
 <td>4</td>
 <td>3</td>
 <td>3</td>
+<td></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">19</td>
-<td style="text-align: right;">1,080,000</td>
-<td style="text-align: center;">9d6+10</td>
-<td style="text-align: center;">+8</td>
+<td>19</td>
+<td>1,080,000</td>
+<td>9d6+10</td>
+<td>+8</td>
 <td>6</td>
 <td>5</td>
 <td>4</td>
 <td>4</td>
 <td>3</td>
 <td>3</td>
+<td></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">20</td>
-<td style="text-align: right;">1,170,000</td>
-<td style="text-align: center;">9d6+11</td>
-<td style="text-align: center;">+8</td>
+<td>20</td>
+<td>1,170,000</td>
+<td>9d6+11</td>
+<td>+8</td>
 <td>6</td>
 <td>5</td>
 <td>5</td>
 <td>4</td>
 <td>3</td>
 <td>3</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<p>Clerics are those who have devoted themselves to the service of a deity, pantheon or other belief system. Most Clerics spend their time in mundane forms of service such as preaching and ministering in a temple; but there are those who are called to go abroad from the temple and serve their deity in a more direct way, smiting undead monsters and aiding in the battle against evil and chaos. Player character Clerics are assumed to be among the latter group.</p>
-<p>Clerics fight about as well as Thieves, but not as well as Fighters. They are hardier than Thieves, at least at lower levels, as they are accustomed to physical labor that the Thief would deftly avoid. Clerics can cast <a href="./spells.html#cleric-spells">spells of divine nature</a> starting at 2<sup>nd</sup>&nbsp;level, and they have the power to Turn the Undead, that is, to drive away undead monsters by means of faith alone (see the&nbsp;<a href="./combat.html#turning-the-undead">Encounter</a>&nbsp;section for details).</p>
-<p>The Prime Requisite for Clerics is Wisdom; a character must have a Wisdom score of 9 or higher to become a Cleric. They may wear any armor, but may only use blunt weapons (specifically including warhammer, mace, maul, club, quarterstaff, and sling).</p>
+<p>כוהנים הם אלו שהקדישו את עצמם לשירות של אלוהות, פנתיאון או מערכת אמונה אחרת. רוב הכוהנים מבלים את זמנם בצורות שירות יומיומיות כמו דרשות ושירות במקדש; אך ישנם כאלה שנקראים לצאת מהמקדש ולשרת את אלוהותם בצורה ישירה יותר, להכות מפלצות אל-מתים ולעזור במאבק נגד הרוע והתוהו. דמויות שחקן כוהנים נחשבות לחלק מהקבוצה האחרונה.</p>
+<p>כוהנים נלחמים בערך כמו גנבים, אך לא כמו לוחמים. הם חזקים יותר מגנבים, לפחות בדרגות נמוכות, כיוון שהם רגילים לעבודה פיזית שהגנב היה נמנע ממנה בזריזות. כוהנים יכולים להטיל <a href="spells.qmd#cleric-spells">לחשים בעלי טבע אלוהי</a> החל מדרגה 2, ויש להם את הכוח להרחיק אל-מתים, כלומר, להבריח מפלצות אל-מתים באמצעות אמונה בלבד (ראו את סעיף <a href="./combat.html#turning-the-undead">מפגש</a> לפרטים).</p>
+<p>הדרישה העיקרית לכוהנים היא חוכמה; דמות חייבת להיות בעלת ערך חוכמה של 9 או יותר כדי להפוך לכוהן. הם יכולים ללבוש כל שריון, אך יכולים להשתמש רק בנשקים קהים (כולל במיוחד פטיש מלחמה, אלת, מקבת, אלה, מטה רבע, וקלע).</p>
 <div id="tbl-save-clerics" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-save-clerics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-טבלה&nbsp;5.1: Cleric Saving Throws
+טבלה&nbsp;4.1: גלגולי הצלה לכוהנים
 </figcaption>
 <div aria-describedby="tbl-save-clerics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -802,12 +545,12 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 </colgroup>
 <thead>
 <tr class="header">
-<th><strong>Level</strong></th>
-<th>Death Ray / Poison</th>
-<th>Magic Wands</th>
-<th>Paralysis / Petrify</th>
-<th>Dragon Breath</th>
-<th>Spells</th>
+<th><strong>דרגה</strong></th>
+<th>קרן מוות / רעל</th>
+<th>שרביטי קסם</th>
+<th>שיתוק / הפיכה לאבן</th>
+<th>נשימת דרקון</th>
+<th>לחשים</th>
 <th></th>
 </tr>
 </thead>
@@ -917,15 +660,15 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 </figure>
 </div>
 </section>
-<section id="fighter" class="level2">
-<h2 class="anchored" data-anchor-id="fighter">Fighter</h2>
+<section id="לוחם" class="level2">
+<h2 class="anchored" data-anchor-id="לוחם">לוחם</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Level</th>
-<th>Exp. Points</th>
-<th>Hit Dice</th>
-<th>AB</th>
+<th>דרגה</th>
+<th>נקודות ניסיון</th>
+<th>קוביות פגיעה</th>
+<th>בונוס תקיפה</th>
 </tr>
 </thead>
 <tbody>
@@ -1051,13 +794,13 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 </tr>
 </tbody>
 </table>
-<p>Fighters include soldiers, guardsmen, barbarian warriors, and anyone else for whom fighting is a way of life. They train in combat, and they generally approach problems head on, weapon drawn.</p>
-<p>Not surprisingly, Fighters are best at fighting of all the classes. They are also the hardiest, able to take more punishment than any other class. Although they are not skilled in the ways of magic, Fighters can nonetheless use many magic items, including but not limited to magical weapons and armor.</p>
-<p>The Prime Requisite for Fighters is Strength; a character must have a Strength score of 9 or higher to become a Fighter. Members of this class may wear any armor and use any weapon.</p>
+<p>לוחמים כוללים חיילים, שומרי משמר, לוחמי ברברים וכל מי שעבורו לחימה היא דרך חיים. הם מתאמנים בקרב, ובדרך כלל ניגשים לבעיות באופן ישיר, עם נשק שלוף.</p>
+<p>לא מפתיע, לוחמים הם הטובים ביותר בלחימה מכל המקצועות. הם גם החזקים ביותר, מסוגלים לספוג יותר נזק מכל מקצוע אחר. למרות שהם לא מיומנים בדרכי הקסם, לוחמים יכולים להשתמש בפריטים קסומים רבים, כולל אך לא מוגבל לנשקים ושריונות קסומים.</p>
+<p>הדרישה העיקרית ללוחמים היא כוח; דמות חייבת להיות בעלת ערך כוח של 9 או יותר כדי להפוך ללוחם. חברי מקצוע זה יכולים ללבוש כל שריון ולהשתמש בכל נשק.</p>
 <div id="tbl-save-fighter" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-save-fighter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-טבלה&nbsp;5.2: Fighter Saving Throws
+טבלה&nbsp;4.2: גלגולי הצלה ללוחמים
 </figcaption>
 <div aria-describedby="tbl-save-fighter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -1072,12 +815,12 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 </colgroup>
 <thead>
 <tr class="header">
-<th><strong>Level</strong></th>
-<th>Death Ray / Poison</th>
-<th>Magic Wands</th>
-<th>Paralysis / Petrify</th>
-<th>Dragon Breath</th>
-<th>Spells</th>
+<th><strong>דרגה</strong></th>
+<th>קרן מוות / רעל</th>
+<th>שרביטי קסם</th>
+<th>שיתוק / הפיכה לאבן</th>
+<th>נשימת דרקון</th>
+<th>לחשים</th>
 <th></th>
 </tr>
 </thead>
@@ -1196,296 +939,297 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 </figure>
 </div>
 </section>
-<section id="magic-users" class="level2">
-<h2 class="anchored" data-anchor-id="magic-users">Magic Users</h2>
+<section id="קוסמים" class="level2">
+<h2 class="anchored" data-anchor-id="קוסמים">קוסמים</h2>
 <table class="caption-top table">
 <colgroup>
+<col style="width: 9%">
+<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
 <col style="width: 10%">
-<col style="width: 18%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 5%">
-<col style="width: 5%">
-<col style="width: 5%">
-<col style="width: 5%">
-<col style="width: 5%">
-<col style="width: 5%">
 </colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;"></th>
-<th style="text-align: right;"></th>
-<th style="text-align: center;"></th>
-<th style="text-align: center;"></th>
-<th colspan="3">Spell Lvl</th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-<tr class="even">
-<th style="text-align: left;">Level</th>
-<th style="text-align: right;">Exp. Points</th>
-<th style="text-align: center;">Hit Dice</th>
-<th style="text-align: center;">AB</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-<th>6</th>
-</tr>
-</thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: center;">1d4</td>
-<td style="text-align: center;">+1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td colspan="3">Spell Lvl</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="2">דרגה :====== 1</td>
+<td colspan="10" rowspan="2">נקודות ניסיון | קוביות פגיעה | בונוס תקיפה | 1 | 2 | 3 | 4 | 5 | 6 ============:+:========:+:========:+===+===+===+===+===+===+ 0 | 1d4 | +1 | 1 | – | – | – | – | – |</td>
+</tr>
+<tr class="odd">
+</tr>
+<tr class="even">
+<td>2</td>
+<td>2,500</td>
+<td>2d4</td>
+<td>+1</td>
+<td>2</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>5,000</td>
+<td>3d4</td>
+<td>+1</td>
+<td>2</td>
 <td>1</td>
 <td>–</td>
 <td>–</td>
 <td>–</td>
 <td>–</td>
-<td>–</td>
+<td></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">2</td>
-<td style="text-align: right;">2,500</td>
-<td style="text-align: center;">2d4</td>
-<td style="text-align: center;">+1</td>
+<td>4</td>
+<td>10,000</td>
+<td>4d4</td>
+<td>+2</td>
+<td>2</td>
 <td>2</td>
 <td>–</td>
 <td>–</td>
 <td>–</td>
 <td>–</td>
-<td>–</td>
+<td></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">3</td>
-<td style="text-align: right;">5,000</td>
-<td style="text-align: center;">3d4</td>
-<td style="text-align: center;">+1</td>
-<td>2</td>
-<td>1</td>
-<td>–</td>
-<td>–</td>
-<td>–</td>
-<td>–</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">4</td>
-<td style="text-align: right;">10,000</td>
-<td style="text-align: center;">4d4</td>
-<td style="text-align: center;">+2</td>
-<td>2</td>
-<td>2</td>
-<td>–</td>
-<td>–</td>
-<td>–</td>
-<td>–</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">5</td>
-<td style="text-align: right;">20,000</td>
-<td style="text-align: center;">5d4</td>
-<td style="text-align: center;">+2</td>
+<td>5</td>
+<td>20,000</td>
+<td>5d4</td>
+<td>+2</td>
 <td>2</td>
 <td>2</td>
 <td>1</td>
 <td>–</td>
 <td>–</td>
 <td>–</td>
+<td></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">6</td>
-<td style="text-align: right;">40,000</td>
-<td style="text-align: center;">6d4</td>
-<td style="text-align: center;">+3</td>
+<td>6</td>
+<td>40,000</td>
+<td>6d4</td>
+<td>+3</td>
 <td>3</td>
 <td>2</td>
 <td>2</td>
 <td>–</td>
 <td>–</td>
 <td>–</td>
+<td></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">7</td>
-<td style="text-align: right;">80,000</td>
-<td style="text-align: center;">7d4</td>
-<td style="text-align: center;">+3</td>
+<td>7</td>
+<td>80,000</td>
+<td>7d4</td>
+<td>+3</td>
 <td>3</td>
 <td>2</td>
 <td>2</td>
 <td>1</td>
 <td>–</td>
 <td>–</td>
+<td></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">8</td>
-<td style="text-align: right;">150,000</td>
-<td style="text-align: center;">8d4</td>
-<td style="text-align: center;">+3</td>
+<td>8</td>
+<td>150,000</td>
+<td>8d4</td>
+<td>+3</td>
 <td>3</td>
 <td>3</td>
 <td>2</td>
 <td>2</td>
 <td>–</td>
 <td>–</td>
+<td></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">9</td>
-<td style="text-align: right;">300,000</td>
-<td style="text-align: center;">9d4</td>
-<td style="text-align: center;">+4</td>
+<td>9</td>
+<td>300,000</td>
+<td>9d4</td>
+<td>+4</td>
 <td>3</td>
 <td>3</td>
 <td>2</td>
 <td>2</td>
 <td>1</td>
 <td>–</td>
+<td></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">10</td>
-<td style="text-align: right;">450,000</td>
-<td style="text-align: center;">9d4+1</td>
-<td style="text-align: center;">+4</td>
+<td>10</td>
+<td>450,000</td>
+<td>9d4+1</td>
+<td>+4</td>
 <td>4</td>
 <td>3</td>
 <td>3</td>
 <td>2</td>
 <td>2</td>
 <td>–</td>
+<td></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">11</td>
-<td style="text-align: right;">600,000</td>
-<td style="text-align: center;">9d4+2</td>
-<td style="text-align: center;">+4</td>
+<td>11</td>
+<td>600,000</td>
+<td>9d4+2</td>
+<td>+4</td>
 <td>4</td>
 <td>4</td>
 <td>3</td>
 <td>2</td>
 <td>2</td>
 <td>1</td>
+<td></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">12</td>
-<td style="text-align: right;">750,000</td>
-<td style="text-align: center;">9d4+3</td>
-<td style="text-align: center;">+4</td>
+<td>12</td>
+<td>750,000</td>
+<td>9d4+3</td>
+<td>+4</td>
 <td>4</td>
 <td>4</td>
 <td>3</td>
 <td>3</td>
 <td>2</td>
 <td>2</td>
+<td></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">13</td>
-<td style="text-align: right;">900,000</td>
-<td style="text-align: center;">9d4+4</td>
-<td style="text-align: center;">+5</td>
+<td>13</td>
+<td>900,000</td>
+<td>9d4+4</td>
+<td>+5</td>
 <td>4</td>
 <td>4</td>
 <td>4</td>
 <td>3</td>
 <td>2</td>
 <td>2</td>
+<td></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">14</td>
-<td style="text-align: right;">1,050,000</td>
-<td style="text-align: center;">9d4+5</td>
-<td style="text-align: center;">+5</td>
+<td>14</td>
+<td>1,050,000</td>
+<td>9d4+5</td>
+<td>+5</td>
 <td>4</td>
 <td>4</td>
 <td>4</td>
 <td>3</td>
 <td>3</td>
 <td>2</td>
+<td></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">15</td>
-<td style="text-align: right;">1,200,000</td>
-<td style="text-align: center;">9d4+6</td>
-<td style="text-align: center;">+5</td>
+<td>15</td>
+<td>1,200,000</td>
+<td>9d4+6</td>
+<td>+5</td>
 <td>5</td>
 <td>4</td>
 <td>4</td>
 <td>3</td>
 <td>3</td>
 <td>2</td>
+<td></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">16</td>
-<td style="text-align: right;">1,350,000</td>
-<td style="text-align: center;">9d4+7</td>
-<td style="text-align: center;">+6</td>
+<td>16</td>
+<td>1,350,000</td>
+<td>9d4+7</td>
+<td>+6</td>
 <td>5</td>
 <td>5</td>
 <td>4</td>
 <td>3</td>
 <td>3</td>
 <td>2</td>
+<td></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">17</td>
-<td style="text-align: right;">1,500,000</td>
-<td style="text-align: center;">9d4+8</td>
-<td style="text-align: center;">+6</td>
+<td>17</td>
+<td>1,500,000</td>
+<td>9d4+8</td>
+<td>+6</td>
 <td>5</td>
 <td>5</td>
 <td>4</td>
 <td>4</td>
 <td>3</td>
 <td>3</td>
+<td></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">18</td>
-<td style="text-align: right;">1,650,000</td>
-<td style="text-align: center;">9d4+9</td>
-<td style="text-align: center;">+6</td>
+<td>18</td>
+<td>1,650,000</td>
+<td>9d4+9</td>
+<td>+6</td>
 <td>6</td>
 <td>5</td>
 <td>4</td>
 <td>4</td>
 <td>3</td>
 <td>3</td>
+<td></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">19</td>
-<td style="text-align: right;">1,800,000</td>
-<td style="text-align: center;">9d4+10</td>
-<td style="text-align: center;">+7</td>
+<td>19</td>
+<td>1,800,000</td>
+<td>9d4+10</td>
+<td>+7</td>
 <td>6</td>
 <td>5</td>
 <td>5</td>
 <td>4</td>
 <td>3</td>
 <td>3</td>
+<td></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">20</td>
-<td style="text-align: right;">1,950,000</td>
-<td style="text-align: center;">9d4+11</td>
-<td style="text-align: center;">+7</td>
+<td>20</td>
+<td>1,950,000</td>
+<td>9d4+11</td>
+<td>+7</td>
 <td>6</td>
 <td>5</td>
 <td>5</td>
 <td>4</td>
 <td>4</td>
 <td>3</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<p>Magic-Users are those who seek and use knowledge of the arcane. They do magic not as the Cleric does, by faith in a greater power, but rather through insight and understanding.</p>
-<p>Magic-Users are the worst of all the classes at fighting; hours spent studying massive tomes of magic do not lead a character to become strong or adept with weapons. They are the least hardy, equal to Thieves at lower levels but quickly falling behind.</p>
-<p>The Prime Requisite for Magic-Users is Intelligence; a character must have an Intelligence score of 9 or higher to become a Magic-User. The only weapons they become proficient with are the dagger and the walking staff (or cudgel). Magic-Users may not wear armor of any sort nor use a shield as such things interfere with spellcasting.</p>
-<p>A first level Magic-User begins play knowing&nbsp;<a href="./allSpells.html#read-magic">read magic</a>&nbsp;and one other spell of first level. These spells are written in a spellbook provided by his or her master. The GM may roll for the spell, assign it as he or she sees fit, or allow the player to choose it, at his or her option. See the&nbsp;<a href="./spells.html#magic-user-spells">Spells</a>&nbsp;section for more details.</p>
+<p>קוסמים הם אלו המחפשים ומשתמשים בידע הארקני. הם עושים קסמים לא כמו הכוהן, מתוך אמונה בכוח עליון, אלא דרך תובנה והבנה.</p>
+<p>קוסמים הם הגרועים ביותר מכל המקצועות בלחימה; שעות של לימוד כרכים עצומים של קסמים לא מובילות את הדמות להיות חזקה או מיומנת בנשק. הם הפחות חסונים, שווים לגנבים בדרגות נמוכות אך נופלים מאחור במהירות.</p>
+<p>הדרישה העיקרית לקוסמים היא תבונה; דמות חייבת להיות בעלת ערך תבונה של 9 או יותר כדי להפוך לקוסם. הנשקים היחידים שהם מתמחים בהם הם הפגיון ומקל ההליכה (או אלה). קוסמים אינם יכולים ללבוש שריון מכל סוג שהוא או להשתמש במגן, שכן דברים אלו מפריעים להטלת לחשים.</p>
+<p>קוסם בדרגה ראשונה מתחיל את המשחק כשהוא יודע את לחש <a href="./allSpells.html#read-magic">קריאת קסם</a> ולחש נוסף אחד מדרגה ראשונה. לחשים אלו כתובים בספר לחשים שסופק על ידי המאסטר שלו או שלה. המנחה יכולה לגלגל עבור הלחש, להקצות אותו כפי שהיא רואה לנכון, או לאפשר לשחקן לבחור אותו, לפי בחירתה. ראו את סעיף <a href="spells.qmd#magic-user-spells">לחשים</a> לפרטים נוספים.</p>
 <div id="tbl-save-mage" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-save-mage-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-טבלה&nbsp;5.3: Magic User Saving Throws
+טבלה&nbsp;4.3: גלגולי הצלה של קוסם
 </figcaption>
 <div aria-describedby="tbl-save-mage-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -1500,12 +1244,12 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 </colgroup>
 <thead>
 <tr class="header">
-<th><strong>Level</strong></th>
-<th>Death Ray / Poison</th>
-<th>Magic Wands</th>
-<th>Paralysis / Petrify</th>
-<th>Dragon Breath</th>
-<th>Spells</th>
+<th><strong>דרגה</strong></th>
+<th>קרן מוות / רעל</th>
+<th>שרביטי קסם</th>
+<th>שיתוק / התאבנות</th>
+<th>נשימת דרקון</th>
+<th>לחשים</th>
 <th></th>
 </tr>
 </thead>
@@ -1615,15 +1359,15 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 </figure>
 </div>
 </section>
-<section id="thief" class="level2">
-<h2 class="anchored" data-anchor-id="thief">Thief</h2>
+<section id="גנב" class="level2">
+<h2 class="anchored" data-anchor-id="גנב">גנב</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Level</th>
-<th>Exp. Points</th>
-<th>Hit Dice</th>
-<th>AB</th>
+<th>דרגה</th>
+<th>נקודות ניסיון</th>
+<th>קוביות פגיעה</th>
+<th>בונוס תקיפה</th>
 </tr>
 </thead>
 <tbody>
@@ -1749,14 +1493,14 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 </tr>
 </tbody>
 </table>
-<p>Thieves are those who take what they want or need by stealth, disarming traps and picking locks to get to the gold they crave; or “borrowing” money from pockets, beltpouches, etc. right under the nose of the “mark” without the victim ever knowing.</p>
-<p>Thieves fight better than Magic-Users but not as well as Fighters. Avoidance of honest work leads Thieves to be less hardy than the other classes, though they do pull ahead of the Magic-Users at higher levels.</p>
-<p>The Prime Requisite for Thieves is Dexterity; a character must have a Dexterity score of 9 or higher to become a Thief. They may use any weapon, but may not wear metal armor as it interferes with stealthy activities, nor may they use shields of any sort. Leather armor is acceptable, however.</p>
-<p>Thieves have a number of special abilities, described below. One Turn must generally be spent to use any of these abilities, though the GM may amend this as he or she sees fit. The GM may choose to make any of these rolls on behalf of the player, at his or her option, to help maintain the proper state of uncertainty. Also note that the GM may apply situational adjustments (plus or minus percentage points) as he or she sees fit; for instance, it’s obviously harder to climb a wall slick with slime than one that is dry, so the GM might apply a penalty of 20% for the slimy wall.</p>
+<p>גנבים הם אלו שלוקחים את מה שהם רוצים או צריכים בחשאי, מנטרלים מלכודות ופותחים מנעולים כדי להגיע לזהב שהם חושקים בו; או “שואלים” כסף מכיסים, ארנקים וכו’ ממש מתחת לאף של ה”סימן” מבלי שהקורבן ידע.</p>
+<p>גנבים נלחמים טוב יותר מקוסמים אך לא כמו לוחמים. הימנעות מעבודה כנה מובילה לכך שגנבים פחות חסונים משאר המקצועות, אם כי הם עוקפים את הקוסמים בדרגות גבוהות יותר.</p>
+<p>הדרישה העיקרית לגנבים היא זריזות; דמות חייבת להיות בעלת ערך זריזות של 9 או יותר כדי להפוך לגנב. הם יכולים להשתמש בכל נשק, אך אינם יכולים ללבוש שריון מתכתי שכן הוא מפריע לפעילויות חשאיות, וגם לא יכולים להשתמש במגנים מכל סוג שהוא. שריון עור מקובל, עם זאת.</p>
+<p>לגנבים יש מספר יכולות מיוחדות, המתוארות להלן. בדרך כלל יש להקדיש תור אחד כדי להשתמש בכל אחת מהיכולות הללו, אם כי המנחה יכולה לשנות זאת לפי ראות עיניה. המנחה יכולה לבחור לבצע כל אחד מהגלגולים הללו בשם השחקן, לפי בחירתה, כדי לשמור על מצב אי הוודאות הנכון. כמו כן, שימו לב שהמנחה יכולה להחיל התאמות מצביות (תוספת או הפחתה של אחוזים) לפי ראות עיניה; לדוגמה, ברור שקשה יותר לטפס על קיר חלקלק ברפש מאשר על קיר יבש, ולכן המנחה עשויה להחיל עונש של 20% על הקיר החלקלק.</p>
 <div id="tbl-save-thief" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-save-thief-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-טבלה&nbsp;5.4: Thief Saving Throws
+טבלה&nbsp;4.4: גלגולי הצלה של גנב
 </figcaption>
 <div aria-describedby="tbl-save-thief-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -1771,12 +1515,12 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 </colgroup>
 <thead>
 <tr class="header">
-<th><strong>Level</strong></th>
-<th>Death Ray / Poison</th>
-<th>Magic Wands</th>
-<th>Paralysis / Petrify</th>
-<th>Dragon Breath</th>
-<th>Spells</th>
+<th><strong>דרגה</strong></th>
+<th>קרן מוות / רעל</th>
+<th>שרביטי קסם</th>
+<th>שיתוק / התאבנות</th>
+<th>נשימת דרקון</th>
+<th>לחשים</th>
 <th></th>
 </tr>
 </thead>
@@ -1885,8 +1629,8 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 </div>
 </figure>
 </div>
-<section id="thief-abilities" class="level3">
-<h3 class="anchored" data-anchor-id="thief-abilities">Thief Abilities</h3>
+<section id="יכולות-גנב" class="level3">
+<h3 class="anchored" data-anchor-id="יכולות-גנב">יכולות גנב</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 9%">
@@ -1900,14 +1644,14 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 </colgroup>
 <thead>
 <tr class="header">
-<th>Thief Level</th>
-<th>Open Locks</th>
-<th>Remove Traps</th>
-<th>Pick Pockets</th>
-<th>Move Silently</th>
-<th>Climb Walls</th>
-<th>Hide</th>
-<th>Listen</th>
+<th>דרגת גנב</th>
+<th>פתיחת מנעולים</th>
+<th>נטרול מלכודות</th>
+<th>כייסות</th>
+<th>תנועה חרישית</th>
+<th>טיפוס על קירות</th>
+<th>התחבאות</th>
+<th>הקשבה</th>
 </tr>
 </thead>
 <tbody>
@@ -2113,22 +1857,22 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
 </tr>
 </tbody>
 </table>
-<p><strong>Open Locks</strong>&nbsp;allows the Thief to unlock a lock without a proper key. It may only be tried once per lock. If the attempt fails, the Thief must wait until he or she has gained another level of experience before trying again.</p>
-<p><strong>Remove Traps</strong>&nbsp;is generally rolled twice: first to detect the trap, and second to disarm it. The GM will make these rolls as the player won’t know for sure if the character is successful or not until someone actually tests the trapped (or suspected) area.</p>
-<p><strong>Pick Pockets</strong>&nbsp;allows the Thief to lift the wallet, cut the purse, etc. of a victim without the victim noticing. Obviously, if the roll is failed, the Thief didn’t get what he or she wanted; but further, the intended victim (or an onlooker, at the GM’s option) will notice the attempt if the die roll is more than two times the target number (or if the die roll is 00).</p>
-<p><strong>Move Silently</strong>, like Remove Traps, is always rolled by the GM. The Thief will usually believe he or she is moving silently regardless of the die roll, but those he or she is trying to avoid will hear the Thief if the roll is failed.</p>
-<p><strong>Climb Walls</strong>&nbsp;permits the Thief to climb sheer surfaces with few or no visible handholds. This ability should normally be rolled by the player. If the roll fails, the Thief falls from about halfway up the wall or other vertical surface. The GM may require multiple rolls if the distance climbed is more than 100 feet. See <a href="./combat.html#falling-damage">Falling Damage</a>.</p>
-<p><strong>Hide</strong>&nbsp;permits the Thief to hide in any shadowed area large enough to contain his or her body. Like Move Silently, the Thief always believes he or she is being successful, so the GM makes the roll. A Thief hiding in shadows must remain still for this ability to work.</p>
-<p><strong>Listen</strong>&nbsp;is generally used to listen at a door, or to try to listen for distant sounds in a dungeon. The GM must decide what noises the Thief might hear; a successful roll means only that a noise&nbsp;<em>could</em>&nbsp;have been heard. The GM should always make this roll for the player. Note that the Thief and his or her party must try to be quiet in order for the Thief to use this ability.</p>
-<p>Finally, Thieves can perform a&nbsp;<strong>Sneak Attack</strong>&nbsp;any time they are behind an opponent in melee and it is reasonably likely the opponent doesn’t know the Thief is there. The GM may require a Move Silently or Hide roll to determine this. The Sneak Attack is made with a +4 attack bonus and does double damage if it is successful. A Thief usually can’t make a Sneak Attack on the same opponent twice in any given combat.</p>
-<p>The Sneak Attack can be performed with any melee (but not missile) weapon, or may be performed bare-handed (in which case <a href="./combat.html#subduing-damage">subduing damage</a> is done). Also, the Sneak Attack can be performed with the “flat of the blade;” the bonuses and penalties cancel out, so the attack has a +0 attack bonus and does normal damage; the damage done in this case is subduing damage.</p>
+<p><strong>פתיחת מנעולים</strong> מאפשרת לגנב לפתוח מנעול ללא מפתח מתאים. ניתן לנסות זאת פעם אחת בלבד לכל מנעול. אם הניסיון נכשל, הגנב חייב להמתין עד שיגיע לדרגת ניסיון נוספת לפני שינסה שוב.</p>
+<p><strong>נטרול מלכודות</strong> מתבצע בדרך כלל בשני גלגולים: הראשון כדי לזהות את המלכודת, והשני כדי לנטרל אותה. המנחה תבצע את הגלגולים הללו מכיוון שהשחקן לא ידע בוודאות אם הדמות הצליחה או לא עד שמישהו יבדוק בפועל את האזור הממולכד (או החשוד כממולכד).</p>
+<p><strong>כייסות</strong> מאפשרת לגנב להרים את הארנק, לחתוך את הכיס וכו’ של הקורבן מבלי שהקורבן ישים לב. ברור שאם הגלגול נכשל, הגנב לא קיבל את מה שהוא או היא רצו; יתרה מכך, הקורבן המיועד (או צופה, לפי בחירת המנחה) ישים לב לניסיון אם גלגול הקובייה הוא יותר מפעמיים המספר הנדרש (או אם גלגול הקובייה הוא 00).</p>
+<p><strong>תנועה חרישית</strong>, כמו נטרול מלכודות, מתבצעת תמיד על ידי המנחה. הגנב בדרך כלל יאמין שהוא או היא נעים בשקט ללא קשר לגלגול הקובייה, אך אלו שהוא או היא מנסים להימנע מהם ישמעו את הגנב אם הגלגול נכשל.</p>
+<p><strong>טיפוס על קירות</strong> מאפשר לגנב לטפס על משטחים חלקים עם מעט או ללא אחיזות נראות לעין. יכולת זו צריכה להתבצע בדרך כלל על ידי השחקן. אם הגלגול נכשל, הגנב נופל מאמצע הדרך במעלה הקיר או המשטח האנכי האחר. המנחה עשויה לדרוש מספר גלגולים אם המרחק שטיפסו עליו הוא יותר מ-30 מטר. ראו <a href="./combat.html#falling-damage">נזק מנפילה</a>.</p>
+<p><strong>התחבאות</strong> מאפשרת לגנב להסתתר בכל אזור מוצל שגדול מספיק כדי להכיל את גופו או גופה. כמו תנועה חרישית, הגנב תמיד מאמין שהוא או היא מצליחים, ולכן המנחה מבצעת את הגלגול. גנב שמסתתר בצללים חייב להישאר ללא תנועה כדי שהיכולת תעבוד.</p>
+<p><strong>האזנה</strong> משמשת בדרך כלל להאזנה ליד דלת, או לנסות להאזין לקולות רחוקים במבוך. המנחה חייבת להחליט אילו רעשים הגנב עשוי לשמוע; גלגול מוצלח אומר רק שרעש <em>יכול</em> היה להישמע. המנחה צריכה תמיד לבצע את הגלגול הזה עבור השחקן. יש לשים לב שהגנב והחבורה שלו או שלה חייבים לנסות להיות שקטים כדי שהגנב יוכל להשתמש ביכולת זו.</p>
+<p>לבסוף, גנבים יכולים לבצע <strong>תקיפה חמקנית</strong> בכל פעם שהם מאחורי יריב בקרב פנים אל פנים ויש סבירות סבירה שהיריב לא יודע שהגנב שם. המנחה עשויה לדרוש גלגול תנועה חרישית או הסתרה כדי לקבוע זאת. התקיפה החמקנית מתבצעת עם בונוס תקיפה של +4 ועושה נזק כפול אם היא מצליחה. גנב בדרך כלל לא יכול לבצע תקיפה חמקנית על אותו יריב פעמיים באותו קרב.</p>
+<p>התקיפה החמקנית יכולה להתבצע עם כל נשק לקרב פנים אל פנים (אך לא קליעים), או יכולה להתבצע בידיים חשופות (במקרה זה נעשה <a href="./combat.html#subduing-damage">נזק הכנעה</a>). בנוסף, התקיפה החמקנית יכולה להתבצע עם “צד הלהב השטוח”; הבונוסים והעונשים מבטלים זה את זה, כך שהתקיפה היא עם בונוס תקיפה של +0 ועושה נזק רגיל; הנזק שנעשה במקרה זה הוא נזק הכנעה.</p>
 </section>
 </section>
-<section id="combination-classes" class="level2">
-<h2 class="anchored" data-anchor-id="combination-classes">Combination Classes</h2>
-<p>To become a member of a combination class, a character must meet the requirements of both classes. Combination class characters use the best attack bonus and the best saving throw values of their original two classes, but must gain experience equal to the combined requirements of both base classes to advance in levels. Elves are the only characters eligible to be a member of one of these combination classes:</p>
-<p><strong>Fighter/Magic-User:</strong>&nbsp;These characters may both fight and cast magic spells; further, they are allowed to cast magic spells while wearing armor. These characters roll six-sided dice (d6) for hit points.</p>
-<p><strong>Magic-User/Thief:</strong>&nbsp;Members of this combination class may cast spells while wearing leather armor, and may use any weapon. These characters roll four-sided dice (d4) for hit points.</p>
+<section id="מקצועות-משולבים" class="level2">
+<h2 class="anchored" data-anchor-id="מקצועות-משולבים">מקצועות משולבים</h2>
+<p>כדי להפוך לחבר במקצוע משולב, דמות חייבת לעמוד בדרישות של שני המקצועות. דמויות במקצוע משולב משתמשות בבונוס התקיפה הטוב ביותר ובערכי גלגולי ההצלה הטובים ביותר של שני המקצועות המקוריים שלהן, אך חייבות לצבור ניסיון השווה לדרישות המשולבות של שני המקצועות הבסיסיים כדי להתקדם בדרגות. אלפים הם הדמויות היחידות הזכאיות להיות חברים באחד מהמקצועות המשולבים הללו:</p>
+<p><strong>לוחם/קוסם:</strong> דמויות אלו יכולות גם להילחם וגם להטיל לחשים; יתרה מכך, הן מורשות להטיל לחשים בזמן שהן לובשות שריון. דמויות אלו מגלגלות קוביות בעלות שש פאות (d6) עבור נקודות פגיעה.</p>
+<p><strong>קוסם/גנב:</strong> חברים במקצוע משולב זה יכולים להטיל לחשים בזמן שהם לובשים שריון עור, ויכולים להשתמש בכל נשק. דמויות אלו מגלגלות קוביות בעלות ארבע פאות (d4) עבור נקודות פגיעה.</p>
 
 
 </section>
@@ -2536,13 +2280,13 @@ gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./races.html" class="pagination-link" aria-label="Character Races">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Character Races</span></span>
+      <a href="./abilities.html" class="pagination-link" aria-label="תכונות דמות">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">תכונות דמות</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./equipment.html" class="pagination-link" aria-label="Equipment">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Equipment</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./allSpells.html" class="pagination-link" aria-label="לחשים, לפי סדר אלפביתי">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">לחשים, לפי סדר אלפביתי</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -27,7 +27,7 @@
     { "en": "Wilderness", "he": "שטח פתוח" },
     { "en": "Round", "he": "סיבוב", "plural": "Rounds", "plural_he": "סיבובים", "notes": "Combat round" },
     { "en": "Turn", "he": "תור", "plural": "Turns", "plural_he": "תורות", "notes": "Time unit (10 minutes)" },
-    { "en": "Darkvision", "he": "ראיית חושך" },
+    { "en": "Darkvision", "he": "זיוונות" },
     { "en": "Retainer", "he": "עוזר", "plural": "Retainers", "plural_he": "עוזרים" },
     { "en": "Hireling", "he": "שכיר", "plural": "Hirelings", "plural_he": "שכירים" },
     { "en": "Monster", "he": "מפלצת", "plural": "Monsters", "plural_he": "מפלצות" },
@@ -43,6 +43,19 @@
     { "en": "Experience", "he": "ניסיון" },
     { "en": "Level", "he": "דרגה", "plural": "Levels", "plural_he": "דרגות" },
     { "en": "Basic Fantasy", "he": "בייסיק פנטזי"},
-    { "en": "Caster", "he": "מטיל הלחש", "notes": "Male form"}
+    { "en": "Caster", "he": "מטיל הלחש", "notes": "Male form"},
+    { "en": "Undead", "he": "אל-מת", "plural": "Undead", "plural_he": "אל-מתים" },
+    { "en": "Alignment", "he": "נטייה" },
+    { "en": "Lawful", "he": "סדר" },
+    { "en": "Neutral", "he": "ניטרלי" },
+    { "en": "Chaotic", "he": "תוהו" },
+    { "en": "Abilities", "he": "תכונות" },
+    { "en": "Ability Scores", "he": "ערכי תכונות" },
+    { "en": "Stat Roller", "he": "מחולל תכונות" },
+    { "en": "NPC", "he": "דמות מנחה" },
+    { "en": "Common", "he": "מדוברת" ,"notes": "The common language of the world"}
+
+    
+    
   ]
 }

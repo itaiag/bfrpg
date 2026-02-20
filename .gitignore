@@ -11,3 +11,4 @@ he-book/
 he/.quarto/
 he/_quarto.yml
 **/*.quarto_ipynb
+.firebase/
