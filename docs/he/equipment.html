@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>6&nbsp; ציוד – מערכת פנטזיה בסיסית לשחקני תפקידים, מהדורה 4</title>
+<title>6&nbsp; ציוד – בייסיק פנטזי, מהדורה 4</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -139,7 +139,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">מערכת פנטזיה בסיסית לשחקני תפקידים, מהדורה 4</a> 
+      <a href="./">בייסיק פנטזי, מהדורה 4</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -257,6 +257,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">הרפתקאות במבוך</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./wildAdventures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">הרפתקאות בשטח פתוח</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -271,7 +277,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./combat.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">מפגשי קרב</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">מפגשי קרב</span></span></a>
   </div>
 </li>
       </ul>
@@ -334,7 +340,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="20" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 19;"><span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { generalDice } <span class="im">from</span> <span class="st">"../custom.js"</span></span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>viewof goldRoll <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"גלגל זהב התחלתי"</span><span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">reduce</span><span class="op">:</span> () <span class="kw">=&gt;</span> (<span class="dv">10</span> <span class="op">*</span> <span class="fu">generalDice</span>(<span class="dv">3</span><span class="op">,</span><span class="dv">6</span><span class="op">,</span><span class="dv">0</span>))})</span></code></pre></div><button title="העתק ללוח" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>viewof goldRoll <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">input</span>(<span class="dv">0</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;div class="ojs-roller" style="display:grid; grid-template-columns: 50% auto; direction:rtl; vertical-align:middle"&gt;</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div&gt;</span><span class="sc">${</span>Inputs<span class="op">.</span><span class="fu">bind</span>(Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"גלגל זהב התחלתי"</span><span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">reduce</span><span class="op">:</span> () <span class="kw">=&gt;</span> (<span class="dv">10</span> <span class="op">*</span> <span class="fu">generalDice</span>(<span class="dv">3</span><span class="op">,</span><span class="dv">6</span><span class="op">,</span><span class="dv">0</span>))})<span class="op">,</span> viewof goldRoll)<span class="sc">}</span><span class="vs">&lt;/div&gt;</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div&gt;זהב התחלתי = </span><span class="sc">${</span>goldRoll<span class="sc">}</span><span class="vs">&lt;/div&gt;</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/div&gt;`</span></span></code></pre></div><button title="העתק ללוח" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-1-1" data-nodetype="declaration">
@@ -349,8 +360,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-3" data-nodetype="expression">
+
 </div>
-<p><strong>זהב התחלתי</strong>: <span><span id="ojs-element-id-1"></span></span></p>
+</div>
+</div>
+</div>
 </section>
 <section id="ציוד-כללי" class="level2">
 <h2 class="anchored" data-anchor-id="ציוד-כללי">ציוד כללי</h2>
@@ -1080,16 +1097,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="section"></h2>
 
 
-<div class="ojs-auto-generated hidden">
-<script type="ojs-module-contents">
-eyJjb250ZW50cyI6WyAgeyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiaW5saW5lIjoidHJ1ZSIsInNvdXJjZSI6Imh0bC5odG1sYDxzcGFuPiR7Z29sZFJvbGx9PC9zcGFuPmAiLCAiY2VsbE5hbWUiOiJvanMtZWxlbWVudC1pZC0xIn1dfQ==
-</script>
-</div>
 </section>
 
 </main> <!-- /main -->
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImltcG9ydCB7IGdlbmVyYWxEaWNlIH0gZnJvbSBcIi4uL2N1c3RvbS5qc1wiXHJcblxyXG52aWV3b2YgZ29sZFJvbGwgPSBJbnB1dHMuYnV0dG9uKFwi15LXnNeS15wg15bXlNeRINeU16rXl9ec16rXmVwiLCB7dmFsdWU6IDAsIHJlZHVjZTogKCkgPT4gKDEwICogZ2VuZXJhbERpY2UoMyw2LDApKX0pXHJcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnZ29sZFJvbGwnKSJ9XX0=
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImltcG9ydCB7IGdlbmVyYWxEaWNlIH0gZnJvbSBcIi4uL2N1c3RvbS5qc1wiXHJcblxyXG52aWV3b2YgZ29sZFJvbGwgPSBJbnB1dHMuaW5wdXQoMClcclxuXHJcbmh0bC5odG1sYDxkaXYgY2xhc3M9XCJvanMtcm9sbGVyXCIgc3R5bGU9XCJkaXNwbGF5OmdyaWQ7IGdyaWQtdGVtcGxhdGUtY29sdW1uczogNTAlIGF1dG87IGRpcmVjdGlvbjpydGw7IHZlcnRpY2FsLWFsaWduOm1pZGRsZVwiPlxyXG48ZGl2PiR7SW5wdXRzLmJpbmQoSW5wdXRzLmJ1dHRvbihcIteS15zXktecINeW15TXkSDXlNeq15fXnNeq15lcIiwge3ZhbHVlOiAwLCByZWR1Y2U6ICgpID0+ICgxMCAqIGdlbmVyYWxEaWNlKDMsNiwwKSl9KSwgdmlld29mIGdvbGRSb2xsKX08L2Rpdj5cclxuPGRpdj7XlteU15Eg15TXqteX15zXqteZID0gJHtnb2xkUm9sbH08L2Rpdj5cclxuPC9kaXY+YFxyXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ2dvbGRSb2xsJykifV19
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }

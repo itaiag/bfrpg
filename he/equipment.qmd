@@ -19,10 +19,13 @@
 ```{ojs}
 import { generalDice } from "../custom.js"
 
-viewof goldRoll = Inputs.button("גלגל זהב התחלתי", {value: 0, reduce: () => (10 * generalDice(3,6,0))})
-```
+viewof goldRoll = Inputs.input(0)
 
-**זהב התחלתי**: ${goldRoll}
+htl.html`<div class="ojs-roller" style="display:grid; grid-template-columns: 50% auto; direction:rtl; vertical-align:middle">
+<div>${Inputs.bind(Inputs.button("גלגל זהב התחלתי", {value: 0, reduce: () => (10 * generalDice(3,6,0))}), viewof goldRoll)}</div>
+<div>זהב התחלתי = ${goldRoll}</div>
+</div>`
+```
 
 ## ציוד כללי
 

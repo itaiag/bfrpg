@@ -11,6 +11,7 @@ node translator/translate.js --all        # translate all content files
 node translator/translate.js --dry-run <file>  # preview segments, no API
 node translator/translate.js --patch      # re-apply post-processors to he/ files
 node translator/translate.js --build      # generate he/_quarto.yml + quarto render he/
+node translator/translate.js --preview    # live preview of Hebrew site (hot-reload)
 ```
 
 ## Build Commands

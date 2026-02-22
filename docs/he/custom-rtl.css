@@ -66,6 +66,25 @@ blockquote {
   text-align: left;
 }
 
+/* OJS dice roller grid — button on right, result on left (RTL natural order) */
+.ojs-roller {
+  direction: rtl !important;
+}
+
+/* OJS button visibility — Observable's CSS custom properties may be unresolved
+   in the Quarto/Bootstrap context, causing dark-on-dark buttons */
+.observablehq button {
+  background-color: #f8f9fa;
+  color: #212529;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 4px 12px;
+  cursor: pointer;
+}
+.observablehq button:hover {
+  background-color: #e2e6ea;
+}
+
 /* Keep numeric content LTR (dice tables, stats) */
 table.stats td,
 td:only-child {

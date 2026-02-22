@@ -13,25 +13,16 @@
 
 ערכים אלו מושפעים מכוח; כל +1 בבונוס הכוח מוסיף 10% לכושר הנשיאה של הדמות, בעוד שכל -1 מפחית 20%. כך שכושר הנשיאה לדמויות רגילות הוא כפי שמוצג להלן (מעוגל ל-2 ק"ג הקרובים לנוחות):
 
-+:----------------------------------:+:------------------------:+
-|  | גמד, אלף, אדם| גמד, אלף, אדם | בן-מחצית|בן-מחצית   |
-+----------+------------+------------+------------+-------------+
-| כוח      | עומס קל  | עומס כבד | עומס קל  | עומס כבד  |
-+:=========+:==========:+:==========:+:==========:+:===========:+
-| 3        | 15         |  35        |10          |  20         |
-+----------+------------+------------+------------+-------------+
-| 4-5      | 20         | 45         | 15         | 25          |
-+----------+------------+------------+------------+-------------+
-| 6-8      | 25         | 55        | 20         | 35          |
-+----------+------------+------------+------------+-------------+
-| 9-12     | 30         | 70        | 25         | 45         |
-+----------+------------+------------+------------+-------------+
-| 13-15    | 35         | 80        | 30         | 50         |
-+----------+------------+------------+------------+-------------+
-| 16-17    | 40         | 90        | 35         | 55         |
-+----------+------------+------------+------------+-------------+
-| 18       | 45         | 100        | 40         | 60         |
-+----------+------------+------------+------------+-------------+
+| כוח   | עומס קל - גמד, אלף, אדם | עומס כבד - גמד, אלף, אדם | עומס קל - בן-מחצית | עומס כבד - בן-מחצית |
+|:-----:|:-------:|:--------:|:-------:|:--------:|
+| 3     | 15      | 35       | 10      | 20       |
+| 4-5   | 20      | 45       | 15      | 25       |
+| 6-8   | 25      | 55       | 20      | 35       |
+| 9-12  | 30      | 70       | 25      | 45       |
+| 13-15 | 35      | 80       | 30      | 50       |
+| 16-17 | 40      | 90       | 35      | 55       |
+| 18    | 45      | 100      | 40      | 60       |
+
 
 כושר הנשיאה של חיות מבויתות שונות ניתן ב[סעיף המפלצות](monsters.qmd#beasts-of-burden).
 
@@ -66,11 +57,11 @@ import {rolld4,rolld6} from "../custom.js"
 
 viewof torch = Inputs.input(0)
 
-htl.html`<div style="display:grid; grid-template-columns: 50% auto; vertical-align:midle"> 
+htl.html`<div class="ojs-roller" style="display:grid; grid-template-columns: 50% auto; direction:rtl; vertical-align:midle">
 <div>
 ${Inputs.bind(Inputs.button("תורות לפיד (1d4+4)", {value: 0, reduce: () => (4 + rolld4() )}), viewof torch)}
 </div><div>
-Torch burn turns = ${torch.value}</div>
+תורות שריפה = ${torch}</div>
 </div>
 `
 
@@ -83,9 +74,9 @@ Torch burn turns = ${torch.value}</div>
 
 viewof oil = Inputs.input(0)
 
-htl.html`<div style="display:grid; grid-template-columns: 50% auto; vertical-align:midle">
+htl.html`<div class="ojs-roller" style="display:grid; grid-template-columns: 50% auto; direction:rtl; vertical-align:midle">
 ${Inputs.bind(Inputs.button("פנס שמן (1d6 + 18)", {value: 0, reduce: () => (18 + rolld6() )}), viewof oil)}
-Lantern Turns = ${oil.value}
+תורות פנס = ${oil}
 </div>
 `
 
@@ -130,15 +121,16 @@ viewof form = Inputs.form(
   {
     template: (formParts) => htl.html`
      <div>
-       <div style="
+       <div class="ojs-roller" style="
          display: grid;
-         grid-template-columns: 50% auto; 
+         grid-template-columns: 50% auto;
+         direction: rtl;
          vertical-align:midle;
          row-gap: 10px;
        ">
-         ${Object.values(formParts)[0]} 1d6 result: ${i.value}
-         ${Object.values(formParts)[1]} Force Bar: ${j.value}
-         ${Object.values(formParts)[2]} Force Door: ${k.value}
+         ${Object.values(formParts)[0]} 1d6: ${i}
+         ${Object.values(formParts)[1]} כיפוף מוט: ${j}
+         ${Object.values(formParts)[2]} פריצת דלת: ${k}
 
        </div>
      </div>`

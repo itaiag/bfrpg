@@ -12,7 +12,7 @@
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'fs';
 import { join, basename, dirname } from 'path';
-import { execSync } from 'child_process';
+import { execSync, spawn } from 'child_process';
 import { fileURLToPath } from 'url';
 
 import {
@@ -264,7 +264,7 @@ function buildHe() {
   output-dir: ../docs/he
 
 book:
-  title: "מערכת פנטזיה בסיסית לשחקני תפקידים, מהדורה 4"
+  title: "בייסיק פנטזי, מהדורה 4"
   author: "כריס גונרמן"
   date: "5/2/2023"
   chapters:
@@ -295,6 +295,80 @@ format:
   log('\n✓ Hebrew site built → docs/he/');
 }
 
+// ── Preview Hebrew site ───────────────────────────────────────────────────────
+
+function previewHe() {
+  const translated = new Set(
+    readdirSync(HE_DIR).filter(f => f.endsWith('.qmd'))
+  );
+
+  if (translated.size === 0) {
+    log('No translated files found in he/. Run translations first.');
+    process.exit(1);
+  }
+
+  // Build chapters list identical to buildHe()
+  const chapters = [];
+  for (const entry of BOOK_STRUCTURE) {
+    if (entry.file) {
+      if (translated.has(entry.file)) chapters.push(`  - ${entry.file}`);
+    } else {
+      const existing = entry.chapters.filter(f => translated.has(f));
+      if (existing.length > 0) {
+        chapters.push(`  - part: "${entry.part}"`);
+        chapters.push(`    chapters:`);
+        for (const f of existing) chapters.push(`      - ${f}`);
+      }
+    }
+  }
+
+  // Use a local output-dir so Quarto preview's live-reload works correctly
+  // (preview requires the output dir to be inside the project tree)
+  const yml = `project:
+  type: book
+  output-dir: _preview
+
+book:
+  title: "בייסיק פנטזי, מהדורה 4"
+  author: "כריס גונרמן"
+  date: "5/2/2023"
+  chapters:
+${chapters.join('\n')}
+
+format:
+  html:
+    theme: cosmo
+    lang: he-IL
+    dir: rtl
+    css: [../custom.css, ../custom-rtl.css]
+    number-depth: 0
+    toc-depth: 4
+    execute:
+      echo: false
+    header-includes: |
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre">
+      <script src="../../../translator/lang-switch.js"></script>
+    mainfont: "Frank Ruhl Libre"
+`;
+
+  const ymlPath = join(HE_DIR, '_quarto.yml');
+  writeFileSync(ymlPath, yml, 'utf8');
+  log('✓ he/_quarto.yml updated (output-dir: _preview for live reload)');
+  log('▶ Running: quarto preview he/\n');
+  log('  Press Ctrl+C to stop. Run --build afterwards to restore docs/he/.\n');
+
+  const child = spawn('quarto', ['preview', 'he/'], {
+    cwd: PROJECT_ROOT,
+    stdio: 'inherit',
+    shell: true,
+  });
+
+  child.on('exit', () => {
+    // Restore production _quarto.yml so docs/he/ builds work after preview
+    buildHe();
+  });
+}
+
 // ── Main ─────────────────────────────────────────────────────────────────────
 
 async function main() {
@@ -306,6 +380,7 @@ async function main() {
     log('  node translator/translate.js --all                        # Translate all content files');
     log('  node translator/translate.js --dry-run <file>             # Preview segments (no API)');
     log('  node translator/translate.js --build                      # Sync _quarto-he.yml and render');
+    log('  node translator/translate.js --preview                    # Live preview of Hebrew site');
     log('  node translator/translate.js --patch                      # Re-apply post-processors to all he/ files');
     process.exit(0);
   }
@@ -323,6 +398,11 @@ async function main() {
 
   if (args[0] === '--build') {
     buildHe();
+    return;
+  }
+
+  if (args[0] === '--preview') {
+    previewHe();
     return;
   }
 
