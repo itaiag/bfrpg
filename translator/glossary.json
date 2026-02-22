@@ -57,7 +57,8 @@
     { "en": "Waterskin", "he": "נאד מים" },
     { "en": "Wineskin", "he": "נאד יין" },    
     { "en": "Demi-Human", "he": "דמוי-אדם", "plural": "Demi-Humans", "plural_he": "דמויי-אדם" },
-    { "en": "Common", "he": "מדוברת" ,"notes": "The common language of the world"}
+    { "en": "Common", "he": "מדוברת" ,"notes": "The common language of the world"},
+    { "en": "Xp", "he": "נק\"נ" }
 
     
     
