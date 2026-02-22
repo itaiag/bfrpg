@@ -65,7 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./combat.html" rel="next">
+<link href="./hirelings.html" rel="next">
 <link href="./dungeonAdventures.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -263,6 +263,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">הרפתקאות בשטח פתוח</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hirelings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">שכירים</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -277,7 +283,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./combat.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">מפגשי קרב</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">מפגשי קרב</span></span></a>
   </div>
 </li>
       </ul>
@@ -295,8 +301,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#קצבי-תנועה-בשטח-פתוח" id="toc-קצבי-תנועה-בשטח-פתוח" class="nav-link active" data-scroll-target="#קצבי-תנועה-בשטח-פתוח">קצבי תנועה בשטח פתוח</a></li>
   <li><a href="#נסיעה-ביבשה" id="toc-נסיעה-ביבשה" class="nav-link" data-scroll-target="#נסיעה-ביבשה">נסיעה ביבשה</a></li>
   <li><a href="#הליכה-לאיבוד" id="toc-הליכה-לאיבוד" class="nav-link" data-scroll-target="#הליכה-לאיבוד">הליכה לאיבוד</a></li>
-  <li><a href="#נסיעה-במים" id="toc-נסיעה-במים" class="nav-link" data-scroll-target="#נסיעה-במים">נסיעה במים</a></li>
-  <li><a href="#נסיעה-באוויר" id="toc-נסיעה-באוויר" class="nav-link" data-scroll-target="#נסיעה-באוויר">נסיעה באוויר</a></li>
+  <li><a href="#שיט-במים" id="toc-שיט-במים" class="nav-link" data-scroll-target="#שיט-במים">שיט במים</a></li>
+  <li><a href="#תעופה" id="toc-תעופה" class="nav-link" data-scroll-target="#תעופה">תעופה</a></li>
   </ul>
 </nav>
     </div>
@@ -324,62 +330,62 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="קצבי-תנועה-בשטח-פתוח" class="level3">
 <h3 class="anchored" data-anchor-id="קצבי-תנועה-בשטח-פתוח">קצבי תנועה בשטח פתוח</h3>
-<p>קצבי התנועה בעת נסיעה בשטח פתוח קשורים ישירות לקצבי התנועה במפגשים, כפי שמוצג בטבלה הבאה:</p>
+<p>קצבי התנועה בעת תנועה בשטח פתוח קשורים ישירות לקצבי התנועה במבוכים, כפי שמוצג בטבלה הבאה:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>תנועה במפגש (רגל לסיבוב)</th>
-<th>תנועה בשטח פתוח (מייל ליום)</th>
+<th>תנועה במבוך (מטר לסיבוב)</th>
+<th>תנועה בשטח פתוח (ק”מ ליום)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>3 מטר</td>
-<td>6</td>
+<td>10</td>
 </tr>
 <tr class="even">
 <td>6 מטר</td>
-<td>12</td>
+<td>20</td>
 </tr>
 <tr class="odd">
 <td>9 מטר</td>
-<td>18</td>
-</tr>
-<tr class="even">
-<td>12 מטר</td>
-<td>24</td>
-</tr>
-<tr class="odd">
-<td>15 מטר</td>
 <td>30</td>
 </tr>
 <tr class="even">
+<td>12 מטר</td>
+<td>40</td>
+</tr>
+<tr class="odd">
+<td>15 מטר</td>
+<td>50</td>
+</tr>
+<tr class="even">
 <td>18 מטר</td>
-<td>36</td>
-</tr>
-<tr class="odd">
-<td>21 מטר</td>
-<td>42</td>
-</tr>
-<tr class="even">
-<td>24 מטר</td>
-<td>48</td>
-</tr>
-<tr class="odd">
-<td>27 מטר</td>
-<td>54</td>
-</tr>
-<tr class="even">
-<td>30 מטר</td>
 <td>60</td>
 </tr>
 <tr class="odd">
+<td>21 מטר</td>
+<td>68</td>
+</tr>
+<tr class="even">
+<td>24 מטר</td>
+<td>77</td>
+</tr>
+<tr class="odd">
+<td>27 מטר</td>
+<td>87</td>
+</tr>
+<tr class="even">
+<td>30 מטר</td>
+<td>97</td>
+</tr>
+<tr class="odd">
 <td>33 מטר</td>
-<td>66</td>
+<td>53</td>
 </tr>
 <tr class="even">
 <td>36 מטר</td>
-<td>72</td>
+<td>116</td>
 </tr>
 </tbody>
 </table>
@@ -398,34 +404,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td>ג’ונגל, הרים, ביצה</td>
-<td>×1/3</td>
+<td>1/3 x</td>
 </tr>
 <tr class="even">
 <td>מדבר, יער, גבעות</td>
-<td>×2/3</td>
+<td>2/3 x</td>
 </tr>
 <tr class="odd">
-<td>ברור, מישורים, שביל</td>
-<td>×1</td>
+<td>פתוח, מישורים, שביל</td>
+<td>x1</td>
 </tr>
 <tr class="even">
 <td>כביש (מרוצף)</td>
-<td>×1 1/3</td>
+<td>1/3 x 1</td>
 </tr>
 </tbody>
 </table>
-<p>דמויות יכולות לבחור לבצע <strong>צעידה מאומצת</strong>, ולנסוע 12 שעות ביום. אם זה נעשה, יש להוסיף 50% נוספים למרחק הנסיעה. כל יום של צעידה מאומצת לאחר הראשון גורם ל-1d6 נזק לדמויות (ולבעלי החיים שלהן, אם יש). מותר גלגול הצלה נגד קרן מוות עם בונוס חוסן כדי להימנע מנזק זה, אך לאחר שכשלון בגלגול זה, אין לגלגל שוב עבור אותה דמות או יצור. יום מנוחה “מאפס” את ההתקדמות.</p>
+<p>דמויות יכולות לבחור לבצע <strong>צעידה מאומצת</strong>, ולנסוע 12 שעות ביום. אם זה נעשה, יש להוסיף 50% נוספים למרחק הנסיעה. כל יום של צעידה מאומצת לאחר הראשון גורם ל-1d6 נזק לדמויות (ולבעלי החיים שלהן, אם יש). מותר גלגול הצלה נגד קרן מוות עם בונוס חוסן כדי להימנע מנזק זה, אך לאחר כשלון בגלגול זה, אין לגלגל שוב עבור אותה דמות או יצור. יום מנוחה “מאפס” את ההתקדמות.</p>
 </section>
 <section id="הליכה-לאיבוד" class="level3">
 <h3 class="anchored" data-anchor-id="הליכה-לאיבוד">הליכה לאיבוד</h3>
-<p>למרות שהרפתקנים העוקבים אחר דרכים, נהרות או ציוני דרך ברורים אחרים אינם נוטים ללכת לאיבוד, יציאה ליער חסר שבילים, מדבר סוער וכדומה היא עניין אחר. גלגלי בסתר גלגול הצלה נגד קרן מוות, מותאם על פי החוכמה של מנהיג הקבוצה (כלומר, הדמות שנראית כמובילה). ניתן לגלגל גלגול תכונה נגד חוכמה, אם כלל זה בשימוש. המנחה חייבת לקבוע את ההשפעות של כשלון.</p>
+<p>למרות שהרפתקנים העוקבים אחר דרכים, נהרות או ציוני דרך ברורים אחרים אינם נוטים ללכת לאיבוד, יציאה ליער חסר שבילים, מדבר מוכה רוחות וכדומה היא עניין אחר. גלגלי בסתר גלגול הצלה נגד קרן מוות, מותאם על פי החוכמה של מנהיג הקבוצה (כלומר, הדמות שנראית כמובילה). ניתן לגלגל גלגול תכונה נגד חוכמה, אם כלל זה בשימוש. המנחה חייבת לקבוע את ההשפעות של כשלון.</p>
 </section>
-<section id="נסיעה-במים" class="level3">
-<h3 class="anchored" data-anchor-id="נסיעה-במים">נסיעה במים</h3>
-<p>ניתן לנסוע במים במגוון סירות או ספינות; ראו את הטבלה בסעיף <a href="./vehicles.html#water-transportation">כלי רכב</a> לפרטים. מרחקי הנסיעה מבוססים על יום נסיעה של 12 שעות, ולא על 8 שעות ליום כפי שניתן לעיל. שימו לב שספינות מפרש עשויות לנסוע 24 שעות ביממה (אם יש נווט מוסמך על הסיפון), ולכן עשויות לכסות פי שניים מהמרחק הרגיל ליום נסיעה. זה בנוסף למכפיל הניתן להלן. אם הספינה עוצרת כל לילה, כפי שנעשה על ידי כמה כלי שיט הנוסעים לאורך חוף וכן על ידי כלי שיט שיש להם פחות ממספר הצוות הרגיל על הסיפון, המכפיל של פי שניים לא חל.</p>
+<section id="שיט-במים" class="level3">
+<h3 class="anchored" data-anchor-id="שיט-במים">שיט במים</h3>
+<p>ניתן לשוט במים במגוון סירות או ספינות; ראו את הטבלה בסעיף <a href="./vehicles.html#water-transportation">כלי רכב</a> לפרטים. מרחקי הנסיעה מבוססים על יום נסיעה של 12 שעות, ולא על 8 שעות ליום כפי שניתן לעיל. שימו לב שספינות מפרש עשויות לנסוע 24 שעות ביממה (אם יש נווט מוסמך על הסיפון), ולכן עשויות לכסות פי שניים מהמרחק הרגיל ליום נסיעה. זה בנוסף למכפיל הניתן להלן. אם הספינה עוצרת כל לילה, כפי שנעשה על ידי כמה כלי שיט הנוסעים לאורך חוף וכן על ידי כלי שיט שיש להם פחות ממספר הצוות הרגיל על הסיפון, המכפיל של פי שניים לא חל.</p>
 <p>תנועת ספינות מפרש משתנה בהתאם לתנאי מזג האוויר, כפי שמוצג בטבלה הבאה. <strong>מפרש</strong> מתאמי תנועה מוצגים כאשר מפליגים עם הרוח; הפלגה נגד הרוח כוללת <strong>זיגזוג</strong> (המכונה “זיגזג” על ידי יבשתיים) שמפחית את קצבי התנועה כפי שמצוין בטבלה.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="49" data-source-offset="-2"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 48;"><span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {generalTableSelect<span class="op">,</span> highlightTableRow} <span class="im">from</span> <span class="st">"../custom.js"</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="49" data-source-offset="-1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 48;"><span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {generalTableSelect<span class="op">,</span> highlightTableRow} <span class="im">from</span> <span class="st">"../custom.js"</span></span>
 <span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"גלגלי בטבלה"</span><span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">reduce</span><span class="op">:</span> () <span class="kw">=&gt;</span> <span class="fu">highlightTableRow</span>(<span class="st">"#wind-direction"</span><span class="op">,</span> <span class="fu">generalTableSelect</span>([<span class="dv">1</span><span class="op">,</span><span class="dv">12</span><span class="op">,</span><span class="dv">0</span>]<span class="op">,</span>[[<span class="dv">1</span><span class="op">,</span><span class="dv">1</span>]<span class="op">,</span>[<span class="dv">2</span><span class="op">,</span><span class="dv">2</span>]<span class="op">,</span>[<span class="dv">3</span><span class="op">,</span><span class="dv">3</span>]<span class="op">,</span>[<span class="dv">4</span><span class="op">,</span><span class="dv">4</span>]<span class="op">,</span>[<span class="dv">5</span><span class="op">,</span><span class="dv">5</span>]<span class="op">,</span>[<span class="dv">6</span><span class="op">,</span><span class="dv">6</span>]<span class="op">,</span>[<span class="dv">7</span><span class="op">,</span><span class="dv">7</span>]<span class="op">,</span>[<span class="dv">8</span><span class="op">,</span><span class="dv">8</span>]<span class="op">,</span>[<span class="dv">9</span><span class="op">,</span><span class="dv">12</span>]]))})</span></code></pre></div><button title="העתק ללוח" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
@@ -562,20 +568,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 </div>
 <p><strong>הערות:</strong></p>
-<p><strong>ללא רוח:</strong> ספינות מפרש אינן יכולות לנוע. ספינות משוטים עשויות לנוע בקצב התנועה של החתירה.</p>
+<p><strong>ללא רוח:</strong> ספינות מפרש אינן יכולות לנוע. ספינות משוטים עשויות לנוע בקצב תנועת חתירה.</p>
 <p><strong>רוחות חזקות מאוד:</strong> הפלגה נגד הרוח (זיגזוג) אינה אפשרית.</p>
 <p><strong>סערה:</strong> הפלגה נגד הרוח אינה אפשרית, וספינות החשופות לסערה עשויות להינזק או לטבוע; יש להחיל 2d8 נקודות נזק על כל ספינה כזו, לכל שעה של הפלגה.</p>
 </section>
-<section id="נסיעה-באוויר" class="level3">
-<h3 class="anchored" data-anchor-id="נסיעה-באוויר">נסיעה באוויר</h3>
-<p>בעת נסיעה באוויר, קצבי התנועה ביבשה מוכפלים, וכל השפעות השטח מתעלמות. רוב היצורים המכונפים חייבים לשמור על לפחות שליש מתנועתם הרגילה קדימה כדי להישאר באוויר; עם זאת, מכשירים כמו <strong>שטיחים מעופפים</strong> בדרך כלל אינם מוגבלים בכך.</p>
+<section id="תעופה" class="level3">
+<h3 class="anchored" data-anchor-id="תעופה">תעופה</h3>
+<p>בעת תעופה באוויר, קצבי התנועה ביבשה מוכפלים, ויש להתעלם מכל השפעות השטח. רוב היצורים המכונפים חייבים לשמור על לפחות שליש מתנועתם הרגילה קדימה כדי להישאר באוויר; עם זאת, כלי טיס כמו <strong>שטיחים מעופפים</strong> בדרך כלל אינם מוגבלים בכך.</p>
 
 
 </section>
 
 </main> <!-- /main -->
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlxyXG5pbXBvcnQge2dlbmVyYWxUYWJsZVNlbGVjdCwgaGlnaGxpZ2h0VGFibGVSb3d9IGZyb20gXCIuLi9jdXN0b20uanNcIlxyXG5cclxuSW5wdXRzLmJ1dHRvbihcIteS15zXktec15kg15HXmNeR15zXlFwiLCB7dmFsdWU6IDAsIHJlZHVjZTogKCkgPT4gaGlnaGxpZ2h0VGFibGVSb3coXCIjd2luZC1kaXJlY3Rpb25cIiwgZ2VuZXJhbFRhYmxlU2VsZWN0KFsxLDEyLDBdLFtbMSwxXSxbMiwyXSxbMywzXSxbNCw0XSxbNSw1XSxbNiw2XSxbNyw3XSxbOCw4XSxbOSwxMl1dKSl9KVxyXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcclxuSW5wdXRzLmJ1dHRvbihcIteS15zXktec15kg15HXmNeR15zXlFwiLCB7dmFsdWU6IDAsIHJlZHVjZTogKCkgPT4gaGlnaGxpZ2h0VGFibGVSb3coXCIjd2luZC1jb25kaXRpb25cIiwgZ2VuZXJhbFRhYmxlU2VsZWN0KFsxLDEwMCwwXSxbWzEsNV0sWzYsMTNdLFsxNCwyNV0sWzI2LDQwXSxbNDEsNzBdLFs3MSw4NV0sWzg2LDk2XSxbOTcsMTAwXV0pKX0pXHJcblxyXG4ifV19
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlxuaW1wb3J0IHtnZW5lcmFsVGFibGVTZWxlY3QsIGhpZ2hsaWdodFRhYmxlUm93fSBmcm9tIFwiLi4vY3VzdG9tLmpzXCJcblxuSW5wdXRzLmJ1dHRvbihcIteS15zXktec15kg15HXmNeR15zXlFwiLCB7dmFsdWU6IDAsIHJlZHVjZTogKCkgPT4gaGlnaGxpZ2h0VGFibGVSb3coXCIjd2luZC1kaXJlY3Rpb25cIiwgZ2VuZXJhbFRhYmxlU2VsZWN0KFsxLDEyLDBdLFtbMSwxXSxbMiwyXSxbMywzXSxbNCw0XSxbNSw1XSxbNiw2XSxbNyw3XSxbOCw4XSxbOSwxMl1dKSl9KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiXG5JbnB1dHMuYnV0dG9uKFwi15LXnNeS15zXmSDXkdeY15HXnNeUXCIsIHt2YWx1ZTogMCwgcmVkdWNlOiAoKSA9PiBoaWdobGlnaHRUYWJsZVJvdyhcIiN3aW5kLWNvbmRpdGlvblwiLCBnZW5lcmFsVGFibGVTZWxlY3QoWzEsMTAwLDBdLFtbMSw1XSxbNiwxM10sWzE0LDI1XSxbMjYsNDBdLFs0MSw3MF0sWzcxLDg1XSxbODYsOTZdLFs5NywxMDBdXSkpfSlcblxuIn1dfQ==
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
@@ -992,8 +998,8 @@ window._ojs.runtime.interpretFromScriptTags();
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./combat.html" class="pagination-link" aria-label="מפגשי קרב">
-        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">מפגשי קרב</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./hirelings.html" class="pagination-link" aria-label="שכירים">
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">שכירים</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
