@@ -2,4 +2,4 @@
 
 ## All Monsters
 
-* Monster to translate גנול
+* Monster to translate גורגון
