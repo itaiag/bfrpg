@@ -2,4 +2,4 @@
 
 ## All Monsters
 
-* Last monster transleted פודינג שחור
+* Monster to translate גנול
