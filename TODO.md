@@ -2,4 +2,4 @@
 
 ## All Monsters
 
-* Monster to translate ניקסית
+* Monster to translate סטריג
