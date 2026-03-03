@@ -2,4 +2,4 @@
 
 ## All Monsters
 
-* Monster to translate גורגון
+* Monster to translate ניקסית
