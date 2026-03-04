@@ -154,7 +154,7 @@ export const BOOK_STRUCTURE = [
   { part: 'קסם', chapters: ['spells.qmd', 'allSpells.qmd'] },
   { part: 'הרפתקה', chapters: ['dungeonAdventures.qmd', 'wildAdventures.qmd', 'hirelings.qmd', 'advancement.qmd'] },
   { part: 'מפגשים', chapters: ['combat.qmd'] },
-  { part: 'מפלצות', chapters: ['monsters.qmd', 'monstersAll.qmd'] },
+  { part: 'מפלצות', chapters: ['monsters.qmd', 'monstersAll.qmd', 'monstersTab.qmd'] },
   { part: 'אוצר', chapters: ['treasure.qmd', 'magicItems.qmd'] },
   { part: 'מידע למנהלת המשחק', chapters: ['gm01.qmd', 'gm02.qmd'] },
   { part: 'נספחים', chapters: ['appendix_interactive.qmd', 'char_sheet.qmd'] },
