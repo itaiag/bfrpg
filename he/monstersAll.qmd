@@ -3167,7 +3167,7 @@
 
 </div>
 
-div class="monster" data-tag="Lycanthrope*" >
+<div class="monster" data-tag="Lycanthrope*" >
 
 ## ליקנתרופ*
 
@@ -3293,7 +3293,7 @@ div class="monster" data-tag="Lycanthrope*" >
 ליקנתרופי טיגריס יתקפו בדרך כלל רק אם הותקפו או עוררו אותם. הם קפריזיים ובלתי צפויים במשא ומתן, אלא אם כן ההצעה המוגשת להם מושכת במיוחד בעיניהם.
 
 </div>
-<
+
 <div class="monster" data-tag="Medusa" >
 
 ## מדוזה
