@@ -62,7 +62,7 @@ spent = {
 remainingGold = Number(startingGold) - spent
 ```
 
-**זהב נותר**: ${remainingGold.toFixed(1)} gp
+**זהב נותר**: ${remainingGold.toFixed(1)} מ"ז
 
 לחץ לבחירה. השתמש ב-Ctrl (Cmd) או Shift לבחירה מרובה.
 
