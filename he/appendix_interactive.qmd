@@ -68,7 +68,7 @@ remainingGold = Number(startingGold) - spent
 
 ```{ojs}
 data = {
-  const d = await FileAttachment("../equipment.json").json()
+  const d = await FileAttachment("../equipment-he.json").json()
   return d
 }
 
