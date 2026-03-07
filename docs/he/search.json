@@ -3792,5 +3792,27 @@
       "מידע למנהלת המשחק",
       "<span class='chapter-number'>21</span>  <span class='chapter-title'>יצירת הרפתקאות</span>"
     ]
+  },
+  {
+    "objectID": "appendix_interactive.html",
+    "href": "appendix_interactive.html",
+    "title": "22  כלים אינטראקטיביים",
+    "section": "",
+    "text": "עזרי יצירת דמות",
+    "crumbs": [
+      "נספחים",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>כלים אינטראקטיביים</span>"
+    ]
+  },
+  {
+    "objectID": "appendix_interactive.html#עזרי-יצירת-דמות",
+    "href": "appendix_interactive.html#עזרי-יצירת-דמות",
+    "title": "22  כלים אינטראקטיביים",
+    "section": "",
+    "text": "תכונות דמות\n\nimport {generalDice, calculateModifier} from \"../custom.js\"\n\n\n\nviewof statrolls = Inputs.button(\"גלגל סטטיסטיקות\", {reduce: () =&gt; [generalDice(3,6,0),generalDice(3,6,0),generalDice(3,6,0),generalDice(3,6,0),generalDice(3,6,0),generalDice(3,6,0)]}\n\n)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nתכונה\nערך\nמתאם\n\n\n\n\nכוח\n\n\n\n\nתבונה\n\n\n\n\nחוכמה\n\n\n\n\nזריזות\n\n\n\n\nחוסן\n\n\n\n\nכריזמה\n\n\n\n\n\n\n\nזהב התחלתי\n\nviewof goldRoll = Inputs.button(\"גלגל זהב (3d6 x 10)\", {value: 0, reduce: () =&gt; {\n  let temp = (10 * generalDice(3,6,0));\n  set (viewof startingGold, temp);\n  return temp}})\n\n\n\n\n\n\nזהב התחלתי: \n\n\nקניית ציוד\n\nimport { convertToGold } from \"../custom.js\"\n\nfunction set(input, value) {\n  input.value = value;\n  input.dispatchEvent(new Event(\"input\", {bubbles: true}));\n}\n\nviewof startingGold = Inputs.text({label: \"זהב התחלתי:\"})\n\nspent = {\n  if (myarray.length != 0){\n      let pricesGP = myarray.map(x =&gt; x[1].split(\" \")).map(x =&gt; convertToGold(Number(x[0]), x[1]))\n      let total = pricesGP.reduce ((x,y) =&gt; x + y)\n      return total\n  } else {return 0}\n}\n\nremainingGold = Number(startingGold) - spent\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nזהב נותר:  gp\nלחץ לבחירה. השתמש ב-Ctrl (Cmd) או Shift לבחירה מרובה.\n\ndata = {\n  const d = await FileAttachment(\"../equipment.json\").json()\n  return d\n}\n\nmiscs =  data[0].map( x =&gt; [x[\"Item\"], x[\"Price\"]] )\nweapons = data[1].map( x =&gt; [x[\"Weapon\"], x[\"Price\"]])\narmor = data[2].map( x =&gt; [x[\"Armor Type\"], x[\"Price\"]])\nanimals = data[3].map( x =&gt; [x[\"Item\"], x[\"Price\"]])\nallItems = miscs.concat(weapons.concat(armor.concat(animals)))\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nviewof search  = {\n  let n = Inputs.search(allItems);\nreturn n\n}\n\n\n\n\n\n\n\nviewof items = Inputs.select(search, {multiple: true\n, format: (x) =&gt; `${x[0]},   (${x[1]})`\n} )\nmiscPrice = items.map(x =&gt; x[1])\n\nmiscItems = items.map(x =&gt; x[0])\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmutable myarray = []\n\n\nviewof b = Inputs.button(\"הוסף נבחרים\", {\n    reduce: () =&gt; mutable myarray = [...mutable myarray].concat(items) })\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nviewof inventory = Inputs.select(myarray, {multiple:true\n, format: (x) =&gt; `${x[0]},   (${x[1]})`\n})\n\n\n\n\n\n\n\nviewof c = Inputs.button(\"הסר נבחרים\", {\n    reduce: () =&gt; mutable myarray = [...mutable myarray].filter(item =&gt; !inventory.includes(item)) })",
+    "crumbs": [
+      "נספחים",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>כלים אינטראקטיביים</span>"
+    ]
   }
 ]
