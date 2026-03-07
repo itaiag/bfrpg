@@ -3814,5 +3814,16 @@
       "נספחים",
       "<span class='chapter-number'>22</span>  <span class='chapter-title'>כלים אינטראקטיביים</span>"
     ]
+  },
+  {
+    "objectID": "appendixMapmaker.html",
+    "href": "appendixMapmaker.html",
+    "title": "23  יוצר מבוכים",
+    "section": "",
+    "text": "הוראות שימוש\n\nהזינו את גודל רשת המשבצות כדי ליצור את משטח הציור (שימו לב שפעולה זו מוחקת כל מה שציירתם קודם)\nלחצו או גררו כדי ליצור חדרים ומסדרונות. הלחיצה מחליפה בין משבצות לבנות לכחולות.\nלחצו על משבצת ואז הקלידו תו במקלדת כדי לסמן משבצת באות או מספר (ניתן להקליד מספר תווים).\nלחצו לחיצה ימנית על משבצת כדי למחוק טקסט קיים.\n\n\nviewof gridsize = Inputs.text({placeholder:\"גודל רשת\"})\n\nviewof grid1 = Inputs.button(\"צור רשת\", {reduce: () =&gt;  draw(Number(gridsize))})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nsize = 30\n\nviewof form = Inputs.form(\n  {\n    button1: \"  \",\n    button2: Inputs.button(\"מחק רשת\", {reduce: () =&gt; resetGrid()})\n  },\n  {\n    template: (formParts) =&gt; htl.html`\n     &lt;div&gt;\n       &lt;h3&gt;&lt;/h3&gt;\n       &lt;div style=\"\n         width: 400px;\n         display: flex;\n       \"&gt;\n         ${Object.values(formParts)}\n       &lt;/div&gt;\n     &lt;/div&gt;`\n  }\n)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n  \n  \n  \n\n\n  \n\n\n\nInputs.button(\"ייצא ל-PNG\", {reduce: () =&gt; exportToImage(size, \"png\", Number(gridsize), grid1.col, grid1.chars)})",
+    "crumbs": [
+      "נספחים",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>יוצר מבוכים</span>"
+    ]
   }
 ]
