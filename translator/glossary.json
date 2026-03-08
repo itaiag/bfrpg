@@ -9,6 +9,7 @@
     { "en": "Human", "he": "אדם", "plural": "Humans", "plural_he": "בני אדם" },
     { "en": "Cleric", "he": "כוהן", "plural": "Clerics", "plural_he": "כוהנים" },
     { "en": "Fighter", "he": "לוחם", "plural": "Fighters", "plural_he": "לוחמים" },
+    { "en": "Paladin", "he": "פלדין"},
     { "en": "Magic-User", "he": "קוסם", "plural": "Magic-Users", "plural_he": "קוסמים" },
     { "en": "Thief", "he": "גנב", "plural": "Thieves", "plural_he": "גנבים" },
     { "en": "Strength", "abbr": "STR", "he": "כוח" },
