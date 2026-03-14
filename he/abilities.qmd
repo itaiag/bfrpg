@@ -46,7 +46,7 @@ import { calculateModifier } from "../custom.js"
         <br>${statRolls[3]} &emsp; (${calculateModifier(statRolls[3])}) 
         <br>${statRolls[4]} &emsp; (${calculateModifier(statRolls[4])}) 
         <br>${statRolls[5]} &emsp; (${calculateModifier(statRolls[5])})`
-    } else {x = md`<br><b>Press button to roll stats<b>`} */
+    } else {x = md`<br><b>לחץ על הכפתור לגלגול תכונות<b>`} */
 
     if (statRolls != null) {
         x = html`<br><table style="max-width:20%;">
