@@ -156,7 +156,7 @@ export const BOOK_STRUCTURE = [
   { part: 'מפגשים', chapters: ['combat.qmd'] },
   { part: 'מפלצות', chapters: ['monsters.qmd', 'monstersAll.qmd', 'monstersTab.qmd'] },
   { part: 'אוצר', chapters: ['treasure.qmd', 'magicItems.qmd'] },
-  { part: 'מידע למנהלת המשחק', chapters: ['gm01.qmd', 'gm02.qmd'] },
+  { part: 'מידע למנחת המשחק', chapters: ['gm01.qmd', 'gm02.qmd'] },
   { part: 'נספחים', chapters: ['appendix_interactive.qmd', 'appendixMapmaker.qmd', 'char_sheet.qmd'] },
   { part: 'תוספות', chapters: ['extraClasses.qmd', 'extraRaces.qmd', 'extraRules.qmd'] },
 ];
