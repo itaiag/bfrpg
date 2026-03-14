@@ -1,6 +1,4 @@
----
-title: "לחשים"
----
+# לחשים
 
 מספר הלחשים של כל דרגה שכוהן או קוסם יכולים להטיל ביום מוצג בטבלה המתאימה בסעיף [דמויות](class.qmd#character-classes). כל יום, בדרך כלל בבוקר, מטילי הלחשים מכינים לחשים להחליף את אלו שהשתמשו בהם. כוהנים עושים זאת דרך תפילה, בעוד קוסמים חייבים ללמוד את ספרי הלחשים שלהם. לחשים שהוכנו אך לא נעשה בהם שימוש נשארים ליום שלמחרת; רק אלו שהוטלו בפועל חייבים להיות מוחלפים. מטיל לחש יכול תמיד לבחור לבטל לחש מוכן (בלי להטילו) כדי להכין לחש אחר מאותה דרגה.
 
@@ -8,7 +6,7 @@ title: "לחשים"
 
 חלק מהלחשים הם הפיכים; לחשים כאלה מוצגים עם כוכבית אחרי השם.
 
-# לחשי כוהן
+## לחשי כוהן
 
 כוהנים מקבלים את לחשיהם דרך אמונה ותפילה. כל יום, בדרך כלל בבוקר, כוהן חייב להתפלל לפחות שלושה תורות כדי להכין לחשים. כמובן, ייתכן שהכוהן יצטרך להתפלל יותר מכך כדי להישאר בחסדיו הטובים של האל שלו.
 
@@ -16,11 +14,11 @@ title: "לחשים"
 
 ::: {.callout-tip icon=false collapse=true}
 
-## דרגה 1, כוהני
+### דרגה 1, כוהני
 
 ::: {.callout-note icon=false collapse=true}
 
-## ריפוי פצעים קלים*
+### ריפוי פצעים קלים*
 
 כוהן 1
 
@@ -38,7 +36,7 @@ title: "לחשים"
 
 ::: {.callout-note icon=false collapse=true}
 
-## גילוי רוע*
+### גילוי רוע*
 
 טווח: 20 מטר
 
@@ -56,7 +54,7 @@ title: "לחשים"
 
 ::: {.callout-note icon=false collapse=true}
 
-## גילוי קסם
+### גילוי קסם
 
 טווח: 20 מטר
 
@@ -70,7 +68,7 @@ title: "לחשים"
 
 ::: {.callout-note icon=false collapse=true}
 
-## אור
+### אור
 
 טווח: 40 מטר
 
@@ -90,7 +88,7 @@ title: "לחשים"
 
 ::: {.callout-note icon=false collapse=true}
 
-## הגנה מרוע*
+### הגנה מרוע*
 
 כוהן 1, קוסם 1
 
@@ -110,7 +108,7 @@ title: "לחשים"
 
 ::: {.callout-note icon=false collapse=true}
 
-## טיהור מזון ומים
+### טיהור מזון ומים
 
 כוהן 1
 
@@ -124,7 +122,7 @@ title: "לחשים"
 
 ::: {.callout-note icon=false collapse=true}
 
-## סילוק פחד
+### סילוק פחד
 
 טווח: מגע (40 מטר)
 
@@ -140,7 +138,7 @@ title: "לחשים"
 
 ::: {.callout-note icon=false collapse=true}
 
-## חסינות לקור
+### חסינות לקור
 
 טווח: מגע
 
@@ -156,11 +154,11 @@ title: "לחשים"
 
 ::: {.callout-tip icon=false collapse=true}
 
-## דרגה 2, כוהני
+### דרגה 2, כוהני
 
 ::: {.callout-note icon=false collapse=true}
 
-## ברכה
+### ברכה
 
 טווח: רדיוס 15 מטר
 
@@ -176,7 +174,7 @@ title: "לחשים"
 
 ::: {.callout-note icon=false collapse=true}
 
-## הקסמת חיה
+### הקסמת חיה
 
 טווח: 20 מטר
 
@@ -206,7 +204,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## מציאת מלכודות
+### מציאת מלכודות
 
 טווח: 10 מטר
 
@@ -220,7 +218,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## עצירת איש
+### עצירת איש
 
 טווח: 50 מטר
 
@@ -236,7 +234,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## חסינות לאש
+### חסינות לאש
 
 טווח: מגע
 
@@ -250,7 +248,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## שקט ברדיוס 5 מ'
+### שקט ברדיוס 5 מ'
 
 כוהן 2
 
@@ -268,7 +266,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## שיחת חיות
+### שיחת חיות
 
 כוהן 2
 
@@ -282,7 +280,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## פטיש רוחני
+### פטיש רוחני
 
 טווח: 10 מטר
 
@@ -302,7 +300,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## אור תמידי*
+### אור תמידי*
 
 טווח: 100 מטר
 
@@ -320,7 +318,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## ריפוי עיוורון*
+### ריפוי עיוורון*
 
 טווח: מגע
 
@@ -336,7 +334,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## ריפוי מחלה*
+### ריפוי מחלה*
 
 טווח: מגע
 
@@ -352,7 +350,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## גדילת חיות
+### גדילת חיות
 
 כוהן 3
 
@@ -370,7 +368,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## איתור עצם
+### איתור עצם
 
 טווח: 100 מטר
 
@@ -386,7 +384,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## הסרת קללה*
+### הסרת קללה*
 
 טווח: 10 מטר
 
@@ -412,7 +410,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## דיבוב מתים
+### דיבוב מתים
 
 טווח: 3 מטר
 
@@ -432,7 +430,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## הכאה
+### הכאה
 
 טווח: מגע
 
@@ -452,7 +450,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## הנפשת מתים
+### הנפשת מתים
 
 טווח: 10 מטר
 
@@ -470,7 +468,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## יצירת מים
+### יצירת מים
 
 טווח: 3 מטר
 
@@ -484,7 +482,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## ריפוי פצעים קשים*
+### ריפוי פצעים קשים*
 
 כוהן 4
 
@@ -498,7 +496,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## ביטול קסם
+### ביטול קסם
 
 טווח: 40 מטר
 
@@ -516,7 +514,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## ניטרול רעל
+### ניטרול רעל
 
 טווח: מגע
 
@@ -532,7 +530,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## הגנה מרשע ברדיוס 3 מ'*
+### הגנה מרשע ברדיוס 3 מ'*
 
 כוהן 4, קוסם 3
 
@@ -548,7 +546,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## דיבור עם צמחים
+### דיבור עם צמחים
 
 טווח: 6 מטר
 
@@ -562,7 +560,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## הפיכת מקלות לנחשים
+### הפיכת מקלות לנחשים
 
 טווח: 40 מטר
 
@@ -582,7 +580,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## תיקשור עם מישור חיצוני
+### תיקשור עם מישור חיצוני
 
 טווח: עצמי
 
@@ -596,7 +594,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## יצירת מזון
+### יצירת מזון
 
 טווח: 3 מטר
 
@@ -610,7 +608,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## ביטול רוע
+### ביטול רוע
 
 טווח: מגע
 
@@ -630,7 +628,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## מגיפת חרקים
+### מגיפת חרקים
 
 טווח: 90 מטר+9 מטר/דרגה
 
@@ -646,7 +644,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## משימה*
+### משימה*
 
 טווח: 1.5 מטר/דרגה
 
@@ -670,7 +668,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## החייאת מתים*
+### החייאת מתים*
 
 טווח: מגע
 
@@ -694,7 +692,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## ראיית אמת
+### ראיית אמת
 
 טווח: מגע
 
@@ -710,7 +708,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## קיר אש
+### קיר אש
 
 טווח: 50 מטר
 
@@ -738,7 +736,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## הנפשת חפץ
+### הנפשת חפץ
 
 טווח: 30 מטר+3 מטר/דרגה
 
@@ -754,7 +752,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## מחסום להבים
+### מחסום להבים
 
 טווח: 30 מטר
 
@@ -774,7 +772,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## מציאת השביל
+### מציאת השביל
 
 טווח: מגע
 
@@ -796,7 +794,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## ריפוי כל*
+### ריפוי כל*
 
 טווח: מגע
 
@@ -814,7 +812,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## הצמחת איברים
+### הצמחת איברים
 
 טווח: מגע
 
@@ -830,7 +828,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## השבה
+### השבה
 
 טווח: מגע
 
@@ -848,7 +846,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## דיבור עם מפלצות
+### דיבור עם מפלצות
 
 כוהן 6
 
@@ -862,7 +860,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## מילת החזרה
+### מילת החזרה
 
 טווח: עצמי (מיוחד)
 
@@ -880,7 +878,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 :::
 
-# לחשי קוסם
+## לחשי קוסם
 
 קוסמים מטילים לחשים דרך הפעלת ידע ורצון. הם מכינים לחשים על ידי לימוד ספרי הלחשים שלהם; לכל קוסם יש את ספר הלחשים שלו המכיל את הנוסחאות הקסומות לכל לחש שהקוסם למד. ספרי לחשים כתובים בכתב קסום שרק מי שכתב אותו יכול לקרוא, או באמצעות הלחש **קריאת קסם**. כל קוסם מתחיל את המשחק כשהוא יודע **קריאת קסם**, וזה כל כך מושרש שהוא יכול להכין אותו אפילו ללא ספר לחשים.
 
@@ -894,7 +892,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## הקסמת איש
+### הקסמת איש
 
 טווח: 10 מטר
 
@@ -914,7 +912,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## גילוי קסם
+### גילוי קסם
 
 טווח: 20 מטר
 
@@ -928,7 +926,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## דיסקית מעופפת
+### דיסקית מעופפת
 
 טווח: 0
 
@@ -944,7 +942,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## עצירת פתח
+### עצירת פתח
 
 טווח: 30 מטר+3 מטר/דרגה
 
@@ -958,7 +956,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## אור
+### אור
 
 טווח: 40 מטר
 
@@ -978,7 +976,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## קליע קסם
+### קליע קסם
 
 טווח: 30 מטר+3 מטר/דרגה
 
@@ -994,7 +992,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## פה קסום
+### פה קסום
 
 טווח: 10 מטר
 
@@ -1018,7 +1016,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## הגנה מרוע*
+### הגנה מרוע*
 
 כוהן 1, קוסם 1
 
@@ -1038,7 +1036,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## קריאת שפות
+### קריאת שפות
 
 טווח: 0
 
@@ -1062,7 +1060,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## קריאת קסם
+### קריאת קסם
 
 טווח: 0
 
@@ -1076,7 +1074,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## מגן
+### מגן
 
 טווח: עצמי
 
@@ -1090,7 +1088,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## הרדמה
+### הרדמה
 
 טווח: 30 מטר
 
@@ -1110,7 +1108,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## פיתומות
+### פיתומות
 
 טווח: 20 מטר
 
@@ -1132,7 +1130,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## אור תמידי*
+### אור תמידי*
 
 טווח: 100 מטר
 
@@ -1150,7 +1148,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## גילוי רוע*
+### גילוי רוע*
 
 טווח: 20 מטר
 
@@ -1168,7 +1166,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## גילוי נעלם מעין
+### גילוי נעלם מעין
 
 טווח: 20 מטר
 
@@ -1182,7 +1180,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## היעלמות מעין
+### היעלמות מעין
 
 טווח: מגע
 
@@ -1202,7 +1200,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## פריצה
+### פריצה
 
 טווח: 10 מטר
 
@@ -1218,7 +1216,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## ריחוף
+### ריחוף
 
 טווח: מגע
 
@@ -1240,7 +1238,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## איתור עצם
+### איתור עצם
 
 טווח: 100 מטר
 
@@ -1256,7 +1254,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## תע"ח
+### תע"ח
 
 טווח: 18 מטר
 
@@ -1272,7 +1270,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## בבואת ראי
+### בבואת ראי
 
 טווח: עצמי
 
@@ -1290,7 +1288,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## חזיון תעתועים
+### חזיון תעתועים
 
 טווח: 50 מטר
 
@@ -1308,7 +1306,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## קורים
+### קורים
 
 טווח: 3 מטר לכל דרגה
 
@@ -1332,7 +1330,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## מנעול מכשפים
+### מנעול מכשפים
 
 טווח: 6 מטר
 
@@ -1354,7 +1352,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## ראייה על חושית
+### ראייה על חושית
 
 טווח: 20 מטר
 
@@ -1368,7 +1366,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## זיוונות
+### זיוונות
 
 טווח: מגע
 
@@ -1382,7 +1380,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## ביטול קסם
+### ביטול קסם
 
 טווח: 40 מטר
 
@@ -1400,7 +1398,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## כדור אש
+### כדור אש
 
 טווח: 30 מטר+3 מטר/דרגה
 
@@ -1420,7 +1418,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## מעוף
+### מעוף
 
 טווח: מגע
 
@@ -1436,7 +1434,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## האצה*
+### האצה*
 
 טווח: 9 מטר+3 מטר/דרגה
 
@@ -1454,7 +1452,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## עצירת איש
+### עצירת איש
 
 טווח: 50 מטר
 
@@ -1470,7 +1468,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## היעלמות מעין ברדיוס 3 מ'
+### היעלמות מעין ברדיוס 3 מ'
 
 קוסם 3
 
@@ -1486,7 +1484,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## כדור ברק
+### כדור ברק
 
 טווח: 30 מטר + 3 מטר/דרגה
 
@@ -1508,7 +1506,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## הגנה מרשע ברדיוס 3 מ'*
+### הגנה מרשע ברדיוס 3 מ'*
 
 כוהן 4, קוסם 3
 
@@ -1524,7 +1522,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## הגנה מקליעים רגילים
+### הגנה מקליעים רגילים
 
 קוסם 3
 
@@ -1538,7 +1536,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## נשימת מים
+### נשימת מים
 
 טווח: מגע
 
@@ -1560,7 +1558,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## הקסמת מפלצת
+### הקסמת מפלצת
 
 טווח: 10 מטר
 
@@ -1574,7 +1572,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-## בלבול
+### בלבול
 
 טווח: 100 מטר
 
@@ -1612,7 +1610,7 @@ viewof gemJewel3 = Inputs.button("גלגלו על הטבלה", {value: 0, reduce
 
 ::: {.callout-note icon=false collapse=true}
 
-## דלת מימדית
+### דלת מימדית
 
 טווח: 3 מטר
 
@@ -1626,7 +1624,7 @@ viewof gemJewel3 = Inputs.button("גלגלו על הטבלה", {value: 0, reduce
 
 ::: {.callout-note icon=false collapse=true}
 
-## גדילת צמחים*
+### גדילת צמחים*
 
 טווח: 40 מטר
 
@@ -1646,7 +1644,7 @@ viewof gemJewel3 = Inputs.button("גלגלו על הטבלה", {value: 0, reduce
 
 ::: {.callout-note icon=false collapse=true}
 
-## שטח דמיוני
+### שטח דמיוני
 
 קוסם 4
 
@@ -1662,7 +1660,7 @@ viewof gemJewel3 = Inputs.button("גלגלו על הטבלה", {value: 0, reduce
 
 ::: {.callout-note icon=false collapse=true}
 
-## סופת קרח
+### סופת קרח
 
 טווח: 90 מטר+9 מטר/דרגה
 
@@ -1680,7 +1678,7 @@ viewof gemJewel3 = Inputs.button("גלגלו על הטבלה", {value: 0, reduce
 
 ::: {.callout-note icon=false collapse=true}
 
-## שינוי המוני
+### שינוי המוני
 
 טווח: 30 מטר+3 מטר/דרגה
 
@@ -1696,7 +1694,7 @@ viewof gemJewel3 = Inputs.button("גלגלו על הטבלה", {value: 0, reduce
 
 ::: {.callout-note icon=false collapse=true}
 
-## שינוי אחר
+### שינוי אחר
 
 טווח: 9 מטר
 
@@ -1716,7 +1714,7 @@ viewof gemJewel3 = Inputs.button("גלגלו על הטבלה", {value: 0, reduce
 
 ::: {.callout-note icon=false collapse=true}
 
-## שינוי עצמי
+### שינוי עצמי
 
 טווח: עצמי
 
@@ -1738,7 +1736,7 @@ viewof gemJewel3 = Inputs.button("גלגלו על הטבלה", {value: 0, reduce
 
 ::: {.callout-note icon=false collapse=true}
 
-## הסרת קללה*
+### הסרת קללה*
 
 טווח: 10 מטר
 
@@ -1764,7 +1762,7 @@ viewof gemJewel3 = Inputs.button("גלגלו על הטבלה", {value: 0, reduce
 
 ::: {.callout-note icon=false collapse=true}
 
-## קיר אש
+### קיר אש
 
 טווח: 50 מטר
 
@@ -1786,7 +1784,7 @@ viewof gemJewel3 = Inputs.button("גלגלו על הטבלה", {value: 0, reduce
 
 ::: {.callout-note icon=false collapse=true}
 
-## עין המכשף
+### עין המכשף
 
 טווח: 70 מטר
 
@@ -1808,7 +1806,7 @@ viewof gemJewel3 = Inputs.button("גלגלו על הטבלה", {value: 0, reduce
 
 ::: {.callout-note icon=false collapse=true}
 
-## הנפשת מתים
+### הנפשת מתים
 
 טווח: 10 מטר
 
@@ -1826,7 +1824,7 @@ viewof gemJewel3 = Inputs.button("גלגלו על הטבלה", {value: 0, reduce
 
 ::: {.callout-note icon=false collapse=true}
 
-## ענן מוות
+### ענן מוות
 
 טווח: 30 מטר+3 מטר/דרגה
 
@@ -1840,7 +1838,7 @@ viewof gemJewel3 = Inputs.button("גלגלו על הטבלה", {value: 0, reduce
 
 ::: {.callout-note icon=false collapse=true}
 
-## זימון יסודון
+### זימון יסודון
 
 טווח: 70 מטר
 
@@ -1854,7 +1852,7 @@ viewof gemJewel3 = Inputs.button("גלגלו על הטבלה", {value: 0, reduce
 
 ::: {.callout-note icon=false collapse=true}
 
-## רפיסות מוח
+### רפיסות מוח
 
 טווח: 50 מטר
 
@@ -1872,7 +1870,7 @@ viewof gemJewel3 = Inputs.button("גלגלו על הטבלה", {value: 0, reduce
 
 ::: {.callout-note icon=false collapse=true}
 
-## עצירת מפלצת
+### עצירת מפלצת
 
 טווח: 50 מטר
 
@@ -1886,7 +1884,7 @@ viewof gemJewel3 = Inputs.button("גלגלו על הטבלה", {value: 0, reduce
 
 ::: {.callout-note icon=false collapse=true}
 
-## בקבוק קסם
+### בקבוק קסם
 
 טווח: 20 מטר
 
@@ -1920,7 +1918,7 @@ viewof gemJewel3 = Inputs.button("גלגלו על הטבלה", {value: 0, reduce
 
 ::: {.callout-note icon=false collapse=true}
 
-## מעבר קיר
+### מעבר קיר
 
 טווח: 10 מטר
 
@@ -1934,7 +1932,7 @@ viewof gemJewel3 = Inputs.button("גלגלו על הטבלה", {value: 0, reduce
 
 ::: {.callout-note icon=false collapse=true}
 
-## טלקניזיס
+### טלקניזיס
 
 טווח: עצמי
 
@@ -1950,7 +1948,7 @@ viewof gemJewel3 = Inputs.button("גלגלו על הטבלה", {value: 0, reduce
 
 ::: {.callout-note icon=false collapse=true}
 
-## שיעתוק
+### שיעתוק
 
 טווח: עצמי
 
@@ -1992,7 +1990,7 @@ viewof gemJewel3 = Inputs.button("גלגלו על הטבלה", {value: 0, reduce
 
 ::: {.callout-note icon=false collapse=true}
 
-## קיר אבן
+### קיר אבן
 
 טווח: 4.5 מטר לכל דרגה
 
@@ -2020,7 +2018,7 @@ viewof gemJewel3 = Inputs.button("גלגלו על הטבלה", {value: 0, reduce
 
 ::: {.callout-note icon=false collapse=true}
 
-## קליפה נגד קסם
+### קליפה נגד קסם
 
 טווח: רדיוס 3 מטר
 
@@ -2034,7 +2032,7 @@ viewof gemJewel3 = Inputs.button("גלגלו על הטבלה", {value: 0, reduce
 
 ::: {.callout-note icon=false collapse=true}
 
-## לחש מוות
+### לחש מוות
 
 טווח: 70 מטר
 
@@ -2048,7 +2046,7 @@ viewof gemJewel3 = Inputs.button("גלגלו על הטבלה", {value: 0, reduce
 
 ::: {.callout-note icon=false collapse=true}
 
-## התפוררות
+### התפוררות
 
 טווח: 20 מטר
 
@@ -2064,7 +2062,7 @@ viewof gemJewel3 = Inputs.button("גלגלו על הטבלה", {value: 0, reduce
 
 ::: {.callout-note icon=false collapse=true}
 
-## אבן לבשר
+### אבן לבשר
 
 טווח: 10 מטר/דרגה
 
@@ -2082,7 +2080,7 @@ viewof gemJewel3 = Inputs.button("גלגלו על הטבלה", {value: 0, reduce
 
 ::: {.callout-note icon=false collapse=true}
 
-## פיקוד
+### פיקוד
 
 טווח: 1.5 מטר לדרגה
 
@@ -2104,7 +2102,7 @@ viewof gemJewel3 = Inputs.button("גלגלו על הטבלה", {value: 0, reduce
 
 ::: {.callout-note icon=false collapse=true}
 
-## מהלך בלתי-נראה
+### מהלך בלתי-נראה
 
 טווח: 0
 
@@ -2118,7 +2116,7 @@ viewof gemJewel3 = Inputs.button("גלגלו על הטבלה", {value: 0, reduce
 
 ::: {.callout-note icon=false collapse=true}
 
-## הנמכת מים
+### הנמכת מים
 
 טווח: 6 מטר/דרגה
 
@@ -2136,7 +2134,7 @@ viewof gemJewel3 = Inputs.button("גלגלו על הטבלה", {value: 0, reduce
 
 ::: {.callout-note icon=false collapse=true}
 
-## דמות מוקרנת
+### דמות מוקרנת
 
 טווח: 70 מטר
 
@@ -2152,7 +2150,7 @@ viewof gemJewel3 = Inputs.button("גלגלו על הטבלה", {value: 0, reduce
 
 ::: {.callout-note icon=false collapse=true}
 
-## גלגול נשמות
+### גלגול נשמות
 
 טווח: מגע
 
@@ -2210,7 +2208,7 @@ viewof reincarnate = Inputs.button("גלגלו על טבלה", {value: 0, reduce
 
 ::: {.callout-note icon=false collapse=true}
 
-## קיר ברזל
+### קיר ברזל
 
 טווח: 30 מטר
 
