@@ -14,7 +14,7 @@
 
 ::: {.callout-tip icon=false collapse=true}
 
-### דרגה 1, כוהני
+### דרגה 1, כוהן
 
 ::: {.callout-note icon=false collapse=true}
 
@@ -154,7 +154,7 @@
 
 ::: {.callout-tip icon=false collapse=true}
 
-### דרגה 2, כוהני
+### דרגה 2, כוהן
 
 ::: {.callout-note icon=false collapse=true}
 
@@ -296,7 +296,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-tip icon=false collapse=true}
 
-# דרגה 3, כוהני
+# דרגה 3, כוהן
 
 ::: {.callout-note icon=false collapse=true}
 
@@ -446,7 +446,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-tip icon=false collapse=true}
 
-# דרגה 4, כוהני
+# דרגה 4, כוהן
 
 ::: {.callout-note icon=false collapse=true}
 
@@ -576,7 +576,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-tip icon=false collapse=true}
 
-# דרגה 5, כוהני
+# דרגה 5, כוהן
 
 ::: {.callout-note icon=false collapse=true}
 
@@ -732,7 +732,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-tip icon=false collapse=true}
 
-# דרגה 6, כוהני
+# דרגה 6, כוהן
 
 ::: {.callout-note icon=false collapse=true}
 
