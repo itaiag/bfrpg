@@ -34,3 +34,5 @@ https://creativecommons.org/licenses/by-sa/4.0/
 - [יוצר מבוכים](appendixMapmaker.qmd)
 
 This website was created by John Atom (jmhimara). All its code and unique content are also distributed under the **Creative Commons Attribution-ShareAlike 4.0 International License**. 
+
+תורגם לעברית ע"י **איתי אגמון**
