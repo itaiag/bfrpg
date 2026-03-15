@@ -13,7 +13,7 @@ https://creativecommons.org/licenses/by-sa/4.0/
 
 קרדיטים מה-PDF:
 
-::: {.column-screen-inset-right}
+::: {.column-screen-inset-right dir="ltr"}
 
 
 |     |    |
