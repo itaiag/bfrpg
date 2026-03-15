@@ -227,7 +227,7 @@ if (recordsFile != null){
           </div>
           <div id="DragonBreath">
               <input autocomplete="off" type="text" id="save-dbBox">
-              <label for="save-dbBox">נשימת דרקון</label>
+              <label for="save-dbBox">נשיפת דרקון</label>
           </div>
           <div id="Spells">
               <input autocomplete="off" type="text" id="save-spellBox" >
