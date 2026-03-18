@@ -1,5 +1,12 @@
 # TODO
 
+## Next chapter to translate
+התקדמות
+
+## Spells
+
+* Change דרגות to עוצמה
+
 ## General
 
 * Change זיוונות to 9 meters instead of 10 meters

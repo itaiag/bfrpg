@@ -1,6 +1,6 @@
 # לחשים
 
-מספר הלחשים של כל דרגה שכוהן או קוסם יכולים להטיל ביום מוצג בטבלה המתאימה בסעיף [דמויות](class.qmd#character-classes). כל יום, בדרך כלל בבוקר, מטילי הלחשים מכינים לחשים להחליף את אלו שהשתמשו בהם. כוהנים עושים זאת דרך תפילה, בעוד קוסמים חייבים ללמוד את ספרי הלחשים שלהם. לחשים שהוכנו אך לא נעשה בהם שימוש נשארים ליום שלמחרת; רק אלו שהוטלו בפועל חייבים להיות מוחלפים. מטיל לחש יכול תמיד לבחור לבטל לחש מוכן (בלי להטילו) כדי להכין לחש אחר מאותה דרגה.
+מספר הלחשים של כל דרגה שכוהן או קוסם יכולים להטיל ביום מוצג בטבלה המתאימה בסעיף [דמויות](class.qmd#character-classes). כל יום, בדרך כלל בבוקר, מטילי הלחשים מכינים לחשים להחליף את אלו שהשתמשו בהם. כוהנים עושים זאת דרך תפילה, בעוד קוסמים חייבים ללמוד את ספרי הלחשים שלהם. לחשים שהוכנו אך לא נעשה בהם שימוש נשארים ליום שלמחרת; רק אלו שהוטלו בפועל חייבים להיות מוחלפים. מטיל לחש יכול תמיד לבחור לבטל לחש מוכן (בלי להטילו) כדי להכין לחש אחר מאותה עוצמה.
 
 מטילי לחשים חייבים להיות עם לפחות יד אחת חופשית, ולהיות מסוגלים לדבר, כדי להטיל לחשים; לכן, קשירה והשתקה של מטיל לחש היא דרך יעילה למנוע ממנו להטיל לחשים. בקרב, הטלת לחש בדרך כלל לוקחת את אותו הזמן כמו ביצוע תקיפה. אם מטיל לחש מותקף (גם אם לא נפגע) או חייב לבצע גלגול הצלה (בין אם הצליח או לא) באותו מספר יוזמה שבו הוא מטיל לחש, הלחש מתקלקל ונאבד. כיוצא דופן ספציפי, שני מטילי לחשים המשחררים את לחשיהם זה על זה באותו מספר יוזמה יצליחו שניהם בהטלתם; מטיל לחש אחד יכול להפריע לאחר עם לחש רק אם יש לו יוזמה טובה יותר, והוא בוחר לעכב את הטלת הלחש עד *ממש לפני* המטיל האחר.
 
@@ -10,11 +10,11 @@
 
 כוהנים מקבלים את לחשיהם דרך אמונה ותפילה. כל יום, בדרך כלל בבוקר, כוהן חייב להתפלל לפחות שלושה תורות כדי להכין לחשים. כמובן, ייתכן שהכוהן יצטרך להתפלל יותר מכך כדי להישאר בחסדיו הטובים של האל שלו.
 
-מכיוון שהם מקבלים את לחשיהם דרך תפילה, כוהן יכול להכין כל לחש מכל דרגה שהוא מסוגל להטיל. עם זאת, במקרים מסוימים, האל של הכוהן עשוי להגביל את הזמינות של לחשים מסוימים; לדוגמה, אל המוקדש לריפוי עשוי לסרב להעניק לחשי ריפוי הפוכים.
+מכיוון שהם מקבלים את לחשיהם דרך תפילה, כוהן יכול להכין כל לחש מכל עוצמה שהוא מסוגל להטיל. עם זאת, במקרים מסוימים, האל של הכוהן עשוי להגביל את הזמינות של לחשים מסוימים; לדוגמה, אל המוקדש לריפוי עשוי לסרב להעניק לחשי ריפוי הפוכים.
 
 ::: {.callout-tip icon=false collapse=true}
 
-### דרגה 1, כוהן
+### עוצמה 1, כוהן
 
 ::: {.callout-note icon=false collapse=true}
 
@@ -154,7 +154,7 @@
 
 ::: {.callout-tip icon=false collapse=true}
 
-### דרגה 2, כוהן
+### עוצמה 2, כוהן
 
 ::: {.callout-note icon=false collapse=true}
 
@@ -296,7 +296,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-tip icon=false collapse=true}
 
-# דרגה 3, כוהן
+# עוצמה 3, כוהן
 
 ::: {.callout-note icon=false collapse=true}
 
@@ -446,7 +446,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-tip icon=false collapse=true}
 
-# דרגה 4, כוהן
+# עוצמה 4, כוהן
 
 ::: {.callout-note icon=false collapse=true}
 
@@ -576,7 +576,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-tip icon=false collapse=true}
 
-# דרגה 5, כוהן
+# עוצמה 5, כוהן
 
 ::: {.callout-note icon=false collapse=true}
 
@@ -732,7 +732,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-tip icon=false collapse=true}
 
-# דרגה 6, כוהן
+# עוצמה 6, כוהן
 
 ::: {.callout-note icon=false collapse=true}
 
@@ -888,7 +888,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-tip icon=false collapse=true}
 
-# דרגה 1, קוסם
+# עוצמה 1, קוסם
 
 ::: {.callout-note icon=false collapse=true}
 
@@ -1126,7 +1126,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-tip icon=false collapse=true}
 
-# דרגה 2, קוסם
+# עוצמה 2, קוסם
 
 ::: {.callout-note icon=false collapse=true}
 
@@ -1348,7 +1348,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-tip icon=false collapse=true}
 
-# דרגה 3, קוסם
+# עוצמה 3, קוסם
 
 ::: {.callout-note icon=false collapse=true}
 
@@ -1554,7 +1554,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-tip icon=false collapse=true}
 
-# דרגה 4, קוסם
+# עוצמה 4, קוסם
 
 ::: {.callout-note icon=false collapse=true}
 
@@ -1802,7 +1802,7 @@ viewof gemJewel3 = Inputs.button("גלגלו על הטבלה", {value: 0, reduce
 
 ::: {.callout-tip icon=false collapse=true}
 
-# דרגה 5, קוסם
+# עוצמה 5, קוסם
 
 ::: {.callout-note icon=false collapse=true}
 
@@ -2014,7 +2014,7 @@ viewof gemJewel3 = Inputs.button("גלגלו על הטבלה", {value: 0, reduce
 
 ::: {.callout-tip icon=false collapse=true}
 
-# דרגה 6, קוסם
+# עוצמה 6, קוסם
 
 ::: {.callout-note icon=false collapse=true}
 
