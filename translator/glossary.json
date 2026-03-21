@@ -61,6 +61,9 @@
     { "en": "Common", "he": "מדוברת" ,"notes": "The common language of the world"},
     { "en": "Sneak Attack", "he": "דקירה מאחור" },
     { "en": "Energy Drain", "he": "ניקוז אנרגיה" },
+    { "en": "Petrify", "he": "התאבנות" },
+    { "en": "Dragon Breath", "he": "נשיפת דרקון" },
+    { "en": "Paralysis ", "he": "שיתוק" },
     { "en": "Xp", "he": "נק\"נ" }
 
     
