@@ -1,0 +1,125 @@
+# כלים אינטראקטיביים
+
+## עזרי יצירת דמות
+
+### תכונות דמות
+
+```{ojs}
+
+import {generalDice, calculateModifier} from "../custom.js"
+
+
+
+viewof statrolls = Inputs.button("גלגל סטטיסטיקות", {reduce: () => [generalDice(3,6,0),generalDice(3,6,0),generalDice(3,6,0),generalDice(3,6,0),generalDice(3,6,0),generalDice(3,6,0)]}
+
+)
+```
+
+| תכונה       | ערך            | מתאם                                |
+|--------------|-----------------|------------------------------------|
+| כוח          | ${statrolls[0]} | ${calculateModifier(statrolls[0])} |
+| תבונה        | ${statrolls[1]} | ${calculateModifier(statrolls[1])} |
+| חוכמה        | ${statrolls[2]} | ${calculateModifier(statrolls[2])} |
+| זריזות       | ${statrolls[3]} | ${calculateModifier(statrolls[3])} |
+| חוסן         | ${statrolls[4]} | ${calculateModifier(statrolls[4])} |
+| כריזמה       | ${statrolls[5]} | ${calculateModifier(statrolls[5])} |
+
+
+### זהב התחלתי
+
+```{ojs}
+
+
+viewof goldRoll = Inputs.button("גלגל זהב (3d6 x 10)", {value: 0, reduce: () => {
+  let temp = (10 * generalDice(3,6,0));
+  set (viewof startingGold, temp);
+  return temp}})
+```
+
+**זהב התחלתי**: ${goldRoll}
+
+### קניית ציוד
+
+```{ojs}
+
+import { convertToGold } from "../custom.js"
+
+function set(input, value) {
+  input.value = value;
+  input.dispatchEvent(new Event("input", {bubbles: true}));
+}
+
+viewof startingGold = Inputs.text({label: "זהב התחלתי:"})
+
+spent = {
+  if (myarray.length != 0){
+      let pricesGP = myarray.map(x => x[1].split(" ")).map(x => convertToGold(Number(x[0]), x[1]))
+      let total = pricesGP.reduce ((x,y) => x + y)
+      return total
+  } else {return 0}
+}
+
+remainingGold = Number(startingGold) - spent
+```
+
+**זהב נותר**: ${remainingGold.toFixed(1)} מ"ז
+
+לחץ לבחירה. השתמש ב-Ctrl (Cmd) או Shift לבחירה מרובה.
+
+```{ojs}
+data = {
+  const d = await FileAttachment("equipment-he.json").json()
+  return d
+}
+
+miscs =  data[0].map( x => [x["Item"], x["Price"]] )
+weapons = data[1].map( x => [x["Weapon"], x["Price"]])
+armor = data[2].map( x => [x["Armor Type"], x["Price"]])
+animals = data[3].map( x => [x["Item"], x["Price"]])
+allItems = miscs.concat(weapons.concat(armor.concat(animals)))
+```
+
+
+```{ojs}
+viewof search  = {
+  let n = Inputs.search(allItems);
+return n
+}
+```
+
+```{ojs}
+viewof items = Inputs.select(search, {multiple: true
+, format: (x) => `${x[0]},   (${x[1]})`
+} )
+miscPrice = items.map(x => x[1])
+
+miscItems = items.map(x => x[0])
+
+```
+
+
+```{ojs}
+mutable myarray = []
+
+
+viewof b = Inputs.button("הוסף נבחרים", {
+    reduce: () => mutable myarray = [...mutable myarray].concat(items) })
+```
+
+<br>
+
+```{ojs}
+viewof inventory = Inputs.select(myarray, {multiple:true
+, format: (x) => `${x[0]},   (${x[1]})`
+})
+
+```
+
+
+```{ojs}
+
+viewof c = Inputs.button("הסר נבחרים", {
+    reduce: () => mutable myarray = [...mutable myarray].filter(item => !inventory.includes(item)) })
+```
+
+

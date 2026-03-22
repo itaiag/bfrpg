@@ -70,7 +70,7 @@ htl.html`<div style="display:grid; grid-template-columns: 50% auto; vertical-ali
 <div>
 ${Inputs.bind(Inputs.button("Torch Turns (1d4+4)", {value: 0, reduce: () => (4 + rolld4() )}), viewof torch)}
 </div><div>
-Torch burn turns = ${torch.value}</div>
+Torch burn turns = ${torch}</div>
 </div>
 `
 
@@ -85,7 +85,7 @@ viewof oil = Inputs.input(0)
 
 htl.html`<div style="display:grid; grid-template-columns: 50% auto; vertical-align:midle">
 ${Inputs.bind(Inputs.button("Oil Lantern (1d6 + 18)", {value: 0, reduce: () => (18 + rolld6() )}), viewof oil)}
-Lantern Turns = ${oil.value}
+Lantern Turns = ${oil}
 </div>
 `
 
@@ -136,9 +136,9 @@ viewof form = Inputs.form(
          vertical-align:midle;
          row-gap: 10px;
        ">
-         ${Object.values(formParts)[0]} 1d6 result: ${i.value}
-         ${Object.values(formParts)[1]} Force Bar: ${j.value}
-         ${Object.values(formParts)[2]} Force Door: ${k.value}
+         ${Object.values(formParts)[0]} 1d6 result: ${i}
+         ${Object.values(formParts)[1]} Force Bar: ${j}
+         ${Object.values(formParts)[2]} Force Door: ${k}
 
        </div>
      </div>`

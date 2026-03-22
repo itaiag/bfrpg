@@ -1,0 +1,805 @@
+{
+  "version": "1.0",
+  "terms": [
+    {
+      "en": "Urgoblin",
+      "he": "אורגובלין"
+    },
+    {
+      "en": "Orc",
+      "he": "אורק"
+    },
+    {
+      "en": "Ironbane*",
+      "he": "איירונביין*"
+    },
+    {
+      "en": "Common Lizard Man",
+      "he": "איש לטאה"
+    },
+    {
+      "en": "Caveman",
+      "he": "איש מערות"
+    },
+    {
+      "en": "Antelope",
+      "he": "אנטילופה"
+    },
+    {
+      "en": "Efreeti*",
+      "he": "אפריטי*"
+    },
+    {
+      "en": "Lion",
+      "he": "אריה"
+    },
+    {
+      "en": "Mountain Lion",
+      "he": "אריה הרים"
+    },
+    {
+      "en": "Rock Baboon",
+      "he": "בבון סלע"
+    },
+    {
+      "en": "Falcon",
+      "he": "בז"
+    },
+    {
+      "en": "Normal Hawk",
+      "he": "בז"
+    },
+    {
+      "en": "Giant Hawk",
+      "he": "בז"
+    },
+    {
+      "en": "Basilisk, Common",
+      "he": "בזיליסק (רגיל, גדול)"
+    },
+    {
+      "en": "Basilisk, Greater*",
+      "he": "בזיליסק (רגיל, גדול)"
+    },
+    {
+      "en": "Cattle",
+      "he": "בקר (כולל אאורוקס וביזון)"
+    },
+    {
+      "en": "Aurochs",
+      "he": "בקר (כולל אאורוקס וביזון)"
+    },
+    {
+      "en": "Bison",
+      "he": "בקר (כולל אאורוקס וביזון)"
+    },
+    {
+      "en": "Barkling",
+      "he": "ברקלינג"
+    },
+    {
+      "en": "Mermaid",
+      "he": "בת ים"
+    },
+    {
+      "en": "Djinni*",
+      "he": "ג'יני*"
+    },
+    {
+      "en": "Jelly",
+      "he": "ג'לי"
+    },
+    {
+      "en": "Goblin",
+      "he": "גובלין"
+    },
+    {
+      "en": "Ghoul",
+      "he": "גול (וגסט)"
+    },
+    {
+      "en": "Ghast",
+      "he": "גול (וגסט)"
+    },
+    {
+      "en": "Golem*",
+      "he": "גולם*"
+    },
+    {
+      "en": "Gorgon",
+      "he": "גורגון"
+    },
+    {
+      "en": "Gnome",
+      "he": "גמדון"
+    },
+    {
+      "en": "Gnoll",
+      "he": "גנול"
+    },
+    {
+      "en": "Strangle Vine",
+      "he": "גפן חונקת"
+    },
+    {
+      "en": "Assassin Vine",
+      "he": "גפן מתנקשת"
+    },
+    {
+      "en": "Gargoyle*",
+      "he": "גרגויל*"
+    },
+    {
+      "en": "Griffon",
+      "he": "גריפון"
+    },
+    {
+      "en": "Bee, Giant",
+      "he": "דבורה ענקית"
+    },
+    {
+      "en": "Fish, Giant Bass",
+      "he": "דג, בס ענק"
+    },
+    {
+      "en": "Fish, Giant Barracuda",
+      "he": "דג, ברקודה ענקית"
+    },
+    {
+      "en": "Fish, Giant Piranha",
+      "he": "דג, פיראניה ענקית"
+    },
+    {
+      "en": "Fish, Giant Catfish",
+      "he": "דג, שפמנון ענק"
+    },
+    {
+      "en": "Bear",
+      "he": "דוב"
+    },
+    {
+      "en": "Bugbear",
+      "he": "דובלין"
+    },
+    {
+      "en": "Doppleganger",
+      "he": "דופלגנגר"
+    },
+    {
+      "en": "Squid, Giant Male",
+      "he": "דיונון, ענק"
+    },
+    {
+      "en": "Squid, Giant Female",
+      "he": "דיונון, ענק"
+    },
+    {
+      "en": "Dinosaur, Deinonychus",
+      "he": "דינוזאור, דיינוניכוס"
+    },
+    {
+      "en": "Dinosaur, Tyrannosaurus Rex",
+      "he": "דינוזאור, טירנוזאורוס רקס"
+    },
+    {
+      "en": "Dinosaur, Triceratops",
+      "he": "דינוזאור, טריצרטופס"
+    },
+    {
+      "en": "Dinosaur, Stegosaurus",
+      "he": "דינוזאור, סטגוזאורוס"
+    },
+    {
+      "en": "Pterodactyl",
+      "he": "דינוזאור, פטרודקטיל (ופטרנודון)"
+    },
+    {
+      "en": "Pteranodon",
+      "he": "דינוזאור, פטרודקטיל (ופטרנודון)"
+    },
+    {
+      "en": "Dryad",
+      "he": "דריאדה"
+    },
+    {
+      "en": "Dragon",
+      "he": "דרקון"
+    },
+    {
+      "en": "Hobgoblin",
+      "he": "הובגובלין"
+    },
+    {
+      "en": "Hydra",
+      "he": "הידרה"
+    },
+    {
+      "en": "Hyenodon",
+      "he": "היינודון"
+    },
+    {
+      "en": "Hippogriff",
+      "he": "היפוגריף"
+    },
+    {
+      "en": "Harpy",
+      "he": "הרפיה"
+    },
+    {
+      "en": "Wyvern",
+      "he": "ויוורן"
+    },
+    {
+      "en": "Blood Rose",
+      "he": "ורד דמים"
+    },
+    {
+      "en": "Normal Wolf",
+      "he": "זאב"
+    },
+    {
+      "en": "Dire Wolf",
+      "he": "זאב"
+    },
+    {
+      "en": "Fly, Giant",
+      "he": "זבוב ענק"
+    },
+    {
+      "en": "Zombie",
+      "he": "זומבי"
+    },
+    {
+      "en": "Zombraire",
+      "he": "זומברייר (וסקלטייר)"
+    },
+    {
+      "en": "Skeletaire",
+      "he": "זומברייר (וסקלטייר)"
+    },
+    {
+      "en": "Cave Locust, Giant",
+      "he": "חגב מערה ענק"
+    },
+    {
+      "en": "Unicorn",
+      "he": "חד-קרן (ואליקורן)"
+    },
+    {
+      "en": "Alicorn",
+      "he": "חד-קרן (ואליקורן)"
+    },
+    {
+      "en": "Shrew, Common Giant",
+      "he": "חדף ענק"
+    },
+    {
+      "en": "Shrew, Venomous Giant",
+      "he": "חדף ענק"
+    },
+    {
+      "en": "Normal Rat",
+      "he": "חולדה"
+    },
+    {
+      "en": "Giant Rat",
+      "he": "חולדה"
+    },
+    {
+      "en": "Boar",
+      "he": "חזיר בר"
+    },
+    {
+      "en": "Beetle, Giant Fire",
+      "he": "חיפושית ענקית אש"
+    },
+    {
+      "en": "Beetle, Giant Bombardier",
+      "he": "חיפושית ענקית מפציצה"
+    },
+    {
+      "en": "Beetle, Giant Tiger",
+      "he": "חיפושית ענקית נמר"
+    },
+    {
+      "en": "Beetle, Giant Oil",
+      "he": "חיפושית ענקית שמן"
+    },
+    {
+      "en": "Sabre-Tooth Cat",
+      "he": "חתול שן חרב"
+    },
+    {
+      "en": "Tiger",
+      "he": "טיגריס"
+    },
+    {
+      "en": "Titanothere",
+      "he": "טיטנוטרה"
+    },
+    {
+      "en": "Troglodyte",
+      "he": "טרוגלודיט"
+    },
+    {
+      "en": "Troll",
+      "he": "טרול (וטרולית)"
+    },
+    {
+      "en": "Trollwife",
+      "he": "טרול (וטרולית)"
+    },
+    {
+      "en": "Trollkin, Infant",
+      "he": "טרולקין"
+    },
+    {
+      "en": "Trollkin, Juvenile",
+      "he": "טרולקין"
+    },
+    {
+      "en": "Trollkin, Adolescent",
+      "he": "טרולקין"
+    },
+    {
+      "en": "Treant",
+      "he": "טריאנט"
+    },
+    {
+      "en": "Water Termite, Giant",
+      "he": "טרמיט מים ענק"
+    },
+    {
+      "en": "Jaguar",
+      "he": "יגואר"
+    },
+    {
+      "en": "Owlbear",
+      "he": "ינשודוב"
+    },
+    {
+      "en": "Owl",
+      "he": "ינשוף"
+    },
+    {
+      "en": "Elemental*",
+      "he": "יסודן*"
+    },
+    {
+      "en": "Ostrich",
+      "he": "יען (ואמו)"
+    },
+    {
+      "en": "Emu",
+      "he": "יען (ואמו)"
+    },
+    {
+      "en": "Chimera",
+      "he": "כימרה"
+    },
+    {
+      "en": "Normal Dog",
+      "he": "כלב"
+    },
+    {
+      "en": "Riding Dog",
+      "he": "כלב"
+    },
+    {
+      "en": "Blink Dog",
+      "he": "כלב הבהוב"
+    },
+    {
+      "en": "Hellhound",
+      "he": "כלב שאול"
+    },
+    {
+      "en": "Shark, Mako",
+      "he": "כריש, מאקו"
+    },
+    {
+      "en": "Shark, Great White",
+      "he": "כריש, עמלץ לבן"
+    },
+    {
+      "en": "Shark, Bull",
+      "he": "כריש, שור"
+    },
+    {
+      "en": "Whale, Narwhal",
+      "he": "לווייתן חדקרן"
+    },
+    {
+      "en": "Whale, Killer",
+      "he": "לווייתן קטלן"
+    },
+    {
+      "en": "Whale, Sperm",
+      "he": "לווייתן ראשתן"
+    },
+    {
+      "en": "Lizard, Giant Draco",
+      "he": "לטאה, דרקו ענק"
+    },
+    {
+      "en": "Lizard, Giant Horned Chameleon",
+      "he": "לטאה, זיקית קרן ענקית"
+    },
+    {
+      "en": "Lizard, Giant Tuatara",
+      "he": "לטאה, טואטרה ענקית"
+    },
+    {
+      "en": "Large Monitor Lizard",
+      "he": "לטאה, כוח"
+    },
+    {
+      "en": "Huge Monitor Lizard",
+      "he": "לטאה, כוח"
+    },
+    {
+      "en": "Giant Monitor Lizard",
+      "he": "לטאה, כוח"
+    },
+    {
+      "en": "Lizard, Giant Gecko",
+      "he": "לטאה, שממית ענק"
+    },
+    {
+      "en": "Lycanthrope*",
+      "he": "ליקנתרופ*"
+    },
+    {
+      "en": "Medusa",
+      "he": "מדוזה"
+    },
+    {
+      "en": "Mummy*",
+      "he": "מומיה*"
+    },
+    {
+      "en": "Common Deceiver",
+      "he": "מטעה (פנתר-הידרה)"
+    },
+    {
+      "en": "Greater Deceiver",
+      "he": "מטעה (פנתר-הידרה)"
+    },
+    {
+      "en": "Minotaur",
+      "he": "מינוטאור"
+    },
+    {
+      "en": "Mammoth",
+      "he": "ממותות ומסטודונים"
+    },
+    {
+      "en": "Mastodon",
+      "he": "ממותות ומסטודונים"
+    },
+    {
+      "en": "Manticore",
+      "he": "מנטיקור"
+    },
+    {
+      "en": "Rust Monster*",
+      "he": "מפלצת חלודה*"
+    },
+    {
+      "en": "Centipede, Giant",
+      "he": "נדל ענק"
+    },
+    {
+      "en": "Insect Swarm",
+      "he": "נחיל חרקים"
+    },
+    {
+      "en": "Snake, Sea",
+      "he": "נחש, ים"
+    },
+    {
+      "en": "Snake, Giant Rattlesnake",
+      "he": "נחש, עכסן ענק"
+    },
+    {
+      "en": "Snake, Python",
+      "he": "נחש, פיתון"
+    },
+    {
+      "en": "Snake, Pit Viper",
+      "he": "נחש, צפע גומה"
+    },
+    {
+      "en": "Snake, Spitting Cobra",
+      "he": "נחש, קוברה יורקת"
+    },
+    {
+      "en": "Nixie",
+      "he": "ניקסית"
+    },
+    {
+      "en": "Ant, Giant",
+      "he": "נמלה ענקית (וגם עצומה, גדולה)"
+    },
+    {
+      "en": "Ant, Huge",
+      "he": "נמלה ענקית (וגם עצומה, גדולה)"
+    },
+    {
+      "en": "Ant, Large",
+      "he": "נמלה ענקית (וגם עצומה, גדולה)"
+    },
+    {
+      "en": "Leopard (Panther)",
+      "he": "נמר (פנתר)"
+    },
+    {
+      "en": "Stirge",
+      "he": "סטריג'"
+    },
+    {
+      "en": "Salamander, Lightning*",
+      "he": "סלמנדרה, ברק*"
+    },
+    {
+      "en": "Salamander, Sand*",
+      "he": "סלמנדרה, חול*"
+    },
+    {
+      "en": "Salamander, Frost*",
+      "he": "סלמנדרה, כפור"
+    },
+    {
+      "en": "Salamander, Flame*",
+      "he": "סלמנדרה, להבה"
+    },
+    {
+      "en": "Weasel, Giant (or Ferret, Giant)",
+      "he": "סמור ענק (או חמוס ענק)"
+    },
+    {
+      "en": "Spectre*",
+      "he": "ספקטר*"
+    },
+    {
+      "en": "Sprite",
+      "he": "ספרייט"
+    },
+    {
+      "en": "Crab, Giant",
+      "he": "סרטן ענק"
+    },
+    {
+      "en": "Yellow Mold",
+      "he": "עובש צהוב"
+    },
+    {
+      "en": "Ogre",
+      "he": "עוג"
+    },
+    {
+      "en": "Invisible Stalker",
+      "he": "עוקב בלתי נראה"
+    },
+    {
+      "en": "Bat",
+      "he": "עטלף (ועטלף ענק)"
+    },
+    {
+      "en": "Giant Bat",
+      "he": "עטלף (ועטלף ענק)"
+    },
+    {
+      "en": "Eagle",
+      "he": "עיט"
+    },
+    {
+      "en": "Eagle, Giant",
+      "he": "עיט ענק"
+    },
+    {
+      "en": "Spider, Giant Black Widow",
+      "he": "עכביש, אלמנה שחורה ענקית"
+    },
+    {
+      "en": "Spider, Giant Tarantula",
+      "he": "עכביש, טרנטולה ענקית"
+    },
+    {
+      "en": "Spider, Giant Crab",
+      "he": "עכביש, סרטן ענק"
+    },
+    {
+      "en": "Leech, Giant",
+      "he": "עלוקה ענקית"
+    },
+    {
+      "en": "Giant, Stone",
+      "he": "ענק, אבן"
+    },
+    {
+      "en": "Giant, Fire",
+      "he": "ענק, אש"
+    },
+    {
+      "en": "Giant, Hill",
+      "he": "ענק, גבעה"
+    },
+    {
+      "en": "Giant, Mountain",
+      "he": "ענק, הרים"
+    },
+    {
+      "en": "Giant, Frost",
+      "he": "ענק, כפור"
+    },
+    {
+      "en": "Giant, Storm",
+      "he": "ענק, סערה"
+    },
+    {
+      "en": "Giant, Cloud",
+      "he": "ענק, ענן"
+    },
+    {
+      "en": "Giant, Cyclops",
+      "he": "ענק, קיקלופ"
+    },
+    {
+      "en": "Hangman Tree",
+      "he": "עץ תליין"
+    },
+    {
+      "en": "Scorpion, Giant",
+      "he": "עקרב, ענק"
+    },
+    {
+      "en": "Vampire*",
+      "he": "ערפד*"
+    },
+    {
+      "en": "Pegasus",
+      "he": "פגסוס"
+    },
+    {
+      "en": "Black Pudding*",
+      "he": "פודינג שחור* (ג'לי שחור)"
+    },
+    {
+      "en": "Elephant",
+      "he": "פיל"
+    },
+    {
+      "en": "Asiatic Elephant",
+      "he": "פיל"
+    },
+    {
+      "en": "African Elephant",
+      "he": "פיל"
+    },
+    {
+      "en": "Pixie",
+      "he": "פיקסי"
+    },
+    {
+      "en": "Living Statue",
+      "he": "פסל חי"
+    },
+    {
+      "en": "Sea Serpent",
+      "he": "פתן ים"
+    },
+    {
+      "en": "Cheetah",
+      "he": "צ'יטה"
+    },
+    {
+      "en": "Box Turtle",
+      "he": "צב מים או צב יבשה"
+    },
+    {
+      "en": "Snapping Turtle",
+      "he": "צב מים או צב יבשה"
+    },
+    {
+      "en": "Hyena",
+      "he": "צבוע"
+    },
+    {
+      "en": "Shrieker",
+      "he": "צווחן"
+    },
+    {
+      "en": "Shadow*",
+      "he": "צל*"
+    },
+    {
+      "en": "Frog, Giant (and Toad, Giant)",
+      "he": "צפרדע ענקית (וגם קרפדה ענקית)"
+    },
+    {
+      "en": "Kobold",
+      "he": "קובולד"
+    },
+    {
+      "en": "Gelatinous Cube",
+      "he": "קוביית ג'לטין"
+    },
+    {
+      "en": "Ape, Carnivorous",
+      "he": "קוף טורף"
+    },
+    {
+      "en": "Cockatrice",
+      "he": "קוקטריס"
+    },
+    {
+      "en": "Centaur",
+      "he": "קנטאור"
+    },
+    {
+      "en": "Black Rhino",
+      "he": "קרנף"
+    },
+    {
+      "en": "Woolly Rhino",
+      "he": "קרנף"
+    },
+    {
+      "en": "Rhagodessa, Giant",
+      "he": "ראגודסה, ענקית"
+    },
+    {
+      "en": "Wraith*",
+      "he": "רוח צל*"
+    },
+    {
+      "en": "Ghost*",
+      "he": "רוח*"
+    },
+    {
+      "en": "Normal Roc",
+      "he": "רוק"
+    },
+    {
+      "en": "Large Roc",
+      "he": "רוק"
+    },
+    {
+      "en": "Giant Roc",
+      "he": "רוק"
+    },
+    {
+      "en": "Rot Grub",
+      "he": "רימה נרקבת"
+    },
+    {
+      "en": "Wight*",
+      "he": "רפא*"
+    },
+    {
+      "en": "Skeleton",
+      "he": "שלד"
+    },
+    {
+      "en": "Parrot (or Cockatiel)",
+      "he": "תוכי (או קוקטייל)"
+    },
+    {
+      "en": "Caecilia, Giant",
+      "he": "תולען, ענק"
+    },
+    {
+      "en": "Purple Worm",
+      "he": "תולעת סגולה"
+    },
+    {
+      "en": "Octopus, Giant",
+      "he": "תמנון ענק"
+    },
+    {
+      "en": "Crocodile",
+      "he": "תנין"
+    }
+  ]
+}

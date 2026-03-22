@@ -36,3 +36,26 @@ thead {
 .myHighlightedCell {
   background-color: rgb(135, 179, 154) !important;
 }
+
+/* Language toggle button (English build) */
+.lang-toggle-btn {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  z-index: 9999;
+  background: #2c7a7b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.2s;
+  font-family: sans-serif;
+}
+
+.lang-toggle-btn:hover {
+  background: #285e61;
+}

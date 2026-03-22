@@ -1,0 +1,126 @@
+/* RTL layout for Hebrew BFRPG */
+
+body {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Keep code, dice notation, and numbers LTR */
+code,
+pre,
+.sourceCode {
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: embed;
+}
+
+/* Tables */
+th,
+td {
+  text-align: right;
+}
+
+/* Table of contents — keep readable in RTL */
+#TOC,
+.sidebar-navigation {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Override Bootstrap text-start on sidebar section headers */
+.sidebar .text-start {
+  text-align: right !important;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  text-align: right;
+}
+
+/* Lists */
+ul, ol {
+  padding-right: 2em;
+  padding-left: 0;
+}
+
+/* Blockquotes */
+blockquote {
+  border-right: 4px solid #ccc;
+  border-left: none;
+  padding-right: 1em;
+  padding-left: 0;
+  margin-right: 0;
+}
+
+/* Navigation arrows (prev/next) — swap sides */
+.page-navigation .nav-page-previous {
+  order: 2;
+}
+.page-navigation .nav-page-next {
+  order: 1;
+}
+
+/* Quarto sidebar panel */
+.sidebar {
+  direction: rtl;
+}
+
+/* Observable JS output */
+.observablehq {
+  direction: ltr;
+  text-align: left;
+}
+
+/* OJS dice roller grid — button on right, result on left (RTL natural order) */
+.ojs-roller {
+  direction: rtl !important;
+}
+
+/* OJS button visibility — Observable's CSS custom properties may be unresolved
+   in the Quarto/Bootstrap context, causing dark-on-dark buttons */
+.observablehq button {
+  background-color: #f8f9fa;
+  color: #212529;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 4px 12px;
+  cursor: pointer;
+}
+.observablehq button:hover {
+  background-color: #e2e6ea;
+}
+
+/* Keep numeric content LTR (dice tables, stats) */
+table.stats td,
+td:only-child {
+  direction: ltr;
+  unicode-bidi: embed;
+}
+
+/* Font for Hebrew */
+body {
+  font-family: "Frank Ruhl Libre", "David Libre", serif;
+}
+
+/* Language toggle button */
+.lang-toggle-btn {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  z-index: 9999;
+  background: #2c7a7b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.2s;
+  font-family: sans-serif;
+}
+
+.lang-toggle-btn:hover {
+  background: #285e61;
+}

@@ -1,0 +1,1974 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="he-IL" xml:lang="he-IL" dir="rtl"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>20&nbsp; ניהול מפגשים – בייסיק פנטזי, מהדורה 4</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./gm02.html" rel="next">
+<link href="./magicItems.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-cee3e496ba8b573501d842b8d7792f9a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "אין תוצאות",
+    "search-matching-documents-text": "מסמכים תואמים",
+    "search-copy-link-title": "העתק קישור לחיפוש",
+    "search-hide-matches-text": "הסתר התאמות נוספות",
+    "search-more-match-text": "התאמה נוספת במסמך זה",
+    "search-more-matches-text": "התאמות נוספות במסמך זה",
+    "search-clear-button-title": "נקה",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "בטל",
+    "search-submit-button-title": "שלח",
+    "search-label": "חפש"
+  }
+}</script>
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre">
+<script src="../../translator/lang-switch.js"></script>
+
+
+<link rel="stylesheet" href="../custom.css">
+<link rel="stylesheet" href="../custom-rtl.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="הצג/הסתר את סרגל הניווט" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./gm01.html">מידע למנחת המשחק</a></li><li class="breadcrumb-item"><a href="./gm01.html"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">ניהול מפגשים</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="הצג/הסתר את סרגל הניווט" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="חפש" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">בייסיק פנטזי, מהדורה 4</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="חפש"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">הקדמה</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">מבוא</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./whatIsThis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">מבוא</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">דמויות שחקן</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./char-creation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">דמויות שחקן</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./abilities.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">תכונות</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./races.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">גזעים</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./class.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">מקצועות</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./equipment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">ציוד</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./vehicles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">כלי רכב</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">קסם</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./spells.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">לחשים</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./allSpells.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">לחשים, לפי סדר אלפביתי</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">הרפתקה</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dungeonAdventures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">הרפתקאות במבוך</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./wildAdventures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">הרפתקאות בשטח פתוח</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hirelings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">שכירים</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./advancement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">התקדמות</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">מפגשים</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./combat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">מפגשי קרב</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">מפלצות</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./monsters.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">מפלצות</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./monstersAll.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">תיאורי מפלצות</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./monstersTab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">אינדקס מפלצות</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">אוצר</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./treasure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">אוצר</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./magicItems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">חפצי קסם</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+ <span class="menu-text">מידע למנחת המשחק</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./gm01.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">ניהול מפגשים</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./gm02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">יצירת הרפתקאות</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
+ <span class="menu-text">נספחים</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix_interactive.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">כלים אינטראקטיביים</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendixMapmaker.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">יוצר מבוכים</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./char_sheet.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">גיליון דמות</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
+ <span class="menu-text">תוספות</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="הצג/הסתר מקטע">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./extraClasses.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">מקצועות נוספים</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./extraRaces.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">גזעים נוספים</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./extraRules.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">חוקים נוספים וחלופיים</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">תוכן עניינים</h2>
+   
+  <ul>
+  <li><a href="#מפלצות-נודדות" id="toc-מפלצות-נודדות" class="nav-link active" data-scroll-target="#מפלצות-נודדות">מפלצות נודדות</a></li>
+  <li><a href="#מפגשים-במבוך" id="toc-מפגשים-במבוך" class="nav-link" data-scroll-target="#מפגשים-במבוך">מפגשים במבוך</a></li>
+  <li><a href="#מפגשים-בשטח-פתוח" id="toc-מפגשים-בשטח-פתוח" class="nav-link" data-scroll-target="#מפגשים-בשטח-פתוח">מפגשים בשטח פתוח</a></li>
+  <li><a href="#מפגשים-בעיר-בעיירה-או-בכפר" id="toc-מפגשים-בעיר-בעיירה-או-בכפר" class="nav-link" data-scroll-target="#מפגשים-בעיר-בעיירה-או-בכפר">מפגשים בעיר, בעיירה או בכפר</a></li>
+  <li><a href="#יצירת-חבורת-דבשים" id="toc-יצירת-חבורת-דבשים" class="nav-link" data-scroll-target="#יצירת-חבורת-דבשים">יצירת חבורת דב”שים</a>
+  <ul>
+  <li><a href="#הרפתקנים" id="toc-הרפתקנים" class="nav-link" data-scroll-target="#הרפתקנים"><strong>הרפתקנים</strong></a></li>
+  <li><a href="#שודדים-בריגנדים-ושודדי-דרכים" id="toc-שודדים-בריגנדים-ושודדי-דרכים" class="nav-link" data-scroll-target="#שודדים-בריגנדים-ושודדי-דרכים"><strong>שודדים, בריגנדים ושודדי דרכים</strong></a></li>
+  <li><a href="#בוקאנירים-ושודדי-ים" id="toc-בוקאנירים-ושודדי-ים" class="nav-link" data-scroll-target="#בוקאנירים-ושודדי-ים"><strong>בוקאנירים ושודדי ים</strong></a></li>
+  <li><a href="#סוחרים" id="toc-סוחרים" class="nav-link" data-scroll-target="#סוחרים"><strong>סוחרים</strong></a></li>
+  <li><a href="#אצילים" id="toc-אצילים" class="nav-link" data-scroll-target="#אצילים"><strong>אצילים</strong></a></li>
+  <li><a href="#עולי-רגל" id="toc-עולי-רגל" class="nav-link" data-scroll-target="#עולי-רגל"><strong>עולי רגל</strong></a></li>
+  <li><a href="#חפצי-קסם-עבור-דבשים" id="toc-חפצי-קסם-עבור-דבשים" class="nav-link" data-scroll-target="#חפצי-קסם-עבור-דבשים"><strong>חפצי קסם עבור דב”שים</strong></a></li>
+  <li><a href="#חבורות-דמויי-אדם" id="toc-חבורות-דמויי-אדם" class="nav-link" data-scroll-target="#חבורות-דמויי-אדם"><strong>חבורות דמויי-אדם</strong></a></li>
+  </ul></li>
+  <li><a href="#התמודדות-עם-שחקנים" id="toc-התמודדות-עם-שחקנים" class="nav-link" data-scroll-target="#התמודדות-עם-שחקנים">התמודדות עם שחקנים</a>
+  <ul>
+  <li><a href="#אפשרויות-ליצירת-דמות" id="toc-אפשרויות-ליצירת-דמות" class="nav-link" data-scroll-target="#אפשרויות-ליצירת-דמות">אפשרויות ליצירת דמות</a></li>
+  <li><a href="#דמויות-חסרות-תקווה" id="toc-דמויות-חסרות-תקווה" class="nav-link" data-scroll-target="#דמויות-חסרות-תקווה">דמויות חסרות תקווה</a></li>
+  <li><a href="#רכישת-לחשים" id="toc-רכישת-לחשים" class="nav-link" data-scroll-target="#רכישת-לחשים">רכישת לחשים</a></li>
+  <li><a href="#מגבלות-נשק-ושריון" id="toc-מגבלות-נשק-ושריון" class="nav-link" data-scroll-target="#מגבלות-נשק-ושריון">מגבלות נשק ושריון</a></li>
+  <li><a href="#הכרעה-במשאלות" id="toc-הכרעה-במשאלות" class="nav-link" data-scroll-target="#הכרעה-במשאלות">הכרעה במשאלות</a></li>
+  </ul></li>
+  <li><a href="#חוקים-אופציונליים" id="toc-חוקים-אופציונליים" class="nav-link" data-scroll-target="#חוקים-אופציונליים">חוקים אופציונליים</a>
+  <ul>
+  <li><a href="#מוות-וגסיסה" id="toc-מוות-וגסיסה" class="nav-link" data-scroll-target="#מוות-וגסיסה">מוות וגסיסה</a></li>
+  <li><a href="#רעל-גלגול-הצלה-או-מוות" id="toc-רעל-גלגול-הצלה-או-מוות" class="nav-link" data-scroll-target="#רעל-גלגול-הצלה-או-מוות">רעל “גלגול הצלה או מוות”</a></li>
+  <li><a href="#הענקת-נקודות-ניסיון-עבור-אוצר-שנאסף" id="toc-הענקת-נקודות-ניסיון-עבור-אוצר-שנאסף" class="nav-link" data-scroll-target="#הענקת-נקודות-ניסיון-עבור-אוצר-שנאסף">הענקת נקודות ניסיון עבור אוצר שנאסף</a></li>
+  <li><a href="#גלגולי-תכונה" id="toc-גלגולי-תכונה" class="nav-link" data-scroll-target="#גלגולי-תכונה">גלגולי תכונה</a></li>
+  <li><a href="#הכנת-לחשים-מן-הזיכרון" id="toc-הכנת-לחשים-מן-הזיכרון" class="nav-link" data-scroll-target="#הכנת-לחשים-מן-הזיכרון">הכנת לחשים מן הזיכרון</a></li>
+  <li><a href="#יכולות-גנב" id="toc-יכולות-גנב" class="nav-link" data-scroll-target="#יכולות-גנב">יכולות גנב</a></li>
+  </ul></li>
+  <li><a href="#מחקר-קסום" id="toc-מחקר-קסום" class="nav-link" data-scroll-target="#מחקר-קסום">מחקר קסום</a>
+  <ul>
+  <li><a href="#כללים-כלליים-למחקר" id="toc-כללים-כלליים-למחקר" class="nav-link" data-scroll-target="#כללים-כלליים-למחקר">כללים כלליים למחקר</a></li>
+  <li><a href="#מחקר-לחשים" id="toc-מחקר-לחשים" class="nav-link" data-scroll-target="#מחקר-לחשים">מחקר לחשים</a></li>
+  <li><a href="#מחקר-חפצי-קסם" id="toc-מחקר-חפצי-קסם" class="nav-link" data-scroll-target="#מחקר-חפצי-קסם">מחקר חפצי קסם</a></li>
+  <li><a href="#סיכוי-להצלחה" id="toc-סיכוי-להצלחה" class="nav-link" data-scroll-target="#סיכוי-להצלחה">סיכוי להצלחה</a></li>
+  <li><a href="#מגילות-לחש" id="toc-מגילות-לחש" class="nav-link" data-scroll-target="#מגילות-לחש">מגילות לחש</a></li>
+  <li><a href="#חפצים-אחרים-לשימוש-חד-פעמי" id="toc-חפצים-אחרים-לשימוש-חד-פעמי" class="nav-link" data-scroll-target="#חפצים-אחרים-לשימוש-חד-פעמי">חפצים אחרים לשימוש חד-פעמי</a></li>
+  <li><a href="#חפצי-קסם-קבועים" id="toc-חפצי-קסם-קבועים" class="nav-link" data-scroll-target="#חפצי-קסם-קבועים">חפצי קסם קבועים</a></li>
+  <li><a href="#כישוף-נשקים" id="toc-כישוף-נשקים" class="nav-link" data-scroll-target="#כישוף-נשקים">כישוף נשקים</a></li>
+  <li><a href="#חפצי-קסם-אחרים" id="toc-חפצי-קסם-אחרים" class="nav-link" data-scroll-target="#חפצי-קסם-אחרים">חפצי קסם אחרים</a></li>
+  <li><a href="#חפצים-מקוללים" id="toc-חפצים-מקוללים" class="nav-link" data-scroll-target="#חפצים-מקוללים">חפצים מקוללים</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./gm01.html">מידע למנחת המשחק</a></li><li class="breadcrumb-item"><a href="./gm01.html"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">ניהול מפגשים</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">ניהול מפגשים</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="מפלצות-נודדות" class="level2">
+<h2 class="anchored" data-anchor-id="מפלצות-נודדות">מפלצות נודדות</h2>
+<p><em>הייתה לנו התבונה להביא איתנו כמה שקים גדולים, ומיהרנו למלא אותם במטבעות ואבני חן שמתחת לסרקופג. בלי עיכוב נוסף, יצאנו לדרך, נחושים להגיע אל המדרגות המובילות לפני השטח ואז לחזור למורגנספורט. אבל זה לא יכול היה להיות כל כך פשוט…</em></p>
+<p><em>בדרך פנימה, ברת’אל סייר לפנינו ואנחנו התקדמנו לאט, דרוכים כל הזמן למקרה שנפגוש מפלצות נוספות. בדרך החוצה עזבנו את הזהירות מאחור, והתקדמנו במהירות מלאה כשברת’אל משגיח מאחורינו. כך קרה שמורנינגסטאר ואני פנינו מעבר לפינה וכמעט התנגשנו בסיור גובלינים!</em></p>
+<p><em>שוב נתפסתי לא מוכן, אבל גם הגובלינים הופתעו. מורנינגסטאר הגיב מהר יותר והפיל את הראשון מבין המפלצות הקטנות. אפשר היה לחשוב שאולי עדיף היה לנסות לדבר איתם, אבל כבר ניסינו זאת עם הגובלינים האלה בלי הצלחה… לכן לא יכולתי להאשים את האלפית שהכתה ראשונה ושאלה שאלות אחר כך.</em></p>
+<p><em>הרמתי את החרב המוזהבת ונכנסתי לקרב…</em></p>
+</section>
+<section id="מפגשים-במבוך" class="level2">
+<h2 class="anchored" data-anchor-id="מפגשים-במבוך">מפגשים במבוך</h2>
+<p>בנוסף למפלצות “מוצבות”, מבוכים מכילים בדרך כלל גם מפלצות נודדות. המנחה רשאית ליצור טבלאות מיוחדות של מפלצות נודדות עבור מבוכים מסוימים, או להשתמש בטבלאות הכלליות של מפלצות נודדות (להלן).</p>
+<p>במבוך ממוצע, מפגש עם מפלצת נודדת יתרחש בגלגול של 1 על 1d6; המנחה צריכה לבצע בדיקה אחת כל 3 תורות. הנסיבות של מבוך מסוים עשויות להצדיק סיכוי גבוה יותר, או בדיקות תכופות יותר (או לעיתים פחות תכופות) למפלצות נודדות.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="23" data-source-offset="-2"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 22;"><span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {generalTableSelect<span class="op">,</span> highlightTableRow} <span class="im">from</span> <span class="st">"../custom.js"</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"גלגלי בטבלה"</span><span class="op">,</span> </span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>{<span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> </span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="dt">reduce</span><span class="op">:</span> () <span class="kw">=&gt;</span> <span class="fu">highlightTableRow</span>(<span class="st">"#dungeon-encounters-1"</span><span class="op">,</span> </span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="fu">generalTableSelect</span>([<span class="dv">1</span><span class="op">,</span><span class="dv">12</span><span class="op">,</span><span class="dv">0</span>]<span class="op">,</span>[[ <span class="dv">1</span> <span class="op">,</span> <span class="dv">1</span> ]<span class="op">,</span>[ <span class="dv">2</span> <span class="op">,</span> <span class="dv">2</span> ]<span class="op">,</span>[ <span class="dv">3</span> <span class="op">,</span> <span class="dv">3</span> ]<span class="op">,</span>[ <span class="dv">4</span> <span class="op">,</span> <span class="dv">4</span> ]<span class="op">,</span>[ <span class="dv">5</span> <span class="op">,</span> <span class="dv">5</span> ]<span class="op">,</span>[ <span class="dv">6</span> <span class="op">,</span> <span class="dv">6</span> ]<span class="op">,</span>[ <span class="dv">7</span> <span class="op">,</span> <span class="dv">7</span> ]<span class="op">,</span>[ <span class="dv">8</span> <span class="op">,</span> <span class="dv">8</span> ]<span class="op">,</span>[ <span class="dv">9</span> <span class="op">,</span> <span class="dv">9</span> ]<span class="op">,</span>[ <span class="dv">10</span><span class="op">,</span> <span class="dv">10</span>]<span class="op">,</span>[ <span class="dv">11</span><span class="op">,</span> <span class="dv">11</span>]<span class="op">,</span>[ <span class="dv">12</span><span class="op">,</span> <span class="dv">12</span>]]))})</span></code></pre></div><button title="העתק ללוח" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+<div id="dungeon-encounters-1">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 27%">
+<col style="width: 31%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>1d12</th>
+<th>דרגה 1</th>
+<th>דרגה 2</th>
+<th>דרגה 3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>דבורה, ענקית</td>
+<td>חיפושית, ענקית מפציצה</td>
+<td>נמלה, ענקית</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>גובלין</td>
+<td>זבוב, ענק</td>
+<td>קוף, טורף</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>ג’לי, ירוק*</td>
+<td>גול</td>
+<td>חיפושית, טיגריס ענקית</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>קובולד</td>
+<td>גנול</td>
+<td>דובלין</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>חבורת דמויות מנחה: הרפתקן</td>
+<td>ג’לי, אפור</td>
+<td>דופלגנגר</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>חבורת דמויות מנחה: שודד</td>
+<td>הובגובלין</td>
+<td>גרגויל*</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>אורק</td>
+<td>איש לטאה</td>
+<td>ג’לי, זכוכית</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>סטריג’</td>
+<td>חבורת דמויות מנחה: הרפתקן</td>
+<td>ליקנתרופ, איש-חולדה*</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>שלד</td>
+<td>נחש, צפע בור</td>
+<td>עוג</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>נחש, קוברה</td>
+<td>עכביש, אלמנה שחורה ענקית</td>
+<td>צל*</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>עכביש, סרטן ענק</td>
+<td>איש לטאה, תת-קרקעי</td>
+<td>תולעת זרועות</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>זאב</td>
+<td>זומבי</td>
+<td>רפא*</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="52" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 51;"><span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"גלגלי בטבלה"</span><span class="op">,</span> </span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>{<span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> </span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a><span class="dt">reduce</span><span class="op">:</span> () <span class="kw">=&gt;</span> <span class="fu">highlightTableRow</span>(<span class="st">"#dungeon-encounters-2"</span><span class="op">,</span> </span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a><span class="fu">generalTableSelect</span>([<span class="dv">1</span><span class="op">,</span><span class="dv">12</span><span class="op">,</span><span class="dv">0</span>]<span class="op">,</span>[[ <span class="dv">1</span> <span class="op">,</span> <span class="dv">1</span> ]<span class="op">,</span>[ <span class="dv">2</span> <span class="op">,</span> <span class="dv">2</span> ]<span class="op">,</span>[ <span class="dv">3</span> <span class="op">,</span> <span class="dv">3</span> ]<span class="op">,</span>[ <span class="dv">4</span> <span class="op">,</span> <span class="dv">4</span> ]<span class="op">,</span>[ <span class="dv">5</span> <span class="op">,</span> <span class="dv">5</span> ]<span class="op">,</span>[ <span class="dv">6</span> <span class="op">,</span> <span class="dv">6</span> ]<span class="op">,</span>[ <span class="dv">7</span> <span class="op">,</span> <span class="dv">7</span> ]<span class="op">,</span>[ <span class="dv">8</span> <span class="op">,</span> <span class="dv">8</span> ]<span class="op">,</span>[ <span class="dv">9</span> <span class="op">,</span> <span class="dv">9</span> ]<span class="op">,</span>[ <span class="dv">10</span><span class="op">,</span> <span class="dv">10</span>]<span class="op">,</span>[ <span class="dv">11</span><span class="op">,</span> <span class="dv">11</span>]<span class="op">,</span>[ <span class="dv">12</span><span class="op">,</span> <span class="dv">12</span>]]))})</span></code></pre></div><button title="העתק ללוח" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-2" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div id="dungeon-encounters-2">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 28%">
+<col style="width: 29%">
+<col style="width: 28%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>1d12</th>
+<th>דרגה 4-5</th>
+<th>דרגה 6-7</th>
+<th>דרגה 8+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>דוב, מערות</td>
+<td>בזיליסק</td>
+<td>בזיליסק, גדול*</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>תולען, ענק</td>
+<td>ג’לי, שחור</td>
+<td>כימרה</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>קוקטריס</td>
+<td>תולען, ענק</td>
+<td>מטעה, גדול</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>דופלגנגר</td>
+<td>מטעה</td>
+<td>ענק, גבעה</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>ג’לי, אפור</td>
+<td>הידרה</td>
+<td>ענק, אבן</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>כלב שאול</td>
+<td>מפלצת חלודה*</td>
+<td>הידרה</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>מפלצת חלודה*</td>
+<td>ליקנתרופ, איש-טיגריס*</td>
+<td>ג’לי, שחור</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>ליקנתרופ, איש-זאב*</td>
+<td>מומיה*</td>
+<td>ליקנתרופ, איש-חזיר*</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>מינוטאור</td>
+<td>ינשודוב</td>
+<td>תולעת סגולה</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>ג’לי, אדמדם*</td>
+<td>עקרב, ענק</td>
+<td>סלמנדרה, להבה*</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>ינשודוב</td>
+<td>ספקטר*</td>
+<td>סלמנדרה, כפור*</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>רוח צל*</td>
+<td>טרול</td>
+<td>ערפד*</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="מפגשים-בשטח-פתוח" class="level2">
+<h2 class="anchored" data-anchor-id="מפגשים-בשטח-פתוח">מפגשים בשטח פתוח</h2>
+<p>המנחה צריכה לבדוק מפגשים אקראיים בשטח פתוח בערך כל ארבע שעות של זמן משחק; זה מתורגם היטב לשלוש בדיקות לילה ושלוש בדיקות יום. אם השחקנים בוחרים להציב שלוש משמרות לילה, פשוט מבצעים בדיקה עבור כל משמרת; ביום מבצעים בדיקה בבוקר, אחר הצהריים ובערב.</p>
+<p>כדי לבדוק מפגש בשטח פתוח, גלגלו 1d6; בגלגול של 1, מתרחש מפגש. אם נקבע שמתרחש מפגש בשטח פתוח, גלגלו 2d8 בטבלה המתאימה להלן. המנחה צריכה לחשוב היטב כיצד המפגש מתרחש; בדקו הפתעה מראש, ואם המפלצת אינה מופתעת, ניתן להחשיב אותה ככזו שהיה לה זמן להכין מארב (לפי בחירת המנחה).</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="86" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 85;"><span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"גלגלי בטבלה"</span><span class="op">,</span> </span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>{<span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> </span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a><span class="dt">reduce</span><span class="op">:</span> () <span class="kw">=&gt;</span> <span class="fu">highlightTableRow</span>(<span class="st">"#wilderness-encounters-1"</span><span class="op">,</span> </span>
+<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a><span class="fu">generalTableSelect</span>([<span class="dv">2</span><span class="op">,</span><span class="dv">8</span><span class="op">,</span><span class="dv">0</span>]<span class="op">,</span>[[ <span class="dv">2</span> <span class="op">,</span> <span class="dv">2</span> ]<span class="op">,</span>[ <span class="dv">3</span> <span class="op">,</span> <span class="dv">3</span> ]<span class="op">,</span>[ <span class="dv">4</span> <span class="op">,</span> <span class="dv">4</span> ]<span class="op">,</span>[ <span class="dv">5</span> <span class="op">,</span> <span class="dv">5</span> ]<span class="op">,</span>[ <span class="dv">6</span> <span class="op">,</span> <span class="dv">6</span> ]<span class="op">,</span>[ <span class="dv">7</span> <span class="op">,</span> <span class="dv">7</span> ]<span class="op">,</span>[ <span class="dv">8</span> <span class="op">,</span> <span class="dv">8</span> ]<span class="op">,</span>[ <span class="dv">9</span> <span class="op">,</span> <span class="dv">9</span> ]<span class="op">,</span>[ <span class="dv">10</span><span class="op">,</span> <span class="dv">10</span>]<span class="op">,</span>[ <span class="dv">11</span><span class="op">,</span> <span class="dv">11</span>]<span class="op">,</span>[ <span class="dv">12</span><span class="op">,</span> <span class="dv">12</span>]<span class="op">,</span>[ <span class="dv">13</span><span class="op">,</span> <span class="dv">13</span>]<span class="op">,</span>[ <span class="dv">14</span><span class="op">,</span> <span class="dv">14</span>]<span class="op">,</span> [ <span class="dv">15</span><span class="op">,</span> <span class="dv">15</span>]<span class="op">,</span>[ <span class="dv">16</span><span class="op">,</span> <span class="dv">16</span>]]))})</span></code></pre></div><button title="העתק ללוח" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-3" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div id="wilderness-encounters-1">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 33%">
+<col style="width: 28%">
+<col style="width: 31%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>2d8</th>
+<th>מדבר או שומם</th>
+<th>ערבה</th>
+<th>שטחים מיושבים</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2</td>
+<td>דרקון, מדבר</td>
+<td>דרקון, מישור</td>
+<td>דרקון, ענן</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>כלב שאול</td>
+<td>טרול</td>
+<td>גול</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>ענק, אש</td>
+<td>זבוב, ענק</td>
+<td>דובלין</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>תולעת סגולה</td>
+<td>עקרב, ענק</td>
+<td>גובלין</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>זבוב, ענק</td>
+<td>חבורת דמויות מנחה: שודד</td>
+<td>קנטאור</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>עקרב, ענק</td>
+<td>אריה</td>
+<td>חבורת דמויות מנחה: שודד</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>גמל</td>
+<td>חזיר בר, פראי</td>
+<td>חבורת דמויות מנחה: סוחר</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>עכביש, טרנטולה ענקית</td>
+<td>חבורת דמויות מנחה: סוחר</td>
+<td>חבורת דמויות מנחה: עולה רגל</td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td>חבורת דמויות מנחה: סוחר</td>
+<td>זאב</td>
+<td>חבורת דמויות מנחה: אציל</td>
+</tr>
+<tr class="even">
+<td>11</td>
+<td>בז</td>
+<td>דבורה, ענקית</td>
+<td>כלב</td>
+</tr>
+<tr class="odd">
+<td>12</td>
+<td>חבורת דמויות מנחה: שודד</td>
+<td>גנול</td>
+<td>גרגויל*</td>
+</tr>
+<tr class="even">
+<td>13</td>
+<td>עוג</td>
+<td>גובלין</td>
+<td>גנול</td>
+</tr>
+<tr class="odd">
+<td>14</td>
+<td>גריפון</td>
+<td>כלב הבהוב</td>
+<td>עוג</td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td>גנול</td>
+<td>זאב, אימים</td>
+<td>מינוטאור</td>
+</tr>
+<tr class="odd">
+<td>16</td>
+<td>דרקון, הרים</td>
+<td>ענק, גבעה</td>
+<td>ערפד*</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb4" data-startfrom="117" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 116;"><span id="cb4-117"><a href="#cb4-117" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"גלגלי בטבלה"</span><span class="op">,</span> </span>
+<span id="cb4-118"><a href="#cb4-118" aria-hidden="true" tabindex="-1"></a>{<span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> </span>
+<span id="cb4-119"><a href="#cb4-119" aria-hidden="true" tabindex="-1"></a><span class="dt">reduce</span><span class="op">:</span> () <span class="kw">=&gt;</span> <span class="fu">highlightTableRow</span>(<span class="st">"#wilderness-encounters-2"</span><span class="op">,</span> </span>
+<span id="cb4-120"><a href="#cb4-120" aria-hidden="true" tabindex="-1"></a><span class="fu">generalTableSelect</span>([<span class="dv">2</span><span class="op">,</span><span class="dv">8</span><span class="op">,</span><span class="dv">0</span>]<span class="op">,</span>[[ <span class="dv">2</span> <span class="op">,</span> <span class="dv">2</span> ]<span class="op">,</span>[ <span class="dv">3</span> <span class="op">,</span> <span class="dv">3</span> ]<span class="op">,</span>[ <span class="dv">4</span> <span class="op">,</span> <span class="dv">4</span> ]<span class="op">,</span>[ <span class="dv">5</span> <span class="op">,</span> <span class="dv">5</span> ]<span class="op">,</span>[ <span class="dv">6</span> <span class="op">,</span> <span class="dv">6</span> ]<span class="op">,</span>[ <span class="dv">7</span> <span class="op">,</span> <span class="dv">7</span> ]<span class="op">,</span>[ <span class="dv">8</span> <span class="op">,</span> <span class="dv">8</span> ]<span class="op">,</span>[ <span class="dv">9</span> <span class="op">,</span> <span class="dv">9</span> ]<span class="op">,</span>[ <span class="dv">10</span><span class="op">,</span> <span class="dv">10</span>]<span class="op">,</span>[ <span class="dv">11</span><span class="op">,</span> <span class="dv">11</span>]<span class="op">,</span>[ <span class="dv">12</span><span class="op">,</span> <span class="dv">12</span>]<span class="op">,</span>[ <span class="dv">13</span><span class="op">,</span> <span class="dv">13</span>]<span class="op">,</span>[ <span class="dv">14</span><span class="op">,</span> <span class="dv">14</span>]<span class="op">,</span> [ <span class="dv">15</span><span class="op">,</span> <span class="dv">15</span>]<span class="op">,</span>[ <span class="dv">16</span><span class="op">,</span> <span class="dv">16</span>]]))})</span></code></pre></div><button title="העתק ללוח" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-4" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div id="wilderness-encounters-2">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 21%">
+<col style="width: 35%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>(2d8)</th>
+<th><strong>ג’ונגל</strong></th>
+<th><strong>הרים או גבעות</strong></th>
+<th><strong>אוקיינוס</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2</td>
+<td>דרקון, ירוק</td>
+<td>דרקון, לבן</td>
+<td>דרקון, ים</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>חבורת דמויות מנחה: שודד</td>
+<td>רוק (1d6: 1-3 גדול, 4-5 ענק, 6&nbsp;ענק)</td>
+<td>הידרה</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>גובלין</td>
+<td>מטעה</td>
+<td>לוויתן, ראשתן</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>הובגובלין</td>
+<td>ליקנתרופ, איש-זאב*</td>
+<td>תנין, ענק</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>נדל, ענק</td>
+<td>אריה הרים</td>
+<td>סרטן, ענק</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>נחש, פיתון ענק</td>
+<td>זאב</td>
+<td>לוויתן קטלן</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>פיל</td>
+<td>עכביש, סרטן ענק</td>
+<td>תמנון, ענק</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>אנטילופה</td>
+<td>בז</td>
+<td>כריש, מאקו</td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td>יגואר</td>
+<td>אורק</td>
+<td>כריש, שור</td>
+</tr>
+<tr class="even">
+<td>11</td>
+<td>סטריג’</td>
+<td>עטלף, ענק</td>
+<td>חבורת דמויות מנחה: סוחר</td>
+</tr>
+<tr class="odd">
+<td>12</td>
+<td>חיפושית, ענקית נמר</td>
+<td>בז, ענק</td>
+<td>חבורת דמויות מנחה: שודד ים (פיראט)</td>
+</tr>
+<tr class="even">
+<td>13</td>
+<td>תולען, ענק</td>
+<td>ענק, גבעה</td>
+<td>כריש, עמלץ לבן</td>
+</tr>
+<tr class="odd">
+<td>14</td>
+<td>צל*</td>
+<td>כימרה</td>
+<td>רוק (1d8: 1-5 ענק, 6-8 ענק)</td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td>חבורת דמויות מנחה: סוחר</td>
+<td>זאב, אימים</td>
+<td>בת ים</td>
+</tr>
+<tr class="odd">
+<td>16</td>
+<td>ליקנתרופ, איש-טיגריס*</td>
+<td>דרקון, הרים</td>
+<td>פתן ים</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb5" data-startfrom="147" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 146;"><span id="cb5-147"><a href="#cb5-147" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"גלגלי בטבלה"</span><span class="op">,</span> </span>
+<span id="cb5-148"><a href="#cb5-148" aria-hidden="true" tabindex="-1"></a>{<span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> </span>
+<span id="cb5-149"><a href="#cb5-149" aria-hidden="true" tabindex="-1"></a><span class="dt">reduce</span><span class="op">:</span> () <span class="kw">=&gt;</span> <span class="fu">highlightTableRow</span>(<span class="st">"#wilderness-encounters-3"</span><span class="op">,</span> </span>
+<span id="cb5-150"><a href="#cb5-150" aria-hidden="true" tabindex="-1"></a><span class="fu">generalTableSelect</span>([<span class="dv">2</span><span class="op">,</span><span class="dv">8</span><span class="op">,</span><span class="dv">0</span>]<span class="op">,</span>[[ <span class="dv">2</span> <span class="op">,</span> <span class="dv">2</span> ]<span class="op">,</span>[ <span class="dv">3</span> <span class="op">,</span> <span class="dv">3</span> ]<span class="op">,</span>[ <span class="dv">4</span> <span class="op">,</span> <span class="dv">4</span> ]<span class="op">,</span>[ <span class="dv">5</span> <span class="op">,</span> <span class="dv">5</span> ]<span class="op">,</span>[ <span class="dv">6</span> <span class="op">,</span> <span class="dv">6</span> ]<span class="op">,</span>[ <span class="dv">7</span> <span class="op">,</span> <span class="dv">7</span> ]<span class="op">,</span>[ <span class="dv">8</span> <span class="op">,</span> <span class="dv">8</span> ]<span class="op">,</span>[ <span class="dv">9</span> <span class="op">,</span> <span class="dv">9</span> ]<span class="op">,</span>[ <span class="dv">10</span><span class="op">,</span> <span class="dv">10</span>]<span class="op">,</span>[ <span class="dv">11</span><span class="op">,</span> <span class="dv">11</span>]<span class="op">,</span>[ <span class="dv">12</span><span class="op">,</span> <span class="dv">12</span>]<span class="op">,</span>[ <span class="dv">13</span><span class="op">,</span> <span class="dv">13</span>]<span class="op">,</span>[ <span class="dv">14</span><span class="op">,</span> <span class="dv">14</span>]<span class="op">,</span> [ <span class="dv">15</span><span class="op">,</span> <span class="dv">15</span>]<span class="op">,</span>[ <span class="dv">16</span><span class="op">,</span> <span class="dv">16</span>]]))})</span></code></pre></div><button title="העתק ללוח" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-5" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div id="wilderness-encounters-3">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 24%">
+<col style="width: 38%">
+<col style="width: 28%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>(2d8)</th>
+<th><strong>נהר או גדת נהר</strong></th>
+<th><strong>ביצה</strong></th>
+<th><strong>יער או חורש</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2</td>
+<td>דרקון, שחור</td>
+<td>דרקון, שחור</td>
+<td>דרקון, ירוק</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>דג, פיראניה ענקית</td>
+<td>צל*</td>
+<td>אליקורן (ראה חד-קרן)</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>סטריג’</td>
+<td>טרול</td>
+<td>טריאנט</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>דג, בס ענק</td>
+<td>לטאה, דרקו ענק</td>
+<td>אורק</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>חבורת דמויות מנחה: סוחר</td>
+<td>נדל, ענק</td>
+<td>חזיר בר, פראי</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>איש לטאה</td>
+<td>עלוקה, ענקית</td>
+<td>דוב, שחור</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>תנין</td>
+<td>איש לטאה</td>
+<td>בז, ענק</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>צפרדע, ענקית</td>
+<td>תנין</td>
+<td>אנטילופה</td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td>דג, שפמנון ענק</td>
+<td>סטריג’</td>
+<td>זאב</td>
+</tr>
+<tr class="even">
+<td>11</td>
+<td>חבורת דמויות מנחה: שודד ים</td>
+<td>אורק</td>
+<td>עוג</td>
+</tr>
+<tr class="odd">
+<td>12</td>
+<td>טרול</td>
+<td>קרפד, ענק (ראה צפרדע, ענקית)</td>
+<td>דוב, גריזלי</td>
+</tr>
+<tr class="even">
+<td>13</td>
+<td>יגואר</td>
+<td>טרוגלודיט</td>
+<td>זאב, אימים</td>
+</tr>
+<tr class="odd">
+<td>14</td>
+<td>ניקסית</td>
+<td>ורד דמים</td>
+<td>ענק, גבעה</td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td>טרמיט מים, ענק</td>
+<td>עץ תליין</td>
+<td>ינשודוב</td>
+</tr>
+<tr class="odd">
+<td>16</td>
+<td>דרקון, ירוק</td>
+<td>בזיליסק</td>
+<td>חד-קרן</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="מפגשים-בעיר-בעיירה-או-בכפר" class="level2">
+<h2 class="anchored" data-anchor-id="מפגשים-בעיר-בעיירה-או-בכפר">מפגשים בעיר, בעיירה או בכפר</h2>
+<p>חשוב שהמנחה תזכור כי בניגוד לסביבה של מבוך או שטח פתוח, ערים, עיירות וכפרים הם מקומות הומים. במהלך היום, ברוב העיירות יהיו אנשים ברחובות כמעט כל הזמן; היעדר אנשים ברחובות הוא לעיתים קרובות סימן לכך שמשהו מעניין מתרחש. בלילה חלק גדול מן העיירה יהיה חשוך ושקט, והמפגשים יהיו לרוב עם גנבים או טיפוסים מפוקפקים אחרים; אך בקרבת מקומות אכילה (או שתייה) פופולריים עדיין סביר לפגוש אנשים מכל הסוגים. על המנחה לוודא שתיאוריה של סביבת העיירה מבהירים זאת; כמובן, הדבר גם יקשה על השחקנים לזהות מפגשים “אמיתיים”.</p>
+<p>המנחה מוזמנת ליצור טבלאות מפגשים משלה לשימוש בכל עיר, עיירה או כפר שהיא יוצרת (או לקבוע מפגשים באמצעים אחרים אם תרצה בכך); עם זאת, להלן מסופקת קבוצה של טבלאות מפגשים “כלליות” עבור מקרים שבהם הכנה כזו לא נעשתה. גלגלו 2d6 בטבלה שלהלן כדי לקבוע איזה סוג מפגש מתרחש; תיאור של כל סוג מפגש מופיע מתחת לטבלה.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb6" data-startfrom="185" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 184;"><span id="cb6-185"><a href="#cb6-185" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"גלגלי בטבלה"</span><span class="op">,</span> </span>
+<span id="cb6-186"><a href="#cb6-186" aria-hidden="true" tabindex="-1"></a>{<span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> </span>
+<span id="cb6-187"><a href="#cb6-187" aria-hidden="true" tabindex="-1"></a><span class="dt">reduce</span><span class="op">:</span> () <span class="kw">=&gt;</span> <span class="fu">highlightTableRow</span>(<span class="st">"#city-encounters"</span><span class="op">,</span> </span>
+<span id="cb6-188"><a href="#cb6-188" aria-hidden="true" tabindex="-1"></a><span class="fu">generalTableSelect</span>([<span class="dv">2</span><span class="op">,</span><span class="dv">6</span><span class="op">,</span><span class="dv">0</span>]<span class="op">,</span>[[ <span class="dv">2</span> <span class="op">,</span> <span class="dv">2</span> ]<span class="op">,</span>[ <span class="dv">3</span> <span class="op">,</span> <span class="dv">3</span> ]<span class="op">,</span>[ <span class="dv">4</span> <span class="op">,</span> <span class="dv">4</span> ]<span class="op">,</span>[ <span class="dv">5</span> <span class="op">,</span> <span class="dv">5</span> ]<span class="op">,</span>[ <span class="dv">6</span> <span class="op">,</span> <span class="dv">6</span> ]<span class="op">,</span>[ <span class="dv">7</span> <span class="op">,</span> <span class="dv">7</span> ]<span class="op">,</span>[ <span class="dv">8</span> <span class="op">,</span> <span class="dv">8</span> ]<span class="op">,</span>[ <span class="dv">9</span> <span class="op">,</span> <span class="dv">9</span> ]<span class="op">,</span>[ <span class="dv">10</span><span class="op">,</span> <span class="dv">10</span>]<span class="op">,</span>[ <span class="dv">11</span><span class="op">,</span> <span class="dv">11</span>]<span class="op">,</span>[ <span class="dv">12</span><span class="op">,</span> <span class="dv">12</span>]]))})</span></code></pre></div><button title="העתק ללוח" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-6" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div id="city-encounters">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>(2d6)</th>
+<th>מפגש ביום</th>
+<th>מפגש בלילה</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2</td>
+<td>דופלגנגר</td>
+<td>דופלגנגר</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>אציל</td>
+<td>צל*</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>גנב</td>
+<td>כנופיית גיוס</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>בריון</td>
+<td>קבצן</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>משמר העיר</td>
+<td>גנב</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>סוחר</td>
+<td>בריון</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>קבצן</td>
+<td>סוחר</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>כוהן</td>
+<td>חולדה ענקית</td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td>שכיר חרב</td>
+<td>משמר העיר</td>
+</tr>
+<tr class="even">
+<td>11</td>
+<td>קוסם</td>
+<td>קוסם</td>
+</tr>
+<tr class="odd">
+<td>12</td>
+<td>ליקנתרופ, איש-חולדה*</td>
+<td>ליקנתרופ, איש-חולדה*</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>קבצן</strong> מפגשים יתחילו לרוב כאשר קבצן יחיד מתקרב אל החבורה, אך בדרך כלל יהיו באזור 2d4 קבצנים, ואם אחד מחברי החבורה נותן משהו לקבצן הראשון, האחרים יסתערו על החבורה כמו זבובים. כל קבצן הוא בסיכוי של 90% אדם רגיל, ובסיכוי של 10% גנב בדרגה 1, ייתכן שהוא מסייר עבור גילדת הגנבים או כנופיה מקומית.</p>
+<p><strong>בריון</strong> מפגשים יהיו עם 2d4 צעירים קשוחים; כל אחד מהם הוא בסיכוי של 70% אדם רגיל ובסיכוי של 30% לוחם בדרגה 1. בריונים מופיעים בדרך כלל ללא נשק גלוי, וסומכים על יכולתם להילחם בידיים בקרב (אך מחביאים פגיון או חרב קצרה לשימוש במקרה שהקרב מתפתח לרעתם). בריונים עשויים להיות בלתי צפויים במקצת, ולכן ייתכן שהמנחה תרצה להשתמש בגלגול תגובה כדי לקבוע את מצב רוחו של המנהיג.</p>
+<p><strong>משמר העיר</strong> מפגשים יהיו עם 2d6 אנשי משמר, כולם לוחמים בדרגה 1 מלבד מפקד הכיתה, שיהיה בדרגה 2 עד 4. הם יתעמתו עם דמויות הנראות “חשודות”, אך בדרך כלל יזדקקו לסיבה טובה לפני שינסו לעצור דמויות שחקן או להתערב בענייניהן בדרך אחרת.</p>
+<p><strong>דופלגנגר</strong> מפגשים ייראו, כמובן, כמו סוג אחר של מפגש; על המנחה לגלגל שוב כדי לקבוע למה מתחזה הדופלגנגר. יופיעו 1d6 דופלגנגריים; חברי קבוצה נוספים יהיו בני אדם שאינם יודעים שהם נוסעים בחברת מפלצות משנות צורה. אם החבורה מעניינת את הדופלגנגריים, אחד או יותר מהמפלצות ינסו לעקוב אחריהם ולהחליף אחד מחברי החבורה (כמתואר בתיאור המפלצת). במקרים רבים, חבורות של דמויות שחקן לא יגלו את טבעו האמיתי של המפגש אלא זמן רב לאחר מכן.</p>
+<p><strong>חולדה ענקית</strong> מפגשים יתרחשו בדרך כלל בסמטאות, ברציפים או במקומות “נמוכים” אחרים. חולדות אינן מסוכנות בדרך כלל אלא אם כן מתגרים בהן, אך אם הן מופתעות הן עשויות לתקוף. ראו את תיאור המפלצת לפרטים נוספים על סוג מפגש זה.</p>
+<p><strong>ליקנתרופ, איש-חולדה</strong> מפגשים ייראו כמו סוג אחר של מפגש, בין אם מפגש “רגיל” אחר ובין אם מפגש עם חולדה ענקית (בהתאם לנסיבות). אנשי-חולדה הם פחדנים ולא יתקפו חבורה שגודלה שווה לשלהם או גדול ממנה.</p>
+<p><strong>שכיר חרב</strong> מפגשים יכללו 2d6 חברים בחברת שכירי חרב, העוסקים בענייניהם. מנהיג שכירי החרב עשוי להציע משרה לדמויות שחקן מן המקצוע לוחם אם יש להן מוניטין כלשהו.</p>
+<p><strong>סוחרים</strong> הם מחזה נפוץ בעיירות, וניתן לפגוש אותם בעודם עוסקים בכל סוג של עסק. כמו במפגשים עם שכירי חרב, סוחרים עשויים להציע עבודות לדמויות שחקן מעניינות, במיוחד כאלה בעלות מוניטין טוב. ראו <strong>יצירת חבורת דב”שים</strong>, להלן, לפרטים על סוג מפגש זה. (סוחר בעיירה עשוי שלא להיות מלווה בפמליה מלאה כפי שמתואר בהמשך; על המנחה להשתמש בשיקול דעתה ביצירת המפגש).</p>
+<p><strong>אצילים</strong> שנפגשים עם החבורה עשויים גם הם להציע משרות לדמויות שחקן, או להציע פרס עבור משימה מסוכנת כלשהי. דמויות שחקן בעלות מוניטין רע עשויות להיתקל בעימות, לקבל הוראה לעזוב את העיירה, או אפילו להיעצר אם האציל מסוגל להזעיק את משמר העיר. (ראו <strong>יצירת חבורת דב”שים</strong>, להלן, לפרטים על סוג מפגש זה). אציל בעיירה עשוי שלא להיות מלווה בפמליה מלאה כפי שמתואר בהמשך; על המנחה להשתמש בשיקול דעתה ביצירת המפגש.</p>
+<p><strong>כנופיות גיוס בכפייה</strong> יורכבו מ-2d6 לוחמים, כולם בדרגה 1 מלבד אחד או שני מנהיגים בדרגה 2 עד 5. הם יהיו חמושים בנשקים קהים או עשויים להילחם בידיים חשופות, שכן מטרתם היא ללכוד ולא להרוג דמויות שחקן; עם זאת, סביר שלפחות חלק מחברי הכנופיה יישאו פגיונות או חרבות למקרה שיתפתח קרב רציני. כנופיית גיוס לא תתעמת עם חבורה שגודלה שווה או גדול משלה אלא אם החבורה נראית מוחלשת, שיכורה וכדומה. אם החבורה מפסידה, היא תתעורר על סיפון ספינה בלב ים או במחנה צבאי (תלוי אם נתפסה בידי מלחים או חיילים), ללא נשק ותחת חסדי שוביה.</p>
+<p><strong>כוהן</strong> מפגשים יהיו בדרך כלל דומים לקבוצת עולי רגל (ראו <strong>יצירת חבורת דב”שים</strong>, להלן, לפרטים), אם כי הקבוצה שתפגש לא תהיה גדולה כמו זו שניתן לפגוש בשטח פתוח. בדרך כלל יפגש כוהן יחיד בדרגה 1 עד 4, המלווה ב-1d4 מאמינים.</p>
+<p><strong>צל</strong> מפגשים בעיירה יהיו דומים מאוד למפגש כזה מתחת לאדמה; ראו את תיאור המפלצת לפרטים.</p>
+<p><strong>גנב</strong> מפגשים יהיו עם קבוצה של 1d6 גנבים, בדרך כלל מחופשים לאנשי עיירה רגילים ולעיתים לקבצנים. גנב אחד בקבוצה יהיה בדרגה 2 עד 4, והשאר בדרגה 1 בלבד. הם כמובן ינסו לגנוב מן החבורה, אלא אם כן ישגיחו עליהם בזהירות רבה.</p>
+<p><strong>קוסם</strong> מפגשים יכללו קוסם בדרגה 4 עד 7, המלווה ב-1d4-1 שוליות בדרגה 1. על המנחה להחליט מהו מזגו ומצב רוחו של הקוסם. ## יצירת חבורת דמויות מנחה</p>
+</section>
+<section id="יצירת-חבורת-דבשים" class="level2">
+<h2 class="anchored" data-anchor-id="יצירת-חבורת-דבשים">יצירת חבורת דב”שים</h2>
+<section id="הרפתקנים" class="level3">
+<h3 class="anchored" data-anchor-id="הרפתקנים"><strong>הרפתקנים</strong></h3>
+<p>חבורה של הרפתקני דב”שים תכלול בדרך כלל 4–8 דמויות, כך: 1d3 לוחמים, 1d2 גנבים, 1d2 כוהנים ו-1d2-1 קוסמים. בדרך כלל כל הדמויות יהיו בדרגות דומות; לאחר שקובעים מהי הדרגה הממוצעת של החבורה, ניתן להחליט שכמה מן הדמויות יהיו בדרגות נמוכות יותר (כדי לשקף את ה”מחליפים” שמצטרפים בדרך כלל כאשר חלק מן הדמויות נהרגות).</p>
+<p>על המנחה לבחור את הגזע או הגזעים של הרפתקני הדב”שים בהתאם לאזור שבו הם נמצאים (או שממנו הגיעו). סביר ש-80% או יותר מן ההרפתקנים הם בני אדם, 10% הם גמדים, 6% הם בני-מחצית ו-4% הנותרים הם אלפים. אם חבורת ההרפתקנים של הדב”שים היא מרושעת, המנחה רשאית להחליף חלק מחברי החבורה במפלצות דמויות-אדם כגון אורקים, הובגובלינים או גנולים.</p>
+<p>החבורה עשויה להיות יריבה של דמויות השחקן ולהתחרות איתן על אותם אוצרות, או אפילו להיות אויבים של ממש, שודדים מרושעים שעל דמויות השחקן להביס. כמובן, ייתכן גם שהרפתקני הדב”שים הם בעלי ברית או ידידותיים לדמויות השחקן, אך הדבר עלול להקל יתר על המידה על השחקנים.</p>
+</section>
+<section id="שודדים-בריגנדים-ושודדי-דרכים" class="level3">
+<h3 class="anchored" data-anchor-id="שודדים-בריגנדים-ושודדי-דרכים"><strong>שודדים, בריגנדים ושודדי דרכים</strong></h3>
+<p>חבורה של שודדים תכלול בדרך כלל 2d12 לוחמים בדרגה 1 ו-1d6 גנבים בדרגה 1, בהנהגת לוחם או גנב בדרגה 2 עד 5 (1d4+1), או בהנהגת אחד מכל מקצוע (אם יש 11 חברים או יותר בדרגה 1 בסך הכול). בשטח פתוח יהיו לשודדים בדרך כלל סוסים או בהמות רכיבה אחרות המתאימות לשטח (גנובות, כמובן), וכן שריון קל, חרבות וקשתות או רובי קשת. קבעו חפצי קסם כמפורט להלן עבור המנהיגים בלבד; לחברי השורה לא יהיו בדרך כלל חפצי קסם.</p>
+<p>במאורה או במחבוא שלהם, לחבורת שודדים יהיה בדרך כלל אוצר מסוג A (ללא חפצי קסם, שכן הם כבר נקבעו לפי הכללים שלהלן).</p>
+</section>
+<section id="בוקאנירים-ושודדי-ים" class="level3">
+<h3 class="anchored" data-anchor-id="בוקאנירים-ושודדי-ים"><strong>בוקאנירים ושודדי ים</strong></h3>
+<p>ההבדל בין בוקאנירים לשודדי ים הוא במידה רבה עניין של השם שבו הם מעדיפים להיקרא; כך או כך, הם המקבילה הימית של שודדים, התוקפים ספינות אחרות או פושטים על עיירות חוף לשם ביזה.</p>
+<p>חבורת בוקאנירים תכלול 3d8 לוחמים בדרגה 1, בהנהגת לוחם בדרגה 3 עד 6 (1d4+2) ו-1d3 לוחמים בדרגה 2 עד 5. כולם יהיו כמובן מנוסים בהפעלת ספינות. הם יהיו ללא שריון או עם שריון עור בלבד, וחמושים בחרבות ובקשתות או רובי קשת.</p>
+<p>שודדי ים עשויים להופיע במספרים גדולים יותר, אך מספר המנהיגים יהיה דומה לזה המתואר לעיל. צרו חפצי קסם למנהיגים בלבד כפי שמתואר להלן. מטען של שודדי ים או בוקאנירים יכלול אוצר מסוג A ללא חפצי קסם (שכן חפצי הקסם כבר נקבעו עבור הדב”שים); עם זאת, האוצר לא בהכרח יהיה על הספינה, שכן שודדי ים מעדיפים לעיתים לקבור את אוצרותיהם באיים. במקרה כזה, לקפטן או לאחד מסגניו תהיה מפת אוצר המובילה למקום האוצר.</p>
+</section>
+<section id="סוחרים" class="level3">
+<h3 class="anchored" data-anchor-id="סוחרים"><strong>סוחרים</strong></h3>
+<p>סוחרים נאלצים לעיתים קרובות להעביר את סחורותיהם דרך אזורי שטח פתוח. בערך במחצית מן המקרים (50%), חבורת סוחרים יבשתית תונהג בידי סוחר עשיר יחיד; חבורות אחרות יכללו 1d4+1 סוחרים פחות עשירים שהתאגדו יחד למען ביטחונם. יהיו 2d4 עגלות (אך לפחות עגלה אחת לכל סוחר) הנגררות בידי סוסים או פרדות. כל עגלה מונהגת בידי עגלון שהוא אדם רגיל, בדרך כלל ללא שריון וחמוש בפגיון או חרב קצרה. השיירה תעסיק 1d4+2 לוחמים בדרגה 1 ו-1d4 לוחמים בדרגה 2 כשומרים.</p>
+<p>אם המפגש מתרחש בים, חבורת הסוחרים תכלול בדרך כלל ספינה אחת שבבעלות או בהשכרת סוחר יחיד. לספינה יהיה צוות של 2d8+8 מלחים רגילים, שהם אנשים רגילים, ללא שריון וחמושים באלות, פגיונות או חרבות קצרות; הקפטן, הסגן הראשון וקצינים אחרים נבחרים מתוך מספר זה. ספינות גדולות עשויות לדרוש צוותים גדולים יותר. 1d4+2 לוחמים בדרגה 1 ו-1d4 לוחמים בדרגה 2 יהיו על הסיפון כשומרים, כפי שקורה גם בשיירה.</p>
+<p>מלבד סחורות המסחר היקרות אך הכבדות שמובילות השיירה או הספינה, לחבורה כזו יהיה גם אוצר מסוג A ללא חפצי קסם; הוא עשוי להיות מרוכז בתיבה אחת או מפוזר בין העגלות.</p>
+</section>
+<section id="אצילים" class="level3">
+<h3 class="anchored" data-anchor-id="אצילים"><strong>אצילים</strong></h3>
+<p>חבורה אצילית תכלול אציל (כמובן), ייתכן בליווי בן או בת זוג (גם הם אצילים, כמובן) ו/או ילד אחד או יותר. לכל אציל בוגר יהיה לפחות מלווה אחד (עוזר, גבירה מלווה וכדומה).</p>
+<p>אצילים מדרג נמוך יותר (כגון ברונים) יהיו בעלי עגלה או מרכבה אחת הרתומה לסוסים משובחים; אצילים מדרג גבוה יותר יהיו בעלי שתי עגלות או יותר. האציל עשוי לרכוב על סוס מלחמה, אם כי לעיתים יבחר לנסוע במרכבה. לכל מרכבה או עגלה יהיה עגלון, שבמקרה זה יהיה לוחם בדרגה 1 בשריון שרשראות וחמוש בחרב ארוכה. לפחות שני לוחמים רכובים בדרגה 1 עד 4 ילוו את האציל כשומרים; שוב, אצילים מדרג גבוה יותר יהיו מלווים ביותר שומרים. השומרים יהיו בדרך כלל חמושים בחרבות ארוכות ואולי גם ברומחים, לבושים בשריון לוחות, וסוסי המלחמה שלהם יהיו לרוב ממוגנים בשריון שרשראות. קביעת מספר השומרים המדויק נתונה לשיקול דעת המנחה. הסיכויים הרגילים לחפצי קסם חלים כמובן.</p>
+<p>אציל יישא בדרך כלל מעט כסף לשימוש אישי; יש לגלגל אוצר מסוג A כדי לייצג זאת. במקרה זה אין להשמיט חפצי קסם, שכן אצילים נוטים להיות עשירים יותר מחבורה רגילה של אנשים.</p>
+<p>אצילים הם בדרך כלל (70%) אנשים רגילים; אחרת גלגלו 1d10: תוצאה של 1–6 מציינת לוחם, 7–8 מציינת קוסם, 9 מציינת כוהן ו-10 מציינת גנב. (“אצילים” כוהנים הם בישופים, ארכיבישופים וכדומה.) גלגלו 2d4-1 כדי לקבוע את דרגת כל אציל בעל מקצוע.</p>
+</section>
+<section id="עולי-רגל" class="level3">
+<h3 class="anchored" data-anchor-id="עולי-רגל"><strong>עולי רגל</strong></h3>
+<p>חבורת עולי רגל נמצאת בדרכה אל (או ממנה) אתר דתי חשוב או אירוע דתי משמעותי. חבורה כזו תונהג בידי 1d4 כוהנים בדרגה 1–4 (יש לגלגל עבור כל אחד).</p>
+<p>שאר חברי החבורה הם אקראיים למדי; רוב קבוצות עולי הרגל כוללות 3d6 אנשים רגילים (או נשים, אם הדת מאפשרת לנשים לעלות לרגל), 1d6 לוחמים בדרגה 1–4 (יש לגלגל עבור כל אחד) בשריון שרשראות ועם חרב ארוכה, ו-1d4 גנבים בדרגה 1–4 (כל אחד מהם עשוי להיות מאמין אדוק באמת, או אולי נמלט מן החוק). יש גם סיכוי של 50% לקוסם יחיד בדרגה 1–4 המצטרף לחבורה.</p>
+<p>עולי רגל נוטים לנסוע בקלילות, כשהם נושאים תיק אחד כל אחד והולכים ברגל או רוכבים על פרדות או סוסים. חבורת עולי הרגל תישא בדרך כלל מנחות כלשהן ליעדה; צרו אוצר מסוג A לשם כך. אם מתקבלים חפצי קסם, סביר להניח שלא ייעשה בהם שימוש בידי הדב”שים שכן הם כבר הוקדשו לאל או לפנתיאון.</p>
+</section>
+<section id="חפצי-קסם-עבור-דבשים" class="level3">
+<h3 class="anchored" data-anchor-id="חפצי-קסם-עבור-דבשים"><strong>חפצי קסם עבור דב”שים</strong></h3>
+<p>לדב”שים יהיו בדרך כלל חפצי קסם ביחס למקצוע ולדרגה שלהם; הניחו סיכוי של 5% לכל דרגה שלכל לוחם, גנב או כוהן דב”ש יהיה נשק קסום או שריון קסום (יש לגלגל עבור נשק ושריון בנפרד לכל דב”ש). ללא קשר לדרגה, תוצאה של 96–00 נחשבת לכישלון.</p>
+<p>לקוסמים יהיה סיכוי של 4% לכל דרגה לטבעת הגנה (גלגלו את הבונוס כרגיל עבור החפץ), וסיכוי של 3% לכל דרגה לפגיון קסום או למטה הליכה קסום.</p>
+<p>בנוסף, הניחו סיכוי של 2% לכל דרגה שלכל דמות תהיה שיקוי, וסיכוי של 3% לכל דרגה שלכוהן או לקוסם יהיה מגילה כלשהי.</p>
+<p>לבסוף, סכמו את הדרגות של כל חברי החבורה והשתמשו במספר זה כאחוז הסיכוי לכך שחפץ קסם מגוון יימצא ביניהם. אם הגלגול מצליח, חלקו את המספר לשניים וגלגלו שוב; אם גם הגלגול השני מצליח, נמצאים שני חפצים כאלה. אם בחבורה יותר משלושה חברים, ניתן לחלק שוב את המספר בחצי ולגלגל עבור חפץ שלישי. הקצו את חפצי הקסם לדמויות המתאימות ביותר, או גלגלו באקראי אם אינכם בטוחים.</p>
+</section>
+<section id="חבורות-דמויי-אדם" class="level3">
+<h3 class="anchored" data-anchor-id="חבורות-דמויי-אדם"><strong>חבורות דמויי-אדם</strong></h3>
+<p>ההנחה לעיל היא שחבורות דב”שים יהיו בני אדם, או לפחות ברובן; אך המנחה רשאית להציג לעיתים גם חבורות של אלפים, גמדים או בני-מחצית. בדרך כלל חבורה של דמויי-אדם תהיה הומוגנית, חבורת אלפים תורכב מאלפים בלבד, למשל. אם המפגש מתרחש בשטח של גזע אחר, ייתכן שחבורת דמויי-האדם תכלול מדריך שנשכר להוביל אותם ליעדם. לדוגמה, חבורת האלפים שהוזכרה לעיל עשויה לשכור מדריך אנושי כאשר היא נעה דרך ארץ בני אדם.</p>
+<p>המנחה רשאית להשתמש במספרים המופיעים לעיל גם ביצירת חבורות כאלה. שאלה אחת שעל המנחה להכריע בה היא האם כללי “האדם הרגיל” חלים גם על דמויי-אדם, האם קיימים, למשל, “אלפים רגילים”. החלטה זו נתונה לשיקול דעתה של המנחה. אם קיימות דמויות כאלה, יהיו להן אותן יכולות גזעיות כמו לבני גזען האחרים, אך הן יילחמו עם בונוס תקיפה +0 כמו אנשים רגילים. אם אין דמויות כאלה בעולם המערכה, פשוט החליפו את האנשים הרגילים המוזכרים לעיל בלוחמים בדרגה 1.</p>
+</section>
+</section>
+<section id="התמודדות-עם-שחקנים" class="level2">
+<h2 class="anchored" data-anchor-id="התמודדות-עם-שחקנים">התמודדות עם שחקנים</h2>
+<section id="אפשרויות-ליצירת-דמות" class="level3">
+<h3 class="anchored" data-anchor-id="אפשרויות-ליצירת-דמות">אפשרויות ליצירת דמות</h3>
+<p>כללי יצירת הדמות הסטנדרטיים קובעים שיש לגלגל 3d6 עבור כל ערך תכונה לפי הסדר. שחקנים עשויים להתלונן שהם אינם יכולים ליצור את סוג הדמויות שהם רוצים לשחק. להלן כמה אפשרויות שתוכלו לבחור מהן אם תרצו להקל על השחקנים שלכם. שימו לב שאין לאפשר לשחקנים לדרוש אפשרויות אלו; ההחלטה היא של המנחה בלבד.</p>
+<p><strong>העברת נקודות:</strong><br>
+אפשרו לשחקן “להעביר” נקודות מערך תכונה אחד לאחר, בקצב של ‎-2 מערך אחד עבור כל ‎+1 המתווסף לערך האחר. הערך המרבי עדיין 18 (או המקסימום הגזעי אם הוא נמוך יותר), ואין לאפשר לשחקן להוריד שום ערך תכונה מתחת ל-9.</p>
+<p><strong>החלפת ערכים:</strong><br>
+אפשרו לשחקן להחליף בין כל שני ערכי תכונות, פעם אחת לכל דמות.</p>
+<p><strong>ערבוב מלא:</strong><br>
+אפשרו לשחקן לסדר את ששת ערכי התכונות כרצונו. אפשרות זו מאפשרת את מידת ההתאמה האישית הגדולה ביותר לשחקן, אך מצד שני ייתכן שתגלו שכל דמויות השחקן במערכה מתחילות להיראות דומות מאוד זו לזו. לא נדיר ששחקנים “זורקים” את הערך הנמוך ביותר אל כריזמה, למשל.</p>
+</section>
+<section id="דמויות-חסרות-תקווה" class="level3">
+<h3 class="anchored" data-anchor-id="דמויות-חסרות-תקווה">דמויות חסרות תקווה</h3>
+<p>לעיתים שחקן יגלגל ערכי תכונות, יביט בתוצאות, ויכריז שהדמות “חסרת תקווה”. כמובן שאין לחייב שחקן לשחק דמות שיש לה פחות מ-9 בארבעת הערכים הראשונים, שכן במקרה כזה אף אחד מארבעת המקצועות לא יהיה זמין לדמות. עם זאת, ייתכן שהמנחה תבחר לאפשר לשחקן לגלגל דמות חדשה אם הערכים הכוללים נמוכים מהממוצע, גם אם הדמות אינה “חסרת תקווה” לחלוטין.</p>
+<p>הנה הצעה חלופית: אפשרו לשחקן “להפוך” את כל ערכיו על ידי חיסורם מ-21. כך תוצאה של 15 (+1 בונוס) תהפוך ל-6 (-1 מחסר), אך תוצאה של 3 (-3 מחסר) תהפוך ל-18 (+3 בונוס). פעולה זו תהפוך דמות שבעבר היו לה בעיקר מחסרים לדמות שיש לה בעיקר בונוסים. אם מאפשרים זאת, <strong>יש להפוך את כל הערכים</strong>, ולא רק את הגרועים! כך מובטח שהדמות תהיה בת־משחק תוך שמירה על האפשרות להישאר עם כמה מחסרים.</p>
+<p>כמובן ייתכן גם לגלגל ערכים ממוצעים בלבד, כך שלדמות אין בונוסים או מחסרים ולכן אין לה תועלת מהיפוך הערכים. במקרה כזה הבחירה צריכה להיות של השחקן; אם הוא רוצה לגלגל מחדש את כל הערכים, המנחה כנראה צריכה לאפשר זאת.</p>
+</section>
+<section id="רכישת-לחשים" class="level3">
+<h3 class="anchored" data-anchor-id="רכישת-לחשים">רכישת לחשים</h3>
+<p>לכוהנים יש יתרון ברור על פני קוסמים, שכן תאורטית יש להם גישה לכל לחש מכל דרגה שהם מסוגלים להטיל. עם זאת, יש לזכור כי בחירת הלחשים של כוהנים מוגבלת על פי האלוהות, האמונה או האתוס שלהם; למשל, כוהן של אלת ריפוי לא צריך להיות מופתע אם אלוהיו מסרב להעניק לחשי ריפוי הפוכים. אם כוהן מתפלל ללחש שאינו מותר, המנחה רשאית להעניק לדמות לחש אחר, או לחלופין (אם האלוהות כועסת) לא להעניק כלל לחש עבור אותו “משבצת לחש”.</p>
+<p>קוסמים מתחילים את המשחק כשהם יודעים שני לחשים: <strong>קריאת קסם</strong> ועוד לחש אחד (אלא אם המנחה מעניקה יותר לחשי התחלה). בכל פעם שהדמות עולה דרגה היא מקבלת את היכולת להטיל יותר לחשים; בנוסף, בכל דרגה שנייה הקוסם מקבל גישה ללחשים מדרגה גבוהה יותר (עד שכל הדרגות זמינות). עם זאת, עצם קבלת היכולת להטיל לחשים אלה אינה אומרת שהקוסם לומד אותם מיד.</p>
+<p>קוסמים יכולים ללמוד לחשים בכך שקוסם אחר מלמד אותם, או באמצעות לימוד מספר הלחשים של קוסם אחר. כאשר מלמדים לחש, ניתן ללמוד אותו ביום אחד; מחקר של ספר לחשים של קוסם אחר לוקח יום אחד לכל דרגת לחש. בכל מקרה, יש להעתיק את הלחש לספר הלחשים של הקוסם, בעלות של 500 מטבעות זהב לכל דרגת לחש המועתקת.</p>
+<p>קוסם רשאי להוסיף לחש חדש מכל דרגה שהוא מסוגל להטיל בכל זמן; אולם לחשים מדרגות גבוהות יותר אינם יכולים להילמד או להיכלל בספר הלחשים שלו. הקוסם חייב למצוא מורה או להשיג מקור ידע (כגון ספר לחשים של קוסם אחר) כדי ללמוד לחשים חדשים, והעלות לכך נוספת לעלויות המפורטות לעיל. לעיתים קרובות קוסם שומר על קשר עם מורו המקורי, שילמד אותו לחשים חדשים בחינם או בתמורה לשירותים. לעיתים שני קוסמים מסכימים להחליף לחשים ביניהם. במקרים רבים האפשרות היחידה לקוסם תהיה לשלם לקוסם אחר (לעיתים קרובות דב”ש) בין 100 ל-1000 מטבעות זהב לכל דרגת לחש בתמורה להכשרה זו.</p>
+<p>קוסמים יכולים גם ליצור לחשים חדשים לחלוטין (או לשנות לחשים קיימים); ראו את כללי <strong>מחקר לחשים</strong>, להלן, לפרטים.</p>
+</section>
+<section id="מגבלות-נשק-ושריון" class="level3">
+<h3 class="anchored" data-anchor-id="מגבלות-נשק-ושריון">מגבלות נשק ושריון</h3>
+<p>לכמה גזעים ומקצועות יש מגבלות על שימוש בנשק ו/או שריון. מה קורה כאשר שחקן מכריז שדמותו עומדת להשתמש בנשק אסור או ללבוש שריון אסור?</p>
+<p><strong>כוהנים:</strong><br>
+האיסור על שימוש בנשק חד הוא עניין של אמונה עבור כוהנים. לכן, אם כוהן משתמש בנשק אסור, הוא מאבד מיד את הגישה ללחשיו וכן את היכולת לגרש אל־מתים. כוהן דב”ש בדרגה גבוהה יותר מאותה אמונה חייב להטיל על העבריין משימה כלשהי שעליו להשלים כדי לכפר ולהשיב את כוחותיו. אם הדמות אינה מתחרטת, היא משתנה לצמיתות מכוהן ללוחם. יש לחשב מחדש את דרגת הדמות על פי טבלת הלוחם תוך שימוש בסך נקודות הניסיון הנוכחי. נקודות הפגיעה ובונוס התקיפה נשארים כפי שהם; את בונוס התקיפה משנים רק לאחר שהדמות עולה דרגה כלוחם, ובכל עליית דרגה יש לגלגל קוביות פגיעה של לוחם כרגיל.</p>
+<p><strong>קוסמים:</strong><br>
+דמויות אלו פשוט אינן מאומנות בשום נשק מלבד אלה המותרים להן, ולכן עליהן לסבול מחסר של ‎-5 להתקפה כאשר הן משתמשות בנשק אסור. קוסם הלובש שריון אינו יכול להטיל לחשים כלל; כל ניסיון כזה נכשל והלחש אובד.</p>
+<p><strong>גנבים:</strong><br>
+לבישת שריון כבד יותר, מגביל יותר ו/או רועש יותר משריון עור מונעת שימוש בכל יכולת של גנב, כולל יכולת התקפת הפתע. גנבים יכולים לבחור ללבוש שריון כזה, אך אז הם אינם אלא חיקוי גרוע של לוחם.</p>
+<p><strong>גמדים ובני-מחצית:</strong><br>
+דמויות אלו אינן רשאיות להשתמש בנשקים גדולים, בעיקר בשל קומתן הנמוכה ומשקלן היחסי הקטן. קשה להניף נשק כאשר הנשק מנסה להניף אותך. אם דמות כזו מנסה להשתמש בנשק אסור, המנחה רשאית להטיל מחסר של ‎-5 להתקפה בשל הקושי להשתמש בנשק, או לחלופין לקבוע שהניסיון נכשל, לפי בחירתה.</p>
+</section>
+<section id="הכרעה-במשאלות" class="level3">
+<h3 class="anchored" data-anchor-id="הכרעה-במשאלות">הכרעה במשאלות</h3>
+<p>משאלות הן מן הדברים העלולים לערער ביותר את האיזון במשחק. באמצעות ניסוח מדויק של משאלה, דמות שחקן יכולה לחולל שינויים רחבי היקף בעולם המשחק, ואולי אף לשכתב את ההיסטוריה. לפני שתאפשרו לדמויות השחקן במשחקכם גישה אפילו למשאלה אחת, חשבו היטב כיצד תתמודדו עם הדבר.</p>
+<p>משאלות ניתנות בידי מגוון ישויות. גם כאשר משאלה מגיעה מחפץ (טבעת או חרב, למשל), ישות חוץ־ממדית כלשהי, אל, שד או יצור אחר, היא זו שהטמיעה את המשאלה בחפץ. משאלה תיטה לקדם את מטרות הישות המעניקה אותה; אם המעניק הוא אפריטי מרושע, למשל, הוא ינסה לעוות את משמעות המשאלה כך שלא באמת תעניק לדמות השחקן את מה שרצתה. מצד שני, אם המעניק הוא אחת מן הישויות הטובות, הוא ימלא את המשאלה ככוונתה כל עוד הדמות אינה חמדנית או נקמנית.</p>
+<p>איזון המשחק הוא השיקול העיקרי שיש לקחת בחשבון. שימוש במשאלה כדי לרפא את כל החבורה, לשגר את כולם ללא טעות למקום מרוחק, או להימנע מקרב קטסטרופלי או לבצעו מחדש, הוא סביר. משאלה המחזירה דמות לחיים ולבריאות היא סבירה, אך משאלה שלא רק מחזירה אותה אלא גם משפרת אותה אינה סבירה.</p>
+<p>באופן כללי, משאלה מתגשמת לפחות בדיוק מילולי, מילות המשאלה חייבות להתממש. החריג הוא משאלות שאינן סבירות מבחינת איזון המשחק; הן עדיין מתפרשות מילולית, אך ייתכן שיתגשמו רק באופן חלקי. בדוגמה האחרונה לעיל, למשל, הכוח המעניק את המשאלה יחזיר ככל הנראה את הדמות לחיים ולבריאות אך יתעלם מן ה”שיפורים” שהתבקשו.</p>
+</section>
+</section>
+<section id="חוקים-אופציונליים" class="level2">
+<h2 class="anchored" data-anchor-id="חוקים-אופציונליים">חוקים אופציונליים</h2>
+<section id="מוות-וגסיסה" class="level3">
+<h3 class="anchored" data-anchor-id="מוות-וגסיסה">מוות וגסיסה</h3>
+<p>הכללים קובעים כי כאשר דמות מגיעה לאפס נקודות פגיעה היא מתה. אם זה נראה לכם חמור מדי, הנה כמה דרכים לשנות את המצב:</p>
+<p><strong>החייאת מתים:</strong><br>
+הגישה הראשונה אינה משנה כלל את הכללים. סדרו את הדברים כך שדמויות שנהרגות בהרפתקה יוכלו להיות <strong>מוחזרות לחיים</strong> בקלות יחסית (אך בעלות משמעותית). הדבר לא רק “מטפל” בנושא התמותה, אלא גם סופג עודפי אוצרות ומונע מדמויות השחקן להפוך לעשירות מדי מכדי להתעניין בהרפתקאות. בנוסף, הדבר נוטה לתגמל שחקנים זהירים (שכן הם שומרים על הזהב שלהם לעיתים קרובות יותר).</p>
+<p>ומה אם לדמויות אין מספיק כסף כאשר הן מתות כדי לממן <strong>החייאה</strong>? אפשרו למוסד הדתי המקומי <strong>להחיות</strong> הרפתקנים מתים בתמורה לשעבוד זמני… כלומר, ההרפתקנים, לאחר שהוחזרו לחיים, חייבים לכנסייה או למקדש את הסכום שהיה עולה להחיותם, <em>או שירות שווה ערך</em>. כך למנהיגים הדתיים המקומיים יהיה מאגר זמין של הרפתקנים לביצוע משימות מסוכנות עבורם.</p>
+<p>אבל ההרפתקן או ההרפתקנים הרי מתים, כיצד הם יכולים להסכים לשעבוד? יש שתי אפשרויות: הכוהנים יכולים להשתמש בלחש <strong>דיבוב מתים</strong> כדי לקבל הסכמה, או שההרפתקנים יכולים לחתום על הסכם עם הכנסייה לפני יציאה להרפתקה מסוכנת. האפשרות השנייה אף עשויה להיחשב לנוהל מקובל במקומות מסוימים.</p>
+<p><strong>גלגול הצלה נגד מוות:</strong><br>
+השינוי הראשון בכללים מאפשר לדמויות שהגיעו לאפס נקודות פגיעה לבצע גלגול הצלה נגד קרן מוות כדי להימנע ממוות. אם גלגול ההצלה נכשל, הדמות מתה מיד כפי שקורה לפי הכללים הרגילים. אם גלגול ההצלה מצליח, הדמות נשארת בחיים במשך 2d10 סיבובים; אם פצעיה נחבשים (או שהיא מקבלת ריפוי קסום) במסגרת זמן זו, המוות נמנע. הדמות נשארת מחוסרת הכרה במשך כל 2d10 הסיבובים שנקבעו בגלגול, היא תמות אם לא תטופל, או תתעורר אם פצעיה נחבשים.</p>
+<p>חבישת פצעי הדמות הגוססת מייצבת אותה על 0 נקודות פגיעה. ריפוי לא קסום ידרוש שבוע מלא כדי להחזיר את נקודת הפגיעה הראשונה; לאחר מכן ההחלמה מתקדמת בקצב הרגיל.</p>
+<p>ריפוי קסום ישיב לדמות את מספר נקודות הפגיעה שנקבע בגלגול הריפוי (עד למקסימום הרגיל כמובן).</p>
+<p>שימו לב שכל מטיל לחשים שהגיע לאפס נקודות פגיעה ושורד לאחר מכן מאבד את כל הלחשים המוכנים שנותרו לו.</p>
+<p>ניתן לשלב כלל זה עם ההצעות שבסעיף <strong>החייאת מתים</strong> לעיל.</p>
+<p><strong>נקודות פגיעה שליליות:</strong><br>
+במקום לעצור באפס נקודות פגיעה, המשיכו לעקוב אחר הערך השלילי. בסוף כל סיבוב לאחר נפילתה, הדמות מאבדת נקודת פגיעה נוספת. אם מגיעים לסך של ‎-10, הדמות מתה. לפני שמגיעים לנקודה זו, ניתן לחבוש את פצעיה ו/או להעניק לה ריפוי קסום, מה שייצב את מצבה. הדמות הפצועה אינה יכולה לנוע יותר מכמה מטרים ללא עזרה, ואינה יכולה להילחם או להטיל לחשים עד שנקודות הפגיעה שלה עולות שוב מעל לאפס. כלל זה <strong>לא</strong> צריך להיות משולב עם האפשרות של גלגול הצלה נגד מוות.</p>
+<p>כמו בכלל <strong>גלגול הצלה נגד מוות</strong>, מטילי לחשים ששורדים לאחר שהגיעו לאפס או לערך שלילי של נקודות פגיעה מאבדים את כל הלחשים המוכנים שלהם.</p>
+<p>כאופציה נוספת, המנחה יכולה לבחור להשתמש במספר שלילי השווה לערך החוסן של הדמות במקום במספר הקבוע ‎-10.</p>
+</section>
+<section id="רעל-גלגול-הצלה-או-מוות" class="level3">
+<h3 class="anchored" data-anchor-id="רעל-גלגול-הצלה-או-מוות">רעל “גלגול הצלה או מוות”</h3>
+<p>רעלים, כפי שמתוארים בפרקי המפגשים והמפלצות, הורגים דמויות מיד. מנחות עשויות לגלות שהדבר מעלה מעט יותר מדי את שיעור התמותה של דמויות השחקן. מצד שני, רעלים <strong>אמורים</strong> להיות מפחידים. הנה כלל אופציונלי שעשוי להקל מעט מבלי להסיר לחלוטין את האיום:</p>
+<p>כאשר מצוין רעל מסוג “גלגול הצלה או מוות”, הקורבן חייב לבצע גלגול הצלה נגד רעל או לספוג 1d6 נזק בכל סיבוב במשך 6 סיבובים, החל מהסיבוב שלאחר החשיפה לרעל; מדובר בממוצע של 21 נקודות נזק, אך אפילו דמות בדרגה 1 עשויה לשרוד בעזרת מזל ושילוב של ריפוי קסום. המנחה יכולה כמובן ליצור רעלים השונים מן הערכים הללו. אם משתמשים בכלל האופציונלי של <strong>נקודות פגיעה שליליות</strong>, מומלץ להגדיל את משך הרעל ל-10 סיבובים (ממוצע של 35 נקודות נזק).</p>
+</section>
+<section id="הענקת-נקודות-ניסיון-עבור-אוצר-שנאסף" class="level3">
+<h3 class="anchored" data-anchor-id="הענקת-נקודות-ניסיון-עבור-אוצר-שנאסף">הענקת נקודות ניסיון עבור אוצר שנאסף</h3>
+<p>המנחה יכולה גם להעניק נקודות ניסיון עבור אוצר שנאסף, בקצב של 1 מטבע זהב = 1 נק”נ. כלל זה אופציונלי; מנחות הרוצות לקדם את השחקנים לדרגות גבוהות במהירות רבה יותר עשויות לבחור להשתמש בו, בעוד שמנחות המעדיפות קצב התקדמות איטי יותר יכולות לוותר עליו. אם מוענק ניסיון עבור אוצר, יש להעניק אותו רק עבור אוצר שנאסף והוחזר למקום בטוח. לחלופין, המנחה יכולה לדרוש שהאוצר יוצא על אימונים כדי שייחשב לניסיון. זוהי דרך יעילה מאוד להסיר עודפי אוצר מן המערכה.</p>
+</section>
+<section id="גלגולי-תכונה" class="level3">
+<h3 class="anchored" data-anchor-id="גלגולי-תכונה">גלגולי תכונה</h3>
+<p>יהיו מקרים שבהם דמות שחקן תנסה לבצע פעולה שאין לה כלל מפורש במשחק. במקרים מסוימים התכונה היחידה שנראית מתאימה עשויה להיות ערך תכונה. הנה שיטה מוצעת לביצוע גלגולים כנגד תכונות שנותנת סיכוי טוב יותר לדמויות בדרגות גבוהות:</p>
+<p>השחקן מגלגל 1d20 ומוסיף את בונוס התכונה המתאימה (לפי החלטת המנחה), וכן כל בונוס או מחסר נסיבתי שהמנחה קובעת. לאחר מכן יש לעיין בטבלה הבאה. אם התוצאה הכוללת שווה למספר המטרה או גבוהה ממנו, הגלגול מצליח.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>דרגה</strong></th>
+<th><strong>מספר מטרה</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NM או 1</td>
+<td>17</td>
+</tr>
+<tr class="even">
+<td>2–3</td>
+<td>16</td>
+</tr>
+<tr class="odd">
+<td>4–5</td>
+<td>15</td>
+</tr>
+<tr class="even">
+<td>6–7</td>
+<td>14</td>
+</tr>
+<tr class="odd">
+<td>8–9</td>
+<td>13</td>
+</tr>
+<tr class="even">
+<td>10–11</td>
+<td>12</td>
+</tr>
+<tr class="odd">
+<td>12–13</td>
+<td>11</td>
+</tr>
+<tr class="even">
+<td>14–15</td>
+<td>10</td>
+</tr>
+<tr class="odd">
+<td>16–17</td>
+<td>9</td>
+</tr>
+<tr class="even">
+<td>18–19</td>
+<td>8</td>
+</tr>
+<tr class="odd">
+<td>20</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="הכנת-לחשים-מן-הזיכרון" class="level3">
+<h3 class="anchored" data-anchor-id="הכנת-לחשים-מן-הזיכרון">הכנת לחשים מן הזיכרון</h3>
+<p>לעיתים קוסם ירצה להכין לחשים אך ספר הלחשים שלו אינו זמין; הדבר עשוי לקרות כאשר הספר נהרס או נגנב, וגם כאשר הקוסם נתפס או נלכד.</p>
+<p>קוסם יכול תמיד להכין את הלחש <strong>קריאת קסם</strong> מן הזיכרון. לחשים אחרים דורשים גלגול תכונה של תבונה, כפי שתואר לעיל, עם מחסר בגלגול השווה לדרגת הלחש.</p>
+<p>כישלון מבזבז את משבצת הלחש כאילו הלחש הוכן והוטל בהצלחה; לכן אם קוסם בדרגה 5 מנסה להכין את הלחש <strong>כדור אש</strong> מן הזיכרון ונכשל, לא יהיו לו לחשים מדרגה 3 באותו יום.</p>
+</section>
+<section id="יכולות-גנב" class="level3">
+<h3 class="anchored" data-anchor-id="יכולות-גנב">יכולות גנב</h3>
+<p>יש שחקנים של גנבים המעוניינים בשליטה רבה יותר ביכולות הגנב שלהם. אם תבחנו את טבלת יכולות הגנב, תגלו את הסוד שלה: בדרגות 2–9 הגנב משתפר ב-30 נקודות אחוז בסך הכול בכל דרגה; בדרגות 10–15 ב-20 נקודות אחוז; ומדרגה 16 ומעלה ב-10 נקודות אחוז. אם תרצו לאפשר התאמה אישית, פשוט אפשרו לשחקן לחלק את הנקודות כרצונו במקום לעקוב אחרי הטבלה. אין לאפשר הוספה של יותר מ-10 נקודות אחוז ליכולת גנב אחת בכל עליית דרגה. בנוסף, אין להעלות שום יכולת גנב מעל 99%.</p>
+</section>
+</section>
+<section id="מחקר-קסום" class="level2">
+<h2 class="anchored" data-anchor-id="מחקר-קסום">מחקר קסום</h2>
+<section id="כללים-כלליים-למחקר" class="level3">
+<h3 class="anchored" data-anchor-id="כללים-כלליים-למחקר">כללים כלליים למחקר</h3>
+<p>בשלב מסוים קוסם או כוהן עשויים לרצות להתחיל ליצור חפצי קסם או להמציא לחשים. הדבר נקרא <strong>מחקר קסום</strong>. עבור כל מחקר, קוסם חייב להחזיק מגדל או מעבדה, בעוד שכוהן זקוק למקדש או כנסייה מקודשים כראוי של אמונתו. בנוסף, תהיה עלות ליצירת כל חפץ, זמן מינימלי הנדרש ליצירתו, וסיכוי נתון להצלחה. אם הגלגול נכשל, בדרך כלל הזמן והכסף מתבזבזים ויש להתחיל את התהליך מחדש מההתחלה; עם זאת, יש לעיין בכללים המפורטים להלן לגבי חריגים.</p>
+<p><em>כמעט בכל המקרים, על המנחה לבצע את הגלגול הזה בסתר.</em> יש מצבים רבים שבהם הדמות (או השחקן) לא אמורים לדעת האם הגלגול באמת נכשל, או האם המנחה החליטה שהמחקר בלתי אפשרי עבור הדמות. המנחה יכולה להחליט לספר לשחקן שהמחקר בלתי אפשרי אם הגלגול מצליח; אם הגלגול נכשל, זה כל מה שהשחקן צריך לדעת.</p>
+<p>באופן כללי, כוהנים יכולים ליצור רק חפצי קסם המשחזרים את ההשפעות של לחשי כוהן; כוהנים יכולים גם ליצור נשקים ושריונות מכושפים, אפילו כאלה שאינם רשאים להשתמש בהם בעצמם (שכן ייתכן שהם יוצרים נשק או שריון עבור מאמינים אחרים של אמונתם). קוסמים יכולים ליצור כל סוג של חפץ קסם, למעט חפצים המשחזרים לחשי כוהן שאין להם לחש קוסם מקביל.</p>
+<p>זמן המוקדש למחקר קסום חייב להיות ימי עבודה של שמונה שעות, עם הפסקות שאינן נמשכות יותר מיומיים. הפסקות ארוכות יותר גורמות לכישלון אוטומטי של המיזם.</p>
+<p>המנחה יכולה, אם תרצה בכך, להעניק נקודות ניסיון לדמויות שמשלימות בהצלחה מחקר קסום. מומלץ שהקצב יהיה 1 נק”נ לכל 10 מטבעות זהב שהוצאו על המחקר. פרס זה יכול להינתן עבור כל מחקר, או רק עבור יצירת חפצי קסם, או לא להינתן כלל אם המנחה מעדיפה להדגיש התקדמות דרך הרפתקאות.</p>
+</section>
+<section id="מחקר-לחשים" class="level3">
+<h3 class="anchored" data-anchor-id="מחקר-לחשים">מחקר לחשים</h3>
+<p>מחקר לחשים חדשים הוא הסוג הנפוץ ביותר של מחקר קסום. קוסם יכול לחקור לחש סטנדרטי ובכך להסיר את הצורך במורה או מקור עזר; לחלופין, כוהן או קוסם יכולים לחקור לחש חדש לחלוטין. כמובן, אף דמות אינה יכולה להמציא או לחקור לחש בדרגה גבוהה יותר מזו שהיא מסוגלת להטיל.</p>
+<p>אם הדמות ממציאה לחש מאפס, על המנחה לקבוע את דרגת הלחש ולשפוט האם הלחש אפשרי “כפי שהוא”. המנחה אינה חייבת לספר לשחקן האם הלחש אפשרי, ולמעשה ייתכן שעדיף שלא תעשה זאת.</p>
+<p>עלות מחקר לחש היא 1,000 מטבעות זהב לכל דרגת לחש עבור לחשים “סטנדרטיים”, או 2,000 מטבעות זהב לכל דרגת לחש עבור לחשים חדשים שהומצאו; בכל אחד מן המקרים נדרש שבוע אחד לכל דרגת לחש כדי להשלים את המחקר. סיכוי ההצלחה הוא 25%, ועוד 5% לכל דרגה של הדמות, פחות 10% לכל דרגת לחש; סיכוי ההצלחה המרבי הוא 95%.</p>
+<p>אם גלגול המחקר מצליח, הדמות יכולה להוסיף את הלחש לספר הלחשים שלה (אם היא קוסם) או יכולה להתפלל ללחש בהמשך (אם היא כוהן). במקרה של כישלון, הזמן והכסף הושקעו לשווא. כוהנים של אותה אלוהות, אמונה או אתוס יכולים ללמד זה את זה את התפילות הדרושות כדי לקבל גישה ללחשים חדשים; הדבר נמשך שעה אחת לכל דרגת לחש. התהליך להחלפת לחשים עם קוסמים אחרים כבר הוסבר (בסעיף רכישת לחשים לעיל).</p>
+<p>כפי שהוזכר לעיל, המנחה יכולה להחליט שלחש חדש מוצע אינו “מתאים” למערכה שלה; חזק מדי, בדרגה נמוכה מדי וכדומה. במקום לומר זאת לשחקן, ניתן להשתמש בשתי אסטרטגיות.</p>
+<p>ראשית, המנחה יכולה להחליט לשכתב את הלחש. אם הגלגול מצליח, המנחה מציגה לשחקן גרסה מתוקנת של הלחש, כשהיא מותאמת כפי שהמנחה מוצאת לנכון למטרות איזון המשחק.</p>
+<p>החלופה, המתאימה יותר כאשר המנחה סבורה שהלחש צריך להיות בדרגה גבוהה יותר מזו שהדמות מסוגלת להטיל, היא לבצע את הגלגול בכל זאת. אם הגלגול נכשל, זה כל מה שהשחקן צריך לדעת; אך אם הוא מצליח, המנחה תציג לשחקן את הגרסה המתוקנת של הלחש ותסביר שהדמות יכולה לנסות שוב כאשר תגיע לדרגה גבוהה מספיק כדי להטיל אותו. במקרה זה, המנחה יכולה לאפשר לדמות להפחית בחצי את הזמן או את העלות כאשר המחקר ינוסה שוב בדרגה הגבוהה יותר.</p>
+</section>
+<section id="מחקר-חפצי-קסם" class="level3">
+<h3 class="anchored" data-anchor-id="מחקר-חפצי-קסם">מחקר חפצי קסם</h3>
+<p>כל דמות הרוצה ליצור חפצי קסם חייבת לדעת את כל הלחשים (אם יש כאלה) שאמורים להיות מוטבעים בחפץ. חפצים שמייצרים השפעות שאינן תואמות שום לחש ידוע עשויים לדרוש מחקר נוסף (כדי לפתח לחש לא ידוע) אם המנחה תרצה בכך.</p>
+<p>חלק מחפצי הקסם דורשים רכיב מיוחד אחד או יותר שבדרך כלל אי אפשר לקנות. רכיבים מיוחדים יכולים לשמש פעם אחת בלבד במיזם כזה. לדוגמה, המנחה עשויה לדרוש את עורה של בהמת היסט כדי ליצור <strong>גלימת תעתוע</strong>, או רוק של דרקון אדום כדי ליצור <strong>מטה כדורי אש</strong>. שימו לב שיש כללים ייעודיים לרכיבים בסעיף חפצי קסם אחרים, להלן.</p>
+<p>דרישות לרכיבים מיוחדים הן לחלוטין לפי בחירת המנחה, ובדרך כלל משמשות להאט יצירה של חפצי קסם חזקים שעלולים לערער את איזון המערכה. זו גם דרך טובה להוביל את מטיל הלחשים (ואת חבורתו) להרפתקאות מסוכנות.</p>
+</section>
+<section id="סיכוי-להצלחה" class="level3">
+<h3 class="anchored" data-anchor-id="סיכוי-להצלחה">סיכוי להצלחה</h3>
+<p>אלא אם צוין אחרת להלן, סיכוי הבסיס להצלחה ביצירת חפץ קסם הוא 15% ועוד 5% לכל דרגה של מטיל הלחשים, ועוד מלוא ערך התבונה של מטיל הלחשים (אם הוא קוסם) או החוכמה (אם הוא כוהן). כך, למטיל לחשים בדרגה 9 עם 15 בדרישה העיקרית יש סיכוי בסיס של 75%.</p>
+</section>
+<section id="מגילות-לחש" class="level3">
+<h3 class="anchored" data-anchor-id="מגילות-לחש">מגילות לחש</h3>
+<p>מטיל לחשים יכול ליצור מגילה המכילה כל לחש שיש לו גישה אליו (לקוסם: לחשים בספר הלחשים שלו; לכוהן: כל לחש שהדמות עשויה להצליח להתפלל אליו). העלות היא 500 מטבעות זהב לכל דרגת לחש, והזמן הנדרש הוא יום אחד לכל דרגת לחש.</p>
+<p>יש להפחית את סיכוי ההצלחה לפי דרגת הלחש הנכתב, בקצב של ‎-10% לכל דרגה.</p>
+<p>אם הגלגול נכשל, הכישוף של המגילה נכשל; עם זאת, אם המטיל מנסה שוב לכתוב את אותו לחש, או העלות או הזמן מצטמצמים בחצי (לפי בחירת הדמות).</p>
+</section>
+<section id="חפצים-אחרים-לשימוש-חד-פעמי" class="level3">
+<h3 class="anchored" data-anchor-id="חפצים-אחרים-לשימוש-חד-פעמי">חפצים אחרים לשימוש חד-פעמי</h3>
+<p>מגילות (מלבד מגילות לחש), שיקויים, ועוד כמה חפצים (כגון <strong>מקל ביטול</strong>) הם חפצים לשימוש חד-פעמי. חפצים אלה יכולים להיווצר בידי קוסמים או כוהנים בדרגה 7 ומעלה.</p>
+<p>סיכוי ההצלחה הוא כפי שניתן עבור מגילות לעיל כאשר החפץ הנוצר משחזר לחש ידוע (או כאשר המנחה מחליטה שלחש חייב להיווצר, כפי שתואר לעיל). עבור סוגים אחרים של חפצים, על המנחה להקצות דרגת לחש כפי שתמצא לנכון, והעלות והזמן הנדרשים מוכפלים (כדי לפצות על מחקר הלחש או הידע הנדרש עבור חפצים המשחזרים לחשים). הזמן הנדרש הוא שבוע אחד ועוד יום אחד לכל דרגת לחש (או שווה ערך), והעלות לכישוף החפץ היא 50 מטבעות זהב לכל דרגת לחש, לכל יום.</p>
+<p>שיקויים הם מקרה מיוחד; הדמות היוצרת שיקוי יכולה ליצור מנה גדולה, הכוללת כמה מנות, שניתן לבקבק בבקבוקונים נפרדים או לאחד לכלי גדול יותר. עבור כל מנה נוספת הנוצרת באותו זמן, הפחיתו את סיכוי ההצלחה ב-5% והגדילו את הזמן הנדרש ביום אחד. שימו לב שהגדלת הזמן הנדרש תגדיל ישירות את העלות. אם גלגול היצירה נכשל, כל המנה מתקלקלת.</p>
+</section>
+<section id="חפצי-קסם-קבועים" class="level3">
+<h3 class="anchored" data-anchor-id="חפצי-קסם-קבועים">חפצי קסם קבועים</h3>
+<p>יצירת חפצי קסם קבועים (טבעות, נשקים, שרביטים, מטות, ורוב חפצי הקסם המגוונים) דורשת קוסם או כוהן בדרגה 9 ומעלה.</p>
+<p>כאשר מכשפים חפץ בעל כמה יכולות, כל יכולת בחפץ דורשת גלגול הצלחה נפרד; הכישלון הראשון מסיים את תהליך הכישוף. חפץ כזה עדיין יבצע את הכוחות או ההשפעות שכבר הוטבעו בו בהצלחה, אך לא ניתן להוסיף לו כישוף נוסף.</p>
+<p>חפצי קסם קבועים, כולל נשקים (המפורטים להלן), חייבים להיווצר מחפצים איכותיים. עלות חפצים כאלה תהיה בדרך כלל פי עשרה מן העלות הרגילה לחפץ כזה.</p>
+</section>
+<section id="כישוף-נשקים" class="level3">
+<h3 class="anchored" data-anchor-id="כישוף-נשקים">כישוף נשקים</h3>
+<p>עלות הבסיס לכישוף נשק או שריון היא 1,000 מטבעות זהב לכל נקודת בונוס. עבור נשקים עם שני בונוסים, חלקו את הבונוס הגדול בחצי (ללא עיגול) והוסיפו את הבונוס הקטן; כך, <strong>חרב +1, +3 נגד דרקונים</strong> תעלה 2,500 מטבעות זהב לכישוף. כישוף נשק אורך שבוע אחד ועוד יומיים לכל נקודת בונוס; לכן החרב שתוארה תדרוש שנים-עשר ימים לכישוף.</p>
+<p>יש להפחית את סיכוי ההצלחה ב-10% כפול הבונוס; לכן <strong>חרב +1</strong> תפחית את סיכוי הבסיס ב-10%, ואילו <strong>חרב +1, +3 נגד דרקונים</strong> שתוארה לעיל תפחית את סיכוי הבסיס ב-25%. בנוסף, ניתן להגדיל את סיכוי ההצלחה ב-25% על ידי הכפלת העלות והזמן הנדרשים (על החלטה זו להיאמר לפני ביצוע הגלגול).</p>
+<p>עבור נשקים בעלי כוחות נוספים, שלבו את הכללים לעיל עם הכללים ליצירת חפצים קבועים. כל הכישופים חייבים להתבצע ב”סשן” כישוף אחד.</p>
+</section>
+<section id="חפצי-קסם-אחרים" class="level3">
+<h3 class="anchored" data-anchor-id="חפצי-קסם-אחרים">חפצי קסם אחרים</h3>
+<p>לחפצי קסם יכולים להיות כמה <strong>מאפיינים</strong>. כל מאפיין המתווסף לחפץ קסם מגדיל את העלות ואת הזמן הנדרשים, ומפחית את סיכוי ההצלחה. המאפיינים הם כדלהלן:</p>
+<p><strong>יוצר לחש או השפעה דמוית-לחש:</strong> זהו המאפיין הבסיסי של כל חפצי הקסם שאינם נשקים. עלות הבסיס של כישוף זה היא 500 מטבעות זהב לכל דרגת לחש; הזמן הנדרש הוא חמישה ימים ועוד יומיים לכל דרגה. אם לחפץ הקסם יש כמה השפעות של לחש או דמויות-לחש, חברו את ערכי העלות והזמן. סיכוי ההצלחה מופחת ב-5% לכל דרגת לחש.</p>
+<p><strong>יש לו מספר מטענים:</strong> זה כולל כמובן שרביטים ומטות, אך גם כמה חפצי קסם אחרים יכללו מטענים. לכל לחש או השפעה דמוית-לחש יש בדרך כלל מאגר מטענים נפרד (אך ראו להלן). הטבלה הבאה מציגה את רמות המטענים המרביות ואת ההתאמות לעלות, זמן וסיכוי:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>רמת מטענים</th>
+<th>עלות לכל מטען</th>
+<th>מטענים ליום</th>
+<th>סיכוי</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2–3</td>
+<td>+150 מ”ז</td>
+<td>1</td>
+<td>-5%</td>
+</tr>
+<tr class="even">
+<td>4–7</td>
+<td>+125 מ”ז</td>
+<td>2</td>
+<td>-10%</td>
+</tr>
+<tr class="odd">
+<td>8–20</td>
+<td>+100 מ”ז</td>
+<td>3</td>
+<td>-20%</td>
+</tr>
+<tr class="even">
+<td>21–30</td>
+<td>+75 מ”ז</td>
+<td>4</td>
+<td>-30%</td>
+</tr>
+</tbody>
+</table>
+<p>בעת השימוש בטבלה לעיל, אל תחשבו את המטען הראשון לצורכי עלות או זמן. שימו לב שכל מאגר מטענים נפרד בחפץ חייב להיחשב בנפרד.</p>
+<p><strong>ניתן לטעון מחדש את החפץ:</strong> חשבו את תוספת העלות והזמן ואת המחסר לסיכוי ההצלחה עבור חפצים הניתנים לטעינה מחדש כאילו הם פי שניים מן הערכים בטבלה לעיל; כך יצירת חפץ הניתן לטעינה מחדש עם 3 מטענים עולה 600 מ”ז יותר במקום 300 מ”ז יותר, ונדרשת יומיים לכל מטען (או ארבעה ימים נוספים); סיכוי ההצלחה מונמך ב-10% במקום 5%.</p>
+<p><strong>החפץ טוען את עצמו:</strong> יצירת חפץ הטוען את עצמו יקרה; יש להחיל את ההתאמות הבאות על עלות המטענים, הזמן וסיכוי ההצלחה עבור חפצים הנטענים אוטומטית. שימו לב שחפצים הטוענים את עצמם לעולם אינם “ניתנים לטעינה” במובן שלא ניתן לטעון אותם אלא על ידי עצמם.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>קצב טעינה</th>
+<th>עלות</th>
+<th>זמן</th>
+<th>סיכוי</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1 ליום</td>
+<td>x3</td>
+<td>x2</td>
+<td>-10%</td>
+</tr>
+<tr class="even">
+<td>הכול ביום</td>
+<td>x5</td>
+<td>x3</td>
+<td>-30%</td>
+</tr>
+<tr class="odd">
+<td>הכול בשבוע</td>
+<td>x4</td>
+<td>x2</td>
+<td>-20%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>המטענים הם כלליים:</strong> פירוש הדבר הוא שכל ההשפעות של החפץ שואבות כוח מאותו מאגר מטענים; רוב מטות הקוסם הם בקטגוריה זו. חפצים עם מטענים כלליים הם אוטומטית ניתנים לטעינה; אין להחיל את ההתאמות הרגילות עבור מאפיין זה. במקום זאת, חברו את העלויות הרגילות של מאגרי המטענים של כל השפעה (שכולן חייבות להיות בעלות אותו מספר מטענים), ואז חלקו את התאמות העלות, הזמן והסיכוי של המטענים בשניים. כך שתי השפעות החולקות מאגר אחד עולות כמו השפעה אחת עם מאגר אחד.</p>
+<p><strong>החפץ יכול לשמש כל מקצוע:</strong> כברירת מחדל, חפצי קסם יכולים לשמש רק את המקצוע שיצר אותם; לכן <strong>שרביט כדורי אש</strong> בדרך כלל שימושי רק לקוסמים, או <strong>מטה ריפוי</strong> רק לכוהנים. מאפיין זה מאפשר שימוש לכל מקצוע, ודורש לקבוע מילות פקודה ותנועות יד פשוטות לחפץ. הוספת מאפיין זה עולה 1,000 מ”ז לכל השפעה. שימו לב שלא חייבים לכלול את כל השפעות החפץ; ניתן ליצור חפץ שבו חלק מן ההשפעות ניתנות לשימוש לכל מקצוע, אך השפעות אחרות ניתנות לשימוש רק למקצוע היוצר.</p>
+<p><strong>החפץ פועל באופן רציף או אוטומטי:</strong> מאפיין זה גובר על מאפייני המטענים והשימוש לפי מקצוע. החפץ פועל בכל זמן שהוא נענד כראוי, או מופעל אוטומטית כאשר יש צורך בכך. <strong>טבעת עמידות לאש</strong> היא דוגמה טובה; גם <strong>טבעת היעלמות</strong> נמצאת בקטגוריה זו. הוספת מאפיין זה מכפילה את נתוני העלות והזמן הסופיים פי חמישה ומטילה מחסר של 40% על סיכוי ההצלחה.</p>
+<p>כל מאפיין לעיל המוחל על חפץ קסם ידרוש חומר יקר, נדיר ו/או קסום כדי לתמוך בכישוף. לדוגמה, שרביט כדורי אש כולל השפעת לחש המונעת בידי מטענים; אלו שני מאפיינים רגילים יחסית, ולכן הקוסם היוצר את החפץ מציע עץ נדיר למוט ושיבוץ אודם בשווי 1,000 מ”ז בקצה. המנחה יכולה כמובן לדרוש משהו נדיר או יקר יותר אם חפץ הקסם חזק במיוחד.</p>
+<p>עלות הבסיס של מאפיין השפעת לחש יכולה להיות מופחתת ב-25% באמצעות הטלת מגבלות על היכולת. לדוגמה, <strong>טבעת הקסמת דריאדה</strong> היא דוגמה להשפעת לחש <strong>הקסמת איש</strong> מוגבלת, ולכן תזכה להפחתה. הדבר אינו משפיע על סיכוי ההצלחה או על הזמן הנדרש.</p>
+<p>נשקים שאמורים להיות מכושפים בכוחות נוספים מעבר לבונוס הרגיל דורשים שילוב של כללי כישוף נשקים סטנדרטיים עם הכללים לעיל. בצעו קודם את כישוף הנשק; אם הוא מצליח, אז על הדמות המכַשפת את הנשק להתחיל מיד (בתוך יומיים, כפי שהוסבר קודם) את תהליך כישוף הכוח של לחש או דמוי-לחש. כישלון בהליך השני אינו הורס את כישוף הנשק.</p>
+</section>
+<section id="חפצים-מקוללים" class="level3">
+<h3 class="anchored" data-anchor-id="חפצים-מקוללים">חפצים מקוללים</h3>
+<p>חלק מן החפצים המקוללים, כגון מגילות מקוללות, נוצרים כך במכוון בידי מטיל הלחשים. הקושי ליצור חפץ כזה דומה בערך לקושי ליצור מגילת לחש של <strong>הטלת קללה</strong>.</p>
+<p>חפצי קסם מקוללים אחרים עשויים להיות תוצאה של ניסיון כושל ליצור חפץ מועיל. על המנחה להחליט האם מיזם מחקר שנכשל אכן ייצור חפץ מקולל.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlxyXG5pbXBvcnQge2dlbmVyYWxUYWJsZVNlbGVjdCwgaGlnaGxpZ2h0VGFibGVSb3d9IGZyb20gXCIuLi9jdXN0b20uanNcIlxyXG5cclxuSW5wdXRzLmJ1dHRvbihcIteS15zXktec15kg15HXmNeR15zXlFwiLCBcclxue3ZhbHVlOiAwLCBcclxucmVkdWNlOiAoKSA9PiBoaWdobGlnaHRUYWJsZVJvdyhcIiNkdW5nZW9uLWVuY291bnRlcnMtMVwiLCBcclxuZ2VuZXJhbFRhYmxlU2VsZWN0KFsxLDEyLDBdLFtbIDEgLCAxIF0sWyAyICwgMiBdLFsgMyAsIDMgXSxbIDQgLCA0IF0sWyA1ICwgNSBdLFsgNiAsIDYgXSxbIDcgLCA3IF0sWyA4ICwgOCBdLFsgOSAsIDkgXSxbIDEwLCAxMF0sWyAxMSwgMTFdLFsgMTIsIDEyXV0pKX0pXHJcblxyXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcclxuSW5wdXRzLmJ1dHRvbihcIteS15zXktec15kg15HXmNeR15zXlFwiLCBcclxue3ZhbHVlOiAwLCBcclxucmVkdWNlOiAoKSA9PiBoaWdobGlnaHRUYWJsZVJvdyhcIiNkdW5nZW9uLWVuY291bnRlcnMtMlwiLCBcclxuZ2VuZXJhbFRhYmxlU2VsZWN0KFsxLDEyLDBdLFtbIDEgLCAxIF0sWyAyICwgMiBdLFsgMyAsIDMgXSxbIDQgLCA0IF0sWyA1ICwgNSBdLFsgNiAsIDYgXSxbIDcgLCA3IF0sWyA4ICwgOCBdLFsgOSAsIDkgXSxbIDEwLCAxMF0sWyAxMSwgMTFdLFsgMTIsIDEyXV0pKX0pXHJcblxyXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcclxuSW5wdXRzLmJ1dHRvbihcIteS15zXktec15kg15HXmNeR15zXlFwiLCBcclxue3ZhbHVlOiAwLCBcclxucmVkdWNlOiAoKSA9PiBoaWdobGlnaHRUYWJsZVJvdyhcIiN3aWxkZXJuZXNzLWVuY291bnRlcnMtMVwiLCBcclxuZ2VuZXJhbFRhYmxlU2VsZWN0KFsyLDgsMF0sW1sgMiAsIDIgXSxbIDMgLCAzIF0sWyA0ICwgNCBdLFsgNSAsIDUgXSxbIDYgLCA2IF0sWyA3ICwgNyBdLFsgOCAsIDggXSxbIDkgLCA5IF0sWyAxMCwgMTBdLFsgMTEsIDExXSxbIDEyLCAxMl0sWyAxMywgMTNdLFsgMTQsIDE0XSwgWyAxNSwgMTVdLFsgMTYsIDE2XV0pKX0pXHJcblxyXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTQiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcclxuSW5wdXRzLmJ1dHRvbihcIteS15zXktec15kg15HXmNeR15zXlFwiLCBcclxue3ZhbHVlOiAwLCBcclxucmVkdWNlOiAoKSA9PiBoaWdobGlnaHRUYWJsZVJvdyhcIiN3aWxkZXJuZXNzLWVuY291bnRlcnMtMlwiLCBcclxuZ2VuZXJhbFRhYmxlU2VsZWN0KFsyLDgsMF0sW1sgMiAsIDIgXSxbIDMgLCAzIF0sWyA0ICwgNCBdLFsgNSAsIDUgXSxbIDYgLCA2IF0sWyA3ICwgNyBdLFsgOCAsIDggXSxbIDkgLCA5IF0sWyAxMCwgMTBdLFsgMTEsIDExXSxbIDEyLCAxMl0sWyAxMywgMTNdLFsgMTQsIDE0XSwgWyAxNSwgMTVdLFsgMTYsIDE2XV0pKX0pXHJcblxyXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTUiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcclxuSW5wdXRzLmJ1dHRvbihcIteS15zXktec15kg15HXmNeR15zXlFwiLCBcclxue3ZhbHVlOiAwLCBcclxucmVkdWNlOiAoKSA9PiBoaWdobGlnaHRUYWJsZVJvdyhcIiN3aWxkZXJuZXNzLWVuY291bnRlcnMtM1wiLCBcclxuZ2VuZXJhbFRhYmxlU2VsZWN0KFsyLDgsMF0sW1sgMiAsIDIgXSxbIDMgLCAzIF0sWyA0ICwgNCBdLFsgNSAsIDUgXSxbIDYgLCA2IF0sWyA3ICwgNyBdLFsgOCAsIDggXSxbIDkgLCA5IF0sWyAxMCwgMTBdLFsgMTEsIDExXSxbIDEyLCAxMl0sWyAxMywgMTNdLFsgMTQsIDE0XSwgWyAxNSwgMTVdLFsgMTYsIDE2XV0pKX0pXHJcblxyXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTYiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcclxuSW5wdXRzLmJ1dHRvbihcIteS15zXktec15kg15HXmNeR15zXlFwiLCBcclxue3ZhbHVlOiAwLCBcclxucmVkdWNlOiAoKSA9PiBoaWdobGlnaHRUYWJsZVJvdyhcIiNjaXR5LWVuY291bnRlcnNcIiwgXHJcbmdlbmVyYWxUYWJsZVNlbGVjdChbMiw2LDBdLFtbIDIgLCAyIF0sWyAzICwgMyBdLFsgNCAsIDQgXSxbIDUgLCA1IF0sWyA2ICwgNiBdLFsgNyAsIDcgXSxbIDggLCA4IF0sWyA5ICwgOSBdLFsgMTAsIDEwXSxbIDExLCAxMV0sWyAxMiwgMTJdXSkpfSlcclxuXHJcbiJ9XX0=
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "הועתק!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "הועתק!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./magicItems.html" class="pagination-link" aria-label="חפצי קסם">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">חפצי קסם</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./gm02.html" class="pagination-link" aria-label="יצירת הרפתקאות">
+        <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">יצירת הרפתקאות</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

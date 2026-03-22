@@ -1,0 +1,96 @@
+---
+format:
+  html:
+    includes: include-after-body
+---
+
+```{=html}
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+```
+# אינדקס מפלצות
+
+בחרו שדות חיפוש. החזיקו `shift` או גררו עם העכבר לבחירה מרובה.
+
+שם המפלצת הוא תמיד חלק משדה החיפוש.
+
+```{ojs}
+data = {
+  const d = await FileAttachment("monsters.json").json()
+  return d
+}
+```
+
+```{ojs}
+cols = Object.keys(data[0])
+cols2 = cols.slice(1)
+```
+
+```{ojs}
+viewof theseCols =  Inputs.select(cols2, {multiple:true, value:cols2})
+```
+
+<br>
+
+```{ojs}
+viewof search  = {
+  let n = Inputs.search(data,{
+  columns:[cols[0]].concat(theseCols)
+});
+return n
+}
+```
+
+<br>
+
+::: {.column-screen .table-responsive}
+```{ojs}
+Inputs.table(search, {width:"auto",
+format:{
+    "שם": id => htl.html`<a href=#\ onclick="test('${id}')">${id}</a>`
+}})
+
+```
+
+:::
+
+
+```{=html}
+<script>
+
+function test(name){
+$(document).ready(function() {
+    $.get('monstersAll.html', function(data) {
+      // Find the .monster div that contains this name in its text
+      var $monsters = $(data).filter('.monster').add($(data).find('.monster'));
+      var content = $monsters.filter(function() {
+        return $(this).text().indexOf(name) !== -1;
+      }).first().html();
+      $('#myModal .modal-body').html(content);
+      $('#myModal').modal('show');
+    });
+    }
+);}
+</script>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"> </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="modal-text">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">סגור</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+```

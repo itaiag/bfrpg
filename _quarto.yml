@@ -69,5 +69,6 @@ format:
       echo: false
     header-includes: |
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caudex">
+      <script src="translator/lang-switch.js"></script>
     mainfont: "Caudex"
 
