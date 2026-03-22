@@ -1,3 +1,4 @@
+.env
 /.quarto/
 /.claude/
 /_site/
@@ -5,7 +6,6 @@
 test.py
 test.qdm
 test/
-.env
 node_modules/
 he-book/
 he/.quarto/
