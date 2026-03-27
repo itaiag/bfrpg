@@ -79,7 +79,7 @@ format:
     execute:
       echo: false
     header-includes: |
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik|Suez+One">
       <script src="${scriptSrc}"></script>
     mainfont: "Frank Ruhl Libre"
 `;
