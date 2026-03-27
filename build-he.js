@@ -7,7 +7,7 @@
  *   node build-he.js --preview  # live preview with hot-reload
  */
 
-import { writeFileSync, readdirSync } from 'fs';
+import { writeFileSync, readdirSync, copyFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { execSync, spawn } from 'child_process';
 import { fileURLToPath } from 'url';
@@ -51,15 +51,21 @@ function buildChaptersList(translated) {
   return chapters;
 }
 
-function generateYml(chapters, outputDir) {
-  // lang-switch.js path depends on how deep the output is relative to translator/
-  const scriptSrc = outputDir === '_preview'
-    ? '../../../translator/lang-switch.js'
-    : '../../translator/lang-switch.js';
+function copyAssets() {
+  const files = ['custom.css', 'custom-rtl.css'];
+  for (const file of files) {
+    copyFileSync(join(__dirname, file), join(HE_DIR, file));
+  }
+  copyFileSync(join(__dirname, 'translator', 'lang-switch.js'), join(HE_DIR, 'lang-switch.js'));
+  log(`✓ Copied assets to he/`);
+}
 
+function generateYml(chapters, outputDir) {
   return `project:
   type: book
   output-dir: ${outputDir}
+  resources:
+    - lang-switch.js
 
 book:
   title: "בייסיק פנטזי, מהדורה 4"
@@ -73,15 +79,15 @@ format:
     theme: cosmo
     lang: he-IL
     dir: rtl
-    css: [../custom.css, ../custom-rtl.css]
+    css: [custom.css, custom-rtl.css]
     number-depth: 0
     toc-depth: 4
     execute:
       echo: false
     header-includes: |
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre">
-      <script src="${scriptSrc}"></script>
-    mainfont: "Frank Ruhl Libre"
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&family=Suez+One&display=swap">
+      <script src="lang-switch.js"></script>
+    mainfont: "Rubik"
 `;
 }
 
@@ -97,6 +103,7 @@ function buildHe() {
 
   log(`Found ${translated.size} translated file(s): ${[...translated].join(', ')}`);
 
+  copyAssets();
   const chapters = buildChaptersList(translated);
   const yml = generateYml(chapters, '../docs/he');
 
@@ -119,6 +126,7 @@ function previewHe() {
     process.exit(1);
   }
 
+  copyAssets();
   const chapters = buildChaptersList(translated);
   const yml = generateYml(chapters, '_preview');
 

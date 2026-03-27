@@ -10,5 +10,8 @@ node_modules/
 he-book/
 he/.quarto/
 he/_quarto.yml
+he/custom.css
+he/custom-rtl.css
+he/lang-switch.js
 **/*.quarto_ipynb
 .firebase/
