@@ -7,7 +7,7 @@
  *   node build-he.js --preview  # live preview with hot-reload
  */
 
-import { writeFileSync, readdirSync } from 'fs';
+import { writeFileSync, readdirSync, cpSync } from 'fs';
 import { join, dirname } from 'path';
 import { execSync, spawn } from 'child_process';
 import { fileURLToPath } from 'url';
@@ -106,6 +106,12 @@ function buildHe() {
 
   log('\n▶ Running: quarto render he/\n');
   execSync('quarto render he/', { cwd: __dirname, stdio: 'inherit' });
+
+  // Copy images folder to output
+  const imagesSource = join(__dirname, 'images');
+  const imagesTarget = join(__dirname, 'docs', 'he', 'images');
+  cpSync(imagesSource, imagesTarget, { recursive: true, force: true });
+
   log('\n✓ Hebrew site built → docs/he/');
 }
 
