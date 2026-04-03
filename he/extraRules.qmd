@@ -238,7 +238,7 @@ Copyright © 2006 Todd Roe
 
 <span dir="ltr">(N)</span> גורגון
 
-<span dir="ltr">(NG)</span> גמדון
+<span dir="ltr">(NG)</span> ננס
 
 <span dir="ltr">(CE)</span> גנול
 
