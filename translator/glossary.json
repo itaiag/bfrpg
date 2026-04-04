@@ -23,13 +23,14 @@
     { "en": "Experience Points", "abbr": "XP", "he": "נקודות ניסיון" },
     { "en": "Hit Dice", "abbr": "HD", "he": "קוביות פגיעה" },
     { "en": "Saving Throw", "he": "גלגול הצלה", "plural": "Saving Throws", "plural_he": "גלגולי הצלה" },
-    { "en": "Attack Bonus", "he": "בונוס תקיפה" },
+    { "en": "Attack Bonus", "he": "בונוס התקפה" },
+    { "en": "Attack Roll", "he": "גלגול התקפה" },
     { "en": "Dungeon", "he": "מבוך", "plural": "Dungeons", "plural_he": "מבוכים" },
     { "en": "Wilderness", "he": "שטח פתוח" },
     { "en": "Round", "he": "סיבוב", "plural": "Rounds", "plural_he": "סיבובים", "notes": "Combat round" },
     { "en": "Turn", "he": "תור", "plural": "Turns", "plural_he": "תורות", "notes": "Time unit (10 minutes)" },
     { "en": "Darkvision", "he": "זיוונות" },
-    { "en": "Retainer", "he": "עוזר", "plural": "Retainers", "plural_he": "עוזרים" },
+    { "en": "Retainer", "he": "מלווה", "plural": "Retainers", "plural_he": "מלווים" },
     { "en": "Hireling", "he": "שכיר", "plural": "Hirelings", "plural_he": "שכירים" },
     { "en": "Monster", "he": "מפלצת", "plural": "Monsters", "plural_he": "מפלצות" },
     { "en": "Spell", "he": "לחש", "plural": "Spells", "plural_he": "לחשים" },
@@ -64,6 +65,12 @@
     { "en": "Petrify", "he": "התאבנות" },
     { "en": "Dragon Breath", "he": "נשיפת דרקון" },
     { "en": "Paralysis ", "he": "שיתוק" },
+    { "en": "Effect", "he": "אפקט", "notes": "Use consistently; do not translate as השפעה" },
+    {
+  "en": "Units (meters)",
+  "he": "יחידות מידה (מטרים)",
+  "notes": "Use \"מ'\" in mechanical fields (range, radius, tables). Use \"מטרים\" in narrative text. Do not mix within the same sentence."
+},
     { "en": "Xp", "he": "נק\"נ" }
 
     
