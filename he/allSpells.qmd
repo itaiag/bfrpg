@@ -301,8 +301,7 @@ viewof gemJewel3 = Inputs.button("גלגלו על הטבלה", {value: 0, reduce
 
 </div>
 
-
-<<div class="spell" data-tag="Detect Evil*" id="Detect Evil*">
+<div class="spell" data-tag="Detect Evil*" id="Detect Evil*">
 
 ## גילוי רוע*
 
