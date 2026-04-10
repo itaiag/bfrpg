@@ -83,12 +83,11 @@ blockquote {
   margin-right: 0;
 }
 
-/* Navigation arrows (prev/next) — swap sides */
-.page-navigation .nav-page-previous {
-  order: 2;
-}
-.page-navigation .nav-page-next {
-  order: 1;
+/* Flip navigation arrows for RTL */
+.page-navigation .bi-arrow-left-short,
+.page-navigation .bi-arrow-right-short {
+  display: inline-block;
+  transform: scaleX(-1);
 }
 
 /* Quarto sidebar panel */
