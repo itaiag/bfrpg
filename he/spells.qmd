@@ -1510,7 +1510,7 @@ viewof click = Inputs.button("גלגל 1d4", {value: 0, reduce: () => rolld4()})
 
 ::: {.callout-note icon=false collapse=true}
 
-### ברק
+###  חזיז ברק
 
 טווח: 30 מ' + 3 מ'/דרגה
 
