@@ -42,6 +42,7 @@
     { "en": "Monster", "he": "מפלצת", "plural": "Monsters", "plural_he": "מפלצות" },
     { "en": "Spell", "he": "לחש", "plural": "Spells", "plural_he": "לחשים" },
     { "en": "Morale", "he": "מורל" },
+    { "en": "Loyalty", "he": "נאמנות", "notes": "Retainer stat; works like Morale but kept distinct (fem.)" },
     { "en": "Initiative", "he": "יוזמה" },
     { "en": "Melee", "he": "קרב פנים אל פנים" },
     { "en": "Missile", "he": "קליעים" },
