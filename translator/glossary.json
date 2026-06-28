@@ -70,6 +70,8 @@
     { "en": "Humanoid", "he": "הומנואיד", "plural": "Humanoids", "plural_he": "הומנואידים", "notes": "Monstrous human-shaped races (orcs, goblins, etc.); distinct from Demi-Human" },
     { "en": "Common", "he": "מדוברת" ,"notes": "The common language of the world"},
     { "en": "Sneak Attack", "he": "דקירה מאחור" },
+    { "en": "Open Locks", "he": "פריצת מנעולים", "notes": "Thief skill; not פתיחת מנעולים" },
+    { "en": "Listen", "he": "האזנה", "notes": "Thief skill (listen at doors); not הקשבה" },
     { "en": "Energy Drain", "he": "ניקוז אנרגיה" },
     { "en": "Petrify", "he": "התאבנות" },
     { "en": "Dragon Breath", "he": "נשיפת דרקון" },
