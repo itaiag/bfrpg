@@ -697,7 +697,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>כוהן 2</p>
 <p>משך: דרגה + 1d4 סיבובים</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="194" data-source-offset="-119"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 193;"><span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {rolld4} <span class="im">from</span> <span class="st">"../custom.js"</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="194" data-source-offset="-114"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 193;"><span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {rolld4} <span class="im">from</span> <span class="st">"../custom.js"</span></span>
 <span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>viewof click <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"גלגל 1d4"</span><span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">reduce</span><span class="op">:</span> () <span class="kw">=&gt;</span> <span class="fu">rolld4</span>()})</span></code></pre></div><button title="העתק ללוח" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
@@ -974,11 +974,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>כוהן 3, קוסם 4</p>
 <p>משך: מיידי</p>
 <p>לחש זה מסיר כל קללה רגילה הפוגעת ביצור. הוא אינו מסיר בדרך כלל את הקללה מפריט קסום כמו חרב או חליפת שריון, אך דמות המושפעת מפריט מקולל מסוג זה תשתחרר ממנו למשך זמן מספיק כדי להשליך את הפריט (לפחות תור).</p>
-<p>חלק מהקללות המיוחדות קשות יותר להסרה, ועשויות לדרוש מטיל לחש בדרגה מינימלית מסוימת. מעט מאוד קללות שנוצרו על ידי ישויות אלוהיות ניתנות להסרה באמצעות לחש זה.</p>
+<p>חלק מהקללות המיוחדות קשות יותר להסרה, ועשויות לדרוש מטיל לחש בעוצמה מינימלית מסוימת. מעט מאוד קללות שנוצרו על ידי ישויות אלוהיות ניתנות להסרה באמצעות לחש זה.</p>
 <p>ההיפוך של הלחש הזה, <strong>הטלת קללה</strong>, מאפשר למטיל הלחש להטיל קללה על הנושא. גלגול הצלה נגד לחשים מאפשר להתנגד. המטיל חייב לבחור אחת משלוש ההשפעות הבאות:</p>
 <ul>
 <li><p>הפחתה של 4- לציון תכונה (מינימום 1).</p></li>
-<li><p>עונש של 4- על גלגולי תקיפה וגלגולי הצלה.</p></li>
+<li><p>עונש של 4- על גלגולי התקפה וגלגולי הצלה.</p></li>
 <li><p>בכל סיבוב קרב, יש למטרה סיכוי של 50% לפעול כרגיל; אחרת, היא אינה נוקטת בפעולה.</p></li>
 </ul>
 <p>המטיל יכול גם להמציא קללה משלו, אך היא אינה יכולה להיות חזקה יותר מאלו שתוארו לעיל. הקללה המוטלת אינה ניתנת לביטול, אך ניתן להסירה באמצעות לחש <strong>הסרת קללה</strong>.</p>
@@ -1418,7 +1418,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>כוהן 6</p>
 <p>משך: 1 סיבוב/דרגה</p>
 <p>לחש זה מאפשר למטיל הלחש להנפיש חפצים שבדרך כלל הם דוממים, כך שיוכלו לנוע ואף להיראות כחיים. חפצים להנפשה אינם יכולים להיות ברשותו (נלבשים או נישאים) של שום יצור, וחייבים להיות לא-קסומים מטבעם. מטיל הלחש יכול להנפיש חפץ אחד לכל דרגה, עד למקסימום של 10 ק”ג לכל דרגת מטיל (כלומר 120 ק”ג בדרגה 12, 130 ק”ג בדרגה 13, וכן הלאה).</p>
-<p>חפצים אלו משמשים בדרך כלל לתקיפת אויבי מטיל הלחש, והמנחה חייבת להחליט על יעילותם בקרב. באופן כללי, חפצים מונפשים תוקפים באמצעות אותו בונוס תקיפה כמו מטיל הלחש. חפצים קטנים או קלים אינם גורמים יותר מ-1d4 נזק לכל פגיעה, בעוד שחפצים גדולים ו/או כבדים יותר גורמים 1d6 או 1d8 נזק, לפי שיקול דעת המנחה. במקרה מיוחד, כלי נשק מונפשים גורמים נזק לפי גלגול הקובייה הרגיל לסוג הנשק, אך לא יותר מ-1d8. לחפצים מונפשים יש קצב תנועה של 3 מטרים, ובדרך כלל הם חייבים לנוע במגע עם הקרקע (הליכה, קפיצה, זחילה או כל דרך אחרת שנראית מתאימה למנחה).</p>
+<p>חפצים אלו משמשים בדרך כלל לתקיפת אויבי מטיל הלחש, והמנחה חייבת להחליט על יעילותם בקרב. באופן כללי, חפצים מונפשים תוקפים באמצעות אותו בונוס התקפה כמו מטיל הלחש. חפצים קטנים או קלים אינם גורמים יותר מ-1d4 נזק לכל פגיעה, בעוד שחפצים גדולים ו/או כבדים יותר גורמים 1d6 או 1d8 נזק, לפי שיקול דעת המנחה. במקרה מיוחד, כלי נשק מונפשים גורמים נזק לפי גלגול הקובייה הרגיל לסוג הנשק, אך לא יותר מ-1d8. לחפצים מונפשים יש קצב תנועה של 3 מטרים, ובדרך כלל הם חייבים לנוע במגע עם הקרקע (הליכה, קפיצה, זחילה או כל דרך אחרת שנראית מתאימה למנחה).</p>
 </div>
 </div>
 </div>
@@ -1627,7 +1627,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>טווח: 20 מ’</p>
 <p>כוהן 1, קוסם 1</p>
 <p>משך: 2 תורות</p>
-<p>המטיל של לחש זה מסוגל לגלות חפצים או יצורים מכושפים או תחת השפעת לחש בטווח הנתון על ידי ראייה, ורואה אותם מוקפים באור זוהר חיוור. רק המטיל רואה את הזוהר. יצורים או חפצים נעלמים מעין לא ניתנים לגילוי על ידי לחש זה, אך ההקרנות של קסם ההיעלמות ייראו כערפל זוהר אמורפי, מה שעשוי לאפשר למטיל (רק) לתקוף את היצור הנעלם בעונש תקיפה של -2 בלבד.</p>
+<p>המטיל של לחש זה מסוגל לגלות חפצים או יצורים מכושפים או תחת השפעת לחש בטווח הנתון על ידי ראייה, ורואה אותם מוקפים באור זוהר חיוור. רק המטיל רואה את הזוהר. יצורים או חפצים נעלמים מעין לא ניתנים לגילוי על ידי לחש זה, אך ההקרנות של קסם ההיעלמות ייראו כערפל זוהר אמורפי, מה שעשוי לאפשר למטיל (רק) לתקוף את היצור הנעלם בעונש התקפה של -2 בלבד.</p>
 </div>
 </div>
 </div>
@@ -2443,7 +2443,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>משך: 2 סיבובים+1/דרגה</p>
 <p>לחש זה גורם לעד 3d6 יצורים חיים בתוך מעגל ברדיוס של 9 מטרים סביב נקודת המטרה להיות מבולבלים. יצורים מבולבלים אינם מסוגלים לקבוע בעצמם את פעולותיהם. כל יצור רשאי לגלגל גלגול הצלה נגד לחשים כדי להתנגד לאפקט. עבור כל יצור שלא הצליח בגלגול ההצלה, גלגלו על הטבלה הבאה במספר היוזמה שלו בכל סיבוב כדי לקבוע את פעולתו.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="1613" data-source-offset="-2"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 1612;"><span id="cb2-1613"><a href="#cb2-1613" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {confusionTable<span class="op">,</span> highlightTableRow} <span class="im">from</span> <span class="st">"../custom.js"</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="1613" data-source-offset="-1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 1612;"><span id="cb2-1613"><a href="#cb2-1613" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {confusionTable<span class="op">,</span> highlightTableRow} <span class="im">from</span> <span class="st">"../custom.js"</span></span>
 <span id="cb2-1614"><a href="#cb2-1614" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-1615"><a href="#cb2-1615" aria-hidden="true" tabindex="-1"></a>viewof gemJewel3 <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"גלגלו על הטבלה"</span><span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">reduce</span><span class="op">:</span> () <span class="kw">=&gt;</span> <span class="fu">highlightTableRow</span>(<span class="st">"#confusion-table"</span><span class="op">,</span> <span class="fu">confusionTable</span>())})</span></code></pre></div><button title="העתק ללוח" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
@@ -2662,11 +2662,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>כוהן 3, קוסם 4</p>
 <p>משך: מיידי</p>
 <p>לחש זה מסיר כל קללה רגילה הפוגעת ביצור. הוא אינו מסיר בדרך כלל את הקללה מפריט קסום כמו חרב או חליפת שריון, אך דמות המושפעת מפריט מקולל מסוג זה תשתחרר ממנו למשך זמן מספיק כדי להשליך את הפריט (לפחות תור).</p>
-<p>חלק מהקללות המיוחדות קשות יותר להסרה, ועשויות לדרוש מטיל לחש בדרגה מינימלית מסוימת. מעט מאוד קללות שנוצרו על ידי ישויות אלוהיות ניתנות להסרה באמצעות לחש זה.</p>
+<p>חלק מהקללות המיוחדות קשות יותר להסרה, ועשויות לדרוש מטיל לחש בעוצמה מינימלית מסוימת. מעט מאוד קללות שנוצרו על ידי ישויות אלוהיות ניתנות להסרה באמצעות לחש זה.</p>
 <p>ההיפוך של הלחש הזה, <strong>הטלת קללה</strong>, מאפשר למטיל הלחש להטיל קללה על הנושא. גלגול הצלה נגד לחשים מאפשר להתנגד. המטיל חייב לבחור אחת משלוש ההשפעות הבאות:</p>
 <ul>
 <li><p>הפחתה של 4- לציון תכונה (מינימום 1).</p></li>
-<li><p>עונש של 4- על גלגולי תקיפה וגלגולי הצלה.</p></li>
+<li><p>עונש של 4- על גלגולי התקפה וגלגולי הצלה.</p></li>
 <li><p>בכל סיבוב קרב, יש למטרה סיכוי של 50% לפעול כרגיל; אחרת, היא אינה נוקטת בפעולה.</p></li>
 </ul>
 <p>המטיל יכול גם להמציא קללה משלו, אך היא אינה יכולה להיות חזקה יותר מאלו שתוארו לעיל. הקללה המוטלת אינה ניתנת לביטול, אך ניתן להסירה באמצעות לחש <strong>הסרת קללה</strong>.</p>
@@ -2856,8 +2856,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>אם הניסיון מצליח, המטיל רשאי להישאר בשליטה על גופו של המארח למשך כל זמן שירצה. רוחו של המטיל יכולה לחזור לבקבוק הקסם בכל עת, כל עוד הוא בטווח הלחש; במקרה כזה רוחו של המארח חוזרת לגופו. המטיל אינו יכול להשתלט שוב על אותו מארח למשך שארית הלחש, אך יכול לעשות זאת בלחש חדש.</p>
 <p>בכל זמן שרוחו של המטיל נמצאת בבקבוק הקסם, הוא יכול לבחור לחזור לגופו, אם הוא בטווח הלחש. אם הגוף אינו בטווח, רוחו עלולה להילכד בבקבוק אם אין יצורים פגיעים בטווח.</p>
 <p>כאשר רוחו של המטיל חוזרת לגופו, הלחש מסתיים. עם סיום הלחש יש סיכוי של 50% שבקבוק הקסם יתנפץ (אלא אם כבר נשבר), ויהפוך לחסר ערך.</p>
-<p>כאשר המטיל שולט בגוף מארח, הוא משתמש בתכונותיו הפיזיות של המארח (כוח, זריזות וחוסן), אך שומר על תכונותיו המנטליות (תבונה, חוכמה וכריזמה). למטיל יש גישה רק לידע שלו, לדרגתו ולמקצועו, לבונוס התקיפה שלו, לגלגולי ההצלה שלו, ליכולת הטלת הלחשים שלו וליכולות מנטליות אחרות.</p>
-<p>המטיל אינו מקבל גישה לכוחות על־טבעיים או יוצאי דופן של המארח, וייתכן שלא יוכל לבצע פעולות פיזיות שלא חווה בעבר (כגון תעופה, אם השתלט על גוף מכונף). עם זאת, יש לו גישה לחושים של המארח, כגון ראיית חושך או חוש ריח חד.</p>
+<p>כאשר המטיל שולט בגוף מארח, הוא משתמש בתכונותיו הפיזיות של המארח (כוח, זריזות וחוסן), אך שומר על תכונותיו המנטליות (תבונה, חוכמה וכריזמה). למטיל יש גישה רק לידע שלו, לדרגתו ולמקצועו, לבונוס ההתקפה שלו, לגלגולי ההצלה שלו, ליכולת הטלת הלחשים שלו וליכולות מנטליות אחרות.</p>
+<p>המטיל אינו מקבל גישה לכוחות על־טבעיים או יוצאי דופן של המארח, וייתכן שלא יוכל לבצע פעולות פיזיות שלא חווה בעבר (כגון תעופה, אם השתלט על גוף מכונף). עם זאת, יש לו גישה לחושים של המארח, כגון זיוונות או חוש ריח חד.</p>
 <p>אם רוחו של המטיל נמצאת בבקבוק הקסם והבקבוק נשבר (בין אם עקב <strong>ביטול קסם</strong> או נזק פיזי), רוחו של המטיל חוזרת לגופו אם הוא בטווח; אם לא, רוחו אובדת (והמטיל מת). בכל מקרה, הלחש מסתיים.</p>
 <p>אם רוחו של המטיל מגורשת מגוף המארח באמצעות <strong>ביטול רוע</strong>, ובקבוק הקסם נמצא בטווח מגוף המארח, רוחו של המטיל חוזרת לבקבוק ורוחו של המארח חוזרת לגופו. המטיל אינו יכול להשתלט שוב על אותו מארח למשך שארית הלחש. אם הבקבוק אינו בטווח, רוחו של המטיל אובדת, רוחו של המארח משתחררת מהבקבוק ואובדת גם היא, וגופו של המארח מת.</p>
 <p>אם רוחו של המארח נמצאת בבקבוק הקסם והבקבוק נשבר בעודו בטווח מגופו, רוחו של המטיל אובדת, רוחו של המארח חוזרת לגופו, והלחש מסתיים. אם הבקבוק נשבר כשהוא מחוץ לטווח, רוחו של המארח אובדת, ורוחו של המטיל נתקעת בגוף המארח. במקרה זה הלחש אינו מסתיים. <strong>ביטול רוע</strong> עדיין יכול לגרש את רוחו של המטיל, שתאבד כפי שתואר, ובכך יסתיים הלחש. מטיל שנלכד כך יכול להשתמש בלחש זה שוב (עם בקבוק קסם אחר) כדי לחזור לגופו, פעולה שתהרוג את גוף המארח.</p>
@@ -2891,7 +2891,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">הערה</span>טלקניזיס
+<span class="screen-reader-only">הערה</span>טלקינזיס
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -3191,7 +3191,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>המטיל יכול להחזיר לחיים בגלגול נשמות רק יצור שלא היה מת יותר משבוע. רוח המטרה חייבת להיות מוכנה לחזור. אם רוח המטרה כלואה או מוחזקת בכל דרך שהיא, הלחש ייכשל.</p>
 <p>גלגלו על הטבלה הבאה כדי לקבוע לאיזה סוג של יצור הדמות הופכת:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="2220" data-source-offset="-2"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 2219;"><span id="cb3-2220"><a href="#cb3-2220" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {generalTableSelect} <span class="im">from</span> <span class="st">"../custom.js"</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="2220" data-source-offset="-1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 2219;"><span id="cb3-2220"><a href="#cb3-2220" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {generalTableSelect} <span class="im">from</span> <span class="st">"../custom.js"</span></span>
 <span id="cb3-2221"><a href="#cb3-2221" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-2222"><a href="#cb3-2222" aria-hidden="true" tabindex="-1"></a>viewof reincarnate <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"גלגלו על טבלה"</span><span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">reduce</span><span class="op">:</span> () <span class="kw">=&gt;</span> <span class="fu">highlightTableRow</span>(<span class="st">"#reincarnate-spell"</span><span class="op">,</span> <span class="fu">generalTableSelect</span>([<span class="dv">1</span><span class="op">,</span><span class="dv">100</span><span class="op">,</span><span class="dv">0</span>]<span class="op">,</span>[[<span class="dv">1</span><span class="op">,</span><span class="dv">1</span>]<span class="op">,</span>[<span class="dv">2</span><span class="op">,</span><span class="dv">15</span>]<span class="op">,</span>[<span class="dv">16</span><span class="op">,</span><span class="dv">29</span>]<span class="op">,</span>[<span class="dv">30</span><span class="op">,</span><span class="dv">30</span>]<span class="op">,</span>[<span class="dv">31</span><span class="op">,</span><span class="dv">39</span>]<span class="op">,</span>[<span class="dv">40</span><span class="op">,</span><span class="dv">46</span>]<span class="op">,</span>[<span class="dv">47</span><span class="op">,</span><span class="dv">60</span>]<span class="op">,</span>[<span class="dv">61</span><span class="op">,</span><span class="dv">88</span>]<span class="op">,</span>[<span class="dv">89</span><span class="op">,</span><span class="dv">91</span>]<span class="op">,</span>[<span class="dv">92</span><span class="op">,</span><span class="dv">93</span>]<span class="op">,</span>[<span class="dv">94</span><span class="op">,</span><span class="dv">98</span>]<span class="op">,</span>[<span class="dv">99</span><span class="op">,</span><span class="dv">100</span>]]))})</span></code></pre></div><button title="העתק ללוח" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
@@ -3315,7 +3315,7 @@ eyJjb250ZW50cyI6WyAgeyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiaW5saW5lIjoidHJ1ZSIsInNv
 
 </main> <!-- /main -->
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Ii8vIGZ1bmN0aW9uIHJvbGxkNCgpIHtcclxuLy8gICB2YXIgcmFuZG9tTnVtYmVyID0gTWF0aC5mbG9vcihNYXRoLnJhbmRvbSgpICogNCkgKyAxO1xyXG4vLyAgIHJldHVybiByYW5kb21OdW1iZXI7XHJcbi8vIH1cclxuXHJcbmltcG9ydCB7cm9sbGQ0fSBmcm9tIFwiLi4vY3VzdG9tLmpzXCJcclxuXHJcbnZpZXdvZiBjbGljayA9IElucHV0cy5idXR0b24oXCLXktec15LXnCAxZDRcIiwge3ZhbHVlOiAwLCByZWR1Y2U6ICgpID0+IHJvbGxkNCgpfSlcclxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiXHJcbmltcG9ydCB7Y29uZnVzaW9uVGFibGUsIGhpZ2hsaWdodFRhYmxlUm93fSBmcm9tIFwiLi4vY3VzdG9tLmpzXCJcclxuXHJcbnZpZXdvZiBnZW1KZXdlbDMgPSBJbnB1dHMuYnV0dG9uKFwi15LXnNeS15zXlSDXotecINeU15jXkdec15RcIiwge3ZhbHVlOiAwLCByZWR1Y2U6ICgpID0+IGhpZ2hsaWdodFRhYmxlUm93KFwiI2NvbmZ1c2lvbi10YWJsZVwiLCBjb25mdXNpb25UYWJsZSgpKX0pXHJcblxyXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcclxuaW1wb3J0IHtnZW5lcmFsVGFibGVTZWxlY3R9IGZyb20gXCIuLi9jdXN0b20uanNcIlxyXG5cclxudmlld29mIHJlaW5jYXJuYXRlID0gSW5wdXRzLmJ1dHRvbihcIteS15zXktec15Ug16LXnCDXmNeR15zXlFwiLCB7dmFsdWU6IDAsIHJlZHVjZTogKCkgPT4gaGlnaGxpZ2h0VGFibGVSb3coXCIjcmVpbmNhcm5hdGUtc3BlbGxcIiwgZ2VuZXJhbFRhYmxlU2VsZWN0KFsxLDEwMCwwXSxbWzEsMV0sWzIsMTVdLFsxNiwyOV0sWzMwLDMwXSxbMzEsMzldLFs0MCw0Nl0sWzQ3LDYwXSxbNjEsODhdLFs4OSw5MV0sWzkyLDkzXSxbOTQsOThdLFs5OSwxMDBdXSkpfSlcclxuXHJcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnY2xpY2snKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnZ2VtSmV3ZWwzJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3JlaW5jYXJuYXRlJykifV19
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Ii8vIGZ1bmN0aW9uIHJvbGxkNCgpIHtcbi8vICAgdmFyIHJhbmRvbU51bWJlciA9IE1hdGguZmxvb3IoTWF0aC5yYW5kb20oKSAqIDQpICsgMTtcbi8vICAgcmV0dXJuIHJhbmRvbU51bWJlcjtcbi8vIH1cblxuaW1wb3J0IHtyb2xsZDR9IGZyb20gXCIuLi9jdXN0b20uanNcIlxuXG52aWV3b2YgY2xpY2sgPSBJbnB1dHMuYnV0dG9uKFwi15LXnNeS15wgMWQ0XCIsIHt2YWx1ZTogMCwgcmVkdWNlOiAoKSA9PiByb2xsZDQoKX0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcbmltcG9ydCB7Y29uZnVzaW9uVGFibGUsIGhpZ2hsaWdodFRhYmxlUm93fSBmcm9tIFwiLi4vY3VzdG9tLmpzXCJcblxudmlld29mIGdlbUpld2VsMyA9IElucHV0cy5idXR0b24oXCLXktec15LXnNeVINei15wg15TXmNeR15zXlFwiLCB7dmFsdWU6IDAsIHJlZHVjZTogKCkgPT4gaGlnaGxpZ2h0VGFibGVSb3coXCIjY29uZnVzaW9uLXRhYmxlXCIsIGNvbmZ1c2lvblRhYmxlKCkpfSlcblxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0zIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiXG5pbXBvcnQge2dlbmVyYWxUYWJsZVNlbGVjdH0gZnJvbSBcIi4uL2N1c3RvbS5qc1wiXG5cbnZpZXdvZiByZWluY2FybmF0ZSA9IElucHV0cy5idXR0b24oXCLXktec15LXnNeVINei15wg15jXkdec15RcIiwge3ZhbHVlOiAwLCByZWR1Y2U6ICgpID0+IGhpZ2hsaWdodFRhYmxlUm93KFwiI3JlaW5jYXJuYXRlLXNwZWxsXCIsIGdlbmVyYWxUYWJsZVNlbGVjdChbMSwxMDAsMF0sW1sxLDFdLFsyLDE1XSxbMTYsMjldLFszMCwzMF0sWzMxLDM5XSxbNDAsNDZdLFs0Nyw2MF0sWzYxLDg4XSxbODksOTFdLFs5Miw5M10sWzk0LDk4XSxbOTksMTAwXV0pKX0pXG5cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnY2xpY2snKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnZ2VtSmV3ZWwzJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3JlaW5jYXJuYXRlJykifV19
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }

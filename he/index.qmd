@@ -1,6 +1,6 @@
 # הקדמה {.unnumbered}
 
-**זכויות יוצרים © 2006-2026 כריס גונרמן – כל הזכויות שמורות**
+**זכויות יוצרים © 2006-2023 כריס גונרמן – כל הזכויות שמורות**
 
 **בייסיק פנטזי**: 
 מהדורה רביעית, שחרור 128
@@ -33,6 +33,6 @@ https://creativecommons.org/licenses/by-sa/4.0/
 - [כלים אינטראקטיביים](appendix_interactive.qmd)
 - [יוצר מבוכים](appendixMapmaker.qmd)
 
-This website was created by John Atom (jmhimara). All its code and unique content are also distributed under the **Creative Commons Attribution-ShareAlike 4.0 International License**. 
+אתר זה נוצר בידי John Atom (jmhimara). כל הקוד והתוכן הייחודי שלו מופצים אף הם תחת **רישיון Creative Commons Attribution-ShareAlike 4.0 International License**.
 
 תורגם לעברית ע"י **איתי אגמון**
