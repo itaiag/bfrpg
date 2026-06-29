@@ -127,17 +127,27 @@ td:only-child {
   unicode-bidi: embed;
 }
 
-/* Hebrew dice notation (2ק6+2): force the whole expression strictly LTR so the
-   strong-RTL ק does not reorder among the digits. isolate-override = isolate from
-   the surrounding RTL text AND override internal bidi to authored order. */
+/* Hebrew dice notation (read RTL: count first, then ק, then sides/modifier).
+   The container is RTL+isolate so the count/ק/sides tokens order right-to-left;
+   each inner <span> is an isolated LTR atom so multi-digit numbers and +modifiers
+   stay internally left-to-right (1d100 reads 1ק100, not 1ק001). */
 .dice {
+  direction: rtl;
+  unicode-bidi: isolate;
+}
+.dice > span {
   direction: ltr;
-  unicode-bidi: isolate-override;
+  unicode-bidi: isolate;
+}
+/* Small gap on the sides side of the modifier sign, so the +N reads as a unit
+   separated from the sides number (…6 +2…, not a merged …+6…). */
+.dice > .mod {
+  margin-right: 0.15em;
 }
 
 /* Font for Hebrew */
 body {
-  font-family: "Frank Ruhl Libre", "David Libre", serif;
+  font-family: "Rubik", sans-serif;
 }
 
 /* Fantasy-style headings */
