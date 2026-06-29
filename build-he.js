@@ -70,6 +70,7 @@ ${chapters.join('\n')}
 
 filters:
   - ../dice-he.lua
+  - ../bonus-he.lua
 
 format:
   html:
