@@ -83,7 +83,8 @@
   "he": "יחידות מידה (מטרים)",
   "notes": "Use \"מ'\" in mechanical fields (range, radius, tables). Use \"מטרים\" in narrative text. Do not mix within the same sentence."
 },
-    { "en": "Xp", "he": "נק\"נ" }
+    { "en": "Xp", "he": "נק\"נ" },
+    { "en": "Rank", "he": "רמת התמחות", "notes": "Weapon Specialization rank; short form רמה. Do NOT use דרגה — דרגה is reserved for character/class level and the two collide in the specialization rules." }
 
     
     
