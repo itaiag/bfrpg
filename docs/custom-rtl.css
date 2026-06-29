@@ -127,9 +127,17 @@ td:only-child {
   unicode-bidi: embed;
 }
 
+/* Hebrew dice notation (2ק6+2): force the whole expression strictly LTR so the
+   strong-RTL ק does not reorder among the digits. isolate-override = isolate from
+   the surrounding RTL text AND override internal bidi to authored order. */
+.dice {
+  direction: ltr;
+  unicode-bidi: isolate-override;
+}
+
 /* Font for Hebrew */
 body {
-  font-family: "Rubik", sans-serif;
+  font-family: "Frank Ruhl Libre", "David Libre", serif;
 }
 
 /* Fantasy-style headings */

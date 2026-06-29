@@ -76,7 +76,7 @@ format:
     theme: cosmo
     lang: he-IL
     dir: rtl
-    css: [../custom.css, ../custom-rtl.css]
+    css: [custom.css, custom-rtl.css]
     number-depth: 0
     toc-depth: 4
     execute:
@@ -86,6 +86,16 @@ format:
       <script src="${scriptSrc}"></script>
     mainfont: "Frank Ruhl Libre"
 `;
+}
+
+// Copy the shared CSS into the he/ project so Quarto bundles it into the output
+// root. Referenced locally (custom.css / custom-rtl.css) in the generated yml, it
+// then resolves both for production (docs/he/) and for the preview server root —
+// a ../-prefixed path 404s above the preview root. These copies are gitignored.
+function copyStyles() {
+  for (const css of ['custom.css', 'custom-rtl.css']) {
+    cpSync(join(__dirname, css), join(HE_DIR, css), { force: true });
+  }
 }
 
 function buildHe() {
@@ -106,6 +116,8 @@ function buildHe() {
   const ymlPath = join(HE_DIR, '_quarto.yml');
   writeFileSync(ymlPath, yml, 'utf8');
   log(`\n✓ Updated he/_quarto.yml with ${translated.size} chapter(s)`);
+
+  copyStyles();
 
   log('\n▶ Running: quarto render he/\n');
   execSync('quarto render he/', { cwd: __dirname, stdio: 'inherit' });
@@ -136,6 +148,8 @@ function previewHe() {
   log('✓ he/_quarto.yml updated (output-dir: _preview for live reload)');
   log('▶ Running: quarto preview he/\n');
   log('  Press Ctrl+C to stop. Run "node build-he.js" afterwards to restore docs/he/.\n');
+
+  copyStyles();
 
   const child = spawn('quarto', ['preview', 'he/'], {
     cwd: __dirname,
