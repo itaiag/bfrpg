@@ -68,6 +68,9 @@ book:
   chapters:
 ${chapters.join('\n')}
 
+filters:
+  - ../dice-he.lua
+
 format:
   html:
     theme: cosmo
