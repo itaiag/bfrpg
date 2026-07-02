@@ -26,7 +26,12 @@ local function bound(s, a, sign)
   if a == 1 then return false end
   local c = s:byte(a - 1)
   if c >= 48 and c <= 57 then return true end                       -- digit (both signs)
-  if c == 45 or c == 43 then return true end                        -- another sign, e.g. "3--5" en-dash range
+  if c == 45 or c == 43 then
+    -- another sign: only binds if this is a digit-rooted chain, e.g. "3--5"
+    -- en-dash range. A sign preceded by a maqaf hyphen after a letter (e.g.
+    -- "ו-+3") is NOT such a chain, so it must not be treated as bound.
+    return s:sub(1, a - 1):find('%d[%+%-]+$') ~= nil
+  end
   if sign == '-' then
     if c >= 128 then return true end                                -- UTF-8 (Hebrew) letter
     if (c >= 65 and c <= 90) or (c >= 97 and c <= 122) then return true end -- ASCII letter
