@@ -123,7 +123,7 @@ if (recordsFile != null){
     <dl class="field">
 
         <div class="g-row" id="BAB" style="">
-            <dt>בונוס התקפה בסיסי</dt>
+            <dt>תוסף התקפה בסיסי</dt>
             <dd contenteditable="true" class="small" id="BABbox"></dd>
         </div>
 
