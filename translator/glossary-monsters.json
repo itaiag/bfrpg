@@ -450,6 +450,26 @@
       "he": "ליקנתרופ*"
     },
     {
+      "en": "Lycanthrope, Werewolf*",
+      "he": "ליקנתרופ, איש־זאב*"
+    },
+    {
+      "en": "Lycanthrope, Werebear*",
+      "he": "ליקנתרופ, איש־דוב*"
+    },
+    {
+      "en": "Lycanthrope, Wererat*",
+      "he": "ליקנתרופ, איש־חולדה*"
+    },
+    {
+      "en": "Lycanthrope, Wereboar*",
+      "he": "ליקנתרופ, איש־חזיר*"
+    },
+    {
+      "en": "Lycanthrope, Weretiger*",
+      "he": "ליקנתרופ, איש־טיגריס*"
+    },
+    {
       "en": "Medusa",
       "he": "מדוזה"
     },
@@ -459,11 +479,11 @@
     },
     {
       "en": "Common Deceiver",
-      "he": "מטעה (פנתר-הידרה)"
+      "he": "מטעה רגיל"
     },
     {
       "en": "Greater Deceiver",
-      "he": "מטעה (פנתר-הידרה)"
+      "he": "מטעה גדול"
     },
     {
       "en": "Minotaur",
@@ -471,11 +491,11 @@
     },
     {
       "en": "Mammoth",
-      "he": "ממותות ומסטודונים"
+      "he": "ממותה"
     },
     {
       "en": "Mastodon",
-      "he": "ממותות ומסטודונים"
+      "he": "מסטודון"
     },
     {
       "en": "Manticore",
