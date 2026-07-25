@@ -1,825 +1,1553 @@
 {
-  "version": "1.0",
+  "version": "1.1",
+  "source": "he/monstersAll.qmd (source of truth) compared against monstersAll.qmd",
+  "conventions": {
+    "asterisk": "An asterisk after a monster name means it can only be hit by special weapons (silver, magical, etc.). Keep the asterisk on both the en and he forms.",
+    "notes": "Gender is given for Hebrew nouns whose grammatical gender is not obvious from the form, or where agreement is easy to get wrong."
+  },
   "terms": [
     {
       "en": "Urgoblin",
-      "he": "אורגובלין"
+      "he": "אורגובלין",
+      "plural": "Urgoblins",
+      "plural_he": "אורגובלינים"
     },
     {
       "en": "Orc",
-      "he": "אורק"
+      "he": "אורק",
+      "plural": "Orcs",
+      "plural_he": "אורקים"
     },
     {
       "en": "Ironbane*",
-      "he": "איירונביין*"
+      "he": "איירונביין*",
+      "plural": "Ironbanes",
+      "plural_he": "איירונביינים",
+      "notes": "Transliterated, not translated."
+    },
+    {
+      "en": "Lizard Man",
+      "he": "איש לטאה",
+      "plural": "Lizard Men",
+      "plural_he": "אנשי לטאה",
+      "notes": "Section heading; the two varieties below are the stat-block entries."
     },
     {
       "en": "Common Lizard Man",
-      "he": "איש לטאה"
+      "he": "איש לטאה רגיל",
+      "plural": "Common Lizard Men",
+      "plural_he": "אנשי לטאה רגילים"
+    },
+    {
+      "en": "Subterranean Lizard Man",
+      "he": "איש לטאה תת-קרקעי",
+      "plural": "Subterranean Lizard Men",
+      "plural_he": "אנשי לטאה תת-קרקעיים"
     },
     {
       "en": "Caveman",
-      "he": "איש מערות"
+      "he": "איש מערות",
+      "plural": "Cavemen",
+      "plural_he": "אנשי מערות"
     },
     {
       "en": "Antelope",
-      "he": "אנטילופה"
-    },
-    {
-      "en": "Efreeti",
-      "he": "עפרית"
+      "he": "אנטילופה",
+      "plural": "Antelopes",
+      "plural_he": "אנטילופות",
+      "notes": "Feminine."
     },
     {
       "en": "Lion",
-      "he": "אריה"
+      "he": "אריה",
+      "plural": "Lions",
+      "plural_he": "אריות",
+      "notes": "Masculine despite the -ות plural; agreement stays masculine (אריות גדולים)."
     },
     {
       "en": "Mountain Lion",
-      "he": "אריה הרים"
+      "he": "אריה הרים",
+      "plural": "Mountain Lions",
+      "plural_he": "אריות הרים"
     },
     {
       "en": "Rock Baboon",
-      "he": "בבון סלע"
+      "he": "בבון סלע",
+      "plural": "Rock Baboons",
+      "plural_he": "בבוני סלע"
     },
     {
       "en": "Falcon",
-      "he": "בז"
+      "he": "בז",
+      "plural": "Falcons",
+      "plural_he": "בזים"
     },
     {
-      "en": "Normal Hawk",
-      "he": "נץ"
-    },
-    {
-      "en": "Giant Hawk",
-      "he": "נץ ענק"
+      "en": "Basilisk",
+      "he": "בזיליסק",
+      "plural": "Basilisks",
+      "plural_he": "בזיליסקים",
+      "notes": "Section heading; the two varieties below are the stat-block entries."
     },
     {
       "en": "Basilisk, Common",
-      "he": "בזיליסק"
+      "he": "בזיליסק רגיל",
+      "plural": "Common Basilisks",
+      "plural_he": "בזיליסקים רגילים"
     },
     {
       "en": "Basilisk, Greater*",
-      "he": "בזיליסק גדול"
+      "he": "בזיליסק גדול*",
+      "plural": "Greater Basilisks",
+      "plural_he": "בזיליסקים גדולים"
     },
     {
       "en": "Cattle",
-      "he": "בקר"
+      "he": "בקר",
+      "notes": "Collective noun, masculine singular; no plural form. A single head is ראש בקר or פר/פרה."
     },
     {
       "en": "Aurochs",
-      "he": "אאורוקס"
+      "he": "אאורוקס",
+      "plural": "Aurochs",
+      "plural_he": "אאורוקסים"
     },
     {
       "en": "Bison",
-      "he": "ביזון"
+      "he": "ביזון",
+      "plural": "Bison",
+      "plural_he": "ביזונים"
     },
     {
       "en": "Barkling",
-      "he": "ברקלינג"
+      "he": "ברקלינג",
+      "plural": "Barklings",
+      "plural_he": "ברקלינגים",
+      "notes": "Transliterated, not translated."
     },
     {
       "en": "Mermaid",
-      "he": "בת ים"
+      "he": "בת ים",
+      "plural": "Mermaids",
+      "plural_he": "בנות ים",
+      "notes": "Feminine."
     },
     {
       "en": "Djinni*",
-      "he": "ג'יני*"
+      "he": "ג'יני*",
+      "plural": "Djinn",
+      "plural_he": "ג'ינים"
     },
     {
       "en": "Jelly",
-      "he": "ג'לי"
+      "he": "ג'לי",
+      "plural": "Jellies",
+      "plural_he": "ג'לי",
+      "notes": "Masculine; invariant in the plural (ג'לי ירוקים). Section heading covering the five varieties below."
     },
     {
-      "en": "Goblin",
-      "he": "גובלין"
+      "en": "Jelly, Gray",
+      "he": "ג'לי אפור",
+      "plural": "Gray Jellies",
+      "plural_he": "ג'לי אפורים",
+      "notes": "Also known as Gray Ooze / רפש אפור."
     },
     {
-      "en": "Ghoul",
-      "he": "גועל"
+      "en": "Gray Ooze",
+      "he": "רפש אפור",
+      "notes": "Alternate name for Jelly, Gray."
     },
     {
-      "en": "Ghast",
-      "he": "גסט"
-    },
-    {
-      "en": "Golem*",
-      "he": "גולם*"
-    },
-    {
-      "en": "Gorgon",
-      "he": "גורגון"
-    },
-    {
-      "en": "Gnome",
-      "he": "ננס"
-    },
-    {
-      "en": "Gnoll",
-      "he": "גנול"
-    },
-    {
-      "en": "Strangle Vine",
-      "he": "גפן חונקת"
-    },
-    {
-      "en": "Assassin Vine",
-      "he": "גפן מתנקשת"
-    },
-    {
-      "en": "Gargoyle*",
-      "he": "גרגויל*"
-    },
-    {
-      "en": "Griffon",
-      "he": "גריפון"
-    },
-    {
-      "en": "Bee, Giant",
-      "he": "דבורה ענקית"
-    },
-    {
-      "en": "Fish, Giant Bass",
-      "he": "דג, בס ענק"
-    },
-    {
-      "en": "Fish, Giant Barracuda",
-      "he": "דג, ברקודה ענקית"
-    },
-    {
-      "en": "Fish, Giant Piranha",
-      "he": "דג, פיראניה ענקית"
-    },
-    {
-      "en": "Fish, Giant Catfish",
-      "he": "דג, שפמנון ענק"
-    },
-    {
-      "en": "Bear",
-      "he": "דוב"
-    },
-    {
-      "en": "Bugbear",
-      "he": "דובלין"
-    },
-    {
-      "en": "Doppleganger",
-      "he": "דופלגנגר"
-    },
-    {
-      "en": "Squid, Giant Male",
-      "he": "דיונון, ענק"
-    },
-    {
-      "en": "Squid, Giant Female",
-      "he": "דיונון, ענק"
-    },
-    {
-      "en": "Dinosaur, Deinonychus",
-      "he": "דינוזאור, דיינוניכוס"
-    },
-    {
-      "en": "Dinosaur, Tyrannosaurus Rex",
-      "he": "דינוזאור, טירנוזאורוס רקס"
-    },
-    {
-      "en": "Dinosaur, Triceratops",
-      "he": "דינוזאור, טריצרטופס"
-    },
-    {
-      "en": "Dinosaur, Stegosaurus",
-      "he": "דינוזאור, סטגוזאורוס"
-    },
-    {
-      "en": "Pterodactyl",
-      "he": "דינוזאור, פטרודקטיל"
-    },
-    {
-      "en": "Pteranodon",
-      "he": "דינוזאור, ופטרנודון"
-    },
-    {
-      "en": "Dryad",
-      "he": "דריאדה"
-    },
-    {
-      "en": "Dragon",
-      "he": "דרקון"
-    },
-    {
-      "en": "Hobgoblin",
-      "he": "הובגובלין"
-    },
-    {
-      "en": "Hydra",
-      "he": "הידרה"
-    },
-    {
-      "en": "Hyenodon",
-      "he": "היינודון"
-    },
-    {
-      "en": "Hippogriff",
-      "he": "היפוגריף"
-    },
-    {
-      "en": "Harpy",
-      "he": "הרפיה"
-    },
-    {
-      "en": "Wyvern",
-      "he": "ויוורן"
-    },
-    {
-      "en": "Blood Rose",
-      "he": "ורד דמים"
-    },
-    {
-      "en": "Normal Wolf",
-      "he": "זאב"
-    },
-    {
-      "en": "Dire Wolf",
-      "he": "זאב אימים"
-    },
-    {
-      "en": "Fly, Giant",
-      "he": "זבוב ענק"
-    },
-    {
-      "en": "Zombie",
-      "he": "זומבי"
-    },
-    {
-      "en": "Zombraire",
-      "he": "זומברייר"
-    },
-    {
-      "en": "Skeletaire",
-      "he": "סקלטייר"
-    },
-    {
-      "en": "Cave Locust, Giant",
-      "he": "חגב מערה, ענק"
-    },
-    {
-      "en": "Unicorn",
-      "he": "חד-קרן"
-    },
-    {
-      "en": "Alicorn",
-      "he": "ואליקורן"
-    },
-    {
-      "en": "Shrew, Common Giant",
-      "he": "חדף, ענק"
-    },
-    {
-      "en": "Shrew, Venomous Giant",
-      "he": "חדף, ארסי ענק"
-    },
-    {
-      "en": "Normal Rat",
-      "he": "חולדה"
-    },
-    {
-      "en": "Giant Rat",
-      "he": "חולדה ענקית"
-    },
-    {
-      "en": "Boar",
-      "he": "חזיר בר"
-    },
-    {
-      "en": "Beetle, Giant Fire",
-      "he": "חיפושית, אש ענקית"
-    },
-    {
-      "en": "Beetle, Giant Bombardier",
-      "he": "חיפושית, מפציצה ענקית"
-    },
-    {
-      "en": "Beetle, Giant Tiger",
-      "he": "חיפושית, נמרית ענקית"
-    },
-    {
-      "en": "Beetle, Giant Oil",
-      "he": "חיפושית, שמן ענקית"
-    },
-    {
-      "en": "Sabre-Tooth Cat",
-      "he": "חתול שן חרב"
-    },
-    {
-      "en": "Tiger",
-      "he": "טיגריס"
-    },
-    {
-      "en": "Titanothere",
-      "he": "טיטנוטרה"
-    },
-    {
-      "en": "Troglodyte",
-      "he": "טרוגלודיט"
-    },
-    {
-      "en": "Troll",
-      "he": "טרול"
-    },
-    {
-      "en": "Trollwife",
-      "he": "טרולית"
-    },
-    {
-      "en": "Trollkin, Infant",
-      "he": "טרולקין, תינוק"
-    },
-    {
-      "en": "Trollkin, Juvenile",
-      "he": "טרולקין, צעיר"
-    },
-    {
-      "en": "Trollkin, Adolescent",
-      "he": "טרולקין, מתבגר"
-    },
-    {
-      "en": "Treant",
-      "he": "טריאנט"
-    },
-    {
-      "en": "Water Termite, Giant",
-      "he": "טרמיט מים, ענק"
-    },
-    {
-      "en": "Jaguar",
-      "he": "יגואר"
-    },
-    {
-      "en": "Owlbear",
-      "he": "ינשודוב"
-    },
-    {
-      "en": "Owl",
-      "he": "ינשוף"
-    },
-    {
-      "en": "Elemental*",
-      "he": "יסודן*"
-    },
-    {
-      "en": "Ostrich",
-      "he": "יען"
-    },
-    {
-      "en": "Emu",
-      "he": "אמו"
-    },
-    {
-      "en": "Chimera",
-      "he": "כימרה"
-    },
-    {
-      "en": "Normal Dog",
-      "he": "כלב"
-    },
-    {
-      "en": "Riding Dog",
-      "he": "כלב"
-    },
-    {
-      "en": "Blink Dog",
-      "he": "כלב הבהוב"
-    },
-    {
-      "en": "Hellhound",
-      "he": "כלב שאול"
-    },
-    {
-      "en": "Shark, Mako",
-      "he": "כריש, מאקו"
-    },
-    {
-      "en": "Shark, Great White",
-      "he": "כריש, עמלץ לבן"
-    },
-    {
-      "en": "Shark, Bull",
-      "he": "כריש, שור"
-    },
-    {
-      "en": "Whale, Narwhal",
-      "he": "לווייתן, חדקרן"
-    },
-    {
-      "en": "Whale, Killer",
-      "he": "לווייתן, קטלן"
-    },
-    {
-      "en": "Whale, Sperm",
-      "he": "לווייתן, ראשתן"
-    },
-    {
-      "en": "Lizard, Giant Draco",
-      "he": "לטאה, דרקו ענק"
-    },
-    {
-      "en": "Lizard, Giant Horned Chameleon",
-      "he": "לטאה, זיקית קרן ענקית"
-    },
-    {
-      "en": "Lizard, Giant Tuatara",
-      "he": "לטאה, טואטרה ענקית"
-    },
-    {
-      "en": "Large Monitor Lizard",
-      "he": "לטאה, כוח גדולה"
-    },
-    {
-      "en": "Huge Monitor Lizard",
-      "he": "לטאה, כוח עצומה"
-    },
-    {
-      "en": "Giant Monitor Lizard",
-      "he": "לטאה, כוח ענקית"
-    },
-    {
-      "en": "Lizard, Giant Gecko",
-      "he": "לטאה, שממית ענקית"
-    },
-    {
-      "en": "Lycanthrope*",
-      "he": "ליקנתרופ*"
-    },
-    {
-      "en": "Lycanthrope, Werewolf*",
-      "he": "ליקנתרופ, איש־זאב*"
-    },
-    {
-      "en": "Lycanthrope, Werebear*",
-      "he": "ליקנתרופ, איש־דוב*"
-    },
-    {
-      "en": "Lycanthrope, Wererat*",
-      "he": "ליקנתרופ, איש־חולדה*"
-    },
-    {
-      "en": "Lycanthrope, Wereboar*",
-      "he": "ליקנתרופ, איש־חזיר*"
-    },
-    {
-      "en": "Lycanthrope, Weretiger*",
-      "he": "ליקנתרופ, איש־טיגריס*"
-    },
-    {
-      "en": "Medusa",
-      "he": "מדוזה"
-    },
-    {
-      "en": "Mummy*",
-      "he": "מומיה*"
-    },
-    {
-      "en": "Common Deceiver",
-      "he": "מטעה רגיל"
-    },
-    {
-      "en": "Greater Deceiver",
-      "he": "מטעה גדול"
-    },
-    {
-      "en": "Minotaur",
-      "he": "מינוטאור"
-    },
-    {
-      "en": "Mammoth",
-      "he": "ממותה"
-    },
-    {
-      "en": "Mastodon",
-      "he": "מסטודון"
-    },
-    {
-      "en": "Manticore",
-      "he": "מנטיקור"
-    },
-    {
-      "en": "Rust Monster*",
-      "he": "מפלצת חלודה*"
-    },
-    {
-      "en": "Centipede, Giant",
-      "he": "נדל ענק"
-    },
-    {
-      "en": "Insect Swarm",
-      "he": "נחיל חרקים"
-    },
-    {
-      "en": "Snake, Sea",
-      "he": "נחש, ים"
-    },
-    {
-      "en": "Snake, Giant Rattlesnake",
-      "he": "נחש, עכסן ענק"
-    },
-    {
-      "en": "Snake, Python",
-      "he": "נחש, פיתון"
-    },
-    {
-      "en": "Snake, Pit Viper",
-      "he": "נחש, צפע גומה"
-    },
-    {
-      "en": "Snake, Spitting Cobra",
-      "he": "נחש, קוברה יורקת"
-    },
-    {
-      "en": "Nixie",
-      "he": "ניקסית"
-    },
-    {
-      "en": "Ant, Giant",
-      "he": "נמלה ענקית"
-    },
-    {
-      "en": "Ant, Huge",
-      "he": "נמלה עצומה"
-    },
-    {
-      "en": "Ant, Large",
-      "he": "נמלה גדולה"
-    },
-    {
-      "en": "Leopard (Panther)",
-      "he": "נמר (פנתר)"
-    },
-    {
-      "en": "Stirge",
-      "he": "סטריג'"
-    },
-    {
-      "en": "Salamander, Lightning*",
-      "he": "סלמנדרה, ברק*"
-    },
-    {
-      "en": "Salamander, Sand*",
-      "he": "סלמנדרה, חול*"
-    },
-    {
-      "en": "Salamander, Frost*",
-      "he": "סלמנדרה, כפור*"
-    },
-    {
-      "en": "Salamander, Flame*",
-      "he": "סלמנדרה, להבה*"
-    },
-    {
-      "en": "Weasel, Giant (or Ferret, Giant)",
-      "he": "סמור ענק (או חמוס ענק)"
-    },
-    {
-      "en": "Spectre*",
-      "he": "ספקטר*"
-    },
-    {
-      "en": "Sprite",
-      "he": "ספרייט"
-    },
-    {
-      "en": "Crab, Giant",
-      "he": "סרטן ענק"
-    },
-    {
-      "en": "Yellow Mold",
-      "he": "עובש צהוב"
-    },
-    {
-      "en": "Ogre",
-      "he": "עוג"
-    },
-    {
-      "en": "Invisible Stalker",
-      "he": "עוקב בלתי נראה"
-    },
-    {
-      "en": "Bat",
-      "he": "עטלף"
-    },
-    {
-      "en": "Giant Bat",
-      "he": "עטלף ענק"
-    },
-    {
-      "en": "Eagle",
-      "he": "עיט"
-    },
-    {
-      "en": "Eagle, Giant",
-      "he": "עיט ענק"
-    },
-    {
-      "en": "Spider, Giant Black Widow",
-      "he": "עכביש, אלמנה שחורה ענקית"
-    },
-    {
-      "en": "Spider, Giant Tarantula",
-      "he": "עכביש, טרנטולה ענקית"
-    },
-    {
-      "en": "Spider, Giant Crab",
-      "he": "עכביש, סרטן ענק"
-    },
-    {
-      "en": "Leech, Giant",
-      "he": "עלוקה ענקית"
-    },
-    {
-      "en": "Giant, Stone",
-      "he": "ענק, אבן"
-    },
-    {
-      "en": "Giant, Fire",
-      "he": "ענק, אש"
-    },
-    {
-      "en": "Giant, Hill",
-      "he": "ענק, גבעה"
-    },
-    {
-      "en": "Giant, Mountain",
-      "he": "ענק, הרים"
-    },
-    {
-      "en": "Giant, Frost",
-      "he": "ענק, כפור"
-    },
-    {
-      "en": "Giant, Storm",
-      "he": "ענק, סערה"
-    },
-    {
-      "en": "Giant, Cloud",
-      "he": "ענק, ענן"
-    },
-    {
-      "en": "Giant, Cyclops",
-      "he": "ענק, קיקלופ"
-    },
-    {
-      "en": "Hangman Tree",
-      "he": "עץ תליין"
-    },
-    {
-      "en": "Scorpion, Giant",
-      "he": "עקרב, ענק"
-    },
-    {
-      "en": "Vampire*",
-      "he": "ערפד*"
-    },
-    {
-      "en": "Pegasus",
-      "he": "פגסוס"
-    },
-    {
-      "en": "Black Pudding*",
-      "he": "פודינג שחור* (ג'לי שחור)"
-    },
-    {
-      "en": "Elephant",
-      "he": "פיל"
-    },
-    {
-      "en": "Asiatic Elephant",
-      "he": "פיל"
-    },
-    {
-      "en": "African Elephant",
-      "he": "פיל"
-    },
-    {
-      "en": "Pixie",
-      "he": "פיקסי"
-    },
-    {
-      "en": "Living Statue",
-      "he": "פסל חי"
-    },
-    {
-      "en": "Sea Serpent",
-      "he": "פתן ים"
-    },
-    {
-      "en": "Cheetah",
-      "he": "צ'יטה"
-    },
-    {
-      "en": "Box Turtle",
-      "he": "צב מים או צב יבשה"
-    },
-    {
-      "en": "Snapping Turtle",
-      "he": "צב מים או צב יבשה"
-    },
-    {
-      "en": "Hyena",
-      "he": "צבוע"
-    },
-    {
-      "en": "Shrieker",
-      "he": "צווחן"
-    },
-    {
-      "en": "Shadow*",
-      "he": "צל*"
-    },
-    {
-      "en": "Frog, Giant (and Toad, Giant)",
-      "he": "צפרדע ענקית (וגם קרפדה ענקית)"
-    },
-    {
-      "en": "Kobold",
-      "he": "קובולד"
+      "en": "Jelly, Glass",
+      "he": "ג'לי זכוכית",
+      "plural": "Glass Jellies",
+      "plural_he": "ג'לי זכוכית",
+      "notes": "Also known as Gelatinous Cube / קוביית ג'לטין."
     },
     {
       "en": "Gelatinous Cube",
-      "he": "קוביית ג'לטין"
+      "he": "קוביית ג'לטין",
+      "plural": "Gelatinous Cubes",
+      "plural_he": "קוביות ג'לטין",
+      "notes": "Feminine. Alternate name for Jelly, Glass."
+    },
+    {
+      "en": "Jelly, Green*",
+      "he": "ג'לי ירוק*",
+      "plural": "Green Jellies",
+      "plural_he": "ג'לי ירוקים",
+      "notes": "Also known as Green Slime / רפש ירוק."
+    },
+    {
+      "en": "Green Slime",
+      "he": "רפש ירוק",
+      "notes": "Alternate name for Jelly, Green*."
+    },
+    {
+      "en": "Jelly, Black",
+      "he": "ג'לי שחור",
+      "plural": "Black Jellies",
+      "plural_he": "ג'לי שחורים",
+      "notes": "Also known as Black Pudding / פודינג שחור."
+    },
+    {
+      "en": "Black Pudding",
+      "he": "פודינג שחור",
+      "notes": "Alternate name for Jelly, Black."
+    },
+    {
+      "en": "Jelly, Ochre*",
+      "he": "ג'לי, אוכרי*",
+      "plural": "Ochre Jellies",
+      "plural_he": "ג'לי אוכריים"
+    },
+    {
+      "en": "Goblin",
+      "he": "גובלין",
+      "plural": "Goblins",
+      "plural_he": "גובלינים"
+    },
+    {
+      "en": "Ghoul",
+      "he": "גועל",
+      "plural": "Ghouls",
+      "plural_he": "גועלים",
+      "notes": "Homograph of the everyday word גועל ('disgust'); rely on context."
+    },
+    {
+      "en": "Ghast",
+      "he": "גסט",
+      "plural": "Ghasts",
+      "plural_he": "גסטים"
+    },
+    {
+      "en": "Golem*",
+      "he": "גולם*",
+      "plural": "Golems",
+      "plural_he": "גולמים",
+      "notes": "Section heading covering the eight varieties below."
+    },
+    {
+      "en": "Golem, Stone*",
+      "he": "גולם, אבן*",
+      "plural_he": "גולמי אבן"
+    },
+    {
+      "en": "Golem, Bronze*",
+      "he": "גולם, ברונזה*",
+      "plural_he": "גולמי ברונזה"
+    },
+    {
+      "en": "Golem, Iron*",
+      "he": "גולם, ברזל*",
+      "plural_he": "גולמי ברזל"
+    },
+    {
+      "en": "Golem, Flesh*",
+      "he": "גולם, בשר*",
+      "plural_he": "גולמי בשר"
+    },
+    {
+      "en": "Golem, Clay*",
+      "he": "גולם, חימר*",
+      "plural_he": "גולמי חימר"
+    },
+    {
+      "en": "Golem, Amber*",
+      "he": "גולם, ענבר*",
+      "plural_he": "גולמי ענבר"
+    },
+    {
+      "en": "Golem, Wood*",
+      "he": "גולם, עץ*",
+      "plural_he": "גולמי עץ"
+    },
+    {
+      "en": "Golem, Bone*",
+      "he": "גולם, עצם*",
+      "plural_he": "גולמי עצם"
+    },
+    {
+      "en": "Gorgon",
+      "he": "גורגון",
+      "plural": "Gorgons",
+      "plural_he": "גורגונים"
+    },
+    {
+      "en": "Gnoll",
+      "he": "גנול",
+      "plural": "Gnolls",
+      "plural_he": "גנולים"
+    },
+    {
+      "en": "Strangle Vine",
+      "he": "גפן חונקת",
+      "plural": "Strangle Vines",
+      "plural_he": "גפנים חונקות",
+      "notes": "Feminine."
+    },
+    {
+      "en": "Assassin Vine",
+      "he": "גפן מתנקשת",
+      "plural": "Assassin Vines",
+      "plural_he": "גפנים מתנקשות",
+      "notes": "Feminine."
+    },
+    {
+      "en": "Gargoyle*",
+      "he": "גרגויל*",
+      "plural": "Gargoyles",
+      "plural_he": "גרגוילים"
+    },
+    {
+      "en": "Griffon",
+      "he": "גריפון",
+      "plural": "Griffons",
+      "plural_he": "גריפונים"
+    },
+    {
+      "en": "Bee, Giant",
+      "he": "דבורה ענקית",
+      "plural": "Giant Bees",
+      "plural_he": "דבורים ענקיות",
+      "notes": "Feminine."
+    },
+    {
+      "en": "Fish, Giant Bass",
+      "he": "דג, בס ענק",
+      "plural_he": "דגי בס ענקיים"
+    },
+    {
+      "en": "Fish, Giant Barracuda",
+      "he": "דג, ברקודה ענקית",
+      "plural_he": "ברקודות ענקיות",
+      "notes": "ברקודה is feminine, so the modifier is feminine even though דג is masculine."
+    },
+    {
+      "en": "Fish, Giant Piranha",
+      "he": "דג, פיראניה ענקית",
+      "plural_he": "פיראניות ענקיות",
+      "notes": "פיראניה is feminine."
+    },
+    {
+      "en": "Fish, Giant Catfish",
+      "he": "דג, שפמנון ענק",
+      "plural_he": "שפמנונים ענקיים"
+    },
+    {
+      "en": "Bear",
+      "he": "דוב",
+      "plural": "Bears",
+      "plural_he": "דובים",
+      "notes": "Section heading covering the four varieties below."
+    },
+    {
+      "en": "Bear, Grizzly (or Brown)",
+      "he": "דוב גריזלי",
+      "plural_he": "דובי גריזלי",
+      "notes": "Heading renders the alternate name as דוב גריזלי (או חום)."
+    },
+    {
+      "en": "Bear, Cave",
+      "he": "דוב מערות",
+      "plural_he": "דובי מערות"
+    },
+    {
+      "en": "Bear, Polar",
+      "he": "דוב קוטב",
+      "plural_he": "דובי קוטב"
+    },
+    {
+      "en": "Bear, Black",
+      "he": "דוב שחור",
+      "plural_he": "דובים שחורים"
+    },
+    {
+      "en": "Bugbear",
+      "he": "דובלין",
+      "plural": "Bugbears",
+      "plural_he": "דובלינים",
+      "notes": "Coined blend of דוב + גובלין; do not translate literally as דוב-פחד."
+    },
+    {
+      "en": "Doppleganger",
+      "he": "דופלגנגר",
+      "plural": "Dopplegangers",
+      "plural_he": "דופלגנגרים"
+    },
+    {
+      "en": "Squid, Giant",
+      "he": "דיונון, ענק",
+      "plural": "Giant Squid",
+      "plural_he": "דיונונים ענקיים",
+      "notes": "Section heading; the two sexes below are the stat-block entries."
+    },
+    {
+      "en": "Squid, Giant Male",
+      "he": "דיונון, ענק זכר",
+      "plural_he": "דיונונים ענקיים זכרים"
+    },
+    {
+      "en": "Squid, Giant Female",
+      "he": "דיונון, ענק נקבה",
+      "plural_he": "דיונונים ענקיים נקבות"
+    },
+    {
+      "en": "Dinosaur, Deinonychus",
+      "he": "דינוזאור, דיינוניכוס",
+      "plural_he": "דיינוניכוסים"
+    },
+    {
+      "en": "Dinosaur, Tyrannosaurus Rex",
+      "he": "דינוזאור, טירנוזאורוס רקס",
+      "plural_he": "טירנוזאורוסים"
+    },
+    {
+      "en": "Dinosaur, Triceratops",
+      "he": "דינוזאור, טריצרטופס",
+      "plural_he": "טריצרטופסים"
+    },
+    {
+      "en": "Dinosaur, Stegosaurus",
+      "he": "דינוזאור, סטגוזאורוס",
+      "plural_he": "סטגוזאורוסים"
+    },
+    {
+      "en": "Dinosaur, Pterodactyl",
+      "he": "דינוזאור, פטרודקטיל",
+      "plural_he": "פטרודקטילים"
+    },
+    {
+      "en": "Dinosaur, Pteranodon",
+      "he": "דינוזאור, פטרנודון",
+      "plural_he": "פטרנודונים",
+      "notes": "Shares a section with Pterodactyl; the heading reads פטרודקטיל (ופטרנודון)."
+    },
+    {
+      "en": "Dryad",
+      "he": "דריאדה",
+      "plural": "Dryads",
+      "plural_he": "דריאדות",
+      "notes": "Feminine."
+    },
+    {
+      "en": "Dragon",
+      "he": "דרקון",
+      "plural": "Dragons",
+      "plural_he": "דרקונים",
+      "notes": "Section heading covering the eight types below plus the Dragon Turtle."
+    },
+    {
+      "en": "Dragon, Swamp",
+      "he": "דרקון, ביצה",
+      "plural_he": "דרקוני ביצה",
+      "notes": "Heading reads דרקון, ביצה (דרקון שחור) — Black Dragon."
+    },
+    {
+      "en": "Dragon, Mountain",
+      "he": "דרקון, הרים",
+      "plural_he": "דרקוני הרים",
+      "notes": "Heading reads דרקון, הרים (דרקון אדום) — Red Dragon."
+    },
+    {
+      "en": "Dragon, Sea",
+      "he": "דרקון, ים",
+      "plural_he": "דרקוני ים",
+      "notes": "Heading reads דרקון, ים (דרקון אפור) — Gray Dragon."
+    },
+    {
+      "en": "Dragon, Forest",
+      "he": "דרקון, יער",
+      "plural_he": "דרקוני יער",
+      "notes": "Heading reads דרקון, יער (דרקון ירוק) — Green Dragon."
+    },
+    {
+      "en": "Dragon, Desert",
+      "he": "דרקון, מדבר",
+      "plural_he": "דרקוני מדבר",
+      "notes": "Heading reads דרקון, מדבר (דרקון כחול) — Blue Dragon."
+    },
+    {
+      "en": "Dragon, Plains",
+      "he": "דרקון, מישור",
+      "plural_he": "דרקוני מישור",
+      "notes": "Heading reads דרקון, מישור (דרקון צהוב) — Yellow Dragon."
+    },
+    {
+      "en": "Dragon, Cloud",
+      "he": "דרקון, ענן",
+      "plural_he": "דרקוני ענן"
+    },
+    {
+      "en": "Dragon, Ice",
+      "he": "דרקון, קרח",
+      "plural_he": "דרקוני קרח",
+      "notes": "Heading reads דרקון, קרח (דרקון לבן) — White Dragon."
+    },
+    {
+      "en": "Dragon Turtle",
+      "he": "צב דרקון",
+      "plural": "Dragon Turtles",
+      "plural_he": "צבי דרקון",
+      "notes": "Filed under Dragon in both files, not under Turtle."
+    },
+    {
+      "en": "Hobgoblin",
+      "he": "הובגובלין",
+      "plural": "Hobgoblins",
+      "plural_he": "הובגובלינים"
+    },
+    {
+      "en": "Hydra",
+      "he": "הידרה",
+      "plural": "Hydras",
+      "plural_he": "הידרות",
+      "notes": "Feminine."
+    },
+    {
+      "en": "Hyenodon",
+      "he": "היינודון",
+      "plural": "Hyenodons",
+      "plural_he": "היינודונים"
+    },
+    {
+      "en": "Hippogriff",
+      "he": "היפוגריף",
+      "plural": "Hippogriffs",
+      "plural_he": "היפוגריפים"
+    },
+    {
+      "en": "Harpy",
+      "he": "הרפיה",
+      "plural": "Harpies",
+      "plural_he": "הרפיות",
+      "notes": "Feminine."
+    },
+    {
+      "en": "Wyvern",
+      "he": "ויוורן",
+      "plural": "Wyverns",
+      "plural_he": "ויוורנים"
+    },
+    {
+      "en": "Blood Rose",
+      "he": "ורד דמים",
+      "plural": "Blood Roses",
+      "plural_he": "ורדי דמים"
+    },
+    {
+      "en": "Normal Wolf",
+      "he": "זאב",
+      "plural": "Wolves",
+      "plural_he": "זאבים",
+      "notes": "Heading is simply זאב; 'רגיל' appears only in the stat-table column."
+    },
+    {
+      "en": "Dire Wolf",
+      "he": "זאב אימים",
+      "plural": "Dire Wolves",
+      "plural_he": "זאבי אימים"
+    },
+    {
+      "en": "Fly, Giant",
+      "he": "זבוב ענק",
+      "plural": "Giant Flies",
+      "plural_he": "זבובים ענקיים"
+    },
+    {
+      "en": "Zombie",
+      "he": "זומבי",
+      "plural": "Zombies",
+      "plural_he": "זומבים"
+    },
+    {
+      "en": "Zombraire",
+      "he": "זומברייר",
+      "plural": "Zombraires",
+      "plural_he": "זומברייארים"
+    },
+    {
+      "en": "Skeletaire",
+      "he": "סקלטייר",
+      "plural": "Skeletaires",
+      "plural_he": "סקלטיירים",
+      "notes": "Shares a section with Zombraire."
+    },
+    {
+      "en": "Cave Locust, Giant",
+      "he": "חגב מערה ענק",
+      "plural": "Giant Cave Locusts",
+      "plural_he": "חגבי מערה ענקיים",
+      "notes": "No comma in the Hebrew heading."
+    },
+    {
+      "en": "Unicorn",
+      "he": "חד-קרן",
+      "plural": "Unicorns",
+      "plural_he": "חדי-קרן"
+    },
+    {
+      "en": "Alicorn",
+      "he": "אליקורן",
+      "plural": "Alicorns",
+      "plural_he": "אליקורנים",
+      "notes": "Shares a section with Unicorn; the heading reads חד-קרן (ואליקורן) — the ו there is the conjunction, not part of the term."
+    },
+    {
+      "en": "Shrew, Giant",
+      "he": "חדף, ענק",
+      "plural": "Giant Shrews",
+      "plural_he": "חדפי ענק",
+      "notes": "Section heading; the two varieties below are the stat-block entries."
+    },
+    {
+      "en": "Shrew, Common Giant",
+      "he": "חדף, ענק רגיל",
+      "plural_he": "חדפי ענק רגילים"
+    },
+    {
+      "en": "Shrew, Venomous Giant",
+      "he": "חדף, ענק ארסי",
+      "plural_he": "חדפי ענק ארסיים",
+      "notes": "Word order is ענק ארסי, not ארסי ענק."
+    },
+    {
+      "en": "Normal Rat",
+      "he": "חולדה",
+      "plural": "Rats",
+      "plural_he": "חולדות",
+      "notes": "Feminine."
+    },
+    {
+      "en": "Giant Rat",
+      "he": "חולדה ענקית",
+      "plural": "Giant Rats",
+      "plural_he": "חולדות ענקיות",
+      "notes": "Feminine."
+    },
+    {
+      "en": "Boar",
+      "he": "חזיר בר",
+      "plural": "Boars",
+      "plural_he": "חזירי בר"
+    },
+    {
+      "en": "Beetle, Giant Fire",
+      "he": "חיפושית, אש ענקית",
+      "plural_he": "חיפושיות אש ענקיות",
+      "notes": "חיפושית is feminine; all beetle modifiers take feminine agreement."
+    },
+    {
+      "en": "Beetle, Giant Bombardier",
+      "he": "חיפושית, מפציצה ענקית",
+      "plural_he": "חיפושיות מפציצות ענקיות"
+    },
+    {
+      "en": "Beetle, Giant Tiger",
+      "he": "חיפושית, נמרית ענקית",
+      "plural_he": "חיפושיות נמריות ענקיות"
+    },
+    {
+      "en": "Beetle, Giant Oil",
+      "he": "חיפושית, שמן ענקית",
+      "plural_he": "חיפושיות שמן ענקיות"
+    },
+    {
+      "en": "Sabre-Tooth Cat",
+      "he": "חתול שן חרב",
+      "plural": "Sabre-Tooth Cats",
+      "plural_he": "חתולי שן חרב"
+    },
+    {
+      "en": "Tiger",
+      "he": "טיגריס",
+      "plural": "Tigers",
+      "plural_he": "טיגריסים"
+    },
+    {
+      "en": "Titanothere",
+      "he": "טיטנוטרה",
+      "plural": "Titantheres",
+      "plural_he": "טיטנוטרות",
+      "notes": "Feminine."
+    },
+    {
+      "en": "Troglodyte",
+      "he": "טרוגלודיט",
+      "plural": "Troglodytes",
+      "plural_he": "טרוגלודיטים"
+    },
+    {
+      "en": "Troll",
+      "he": "טרול",
+      "plural": "Trolls",
+      "plural_he": "טרולים"
+    },
+    {
+      "en": "Trollwife",
+      "he": "טרולית",
+      "plural": "Trollwives",
+      "plural_he": "טרוליות",
+      "notes": "Feminine; shares a section with Troll."
+    },
+    {
+      "en": "Trollkin",
+      "he": "טרולקין",
+      "plural": "Trollkin",
+      "plural_he": "טרולקינים",
+      "notes": "Section heading; the three age grades below are the stat-block entries."
+    },
+    {
+      "en": "Trollkin, Infant",
+      "he": "טרולקין, תינוק",
+      "plural_he": "טרולקינים תינוקות"
+    },
+    {
+      "en": "Trollkin, Juvenile",
+      "he": "טרולקין, צעיר",
+      "plural_he": "טרולקינים צעירים"
+    },
+    {
+      "en": "Trollkin, Adolescent",
+      "he": "טרולקין, מתבגר",
+      "plural_he": "טרולקינים מתבגרים"
+    },
+    {
+      "en": "Treant",
+      "he": "טריאנט",
+      "plural": "Treants",
+      "plural_he": "טריאנטים"
+    },
+    {
+      "en": "Water Termite, Giant",
+      "he": "טרמיט מים, ענק",
+      "plural_he": "טרמיטי מים ענקיים"
+    },
+    {
+      "en": "Jaguar",
+      "he": "יגואר",
+      "plural": "Jaguars",
+      "plural_he": "יגוארים"
+    },
+    {
+      "en": "Owlbear",
+      "he": "ינשודוב",
+      "plural": "Owlbears",
+      "plural_he": "ינשודובים",
+      "notes": "Coined blend of ינשוף + דוב."
+    },
+    {
+      "en": "Owl",
+      "he": "ינשוף",
+      "plural": "Owls",
+      "plural_he": "ינשופים"
+    },
+    {
+      "en": "Elemental*",
+      "he": "יסודן*",
+      "plural": "Elementals",
+      "plural_he": "יסודנים",
+      "notes": "Section heading covering the eight types below. Each type has three power tiers keyed to the summoning method: Staff = יסודן מטה, Device = יסודן התקן, Spell = יסודן לחש."
+    },
+    {
+      "en": "Elemental, Earth*",
+      "he": "יסודן, אדמה*",
+      "plural_he": "יסודני אדמה"
+    },
+    {
+      "en": "Elemental, Air*",
+      "he": "יסודן, אוויר*",
+      "plural_he": "יסודני אוויר"
+    },
+    {
+      "en": "Elemental, Fire*",
+      "he": "יסודן, אש*",
+      "plural_he": "יסודני אש"
+    },
+    {
+      "en": "Elemental, Lightning*",
+      "he": "יסודן, ברק*",
+      "plural_he": "יסודני ברק",
+      "notes": "The English heading misspells this as 'Elemental, Lighting*'."
+    },
+    {
+      "en": "Elemental, Water*",
+      "he": "יסודן, מים*",
+      "plural_he": "יסודני מים"
+    },
+    {
+      "en": "Elemental, Metal*",
+      "he": "יסודן, מתכת*",
+      "plural_he": "יסודני מתכת"
+    },
+    {
+      "en": "Elemental, Wood*",
+      "he": "יסודן, עץ*",
+      "plural_he": "יסודני עץ"
+    },
+    {
+      "en": "Elemental, Cold*",
+      "he": "יסודן, קור*",
+      "plural_he": "יסודני קור"
+    },
+    {
+      "en": "Ostrich",
+      "he": "יען",
+      "plural": "Ostriches",
+      "plural_he": "יענים"
+    },
+    {
+      "en": "Emu",
+      "he": "אמו",
+      "plural": "Emus",
+      "plural_he": "אמו",
+      "notes": "Invariant; shares a section with Ostrich."
+    },
+    {
+      "en": "Chimera",
+      "he": "כימרה",
+      "plural": "Chimeras",
+      "plural_he": "כימרות",
+      "notes": "Feminine."
+    },
+    {
+      "en": "Dog",
+      "he": "כלב",
+      "plural": "Dogs",
+      "plural_he": "כלבים",
+      "notes": "Section heading; the two varieties below are the stat-block entries."
+    },
+    {
+      "en": "Normal Dog",
+      "he": "כלב רגיל",
+      "plural_he": "כלבים רגילים"
+    },
+    {
+      "en": "Riding Dog",
+      "he": "כלב רכיבה",
+      "plural_he": "כלבי רכיבה"
+    },
+    {
+      "en": "Blink Dog",
+      "he": "כלב הבהוב",
+      "plural": "Blink Dogs",
+      "plural_he": "כלבי הבהוב"
+    },
+    {
+      "en": "Hellhound",
+      "he": "כלב שאול",
+      "plural": "Hellhounds",
+      "plural_he": "כלבי שאול"
+    },
+    {
+      "en": "Shark, Mako",
+      "he": "כריש, מאקו",
+      "plural_he": "כרישי מאקו"
+    },
+    {
+      "en": "Shark, Great White",
+      "he": "כריש, עמלץ לבן",
+      "plural_he": "עמלצים לבנים"
+    },
+    {
+      "en": "Shark, Bull",
+      "he": "כריש, שור",
+      "plural_he": "כרישי שור"
+    },
+    {
+      "en": "Whale, Narwhal",
+      "he": "לווייתן, חדקרן",
+      "plural_he": "חדקרנים"
+    },
+    {
+      "en": "Whale, Killer",
+      "he": "לווייתן, קטלן",
+      "plural_he": "לווייתנים קטלנים"
+    },
+    {
+      "en": "Whale, Sperm",
+      "he": "לווייתן, ראשתן",
+      "plural_he": "ראשתנים"
+    },
+    {
+      "en": "Lizard, Giant Draco",
+      "he": "לטאה, דרקו ענק",
+      "plural_he": "לטאות דרקו ענקיות",
+      "notes": "לטאה is feminine."
+    },
+    {
+      "en": "Lizard, Giant Horned Chameleon",
+      "he": "לטאה, זיקית קרן ענקית",
+      "plural_he": "זיקיות קרן ענקיות"
+    },
+    {
+      "en": "Lizard, Giant Tuatara",
+      "he": "לטאה, טואטרה ענקית",
+      "plural_he": "טואטרות ענקיות"
+    },
+    {
+      "en": "Lizard, Monitor",
+      "he": "לטאה, כוח",
+      "plural": "Monitor Lizards",
+      "plural_he": "לטאות כוח",
+      "notes": "Section heading; the three sizes below use the construct form לטאת כוח, not לטאה, כוח."
+    },
+    {
+      "en": "Large Monitor Lizard",
+      "he": "לטאת כוח גדולה",
+      "plural_he": "לטאות כוח גדולות"
+    },
+    {
+      "en": "Huge Monitor Lizard",
+      "he": "לטאת כוח עצומה",
+      "plural_he": "לטאות כוח עצומות"
+    },
+    {
+      "en": "Giant Monitor Lizard",
+      "he": "לטאת כוח ענקית",
+      "plural_he": "לטאות כוח ענקיות"
+    },
+    {
+      "en": "Lizard, Giant Gecko",
+      "he": "לטאה, שממית ענקית",
+      "plural_he": "שממיות ענקיות"
+    },
+    {
+      "en": "Lycanthrope*",
+      "he": "ליקנתרופ*",
+      "plural": "Lycanthropes",
+      "plural_he": "ליקנתרופים",
+      "notes": "Section heading covering the five varieties below. Sub-names use a maqaf (־), not a hyphen: איש־זאב."
+    },
+    {
+      "en": "Lycanthrope, Werewolf*",
+      "he": "ליקנתרופ, איש־זאב*",
+      "plural_he": "אנשי־זאב"
+    },
+    {
+      "en": "Lycanthrope, Werebear*",
+      "he": "ליקנתרופ, איש־דוב*",
+      "plural_he": "אנשי־דוב"
+    },
+    {
+      "en": "Lycanthrope, Wererat*",
+      "he": "ליקנתרופ, איש־חולדה*",
+      "plural_he": "אנשי־חולדה"
+    },
+    {
+      "en": "Lycanthrope, Wereboar*",
+      "he": "ליקנתרופ, איש־חזיר*",
+      "plural_he": "אנשי־חזיר"
+    },
+    {
+      "en": "Lycanthrope, Weretiger*",
+      "he": "ליקנתרופ, איש־טיגריס*",
+      "plural_he": "אנשי־טיגריס"
+    },
+    {
+      "en": "Medusa",
+      "he": "מדוזה",
+      "plural": "Medusas",
+      "plural_he": "מדוזות",
+      "notes": "Feminine."
+    },
+    {
+      "en": "Mummy*",
+      "he": "מומיה*",
+      "plural": "Mummies",
+      "plural_he": "מומיות",
+      "notes": "Feminine."
+    },
+    {
+      "en": "Deceiver",
+      "he": "מטעה",
+      "plural": "Deceivers",
+      "plural_he": "מטעים",
+      "notes": "Section heading reads מטעה (פנתר־הידרה) — Panther-Hydra."
+    },
+    {
+      "en": "Common Deceiver",
+      "he": "מטעה רגיל",
+      "plural_he": "מטעים רגילים"
+    },
+    {
+      "en": "Greater Deceiver",
+      "he": "מטעה גדול",
+      "plural_he": "מטעים גדולים"
+    },
+    {
+      "en": "Minotaur",
+      "he": "מינוטאור",
+      "plural": "Minotaurs",
+      "plural_he": "מינוטאורים"
+    },
+    {
+      "en": "Mammoth",
+      "he": "ממותה",
+      "plural": "Mammoths",
+      "plural_he": "ממותות",
+      "notes": "Feminine."
+    },
+    {
+      "en": "Mastodon",
+      "he": "מסטודון",
+      "plural": "Mastodons",
+      "plural_he": "מסטודונים",
+      "notes": "Shares a section with Mammoth (ממותות ומסטודונים)."
+    },
+    {
+      "en": "Manticore",
+      "he": "מנטיקור",
+      "plural": "Manticores",
+      "plural_he": "מנטיקורים"
+    },
+    {
+      "en": "Rust Monster*",
+      "he": "מפלצת חלודה*",
+      "plural": "Rust Monsters",
+      "plural_he": "מפלצות חלודה",
+      "notes": "Feminine."
+    },
+    {
+      "en": "Centipede, Giant",
+      "he": "נדל ענק",
+      "plural": "Giant Centipedes",
+      "plural_he": "נדלים ענקיים"
+    },
+    {
+      "en": "Insect Swarm",
+      "he": "נחיל חרקים",
+      "plural": "Insect Swarms",
+      "plural_he": "נחילי חרקים"
+    },
+    {
+      "en": "Snake, Sea",
+      "he": "נחש, ים",
+      "plural_he": "נחשי ים"
+    },
+    {
+      "en": "Snake, Giant Rattlesnake",
+      "he": "נחש, עכסן ענק",
+      "plural_he": "עכסנים ענקיים"
+    },
+    {
+      "en": "Snake, Python",
+      "he": "נחש, פיתון",
+      "plural_he": "פיתונים"
+    },
+    {
+      "en": "Snake, Pit Viper",
+      "he": "נחש, צפע גומה",
+      "plural_he": "צפעי גומה"
+    },
+    {
+      "en": "Snake, Spitting Cobra",
+      "he": "נחש, קוברה יורקת",
+      "plural_he": "קוברות יורקות",
+      "notes": "קוברה is feminine."
+    },
+    {
+      "en": "Nixie",
+      "he": "ניקסית",
+      "plural": "Nixies",
+      "plural_he": "ניקסיות",
+      "notes": "Feminine."
+    },
+    {
+      "en": "Ant, Giant",
+      "he": "נמלה ענקית",
+      "plural": "Giant Ants",
+      "plural_he": "נמלים ענקיות",
+      "notes": "נמלה is feminine."
+    },
+    {
+      "en": "Ant, Huge",
+      "he": "נמלה עצומה",
+      "plural_he": "נמלים עצומות"
+    },
+    {
+      "en": "Ant, Large",
+      "he": "נמלה גדולה",
+      "plural_he": "נמלים גדולות"
+    },
+    {
+      "en": "Leopard",
+      "he": "נמר",
+      "plural": "Leopards",
+      "plural_he": "נמרים",
+      "notes": "Heading reads נמר (פנתר); Panther = פנתר is the alternate name."
+    },
+    {
+      "en": "Gnome",
+      "he": "ננס",
+      "plural": "Gnomes",
+      "plural_he": "ננסים",
+      "notes": "Keep distinct from Dwarf = גמד (see glossary.json)."
+    },
+    {
+      "en": "Normal Hawk",
+      "he": "נץ",
+      "plural": "Hawks",
+      "plural_he": "נצים"
+    },
+    {
+      "en": "Giant Hawk",
+      "he": "נץ ענק",
+      "plural": "Giant Hawks",
+      "plural_he": "נצים ענקיים"
+    },
+    {
+      "en": "Stirge",
+      "he": "סטריג'",
+      "plural": "Stirges",
+      "plural_he": "סטריג'ים"
+    },
+    {
+      "en": "Salamander, Lightning*",
+      "he": "סלמנדרה, ברק*",
+      "plural_he": "סלמנדרות ברק",
+      "notes": "סלמנדרה is feminine."
+    },
+    {
+      "en": "Salamander, Sand*",
+      "he": "סלמנדרה, חול*",
+      "plural_he": "סלמנדרות חול"
+    },
+    {
+      "en": "Salamander, Frost*",
+      "he": "סלמנדרה, כפור*",
+      "plural_he": "סלמנדרות כפור",
+      "notes": "The English heading omits the asterisk here; the Hebrew keeps it, consistent with the other salamanders."
+    },
+    {
+      "en": "Salamander, Flame*",
+      "he": "סלמנדרה, להבה*",
+      "plural_he": "סלמנדרות להבה",
+      "notes": "The English heading omits the asterisk here; the Hebrew keeps it, consistent with the other salamanders."
+    },
+    {
+      "en": "Weasel, Giant",
+      "he": "סמור ענק",
+      "plural": "Giant Weasels",
+      "plural_he": "סמורים ענקיים",
+      "notes": "Heading reads סמור ענק (או חמוס ענק) — Ferret, Giant = חמוס ענק."
+    },
+    {
+      "en": "Ferret, Giant",
+      "he": "חמוס ענק",
+      "plural_he": "חמוסים ענקיים",
+      "notes": "Alternate name for Weasel, Giant."
+    },
+    {
+      "en": "Spectre*",
+      "he": "ספקטר*",
+      "plural": "Spectres",
+      "plural_he": "ספקטרים"
+    },
+    {
+      "en": "Sprite",
+      "he": "ספרייט",
+      "plural": "Sprites",
+      "plural_he": "ספרייטים"
+    },
+    {
+      "en": "Crab, Giant",
+      "he": "סרטן ענק",
+      "plural": "Giant Crabs",
+      "plural_he": "סרטנים ענקיים"
+    },
+    {
+      "en": "Yellow Mold",
+      "he": "עובש צהוב",
+      "plural": "Yellow Molds",
+      "plural_he": "עובש צהוב",
+      "notes": "Mass noun; use singular even for multiple patches."
+    },
+    {
+      "en": "Ogre",
+      "he": "עוג",
+      "plural": "Ogres",
+      "plural_he": "עוגים"
+    },
+    {
+      "en": "Invisible Stalker",
+      "he": "עוקב בלתי נראה",
+      "plural": "Invisible Stalkers",
+      "plural_he": "עוקבים בלתי נראים"
+    },
+    {
+      "en": "Bat",
+      "he": "עטלף",
+      "plural": "Bats",
+      "plural_he": "עטלפים"
+    },
+    {
+      "en": "Giant Bat",
+      "he": "עטלף ענק",
+      "plural": "Giant Bats",
+      "plural_he": "עטלפים ענקיים",
+      "notes": "Shares a section with Bat."
+    },
+    {
+      "en": "Eagle",
+      "he": "עיט",
+      "plural": "Eagles",
+      "plural_he": "עיטים"
+    },
+    {
+      "en": "Eagle, Giant",
+      "he": "עיט ענק",
+      "plural": "Giant Eagles",
+      "plural_he": "עיטים ענקיים"
+    },
+    {
+      "en": "Spider, Giant Black Widow",
+      "he": "עכביש, אלמנה שחורה ענקית",
+      "plural_he": "אלמנות שחורות ענקיות",
+      "notes": "עכביש is masculine but אלמנה is feminine; agreement follows the head noun actually used."
+    },
+    {
+      "en": "Spider, Giant Tarantula",
+      "he": "עכביש, טרנטולה ענקית",
+      "plural_he": "טרנטולות ענקיות"
+    },
+    {
+      "en": "Spider, Giant Crab",
+      "he": "עכביש, סרטן ענק",
+      "plural_he": "עכבישי סרטן ענקיים"
+    },
+    {
+      "en": "Leech, Giant",
+      "he": "עלוקה ענקית",
+      "plural": "Giant Leeches",
+      "plural_he": "עלוקות ענקיות",
+      "notes": "Feminine."
+    },
+    {
+      "en": "Giant, Stone",
+      "he": "ענק, אבן",
+      "plural_he": "ענקי אבן"
+    },
+    {
+      "en": "Giant, Fire",
+      "he": "ענק, אש",
+      "plural_he": "ענקי אש"
+    },
+    {
+      "en": "Giant, Hill",
+      "he": "ענק, גבעה",
+      "plural_he": "ענקי גבעות"
+    },
+    {
+      "en": "Giant, Mountain",
+      "he": "ענק, הרים",
+      "plural_he": "ענקי הרים"
+    },
+    {
+      "en": "Giant, Frost",
+      "he": "ענק, כפור",
+      "plural_he": "ענקי כפור"
+    },
+    {
+      "en": "Giant, Storm",
+      "he": "ענק, סערה",
+      "plural_he": "ענקי סערה"
+    },
+    {
+      "en": "Giant, Cloud",
+      "he": "ענק, ענן",
+      "plural_he": "ענקי ענן"
+    },
+    {
+      "en": "Giant, Cyclops",
+      "he": "ענק, קיקלופ",
+      "plural_he": "קיקלופים"
+    },
+    {
+      "en": "Efreeti*",
+      "he": "עפרית*",
+      "plural": "Efreet",
+      "plural_he": "עפריתים",
+      "notes": "Masculine despite the -ית ending."
+    },
+    {
+      "en": "Hangman Tree",
+      "he": "עץ תליין",
+      "plural": "Hangman Trees",
+      "plural_he": "עצי תליין"
+    },
+    {
+      "en": "Scorpion, Giant",
+      "he": "עקרב, ענק",
+      "plural": "Giant Scorpions",
+      "plural_he": "עקרבים ענקיים"
+    },
+    {
+      "en": "Vampire*",
+      "he": "ערפד*",
+      "plural": "Vampires",
+      "plural_he": "ערפדים"
+    },
+    {
+      "en": "Pegasus",
+      "he": "פגסוס",
+      "plural": "Pegasi",
+      "plural_he": "פגסוסים"
+    },
+    {
+      "en": "Elephant",
+      "he": "פיל",
+      "plural": "Elephants",
+      "plural_he": "פילים",
+      "notes": "Section heading; the two varieties below are the stat-block entries."
+    },
+    {
+      "en": "Asiatic Elephant",
+      "he": "פיל אסיאתי",
+      "plural_he": "פילים אסיאתיים"
+    },
+    {
+      "en": "African Elephant",
+      "he": "פיל אפריקאי",
+      "plural_he": "פילים אפריקאיים"
+    },
+    {
+      "en": "Pixie",
+      "he": "פיקסי",
+      "plural": "Pixies",
+      "plural_he": "פיקסים"
+    },
+    {
+      "en": "Living Statue",
+      "he": "פסל חי",
+      "plural": "Living Statues",
+      "plural_he": "פסלים חיים",
+      "notes": "Section heading covering the three varieties below."
+    },
+    {
+      "en": "Living Statue, Stone",
+      "he": "פסל חי, אבן",
+      "plural_he": "פסלי אבן חיים"
+    },
+    {
+      "en": "Living Statue, Iron",
+      "he": "פסל חי, ברזל",
+      "plural_he": "פסלי ברזל חיים"
+    },
+    {
+      "en": "Living Statue, Crystal",
+      "he": "פסל חי, קריסטל",
+      "plural_he": "פסלי קריסטל חיים"
+    },
+    {
+      "en": "Sea Serpent",
+      "he": "פתן ים",
+      "plural": "Sea Serpents",
+      "plural_he": "פתני ים"
+    },
+    {
+      "en": "Cheetah",
+      "he": "צ'יטה",
+      "plural": "Cheetahs",
+      "plural_he": "צ'יטות",
+      "notes": "Feminine."
+    },
+    {
+      "en": "Turtle or Tortoise",
+      "he": "צב מים או צב יבשה",
+      "plural_he": "צבי מים וצבי יבשה",
+      "notes": "Section heading; the two species below are the stat-block entries."
+    },
+    {
+      "en": "Box Turtle",
+      "he": "צב קופסה",
+      "plural": "Box Turtles",
+      "plural_he": "צבי קופסה"
+    },
+    {
+      "en": "Snapping Turtle",
+      "he": "צב נשכן",
+      "plural": "Snapping Turtles",
+      "plural_he": "צבים נשכנים"
+    },
+    {
+      "en": "Hyena",
+      "he": "צבוע",
+      "plural": "Hyenas",
+      "plural_he": "צבועים"
+    },
+    {
+      "en": "Shrieker",
+      "he": "צווחן",
+      "plural": "Shriekers",
+      "plural_he": "צווחנים"
+    },
+    {
+      "en": "Shadow*",
+      "he": "צל*",
+      "plural": "Shadows",
+      "plural_he": "צללים"
+    },
+    {
+      "en": "Frog, Giant",
+      "he": "צפרדע ענקית",
+      "plural": "Giant Frogs",
+      "plural_he": "צפרדעים ענקיות",
+      "notes": "צפרדע is feminine. Heading reads צפרדע ענקית (וגם קרפדה ענקית)."
+    },
+    {
+      "en": "Toad, Giant",
+      "he": "קרפדה ענקית",
+      "plural": "Giant Toads",
+      "plural_he": "קרפדות ענקיות",
+      "notes": "Feminine; shares a section with Frog, Giant."
+    },
+    {
+      "en": "Kobold",
+      "he": "קובולד",
+      "plural": "Kobolds",
+      "plural_he": "קובולדים"
     },
     {
       "en": "Ape, Carnivorous",
-      "he": "קוף טורף"
+      "he": "קוף טורף",
+      "plural": "Carnivorous Apes",
+      "plural_he": "קופים טורפים"
     },
     {
       "en": "Cockatrice",
-      "he": "קוקטריס"
+      "he": "קוקטריס",
+      "plural": "Cockatrices",
+      "plural_he": "קוקטריסים"
     },
     {
       "en": "Centaur",
-      "he": "קנטאור"
+      "he": "קנטאור",
+      "plural": "Centaurs",
+      "plural_he": "קנטאורים"
+    },
+    {
+      "en": "Rhinoceros",
+      "he": "קרנף",
+      "plural": "Rhinoceroses",
+      "plural_he": "קרנפים",
+      "notes": "Section heading; the two varieties below are the stat-block entries."
     },
     {
       "en": "Black Rhino",
-      "he": "קרנף שחור"
+      "he": "קרנף שחור",
+      "plural_he": "קרנפים שחורים"
     },
     {
       "en": "Woolly Rhino",
-      "he": "קרנף צמרי"
+      "he": "קרנף צמרי",
+      "plural_he": "קרנפים צמריים"
     },
     {
       "en": "Rhagodessa, Giant",
-      "he": "ראגודסה, ענקית"
+      "he": "ראגודסה, ענקית",
+      "plural_he": "ראגודסות ענקיות",
+      "notes": "Feminine."
     },
     {
       "en": "Wraith*",
-      "he": "רוח צל*"
+      "he": "רוח צל*",
+      "plural": "Wraiths",
+      "plural_he": "רוחות צל",
+      "notes": "Feminine. Keep distinct from Ghost = רוח."
     },
     {
       "en": "Ghost*",
-      "he": "רוח*"
+      "he": "רוח*",
+      "plural": "Ghosts",
+      "plural_he": "רוחות",
+      "notes": "Feminine. Keep distinct from Wraith = רוח צל."
+    },
+    {
+      "en": "Roc",
+      "he": "רוק",
+      "plural": "Rocs",
+      "plural_he": "רוקים",
+      "notes": "Section heading; the three sizes below are the stat-block entries."
     },
     {
       "en": "Normal Roc",
-      "he": "רוק"
+      "he": "רוק רגיל",
+      "plural_he": "רוקים רגילים"
     },
     {
       "en": "Large Roc",
-      "he": "רוק"
+      "he": "רוק גדול",
+      "plural_he": "רוקים גדולים"
     },
     {
       "en": "Giant Roc",
-      "he": "רוק"
+      "he": "רוק ענק",
+      "plural_he": "רוקים ענקיים"
     },
     {
       "en": "Rot Grub",
-      "he": "רימה נרקבת"
+      "he": "רימה נרקבת",
+      "plural": "Rot Grubs",
+      "plural_he": "רימות נרקבות",
+      "notes": "Feminine."
     },
     {
       "en": "Wight*",
-      "he": "רפא*"
+      "he": "רפא*",
+      "plural": "Wights",
+      "plural_he": "רפאים"
     },
     {
       "en": "Skeleton",
-      "he": "שלד"
+      "he": "שלד",
+      "plural": "Skeletons",
+      "plural_he": "שלדים"
     },
     {
-      "en": "Parrot (or Cockatiel)",
-      "he": "תוכי (או קוקטייל)"
+      "en": "Parrot",
+      "he": "תוכי",
+      "plural": "Parrots",
+      "plural_he": "תוכים",
+      "notes": "Heading reads תוכי (או קוקטייל)."
+    },
+    {
+      "en": "Cockatiel",
+      "he": "קוקטייל",
+      "plural": "Cockatiels",
+      "plural_he": "קוקטיילים",
+      "notes": "Alternate name for Parrot in this entry."
     },
     {
       "en": "Caecilia, Giant",
-      "he": "תולען, ענק"
+      "he": "תולען, ענק",
+      "plural_he": "תולענים ענקיים"
+    },
+    {
+      "en": "Tentacle Worm",
+      "he": "תולעת זרועות",
+      "plural": "Tentacle Worms",
+      "plural_he": "תולעי זרועות",
+      "notes": "Feminine."
     },
     {
       "en": "Purple Worm",
-      "he": "תולעת סגולה"
+      "he": "תולעת סגולה",
+      "plural": "Purple Worms",
+      "plural_he": "תולעים סגולות",
+      "notes": "Feminine."
     },
     {
       "en": "Octopus, Giant",
-      "he": "תמנון ענק"
+      "he": "תמנון ענק",
+      "plural": "Giant Octopuses",
+      "plural_he": "תמנונים ענקיים"
     },
     {
       "en": "Crocodile",
-      "he": "תנין"
+      "he": "תנין",
+      "plural": "Crocodiles",
+      "plural_he": "תנינים"
     }
   ]
 }
