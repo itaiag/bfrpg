@@ -902,7 +902,7 @@ Giant crabs naturally resemble the ordinary variety, but are much larger, averag
 Giant crabs carry their eyes on armored stalks, which means that no bonus is awarded for attacking them from behind.
 
 </div>
-<div class="monster" data-tag="Crocodile" >
+<div class="monster" data-tag="Normal Crocodile" data-tag2="Large Crocodile" data-tag3="Giant Crocodile" >
 
 ## Crocodile
 
@@ -1424,7 +1424,7 @@ Ice dragons are immune to normal cold, and take only half damage from magical co
 
 ### Dragon, Mountain (Red Dragon)
 
-|   |  Dragon, Red |
+|   |  Dragon, Mountain |
 |--------------|---|
 | Armor Class: | 21 |
 | Hit Dice: | 10** (+9) |
@@ -1566,7 +1566,7 @@ Sea dragons are neutral in outlook, in much the same way as ice dragons. They of
 
 ### Dragon, Swamp (Black Dragon)
 
-|   |   Dragon, Black |
+|   |   Dragon, Swamp |
 |--------------|-----|
 | Armor Class: | 18 |
 | Hit Dice: | 7** |
@@ -1847,7 +1847,7 @@ type.
 
 </div>
 
-<div class="monster" data-tag="Staff Elemental, Air*" data-tag2="Device Elemental, Air*" data-tag3="Spell Elemental, Air*" >
+<div class="monster" data-tag="Staff Elemental, Air" data-tag2="Device Elemental, Air" data-tag3="Spell Elemental, Air" >
 
 ### Elemental, Air*
 
@@ -1870,11 +1870,11 @@ Air elementals resemble "dust devils," that is, small whirlwinds, but they are m
 
 </div>
 
-<div class="monster" data-tag="Staff Elemental, Cold*" data-tag2="Device Elemental, Cold*" data-tag3="Spell Elemental, Cold*" >
+<div class="monster" data-tag="Staff Elemental, Cold" data-tag2="Device Elemental, Cold" data-tag3="Spell Elemental, Cold" >
 
 ### Elemental, Cold*
 
-|                 | Staff Elemental, Earth | Device Elemental, Earth | Spell Elemental, Earth |
+|                 | Staff Elemental, Cold | Device Elemental, Cold | Spell Elemental, Cold |
 |-----------------|------------------------|-------------------------|------------------------|
 | Armor Class:    | 18 (m)                 | 20 (m)                  | 22 (m)                 |
 | Hit Dice:       | 8*                     | 12* (+10)               | 16* (+12)              |
@@ -1905,7 +1905,7 @@ of damage each round.
 
 </div>
 
-<div class="monster" data-tag="Staff Elemental, Earth*" data-tag2="Device Elemental, Earth*" data-tag3="Spell Elemental, Earth*" >
+<div class="monster" data-tag="Staff Elemental, Earth" data-tag2="Device Elemental, Earth" data-tag3="Spell Elemental, Earth" >
 
 ### Elemental, Earth*
 
@@ -1925,7 +1925,7 @@ of damage each round.
 Earth elementals resemble crude, headless humanoid statues, with clublike hands and feet. They cannot cross a body of water wider than their own height. Earth elementals take double damage when attacked by fire (including fire elementals). They do an additional 1d8 points of damage against creatures, vehicles, or structures which rest on the ground.
 
 </div>
-<div class="monster" data-tag="Staff Elemental, Fire*" data-tag2="Device Elemental, Fire*" data-tag3="Spell Elemental, Fire*" >
+<div class="monster" data-tag="Staff Elemental, Fire" data-tag2="Device Elemental, Fire" data-tag3="Spell Elemental, Fire" >
 
 ### Elemental, Fire*
 
@@ -2046,12 +2046,12 @@ structures which are in the water.
 
 </div>
 
-<div class="monster" data-tag="Staff Elemental, Water" data-tag2="Device Elemental, Water" data-tag3="Spell Elemental, Water" >
+<div class="monster" data-tag="Staff Elemental, Wood" data-tag2="Device Elemental, Wood" data-tag3="Spell Elemental, Wood" >
 
 
 ### Elemental, Wood*
 
-|                 | Staff Elemental, Earth | Device Elemental, Earth | Spell Elemental, Earth |
+|                 | Staff Elemental, Wood | Device Elemental, Wood | Spell Elemental, Wood |
 |-----------------|------------------------|-------------------------|------------------------|
 | Armor Class:    | 17 (m)                 | 19 (m)                  | 21 (m)                 |
 | Hit Dice:       | 8*                     | 12* (+10)               | 16* (+12)              |
@@ -2144,7 +2144,7 @@ making the kill with its sharp beak.
 
 </div>
 
-<div class="monster" data-tag="Fish, Giant Barracuda" >
+<div class="monster" data-tag="Huge Barracuda" data-tag2="Giant Barracuda" >
 
 ## Fish, Giant Barracuda
 
@@ -3457,7 +3457,7 @@ automatically.
 | Damage:           | 3d8          |
 | Movement:         | 20'          |
 | No. Appearing:    | 1            |
-| Save As: Fighter: | 10           |
+| Save As:          | Fighter: 10  |
 | Morale:           | 12           |
 | Treasure Type:    | None         |
 | XP:               | 1,390        |
@@ -3582,7 +3582,7 @@ adding any magical "plus" value to the roll if applicable).
 
 </div>
 
-<div class="monster" data-tag="Jelly, Green*" data-tag2="Green Slime">
+<div class="monster" data-tag="Jelly, Green" data-tag2="Green Slime">
 
 ### Jelly, Green* (Green Slime)
 
@@ -3626,7 +3626,7 @@ retrieved by any magic short of a wish.
 
 </div>
 
-<div class="monster" data-tag="Jelly, Ochre*">
+<div class="monster" data-tag="Jelly, Ochre">
 
 ### Jelly, Ochre*
 
@@ -3642,7 +3642,6 @@ retrieved by any magic short of a wish.
 | Morale:         | 12                            |
 | Treasure Type:  | None                          |
 | XP:             | 405                           |
-|                 |                               |
 
 Ochre jellies are yellowish-brown amorphous monsters.
 Average individuals will be up to 10 feet in diameter,
@@ -3930,9 +3929,8 @@ Giant tuataras are large, being 10' to 12' long, and heavily built. They are pre
 
 ## Lizard, Monitor
 
-|                 |                      |                     |                      |
-|-----------------|----------------------|---------------------|----------------------|
 |                 | Large Monitor Lizard | Huge Monitor Lizard | Giant Monitor Lizard |
+|-----------------|----------------------|---------------------|----------------------|
 | Armor Class:    | 12                   | 14                  | 16                   |
 | Hit Dice:       | 3*                   | 5*                  | 7*                   |
 | No. of Attacks: | 1 bite               | 1 bite              | 1 bite               |
@@ -3974,7 +3972,7 @@ considered prey.
 
 </div>
 
-<div class="monster" data-tag="Common Lizard Man" data-tag2="Common Lizard Man">
+<div class="monster" data-tag="Common Lizard Man" data-tag2="Subterranean Lizard Man">
 
 ## Lizard Man
 
@@ -4494,7 +4492,6 @@ Orcs have Darkvision to a range of 60'. They suffer a -1 attack penalty in brigh
 One out of every eight orcs will be a warrior of 2 Hit Dice (75 XP). Orcs gain a +1 bonus to their morale if they are led by a warrior. In orc lairs, one out of every twelve will be a chieftain of 4 Hit Dice (240 XP) in chainmail with an Armor Class of 15 (11), a movement 20', and having a +1 bonus to damage due to strength. In lairs of 30 or more, there will be an orc king of 6 Hit Dice (500 XP), with an Armor Class of 16 (11), in chainmail with a shield, movement 20', and having a +2 bonus to damage. In the lair, orcs never fail a morale check as long as the orc king is alive. In addition, a lair has a chance equal to 1-2 on 1d6 of a shaman being present. A shaman is equivalent to a warrior orc statistically, but has Clerical abilities at level 1d4+1.
 
 </div>
-<div class="monster" data-tag="Owlbear" >
 
 <div class="monster" data-tag="Ostrich"  data-tag2="Emu">
 
@@ -4555,6 +4552,8 @@ talons.
 
 </div>
 
+
+<div class="monster" data-tag="Owlbear" >
 
 ## Owlbear
 
@@ -6412,7 +6411,7 @@ Like all undead, wights may be Turned by Clerics and are immune to **sleep**, 
 ## Wolf
 
 
-|  | **Normal Wolf** | **Dire Wold** |
+|  | **Normal Wolf** | **Dire Wolf** |
 |---|-----------|----------|
 | Armor Class: | 13 | 14 |
 | Hit Dice: | 2 | 4 |
