@@ -144,6 +144,10 @@ td:only-child {
 .dice > .mod {
   margin-right: 0.15em;
 }
+/* Attached multiplier (2d8x100 -> 2ק8×100): breathing room on both sides. */
+.dice > .mult {
+  margin-inline: 0.1em;
+}
 
 /* Font for Hebrew */
 body {

@@ -1,6 +1,7 @@
 -- dice-he.lua — render dice notation in Hebrew, LTR-isolated.
---   2d6+2  -> <span dir="ltr">2ק6+2</span>   (English source: d -> ק)
---   2ק6+2  -> <span dir="ltr">2ק6+2</span>   (already-Hebrew source: just isolate)
+--   2d6+2   -> <span dir="ltr">2ק6+2</span>   (English source: d -> ק)
+--   2ק6+2   -> <span dir="ltr">2ק6+2</span>   (already-Hebrew source: just isolate)
+--   2d8x100 -> <span dir="ltr">2ק8×100</span> (attached multiplier joins the atom)
 --
 -- Runs on the Hebrew build only. The Hebrew die letter ק is a strong RTL
 -- character; among LTR digits the bidi algorithm reorders it (2ק6 -> "26ק").
@@ -33,13 +34,24 @@ local function nextDice(s, pos)
   return best
 end
 
+-- An attached multiplier right after the dice expression: 2d8x100, 2d8×100,
+-- 4d6X10. Only the attached (space-less) form is handled here — a spaced
+-- "3d6 × 10" arrives as separate inlines and already orders correctly.
+-- × is multi-byte UTF-8, so it needs its own pattern rather than a char set.
+local function nextMultiplier(s, pos)
+  for _, pat in ipairs({ "^[xX](%d+)", "^×(%d+)" }) do
+    local _, b, num = s:find(pat, pos)
+    if b then return b, num end
+  end
+end
+
 local function atom(s)
   -- An isolated LTR atom: keeps multi-digit numbers / +modifier internally LTR
   -- (100 stays 100, not 001) while acting as a single unit for ordering.
   return '<span dir="ltr">' .. s .. '</span>'
 end
 
-local function wrap(count, sides, modifier)
+local function wrap(count, sides, modifier, multiplier)
   -- Emit count, ק, sides and modifier as SEPARATE atoms in that source order. The
   -- .dice container is RTL (see custom-rtl.css), so it flips the token order
   -- visually: count on the right (read first in Hebrew), then ק, then sides, then
@@ -57,6 +69,13 @@ local function wrap(count, sides, modifier)
     parts[#parts + 1] = '<span class="mod" dir="ltr">' .. modifier:sub(1, 1) .. '</span>'
     parts[#parts + 1] = atom(modifier:sub(2))
   end
+  if multiplier then
+    -- The multiplier must live inside the same .dice container: left outside it
+    -- the trailing "x100" is a separate LTR run in RTL text and lands on the
+    -- wrong side of the dice (2ק8 x100 -> "2ק1008x").
+    parts[#parts + 1] = '<span class="mult" dir="ltr">×</span>'
+    parts[#parts + 1] = atom(multiplier)
+  end
   local html = '<span class="dice">' .. table.concat(parts) .. '</span>'
   return pandoc.RawInline('html', html)
 end
@@ -68,8 +87,9 @@ function Str(el)
     local m = nextDice(s, pos)
     if not m then break end
     if m.a > pos then table.insert(out, pandoc.Str(s:sub(pos, m.a - 1))) end
-    table.insert(out, wrap(m.count, m.sides, m.modifier))
-    pos = m.b + 1
+    local last, multiplier = nextMultiplier(s, m.b + 1)
+    table.insert(out, wrap(m.count, m.sides, m.modifier, multiplier))
+    pos = (last or m.b) + 1
   end
   if pos == 1 then return nil end                  -- nothing matched; leave as-is
   if pos <= #s then table.insert(out, pandoc.Str(s:sub(pos))) end
