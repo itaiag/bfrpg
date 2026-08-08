@@ -101,7 +101,7 @@ return n
 
 <br>
 
-::: {.column-screen .table-responsive}
+::: {.column-screen .table-responsive .rtl-table}
 ```{ojs}
 Inputs.table(search, {
   width: "auto",
