@@ -483,8 +483,9 @@ if (recordsFile != null){
           display: inline-block;
           font-weight: 800;
           flex: 1 1 auto;
-          text-align: left;
-          padding-right: 0px;
+          /* RTL: keep the label clear of the panel's right border */
+          text-align: right;
+          padding-right: 0.75rem;
           padding-bottom: 1.5rem;
           margin-right: 0px;
       }
@@ -647,9 +648,19 @@ numberInputCha.on("input", () => updateOutput(numberInputCha,outputCha));
 
 
 
+// Row ids have to stay unique even after rows are deleted, so keep a
+// monotonic counter on the container rather than counting the rows present.
+function nextRowId (container) {
+    const node = d3.select(container).node()
+    const next = (Number(node.dataset.rowSeq) || 1) + 1
+    node.dataset.rowSeq = String(next)
+    return next
+}
+
 function addInputField() {
       var inputContainer = d3.select('#inputContainer');
       var inputCount = inputContainer.selectAll('.input-group').size();
+      var idNum = nextRowId('#inputContainer');
 
       var inputGroup = inputContainer
         .append('div')
@@ -659,7 +670,7 @@ function addInputField() {
         .append('input')
         .attr('type', 'text')
         .attr('autocomplete',"off")
-        .attr('id', 'language' + (inputCount + 1))
+        .attr('id', 'language' + idNum)
         .attr('class', 'form-control rounded-start lang')
         .attr('placeholder', 'שפה ' + (inputCount + 1));
 
@@ -667,7 +678,7 @@ function addInputField() {
         .append('button')
         .attr('class', 'btn btn-danger delete-button rounded-end')
         .attr('type', 'button')
-        .attr('id', 'languageDel' + (inputCount + 1))
+        .attr('id', 'languageDel' + idNum)
         .text('-')
         .on('click', function() {
           inputGroup.remove();
@@ -682,6 +693,7 @@ c = {
 function addSkill() {
       var inputContainer = d3.select('#inputContainerSkills');
       var inputCount = inputContainer.selectAll('.input-group').size();
+      var idNum = nextRowId('#inputContainerSkills');
 
       var inputGroup = inputContainer
         .append('div')
@@ -691,7 +703,7 @@ function addSkill() {
         .append('input')
         .attr('autocomplete',"off")
         .attr('type', 'text')
-        .attr('id', 'skill' + (inputCount + 1))
+        .attr('id', 'skill' + idNum)
         .attr('class', 'form-control rounded-start oskill')
         .attr('placeholder', 'יכולת ' + (inputCount + 1));
 
@@ -699,7 +711,7 @@ function addSkill() {
         .append('button')
         .attr('class', 'btn btn-danger delete-button rounded-end')
         .attr('type', 'button')
-        .attr('id', 'skillDel' + (inputCount + 1))
+        .attr('id', 'skillDel' + idNum)
         .text('-')
         .on('click', function() {
           inputGroup.remove();

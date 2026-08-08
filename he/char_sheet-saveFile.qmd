@@ -40,13 +40,13 @@ function savetoFile(){
 
       // Thieving skills 
     char.ThiefSkills = {};
-    char.ThiefSkills.OpenLocks = d3.select('#thiefLocksInput ').property('value');
-    char.ThiefSkills.RemoveTraps = d3.select('#thiefTrapInput ').property('value');
-    char.ThiefSkills.PickPockets = d3.select('#thiefPocketsInput ').property('value');
-    char.ThiefSkills.MoveSilent = d3.select('#thiefSilentInput ').property('value');
-    char.ThiefSkills.ClimbWalls = d3.select('#thiefClimbInput ').property('value'); 
-    char.ThiefSkills.Hide = d3.select('#thiefHideInput ').property('value');
-    char.ThiefSkills.Listen = d3.select('#thiefListenInput ').property('value');
+    char.ThiefSkills.OpenLocks = d3.select('#thiefLocksInput').property('value');
+    char.ThiefSkills.RemoveTraps = d3.select('#thiefTrapInput').property('value');
+    char.ThiefSkills.PickPockets = d3.select('#thiefPocketsInput').property('value');
+    char.ThiefSkills.MoveSilent = d3.select('#thiefSilentInput').property('value');
+    char.ThiefSkills.ClimbWalls = d3.select('#thiefClimbInput').property('value');
+    char.ThiefSkills.Hide = d3.select('#thiefHideInput').property('value');
+    char.ThiefSkills.Listen = d3.select('#thiefListenInput').property('value');
 
 
     // Langs and skills
@@ -132,8 +132,10 @@ function savetoFile(){
 
     //Notes
     char.Hirelings = d3.selectAll(".hirelings").nodes().map((node) => node.value);
-    char.Background = d3.select('#background').text()
-    char.MiscNotes = d3.select('#miscNotes').text()
+    // Both are <textarea>, so the typed text lives in the value property,
+    // not in the element's text content.
+    char.Background = d3.select('#background').property('value')
+    char.MiscNotes = d3.select('#miscNotes').property('value')
 
 
     return char

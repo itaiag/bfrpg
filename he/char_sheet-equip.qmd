@@ -228,27 +228,27 @@
 
 function addWeaponEq() {
       var inputContainer = d3.select('#weaponEqContainer');
-      var inputCount = inputContainer.selectAll('.grid').size();
+      var idNum = nextRowId('#weaponEqContainer');
 
     var inputGroup = inputContainer
       .append('div')
       .attr('class','grid align-content-center').attr('style','--bs-gap:0;--bs-columns:12;')
-      .attr('id','weaponEq'+(inputCount + 1))
+      .attr('id','weaponEq'+idNum)
 
     inputGroup
     .html(`
         <div class="g-col-1 mt-2">
-            <input autocomplete="off" class="form-check-input weaponsEqMag" type="checkbox" value=""  id="itemMagical${inputCount + 1}">
+            <input autocomplete="off" class="form-check-input weaponsEqMag" type="checkbox" value=""  id="itemMagical${idNum}">
         </div>
         <div class="g-col-1 mt-2">
-            <input autocomplete="off" class="form-check-input weaponsEqEq" type="checkbox" value="" id="itemEquipped${inputCount + 1}">
+            <input autocomplete="off" class="form-check-input weaponsEqEq" type="checkbox" value="" id="itemEquipped${idNum}">
         </div>
         <div class="g-col-8">
-            <input autocomplete="off" type="text" class="form-control form-control-sm weaponsEqName"  id="itemName${inputCount + 1}">
+            <input autocomplete="off" type="text" class="form-control form-control-sm weaponsEqName"  id="itemName${idNum}">
         </div>
         <div class="g-col-1">
             <input autocomplete="off" type="text" class="form-control form-control-sm weight weaponsEqWeight"
-            onkeypress="return event.charCode >= 46 && event.charCode <= 57" id="itemWeight${inputCount + 1}">
+            onkeypress="return event.charCode >= 46 && event.charCode <= 57" id="itemWeight${idNum}">
         </div>
     `)
     .on("input", calcWeight)
@@ -257,7 +257,7 @@ function addWeaponEq() {
     .append('i')
     .attr('class', 'bi bi-x-lg mt-3 text-danger')
     .attr('style', 'cursor: pointer;')
-    .attr('id', 'spellDel' + (inputCount + 1))
+    .attr('id', 'weaponEqDel' + idNum)
     .on('click', function() {
           inputGroup.remove();
           calcWeight();
@@ -275,27 +275,27 @@ weaponEq = {
 
 function addArmorEq() {
       var inputContainer = d3.select('#armorEqContainer');
-      var inputCount = inputContainer.selectAll('.grid').size();
+      var idNum = nextRowId('#armorEqContainer');
 
     var inputGroup = inputContainer
       .append('div')
       .attr('class','grid align-content-center').attr('style','--bs-gap:0;--bs-columns:12;')
-      .attr('id','armorEq'+(inputCount + 1))
+      .attr('id','armorEq'+idNum)
 
     inputGroup
     .html(`
         <div class="g-col-1 mt-2">
-            <input autocomplete="off" class="form-check-input armorMagical" type="checkbox" value=""  id="armorMagical${inputCount + 1}">
+            <input autocomplete="off" class="form-check-input armorMagical" type="checkbox" value=""  id="armorMagical${idNum}">
         </div>
         <div class="g-col-1 mt-2">
-            <input autocomplete="off" class="form-check-input armorEquipped" type="checkbox" value="" id="armorEquipped${inputCount + 1}">
+            <input autocomplete="off" class="form-check-input armorEquipped" type="checkbox" value="" id="armorEquipped${idNum}">
         </div>
         <div class="g-col-8">
-            <input autocomplete="off" type="text" class="form-control form-control-sm armorName"  id="armorName${inputCount + 1}">
+            <input autocomplete="off" type="text" class="form-control form-control-sm armorName"  id="armorName${idNum}">
         </div>
         <div class="g-col-1">
             <input autocomplete="off" type="text" class="form-control form-control-sm weight armorWeight"
-            onkeypress="return event.charCode >= 46 && event.charCode <= 57" id="armorWeight${inputCount + 1}">
+            onkeypress="return event.charCode >= 46 && event.charCode <= 57" id="armorWeight${idNum}">
         </div>
     `)
     .on("input", calcWeight)
@@ -304,7 +304,7 @@ function addArmorEq() {
     .append('i')
     .attr('class', 'bi bi-x-lg mt-3 text-danger')
     .attr('style', 'cursor: pointer;')
-    .attr('id', 'armorEqDel' + (inputCount + 1))
+    .attr('id', 'armorEqDel' + idNum)
     .on('click', function() {
           inputGroup.remove();
           calcWeight();
@@ -321,27 +321,27 @@ armorEq = {
 
 function addItemEq() {
       var inputContainer = d3.select('#miscEqContainer');
-      var inputCount = inputContainer.selectAll('.grid').size();
+      var idNum = nextRowId('#miscEqContainer');
 
     var inputGroup = inputContainer
       .append('div')
       .attr('class','grid align-content-center').attr('style','--bs-gap:0;--bs-columns:12;')
-      .attr('id','miscEq'+(inputCount + 1))
+      .attr('id','miscEq'+idNum)
 
     inputGroup
     .html(`
         <div class="g-col-1 mt-2">
-            <input autocomplete="off" class="form-check-input miscMagical" type="checkbox" value=""  id="miscMagical${inputCount + 1}">
+            <input autocomplete="off" class="form-check-input miscMagical" type="checkbox" value=""  id="miscMagical${idNum}">
         </div>
         <div class="g-col-1 mt-2">
-            <input autocomplete="off" class="form-check-input miscEquipped" type="checkbox" value="" id="miscEquipped${inputCount + 1}">
+            <input autocomplete="off" class="form-check-input miscEquipped" type="checkbox" value="" id="miscEquipped${idNum}">
         </div>
         <div class="g-col-8">
-            <input autocomplete="off" type="text" class="form-control form-control-sm miscName"  id="miscName${inputCount + 1}">
+            <input autocomplete="off" type="text" class="form-control form-control-sm miscName"  id="miscName${idNum}">
         </div>
         <div class="g-col-1">
             <input autocomplete="off" type="text" class="form-control form-control-sm weight miscWeight"
-            onkeypress="return event.charCode >= 46 && event.charCode <= 57" id="miscWeight${inputCount + 1}">
+            onkeypress="return event.charCode >= 46 && event.charCode <= 57" id="miscWeight${idNum}">
         </div>
     `)
     .on("input", calcWeight)
@@ -350,7 +350,7 @@ function addItemEq() {
     .append('i')
     .attr('class', 'bi bi-x-lg mt-3 text-danger')
     .attr('style', 'cursor: pointer;')
-    .attr('id', 'miscEqDel' + (inputCount + 1))
+    .attr('id', 'miscEqDel' + idNum)
     .on('click', function() {
           inputGroup.remove();
           calcWeight();
