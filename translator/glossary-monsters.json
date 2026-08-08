@@ -153,6 +153,12 @@
       "notes": "Also known as Gray Ooze / רפש אפור."
     },
     {
+      "en": "Jelly, Ruddy*",
+      "he": "ג'לי אדמדם*",
+      "plural_he": "ג'לי אדמדמים",
+      "notes": "Encounter-table name in gm01.qmd; do not normalize to Jelly, Ochre*."
+    },
+    {
       "en": "Gray Ooze",
       "he": "רפש אפור",
       "notes": "Alternate name for Jelly, Gray."
@@ -834,6 +840,13 @@
       "plural_he": "כלבי הבהוב"
     },
     {
+      "en": "Flicker Beast",
+      "he": "חיית הבהוב",
+      "plural": "Flicker Beasts",
+      "plural_he": "חיות הבהוב",
+      "notes": "Encounter-table name in gm01.qmd. Keep distinct from Blink Dog unless the English source is later confirmed to contain an error."
+    },
+    {
       "en": "Hellhound",
       "he": "כלב שאול",
       "plural": "Hellhounds",
@@ -1036,6 +1049,12 @@
       "plural_he": "פיתונים"
     },
     {
+      "en": "Snake, Giant Python",
+      "he": "נחש, פיתון ענק",
+      "plural_he": "פיתונים ענקיים",
+      "notes": "Encounter-table name in gm01.qmd; related to Snake, Python."
+    },
+    {
       "en": "Snake, Pit Viper",
       "he": "נחש, צפע גומה",
       "plural_he": "צפעי גומה"
@@ -1045,6 +1064,12 @@
       "he": "נחש, קוברה יורקת",
       "plural_he": "קוברות יורקות",
       "notes": "קוברה is feminine."
+    },
+    {
+      "en": "Snake, Cobra",
+      "he": "נחש, קוברה",
+      "plural_he": "קוברות",
+      "notes": "Encounter-table name in gm01.qmd; distinct from Snake, Spitting Cobra."
     },
     {
       "en": "Nixie",
@@ -1088,13 +1113,15 @@
       "en": "Normal Hawk",
       "he": "נץ",
       "plural": "Hawks",
-      "plural_he": "נצים"
+      "plural_he": "נצים",
+    "notes": "Encounter-table alias for Normal Hawk."
     },
     {
       "en": "Giant Hawk",
       "he": "נץ ענק",
       "plural": "Giant Hawks",
-      "plural_he": "נצים ענקיים"
+      "plural_he": "נצים ענקיים",
+    "notes": "Encounter-table alias for Giant Hawk."
     },
     {
       "en": "Stirge",
@@ -1548,6 +1575,19 @@
       "he": "תנין",
       "plural": "Crocodiles",
       "plural_he": "תנינים"
+    },
+    {
+      "en": "Crocodile, Giant",
+      "he": "תנין ענק",
+      "plural_he": "תנינים ענקיים",
+      "notes": "Encounter-table name in gm01.qmd."
+    },
+    {
+      "en": "Camel",
+      "he": "גמל",
+      "plural": "Camels",
+      "plural_he": "גמלים",
+      "notes": "Appears in the wilderness encounter table in gm01.qmd."
     }
   ]
 }
