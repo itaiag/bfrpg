@@ -504,12 +504,16 @@ export function calculateModifier (stat) {
 export function convertToGold(value, coin) {
   switch(coin){
     case "gp":
+    case "מ\"ז":
       return value
     case "pp":
+    case "מ\"פ":
       return value*5
-    case "sp": 
+    case "sp":
+    case "מ\"כ":
       return value*0.1
     case "cp":
+    case "מ\"נ":
       return value*0.1*0.2
   }
 }

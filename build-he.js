@@ -128,6 +128,11 @@ function buildHe() {
   const imagesTarget = join(__dirname, 'docs', 'he', 'images');
   cpSync(imagesSource, imagesTarget, { recursive: true, force: true });
 
+  // The he/ pages import shared game logic as "../custom.js", i.e. docs/custom.js
+  // — a file only a full English `quarto render` refreshes. Sync it here so the
+  // Hebrew build never runs against a stale copy.
+  cpSync(join(__dirname, 'custom.js'), join(__dirname, 'docs', 'custom.js'), { force: true });
+
   log('\n✓ Hebrew site built → docs/he/');
 }
 
