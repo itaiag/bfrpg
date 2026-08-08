@@ -101,6 +101,17 @@ blockquote {
   text-align: left;
 }
 
+/* Item pickers (equipment search / select / inventory in appendix_interactive)
+   hold Hebrew item names, so opt them back out of the LTR rule above. Scoped to
+   the list widgets rather than flipping .observablehq wholesale, which would also
+   flip every dice roller and the character sheet. */
+.observablehq select,
+.observablehq option,
+.observablehq input[type="search"] {
+  direction: rtl;
+  text-align: right;
+}
+
 /* OJS dice roller grid — button on right, result on left (RTL natural order) */
 .ojs-roller {
   direction: rtl !important;
