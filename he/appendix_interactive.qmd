@@ -81,10 +81,17 @@ allItems = miscs.concat(weapons.concat(armor.concat(animals)))
 
 
 ```{ojs}
-viewof search  = {
-  let n = Inputs.search(allItems);
-return n
-}
+viewof search = Inputs.search(allItems, {
+  placeholder: "חיפוש",
+  format: (n) => n === 0 ? "אין תוצאות" : n === 1 ? "תוצאה אחת" : `${n} תוצאות`,
+  // Observable's default filter anchors each term to a word start, so mid-word
+  // fragments ("שית" in "עששית") return nothing. Match plain substrings instead.
+  filter: (query) => {
+    const terms = `${query}`.toLowerCase().split(/\s+/g).filter(t => t);
+    return (d) => terms.every(t =>
+      Object.values(d).some(v => `${v}`.toLowerCase().includes(t)));
+  }
+})
 ```
 
 ```{ojs}

@@ -107,7 +107,8 @@ blockquote {
    flip every dice roller and the character sheet. */
 .observablehq select,
 .observablehq option,
-.observablehq input[type="search"] {
+.observablehq input[type="search"],
+.observablehq output {
   direction: rtl;
   text-align: right;
 }
