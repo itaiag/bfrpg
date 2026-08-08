@@ -144,6 +144,38 @@ blockquote {
   background-color: #e2e6ea;
 }
 
+/* Inputs.table in RTL (monster index). .observablehq is LTR above, which lays
+   the columns out left-to-right; flipping the table itself puts the first
+   column (שם) on the right and the rest read leftwards.
+   Cells get unicode-bidi: plaintext so each one picks its own base direction
+   from its first strong character: Hebrew cells read RTL, while purely numeric
+   values keep their source order — "25–240" would otherwise flip to "240–25",
+   since the en dash is a neutral and doesn't bind the two numbers together the
+   way a hyphen does. */
+.rtl-table table {
+  direction: rtl;
+}
+.rtl-table th,
+.rtl-table td {
+  direction: rtl;
+  unicode-bidi: plaintext;
+  text-align: right;
+}
+/* The table isn't a viewof, so its leading row-selection checkbox column does
+   nothing — and once flipped it sits to the right of שם. Hide it so שם really
+   is the rightmost column. (Inputs 0.10.6, which Quarto loads, has no `select`
+   option to turn it off at the source.) */
+.rtl-table th:has(> input[type="checkbox"]),
+.rtl-table td:has(> input[type="checkbox"]) {
+  display: none;
+}
+/* quarto-ojs.css pads the table's left edge; in RTL that gap belongs on the
+   right, so the first column isn't flush against the container. */
+.rtl-table .quarto-ojs-table-fixup {
+  padding-left: 0;
+  padding-right: 14px;
+}
+
 /* Keep numeric content LTR (dice tables, stats) */
 table.stats td,
 td:only-child {
