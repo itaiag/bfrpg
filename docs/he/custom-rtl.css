@@ -102,12 +102,15 @@ blockquote {
 }
 
 /* Item pickers (equipment search / select / inventory in appendix_interactive)
-   hold Hebrew item names, so opt them back out of the LTR rule above. Scoped to
-   the list widgets rather than flipping .observablehq wholesale, which would also
-   flip every dice roller and the character sheet. */
+   and text fields (their Hebrew placeholders/labels, e.g. "גודל רשת" in the
+   mapmaker) hold Hebrew, so opt them back out of the LTR rule above. Scoped to
+   the widgets rather than flipping .observablehq wholesale, which would also
+   flip every dice roller; the character sheet's raw-HTML inputs live outside
+   .observablehq and are untouched either way. */
 .observablehq select,
 .observablehq option,
 .observablehq input[type="search"],
+.observablehq input[type="text"],
 .observablehq output {
   direction: rtl;
   text-align: right;
@@ -116,6 +119,15 @@ blockquote {
 /* OJS dice roller grid — button on right, result on left (RTL natural order) */
 .ojs-roller {
   direction: rtl !important;
+}
+
+/* OJS button labels — .observablehq above forces LTR base direction, which
+   mangles mixed Hebrew+Latin labels ("ייצא ל-PNG" renders as "ל ייצא-PNG").
+   Give the label an RTL base direction so the Latin run stays a left-to-right
+   atom in its right-to-left sentence; pure-Latin labels are unaffected. */
+.observablehq button {
+  direction: rtl;
+  unicode-bidi: isolate;
 }
 
 /* OJS button visibility — Observable's CSS custom properties may be unresolved
