@@ -11,7 +11,7 @@ format:
 ```
 # אינדקס מפלצות
 
-בחרו שדות חיפוש. החזיקו `shift` או גררו עם העכבר לבחירה מרובה.
+בחרי שדות חיפוש. החזיקי `shift` או גררי עם העכבר לבחירה מרובה.
 
 שם המפלצת הוא תמיד חלק משדה החיפוש.
 
@@ -25,6 +25,63 @@ data = {
 ```{ojs}
 cols = Object.keys(data[0])
 cols2 = cols.slice(1)
+```
+
+```{ojs}
+// JS port of dice-he.lua. That filter is a Pandoc filter, so it only reaches
+// markdown rendered by Quarto — this table is built client-side from
+// monsters.json, which Pandoc never sees. Same rules, same markup, same CSS
+// hooks (.dice / .mod in custom-rtl.css).
+diceHe = {
+  // Already-Hebrew dice are normalized to d-form first so one pattern covers
+  // both. Digits are required around ק so we never hit the letter inside a word.
+  const TO_D = [[/(\d+)ק(\d+)/g, "$1d$2"], [/(\d*)ק(%)/g, "$1d$2"]];
+
+  // Count optional, sides are digits or %, modifier optional. The lookbehind is
+  // the equivalent of Lua's %f[%w] frontier: it stops a match starting
+  // mid-word. Hebrew letters are outside \w, so ...ק1d6 still matches.
+  const RE = /(?<![A-Za-z0-9_])(\d*)d(\d+|%)([+-]\d+)?/g;
+
+  // Emit count, ק, sides and modifier as SEPARATE LTR atoms in source order.
+  // .dice is RTL, so it flips them visually: count on the right, then ק, then
+  // sides, then the modifier. Sides and modifier must not be grouped — "8+2"
+  // would put the modifier digit next to ק and read as 9d2+8 instead of 9d8+2.
+  function atom(s) {
+    return htl.html`<span dir="ltr">${s}</span>`;
+  }
+
+  function wrap(count, sides, modifier) {
+    const parts = [];
+    if (count) parts.push(atom(count));
+    parts.push("ק");
+    parts.push(atom(sides));
+    if (modifier) {
+      // Sign and number stay separate so +1 reads as "+1" (not "1+") and +10
+      // keeps its digit order (not "01").
+      parts.push(htl.html`<span class="mod" dir="ltr">${modifier[0]}</span>`);
+      parts.push(atom(modifier.slice(1)));
+    }
+    return htl.html`<span class="dice">${parts}</span>`;
+  }
+
+  return function diceHe(value) {
+    if (value === null || value === undefined) return "";
+    let s = String(value);
+    for (const [re, to] of TO_D) s = s.replace(re, to);
+
+    const out = [];
+    let pos = 0, m;
+    RE.lastIndex = 0;
+    while ((m = RE.exec(s)) !== null) {
+      if (m.index > pos) out.push(s.slice(pos, m.index));
+      out.push(wrap(m[1], m[2], m[3]));
+      pos = m.index + m[0].length;
+    }
+    if (pos === 0) return s;                    // nothing matched; leave as-is
+    if (pos < s.length) out.push(s.slice(pos));
+    return htl.html`<span>${out}</span>`;
+  };
+}
 ```
 
 ```{ojs}
@@ -44,12 +101,18 @@ return n
 
 <br>
 
-::: {.column-screen .table-responsive}
+::: {.column-screen .table-responsive .rtl-table}
 ```{ojs}
-Inputs.table(search, {width:"auto",
-format:{
-    "שם": id => htl.html`<a href=#\ onclick="test('${id}')">${id}</a>`
-}})
+Inputs.table(search, {
+  width: "auto",
+  format: Object.fromEntries([
+    // htl takes a function here, so the name never has to survive a trip
+    // through an inline onclick string — names like סטריג' and ג'לי contain an
+    // apostrophe that would terminate the JS literal early.
+    [cols[0], id => htl.html`<a href="#" onclick=${e => { e.preventDefault(); test(id); }}>${id}</a>`],
+    ...cols2.map(c => [c, diceHe])
+  ])
+})
 
 ```
 
@@ -59,19 +122,62 @@ format:{
 ```{=html}
 <script>
 
-function test(name){
-$(document).ready(function() {
-    $.get('monstersAll.html', function(data) {
-      // Find the .monster div that contains this name in its text
-      var $monsters = $(data).filter('.monster').add($(data).find('.monster'));
-      var content = $monsters.filter(function() {
-        return $(this).text().indexOf(name) !== -1;
-      }).first().html();
-      $('#myModal .modal-body').html(content);
-      $('#myModal').modal('show');
+// monstersAll.html is large, so fetch and parse it once and reuse it.
+var monsterDoc = null;
+
+// Quarto's smart quotes turn the straight apostrophe in names like סטריג' and
+// ג'לי into a curly one, so compare on a normalized form.
+function normName(s) {
+  return String(s).replace(/[‘’ʼ]/g, "'").replace(/\s+/g, ' ').trim();
+}
+
+function findMonster($doc, name) {
+  var target = normName(name);
+  var $blocks = $doc.filter('.monster').add($doc.find('.monster'));
+
+  // The index names come verbatim from the stat-table header cells, so an exact
+  // match there is unambiguous — a substring scan over the whole block sends
+  // short names like שלד or עוג to whichever monster happens to mention them.
+  var $hit = $blocks.filter(function() {
+    return $(this).find('th').toArray().some(function(th) {
+      return normName($(th).text()) === target;
     });
-    }
-);}
+  }).first();
+
+  if (!$hit.length) {
+    $hit = $blocks.filter(function() {
+      return $(this).find('h2, h3, h4').toArray().some(function(h) {
+        return normName($(h).text()) === target;
+      });
+    }).first();
+  }
+
+  if (!$hit.length) {
+    $hit = $blocks.filter(function() {
+      return normName($(this).text()).indexOf(target) !== -1;
+    }).first();
+  }
+
+  return $hit;
+}
+
+function showMonster($doc, name) {
+  var $hit = findMonster($doc, name);
+  $('#myModal .modal-title').text(name);
+  $('#myModal .modal-body').html($hit.length ? $hit.html() : 'לא נמצא תיאור עבור ' + name);
+  $('#myModal').modal('show');
+}
+
+function test(name) {
+  if (monsterDoc) {
+    showMonster(monsterDoc, name);
+    return;
+  }
+  $.get('monstersAll.html', function(data) {
+    monsterDoc = $(data);
+    showMonster(monsterDoc, name);
+  });
+}
 </script>
 
 <!-- Modal -->

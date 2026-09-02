@@ -1,72 +1,722 @@
 {
   "version": "1.0",
   "terms": [
-    { "en": "Game Master", "abbr": "GM", "he": "מנחה", "notes": "Always female in Hebrew" },
-    { "en": "Player", "he": "שחקן", "notes": "Male form" },
-    { "en": "Elf", "he": "אלף", "plural": "Elves", "plural_he": "אלפים" },
-    { "en": "Dwarf", "he": "גמד", "plural": "Dwarves", "plural_he": "גמדים" },
-    { "en": "Halfling", "he": "בן-מחצית", "plural": "Halflings", "plural_he": "בני-מחצית" },
-    { "en": "Human", "he": "אדם", "plural": "Humans", "plural_he": "בני אדם" },
-    { "en": "Cleric", "he": "כוהן", "plural": "Clerics", "plural_he": "כוהנים" },
-    { "en": "Fighter", "he": "לוחם", "plural": "Fighters", "plural_he": "לוחמים" },
-    { "en": "Paladin", "he": "פלדין"},
-    { "en": "Magic-User", "he": "קוסם", "plural": "Magic-Users", "plural_he": "קוסמים" },
-    { "en": "Thief", "he": "גנב", "plural": "Thieves", "plural_he": "גנבים" },
-    { "en": "Strength", "abbr": "STR", "he": "כוח" },
-    { "en": "Dexterity", "abbr": "DEX", "he": "זריזות" },
-    { "en": "Constitution", "abbr": "CON", "he": "חוסן" },
-    { "en": "Intelligence", "abbr": "INT", "he": "תבונה" },
-    { "en": "Wisdom", "abbr": "WIS", "he": "חוכמה" },
-    { "en": "Charisma", "abbr": "CHA", "he": "כריזמה" },
-    { "en": "Hit Points", "abbr": "HP", "he": "נקודות פגיעה" },
-    { "en": "Armor Class", "abbr": "AC", "he": "דירוג שריון" },
-    { "en": "Experience Points", "abbr": "XP", "he": "נקודות ניסיון" },
-    { "en": "Hit Dice", "abbr": "HD", "he": "קוביות פגיעה" },
-    { "en": "Saving Throw", "he": "גלגול הצלה", "plural": "Saving Throws", "plural_he": "גלגולי הצלה" },
-    { "en": "Attack Bonus", "he": "בונוס תקיפה" },
-    { "en": "Dungeon", "he": "מבוך", "plural": "Dungeons", "plural_he": "מבוכים" },
-    { "en": "Wilderness", "he": "שטח פתוח" },
-    { "en": "Round", "he": "סיבוב", "plural": "Rounds", "plural_he": "סיבובים", "notes": "Combat round" },
-    { "en": "Turn", "he": "תור", "plural": "Turns", "plural_he": "תורות", "notes": "Time unit (10 minutes)" },
-    { "en": "Darkvision", "he": "זיוונות" },
-    { "en": "Retainer", "he": "עוזר", "plural": "Retainers", "plural_he": "עוזרים" },
-    { "en": "Hireling", "he": "שכיר", "plural": "Hirelings", "plural_he": "שכירים" },
-    { "en": "Monster", "he": "מפלצת", "plural": "Monsters", "plural_he": "מפלצות" },
-    { "en": "Spell", "he": "לחש", "plural": "Spells", "plural_he": "לחשים" },
-    { "en": "Morale", "he": "מורל" },
-    { "en": "Initiative", "he": "יוזמה" },
-    { "en": "Melee", "he": "קרב פנים אל פנים" },
-    { "en": "Missile", "he": "קליעים" },
-    { "en": "Prime Requisite", "he": "דרישה עיקרית", "plural": "Prime Requisites", "plural_he": "דרישות עיקריות" },
-    { "en": "Encumbrance", "he": "עומס" },
-    { "en": "Wandering Monster", "he": "מפלצת נודדת", "plural": "Wandering Monsters", "plural_he": "מפלצות נודדות" },
-    { "en": "Treasure", "he": "אוצר", "plural": "Treasures", "plural_he": "אוצרות" },
-    { "en": "Experience", "he": "ניסיון" },
-    { "en": "Level", "he": "דרגה", "plural": "Levels", "plural_he": "דרגות" },
-    { "en": "Basic Fantasy", "he": "בייסיק פנטזי"},
-    { "en": "Caster", "he": "מטיל הלחש", "notes": "Male form"},
-    { "en": "Undead", "he": "אל-מת", "plural": "Undead", "plural_he": "אל-מתים" },
-    { "en": "Alignment", "he": "נטייה" },
-    { "en": "Lawful", "he": "סדר" },
-    { "en": "Neutral", "he": "ניטרלי" },
-    { "en": "Chaotic", "he": "תוהו" },
-    { "en": "Abilities", "he": "תכונות" },
-    { "en": "Ability Scores", "he": "ערכי תכונות" },
-    { "en": "Stat Roller", "he": "מחולל תכונות" },
-    { "en": "NPC", "he": "דמות מנחה" },
-    { "en": "Crossbow", "he": "רובה קשת" },
-    { "en": "Waterskin", "he": "נאד מים" },
-    { "en": "Wineskin", "he": "נאד יין" },    
-    { "en": "Demi-Human", "he": "דמוי-אדם", "plural": "Demi-Humans", "plural_he": "דמויי-אדם" },
-    { "en": "Common", "he": "מדוברת" ,"notes": "The common language of the world"},
-    { "en": "Sneak Attack", "he": "דקירה מאחור" },
-    { "en": "Energy Drain", "he": "ניקוז אנרגיה" },
-    { "en": "Petrify", "he": "התאבנות" },
-    { "en": "Dragon Breath", "he": "נשיפת דרקון" },
-    { "en": "Paralysis ", "he": "שיתוק" },
-    { "en": "Xp", "he": "נק\"נ" }
-
-    
-    
+    {
+      "en": "Game Master",
+      "abbr": "GM",
+      "he": "מנחה",
+      "notes": "Always female in Hebrew"
+    },
+    {
+      "en": "Player",
+      "he": "שחקן",
+      "notes": "Male form"
+    },
+    {
+      "en": "Elf",
+      "he": "אלף",
+      "plural": "Elves",
+      "plural_he": "אלפים"
+    },
+    {
+      "en": "Dwarf",
+      "he": "גמד",
+      "plural": "Dwarves",
+      "plural_he": "גמדים"
+    },
+    {
+      "en": "Halfling",
+      "he": "בן-מחצית",
+      "plural": "Halflings",
+      "plural_he": "בני-מחצית"
+    },
+    {
+      "en": "Human",
+      "he": "אדם",
+      "plural": "Humans",
+      "plural_he": "בני אדם"
+    },
+    {
+      "en": "Cleric",
+      "he": "כוהן",
+      "plural": "Clerics",
+      "plural_he": "כוהנים"
+    },
+    {
+      "en": "Fighter",
+      "he": "לוחם",
+      "plural": "Fighters",
+      "plural_he": "לוחמים"
+    },
+    {
+      "en": "Paladin",
+      "he": "פלדין"
+    },
+    {
+      "en": "Magic-User",
+      "he": "קוסם",
+      "plural": "Magic-Users",
+      "plural_he": "קוסמים"
+    },
+    {
+      "en": "Thief",
+      "he": "גנב",
+      "plural": "Thieves",
+      "plural_he": "גנבים"
+    },
+    {
+      "en": "Strength",
+      "abbr": "STR",
+      "he": "כוח"
+    },
+    {
+      "en": "Dexterity",
+      "abbr": "DEX",
+      "he": "זריזות"
+    },
+    {
+      "en": "Constitution",
+      "abbr": "CON",
+      "he": "חוסן"
+    },
+    {
+      "en": "Intelligence",
+      "abbr": "INT",
+      "he": "תבונה"
+    },
+    {
+      "en": "Wisdom",
+      "abbr": "WIS",
+      "he": "חוכמה"
+    },
+    {
+      "en": "Charisma",
+      "abbr": "CHA",
+      "he": "כריזמה"
+    },
+    {
+      "en": "Hit Points",
+      "abbr": "HP",
+      "he": "נקודות פגיעה"
+    },
+    {
+      "en": "Armor Class",
+      "abbr": "AC",
+      "he": "דירוג שריון"
+    },
+    {
+      "en": "Experience Points",
+      "abbr": "XP",
+      "he": "נקודות ניסיון"
+    },
+    {
+      "en": "Hit Dice",
+      "abbr": "HD",
+      "he": "קוביות פגיעה"
+    },
+    {
+      "en": "Saving Throw",
+      "he": "גלגול הצלה",
+      "plural": "Saving Throws",
+      "plural_he": "גלגולי הצלה"
+    },
+    {
+      "en": "bonus (game mechanic)",
+      "he": "תוסף"
+    },
+    {
+      "en": "penalty (game mechanic)",
+      "he": "מחסר"
+    },
+    {
+      "en": "attack bonus",
+      "he": "תוסף התקפה"
+    },
+    {
+      "en": "damage bonus",
+      "he": "תוסף נזק"
+    },
+    {
+      "en": "Strength bonus",
+      "he": "תוסף כוח"
+    },
+    {
+      "en": "penalty to attack rolls",
+      "he": "מחסר לגלגולי התקפה"
+    },
+    {
+      "en": "Armor Class penalty",
+      "he": "מחסר לדירוג השריון"
+    },
+    {
+      "en": "Attack Roll",
+      "he": "גלגול התקפה"
+    },
+    {
+      "en": "Modifier",
+      "he": "מתאם",
+      "notes": "May be positive or negative; used for ability adjustments"
+    },
+    {
+      "en": "Strength Modifier",
+      "he": "מתאם כוח"
+    },
+    {
+      "en": "Dexterity Modifier",
+      "he": "מתאם זריזות"
+    },
+    {
+      "en": "Constitution Modifier",
+      "he": "מתאם חוסן"
+    },
+    {
+      "en": "Intelligence Modifier",
+      "he": "מתאם תבונה"
+    },
+    {
+      "en": "Wisdom Modifier",
+      "he": "מתאם חוכמה"
+    },
+    {
+      "en": "Charisma Modifier",
+      "he": "מתאם כריזמה"
+    },
+    {
+      "en": "Dungeon",
+      "he": "מבוך",
+      "plural": "Dungeons",
+      "plural_he": "מבוכים"
+    },
+    {
+      "en": "Wilderness",
+      "he": "שטח פתוח"
+    },
+    {
+      "en": "Round",
+      "he": "סיבוב",
+      "plural": "Rounds",
+      "plural_he": "סיבובים",
+      "notes": "Combat round"
+    },
+    {
+      "en": "Turn",
+      "he": "תור",
+      "plural": "Turns",
+      "plural_he": "תורות",
+      "notes": "Time unit (10 minutes)"
+    },
+    {
+      "en": "Darkvision",
+      "he": "זיוונות"
+    },
+    {
+      "en": "Retainer",
+      "he": "מלווה",
+      "plural": "Retainers",
+      "plural_he": "מלווים"
+    },
+    {
+      "en": "Hireling",
+      "he": "שכיר",
+      "plural": "Hirelings",
+      "plural_he": "שכירים"
+    },
+    {
+      "en": "Monster",
+      "he": "מפלצת",
+      "plural": "Monsters",
+      "plural_he": "מפלצות"
+    },
+    {
+      "en": "Spell",
+      "he": "לחש",
+      "plural": "Spells",
+      "plural_he": "לחשים"
+    },
+    {
+      "en": "Morale",
+      "he": "מורל"
+    },
+    {
+      "en": "Loyalty",
+      "he": "נאמנות",
+      "notes": "Retainer stat; works like Morale but kept distinct (fem.)"
+    },
+    {
+      "en": "Initiative",
+      "he": "יוזמה"
+    },
+    {
+      "en": "Melee",
+      "he": "קרב פנים אל פנים"
+    },
+    {
+      "en": "Missile",
+      "he": "קליעים"
+    },
+    {
+      "en": "Prime Requisite",
+      "he": "דרישה עיקרית",
+      "plural": "Prime Requisites",
+      "plural_he": "דרישות עיקריות"
+    },
+    {
+      "en": "Spell Level",
+      "he": "עוצמת לחש",
+      "notes": "The tier of a spell (1-6); short form 'עוצמה'. Use עוצמה, not דרגה, to avoid clashing with character level (דרגה)"
+    },
+    {
+      "en": "Encumbrance",
+      "he": "עומס"
+    },
+    {
+      "en": "Wandering Monster",
+      "he": "מפלצת נודדת",
+      "plural": "Wandering Monsters",
+      "plural_he": "מפלצות נודדות"
+    },
+    {
+      "en": "Treasure",
+      "he": "אוצר",
+      "plural": "Treasures",
+      "plural_he": "אוצרות"
+    },
+    {
+      "en": "Experience",
+      "he": "ניסיון"
+    },
+    {
+      "en": "Level",
+      "he": "דרגה",
+      "plural": "Levels",
+      "plural_he": "דרגות"
+    },
+    {
+      "en": "Basic Fantasy",
+      "he": "בייסיק פנטזי"
+    },
+    {
+      "en": "Caster",
+      "he": "מטיל הלחש",
+      "notes": "Male form"
+    },
+    {
+      "en": "Undead",
+      "he": "אל-מת",
+      "plural": "Undead",
+      "plural_he": "אל-מתים"
+    },
+    {
+      "en": "Alignment",
+      "he": "נטייה"
+    },
+    {
+      "en": "Lawful",
+      "he": "סדר"
+    },
+    {
+      "en": "Neutral",
+      "he": "ניטרלי"
+    },
+    {
+      "en": "Chaotic",
+      "he": "תוהו"
+    },
+    {
+      "en": "Abilities",
+      "he": "תכונות"
+    },
+    {
+      "en": "Ability Scores",
+      "he": "ערכי תכונות"
+    },
+    {
+      "en": "Stat Roller",
+      "he": "מחולל תכונות"
+    },
+    {
+      "en": "NPC",
+      "he": "דמות מנחה"
+    },
+    {
+      "en": "Crossbow",
+      "he": "רובה קשת"
+    },
+    {
+      "en": "Waterskin",
+      "he": "נאד מים"
+    },
+    {
+      "en": "Wineskin",
+      "he": "נאד יין"
+    },
+    {
+      "en": "Demi-Human",
+      "he": "דמוי-אדם",
+      "plural": "Demi-Humans",
+      "plural_he": "דמויי-אדם"
+    },
+    {
+      "en": "Humanoid",
+      "he": "הומנואיד",
+      "plural": "Humanoids",
+      "plural_he": "הומנואידים",
+      "notes": "Monstrous human-shaped races (orcs, goblins, etc.); distinct from Demi-Human"
+    },
+    {
+      "en": "Common",
+      "he": "מדוברת",
+      "notes": "The common language of the world"
+    },
+    {
+      "en": "Sneak Attack",
+      "he": "דקירה מאחור"
+    },
+    {
+      "en": "Open Locks",
+      "he": "פריצת מנעולים",
+      "notes": "Thief skill; not פתיחת מנעולים"
+    },
+    {
+      "en": "Listen",
+      "he": "האזנה",
+      "notes": "Thief skill (listen at doors); not הקשבה"
+    },
+    {
+      "en": "Energy Drain",
+      "he": "ניקוז אנרגיה"
+    },
+    {
+      "en": "Petrify",
+      "he": "התאבנות"
+    },
+    {
+      "en": "Dragon Breath",
+      "he": "נשיפת דרקון"
+    },
+    {
+      "en": "Paralysis ",
+      "he": "שיתוק"
+    },
+    {
+      "en": "Effect",
+      "he": "אפקט",
+      "notes": "Use consistently; do not translate as השפעה"
+    },
+    {
+      "en": "Units (meters)",
+      "he": "יחידות מידה (מטרים)",
+      "notes": "Use \"מ'\" in mechanical fields (range, radius, tables). Use \"מטרים\" in narrative text. Do not mix within the same sentence."
+    },
+    {
+      "en": "Xp",
+      "he": "נק\"נ"
+    },
+    {
+      "en": "Rank",
+      "he": "רמת התמחות",
+      "notes": "Weapon Specialization rank; short form רמה. Do NOT use דרגה — דרגה is reserved for character/class level and the two collide in the specialization rules."
+    },
+    {
+      "en": "Magic Item",
+      "he": "חפץ קסם",
+      "plural": "Magic Items",
+      "plural_he": "חפצי קסם"
+    },
+    {
+      "en": "Magic Weapon",
+      "he": "נשק קסום",
+      "plural": "Magic Weapons",
+      "plural_he": "נשקים קסומים"
+    },
+    {
+      "en": "Magic Armor",
+      "he": "שריון קסום"
+    },
+    {
+      "en": "Potion",
+      "he": "שיקוי",
+      "plural": "Potions",
+      "plural_he": "שיקויים"
+    },
+    {
+      "en": "Scroll",
+      "he": "מגילה",
+      "plural": "Scrolls",
+      "plural_he": "מגילות"
+    },
+    {
+      "en": "Ring",
+      "he": "טבעת",
+      "plural": "Rings",
+      "plural_he": "טבעות"
+    },
+    {
+      "en": "Wand",
+      "he": "שרביט",
+      "plural": "Wands",
+      "plural_he": "שרביטים"
+    },
+    {
+      "en": "Staff",
+      "he": "מטה",
+      "plural": "Staves",
+      "plural_he": "מטות"
+    },
+    {
+      "en": "Rod",
+      "he": "מקל",
+      "plural": "Rods",
+      "plural_he": "מקלות",
+      "notes": "Magic-item category; keep distinct from Wand and Staff"
+    },
+    {
+      "en": "Cursed",
+      "he": "מקולל",
+      "notes": "Adjust Hebrew gender and number to the modified noun"
+    },
+    {
+      "en": "Special Enemy",
+      "he": "אויב מיוחד"
+    },
+    {
+      "en": "Special Ability",
+      "he": "יכולת מיוחדת"
+    },
+    {
+      "en": "Weapon Bonus",
+      "he": "תוסף נשק"
+    },
+    {
+      "en": "Armor Bonus",
+      "he": "תוסף שריון"
+    },
+    {
+      "en": "Miscellaneous Magic Items",
+      "he": "חפצי קסם שונים"
+    },
+    {
+      "en": "Effect Subtable",
+      "he": "תת-טבלת אפקטים",
+      "plural": "Effect Subtables",
+      "plural_he": "תתי-טבלאות אפקטים"
+    },
+    {
+      "en": "Form of Item",
+      "he": "צורת הפריט"
+    },
+    {
+      "en": "Rare Item",
+      "he": "פריט נדיר",
+      "plural": "Rare Items",
+      "plural_he": "פריטים נדירים"
+    },
+    {
+      "en": "Device of Summoning Elementals",
+      "he": "מכשיר לזימון יסודנים",
+      "plural": "Devices of Summoning Elementals",
+      "plural_he": "מכשירים לזימון יסודנים"
+    },
+    {
+      "en": "Clairaudience",
+      "he": "שמיעה על חושית"
+    },
+    {
+      "en": "Cold Resistance",
+      "he": "חסינות לקור",
+      "notes": "Magic-item effect; align with Resist Cold"
+    },
+    {
+      "en": "Fire Resistance",
+      "he": "חסינות לאש",
+      "notes": "Magic-item effect; align with Resist Fire"
+    },
+    {
+      "en": "Control Animal",
+      "he": "שליטה בחיה"
+    },
+    {
+      "en": "Control Dragon",
+      "he": "שליטה בדרקון"
+    },
+    {
+      "en": "Control Giant",
+      "he": "שליטה בענק"
+    },
+    {
+      "en": "Control Human",
+      "he": "שליטה באדם"
+    },
+    {
+      "en": "Control Plant",
+      "he": "שליטה בצמח"
+    },
+    {
+      "en": "Control Undead",
+      "he": "שליטה באל-מת"
+    },
+    {
+      "en": "Diminution",
+      "he": "הקטנה",
+      "notes": "Magic-item effect name"
+    },
+    {
+      "en": "Flying",
+      "he": "מעוף",
+      "notes": "Magic-item effect name; align with Fly"
+    },
+    {
+      "en": "Gaseous Form",
+      "he": "צורה גזית"
+    },
+    {
+      "en": "Giant Strength",
+      "he": "כוחו של ענק"
+    },
+    {
+      "en": "Growth",
+      "he": "גדילה",
+      "notes": "Magic-item effect name"
+    },
+    {
+      "en": "Healing",
+      "he": "ריפוי",
+      "notes": "Magic-item effect name"
+    },
+    {
+      "en": "Heroism",
+      "he": "גבורה"
+    },
+    {
+      "en": "Invulnerability",
+      "he": "אי-פגיעות"
+    },
+    {
+      "en": "Levitation",
+      "he": "ריחוף",
+      "notes": "Magic-item effect name; align with Levitate"
+    },
+    {
+      "en": "Longevity",
+      "he": "אריכות ימים"
+    },
+    {
+      "en": "Speed",
+      "he": "מהירות",
+      "notes": "Magic-item effect name; mechanically grants Haste"
+    },
+    {
+      "en": "Treasure Finding",
+      "he": "מציאת אוצר"
+    },
+    {
+      "en": "Djinni Summoning",
+      "he": "זימון ג'יני"
+    },
+    {
+      "en": "Regeneration",
+      "he": "התחדשות",
+      "notes": "Monster or magic-item ability; distinct from the spell Regenerate"
+    },
+    {
+      "en": "Spell Storing",
+      "he": "אחסון לחשים"
+    },
+    {
+      "en": "Spell Turning",
+      "he": "החזרת לחשים"
+    },
+    {
+      "en": "Water Walking",
+      "he": "הליכה על מים"
+    },
+    {
+      "en": "Weakness",
+      "he": "חולשה",
+      "notes": "Magic-item effect name"
+    },
+    {
+      "en": "Wishes",
+      "he": "משאלות"
+    },
+    {
+      "en": "X-Ray Vision",
+      "he": "ראיית רנטגן"
+    },
+    {
+      "en": "Blasting",
+      "he": "פיצוץ",
+      "notes": "Magic-item effect name"
+    },
+    {
+      "en": "Blending",
+      "he": "היטמעות",
+      "notes": "Magic-item effect granting near-invisibility"
+    },
+    {
+      "en": "Comprehension",
+      "he": "הבנה",
+      "notes": "Magic-item effect name"
+    },
+    {
+      "en": "Courage",
+      "he": "אומץ",
+      "notes": "Magic-item effect name"
+    },
+    {
+      "en": "Deception",
+      "he": "הטעיה",
+      "notes": "Magic-item effect based on the Deceiver monster ability"
+    },
+    {
+      "en": "Doom",
+      "he": "אבדון",
+      "notes": "Magic-item effect name"
+    },
+    {
+      "en": "Panic",
+      "he": "בהלה",
+      "notes": "Magic-item effect name"
+    },
+    {
+      "en": "Penetrating Vision",
+      "he": "ראייה חודרת"
+    },
+    {
+      "en": "Protection from Energy Drain",
+      "he": "הגנה מניקוז אנרגיה"
+    },
+    {
+      "en": "Protection from Scrying",
+      "he": "הגנה מצפייה מרחוק"
+    },
+    {
+      "en": "Scrying",
+      "he": "צפייה מרחוק",
+      "notes": "Remote magical observation; do not translate as חיזוי"
+    },
+    {
+      "en": "Scrying, Superior",
+      "he": "צפייה מרחוק משופרת"
+    },
+    {
+      "en": "Stealth",
+      "he": "תנועה חרישית",
+      "notes": "Magic-item effect corresponding to moving silently"
+    },
+    {
+      "en": "Telepathy",
+      "he": "טלפתיה"
+    },
+    {
+      "en": "Teleportation",
+      "he": "שיעתוק",
+      "notes": "Magic-item effect name; align with Teleport"
+    },
+    {
+      "en": "Delusion",
+      "he": "אמונת שווא",
+      "notes": "Cursed false-belief effect; keep distinct from Illusion"
+    }
   ]
 }

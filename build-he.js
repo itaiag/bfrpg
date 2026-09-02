@@ -7,7 +7,7 @@
  *   node build-he.js --preview  # live preview with hot-reload
  */
 
-import { writeFileSync, readdirSync } from 'fs';
+import { writeFileSync, readdirSync, cpSync } from 'fs';
 import { join, dirname } from 'path';
 import { execSync, spawn } from 'child_process';
 import { fileURLToPath } from 'url';
@@ -68,21 +68,35 @@ book:
   chapters:
 ${chapters.join('\n')}
 
+filters:
+  - ../dice-he.lua
+  - ../bonus-he.lua
+
 format:
   html:
     theme: cosmo
     lang: he-IL
     dir: rtl
-    css: [../custom.css, ../custom-rtl.css]
+    css: [custom.css, custom-rtl.css]
     number-depth: 0
     toc-depth: 4
     execute:
       echo: false
     header-includes: |
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik|Suez+One">
       <script src="${scriptSrc}"></script>
     mainfont: "Frank Ruhl Libre"
 `;
+}
+
+// Copy the shared CSS into the he/ project so Quarto bundles it into the output
+// root. Referenced locally (custom.css / custom-rtl.css) in the generated yml, it
+// then resolves both for production (docs/he/) and for the preview server root —
+// a ../-prefixed path 404s above the preview root. These copies are gitignored.
+function copyStyles() {
+  for (const css of ['custom.css', 'custom-rtl.css']) {
+    cpSync(join(__dirname, css), join(HE_DIR, css), { force: true });
+  }
 }
 
 function buildHe() {
@@ -104,8 +118,21 @@ function buildHe() {
   writeFileSync(ymlPath, yml, 'utf8');
   log(`\n✓ Updated he/_quarto.yml with ${translated.size} chapter(s)`);
 
+  copyStyles();
+
   log('\n▶ Running: quarto render he/\n');
   execSync('quarto render he/', { cwd: __dirname, stdio: 'inherit' });
+
+  // Copy images folder to output
+  const imagesSource = join(__dirname, 'images');
+  const imagesTarget = join(__dirname, 'docs', 'he', 'images');
+  cpSync(imagesSource, imagesTarget, { recursive: true, force: true });
+
+  // The he/ pages import shared game logic as "../custom.js", i.e. docs/custom.js
+  // — a file only a full English `quarto render` refreshes. Sync it here so the
+  // Hebrew build never runs against a stale copy.
+  cpSync(join(__dirname, 'custom.js'), join(__dirname, 'docs', 'custom.js'), { force: true });
+
   log('\n✓ Hebrew site built → docs/he/');
 }
 
@@ -127,6 +154,8 @@ function previewHe() {
   log('✓ he/_quarto.yml updated (output-dir: _preview for live reload)');
   log('▶ Running: quarto preview he/\n');
   log('  Press Ctrl+C to stop. Run "node build-he.js" afterwards to restore docs/he/.\n');
+
+  copyStyles();
 
   const child = spawn('quarto', ['preview', 'he/'], {
     cwd: __dirname,

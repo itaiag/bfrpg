@@ -10,5 +10,8 @@ node_modules/
 he-book/
 he/.quarto/
 he/_quarto.yml
+he/_preview/
+he/custom.css
+he/custom-rtl.css
 **/*.quarto_ipynb
 .firebase/

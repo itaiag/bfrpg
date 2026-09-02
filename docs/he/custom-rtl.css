@@ -27,13 +27,49 @@ td {
   text-align: right;
 }
 
+/* Override Bootstrap text-start on sidebar section headers */
+.sidebar .text-start {
+  text-align: right !important;
+}
+
+/* RTL fix for entire sidebar navigation */
+#quarto-sidebar .sidebar-menu-container > ul {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+#quarto-sidebar .sidebar-section {
+  padding-right: 1em;
+  padding-left: 0;
+}
+
+#quarto-sidebar .sidebar-item-container {
+  flex-direction: row-reverse !important;
+}
+
+#quarto-sidebar .sidebar-item-text {
+  text-align: right !important;
+}
+
+#quarto-sidebar .sidebar-item-toggle .bi-chevron-right {
+  transform: scaleX(-1);
+}
+
+#quarto-sidebar .sidebar-title {
+  text-align: right !important;
+}
+
+#quarto-sidebar .sidebar-header {
+  text-align: right !important;
+}
+
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   text-align: right;
 }
 
-/* Lists */
-ul, ol {
+/* Lists (content only, not sidebar) */
+#quarto-content ul, #quarto-content ol {
   padding-right: 2em;
   padding-left: 0;
 }
@@ -47,12 +83,11 @@ blockquote {
   margin-right: 0;
 }
 
-/* Navigation arrows (prev/next) — swap sides */
-.page-navigation .nav-page-previous {
-  order: 2;
-}
-.page-navigation .nav-page-next {
-  order: 1;
+/* Flip navigation arrows for RTL */
+.page-navigation .bi-arrow-left-short,
+.page-navigation .bi-arrow-right-short {
+  display: inline-block;
+  transform: scaleX(-1);
 }
 
 /* Quarto sidebar panel */
@@ -66,9 +101,33 @@ blockquote {
   text-align: left;
 }
 
+/* Item pickers (equipment search / select / inventory in appendix_interactive)
+   and text fields (their Hebrew placeholders/labels, e.g. "גודל רשת" in the
+   mapmaker) hold Hebrew, so opt them back out of the LTR rule above. Scoped to
+   the widgets rather than flipping .observablehq wholesale, which would also
+   flip every dice roller; the character sheet's raw-HTML inputs live outside
+   .observablehq and are untouched either way. */
+.observablehq select,
+.observablehq option,
+.observablehq input[type="search"],
+.observablehq input[type="text"],
+.observablehq output {
+  direction: rtl;
+  text-align: right;
+}
+
 /* OJS dice roller grid — button on right, result on left (RTL natural order) */
 .ojs-roller {
   direction: rtl !important;
+}
+
+/* OJS button labels — .observablehq above forces LTR base direction, which
+   mangles mixed Hebrew+Latin labels ("ייצא ל-PNG" renders as "ל ייצא-PNG").
+   Give the label an RTL base direction so the Latin run stays a left-to-right
+   atom in its right-to-left sentence; pure-Latin labels are unaffected. */
+.observablehq button {
+  direction: rtl;
+  unicode-bidi: isolate;
 }
 
 /* OJS button visibility — Observable's CSS custom properties may be unresolved
@@ -85,6 +144,38 @@ blockquote {
   background-color: #e2e6ea;
 }
 
+/* Inputs.table in RTL (monster index). .observablehq is LTR above, which lays
+   the columns out left-to-right; flipping the table itself puts the first
+   column (שם) on the right and the rest read leftwards.
+   Cells get unicode-bidi: plaintext so each one picks its own base direction
+   from its first strong character: Hebrew cells read RTL, while purely numeric
+   values keep their source order — "25–240" would otherwise flip to "240–25",
+   since the en dash is a neutral and doesn't bind the two numbers together the
+   way a hyphen does. */
+.rtl-table table {
+  direction: rtl;
+}
+.rtl-table th,
+.rtl-table td {
+  direction: rtl;
+  unicode-bidi: plaintext;
+  text-align: right;
+}
+/* The table isn't a viewof, so its leading row-selection checkbox column does
+   nothing — and once flipped it sits to the right of שם. Hide it so שם really
+   is the rightmost column. (Inputs 0.10.6, which Quarto loads, has no `select`
+   option to turn it off at the source.) */
+.rtl-table th:has(> input[type="checkbox"]),
+.rtl-table td:has(> input[type="checkbox"]) {
+  display: none;
+}
+/* quarto-ojs.css pads the table's left edge; in RTL that gap belongs on the
+   right, so the first column isn't flush against the container. */
+.rtl-table .quarto-ojs-table-fixup {
+  padding-left: 0;
+  padding-right: 14px;
+}
+
 /* Keep numeric content LTR (dice tables, stats) */
 table.stats td,
 td:only-child {
@@ -92,9 +183,36 @@ td:only-child {
   unicode-bidi: embed;
 }
 
+/* Hebrew dice notation (read RTL: count first, then ק, then sides/modifier).
+   The container is RTL+isolate so the count/ק/sides tokens order right-to-left;
+   each inner <span> is an isolated LTR atom so multi-digit numbers and +modifiers
+   stay internally left-to-right (1d100 reads 1ק100, not 1ק001). */
+.dice {
+  direction: rtl;
+  unicode-bidi: isolate;
+}
+.dice > span {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+/* Small gap on the sides side of the modifier sign, so the +N reads as a unit
+   separated from the sides number (…6 +2…, not a merged …+6…). */
+.dice > .mod {
+  margin-right: 0.15em;
+}
+/* Attached multiplier (2d8x100 -> 2ק8×100): breathing room on both sides. */
+.dice > .mult {
+  margin-inline: 0.1em;
+}
+
 /* Font for Hebrew */
 body {
-  font-family: "Frank Ruhl Libre", "David Libre", serif;
+  font-family: "Rubik", sans-serif;
+}
+
+/* Fantasy-style headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Suez One", serif;
 }
 
 /* Language toggle button */

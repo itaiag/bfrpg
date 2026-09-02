@@ -120,7 +120,7 @@
         </div>
         <div id="turn-hd3" class="g-col-3 g-col-md-1" >
           <input autocomplete="off" type="text" id="turn3" class="form-control form-control-sm turningForm">
-          <label for="turn3">3 HD / גול</label>
+          <label for="turn3">3 HD / גועל</label>
         </div>
         <div id="turn-hd4"  class="g-col-3 g-col-md-1">
           <input autocomplete="off" type="text" id="turn4" class="form-control form-control-sm turningForm">
@@ -159,49 +159,48 @@
 
 function addWeapon() {
       var inputContainer = d3.select('#attackContainer');
-      var inputCount = inputContainer.selectAll('.grid').size();
+      var idNum = nextRowId('#attackContainer');
 
 
 
     var inputGroup = inputContainer
       .append('div')
       .attr('class','grid g-0 justify-content-center').attr('style','--bs-gap:0;--bs-columns:13;')
-      .attr('id','attack'+(inputCount + 1))
+      .attr('id','attack'+idNum)
 
     inputGroup
     .html(`
       <div class="g-col-3">
-        <input autocomplete="off" type="text" class="form-control form-control-sm weaponForm"  id="weaponForm${inputCount + 1}">
+        <input autocomplete="off" type="text" class="form-control form-control-sm weaponForm"  id="weaponForm${idNum}">
       </div>
       <div class="g-col-2">
-        <input autocomplete="off" type="text" class="form-control form-control-sm attackForm" id="attackForm${inputCount + 1}">
+        <input autocomplete="off" type="text" class="form-control form-control-sm attackForm" id="attackForm${idNum}">
       </div>
       <div class="g-col-2">
-        <input autocomplete="off" type="text" class="form-control form-control-sm damageForm"  id="damageForm${inputCount + 1}">
+        <input autocomplete="off" type="text" class="form-control form-control-sm damageForm"  id="damageForm${idNum}">
       </div>
       <div class="g-col-1">
-        <input autocomplete="off" type="text" class="form-control form-control-sm rangeSForm"  id="rangeSForm${inputCount + 1}">
+        <input autocomplete="off" type="text" class="form-control form-control-sm rangeSForm"  id="rangeSForm${idNum}">
       </div>
       <div class="g-col-1">
-        <input autocomplete="off" type="text" class="form-control form-control-sm rangeMForm" id="rangeMForm${inputCount + 1}" >
+        <input autocomplete="off" type="text" class="form-control form-control-sm rangeMForm" id="rangeMForm${idNum}" >
       </div>
       <div class="g-col-1">
-        <input autocomplete="off" type="text" class="form-control form-control-sm rangeLForm" id="rangeLForm${inputCount + 1}">
+        <input autocomplete="off" type="text" class="form-control form-control-sm rangeLForm" id="rangeLForm${idNum}">
       </div>
       <div class="g-col-2">
-        <input autocomplete="off" type="text" class="form-control form-control-sm notesForm"  id="notesForm${inputCount + 1}">
+        <input autocomplete="off" type="text" class="form-control form-control-sm notesForm"  id="notesForm${idNum}">
       </div>`)
     .append('div')
     .attr('class','g-col-1')
     .append('i')
     .attr('class', 'bi bi-x-lg mt-3 text-danger')
     .attr('style', 'cursor: pointer;')
-    .attr('id', 'attackDel' + (inputCount + 1))
+    .attr('id', 'attackDel' + idNum)
     .on('click', function() {
           inputGroup.remove();
         });
 
-    console.log(inputCount)
     }
 
 weapon = {
@@ -218,29 +217,29 @@ weapon = {
 
 function addAmmo() {
       var inputContainer = d3.select('#ammoContainer');
-      var inputCount = inputContainer.selectAll('.grid').size();
+      var idNum = nextRowId('#ammoContainer');
 
     var inputGroup = inputContainer
       .append('div')
       .attr('class','grid g-0 justify-content-center').attr('style','--bs-gap:0;--bs-columns:13;')
-      .attr('id','ammo'+(inputCount + 1))
+      .attr('id','ammo'+idNum)
 
     inputGroup
     .html(`
     <div class="g-col-3">
-        <input autocomplete="off" type="text" class="form-control form-control-sm ammoForm" id=ammoForm${inputCount + 1}>
+        <input autocomplete="off" type="text" class="form-control form-control-sm ammoForm" id=ammoForm${idNum}>
     </div>
     <div class="g-col-1">
         <div class="form-outline">
-            <input autocomplete="off" type="number" class="form-control form-control-sm countForm" value=0 id=countForm${inputCount + 1}>
+            <input autocomplete="off" type="number" class="form-control form-control-sm countForm" value=0 id=countForm${idNum}>
         </div>
     </div>
     <div class="g-col-1">
-        <input autocomplete="off" type="text" class="form-control form-control-sm ammoDmgForm"  id=ammoDmgForm${inputCount + 1}>
+        <input autocomplete="off" type="text" class="form-control form-control-sm ammoDmgForm"  id=ammoDmgForm${idNum}>
     </div>
     <div class="g-col-6">
         <div class="form-outline">
-            <input autocomplete="off" type="text" class="form-control form-control-sm ammo-notesForm" id=ammo-notesForm${inputCount + 1}>
+            <input autocomplete="off" type="text" class="form-control form-control-sm ammo-notesForm" id=ammo-notesForm${idNum}>
         </div>
     </div>
     `)
@@ -249,7 +248,7 @@ function addAmmo() {
     .append('i')
     .attr('class', 'bi bi-x-lg mt-3 text-danger')
     .attr('style', 'cursor: pointer;')
-    .attr('id', 'ammoDel' + (inputCount + 1))
+    .attr('id', 'ammoDel' + idNum)
     .on('click', function() {
           inputGroup.remove();
         });
