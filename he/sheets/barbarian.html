@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>דף דמות ברברי</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700;900&family=Assistant:wght@400;600;700&display=swap">
+<style>
+/* Layout: two A4 sheets on a desk. Each sheet is a size container and everything inside is
+   measured in em off a container-relative font size, so the sheet scales down on screen and
+   prints at exactly 210×297mm. The paper is always paper-white; only the desk follows the theme. */
+:root {
+  --desk: #d8d2c8;
+  --desk-ink: #4a433c;
+  --paper: #fffdf7;
+  --ink: #221c18;
+  --rule: #776d64;
+  --faint: #e8e1d5;
+  --wash: #f4efe6;
+  --accent: #7b2a1c;
+  --display: "Frank Ruhl Libre", "David", "Times New Roman", serif;
+  --body: "Assistant", "Arial Hebrew", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --desk: #1c1a18; --desk-ink: #bdb4a8; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --desk: #1c1a18; --desk-ink: #bdb4a8; color-scheme: dark; }
+
+body { background: var(--desk); margin: 0; }
+
+.desk {
+  padding-block: 20px 32px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid;
+  justify-items: center;
+  gap: 24px;
+}
+.screen-note a { color: inherit; font-weight: 700; }
+.screen-note {
+  font: 600 14px/1.5 var(--body);
+  color: var(--desk-ink);
+  text-align: center;
+  max-width: 60ch;
+  margin: 0;
+}
+
+.sheet {
+  width: min(210mm, 100%);
+  aspect-ratio: 210 / 297;
+  container-type: inline-size;
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 0 1px 2px rgba(0,0,0,.18), 0 8px 24px rgba(0,0,0,.14);
+  overflow: hidden;
+}
+.page {
+  font-family: var(--body);
+  font-size: 1.55cqi;
+  line-height: 1.25;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 3.4em 3.6em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1em;
+}
+
+/* ---------- shared pieces ---------- */
+.label {
+  font-weight: 700;
+  font-size: .78em;
+  color: var(--accent);
+  letter-spacing: .02em;
+}
+.hint { font-size: .72em; color: var(--rule); font-weight: 400; }
+.box-title {
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: 1.15em;
+  margin: 0 0 .35em;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0 .5em;
+}
+.box-title .hint { font-family: var(--body); font-size: .62em; }
+.panel {
+  border: .14em solid var(--ink);
+  border-radius: .35em;
+  padding: .6em .75em .7em;
+  min-width: 0;
+}
+.field { display: flex; flex-direction: column; gap: .15em; min-width: 0; }
+.field .write { border-bottom: .09em solid var(--rule); height: 1.7em; }
+.cell {
+  border: .12em solid var(--ink);
+  border-radius: .25em;
+  background: #fff;
+}
+.lines {
+  background-image: linear-gradient(to top, var(--rule) .08em, transparent .08em);
+  background-size: 100% 1.8em;
+}
+
+/* ---------- page 1 header ---------- */
+.hd {
+  display: grid;
+  grid-template-columns: 1fr 9.5em;
+  gap: 1em;
+  align-items: stretch;
+}
+.hd-main { display: flex; flex-direction: column; gap: .55em; min-width: 0; }
+.brand { display: flex; align-items: baseline; justify-content: space-between; gap: 1em; border-bottom: .22em solid var(--ink); padding-bottom: .2em; }
+.brand h1 { font-family: var(--display); font-weight: 900; font-size: 2.5em; line-height: 1; margin: 0; }
+.brand .sys { font-family: var(--display); font-weight: 700; font-size: .95em; color: var(--accent); }
+.name .write { height: 2.2em; }
+.name .label { font-size: .85em; }
+.id-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr .6fr;
+  gap: .4em .9em;
+}
+.id-grid.two { grid-template-columns: 1fr 1.3fr; }
+.portrait {
+  border: .14em dashed var(--rule);
+  border-radius: .35em;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: .5em;
+}
+
+/* ---------- page 1 body ---------- */
+.body {
+  display: grid;
+  grid-template-columns: 15.5em 1fr;
+  gap: 1em;
+  flex: 1;
+  min-height: 0;
+}
+.col { display: flex; flex-direction: column; gap: .9em; min-width: 0; }
+
+.abilities { display: flex; flex-direction: column; gap: .45em; }
+.ab {
+  display: grid;
+  grid-template-columns: 1fr 3.3em 2.5em;
+  align-items: center;
+  gap: .45em;
+  padding-block: .15em;
+  border-bottom: .06em solid var(--faint);
+}
+.ab:last-child { border-bottom: 0; }
+.ab-name { font-family: var(--display); font-weight: 900; font-size: 1.12em; line-height: 1.05; }
+.ab-name .hint { display: block; font-family: var(--body); font-size: .6em; line-height: 1.2; margin-top: .15em; }
+.ab .score { height: 3em; border-width: .16em; }
+.ab .mod {
+  width: 2.4em; height: 2.4em;
+  border: .12em solid var(--ink);
+  border-radius: 50%;
+  background: #fff;
+  justify-self: center;
+}
+.ab-head { display: grid; grid-template-columns: 1fr 3.3em 2.5em; gap: .45em; text-align: center; }
+.ab-head span:first-child { text-align: start; }
+
+.saves .row {
+  display: grid;
+  grid-template-columns: 1fr 2.6em;
+  align-items: center;
+  gap: .5em;
+  padding-block: .22em;
+  border-bottom: .06em solid var(--faint);
+  font-weight: 600;
+  font-size: .92em;
+}
+.saves .row:last-of-type { border-bottom: 0; }
+.saves .cell { height: 1.9em; }
+.saves .note { margin-top: .4em; display: flex; flex-direction: column; gap: .1em; }
+.saves .note .write { border-bottom: .09em solid var(--rule); height: 1.5em; }
+
+/* combat strip */
+.combat {
+  display: grid;
+  grid-template-columns: 1.05fr 1.6fr 1fr 1fr;
+  gap: .7em;
+}
+.stat {
+  border: .14em solid var(--ink);
+  border-radius: .35em;
+  padding: .45em .5em .55em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .3em;
+  text-align: center;
+}
+.stat .label { font-size: .82em; }
+.stat .big { width: 100%; height: 3.6em; }
+.shield { position: relative; width: 4.6em; height: 5em; }
+.shield svg { width: 100%; height: 100%; display: block; }
+.hp { display: grid; grid-template-columns: 1fr 1.6fr; gap: .45em; width: 100%; }
+.hp .field { align-items: stretch; }
+.hp .cell { height: 3.6em; }
+.hp .hint { font-size: .7em; text-align: center; }
+
+.howto {
+  background: var(--wash);
+  border-radius: .35em;
+  padding: .5em .8em;
+  font-size: .88em;
+  line-height: 1.4;
+}
+.howto b { color: var(--accent); }
+
+table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
+.weapons th, .inv th {
+  font-size: .75em;
+  font-weight: 700;
+  color: var(--accent);
+  text-align: start;
+  padding: 0 .4em .25em;
+  border-bottom: .14em solid var(--ink);
+}
+.weapons th.c, .inv th.c { text-align: center; }
+.weapons td, .inv td {
+  height: 2.05em;
+  border-bottom: .07em solid var(--rule);
+  border-inline-start: .07em solid var(--faint);
+  padding: 0;
+}
+.weapons td:first-child, .inv td:first-child { border-inline-start: 0; }
+.weapons .sub th { font-weight: 600; color: var(--rule); font-size: .66em; border-bottom: .14em solid var(--ink); padding-top: 0; }
+
+.two-up { display: grid; grid-template-columns: 1fr 1fr; gap: .9em; }
+.lined-box { flex: 1; min-height: 0; }
+.lined-box .lines { height: 100%; }
+
+.skills .row {
+  display: grid;
+  grid-template-columns: 1fr 2.6em;
+  align-items: center;
+  gap: .4em;
+  font-size: .86em;
+  font-weight: 600;
+  padding-block: .14em;
+  border-bottom: .06em solid var(--faint);
+}
+.skills .row:last-child { border-bottom: 0; }
+.skills .cell { height: 1.55em; position: relative; }
+.skills .cell::after { content: "%"; position: absolute; inset-inline-end: .25em; bottom: .05em; font-size: .7em; color: var(--rule); }
+
+.spells-day { display: grid; grid-template-columns: repeat(6, 1fr); gap: .3em; text-align: center; }
+.spells-day .lvl { font-size: .72em; font-weight: 700; color: var(--accent); }
+.spells-day .cell { height: 2em; }
+.turn { margin-top: .6em; display: flex; flex-direction: column; gap: .15em; }
+.turn .write { border-bottom: .09em solid var(--rule); height: 1.5em; }
+
+.foot {
+  display: flex;
+  justify-content: space-between;
+  font-size: .68em;
+  color: var(--rule);
+  border-top: .08em solid var(--faint);
+  padding-top: .35em;
+}
+
+/* ---------- page 2 ---------- */
+.hd2 {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.2em;
+  align-items: end;
+  border-bottom: .22em solid var(--ink);
+  padding-bottom: .3em;
+}
+.hd2 h1 { font-family: var(--display); font-weight: 900; font-size: 2.2em; line-height: 1; margin: 0; }
+.hd2 .field .write { height: 1.6em; }
+
+.inv-wrap { display: grid; grid-template-columns: 1fr 15.5em; gap: 1em; flex: 1; min-height: 0; }
+.inv td { height: 1.95em; }
+.inv .num { width: 4em; }
+.inv .wt { width: 5em; background: var(--wash); }
+.inv .notes { width: 9em; }
+.inv tfoot td {
+  border-top: .14em solid var(--ink);
+  border-bottom: 0;
+  font-weight: 700;
+  font-size: .9em;
+  padding-inline: .4em;
+  height: 2.4em;
+}
+.inv tfoot .wt { background: #fff; border: .14em solid var(--ink); }
+.inv .group td {
+  height: 1.7em;
+  border-bottom: .14em solid var(--ink);
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: .95em;
+  padding-inline: .4em;
+  vertical-align: bottom;
+  background: none;
+}
+
+.coins { display: grid; grid-template-columns: repeat(5, 1fr); gap: .35em; text-align: center; }
+.coin { display: flex; flex-direction: column; align-items: center; gap: .2em; }
+.coin .disc {
+  width: 2.5em; height: 2.5em;
+  border-radius: 50%;
+  border: .14em solid var(--ink);
+  display: grid; place-items: center;
+  font-family: var(--display); font-weight: 900; font-size: .8em;
+  background: var(--wash);
+}
+.coin .cell { width: 100%; height: 2.1em; }
+.coin .hint { font-size: .62em; }
+
+.armor-rows .row {
+  display: grid;
+  grid-template-columns: 1fr 2.8em 3.2em;
+  gap: .4em;
+  align-items: end;
+  padding-block: .2em;
+}
+.armor-rows .head { font-size: .7em; font-weight: 700; color: var(--accent); align-items: end; }
+.armor-rows .write { border-bottom: .09em solid var(--rule); height: 1.6em; }
+
+.load { display: grid; grid-template-columns: 1fr 1fr; gap: .5em; }
+.check { display: flex; align-items: center; gap: .4em; font-weight: 600; font-size: .9em; }
+.check i { width: 1.1em; height: 1.1em; border: .12em solid var(--ink); border-radius: .2em; display: inline-block; background: #fff; }
+
+@media print {
+  @page { size: A4; margin: 0; }
+  body { background: none; }
+  .desk { padding: 0; gap: 0; display: block; }
+  .screen-note { display: none; }
+  .sheet { width: 210mm; height: 297mm; aspect-ratio: auto; box-shadow: none; break-after: page; page-break-after: always; }
+  .sheet:last-child { break-after: auto; page-break-after: auto; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+/* ---------- class sheets ---------- */
+.num-ltr { direction: ltr; unicode-bidi: isolate; }
+.class-tag {
+  font-family: var(--display); font-weight: 900; font-size: 1.05em;
+  background: var(--accent); color: var(--paper);
+  padding: .1em .6em .15em; border-radius: .25em;
+}
+.field .filled { border-bottom: .09em solid var(--rule); height: 1.7em; font-family: var(--display); font-weight: 700; font-size: 1.05em; display: flex; align-items: flex-end; padding-bottom: .1em; }
+.strip {
+  display: grid; grid-template-columns: .8fr 1fr 1.3fr 1.6fr; gap: .5em;
+  background: var(--wash); border-radius: .35em; padding: .45em .7em;
+}
+.strip div { display: flex; flex-direction: column; gap: .1em; min-width: 0; }
+.strip b { font-size: .88em; font-weight: 600; line-height: 1.25; }
+.bullets { margin: 0; padding-inline-start: 1.1em; display: flex; flex-direction: column; gap: .3em; font-size: .88em; line-height: 1.35; }
+.bullets b { color: var(--accent); }
+.note-box { background: var(--wash); border-radius: .3em; padding: .45em .6em; font-size: .82em; line-height: 1.35; }
+.note-box b { color: var(--accent); }
+.big-cell { height: 2.6em; }
+.ability-list .row {
+  display: grid; grid-template-columns: 2.2em 1fr auto; gap: .45em; align-items: center;
+  padding-block: .22em; border-bottom: .06em solid var(--faint); font-size: .84em;
+}
+.ability-list .row:last-child { border-bottom: 0; }
+.ability-list .lv {
+  font-weight: 700; font-size: .85em; text-align: center; color: var(--paper); background: var(--ink);
+  border-radius: .25em; padding-block: .1em;
+}
+.ability-list .what b { display: block; font-size: 1.05em; }
+.ability-list .what span { color: var(--rule); font-size: .9em; }
+.dots { display: flex; gap: .25em; }
+.dots i { width: .95em; height: .95em; border: .12em solid var(--ink); border-radius: 50%; display: inline-block; background: #fff; }
+
+/* reference page */
+.ref-intro { display: grid; grid-template-columns: 1fr 1fr; gap: .9em; }
+.ref table { font-size: .8em; }
+.ref th {
+  font-size: .82em; font-weight: 700; color: var(--accent); text-align: center;
+  padding: .2em .25em .3em; border-bottom: .16em solid var(--ink); line-height: 1.15; vertical-align: bottom;
+}
+.ref th.grp { border-bottom: .08em solid var(--rule); padding-bottom: .15em; }
+.ref td { text-align: center; height: 1.38em; padding: 0 .2em; border-bottom: .06em solid var(--faint); white-space: nowrap; }
+.ref tbody tr:nth-child(odd) td { background: var(--wash); }
+.ref tbody tr:nth-child(5n) td { border-bottom: .12em solid var(--rule); }
+.ref td.lv { font-weight: 700; font-family: var(--display); font-size: 1.1em; }
+.ref td.sep, .ref th.sep { border-inline-start: .12em solid var(--rule); }
+.ref td.txt { text-align: start; }
+.ref .legend { font-size: .72em; color: var(--rule); margin-top: .3em; }
+.find-row { font-size: .85em; font-weight: 600; }
+.find-row b { color: var(--accent); }
+
+/* spell page */
+.spellbook td { height: 2.2em; border-bottom: .07em solid var(--rule); border-inline-start: .07em solid var(--faint); padding: 0; }
+.spellbook td:first-child { border-inline-start: 0; }
+.spellbook th {
+  font-size: .75em; font-weight: 700; color: var(--accent); text-align: start;
+  padding: 0 .4em .25em; border-bottom: .14em solid var(--ink);
+}
+.spellbook th.c { text-align: center; }
+.spellbook td.chk { text-align: center; vertical-align: middle; }
+.spellbook td.chk i { width: 1em; height: 1em; border: .12em solid var(--ink); border-radius: .2em; display: inline-block; vertical-align: middle; background: #fff; }
+
+/* magic-user spell list */
+.spell-list { font-size: .92em; }
+.spell-list th {
+  font-size: .78em; font-weight: 700; color: var(--accent); text-align: start;
+  padding: 0 .4em .25em; border-bottom: .14em solid var(--ink);
+}
+.spell-list th.c { text-align: center; }
+.spell-list td { height: 1.62em; padding: 0 .4em; border-bottom: .06em solid var(--faint); font-size: .9em; color: var(--rule); }
+.spell-list td.sname { color: var(--ink); font-weight: 600; font-size: 1em; }
+.spell-list td.chk { text-align: center; vertical-align: middle; padding: 0; border-inline-end: .06em solid var(--faint); }
+.spell-list td.chk i { width: 1.05em; height: 1.05em; border: .12em solid var(--ink); border-radius: .2em; display: inline-block; vertical-align: middle; background: #fff; }
+.spell-list tbody tr:not(.group):nth-child(even) td { background: var(--wash); }
+.spell-list .group td {
+  height: 2em; vertical-align: bottom; padding: 0 .3em .15em;
+  font-family: var(--display); font-weight: 900; font-size: 1.05em; color: var(--accent);
+  border-bottom: .14em solid var(--ink); background: none;
+}
+.tag {
+  font-size: .68em; font-weight: 700; color: var(--paper); background: var(--accent);
+  border-radius: .25em; padding: .05em .4em; margin-inline-start: .3em; vertical-align: .1em; white-space: nowrap;
+}
+.tag.light { color: var(--accent); background: none; border: .1em solid var(--accent); }
+.custom-spells .spell-list td { height: 2.3em; border-bottom: .07em solid var(--rule); border-inline-start: .06em solid var(--faint); background: none !important; }
+.custom-spells .spell-list td:first-child { border-inline-start: 0; }
+
+/* blank sheet: write-in skill names */
+.skills .row .write { border-bottom: .09em solid var(--rule); height: 1.5em; }
+
+</style>
+</head>
+<body>
+<div class="desk" dir="rtl" lang="he">
+  <p class="screen-note"><a href="../printable_sheets.html">← חזרה לדפי הדמות</a><br>3 עמודים בגודל A4. להדפסה: Ctrl+P ← גודל נייר A4, שוליים: ללא. להדפסה דו-צדדית: הפכו לאורך הצד הארוך.</p>
+
+  <section class="sheet" aria-label="עמוד 1: דף דמות">
+    <div class="page">
+      <header class="hd">
+        <div class="hd-main">
+          <div class="brand"><h1>דף דמות</h1><span class="class-tag">ברברי</span></div>
+          <div class="field name"><span class="label">שם הדמות</span><div class="write"></div></div>
+          <div class="id-grid"><div class="field"><span class="label">שם השחקן</span><div class="write"></div></div><div class="field"><span class="label">גזע</span><div class="write"></div></div><div class="field"><span class="label">מקצוע</span><div class="filled">ברברי</div></div><div class="field"><span class="label">דרגה</span><div class="write"></div></div></div>
+          <div class="id-grid two"><div class="field"><span class="label">נקודות ניסיון</span><div class="write"></div></div><div class="field"><span class="label">נקודות ניסיון לדרגה הבאה</span><div class="write"></div></div></div>
+        </div>
+        <div class="portrait"><span class="hint">ציירו כאן את הדמות</span></div>
+      </header>
+      <div class="strip">
+            <div><span class="label">קוביית פגיעה</span><b>ק10 לכל דרגה</b></div>
+            <div><span class="label">תכונה עיקרית</span><b>כוח, זריזות וחוסן 9 לפחות</b></div>
+            <div><span class="label">שריון</span><b>כל שריון ומגן</b></div>
+            <div><span class="label">נשקים</span><b>כל נשק</b></div>
+          </div>
+      <div class="body">
+        <div class="col">
+          <div class="panel">
+            <h2 class="box-title">תכונות</h2>
+            <div class="ab-head label"><span></span><span>ערך</span><span>תוסף</span></div>
+            <div class="abilities"><div class="ab"><div class="ab-name">כוח<span class="hint">פגיעה ונזק בקרב פנים אל פנים</span></div><div class="cell score"></div><div class="mod"></div></div><div class="ab"><div class="ab-name">זריזות<span class="hint">קליעה, דירוג שריון ויוזמה</span></div><div class="cell score"></div><div class="mod"></div></div><div class="ab"><div class="ab-name">חוסן<span class="hint">נקודות פגיעה</span></div><div class="cell score"></div><div class="mod"></div></div><div class="ab"><div class="ab-name">תבונה<span class="hint">שפות; התכונה של הקוסם</span></div><div class="cell score"></div><div class="mod"></div></div><div class="ab"><div class="ab-name">חוכמה<span class="hint">התכונה של הכוהן</span></div><div class="cell score"></div><div class="mod"></div></div><div class="ab"><div class="ab-name">כריזמה<span class="hint">איך אחרים מגיבים אליך</span></div><div class="cell score"></div><div class="mod"></div></div></div>
+          </div>
+          <div class="panel saves">
+            <h2 class="box-title">גלגולי הצלה <span class="hint">ק20, שווה או יותר. הערכים בעמוד 2</span></h2>
+            <div class="row"><span>קרן מוות / רעל</span><div class="cell"></div></div><div class="row"><span>שרביטי קסם</span><div class="cell"></div></div><div class="row"><span>שיתוק / התאבנות</span><div class="cell"></div></div><div class="row"><span>נשיפת דרקון</span><div class="cell"></div></div><div class="row"><span>לחשים</span><div class="cell"></div></div>
+            <div class="note"><span class="label">תוספי גזע</span><div class="write"></div></div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="combat">
+            <div class="stat">
+              <span class="label">דירוג שריון</span>
+              <div class="shield" aria-hidden="true">
+                <svg viewBox="0 0 46 50"><path d="M23 2 L43 8 V24 C43 36 34 44 23 48 C12 44 3 36 3 24 V8 Z" fill="#fff" stroke="#221c18" stroke-width="2.2" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+            <div class="stat">
+              <span class="label">נקודות פגיעה</span>
+              <div class="hp">
+                <div class="field"><div class="cell"></div><span class="hint">מרבי</span></div>
+                <div class="field"><div class="cell"></div><span class="hint">עכשיו (בעיפרון)</span></div>
+              </div>
+            </div>
+            <div class="stat"><span class="label">תוסף התקפה</span><div class="cell big"></div></div>
+            <div class="stat"><span class="label">תנועה</span><div class="cell big"></div></div>
+          </div>
+          <p class="howto"><b>איך תוקפים?</b> מגלגלים ק20 ומוסיפים את תוסף ההתקפה, ועוד תוסף <b>כוח</b> בקרב פנים אל פנים או תוסף <b>זריזות</b> בקליעה. אם התוצאה שווה לדירוג השריון של היריב או גבוהה ממנו, פגעתם. בקרב פנים אל פנים מוסיפים את תוסף הכוח גם לנזק.</p>
+          <div class="panel">
+            <h2 class="box-title">נשקים</h2>
+            <table class="weapons">
+              <thead>
+                <tr>
+                  <th rowspan="2">נשק</th>
+                  <th class="c" rowspan="2" style="width:4.2em">התקפה</th>
+                  <th class="c" rowspan="2" style="width:4.6em">נזק</th>
+                  <th class="c" colspan="3">טווח (מ׳)</th>
+                  <th rowspan="2" style="width:7em">הערות</th>
+                </tr>
+                <tr class="sub">
+                  <th class="c" style="width:3em">קצר</th>
+                  <th class="c" style="width:3em">בינוני</th>
+                  <th class="c" style="width:3em">ארוך</th>
+                </tr>
+              </thead>
+              <tbody><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody>
+            </table>
+          </div>
+          <div class="two-up" style="flex:1; min-height:0">
+            <div class="panel" style="display:flex; flex-direction:column">
+              <h2 class="box-title">יכולות גזע ומקצוע</h2>
+              <div class="lined-box"><div class="lines"></div></div>
+              <div class="field" style="margin-top:.4em"><span class="label">שפות</span><div class="write"></div></div>
+            </div>
+            <div class="col" style="gap:.9em">
+              <div class="panel ability-list"><h2 class="box-title">כוחות הברברי <span class="hint">ערנות עד רץ: רק בלי שריון או בשריון עור</span></h2><div class="row"><span class="lv">1</span><span class="what"><b>זעם</b><span>פעם ביום. פעמיים מדרגה 6, שלוש פעמים מדרגה 12</span></span><span class="dots"><i></i><i></i><i></i></span></div><div class="row"><span class="lv">1</span><span class="what"><b>ערנות</b><span>רק גנב בדרגה גבוהה יותר יכול לדקור אותך מאחור</span></span><span class="dots"></span></div><div class="row"><span class="lv">1</span><span class="what"><b>רפלקסים חייתיים</b><span>מופתע רק ב-1 בק6</span></span><span class="dots"></span></div><div class="row"><span class="lv">1</span><span class="what"><b>צייד</b><span>בשטח פתוח מפתיע אויבים ב-1–3 בק6</span></span><span class="dots"></span></div><div class="row"><span class="lv">1</span><span class="what"><b>רץ</b><span>מוסיף 1.5 מ׳ לתנועה בקרב</span></span><span class="dots"></span></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="foot"><span>בייסיק פנטזי, מהדורה עברית</span><span>עמוד 1 מתוך 3</span></div>
+    </div>
+  </section>
+  <section class="sheet" aria-label="עמוד 2: טבלת הברברי">
+    <div class="page">
+      <header class="hd2">
+        <h1>טבלת הברברי</h1>
+        <p class="find-row" style="margin:0">מוצאים את השורה של <b>הדרגה שלכם</b> ומעתיקים את המספרים לעמוד 1. כשעולים דרגה, חוזרים לכאן.</p>
+      </header>
+      <div class="panel"><h2 class="box-title">מה הברברי יודע לעשות</h2><ul class="bullets"><li><b>סוג של לוחם:</b> אותו תוסף התקפה ואותם גלגולי הצלה כמו לוחם. גמדים ובני אדם יכולים להיות ברברים.</li><li><b>בלי שריון או בשריון עור בלבד:</b> ערנות, רפלקסים חייתיים, צייד ורץ (ראו עמוד 1).</li><li><b>זעם:</b> 10 סיבובים. <span class="num-ltr">+2</span> להתקפה, לנזק ולהצלה נגד לחשים שמשנים את התודעה, אבל <span class="num-ltr">-2</span> לדירוג השריון. חייבים להסתער על האויב הקרוב. אי אפשר להשתמש בחפצי קסם, גם לא בשיקויים.</li><li><b>אחרי הזעם:</b> עייפים שעה: <span class="num-ltr">-2</span> להתקפה, לנזק, לדירוג השריון ולהצלה, בלי הסתערות ובלי ריצה. אפשר לעצור זעם מוקדם בהצלחה בגלגול הצלה נגד לחשים.</li></ul></div>
+      <div class="panel ref"><h2 class="box-title">עלייה בדרגה <span class="hint">דרגות 1–20</span></h2><table><thead><tr><th rowspan=2>דרגה</th><th rowspan=2>נקודות ניסיון</th><th rowspan=2>קוביות<br>פגיעה</th><th rowspan=2>תוסף<br>התקפה</th><th class="grp sep" colspan=5>גלגולי הצלה</th></tr><tr><th class=sep>מוות /<br>רעל</th><th>שרביטי<br>קסם</th><th>שיתוק /<br>התאבנות</th><th>נשיפת<br>דרקון</th><th>לחשים</th></tr></thead><tbody><tr><td class="lv">1</td><td>0</td><td><span class="num-ltr">1ק10</span></td><td><span class="num-ltr">+1</span></td><td class=sep>12</td><td>13</td><td>14</td><td>15</td><td>17</td></tr><tr><td class="lv">2</td><td>2,500</td><td><span class="num-ltr">2ק10</span></td><td><span class="num-ltr">+2</span></td><td class=sep>11</td><td>12</td><td>14</td><td>15</td><td>16</td></tr><tr><td class="lv">3</td><td>5,000</td><td><span class="num-ltr">3ק10</span></td><td><span class="num-ltr">+2</span></td><td class=sep>11</td><td>12</td><td>14</td><td>15</td><td>16</td></tr><tr><td class="lv">4</td><td>10,000</td><td><span class="num-ltr">4ק10</span></td><td><span class="num-ltr">+3</span></td><td class=sep>11</td><td>11</td><td>13</td><td>14</td><td>15</td></tr><tr><td class="lv">5</td><td>20,000</td><td><span class="num-ltr">5ק10</span></td><td><span class="num-ltr">+4</span></td><td class=sep>11</td><td>11</td><td>13</td><td>14</td><td>15</td></tr><tr><td class="lv">6</td><td>40,000</td><td><span class="num-ltr">6ק10</span></td><td><span class="num-ltr">+4</span></td><td class=sep>10</td><td>11</td><td>12</td><td>14</td><td>15</td></tr><tr><td class="lv">7</td><td>80,000</td><td><span class="num-ltr">7ק10</span></td><td><span class="num-ltr">+5</span></td><td class=sep>10</td><td>11</td><td>12</td><td>14</td><td>15</td></tr><tr><td class="lv">8</td><td>150,000</td><td><span class="num-ltr">8ק10</span></td><td><span class="num-ltr">+6</span></td><td class=sep>9</td><td>10</td><td>12</td><td>13</td><td>14</td></tr><tr><td class="lv">9</td><td>300,000</td><td><span class="num-ltr">9ק10</span></td><td><span class="num-ltr">+6</span></td><td class=sep>9</td><td>10</td><td>12</td><td>13</td><td>14</td></tr><tr><td class="lv">10</td><td>450,000</td><td><span class="num-ltr">9ק10+2</span></td><td><span class="num-ltr">+6</span></td><td class=sep>9</td><td>9</td><td>11</td><td>12</td><td>13</td></tr><tr><td class="lv">11</td><td>600,000</td><td><span class="num-ltr">9ק10+4</span></td><td><span class="num-ltr">+7</span></td><td class=sep>9</td><td>9</td><td>11</td><td>12</td><td>13</td></tr><tr><td class="lv">12</td><td>750,000</td><td><span class="num-ltr">9ק10+6</span></td><td><span class="num-ltr">+7</span></td><td class=sep>8</td><td>9</td><td>10</td><td>12</td><td>13</td></tr><tr><td class="lv">13</td><td>900,000</td><td><span class="num-ltr">9ק10+8</span></td><td><span class="num-ltr">+8</span></td><td class=sep>8</td><td>9</td><td>10</td><td>12</td><td>13</td></tr><tr><td class="lv">14</td><td>1,050,000</td><td><span class="num-ltr">9ק10+10</span></td><td><span class="num-ltr">+8</span></td><td class=sep>7</td><td>8</td><td>10</td><td>11</td><td>12</td></tr><tr><td class="lv">15</td><td>1,200,000</td><td><span class="num-ltr">9ק10+12</span></td><td><span class="num-ltr">+8</span></td><td class=sep>7</td><td>8</td><td>10</td><td>11</td><td>12</td></tr><tr><td class="lv">16</td><td>1,350,000</td><td><span class="num-ltr">9ק10+14</span></td><td><span class="num-ltr">+9</span></td><td class=sep>7</td><td>7</td><td>9</td><td>10</td><td>11</td></tr><tr><td class="lv">17</td><td>1,500,000</td><td><span class="num-ltr">9ק10+16</span></td><td><span class="num-ltr">+9</span></td><td class=sep>7</td><td>7</td><td>9</td><td>10</td><td>11</td></tr><tr><td class="lv">18</td><td>1,650,000</td><td><span class="num-ltr">9ק10+18</span></td><td><span class="num-ltr">+10</span></td><td class=sep>6</td><td>7</td><td>8</td><td>10</td><td>11</td></tr><tr><td class="lv">19</td><td>1,800,000</td><td><span class="num-ltr">9ק10+20</span></td><td><span class="num-ltr">+10</span></td><td class=sep>6</td><td>7</td><td>8</td><td>10</td><td>11</td></tr><tr><td class="lv">20</td><td>1,950,000</td><td><span class="num-ltr">9ק10+22</span></td><td><span class="num-ltr">+10</span></td><td class=sep>5</td><td>6</td><td>8</td><td>9</td><td>10</td></tr></tbody></table></div>
+      
+      <div class="foot"><span>בייסיק פנטזי, מהדורה עברית</span><span>עמוד 2 מתוך 3</span></div>
+    </div>
+  </section>
+  <section class="sheet" aria-label="עמוד 3: ציוד">
+    <div class="page">
+      <header class="hd2">
+        <h1>ציוד ומטען</h1>
+        <div class="field"><span class="label">שם הדמות</span><div class="write"></div></div>
+      </header>
+      <div class="inv-wrap">
+        <div class="panel" style="display:flex; flex-direction:column">
+          <table class="inv">
+            <thead><tr><th>פריט</th><th class="c num">כמות</th><th class="c wt">משקל (ק״ג)</th><th class="notes">הערות</th></tr></thead>
+            <tbody>
+              <tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr>
+              <tr class="group"><td colspan="4">על החיה או בעגלה</td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr>
+            </tbody>
+            <tfoot><tr><td colspan="2">סה״כ משקל שהדמות נושאת</td><td class="wt"></td><td></td></tr></tfoot>
+          </table>
+        </div>
+        <div class="col">
+          <div class="panel armor-rows">
+            <h2 class="box-title">שריון ומגן</h2>
+            <div class="row head"><span>פריט</span><span>דירוג</span><span>משקל</span></div>
+            <div class="row"><div class="write"></div><div class="write"></div><div class="write"></div></div>
+            <div class="row"><div class="write"></div><div class="write"></div><div class="write"></div></div>
+          </div>
+          <div class="panel">
+            <h2 class="box-title">מטבעות</h2>
+            <div class="coins">
+              <div class="coin"><div class="disc">מ״פ</div><div class="cell"></div><span class="hint">פלטינה</span></div>
+              <div class="coin"><div class="disc">מ״ז</div><div class="cell"></div><span class="hint">זהב</span></div>
+              <div class="coin"><div class="disc">מ״א</div><div class="cell"></div><span class="hint">אלקטרום</span></div>
+              <div class="coin"><div class="disc">מ״כ</div><div class="cell"></div><span class="hint">כסף</span></div>
+              <div class="coin"><div class="disc">מ״נ</div><div class="cell"></div><span class="hint">נחושת</span></div>
+            </div>
+          </div>
+          <div class="panel">
+            <h2 class="box-title">עומס</h2>
+            <div class="load"><span class="check"><i></i> עומס קל</span><span class="check"><i></i> עומס כבד</span></div>
+            <div class="field" style="margin-top:.5em"><span class="label">תנועה עם העומס</span><div class="write"></div></div>
+          </div>
+          <div class="panel" style="display:flex; flex-direction:column; flex:1; min-height:0">
+            <h2 class="box-title">הערות <span class="hint">חפצים קסומים: מטענים, מילות הפעלה, מה החפץ עושה</span></h2>
+            <div class="lined-box"><div class="lines"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="foot"><span>בייסיק פנטזי, מהדורה עברית</span><span>עמוד 3 מתוך 3</span></div>
+    </div>
+  </section>
+</div>
+</body>
+</html>

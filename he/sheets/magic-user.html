@@ -428,6 +428,9 @@ table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant
 .custom-spells .spell-list td { height: 2.3em; border-bottom: .07em solid var(--rule); border-inline-start: .06em solid var(--faint); background: none !important; }
 .custom-spells .spell-list td:first-child { border-inline-start: 0; }
 
+/* blank sheet: write-in skill names */
+.skills .row .write { border-bottom: .09em solid var(--rule); height: 1.5em; }
+
 </style>
 </head>
 <body>
@@ -546,7 +549,7 @@ table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant
           <table class="inv">
             <thead><tr><th>פריט</th><th class="c num">כמות</th><th class="c wt">משקל (ק״ג)</th><th class="notes">הערות</th></tr></thead>
             <tbody>
-              <tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr>
+              <tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr>
               <tr class="group"><td colspan="4">על החיה או בעגלה</td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr>
             </tbody>
             <tfoot><tr><td colspan="2">סה״כ משקל שהדמות נושאת</td><td class="wt"></td><td></td></tr></tfoot>
@@ -575,11 +578,7 @@ table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant
             <div class="field" style="margin-top:.5em"><span class="label">תנועה עם העומס</span><div class="write"></div></div>
           </div>
           <div class="panel" style="display:flex; flex-direction:column; flex:1; min-height:0">
-            <h2 class="box-title">חפצים קסומים ואוצרות</h2>
-            <div class="lined-box"><div class="lines"></div></div>
-          </div>
-          <div class="panel" style="display:flex; flex-direction:column; flex:1; min-height:0">
-            <h2 class="box-title">הערות</h2>
+            <h2 class="box-title">הערות <span class="hint">חפצים קסומים: מטענים, מילות הפעלה, מה החפץ עושה</span></h2>
             <div class="lined-box"><div class="lines"></div></div>
           </div>
         </div>
@@ -593,9 +592,7 @@ table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant
         <h1>ספר הלחשים</h1>
         <div class="field"><span class="label">שם הדמות</span><div class="write"></div></div>
       </header>
-      <p class="howto"><b>בספר:</b> סמנו בעט כל לחש שכתוב בספר הלחשים שלכם.
-        <b>שיננתי:</b> בכל בוקר סמנו בעיפרון את הלחשים שבחרתם להיום, רק מתוך הלחשים שבספר,
-        ולפי מספר הלחשים ליום בעמוד 1. לחש שהוטל נשכח, אז מוחקים את הסימון.</p>
+      <p class="howto"><b>בספר:</b> סמנו בעט כל לחש שכתוב בספר הלחשים שלכם. <b>שיננתי:</b> בכל בוקר סמנו בעיפרון את הלחשים שבחרתם להיום, רק מתוך הלחשים שבספר, ולפי מספר הלחשים ליום בעמוד 1. לחש שהוטל נשכח, אז מוחקים את הסימון.</p>
       <div class="panel">
         <table class="spell-list">
           <thead><tr>

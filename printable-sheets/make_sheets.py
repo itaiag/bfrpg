@@ -6,6 +6,8 @@ Writes into he/sheets/ (copied to docs/he/sheets/ by the Hebrew build as project
     thief.html        thief (3 pages)
     cleric.html       cleric, with a checklist of all cleric spells
     magic-user.html   magic-user, with a spellbook checklist of all magic-user spells
+    assassin.html, barbarian.html, druid.html, illusionist.html, ranger.html, paladin.html, scout.html
+                      the classes of he/extraClasses.qmd (see extra_classes.py)
 
 Class tables come from data.json (copied from the rules in class.qmd and combat.qmd);
 spells are read from he/allSpells.qmd. Styles live in sheet.css.
@@ -44,6 +46,10 @@ def cells(n, cls=""):
 
 # ---------------------------------------------------------------- classes
 
+BOOK_HINT = ("<b>בספר:</b> סמנו בעט כל לחש שכתוב בספר הלחשים שלכם. "
+             "<b>שיננתי:</b> בכל בוקר סמנו בעיפרון את הלחשים שבחרתם להיום, רק מתוך הלחשים שבספר, "
+             "ולפי מספר הלחשים ליום בעמוד 1. לחש שהוטל נשכח, אז מוחקים את הסימון.")
+
 CLASSES = {
     "fighter": dict(
         name="לוחם", file="fighter.html", slug="fighter",
@@ -66,6 +72,10 @@ CLASSES = {
     ),
     "cleric": dict(
         name="כוהן", file="cleric.html", slug="cleric",
+        spell_mode="prepared", spell_title="הלחשים שלי", custom=("מתנות מהאל", "לחש מיוחד שהאל העניק רק לך"),
+        spell_hint=("לכוהן אין ספר לחשים: הוא מתפלל בכל בוקר ומקבל את לחשיו מהאל שלו, החל מדרגה 2. "
+                    "<b>הכנתי היום:</b> סמנו בעיפרון את הלחשים שבחרתם להיום, לפי מספר הלחשים ליום בעמוד 1. "
+                    "לחש שהוטל נעלם, אז מוחקים את הסימון."),
         hd="ק6", prime="חוכמה 9 ומעלה", armor="כל שריון ומגן",
         weapons="נשקים קהים בלבד: פטיש מלחמה, אלה, מקבת, אלה פשוטה, מטה קרב, קלע",
         about=[
@@ -77,6 +87,9 @@ CLASSES = {
     ),
     "mu": dict(
         name="קוסם", file="magic-user.html", slug="magic-user",
+        spell_mode="book", spell_title="ספר הלחשים", start_spell=("קריאת קסם", "כל קוסם מתחיל איתו"),
+        custom=("לחשים מיוחדים", "לחש שהקוסם המציא בעצמו, או מצא במגילה או בספר עתיק"),
+        spell_hint=BOOK_HINT,
         hd="ק4", prime="תבונה 9 ומעלה", armor="אסור שריון ואסור מגן", weapons="פגיון ומטה הליכה (או אלה)",
         about=[
             "<b>ספר הלחשים:</b> קוסם בדרגה 1 יודע את <b>קריאת קסם</b> ועוד לחש אחד מעוצמה 1, כתובים בספר שקיבל ממורו.",
@@ -188,30 +201,36 @@ def race_panel(title="יכולות גזע ומקצוע"):
             </div>"""
 
 
-def thief_skills_panel(ref_page=None):
+def thief_skills_panel(ref_page=None, names=SKILLS, title="מיומנויות גנב"):
     hint = f'<span class="hint">האחוזים בעמוד {ref_page}</span>' if ref_page else ""
-    rows = "".join(f'<div class="row"><span>{s}</span><div class="cell"></div></div>' for s in SKILLS)
+    rows = "".join(f'<div class="row"><span>{s}</span><div class="cell"></div></div>' for s in names)
     return f"""<div class="panel skills">
-                <h2 class="box-title">מיומנויות גנב {hint}</h2>
+                <h2 class="box-title">{title} {hint}</h2>
                 {rows}
               </div>"""
 
 
-def spells_day_panel(extra="", hint="לפי עוצמת לחש"):
-    lv = "".join(f'<span class="lvl">{i}</span>' for i in range(1, 7))
-    boxes = '<div class="cell"></div>' * 6
+def spells_day_panel(extra="", hint="לפי עוצמת לחש", levels=6):
+    lv = "".join(f'<span class="lvl">{i}</span>' for i in range(1, levels + 1))
+    boxes = '<div class="cell"></div>' * levels
+    style = f' style="grid-template-columns: repeat({levels}, 1fr)"' if levels != 6 else ""
     return f"""<div class="panel">
                 <h2 class="box-title">לחשים ליום <span class="hint">{hint}</span></h2>
-                <div class="spells-day">{lv}{boxes}</div>
+                <div class="spells-day"{style}>{lv}{boxes}</div>
                 {extra}
               </div>"""
 
 
 def class_box(key, total, cfg=None):
     """Right-hand column in the bottom of page 1."""
+    if cfg and cfg.get("box"):
+        return cfg["box"](cfg)
     if key is None:  # blank sheet for any class
-        return thief_skills_panel() + spells_day_panel(
-            '<div class="turn"><span class="label">גירוש אל-מתים (כוהנים)</span><div class="write"></div></div>')
+        rows = '<div class="row"><div class="write"></div><div class="cell"></div></div>' * 7
+        return f"""<div class="panel skills">
+                <h2 class="box-title">מיומנויות <span class="hint">למקצועות עם מיומנויות באחוזים</span></h2>
+                {rows}
+              </div>""" + spells_day_panel()
     if key == "fighter":
         return """<div class="panel" style="display:flex; flex-direction:column; flex:1">
                 <h2 class="box-title">אויבים שהבסתי</h2>
@@ -281,33 +300,39 @@ def page_one(cfg, total):
 
 # ---------------------------------------------------------------- reference page
 
-def progression_table(key):
-    d = DATA[key]
-    spells = "spells" in d["levels"][0]
+def progression_table(levels):
+    """Level table: XP, hit dice, attack bonus, the five saves, and spells per day when the class casts."""
+    if isinstance(levels, str):
+        levels = DATA[levels]["levels"]
+    n_sp = len(levels[0].get("spells", []))
     head1 = ("<tr><th rowspan=2>דרגה</th><th rowspan=2>נקודות ניסיון</th><th rowspan=2>קוביות<br>פגיעה</th>"
              "<th rowspan=2>תוסף<br>התקפה</th>"
              '<th class="grp sep" colspan=5>גלגולי הצלה</th>'
-             + ('<th class="grp sep" colspan=6>לחשים ביום, לפי עוצמה</th>' if spells else "") + "</tr>")
+             + (f'<th class="grp sep" colspan={n_sp}>לחשים ביום, לפי עוצמה</th>' if n_sp else "") + "</tr>")
     short = ["מוות /<br>רעל", "שרביטי<br>קסם", "שיתוק /<br>התאבנות", "נשיפת<br>דרקון", "לחשים"]
     head2 = ("<tr>" + "".join(f'<th{" class=sep" if i == 0 else ""}>{n}</th>' for i, n in enumerate(short))
-             + ("".join(f'<th{" class=sep" if i == 0 else ""}>{i + 1}</th>' for i in range(6)) if spells else "")
+             + "".join(f'<th{" class=sep" if i == 0 else ""}>{i + 1}</th>' for i in range(n_sp))
              + "</tr>")
     body = ""
-    for r in d["levels"]:
+    for r in levels:
         body += (f'<tr><td class="lv">{r["level"]}</td><td>{r["xp"]}</td><td><span class="num-ltr">{r["hd"]}</span></td><td>{signed(r["ab"])}</td>'
                  + "".join(f'<td{" class=sep" if i == 0 else ""}>{s}</td>' for i, s in enumerate(r["saves"]))
-                 + ("".join(f'<td{" class=sep" if i == 0 else ""}>{s}</td>' for i, s in enumerate(r["spells"])) if spells else "")
+                 + "".join(f'<td{" class=sep" if i == 0 else ""}>{s}</td>' for i, s in enumerate(r.get("spells", [])))
                  + "</tr>")
     return f'<table><thead>{head1}{head2}</thead><tbody>{body}</tbody></table>'
 
 
+def skills_table(names, table):
+    """Percent table for thief-like skills: table maps level (str) -> list of percents."""
+    head = "<tr><th>דרגה</th>" + "".join(f"<th>{s}</th>" for s in names) + "</tr>"
+    body = "".join(f'<tr><td class="lv">{lv}</td>' + "".join(f"<td>{v}%</td>" for v in table[str(lv)]) + "</tr>"
+                   for lv in range(1, 21))
+    return f"<table><thead>{head}</thead><tbody>{body}</tbody></table>"
+
+
 def second_table(key):
     if key == "thief":
-        sk = DATA["thief"]["skills"]
-        head = "<tr><th>דרגה</th>" + "".join(f"<th>{s}</th>" for s in SKILLS) + "</tr>"
-        body = "".join(f'<tr><td class="lv">{lv}</td>' + "".join(f"<td>{v}%</td>" for v in sk[str(lv)]) + "</tr>"
-                       for lv in range(1, 21))
-        return "מיומנויות גנב (אחוזים)", f"<table><thead>{head}</thead><tbody>{body}</tbody></table>", ""
+        return "מיומנויות גנב (אחוזים)", skills_table(SKILLS, DATA["thief"]["skills"]), ""
     if key == "cleric":
         c = DATA["cleric"]
         head = ("<tr><th rowspan=2>דרגת<br>כוהן</th>" + "".join(f"<th>{n}</th>" for n in c["turn_header"]) + "</tr><tr>"
@@ -322,7 +347,7 @@ def second_table(key):
 def page_ref(cfg, total):
     key = cfg["key"]
     about = "".join(f"<li>{a}</li>" for a in cfg["about"])
-    sec = second_table(key)
+    sec = cfg["second"] if "second" in cfg else second_table(key)
     sec_html = ""
     if sec:
         title, table, legend = sec
@@ -333,7 +358,7 @@ def page_ref(cfg, total):
         <p class="find-row" style="margin:0">מוצאים את השורה של <b>הדרגה שלכם</b> ומעתיקים את המספרים לעמוד 1. כשעולים דרגה, חוזרים לכאן.</p>
       </header>
       <div class="panel"><h2 class="box-title">מה ה{cfg['name']} יודע לעשות</h2><ul class="bullets">{about}</ul></div>
-      <div class="panel ref"><h2 class="box-title">עלייה בדרגה <span class="hint">דרגות 1–20</span></h2>{progression_table(key)}</div>
+      <div class="panel ref"><h2 class="box-title">עלייה בדרגה <span class="hint">דרגות 1–20</span></h2>{progression_table(cfg.get("levels") or key)}</div>
       {sec_html}"""
     return page(2, total, inner, f"טבלת ה{cfg['name']}")
 
@@ -352,7 +377,7 @@ def page_inventory(n, total):
           <table class="inv">
             <thead><tr><th>פריט</th><th class="c num">כמות</th><th class="c wt">משקל (ק״ג)</th><th class="notes">הערות</th></tr></thead>
             <tbody>
-              {rows(21)}
+              {rows(30)}
               <tr class="group"><td colspan="4">על החיה או בעגלה</td></tr>{rows(4)}
             </tbody>
             <tfoot><tr><td colspan="2">סה״כ משקל שהדמות נושאת</td><td class="wt"></td><td></td></tr></tfoot>
@@ -381,11 +406,7 @@ def page_inventory(n, total):
             <div class="field" style="margin-top:.5em"><span class="label">תנועה עם העומס</span><div class="write"></div></div>
           </div>
           <div class="panel" style="display:flex; flex-direction:column; flex:1; min-height:0">
-            <h2 class="box-title">חפצים קסומים ואוצרות</h2>
-            <div class="lined-box"><div class="lines"></div></div>
-          </div>
-          <div class="panel" style="display:flex; flex-direction:column; flex:1; min-height:0">
-            <h2 class="box-title">הערות</h2>
+            <h2 class="box-title">הערות <span class="hint">חפצים קסומים: מטענים, מילות הפעלה, מה החפץ עושה</span></h2>
             <div class="lined-box"><div class="lines"></div></div>
           </div>
         </div>
@@ -439,34 +460,24 @@ def spellbook_chunks(spells, capacity=40):
     return pages
 
 
-def page_spellbook_list(n, total, spells, levels, first, key, last=False, custom_rows=8):
-    """Checklist of every spell the class can cast. Magic-user: in book + memorized; cleric: prepared today."""
-    mu = key == "mu"
-    ncols = 5 if mu else 4
+def page_spellbook_list(n, total, spells, levels, first, cfg, last=False, custom_rows=8):
+    """Checklist of every spell the class can cast: book + memorized for arcane casters, prepared today for divine."""
+    book = cfg["spell_mode"] == "book"
+    ncols = 5 if book else 4
+    start_name, start_tag = cfg.get("start_spell", (None, None))
     rows = ""
     for lv in levels:
         rows += f'<tr class="group"><td colspan="{ncols}">לחשים מעוצמה {lv}</td></tr>'
         for name, rng, dur, rev in spells[lv]:
             tags = ""
-            if mu and name == "קריאת קסם":
-                tags += ' <span class="tag">כל קוסם מתחיל איתו</span>'
+            if name == start_name:
+                tags += f' <span class="tag">{start_tag}</span>'
             if rev:
                 tags += ' <span class="tag light">הפיך</span>'
-            boxes = '<td class="chk"><i></i></td>' * (2 if mu else 1)
+            boxes = '<td class="chk"><i></i></td>' * (2 if book else 1)
             rows += f'<tr>{boxes}<td class="sname">{name}{tags}</td><td>{rng}</td><td>{dur}</td></tr>'
-    if mu:
-        title = "ספר הלחשים"
-        heads = '<th class="c" style="width:3.2em">בספר</th><th class="c" style="width:3.6em">שיננתי</th>'
-        hint = ("""<p class="howto"><b>בספר:</b> סמנו בעט כל לחש שכתוב בספר הלחשים שלכם.
-        <b>שיננתי:</b> בכל בוקר סמנו בעיפרון את הלחשים שבחרתם להיום, רק מתוך הלחשים שבספר,
-        ולפי מספר הלחשים ליום בעמוד 1. לחש שהוטל נשכח, אז מוחקים את הסימון.</p>""")
-    else:
-        title = "הלחשים שלי"
-        heads = '<th class="c" style="width:4.6em">הכנתי היום</th>'
-        hint = ("""<p class="howto">לכוהן אין ספר לחשים: הוא מתפלל בכל בוקר ומקבל את לחשיו מהאל שלו, החל מדרגה 2.
-        <b>הכנתי היום:</b> סמנו בעיפרון את הלחשים שבחרתם להיום, לפי מספר הלחשים ליום בעמוד 1.
-        לחש שהוטל נעלם, אז מוחקים את הסימון.</p>""")
-    hint = hint if first else ""
+    title = cfg["spell_title"]
+    hint = f'<p class="howto">{cfg["spell_hint"]}</p>' if first else ""
     inner = f"""      <header class="hd2">
         <h1>{title}</h1>
         {field("שם הדמות")}
@@ -475,34 +486,35 @@ def page_spellbook_list(n, total, spells, levels, first, key, last=False, custom
       <div class="panel">
         <table class="spell-list">
           <thead><tr>
-            {heads}
+            {spell_heads(book)}
             <th>שם הלחש</th>
             <th style="width:11em">טווח</th>
             <th style="width:10em">משך</th>
           </tr></thead>
           <tbody>{rows}</tbody>
         </table>
-      </div>{custom_spells_panel(key, custom_rows) if last else ""}"""
+      </div>{custom_spells_panel(cfg, custom_rows) if last else ""}"""
     return page(n, total, inner, title)
 
 
-def custom_spells_panel(key, n_rows):
+def spell_heads(book):
+    if book:
+        return '<th class="c" style="width:3.2em">בספר</th><th class="c" style="width:3.6em">שיננתי</th>'
+    return '<th class="c" style="width:4.6em">הכנתי היום</th>'
+
+
+def custom_spells_panel(cfg, n_rows):
     """Blank rows for spells that are not in the rulebook."""
-    mu = key == "mu"
-    if mu:
-        title, hint = "לחשים מיוחדים", "לחש שהקוסם המציא בעצמו, או מצא במגילה או בספר עתיק"
-        heads = '<th class="c" style="width:3.2em">בספר</th><th class="c" style="width:3.6em">שיננתי</th>'
-    else:
-        title, hint = "מתנות מהאל", "לחש מיוחד שהאל העניק רק לך"
-        heads = '<th class="c" style="width:4.6em">הכנתי היום</th>'
-    boxes = '<td class="chk"><i></i></td>' * (2 if mu else 1)
+    book = cfg["spell_mode"] == "book"
+    title, hint = cfg["custom"]
+    boxes = '<td class="chk"><i></i></td>' * (2 if book else 1)
     body = "".join(f"<tr>{boxes}<td></td><td></td><td></td><td></td></tr>" for _ in range(n_rows))
     return f"""
       <div class="panel custom-spells">
         <h2 class="box-title">{title} <span class="hint">{hint}</span></h2>
         <table class="spell-list">
           <thead><tr>
-            {heads}
+            {spell_heads(book)}
             <th class="c" style="width:3.6em">עוצמה</th>
             <th>שם הלחש ומה הוא עושה</th>
             <th style="width:9em">טווח</th>
@@ -515,24 +527,24 @@ def custom_spells_panel(key, n_rows):
 
 # ---------------------------------------------------------------- assemble
 
-def sheet_pages(key):
-    if key is None:
-        cfg = {"key": None}
-        return [page_one(cfg, 2), page_inventory(2, 2)]
-    cfg = dict(CLASSES[key], key=key)
-    if key in ("mu", "cleric"):
+def sheet_pages(key, cfg=None):
+    if key is None and cfg is None:
+        return [page_one({"key": None}, 2), page_inventory(2, 2)]
+    cfg = dict(cfg or CLASSES[key], key=key)
+    spells = cfg.get("spells")
+    if spells is None and key in ("mu", "cleric"):
         spells = load_spells("magic_user_level" if key == "mu" else "cleric_level")
-        chunks = spellbook_chunks(spells)
+    if spells:
+        chunks = spellbook_chunks(spells, cfg.get("spell_capacity", 40))
         total = 3 + len(chunks)
         cfg["spell_where"] = f"בעמודים 4–{total}" if len(chunks) > 1 else "בעמוד 4"
         pages = [page_one(cfg, total), page_ref(cfg, total), page_inventory(3, total)]
-        pages += [page_spellbook_list(4 + i, total, spells, lv, i == 0, key, i == len(chunks) - 1,
-                                   custom_rows=6 if key == "mu" else 14)
+        custom_rows = cfg.get("custom_rows", 6 if key == "mu" else 14)
+        pages += [page_spellbook_list(4 + i, total, spells, lv, i == 0, cfg, i == len(chunks) - 1, custom_rows)
                   for i, lv in enumerate(chunks)]
         return pages
     total = 3
-    pages = [page_one(cfg, total), page_ref(cfg, total), page_inventory(3, total)]
-    return pages
+    return [page_one(cfg, total), page_ref(cfg, total), page_inventory(3, total)]
 
 
 def document(title, body, note):
@@ -575,6 +587,14 @@ def main():
     for key in ["fighter", "thief", "cleric", "mu"]:
         cfg = CLASSES[key]
         pages = sheet_pages(key)
+        (OUT / cfg["file"]).write_text(
+            document(f"דף דמות {cfg['name']}", "".join(pages), print_note(len(pages))),
+            encoding="utf-8", newline="\n")
+        print("wrote", cfg["file"], len(pages), "pages")
+    import sys
+    import extra_classes
+    for key, cfg in extra_classes.build(sys.modules[__name__]).items():
+        pages = sheet_pages(key, cfg)
         (OUT / cfg["file"]).write_text(
             document(f"דף דמות {cfg['name']}", "".join(pages), print_note(len(pages))),
             encoding="utf-8", newline="\n")

@@ -417,3 +417,6 @@ table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant
 .tag.light { color: var(--accent); background: none; border: .1em solid var(--accent); }
 .custom-spells .spell-list td { height: 2.3em; border-bottom: .07em solid var(--rule); border-inline-start: .06em solid var(--faint); background: none !important; }
 .custom-spells .spell-list td:first-child { border-inline-start: 0; }
+
+/* blank sheet: write-in skill names */
+.skills .row .write { border-bottom: .09em solid var(--rule); height: 1.5em; }
