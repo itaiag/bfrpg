@@ -39,6 +39,24 @@ def signed(v):
     return f'<span class="num-ltr">{v}</span>'
 
 
+def dice(v):
+    """Hebrew dice notation, e.g. '9ק8+2', the way the book's dice-he.lua renders it.
+
+    The die letter ק is a strong RTL character, so inside a plain LTR span the bidi
+    algorithm reorders '1ק8' to 'ק18'. Instead: an RTL container holding count, ק,
+    sides, sign and modifier as separate isolated LTR atoms, read right to left.
+    """
+    m = re.fullmatch(r"(\d*)ק(\d+)(?:([+-])(\d+))?", v.strip())
+    if not m:
+        return f'<span class="num-ltr">{v}</span>'
+    count, sides, sign, mod = m.groups()
+    atom = '<span dir="ltr">{}</span>'.format
+    parts = ([atom(count)] if count else []) + ["ק", atom(sides)]
+    if sign:
+        parts += [f'<span class="mod" dir="ltr">{sign}</span>', atom(mod)]
+    return '<span class="dice">' + "".join(parts) + "</span>"
+
+
 def cells(n, cls=""):
     c = f' class="{cls}"' if cls else ""
     return "".join(f"<td{c}></td>" for _ in range(n))
@@ -315,7 +333,7 @@ def progression_table(levels):
              + "</tr>")
     body = ""
     for r in levels:
-        body += (f'<tr><td class="lv">{r["level"]}</td><td>{r["xp"]}</td><td><span class="num-ltr">{r["hd"]}</span></td><td>{signed(r["ab"])}</td>'
+        body += (f'<tr><td class="lv">{r["level"]}</td><td>{r["xp"]}</td><td>{dice(r["hd"])}</td><td>{signed(r["ab"])}</td>'
                  + "".join(f'<td{" class=sep" if i == 0 else ""}>{s}</td>' for i, s in enumerate(r["saves"]))
                  + "".join(f'<td{" class=sep" if i == 0 else ""}>{s}</td>' for i, s in enumerate(r.get("spells", [])))
                  + "</tr>")

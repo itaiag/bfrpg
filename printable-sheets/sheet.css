@@ -333,6 +333,11 @@ table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant
 
 /* ---------- class sheets ---------- */
 .num-ltr { direction: ltr; unicode-bidi: isolate; }
+
+/* Hebrew dice notation (same as the book's .dice): RTL container, LTR number atoms. */
+.dice { direction: rtl; unicode-bidi: isolate; white-space: nowrap; }
+.dice > span { direction: ltr; unicode-bidi: isolate; }
+.dice > .mod { margin-right: .15em; }
 .class-tag {
   font-family: var(--display); font-weight: 900; font-size: 1.05em;
   background: var(--accent); color: var(--paper);
