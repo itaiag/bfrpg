@@ -6,7 +6,7 @@
 <title>דף דמות גנב</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700;900&family=Assistant:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&display=swap">
 <style>
 /* Layout: two A4 sheets on a desk. Each sheet is a size container and everything inside is
    measured in em off a container-relative font size, so the sheet scales down on screen and
@@ -20,7 +20,7 @@
   --faint: #e8e1d5;
   --wash: #f4efe6;
   --accent: #7b2a1c;
-  --display: "Frank Ruhl Libre", "David", "Times New Roman", serif;
+  --display: "Assistant", "Segoe UI", Arial, sans-serif;
   --body: "Assistant", "Arial Hebrew", Arial, sans-serif;
 }
 @media (prefers-color-scheme: dark) {
@@ -78,7 +78,7 @@ body { background: var(--desk); margin: 0; }
 .hint { font-size: .72em; color: var(--rule); font-weight: 400; }
 .box-title {
   font-family: var(--display);
-  font-weight: 900;
+  font-weight: 800;
   font-size: 1.15em;
   margin: 0 0 .35em;
   display: flex;
@@ -114,7 +114,7 @@ body { background: var(--desk); margin: 0; }
 }
 .hd-main { display: flex; flex-direction: column; gap: .55em; min-width: 0; }
 .brand { display: flex; align-items: baseline; justify-content: space-between; gap: 1em; border-bottom: .22em solid var(--ink); padding-bottom: .2em; }
-.brand h1 { font-family: var(--display); font-weight: 900; font-size: 2.5em; line-height: 1; margin: 0; }
+.brand h1 { font-family: var(--display); font-weight: 800; font-size: 2.5em; line-height: 1; margin: 0; }
 .brand .sys { font-family: var(--display); font-weight: 700; font-size: .95em; color: var(--accent); }
 .name .write { height: 2.2em; }
 .name .label { font-size: .85em; }
@@ -153,7 +153,7 @@ body { background: var(--desk); margin: 0; }
   border-bottom: .06em solid var(--faint);
 }
 .ab:last-child { border-bottom: 0; }
-.ab-name { font-family: var(--display); font-weight: 900; font-size: 1.12em; line-height: 1.05; }
+.ab-name { font-family: var(--display); font-weight: 800; font-size: 1.12em; line-height: 1.05; }
 .ab-name .hint { display: block; font-family: var(--body); font-size: .6em; line-height: 1.2; margin-top: .15em; }
 .ab .score { height: 3em; border-width: .16em; }
 .ab .mod {
@@ -276,7 +276,7 @@ table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant
   border-bottom: .22em solid var(--ink);
   padding-bottom: .3em;
 }
-.hd2 h1 { font-family: var(--display); font-weight: 900; font-size: 2.2em; line-height: 1; margin: 0; }
+.hd2 h1 { font-family: var(--display); font-weight: 800; font-size: 2.2em; line-height: 1; margin: 0; }
 .hd2 .field .write { height: 1.6em; }
 
 .inv-wrap { display: grid; grid-template-columns: 1fr 15.5em; gap: 1em; flex: 1; min-height: 0; }
@@ -297,7 +297,7 @@ table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant
   height: 1.7em;
   border-bottom: .14em solid var(--ink);
   font-family: var(--display);
-  font-weight: 900;
+  font-weight: 800;
   font-size: .95em;
   padding-inline: .4em;
   vertical-align: bottom;
@@ -311,7 +311,7 @@ table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant
   border-radius: 50%;
   border: .14em solid var(--ink);
   display: grid; place-items: center;
-  font-family: var(--display); font-weight: 900; font-size: .8em;
+  font-family: var(--display); font-weight: 800; font-size: .8em;
   background: var(--wash);
 }
 .coin .cell { width: 100%; height: 2.1em; }
@@ -349,7 +349,7 @@ table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant
 .dice > span { direction: ltr; unicode-bidi: isolate; }
 .dice > .mod { margin-right: .15em; }
 .class-tag {
-  font-family: var(--display); font-weight: 900; font-size: 1.05em;
+  font-family: var(--display); font-weight: 800; font-size: 1.05em;
   background: var(--accent); color: var(--paper);
   padding: .1em .6em .15em; border-radius: .25em;
 }
@@ -422,7 +422,7 @@ table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant
 .spell-list tbody tr:not(.group):nth-child(even) td { background: var(--wash); }
 .spell-list .group td {
   height: 2em; vertical-align: bottom; padding: 0 .3em .15em;
-  font-family: var(--display); font-weight: 900; font-size: 1.05em; color: var(--accent);
+  font-family: var(--display); font-weight: 800; font-size: 1.05em; color: var(--accent);
   border-bottom: .14em solid var(--ink); background: none;
 }
 .tag {
