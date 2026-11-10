@@ -292,6 +292,7 @@ def page_one(cfg, total):
           <div class="field name"><span class="label">שם הדמות</span><div class="write"></div></div>
           <div class="id-grid">{id_row}</div>
           <div class="id-grid two">{field("נקודות ניסיון")}{field("נקודות ניסיון לדרגה הבאה")}</div>
+          <div class="id-grid five">{"".join(field(x) for x in ("גיל", "שיער", "עיניים", "גובה", "משקל"))}</div>
         </div>
         <div class="portrait"><span class="hint">ציירו כאן את הדמות</span></div>
       </header>

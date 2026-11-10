@@ -114,6 +114,7 @@ body { background: var(--desk); margin: 0; }
   gap: .4em .9em;
 }
 .id-grid.two { grid-template-columns: 1fr 1.3fr; }
+.id-grid.five { grid-template-columns: repeat(5, 1fr); }
 .portrait {
   border: .14em dashed var(--rule);
   border-radius: .35em;
