@@ -281,11 +281,11 @@ table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant
 .hd2 .field .write { height: 1.6em; }
 
 .inv-wrap { display: grid; grid-template-columns: 1fr 15.5em; gap: 1em; flex: 1; min-height: 0; }
-.inv td { height: 1.95em; }
+.inv td { height: 1.75em; }
 .inv .num { width: 4em; }
 .inv .wt { width: 5em; background: var(--wash); }
 .inv .notes { width: 9em; }
-.inv tfoot td {
+.inv tfoot td, .inv tr.total td {
   border-top: .14em solid var(--ink);
   border-bottom: 0;
   font-weight: 700;
@@ -293,7 +293,7 @@ table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant
   padding-inline: .4em;
   height: 2.4em;
 }
-.inv tfoot .wt { background: #fff; border: .14em solid var(--ink); }
+.inv tfoot .wt, .inv tr.total .wt { background: #fff; border: .14em solid var(--ink); }
 .inv .group td {
   height: 1.7em;
   border-bottom: .14em solid var(--ink);
@@ -551,10 +551,11 @@ table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant
           <table class="inv">
             <thead><tr><th>פריט</th><th class="c num">כמות</th><th class="c wt">משקל (ק״ג)</th><th class="notes">הערות</th></tr></thead>
             <tbody>
-              <tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr>
-              <tr class="group"><td colspan="4">על החיה או בעגלה</td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr>
+              <tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr>
+              <tr class="total"><td colspan="2">סה״כ משקל שהדמות נושאת</td><td class="wt"></td><td></td></tr>
+              <tr class="group"><td colspan="4">על החיה או בעגלה</td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr>
+              <tr class="group"><td colspan="4">בבית</td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr><tr><td></td><td></td><td class="wt"></td><td></td></tr>
             </tbody>
-            <tfoot><tr><td colspan="2">סה״כ משקל שהדמות נושאת</td><td class="wt"></td><td></td></tr></tfoot>
           </table>
         </div>
         <div class="col">
