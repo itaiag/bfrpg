@@ -132,6 +132,11 @@ def field_input(label, key):
             f'<input class="write fill" type="text" data-key="{key}" autocomplete="off"></label>')
 
 
+
+# The character name on later pages: filled by sheet.js from the name typed on page 1.
+NAME_COPY = ('<div class="field"><span class="label">שם הדמות</span>'
+             '<div class="write copy" data-copy="name"></div></div>')
+
 def page(n, total, inner, label):
     return f"""
   <section class="sheet" aria-label="עמוד {n}: {label}">
@@ -407,7 +412,7 @@ def page_inventory(n, total):
         return "".join('<tr><td></td><td></td><td class="wt"></td><td></td></tr>' for _ in range(k))
     inner = f"""      <header class="hd2">
         <h1>ציוד ומטען</h1>
-        {field("שם הדמות")}
+        {NAME_COPY}
       </header>
       <div class="inv-wrap">
         <div class="panel" style="display:flex; flex-direction:column">
@@ -518,7 +523,7 @@ def page_spellbook_list(n, total, spells, levels, first, cfg, last=False, custom
     hint = f'<p class="howto">{cfg["spell_hint"]}</p>' if first else ""
     inner = f"""      <header class="hd2">
         <h1>{title}</h1>
-        {field("שם הדמות")}
+        {NAME_COPY}
       </header>
       {hint}
       <div class="panel">
@@ -612,7 +617,7 @@ def document(title, body, note):
 
 def print_note(pages):
     return (f'<a href="../printable_sheets.html">← חזרה לדפי הדמות</a><br>'
-            "אפשר להקליד שם דמות, שם שחקן, גזע, גיל, שיער, עיניים, גובה, משקל ותכונות (התוסף מחושב לבד) ולהעלות תמונה לפני ההדפסה. "
+            "אפשר להקליד שם דמות, שם שחקן, גזע, גיל, שיער, עיניים, גובה, משקל ותכונות (התוסף מחושב לבד) ולהעלות תמונה לפני ההדפסה; שם הדמות מועתק לראש כל עמוד. "
             "הנתונים נשמרים בדפדפן הזה בלבד. "
             '<button type="button" class="clear-all" data-clear-all>ניקוי הדף</button><br>'
             f"{pages} עמודים בגודל A4. להדפסה: Ctrl+P ← גודל נייר A4, שוליים: ללא. "

@@ -477,3 +477,10 @@ table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant
 @media print {
   .screen-only { display: none !important; }
 }
+
+/* the character name copied onto later pages (sheet.js, data-copy) */
+.write.copy {
+  font-family: var(--display); font-weight: 700; font-size: 1.05em; line-height: 1;
+  display: flex; align-items: flex-end; padding: 0 .15em .1em; overflow: hidden; white-space: nowrap;
+}
+.hd2 .field .write.copy { height: 1.52em; }

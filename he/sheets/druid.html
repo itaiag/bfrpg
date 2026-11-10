@@ -488,11 +488,18 @@ table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant
   .screen-only { display: none !important; }
 }
 
+/* the character name copied onto later pages (sheet.js, data-copy) */
+.write.copy {
+  font-family: var(--display); font-weight: 700; font-size: 1.05em; line-height: 1;
+  display: flex; align-items: flex-end; padding: 0 .15em .1em; overflow: hidden; white-space: nowrap;
+}
+.hd2 .field .write.copy { height: 1.52em; }
+
 </style>
 </head>
 <body>
 <div class="desk" dir="rtl" lang="he">
-  <p class="screen-note"><a href="../printable_sheets.html">← חזרה לדפי הדמות</a><br>אפשר להקליד שם דמות, שם שחקן, גזע, גיל, שיער, עיניים, גובה, משקל ותכונות (התוסף מחושב לבד) ולהעלות תמונה לפני ההדפסה. הנתונים נשמרים בדפדפן הזה בלבד. <button type="button" class="clear-all" data-clear-all>ניקוי הדף</button><br>5 עמודים בגודל A4. להדפסה: Ctrl+P ← גודל נייר A4, שוליים: ללא. להדפסה דו-צדדית: הפכו לאורך הצד הארוך.</p>
+  <p class="screen-note"><a href="../printable_sheets.html">← חזרה לדפי הדמות</a><br>אפשר להקליד שם דמות, שם שחקן, גזע, גיל, שיער, עיניים, גובה, משקל ותכונות (התוסף מחושב לבד) ולהעלות תמונה לפני ההדפסה; שם הדמות מועתק לראש כל עמוד. הנתונים נשמרים בדפדפן הזה בלבד. <button type="button" class="clear-all" data-clear-all>ניקוי הדף</button><br>5 עמודים בגודל A4. להדפסה: Ctrl+P ← גודל נייר A4, שוליים: ללא. להדפסה דו-צדדית: הפכו לאורך הצד הארוך.</p>
 
   <section class="sheet" aria-label="עמוד 1: דף דמות">
     <div class="page">
@@ -606,7 +613,7 @@ table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant
     <div class="page">
       <header class="hd2">
         <h1>ציוד ומטען</h1>
-        <div class="field"><span class="label">שם הדמות</span><div class="write"></div></div>
+        <div class="field"><span class="label">שם הדמות</span><div class="write copy" data-copy="name"></div></div>
       </header>
       <div class="inv-wrap">
         <div class="panel" style="display:flex; flex-direction:column">
@@ -655,7 +662,7 @@ table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant
     <div class="page">
       <header class="hd2">
         <h1>הלחשים שלי</h1>
-        <div class="field"><span class="label">שם הדמות</span><div class="write"></div></div>
+        <div class="field"><span class="label">שם הדמות</span><div class="write copy" data-copy="name"></div></div>
       </header>
       <p class="howto">הדרואיד מקבל את לחשיו מאלי הטבע, החל מדרגה 2. <b>הכנתי היום:</b> סמנו בעיפרון את הלחשים שבחרתם להיום, לפי מספר הלחשים ליום בעמוד 1. לחש שהוטל נעלם, אז מוחקים את הסימון.</p>
       <div class="panel">
@@ -676,7 +683,7 @@ table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant
     <div class="page">
       <header class="hd2">
         <h1>הלחשים שלי</h1>
-        <div class="field"><span class="label">שם הדמות</span><div class="write"></div></div>
+        <div class="field"><span class="label">שם הדמות</span><div class="write copy" data-copy="name"></div></div>
       </header>
       
       <div class="panel">
@@ -732,6 +739,10 @@ table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant
     if (out) out.textContent = bonus(el.value);
   };
 
+  // Read-only copies of a typed field, e.g. the character name in the header of every later page.
+  const copies = document.querySelectorAll("[data-copy]");
+  const showCopies = () => copies.forEach((el) => { el.textContent = data[el.dataset.copy] || ""; });
+
   const fields = document.querySelectorAll("[data-key]");
   fields.forEach((el) => {
     if (data[el.dataset.key] != null) el.value = data[el.dataset.key];
@@ -743,8 +754,10 @@ table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant
       }
       data[el.dataset.key] = el.value;
       save();
+      showCopies();
     });
   });
+  showCopies();
 
   const file = document.querySelector("[data-portrait]");
   const img = document.querySelector("[data-portrait-img]");
@@ -791,6 +804,7 @@ table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant
     data = {};
     save();
     fields.forEach((el) => { el.value = ""; if (el.dataset.ab != null) showBonus(el); });
+    showCopies();
     if (img) showImg("");
   });
 })();
