@@ -437,21 +437,52 @@ table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant
 /* blank sheet: write-in skill names */
 .skills .row .write { border-bottom: .09em solid var(--rule); height: 1.5em; }
 
+/* ---------- fields the player can fill in on screen (sheet.js), as in rc-sheets ---------- */
+.fill {
+  font: inherit; color: var(--ink); background: transparent;
+  border: 0; border-radius: 0; margin: 0; width: 100%; min-width: 0;
+  appearance: none; -webkit-appearance: none; outline: none;
+}
+.field .write.fill {
+  border-bottom: .09em solid var(--rule);
+  font-family: var(--display); font-weight: 700; font-size: 1.05em;
+  height: 1.62em; padding: 0 .15em .05em; line-height: 1;
+}
+.name .write.fill { font-size: 1.35em; height: 1.63em; }
+.ab .score { display: grid; }
+.ab .score .fill {
+  height: 100%; text-align: center;
+  font-family: var(--display); font-weight: 800; font-size: 1.45em;
+}
+.ab .mod { display: grid; place-items: center; }
+.ab .mod output {
+  direction: ltr; unicode-bidi: isolate;
+  font-family: var(--display); font-weight: 800; font-size: 1.1em; line-height: 1;
+}
+.clear-all {
+  font: inherit; color: inherit; background: transparent; cursor: pointer;
+  border: 1px solid currentColor; border-radius: 6px; padding: 0 8px; margin-inline-start: 4px;
+}
+@media screen {
+  .fill:hover, .fill:focus { background: #f6ecd9; }
+  .ab .score:focus-within { box-shadow: 0 0 0 .15em #e3c9a4; }
+}
+
 </style>
 </head>
 <body>
 <div class="desk" dir="rtl" lang="he">
-  <p class="screen-note"><a href="../printable_sheets.html">← חזרה לדפי הדמות</a><br>3 עמודים בגודל A4. להדפסה: Ctrl+P ← גודל נייר A4, שוליים: ללא. להדפסה דו-צדדית: הפכו לאורך הצד הארוך.</p>
+  <p class="screen-note"><a href="../printable_sheets.html">← חזרה לדפי הדמות</a><br>אפשר להקליד שם דמות, שם שחקן, גזע, גיל, שיער, עיניים, גובה, משקל ותכונות (התוסף מחושב לבד) לפני ההדפסה. הנתונים נשמרים בדפדפן הזה בלבד. <button type="button" class="clear-all" data-clear-all>ניקוי הדף</button><br>3 עמודים בגודל A4. להדפסה: Ctrl+P ← גודל נייר A4, שוליים: ללא. להדפסה דו-צדדית: הפכו לאורך הצד הארוך.</p>
 
   <section class="sheet" aria-label="עמוד 1: דף דמות">
     <div class="page">
       <header class="hd">
         <div class="hd-main">
           <div class="brand"><h1>דף דמות</h1><span class="class-tag">מתנקש</span></div>
-          <div class="field name"><span class="label">שם הדמות</span><div class="write"></div></div>
-          <div class="id-grid"><div class="field"><span class="label">שם השחקן</span><div class="write"></div></div><div class="field"><span class="label">גזע</span><div class="write"></div></div><div class="field"><span class="label">מקצוע</span><div class="filled">מתנקש</div></div><div class="field"><span class="label">דרגה</span><div class="write"></div></div></div>
+          <label class="field name"><span class="label">שם הדמות</span><input class="write fill" type="text" data-key="name" autocomplete="off"></label>
+          <div class="id-grid"><label class="field"><span class="label">שם השחקן</span><input class="write fill" type="text" data-key="player" autocomplete="off"></label><label class="field"><span class="label">גזע</span><input class="write fill" type="text" data-key="race" autocomplete="off"></label><div class="field"><span class="label">מקצוע</span><div class="filled">מתנקש</div></div><div class="field"><span class="label">דרגה</span><div class="write"></div></div></div>
           <div class="id-grid two"><div class="field"><span class="label">נקודות ניסיון</span><div class="write"></div></div><div class="field"><span class="label">נקודות ניסיון לדרגה הבאה</span><div class="write"></div></div></div>
-          <div class="id-grid five"><div class="field"><span class="label">גיל</span><div class="write"></div></div><div class="field"><span class="label">שיער</span><div class="write"></div></div><div class="field"><span class="label">עיניים</span><div class="write"></div></div><div class="field"><span class="label">גובה</span><div class="write"></div></div><div class="field"><span class="label">משקל</span><div class="write"></div></div></div>
+          <div class="id-grid five"><label class="field"><span class="label">גיל</span><input class="write fill" type="text" data-key="age" autocomplete="off"></label><label class="field"><span class="label">שיער</span><input class="write fill" type="text" data-key="hair" autocomplete="off"></label><label class="field"><span class="label">עיניים</span><input class="write fill" type="text" data-key="eyes" autocomplete="off"></label><label class="field"><span class="label">גובה</span><input class="write fill" type="text" data-key="height" autocomplete="off"></label><label class="field"><span class="label">משקל</span><input class="write fill" type="text" data-key="weight" autocomplete="off"></label></div>
         </div>
         <div class="portrait"><span class="hint">ציירו כאן את הדמות</span></div>
       </header>
@@ -466,7 +497,7 @@ table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant
           <div class="panel">
             <h2 class="box-title">תכונות</h2>
             <div class="ab-head label"><span></span><span>ערך</span><span>תוסף</span></div>
-            <div class="abilities"><div class="ab"><div class="ab-name">כוח<span class="hint">פגיעה ונזק בקרב פנים אל פנים</span></div><div class="cell score"></div><div class="mod"></div></div><div class="ab"><div class="ab-name">זריזות<span class="hint">קליעה, דירוג שריון ויוזמה</span></div><div class="cell score"></div><div class="mod"></div></div><div class="ab"><div class="ab-name">חוסן<span class="hint">נקודות פגיעה</span></div><div class="cell score"></div><div class="mod"></div></div><div class="ab"><div class="ab-name">תבונה<span class="hint">שפות; התכונה של הקוסם</span></div><div class="cell score"></div><div class="mod"></div></div><div class="ab"><div class="ab-name">חוכמה<span class="hint">התכונה של הכוהן</span></div><div class="cell score"></div><div class="mod"></div></div><div class="ab"><div class="ab-name">כריזמה<span class="hint">איך אחרים מגיבים אליך</span></div><div class="cell score"></div><div class="mod"></div></div></div>
+            <div class="abilities"><div class="ab"><div class="ab-name">כוח<span class="hint">פגיעה ונזק בקרב פנים אל פנים</span></div><div class="cell score"><input class="fill" type="text" inputmode="numeric" maxlength="2" data-key="ab0" data-ab="0" aria-label="כוח"></div><div class="mod"><output data-mod="0" aria-label="תוסף כוח"></output></div></div><div class="ab"><div class="ab-name">זריזות<span class="hint">קליעה, דירוג שריון ויוזמה</span></div><div class="cell score"><input class="fill" type="text" inputmode="numeric" maxlength="2" data-key="ab1" data-ab="1" aria-label="זריזות"></div><div class="mod"><output data-mod="1" aria-label="תוסף זריזות"></output></div></div><div class="ab"><div class="ab-name">חוסן<span class="hint">נקודות פגיעה</span></div><div class="cell score"><input class="fill" type="text" inputmode="numeric" maxlength="2" data-key="ab2" data-ab="2" aria-label="חוסן"></div><div class="mod"><output data-mod="2" aria-label="תוסף חוסן"></output></div></div><div class="ab"><div class="ab-name">תבונה<span class="hint">שפות; התכונה של הקוסם</span></div><div class="cell score"><input class="fill" type="text" inputmode="numeric" maxlength="2" data-key="ab3" data-ab="3" aria-label="תבונה"></div><div class="mod"><output data-mod="3" aria-label="תוסף תבונה"></output></div></div><div class="ab"><div class="ab-name">חוכמה<span class="hint">התכונה של הכוהן</span></div><div class="cell score"><input class="fill" type="text" inputmode="numeric" maxlength="2" data-key="ab4" data-ab="4" aria-label="חוכמה"></div><div class="mod"><output data-mod="4" aria-label="תוסף חוכמה"></output></div></div><div class="ab"><div class="ab-name">כריזמה<span class="hint">איך אחרים מגיבים אליך</span></div><div class="cell score"><input class="fill" type="text" inputmode="numeric" maxlength="2" data-key="ab5" data-ab="5" aria-label="כריזמה"></div><div class="mod"><output data-mod="5" aria-label="תוסף כריזמה"></output></div></div></div>
           </div>
           <div class="panel saves">
             <h2 class="box-title">גלגולי הצלה <span class="hint">ק20, שווה או יותר. הערכים בעמוד 2</span></h2>
@@ -593,5 +624,93 @@ table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant
     </div>
   </section>
 </div>
+<script>// Fill-in fields for the printable sheets: character name, player, race, description and ability scores
+// (the bonus is computed). Everything is saved in this browser only.
+// Same script as rc-sheets/sheet.js; the storage prefix differs because both sites share the
+// itaiag.github.io origin and have sheets with the same file names.
+(() => {
+  const KEY = "bfrpg-sheets:" + (location.pathname.split("/").pop() || "sheet");
+  let data = {};
+  try { data = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { data = {}; }
+  const save = () => {
+    try { localStorage.setItem(KEY, JSON.stringify(data)); return true; } catch (e) { return false; }
+  };
+
+  // Ability bonus table, he/abilities.qmd (3: −3, 4–5: −2, 6–8: −1, 9–12: 0, 13–15: +1, 16–17: +2, 18: +3).
+  const bonus = (v) => {
+    if (!/^\d+$/.test(v)) return "";
+    const n = +v;
+    if (n < 3 || n > 18) return "";
+    const b = n <= 3 ? -3 : n <= 5 ? -2 : n <= 8 ? -1 : n <= 12 ? 0 : n <= 15 ? 1 : n <= 17 ? 2 : 3;
+    return b > 0 ? "+" + b : b < 0 ? "−" + -b : "0";
+  };
+  const showBonus = (el) => {
+    const out = document.querySelector(`[data-mod="${el.dataset.ab}"]`);
+    if (out) out.textContent = bonus(el.value);
+  };
+
+  const fields = document.querySelectorAll("[data-key]");
+  fields.forEach((el) => {
+    if (data[el.dataset.key] != null) el.value = data[el.dataset.key];
+    if (el.dataset.ab != null) showBonus(el);
+    el.addEventListener(el.tagName === "SELECT" ? "change" : "input", () => {
+      if (el.dataset.ab != null) {
+        el.value = el.value.replace(/\D/g, "").slice(0, 2);
+        showBonus(el);
+      }
+      data[el.dataset.key] = el.value;
+      save();
+    });
+  });
+
+  const file = document.querySelector("[data-portrait]");
+  const img = document.querySelector("[data-portrait-img]");
+  const clear = document.querySelector("[data-portrait-clear]");
+  const box = img && img.closest(".portrait");
+  const showImg = (src) => {
+    img.hidden = !src;
+    clear.hidden = !src;
+    if (src) img.src = src; else img.removeAttribute("src");
+    box.classList.toggle("has-img", !!src);
+  };
+  if (img) {
+    showImg(data.portrait || "");
+    file.addEventListener("change", () => {
+      const f = file.files[0];
+      if (!f) return;
+      const url = URL.createObjectURL(f);
+      const pic = new Image();
+      pic.onload = () => {
+        // Shrink big photos so they fit in browser storage; 900px is plenty for a 3cm box.
+        const scale = Math.min(1, 900 / Math.max(pic.width, pic.height));
+        const c = document.createElement("canvas");
+        c.width = Math.round(pic.width * scale);
+        c.height = Math.round(pic.height * scale);
+        const ctx = c.getContext("2d");
+        ctx.fillStyle = "#fff";
+        ctx.fillRect(0, 0, c.width, c.height);
+        ctx.drawImage(pic, 0, 0, c.width, c.height);
+        URL.revokeObjectURL(url);
+        const src = c.toDataURL("image/jpeg", 0.85);
+        data.portrait = src;
+        if (!save()) { delete data.portrait; save(); }
+        showImg(src);
+        file.value = "";
+      };
+      pic.src = url;
+    });
+    clear.addEventListener("click", () => { delete data.portrait; save(); showImg(""); });
+  }
+
+  const all = document.querySelector("[data-clear-all]");
+  if (all) all.addEventListener("click", () => {
+    if (!confirm("למחוק את כל מה שהוקלד בדף?")) return;
+    data = {};
+    save();
+    fields.forEach((el) => { el.value = ""; if (el.dataset.ab != null) showBonus(el); });
+    if (img) showImg("");
+  });
+})();
+</script>
 </body>
 </html>

@@ -426,3 +426,34 @@ table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant
 
 /* blank sheet: write-in skill names */
 .skills .row .write { border-bottom: .09em solid var(--rule); height: 1.5em; }
+
+/* ---------- fields the player can fill in on screen (sheet.js), as in rc-sheets ---------- */
+.fill {
+  font: inherit; color: var(--ink); background: transparent;
+  border: 0; border-radius: 0; margin: 0; width: 100%; min-width: 0;
+  appearance: none; -webkit-appearance: none; outline: none;
+}
+.field .write.fill {
+  border-bottom: .09em solid var(--rule);
+  font-family: var(--display); font-weight: 700; font-size: 1.05em;
+  height: 1.62em; padding: 0 .15em .05em; line-height: 1;
+}
+.name .write.fill { font-size: 1.35em; height: 1.63em; }
+.ab .score { display: grid; }
+.ab .score .fill {
+  height: 100%; text-align: center;
+  font-family: var(--display); font-weight: 800; font-size: 1.45em;
+}
+.ab .mod { display: grid; place-items: center; }
+.ab .mod output {
+  direction: ltr; unicode-bidi: isolate;
+  font-family: var(--display); font-weight: 800; font-size: 1.1em; line-height: 1;
+}
+.clear-all {
+  font: inherit; color: inherit; background: transparent; cursor: pointer;
+  border: 1px solid currentColor; border-radius: 6px; padding: 0 8px; margin-inline-start: 4px;
+}
+@media screen {
+  .fill:hover, .fill:focus { background: #f6ecd9; }
+  .ab .score:focus-within { box-shadow: 0 0 0 .15em #e3c9a4; }
+}

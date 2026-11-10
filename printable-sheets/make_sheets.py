@@ -26,6 +26,7 @@ OUT = REPO / "he" / "sheets"
 SPELLS = REPO / "he" / "allSpells.qmd"
 DATA = json.loads((HERE / "data.json").read_text(encoding="utf-8"))
 CSS = (HERE / "sheet.css").read_text(encoding="utf-8")
+SCRIPT = (HERE / "sheet.js").read_text(encoding="utf-8")  # fill-in fields and ability bonuses
 
 STD_SAVES = ["קרן מוות / רעל", "שרביטי קסם", "שיתוק / התאבנות", "נשיפת דרקון", "לחשים"]
 SKILLS = ["פריצת מנעולים", "נטרול מלכודות", "כייסות", "תנועה חרישית", "טיפוס על קירות", "התחבאות", "האזנה"]
@@ -125,6 +126,12 @@ def field(label, value=None):
     return f'<div class="field"><span class="label">{label}</span>{inner}</div>'
 
 
+def field_input(label, key):
+    """A line the player can type on before printing (saved in the browser by sheet.js)."""
+    return (f'<label class="field"><span class="label">{label}</span>'
+            f'<input class="write fill" type="text" data-key="{key}" autocomplete="off"></label>')
+
+
 def page(n, total, inner, label):
     return f"""
   <section class="sheet" aria-label="עמוד {n}: {label}">
@@ -145,8 +152,10 @@ def abilities_panel():
         ("כריזמה", "איך אחרים מגיבים אליך"),
     ]
     abs_ = "".join(
-        f'<div class="ab"><div class="ab-name">{n}<span class="hint">{h}</span></div><div class="cell score"></div><div class="mod"></div></div>'
-        for n, h in rows)
+        f'<div class="ab"><div class="ab-name">{n}<span class="hint">{h}</span></div>'
+        f'<div class="cell score"><input class="fill" type="text" inputmode="numeric" maxlength="2" data-key="ab{i}" data-ab="{i}" aria-label="{n}"></div>'
+        f'<div class="mod"><output data-mod="{i}" aria-label="תוסף {n}"></output></div></div>'
+        for i, (n, h) in enumerate(rows))
     return f"""<div class="panel">
             <h2 class="box-title">תכונות</h2>
             <div class="ab-head label"><span></span><span>ערך</span><span>תוסף</span></div>
@@ -275,7 +284,9 @@ def page_one(cfg, total):
     key = cfg.get("key")
     name = cfg.get("name")
     brand_right = f'<span class="class-tag">{name}</span>' if name else '<span class="sys">בייסיק פנטזי</span>'
-    id_row = (field("שם השחקן") + field("גזע") + field("מקצוע", name) + field("דרגה"))
+    id_row = (field_input("שם השחקן", "player") + field_input("גזע", "race") + field("מקצוע", name) + field("דרגה"))
+    looks = "".join(field_input(label, k) for label, k in
+                    [("גיל", "age"), ("שיער", "hair"), ("עיניים", "eyes"), ("גובה", "height"), ("משקל", "weight")])
     strip = ""
     if key:
         strip = f"""<div class="strip">
@@ -289,10 +300,10 @@ def page_one(cfg, total):
     inner = f"""      <header class="hd">
         <div class="hd-main">
           <div class="brand"><h1>דף דמות</h1>{brand_right}</div>
-          <div class="field name"><span class="label">שם הדמות</span><div class="write"></div></div>
+          <label class="field name"><span class="label">שם הדמות</span><input class="write fill" type="text" data-key="name" autocomplete="off"></label>
           <div class="id-grid">{id_row}</div>
           <div class="id-grid two">{field("נקודות ניסיון")}{field("נקודות ניסיון לדרגה הבאה")}</div>
-          <div class="id-grid five">{"".join(field(x) for x in ("גיל", "שיער", "עיניים", "גובה", "משקל"))}</div>
+          <div class="id-grid five">{looks}</div>
         </div>
         <div class="portrait"><span class="hint">ציירו כאן את הדמות</span></div>
       </header>
@@ -586,6 +597,7 @@ def document(title, body, note):
   <p class="screen-note">{note}</p>
 {body}
 </div>
+<script>{SCRIPT}</script>
 </body>
 </html>
 """
@@ -593,6 +605,9 @@ def document(title, body, note):
 
 def print_note(pages):
     return (f'<a href="../printable_sheets.html">← חזרה לדפי הדמות</a><br>'
+            "אפשר להקליד שם דמות, שם שחקן, גזע, גיל, שיער, עיניים, גובה, משקל ותכונות (התוסף מחושב לבד) לפני ההדפסה. "
+            "הנתונים נשמרים בדפדפן הזה בלבד. "
+            '<button type="button" class="clear-all" data-clear-all>ניקוי הדף</button><br>'
             f"{pages} עמודים בגודל A4. להדפסה: Ctrl+P ← גודל נייר A4, שוליים: ללא. "
             "להדפסה דו-צדדית: הפכו לאורך הצד הארוך.")
 
