@@ -459,6 +459,21 @@ table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant
   direction: ltr; unicode-bidi: isolate;
   font-family: var(--display); font-weight: 800; font-size: 1.1em; line-height: 1;
 }
+.portrait { position: relative; overflow: hidden; padding: 0; }
+.portrait-pick {
+  position: absolute; inset: 0; display: flex; align-items: flex-end; justify-content: center;
+  padding: 0 .4em .5em; text-align: center; cursor: pointer;
+}
+.portrait img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.portrait img[hidden] { display: none; }
+.portrait.has-img { border-style: solid; }
+.portrait.has-img .hint { display: none; }
+.portrait-clear {
+  position: absolute; bottom: .5em; left: 50%; transform: translateX(-50%); white-space: nowrap;
+  font: 700 .72em var(--body); box-shadow: 0 1px 3px rgba(0,0,0,.3); color: var(--paper); background: var(--accent);
+  border: 0; border-radius: .3em; padding: .25em .55em; cursor: pointer;
+}
+.portrait-clear[hidden] { display: none; }
 .clear-all {
   font: inherit; color: inherit; background: transparent; cursor: pointer;
   border: 1px solid currentColor; border-radius: 6px; padding: 0 8px; margin-inline-start: 4px;
@@ -466,13 +481,18 @@ table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant
 @media screen {
   .fill:hover, .fill:focus { background: #f6ecd9; }
   .ab .score:focus-within { box-shadow: 0 0 0 .15em #e3c9a4; }
+  .portrait-pick:hover { background: #f6ecd9; }
+  .portrait.has-img .portrait-pick:hover { background: transparent; }
+}
+@media print {
+  .screen-only { display: none !important; }
 }
 
 </style>
 </head>
 <body>
 <div class="desk" dir="rtl" lang="he">
-  <p class="screen-note"><a href="../printable_sheets.html">← חזרה לדפי הדמות</a><br>אפשר להקליד שם דמות, שם שחקן, גזע, גיל, שיער, עיניים, גובה, משקל ותכונות (התוסף מחושב לבד) לפני ההדפסה. הנתונים נשמרים בדפדפן הזה בלבד. <button type="button" class="clear-all" data-clear-all>ניקוי הדף</button><br>2 עמודים בגודל A4. להדפסה: Ctrl+P ← גודל נייר A4, שוליים: ללא. להדפסה דו-צדדית: הפכו לאורך הצד הארוך.</p>
+  <p class="screen-note"><a href="../printable_sheets.html">← חזרה לדפי הדמות</a><br>אפשר להקליד שם דמות, שם שחקן, גזע, גיל, שיער, עיניים, גובה, משקל ותכונות (התוסף מחושב לבד) ולהעלות תמונה לפני ההדפסה. הנתונים נשמרים בדפדפן הזה בלבד. <button type="button" class="clear-all" data-clear-all>ניקוי הדף</button><br>2 עמודים בגודל A4. להדפסה: Ctrl+P ← גודל נייר A4, שוליים: ללא. להדפסה דו-צדדית: הפכו לאורך הצד הארוך.</p>
 
   <section class="sheet" aria-label="עמוד 1: דף דמות">
     <div class="page">
@@ -484,7 +504,14 @@ table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant
           <div class="id-grid two"><div class="field"><span class="label">נקודות ניסיון</span><div class="write"></div></div><div class="field"><span class="label">נקודות ניסיון לדרגה הבאה</span><div class="write"></div></div></div>
           <div class="id-grid five"><label class="field"><span class="label">גיל</span><input class="write fill" type="text" data-key="age" autocomplete="off"></label><label class="field"><span class="label">שיער</span><input class="write fill" type="text" data-key="hair" autocomplete="off"></label><label class="field"><span class="label">עיניים</span><input class="write fill" type="text" data-key="eyes" autocomplete="off"></label><label class="field"><span class="label">גובה</span><input class="write fill" type="text" data-key="height" autocomplete="off"></label><label class="field"><span class="label">משקל</span><input class="write fill" type="text" data-key="weight" autocomplete="off"></label></div>
         </div>
-        <div class="portrait"><span class="hint">ציירו כאן את הדמות</span></div>
+        <div class="portrait">
+          <label class="portrait-pick" title="העלאת תמונה">
+            <input type="file" accept="image/*" data-portrait hidden>
+            <img alt="תמונת הדמות" data-portrait-img hidden>
+            <span class="hint">ציירו כאן את הדמות<span class="screen-only"><br>או לחצו להעלאת תמונה</span></span>
+          </label>
+          <button type="button" class="portrait-clear screen-only" data-portrait-clear hidden>הסרת התמונה</button>
+        </div>
       </header>
       
       <div class="body">
@@ -612,7 +639,7 @@ table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant
   </section>
 </div>
 <script>// Fill-in fields for the printable sheets: character name, player, race, description and ability scores
-// (the bonus is computed). Everything is saved in this browser only.
+// (the bonus is computed) and a portrait image. Everything is saved in this browser only.
 // Same script as rc-sheets/sheet.js; the storage prefix differs because both sites share the
 // itaiag.github.io origin and have sheets with the same file names.
 (() => {
@@ -691,7 +718,7 @@ table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant
 
   const all = document.querySelector("[data-clear-all]");
   if (all) all.addEventListener("click", () => {
-    if (!confirm("למחוק את כל מה שהוקלד בדף?")) return;
+    if (!confirm("למחוק את כל מה שהוקלד בדף, כולל התמונה?")) return;
     data = {};
     save();
     fields.forEach((el) => { el.value = ""; if (el.dataset.ab != null) showBonus(el); });

@@ -305,7 +305,14 @@ def page_one(cfg, total):
           <div class="id-grid two">{field("נקודות ניסיון")}{field("נקודות ניסיון לדרגה הבאה")}</div>
           <div class="id-grid five">{looks}</div>
         </div>
-        <div class="portrait"><span class="hint">ציירו כאן את הדמות</span></div>
+        <div class="portrait">
+          <label class="portrait-pick" title="העלאת תמונה">
+            <input type="file" accept="image/*" data-portrait hidden>
+            <img alt="תמונת הדמות" data-portrait-img hidden>
+            <span class="hint">ציירו כאן את הדמות<span class="screen-only"><br>או לחצו להעלאת תמונה</span></span>
+          </label>
+          <button type="button" class="portrait-clear screen-only" data-portrait-clear hidden>הסרת התמונה</button>
+        </div>
       </header>
       {strip}
       <div class="body">
@@ -605,7 +612,7 @@ def document(title, body, note):
 
 def print_note(pages):
     return (f'<a href="../printable_sheets.html">← חזרה לדפי הדמות</a><br>'
-            "אפשר להקליד שם דמות, שם שחקן, גזע, גיל, שיער, עיניים, גובה, משקל ותכונות (התוסף מחושב לבד) לפני ההדפסה. "
+            "אפשר להקליד שם דמות, שם שחקן, גזע, גיל, שיער, עיניים, גובה, משקל ותכונות (התוסף מחושב לבד) ולהעלות תמונה לפני ההדפסה. "
             "הנתונים נשמרים בדפדפן הזה בלבד. "
             '<button type="button" class="clear-all" data-clear-all>ניקוי הדף</button><br>'
             f"{pages} עמודים בגודל A4. להדפסה: Ctrl+P ← גודל נייר A4, שוליים: ללא. "

@@ -1,5 +1,5 @@
 // Fill-in fields for the printable sheets: character name, player, race, description and ability scores
-// (the bonus is computed). Everything is saved in this browser only.
+// (the bonus is computed) and a portrait image. Everything is saved in this browser only.
 // Same script as rc-sheets/sheet.js; the storage prefix differs because both sites share the
 // itaiag.github.io origin and have sheets with the same file names.
 (() => {
@@ -78,7 +78,7 @@
 
   const all = document.querySelector("[data-clear-all]");
   if (all) all.addEventListener("click", () => {
-    if (!confirm("למחוק את כל מה שהוקלד בדף?")) return;
+    if (!confirm("למחוק את כל מה שהוקלד בדף, כולל התמונה?")) return;
     data = {};
     save();
     fields.forEach((el) => { el.value = ""; if (el.dataset.ab != null) showBonus(el); });

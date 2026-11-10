@@ -449,6 +449,21 @@ table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant
   direction: ltr; unicode-bidi: isolate;
   font-family: var(--display); font-weight: 800; font-size: 1.1em; line-height: 1;
 }
+.portrait { position: relative; overflow: hidden; padding: 0; }
+.portrait-pick {
+  position: absolute; inset: 0; display: flex; align-items: flex-end; justify-content: center;
+  padding: 0 .4em .5em; text-align: center; cursor: pointer;
+}
+.portrait img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.portrait img[hidden] { display: none; }
+.portrait.has-img { border-style: solid; }
+.portrait.has-img .hint { display: none; }
+.portrait-clear {
+  position: absolute; bottom: .5em; left: 50%; transform: translateX(-50%); white-space: nowrap;
+  font: 700 .72em var(--body); box-shadow: 0 1px 3px rgba(0,0,0,.3); color: var(--paper); background: var(--accent);
+  border: 0; border-radius: .3em; padding: .25em .55em; cursor: pointer;
+}
+.portrait-clear[hidden] { display: none; }
 .clear-all {
   font: inherit; color: inherit; background: transparent; cursor: pointer;
   border: 1px solid currentColor; border-radius: 6px; padding: 0 8px; margin-inline-start: 4px;
@@ -456,4 +471,9 @@ table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant
 @media screen {
   .fill:hover, .fill:focus { background: #f6ecd9; }
   .ab .score:focus-within { box-shadow: 0 0 0 .15em #e3c9a4; }
+  .portrait-pick:hover { background: #f6ecd9; }
+  .portrait.has-img .portrait-pick:hover { background: transparent; }
+}
+@media print {
+  .screen-only { display: none !important; }
 }
