@@ -26,6 +26,7 @@ const BOOK_STRUCTURE = [
   { part: 'מפלצות', chapters: ['monsters.qmd', 'monstersAll.qmd', 'monstersTab.qmd'] },
   { part: 'אוצר', chapters: ['treasure.qmd', 'magicItems.qmd'] },
   { part: 'מידע למנחת המשחק', chapters: ['gm01.qmd', 'gm02.qmd'] },
+  { part: 'הרפתקאות מוכנות', chapters: ['ruin-of-darkfir-castle.qmd'] },
   { part: 'נספחים', chapters: ['appendix_interactive.qmd', 'appendixMapmaker.qmd', 'char_sheet.qmd', 'printable_sheets.qmd'] },
   { part: 'תוספות', chapters: ['extraClasses.qmd', 'extraRaces.qmd', 'extraRules.qmd'] },
 ];

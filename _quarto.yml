@@ -46,6 +46,9 @@ book:
       chapters: 
         - gm01.qmd
         - gm02.qmd
+    - part: Ready-to-play Adventures
+      chapters:
+        - ruin-of-darkfir-castle.qmd
     - part: Appendix
       chapters:
         - appendix_interactive.qmd
