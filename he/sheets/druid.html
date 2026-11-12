@@ -305,18 +305,23 @@ table { font-size: inherit; border-collapse: collapse; width: 100%; font-variant
   background: none;
 }
 
-.coins { display: grid; grid-template-columns: repeat(5, 1fr); gap: .35em; text-align: center; }
-.coin { display: flex; flex-direction: column; align-items: center; gap: .2em; }
+.coins { display: grid; gap: .3em; }
+.coin {
+  display: grid; align-items: center; gap: .5em;
+  grid-template-columns: 2.1em 4.2em 1fr;
+  grid-template-areas: "disc name cell";
+}
 .coin .disc {
-  width: 2.5em; height: 2.5em;
+  grid-area: disc;
+  width: 2.1em; height: 2.1em;
   border-radius: 50%;
   border: .14em solid var(--ink);
   display: grid; place-items: center;
   font-family: var(--display); font-weight: 800; font-size: .8em;
   background: var(--wash);
 }
-.coin .cell { width: 100%; height: 2.1em; }
-.coin .hint { font-size: .62em; }
+.coin .cell { grid-area: cell; width: 100%; height: 1.9em; }
+.coin .hint { grid-area: name; font-size: .8em; }
 
 .armor-rows .row {
   display: grid;
