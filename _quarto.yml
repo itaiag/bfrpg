@@ -49,6 +49,7 @@ book:
     - part: Ready-to-play Adventures
       chapters:
         - ruin-of-darkfir-castle.qmd
+        - beneath-brymassen.qmd
     - part: Appendix
       chapters:
         - appendix_interactive.qmd

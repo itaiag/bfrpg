@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="A dungeon for 3 to 6 beginning characters, with dungeon crawl and rescue mission versions.">
+
+<title>23&nbsp; Beneath Brymassen – Basic Fantasy RPG, 4th edition</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./appendix_interactive.html" rel="next">
+<link href="./ruin-of-darkfir-castle.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-588e16051b300ec69a1061866f9e49f5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JS65M33XZB"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
+</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caudex">
+<script src="translator/lang-switch.js"></script>
+
+
+<link rel="stylesheet" href="custom.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ruin-of-darkfir-castle.html">Ready-to-play Adventures</a></li><li class="breadcrumb-item"><a href="./beneath-brymassen.html"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Beneath Brymassen</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Basic Fantasy RPG, 4th edition</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Introduction</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./whatIsThis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Player Characters</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./char-creation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Player Characters</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./abilities.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Character Abilities</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./races.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Character Races</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./class.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Character Classes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./equipment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Equipment</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./vehicles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Vehicles</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Magic</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./spells.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Spells</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./allSpells.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Spells, Alphabetical</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Adventure</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dungeonAdventures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Dungeon Adventures</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./wildAdventures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Wilderness Adventures</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hirelings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Hirelings</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./advancement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Advancement</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Encounters</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./combat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Combat Encounters</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Monsters</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./monsters.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Monsters Intro</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./monstersAll.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Monster Descriptions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./monstersTab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Monsters Index</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Treasure</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./treasure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Treasure</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./magicItems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Magic Items</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+ <span class="menu-text">GM Information</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./gm01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Managing Encounters</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./gm02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Crafting Adventures</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
+ <span class="menu-text">Ready-to-play Adventures</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ruin-of-darkfir-castle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Ruin of Darkfir Castle</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./beneath-brymassen.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Beneath Brymassen</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendix</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix_interactive.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Interactive tools</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendixMapmaker.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Dungeon Maker</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./char_sheet.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Character Sheet</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true">
+ <span class="menu-text">Extra</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./extraClasses.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Additional Classes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./extraRaces.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Additional Races</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./extraRules.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Aditional and Alternate Rules</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a>
+  <ul>
+  <li><a href="#dungeon-crawl-background" id="toc-dungeon-crawl-background" class="nav-link" data-scroll-target="#dungeon-crawl-background">Dungeon Crawl Background</a></li>
+  <li><a href="#rescue-mission-background" id="toc-rescue-mission-background" class="nav-link" data-scroll-target="#rescue-mission-background">Rescue Mission Background</a></li>
+  </ul></li>
+  <li><a href="#dungeon-key" id="toc-dungeon-key" class="nav-link" data-scroll-target="#dungeon-key">Dungeon Key</a>
+  <ul>
+  <li><a href="#room-1" id="toc-room-1" class="nav-link" data-scroll-target="#room-1">1. Entrance Room</a></li>
+  <li><a href="#room-2" id="toc-room-2" class="nav-link" data-scroll-target="#room-2">2. Hidden Shrine</a></li>
+  <li><a href="#room-3" id="toc-room-3" class="nav-link" data-scroll-target="#room-3">3. The Pits</a></li>
+  <li><a href="#room-4" id="toc-room-4" class="nav-link" data-scroll-target="#room-4">4. Centipede Room</a></li>
+  <li><a href="#room-5" id="toc-room-5" class="nav-link" data-scroll-target="#room-5">5. Octagonal Room</a></li>
+  <li><a href="#room-6" id="toc-room-6" class="nav-link" data-scroll-target="#room-6">6. Battle Axe Trap</a></li>
+  <li><a href="#room-7" id="toc-room-7" class="nav-link" data-scroll-target="#room-7">7. Empty</a></li>
+  <li><a href="#room-8" id="toc-room-8" class="nav-link" data-scroll-target="#room-8">8. Kobolds on the Run</a></li>
+  <li><a href="#room-9" id="toc-room-9" class="nav-link" data-scroll-target="#room-9">9. Storeroom</a></li>
+  <li><a href="#room-10" id="toc-room-10" class="nav-link" data-scroll-target="#room-10">10. Catacomb</a></li>
+  <li><a href="#room-11" id="toc-room-11" class="nav-link" data-scroll-target="#room-11">11. Hobgoblin’s Room</a></li>
+  <li><a href="#room-12" id="toc-room-12" class="nav-link" data-scroll-target="#room-12">12. Room of Glowing Skulls</a></li>
+  <li><a href="#room-13" id="toc-room-13" class="nav-link" data-scroll-target="#room-13">13. Sarcophagus Room</a></li>
+  <li><a href="#room-14-rescue" id="toc-room-14-rescue" class="nav-link" data-scroll-target="#room-14-rescue">14. The Jail Cell — Rescue Mission</a></li>
+  <li><a href="#room-14-crawl" id="toc-room-14-crawl" class="nav-link" data-scroll-target="#room-14-crawl">14. The Bird Cage — Dungeon Crawl</a></li>
+  </ul></li>
+  <li><a href="#dungeon-map" id="toc-dungeon-map" class="nav-link" data-scroll-target="#dungeon-map">Dungeon Map</a></li>
+  <li><a href="#source-and-license" id="toc-source-and-license" class="nav-link" data-scroll-target="#source-and-license">Source and License</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ruin-of-darkfir-castle.html">Ready-to-play Adventures</a></li><li class="breadcrumb-item"><a href="./beneath-brymassen.html"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Beneath Brymassen</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Beneath Brymassen</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>A Collaborative Dungeon</strong><br>
+An adventure for 3 to 6 beginning player characters</p>
+<div class="callout callout-style-default callout-note callout-titled" title="For the Game Master">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>For the Game Master
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This chapter contains adventure secrets. Choose the dungeon crawl or rescue mission version before play; use the corresponding opening and version of room 14. Blockquoted passages can be read aloud or paraphrased. Room numbers match the <a href="#dungeon-map">dungeon map</a>.</p>
+</div>
+</div>
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>This dungeon can be used in two different ways: As a “standard” dungeon, to be cleared and looted at the party’s leisure, or as a rescue mission. Room 14 of this dungeon is presented in two ways, one identified as “storyline” representing the rescue mission, and the other marked “non-storyline” for the traditional dungeon crawl version.</p>
+<section id="dungeon-crawl-background" class="level3">
+<h3 class="anchored" data-anchor-id="dungeon-crawl-background">Dungeon Crawl Background</h3>
+<p>If you wish to run the traditional dungeon crawl version of this adventure, you should read (or paraphrase) the following to the party:</p>
+<blockquote class="blockquote">
+<p>You found your way to the only tavern in the little rural town of Brymassen, and settled in for an evening of washing away the dust of the road with cheap beer. As you all sat at a table drinking your first mug of beer, a man came rushing in; he stood in the doorway for a moment, peering into the gloomy tavern, before he caught sight of you.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>He came straight to your table, walking boldly as if he owned the place; two other men come into the tavern behind him, and follow him to your table. “You are the adventurers, recently come to town? Greetings! I am Forsythe, Mayor of Brymassen, and I have a business proposition for you. It seems some humanoid monsters, goblins perhaps, have dug a hole into the basement beneath the local mill, and the little monsters have been raiding the mill and surrounding houses, stealing everything not nailed down. If you would be willing to enter their lair and slay them, we would be able to pay you five gold pieces for each goblin or similar smaller monster, and ten for each larger creature. Of course, you’d have to bring back proof; we’re willing to accept the right ear of each slain creature for this purpose. What say you?”</p>
+</blockquote>
+<p>The mission is exactly as described. The GM may wish to place a church or temple with a mid-level Cleric in the town, willing to provide a few cure light wounds spells per day in return for a small donation, perhaps 20 gp per spell.</p>
+</section>
+<section id="rescue-mission-background" class="level3">
+<h3 class="anchored" data-anchor-id="rescue-mission-background">Rescue Mission Background</h3>
+<p>If you wish to run the rescue mission version of this adventure, you should read (or paraphrase) the following to the party:</p>
+<blockquote class="blockquote">
+<p>You found your way to the only tavern in the little rural town of Brymassen, and settled in for an evening of washing away the dust of the road with cheap beer. As you all sat at a table drinking your first mug of beer, a man came rushing in; he stood in the doorway for a moment, peering into the gloomy tavern, before he caught sight of you.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>He came straight to your table, almost running. “You are the adventurers, recently come to town? Please, sirs, you must help me. My children have been taken, dragged away into a hole in the wall of my cellar by hideous monsters, goblins perhaps. Please, please, come and see!”</p>
+</blockquote>
+<p>Assuming they choose to come with him, the man leads them to his leather-working shop; his family lives in a small apartment in the back of the building, but he will lead the adventurers to the cellar entrance behind the shop. His wife will meet the party there, and she will also beg them to rescue her children. They don’t have much money, but they’ll give all they have (a total of 45 gp) in return for the party’s help.</p>
+<p>The cellar is a circular room perhaps 10’ in diameter; a 3’ wide hole, looking rather like a large mouse hole, is visible in the back of the cellar, and small humanoid footprints (from some creature having feet with blunt claws) are visible in the dirt floor of the cellar.</p>
+</section>
+</section>
+<section id="dungeon-key" class="level2">
+<h2 class="anchored" data-anchor-id="dungeon-key">Dungeon Key</h2>
+<section id="room-1" class="level3">
+<h3 class="anchored" data-anchor-id="room-1">1. Entrance Room</h3>
+<blockquote class="blockquote">
+<p>The tunnel you have been crawling through opens into a room about four feet from the floor. The room is 30’ by 30’ with openings to the east and west near the center of the walls.</p>
+</blockquote>
+<p>If the PC’s check for traps or otherwise exercise caution before exiting the tunnel they will notice a differently colored stone set into the floor near the tunnel exit. If this is not detected, each character exiting the tunnel has a chance equal to 1-2 on 1d6 of triggering a spear trap in the ceiling (which fires straight down). If triggered, the character who set it off must make a save vs.&nbsp;Death Ray or be hit for 1d6 points of damage.</p>
+</section>
+<section id="room-2" class="level3">
+<h3 class="anchored" data-anchor-id="room-2">2. Hidden Shrine</h3>
+<p>The secret door to this room has a cleverly designed lock, hidden behind a swiveling nub of rock. The key is on the corpse in the southernmost pit in area 3, below; otherwise, it could be picked normally.</p>
+<blockquote class="blockquote">
+<p>The secret door opens to a brightly lit room that was turned into a makeshift shrine. The cold stone walls are decorated with chalk symbols and a makeshift altar made from a large wooden crate covered in a moldering white cloth holds a simple golden chalice. On the far side of the room, there is a figure mostly obscured by the altar.</p>
+</blockquote>
+<p>The room was blessed as a sanctuary by a long-dead adventuring Cleric. The Cleric’s body is behind the crate in a kneeling position, facing the altar, still clutching her holy symbol. She is nothing more than barely held together skin and bones. Her gear is long gone, except for her holy symbol (a silver starburst worth 20 gp) and the tattered remains of her robes.</p>
+<p>The room itself will detect as magical and is under the effect of a permanent protection from evil spell (as a 6th level caster). The golden chalice (worth 100 gp) radiates a soft golden light that fills the room. If holy water is poured into it and then consumed, it will provide the imbiber with a cure light wounds spell; this effect works at most twice a day. The chalice will not function outside of the room.</p>
+</section>
+<section id="room-3" class="level3">
+<h3 class="anchored" data-anchor-id="room-3">3. The Pits</h3>
+<blockquote class="blockquote">
+<p>As you round the corner, you smell the strong odor of death. Ahead you see an open pit. A very narrow ledge leads around it on both sides.</p>
+</blockquote>
+<p>There are two pits in this section of hallway. The one to the north is the open pit described above. It is 10’ deep, and thus does 1d6 damage to anyone falling into it. Any character attempting to cross on a ledge must roll a Dexterity ability roll to avoid falling in.</p>
+<p>The southern pit is covered by a very well hidden trap door that will open if 100 or more pounds of weight are placed on it (such as a character walking on it). It will spring closed in a single round after opening. Anyone falling into this 10’ spiked pit takes 1d6 points of damage for the fall plus 1d4 points of damage from the spikes; a saving throw vs.&nbsp;Death Ray may be rolled to avoid the spikes. In the bottom of the pit is the corpse of an adventurer, dead about three weeks. On his body is 3 gp, a short sword, a key (to area 2), and a Potion of Healing.</p>
+</section>
+<section id="room-4" class="level3">
+<h3 class="anchored" data-anchor-id="room-4">4. Centipede Room</h3>
+<p>As the party approaches this room, read the following:</p>
+<blockquote class="blockquote">
+<p>You smell a terrible stench, like a midden or a rotting garbage heap.</p>
+</blockquote>
+<p>Both doors into this room are stuck, and both are rotted through at the bottom. If opened, read the following:</p>
+<blockquote class="blockquote">
+<p>This room is about knee-deep in sludge and rotting debris, but otherwise apparently empty.</p>
+</blockquote>
+<p>The room can be crossed in perfect safety by simply wading through. However, a character poking around with a 10 ft pole, spear or whatever has a 1 in 6 chance per round of disturbing a nest of immature giant centipedes. If this happens, 1d20+20 immature giant centipedes will emerge. Owing to their blinding speed, they can move up to 10 ft before the player characters can react, and will climb up poles or spear-shafts onto the probing character if at all possible.</p>
+<p>Any centipede that survives the first round of combat may crawl beneath the player character’s armor, if the character is wearing any. If this is done, the centipede gains the character’s armor class, and may not be attacked without harming the character until his or her armor is removed. Meanwhile the wearing character becomes AC 11 to the invading centipede, ignoring any Dexterity bonus.</p>
+<p>Optional Rule: Any elven character with a baby giant centipede crawling beneath his or her armor must make a save vs.&nbsp;Death Ray with Wisdom bonus applied or start to panic. If the character panics, he or she may take no action except standing still, shouting, screaming, sobbing, or begging comrades for help.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Statistic</th>
+<th>Immature Giant Centipede</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AC</td>
+<td>11</td>
+</tr>
+<tr class="even">
+<td>HD</td>
+<td>1 HP</td>
+</tr>
+<tr class="odd">
+<td>#At</td>
+<td>1 bite</td>
+</tr>
+<tr class="even">
+<td>Dam</td>
+<td>Poison (save at +5)</td>
+</tr>
+<tr class="odd">
+<td>Mv</td>
+<td>40’</td>
+</tr>
+<tr class="even">
+<td>Sv</td>
+<td>NM</td>
+</tr>
+<tr class="odd">
+<td>Ml</td>
+<td>7</td>
+</tr>
+<tr class="even">
+<td>XP</td>
+<td>10 ea.</td>
+</tr>
+<tr class="odd">
+<td>Number encountered</td>
+<td>1d20+20</td>
+</tr>
+<tr class="even">
+<td>HP</td>
+<td>1 each</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="room-5" class="level3">
+<h3 class="anchored" data-anchor-id="room-5">5. Octagonal Room</h3>
+<blockquote class="blockquote">
+<p>The oddly shaped room has doors in the north, west and east walls. The floors are littered with the dung and detritus of various creatures passing through this room. There is a slight breeze coming from the east door; the air seems slightly fresher here.</p>
+</blockquote>
+<p>If the party opens the east door they will find a hallway heading east that narrows down into a roughly-hewn natural passageway. If the passageway is followed it will eventually lead into a well hidden small cavern open to the outside world.</p>
+</section>
+<section id="room-6" class="level3">
+<h3 class="anchored" data-anchor-id="room-6">6. Battle Axe Trap</h3>
+<p>The door to this room is not locked. When it is opened, a large axe will swing down from over the door, striking as a monster with a +3 AB and doing 1d8 damage if a hit is scored. The door opens into the room, forcing the character who opens the door to walk into the axe’s path. Of course, a very careful character might be able to discover a way to avoid the axe.</p>
+<p>The room is laid out like a bedroom, with a bed, side table, four chairs and a table with a deck of cards on it, spread out as if four players had just laid their cards down and walked away. The back wall is covered with tapestries. Also on the card table are a pair of bowls made of a rust-colored metal; 20 gold pieces are in one of the bowls, and each bowl is worth 2 sp each.</p>
+</section>
+<section id="room-7" class="level3">
+<h3 class="anchored" data-anchor-id="room-7">7. Empty</h3>
+<blockquote class="blockquote">
+<p>This room appears to be empty. The floor is broken and cracked, with chunks missing, although none of the holes are more than a finger length deep. What appears to be the faint outline of a door is on the wall between the north and west door. The east door has a sign on it hanging askew that reads in neat common letters “STORAGE” under which is scrawled “Not any moor” (in Common, crudely in yellow paint and misspelled). Scrawled on the north door is “My wife is a cow, but her melk</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>is clabberd.” On the west door in the same yellow hand writing is “Push butten to opin.” and a small yellow dot under it. The south door is tagged with “Hear be trolls and gnolls.”</p>
+</blockquote>
+<p>This room is indeed empty and has no other features. A close inspection reveals that the outline of the door between the north and west wall was scratched there by someone with a knife or other instrument – there is no “secret door”. Pushing the small yellow dot on the west door does nothing.</p>
+</section>
+<section id="room-8" class="level3">
+<h3 class="anchored" data-anchor-id="room-8">8. Kobolds on the Run</h3>
+<p>Listening to this door will reveal a lot of quick, whining speech coming from multiple voices.</p>
+<blockquote class="blockquote">
+<p>Upon opening the door, you see six dog-faced reptilian humanoids sitting around a small fire in a circle discussing something.</p>
+</blockquote>
+<p>Anyone who understands kobold can determine they are hiding from the big boss of their tribe after stealing the tribal treasure, and are arguing over where to go next.</p>
+<p>When the party has a chance to look around the room, they see the following:</p>
+<blockquote class="blockquote">
+<p>The room itself features well-crafted busts on pedestals (four against the north wall and four against the south) of old and venerable visages, a few of which can be recognized as more famous members of local clergy or government. There are ragged tapestries on each wall, but they are quiet ancient and rotten.</p>
+</blockquote>
+<p>The tapestries show some of the past history of the local region.</p>
+<p>The kobolds are not wearing armor but five have clubs and one has a dagger; and three have slings with a pouch of stones. They are hiding out after having stolen what they believe was the tribal treasure but is only part of it. On the floor behind them are two bags, each tied to a four foot long pole for carrying between two people: one holds 1,000 sp (in one) and 400 cp (in the other). Each has and additional 3d8 cp and 3d6 sp on their person.</p>
+<p>The busts are plaster with thick layers of paint, which itself is darkened and old. Their value is roughly 5 gold pieces each. They are just one of hundreds that were molded and painted cheaply to celebrate a founding father’s day – any long time resident of the area will likely identify them instantly.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Statistic</th>
+<th>6 Kobolds</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AC</td>
+<td>11</td>
+</tr>
+<tr class="even">
+<td>HD</td>
+<td>1d4 HP</td>
+</tr>
+<tr class="odd">
+<td>#At</td>
+<td>1 weapon</td>
+</tr>
+<tr class="even">
+<td>Dam</td>
+<td>1d4 or by weapon</td>
+</tr>
+<tr class="odd">
+<td>Mv</td>
+<td>30’</td>
+</tr>
+<tr class="even">
+<td>Sv</td>
+<td>NM</td>
+</tr>
+<tr class="odd">
+<td>Ml</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>XP</td>
+<td>10 ea.</td>
+</tr>
+<tr class="odd">
+<td>HP</td>
+<td>4, 2, 3, 1, 3, 2</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="room-9" class="level3">
+<h3 class="anchored" data-anchor-id="room-9">9. Storeroom</h3>
+<p>The lock on the heavy wooden door leading to this room is visibly broken; only a few twisted, rusting pieces of iron remain. The door swings open easily. The place was once a storeroom but most of its contents have long since been looted. Now it contains a small patch of Green Slime on the ceiling.</p>
+<blockquote class="blockquote">
+<p>Peering through the doorway, you see an unlit room, about 10’ square, that is mostly empty. The remains of some broken barrels and crates lie scattered along the walls and in the corners.</p>
+</blockquote>
+<p>Read if the PCs are using a torch, lantern, or other light source:</p>
+<blockquote class="blockquote">
+<p>You see a faint glinting, a reflection of the light you’re carrying, apparently from some small objects lying in the middle of the room.</p>
+</blockquote>
+<p>Upon closer inspection these prove to be the badly corroded buttons and buckles from the clothing and gear of the last victim of the Green Slime that clings to the ceiling. It has been a while since the Green Slime has eaten. It occupies a 5’ x 5’ area in the center of the ceiling and is easily visible to anyone who looks upward with a good light source or Darkvision. The creature will detect and attack the first character venturing into the center of the room (for instance, to examine or retrieve the metal objects on the floor). It will also attack any pole or similar object that is used to test the floor.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Statistic</th>
+<th>Green Slime</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AC</td>
+<td>can always be hit</td>
+</tr>
+<tr class="even">
+<td>HD</td>
+<td>2**</td>
+</tr>
+<tr class="odd">
+<td>#At</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>Dam</td>
+<td>turns victim to slime in 6+1d4 rounds</td>
+</tr>
+<tr class="odd">
+<td>Mv</td>
+<td>1’</td>
+</tr>
+<tr class="even">
+<td>Sv</td>
+<td>F2</td>
+</tr>
+<tr class="odd">
+<td>Ml</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td>XP</td>
+<td>125</td>
+</tr>
+<tr class="odd">
+<td>HP</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="room-10" class="level3">
+<h3 class="anchored" data-anchor-id="room-10">10. Catacomb</h3>
+<blockquote class="blockquote">
+<p>The walls of this room are lined with small shelves. Each shelf is piled high with bones, and with shards and splinters and fragments of bone-as far as you can tell, mostly human. The ceiling is decorated with a stucco mural that appears to be of a religious nature. Judging by the steatopygous muliebrity of the deity depicted, perhaps she is some long-forgotten goddess of fertility and death.</p>
+</blockquote>
+<p>There are literally thousands of bones on the shelves. A thorough search has a 1% chance per round of dislodging something from among the bones, determined randomly on the following table (roll 1d6):</p>
+<ol type="1">
+<li><p>Tucked into a hollowed-out femur, a Scepter of Healing. This scepter resembles a wand with a thickened end, and may be used only by a Cleric. When the Cleric touches someone with the wand, he or she will be healed for 1d12-1 HP. If a natural “1” is rolled (i.e.&nbsp;the roll totals “0”) then the enchantment of the scepter has been exhausted and it will permanently cease to function.</p></li>
+<li><p>Glued to the inside of a skull, a garnet worth 200 gp.</p></li>
+<li><p>Wrapped around a child’s ulna, a Scroll of Magic-User Spells with a single spell: invisibility.</p></li>
+<li><p>The searcher dislodges a tiny but extremely poisonous spider from a bone fragment, which will bite. The searcher must roll an immediate saving throw vs.&nbsp;Poison or die.</p></li>
+<li><p>The searcher cuts him- or herself on a fragment of bone. He or she must roll a saving throw vs.&nbsp;Poison (adjusted for Constitution) or contract a blood-borne wasting disease; while diseased, the character loses 1d4 points each of Strength, Dexterity, Constitution, Charisma and Hit Points. Provided the character does not die from this, he or she will recover naturally in 2d6 days, regaining the ability scores and hit points lost.</p></li>
+<li><p>The searcher disturbs a bone formerly belonging to the high priest of the death-goddess. He or she is immediately cursed. Until the curse is removed, that character will be unable to refuse any request made of them (no matter how foolish or unreasonable) in a language they can understand. Note that orders and instructions are not requests; the benchmark word for something to be a request is “please.” The cursed character may not delay or procrastinate in fulfilling the request. A remove curse spell is the only way to lift this curse.</p></li>
+</ol>
+</section>
+<section id="room-11" class="level3">
+<h3 class="anchored" data-anchor-id="room-11">11. Hobgoblin’s Room</h3>
+<blockquote class="blockquote">
+<p>This 20’x30’ room is carved from greenish stone and layered with carpets and tapestries, and all manner of decorated pillows lay strewn about. A large, grizzled and apparently ancient Hobgoblin is seating among the pillows reading a large tome.</p>
+</blockquote>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Statistic</th>
+<th>Grizzled Hobgoblin</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AC</td>
+<td>16</td>
+</tr>
+<tr class="even">
+<td>HD</td>
+<td>2*</td>
+</tr>
+<tr class="odd">
+<td>#At</td>
+<td>1 pillow filled with gravel</td>
+</tr>
+<tr class="even">
+<td>Dam</td>
+<td>1d6+2</td>
+</tr>
+<tr class="odd">
+<td>Mv</td>
+<td>4’</td>
+</tr>
+<tr class="even">
+<td>Sv</td>
+<td>F2</td>
+</tr>
+<tr class="odd">
+<td>Ml</td>
+<td>9</td>
+</tr>
+<tr class="even">
+<td>XP</td>
+<td>100</td>
+</tr>
+<tr class="odd">
+<td>HP</td>
+<td>13</td>
+</tr>
+</tbody>
+</table>
+<p>The hobgoblin wears a Medallion of ESP and has put it to good use over the years. The denizens of the dungeon routinely seek him out for information, and in return they provide him with food and luxuries. He will attempt to barter with the PCs, offering information that they may seek by using his medallion. Since he genuinely knows little about the PCs or much else beyond these halls, he will usually lie but offer enough hints at treasure and magic to be interesting. He knows some information about this dungeon, and will trade it for gold coins (GM’s discretion).</p>
+<p>He will not be hostile unless outright attacked. The large tome is a cookbook (value 2 gp). The tapestries, carpets and pillows are worth 75 gp but are very bulky, dirty, and difficult to move. A purse containing 20 gp lies in a pouch under a pillow the hobgoblin is laying on.</p>
+</section>
+<section id="room-12" class="level3">
+<h3 class="anchored" data-anchor-id="room-12">12. Room of Glowing Skulls</h3>
+<blockquote class="blockquote">
+<p>As you enter this octagonal room you are struck by an odd sight. Each wall has a small niche in it, and in each of them is a glowing skull. Over by the north wall there are five humanoid creatures doing their best to pry out one of the skulls.</p>
+</blockquote>
+<p>The five humanoids are orcs; if the player characters are familiar with them, the GM may choose to call them by name. They are busy trying to get the skull out of the wall and won’t hear the party entering unless they make significant noise within 30’ of the room. If the party is reasonably quiet, the orcs are surprised on a roll of 1-4 on a d6; otherwise, roll surprise as usual.</p>
+<p>The skulls are cemented into the walls. If a player character tries to remove any of the skulls by brute force, there is 90% chance the skull will be destroyed. If a Thief attempts it, the usual chance to Pick Locks is applied; failure results in a 50% chance of the skull being destroyed. Each skull generates illumination as if affected by a light spell. This effect is permanent.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Statistic</th>
+<th>5 Orcs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AC</td>
+<td>14</td>
+</tr>
+<tr class="even">
+<td>HD</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>#At</td>
+<td>1 weapon</td>
+</tr>
+<tr class="even">
+<td>Dam</td>
+<td>1d8 or by weapon</td>
+</tr>
+<tr class="odd">
+<td>Mv</td>
+<td>40’</td>
+</tr>
+<tr class="even">
+<td>Sv</td>
+<td>F1</td>
+</tr>
+<tr class="odd">
+<td>Ml</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>XP</td>
+<td>25 ea.</td>
+</tr>
+<tr class="odd">
+<td>HP</td>
+<td>8, 8, 5, 5, 6</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="room-13" class="level3">
+<h3 class="anchored" data-anchor-id="room-13">13. Sarcophagus Room</h3>
+<blockquote class="blockquote">
+<p>The secret door opens to reveal a twenty foot square room. A large stone sarcophagus rests in the center of the room. A skeleton stands in each corner of the room, each one gripping an ancient spear, but all remain motionless.</p>
+</blockquote>
+<p>The skeletons only move and attack if they themselves are attacked or the sarcophagus is touched.</p>
+<p>The outside of the sarcophagus is covered with carved images a man in robes casting spells at an array of foes. A search of the sarcophagus reveals no traps, and the lid slides easily off. Once opened a magic mouth spell activates and says:</p>
+<blockquote class="blockquote">
+<p>Many baubles did I plunder from the dead, now it is my turn to give up my baubles to the living, may they serve you as they have served me.</p>
+</blockquote>
+<p>A single skeleton lies in the sarcophagus, dressed in the tattered remains of a once fine robe. It wears a jeweled ring on its right hand, and a plain silver ring on its left hand. If tested, both rings detect as magical; the jeweled ring is a Ring of Protection +1 and the silver band is a Ring of Fire Resistance.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Statistic</th>
+<th>4 Skeletons</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AC</td>
+<td>13</td>
+</tr>
+<tr class="even">
+<td>HD</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>#At</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>Dam</td>
+<td>1d6 or by weapon</td>
+</tr>
+<tr class="odd">
+<td>Mv</td>
+<td>40’</td>
+</tr>
+<tr class="even">
+<td>Sv</td>
+<td>F1</td>
+</tr>
+<tr class="odd">
+<td>Ml</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td>XP</td>
+<td>25 ea.</td>
+</tr>
+<tr class="odd">
+<td>HP</td>
+<td>4, 5, 4, 7</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="room-14-rescue" class="level3">
+<h3 class="anchored" data-anchor-id="room-14-rescue">14. The Jail Cell — Rescue Mission</h3>
+<div class="callout callout-style-default callout-note callout-titled" title="Alternative version of room 14">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Alternative version of room 14
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Use this version for the rescue mission; use the <a href="#room-14-crawl">other version</a> instead for the other adventure mode. This selection note is an addition to the web edition.</p>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>A huge wooden cage hangs suspended from the ceiling in this smoky room. Four small children can be seen huddled together inside of it; five dog-faced reptilian humanoids stand around poking at them with various weapons and laughing. A larger creature of the same species is seated next to a cooking fire near the north wall.</p>
+</blockquote>
+<p>The children in the cages are the ones stolen from the town, and the kobolds in this room, and their compatriots in Room 8 are the kidnappers. The large kobold in the back is the kobold chieftain, who is rather grumpy about the loss of some items recently stolen from him by members of his own tribe.</p>
+<p>If the party has members that speak kobold and can hear the conversation in the room before entering, they will hear talk from the kobolds trying to decide whether to ransom the children back to the town or sell them to orc slavers who are due to be stopping by soon (the orcs in Room 12 are the ones they are speaking of).</p>
+<p>Since the theft of some of their treasure the kobolds will be less than enthusiastic about surrendering the children, especially while the chieftain is still alive.</p>
+<p>The cage is suspended by a rope that is tied off to a ring on the east wall. It will probably take two characters to successfully lower it to the ground to free the children.</p>
+<p>If the chieftain is searched the party will find a large leather pouch containing 220 sp and 30 gp hanging from his belt.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Statistic</th>
+<th>5 Kobolds</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AC</td>
+<td>13</td>
+</tr>
+<tr class="even">
+<td>HD</td>
+<td>1d4 HP</td>
+</tr>
+<tr class="odd">
+<td>#At</td>
+<td>1 weapon</td>
+</tr>
+<tr class="even">
+<td>Dam</td>
+<td>1d6 (shortsword)</td>
+</tr>
+<tr class="odd">
+<td>Mv</td>
+<td>20’</td>
+</tr>
+<tr class="even">
+<td>Sv</td>
+<td>NM</td>
+</tr>
+<tr class="odd">
+<td>Ml</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>XP</td>
+<td>10 ea.</td>
+</tr>
+<tr class="odd">
+<td>HP</td>
+<td>3, 2, 3, 2, 1</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Statistic</th>
+<th>Kobold Chieftain</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AC</td>
+<td>14</td>
+</tr>
+<tr class="even">
+<td>HD</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>#At</td>
+<td>1 shortsword</td>
+</tr>
+<tr class="even">
+<td>Dam</td>
+<td>1d6+1</td>
+</tr>
+<tr class="odd">
+<td>Mv</td>
+<td>20’</td>
+</tr>
+<tr class="even">
+<td>Sv</td>
+<td>F2</td>
+</tr>
+<tr class="odd">
+<td>Ml</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>XP</td>
+<td>75</td>
+</tr>
+<tr class="odd">
+<td>HP</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="room-14-crawl" class="level3">
+<h3 class="anchored" data-anchor-id="room-14-crawl">14. The Bird Cage — Dungeon Crawl</h3>
+<div class="callout callout-style-default callout-note callout-titled" title="Alternative version of room 14">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Alternative version of room 14
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Use this version for the dungeon crawl; use the <a href="#room-14-rescue">other version</a> instead for the other adventure mode. This selection note is an addition to the web edition.</p>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>A huge iron cage lies on its side in this room, the door knocked open. Underneath it lies the obviously dead body of a goblin, crushed by the cage. A chain can be seen hanging freely and the flapping of wings can be heard coming from the ceiling.</p>
+</blockquote>
+<p>The cage at one time held the stirges now flying around the room. The poor dead goblin somehow managed to be under the cage when it was freed from the chain and died as a result. If the goblin is searched the party will find a pouch containing 220 sp and 30 gp.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Statistic</th>
+<th>7 Stirges</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AC</td>
+<td>13</td>
+</tr>
+<tr class="even">
+<td>HD</td>
+<td>1*</td>
+</tr>
+<tr class="odd">
+<td>#At</td>
+<td>1 bite</td>
+</tr>
+<tr class="even">
+<td>Dam</td>
+<td>1d4 + 1d4/round blood drain</td>
+</tr>
+<tr class="odd">
+<td>Mv</td>
+<td>10’; Fly 60’</td>
+</tr>
+<tr class="even">
+<td>Sv</td>
+<td>F1</td>
+</tr>
+<tr class="odd">
+<td>Ml</td>
+<td>9</td>
+</tr>
+<tr class="even">
+<td>XP</td>
+<td>37 ea.</td>
+</tr>
+<tr class="odd">
+<td>HP</td>
+<td>2, 4, 8, 2, 5, 5, 8</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="dungeon-map" class="level2">
+<h2 class="anchored" data-anchor-id="dungeon-map">Dungeon Map</h2>
+<figure class="figure">
+<div style="position:relative;width:100%;aspect-ratio:2363/1875;">
+<p><img src="images/beneath-brymassen-map.png" alt="Beneath Brymassen dungeon map, with rooms numbered 1 through 14, doors, secret doors, and two pits in area 3. North is at the top." style="position:absolute;left:50%;top:50%;width:79.3483%;max-width:none;height:auto;transform:translate(-50%,-50%) rotate(90deg);" loading="lazy" class="figure-img"></p>
+</div>
+<figcaption class="figure-caption">
+Original dungeon map, displayed north-up. The room dimensions in the text imply a grid of 10 feet per square (3 meters in the Hebrew edition).
+</figcaption>
+</figure>
+</section>
+<section id="source-and-license" class="level2">
+<h2 class="anchored" data-anchor-id="source-and-license">Source and License</h2>
+<p><em>Beneath Brymassen</em>, a collaborative dungeon, in <em>Adventure Anthology One</em>, first edition, release 21, printed pages 18–24 (PDF pages 20–26).</p>
+<p>Copyright © 2008–2012 Eldrad Wolfsbane, Mak, The Expert, skisko, Thomas Kolter, Maliki, Jim Bobb, Stuart Marshall, hjmartin70, J. D. Neal, David Gerard, and Chris Gonnerman.</p>
+<p>This web edition preserves both adventure modes and room numbering, organizes statistics into tables, replaces printed hit-point boxes with numeric lists, and adds clearly labeled mode-selection notes. The hobgoblin’s unusual movement rate of 4 feet is retained as printed. The Hebrew translation converts distances at 10 feet = 3 meters, rounds the 100-pound trap threshold to approximately 45 kg, and adapts the deliberately misspelled graffiti in room 7 into Hebrew. The map is displayed north-up using page layout; the source image is unchanged.</p>
+<p>The adventure text and its Hebrew translation are identified as Open Game Content under OGL v1.0a, separately from the site’s CC-BY-SA license. The map is reproduced from the source; the source excludes artwork from Open Game Content and retains its copyright holders’ rights. The anthology’s general map credits name J. D. Neal, Dennis Bamberger, and the authors; it does not give a separate credit for this map.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Original source notice and complete license">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Original source notice and complete license
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Designation of Open Game Content: The entire text of Adventure Anthology One (except the Open Game License, as explained below) is Open Game Content, released under the Open Game License, Version 1.0a (reproduced below) as described in Section 1(d) of the License. Artwork incorporated in this document is not Open Game Content, and remains the property of the copyright holder.</p>
+<p>Designation of Product Identity: Product identity is not Open Game Content. The following is designated as product identity pursuant to OGL v1.0a(1)(e) and (7): (A) product and product line names, including Basic Fantasy Role-Playing Game; (B) all artwork, logos, symbols, graphic designs, depictions, likenesses, formats, poses, concepts, themes and graphic, photographic and other visual representations, including the “eye” logo, which is the personal trademark of Chris Gonnerman for his various products; (C) logos and trademarks, including any trademark or registered trademark clearly identified as product identity by the owner of the product identity, and which specifically excludes the open game content.</p>
+<p>More information on the Open Game License can be found at: http://www.wizards.com/d20</p>
+<p>The terms of the Open Game License Version 1.0a are as follows:</p>
+<p>The following text is the property of Wizards of the Coast, Inc.&nbsp;and is Copyright 2000 Wizards of the Coast, Inc (“Wizards”). All Rights Reserved.</p>
+<ol type="1">
+<li>Definitions: (a)“Contributors” means the copyright and/or trademark owners who have contributed Open Game Content; (b)“Derivative Material” means copyrighted material including derivative works and translations (including into other computer languages), potation, modification, correction, addition, extension, upgrade, improvement, compilation, abridgment or other form in which an existing work may be recast, transformed or adapted;</li>
+</ol>
+<ol start="3" type="a">
+<li>“Distribute” means to reproduce, license, rent, lease, sell, broadcast, publicly display, transmit or otherwise distribute; (d)“Open Game Content” means the game mechanic and includes the methods, procedures, processes and routines to the extent such content does not embody the Product Identity and is an enhancement over the prior art and any additional content clearly identified as Open Game Content by the Contributor, and means any work covered by this License, including translations and derivative works under copyright law, but specifically excludes Product Identity. (e) “Product Identity” means product and product line names, logos and identifying marks including trade dress; artifacts; creatures characters; stories, storylines, plots, thematic elements, dialogue, incidents, language, artwork, symbols, designs, depictions, likenesses, formats, poses, concepts, themes and graphic, photographic and other visual or audio representations; names and descriptions of characters, spells, enchantments, personalities, teams, personas, likenesses and special abilities; places, locations, environments, creatures, equipment, magical or supernatural abilities or effects, logos, symbols, or graphic designs; and any other trademark or registered trademark clearly identified as Product identity by the owner of the Product Identity, and which specifically excludes the Open Game Content; (f) “Trademark” means the logos, names, mark, sign, motto, designs that are used by a Contributor to identify itself or its products or the associated products contributed to the Open Game License by the Contributor (g) “Use”, “Used” or “Using” means to use, Distribute, copy, edit, format, modify, translate and otherwise create Derivative Material of Open Game Content. (h) “You” or “Your” means the licensee in terms of this agreement.</li>
+</ol>
+<ol start="2" type="1">
+<li>The License: This License applies to any Open Game Content that contains a notice indicating that the Open Game Content may only be Used under and in terms of this License. You must affix such a notice to any Open Game Content that you Use. No terms may be added to or subtracted from this License except as described by the License itself. No other terms or conditions may be applied to any Open Game Content distributed using this License.</li>
+</ol>
+<p>3.Offer and Acceptance: By Using the Open Game Content You indicate Your acceptance of the terms of this License.</p>
+<ol start="4" type="1">
+<li>Grant and Consideration: In consideration for agreeing to use this License, the Contributors grant You a perpetual, worldwide, royalty-free, non-exclusive license with the exact terms of this License to Use, the Open Game Content.</li>
+</ol>
+<p>5.Representation of Authority to Contribute: If You are contributing original material as Open Game Content, You represent that Your Contributions are Your original creation and/or You have sufficient rights to grant the rights conveyed by this License.</p>
+<p>6.Notice of License Copyright: You must update the COPYRIGHT NOTICE portion of this License to include the exact text of the COPYRIGHT NOTICE of any Open Game Content You are copying, modifying or distributing, and You must add the title, the copyright date, and the copyright holder’s name to the COPYRIGHT NOTICE of any original Open Game Content you Distribute.</p>
+<ol start="7" type="1">
+<li><p>Use of Product Identity: You agree not to Use any Product Identity, including as an indication as to compatibility, except as expressly licensed in another, independent Agreement with the owner of each element of that Product Identity. You agree not to indicate compatibility or co-adaptability with any Trademark or Registered Trademark in conjunction with a work containing Open Game Content except as expressly licensed in another, independent Agreement with the owner of such Trademark or Registered Trademark. The use of any Product Identity in Open Game Content does not constitute a challenge to the ownership of that Product Identity. The owner of any Product Identity used in Open Game Content shall retain all rights, title and interest in and to that Product Identity.</p></li>
+<li><p>Identification: If you distribute Open Game Content You must clearly indicate which portions of the work that you are distributing are Open Game Content.</p></li>
+<li><p>Updating the License: Wizards or its designated Agents may publish updated versions of this License. You may use any authorized version of this License to copy, modify and distribute any Open Game Content originally distributed under any version of this License.</p></li>
+<li><p>Copy of this License: You MUST include a copy of this License with every copy of the Open Game Content You Distribute.</p></li>
+<li><p>Use of Contributor Credits: You may not market or advertise the Open Game Content using the name of any Contributor unless You have written permission from the Contributor to do so.</p></li>
+</ol>
+<p>12 Inability to Comply: If it is impossible for You to comply with any of the terms of this License with respect to some or all of the Open Game Content due to statute, judicial order, or governmental regulation then You may not Use any Open Game Material so affected.</p>
+<p>13 Termination: This License will terminate automatically if You fail to comply with all terms herein and fail to cure such breach within 30 days of becoming aware of the breach. All sublicenses shall survive the termination of this License.</p>
+<p>14 Reformation: If any provision of this License is held to be unenforceable, such provision shall be reformed only to the extent necessary to make it enforceable.</p>
+<p><strong>15 COPYRIGHT NOTICE</strong> Open Game License v 1.0 Copyright 2000, Wizards of the Coast, Inc. System Reference Document Copyright 2000-2003, Wizards of the Coast, Inc.; Authors Jonathan Tweet, Monte Cook, Skip Williams, Rich Baker, Andy Collins, David Noonan, Rich Redman, Bruce R. Cordell, John D. Rateliff, Thomas Reid, James Wyatt, based on original material by E. Gary Gygax and Dave Arneson. Castles &amp; Crusades: Players Handbook, Copyright 2004, Troll Lord Games; Authors Davis Chenault and Mac Golden. Castles &amp; Crusades: Monsters Product Support, Copyright 2005, Troll Lord Games. Basic Fantasy Role-Playing Game Copyright © 2006-2016 Chris Gonnerman. The Basic Fantasy Field Guide Copyright © 2010-2016 Chris Gonnerman, R. Kevin Smoot, James Lemon, and Contributors. Gold In The Hills Copyright © 2007 Ray Allen Merilla’s Magic Tower Copyright © 2007-2009 Rob Pinnell Pipe Beast Copyright © 2013 Dave Gerard. The Zombraire’s Estate Copyright © 2007 Russ Westbrook Beneath Brymassen Copyright © 2008-2012 Eldrad Wolfsbane, Mak, The Expert, skisko, Thomas Kolter, Maliki, Jim Bobb, Stuart Marshall, hjmartin70, J.D. Neal, David Gerard, and Chris Gonnerman Ruin of Darkfir Castle Copyright © 2008 Onno Tasler. Shepherds of Pineford Copyright © 2008 Jason Reilly Shepherds of Pineford Maps Copyright © 2008-2011 J.D. Neal Deathcrypt of Khaldun Copyright © 2009 Scott A. Murray. Vault of Thaire Copyright © 2009 David Grant Sinclair. Slaver’s Fortress Copyright © 2011-2012 Chris Gonnerman. Taming the Flames Copyright © 2011 Dave Gerard. The Lost Tome Copyright © 2011-2012 Dave Gerard. Insect Valhalla Copyright © 2009-2012 J.D. Neal. Island in River Copyright © 2009-2011 J.D. Neal. Night of the Necromancer, Copyright © 2007 Ray Allen. Adventure Anthology One, Copyright © 2007-2017, 2020 Chris Gonnerman and Contributors.</p>
+<p>END OF LICENSE</p>
+</div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./ruin-of-darkfir-castle.html" class="pagination-link" aria-label="Ruin of Darkfir Castle">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Ruin of Darkfir Castle</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./appendix_interactive.html" class="pagination-link" aria-label="Interactive tools">
+        <span class="nav-page-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Interactive tools</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

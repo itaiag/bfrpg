@@ -12,12 +12,12 @@ CC-BY-SA 4.0
 
 Any content (HTML, JavaScript, etc.) that is not part of the BFRPG IP is also distributed under CC-BY-SA 4.0.
 
-Exception: `ruin-of-darkfir-castle.qmd` and its Hebrew translation are adapted from
-*Adventure Anthology One*, release 21, and retain that source's Open Game License
+Exception: `ruin-of-darkfir-castle.qmd`, `beneath-brymassen.qmd`, and their Hebrew
+translations are adapted from *Adventure Anthology One*, release 21, and retain that source's Open Game License
 v1.0a designation rather than the site's CC-BY-SA license. The complete source
-notice and license are included in `includes/aa1-license.md` and displayed in both
-chapters. The reproduced castle map is not Open Game Content; its rights remain
-with its copyright holder, as stated in the source.
+notice and license are included in `includes/aa1-license.md` and displayed in each
+adventure chapter. The reproduced adventure maps are not Open Game Content; their rights remain
+with their copyright holders, as stated in the source.
 
 ## Prerequisites
 
