@@ -50,6 +50,7 @@ book:
       chapters:
         - ruin-of-darkfir-castle.qmd
         - beneath-brymassen.qmd
+        - deathcrypt-of-khaldun.qmd
     - part: Appendix
       chapters:
         - appendix_interactive.qmd
