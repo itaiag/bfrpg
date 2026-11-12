@@ -13,7 +13,7 @@ CC-BY-SA 4.0
 Any content (HTML, JavaScript, etc.) that is not part of the BFRPG IP is also distributed under CC-BY-SA 4.0.
 
 Exception: `ruin-of-darkfir-castle.qmd`, `beneath-brymassen.qmd`,
-`deathcrypt-of-khaldun.qmd`, and their Hebrew
+`deathcrypt-of-khaldun.qmd`, `insect-valhalla.qmd`, and their Hebrew
 translations are adapted from *Adventure Anthology One*, release 21, and retain that source's Open Game License
 v1.0a designation rather than the site's CC-BY-SA license. The complete source
 notice and license are included in `includes/aa1-license.md` and displayed in each

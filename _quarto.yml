@@ -51,6 +51,7 @@ book:
         - ruin-of-darkfir-castle.qmd
         - beneath-brymassen.qmd
         - deathcrypt-of-khaldun.qmd
+        - insect-valhalla.qmd
     - part: Appendix
       chapters:
         - appendix_interactive.qmd

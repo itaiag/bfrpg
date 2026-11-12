@@ -1,0 +1,2122 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="An adventure for 4 to 8 characters of levels 3 to 6: an open maze of mines, caves, giant insects, and dangerous plants.">
+
+<title>25&nbsp; Insect Valhalla – Basic Fantasy RPG, 4th edition</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./appendix_interactive.html" rel="next">
+<link href="./deathcrypt-of-khaldun.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-588e16051b300ec69a1061866f9e49f5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JS65M33XZB"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-JS65M33XZB', { 'anonymize_ip': true});
+</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caudex">
+<script src="translator/lang-switch.js"></script>
+
+
+<link rel="stylesheet" href="custom.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ruin-of-darkfir-castle.html">Ready-to-play Adventures</a></li><li class="breadcrumb-item"><a href="./insect-valhalla.html"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Insect Valhalla</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Basic Fantasy RPG, 4th edition</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Introduction</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./whatIsThis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Player Characters</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./char-creation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Player Characters</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./abilities.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Character Abilities</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./races.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Character Races</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./class.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Character Classes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./equipment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Equipment</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./vehicles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Vehicles</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Magic</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./spells.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Spells</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./allSpells.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Spells, Alphabetical</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Adventure</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dungeonAdventures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Dungeon Adventures</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./wildAdventures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Wilderness Adventures</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hirelings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Hirelings</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./advancement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Advancement</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Encounters</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./combat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Combat Encounters</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Monsters</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./monsters.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Monsters Intro</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./monstersAll.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Monster Descriptions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./monstersTab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Monsters Index</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Treasure</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./treasure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Treasure</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./magicItems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Magic Items</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+ <span class="menu-text">GM Information</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./gm01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Managing Encounters</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./gm02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Crafting Adventures</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
+ <span class="menu-text">Ready-to-play Adventures</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ruin-of-darkfir-castle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Ruin of Darkfir Castle</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./beneath-brymassen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Beneath Brymassen</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./deathcrypt-of-khaldun.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Deathcrypt of Khaldun</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./insect-valhalla.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Insect Valhalla</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendix</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix_interactive.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Interactive tools</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendixMapmaker.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Dungeon Maker</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./char_sheet.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Character Sheet</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true">
+ <span class="menu-text">Extra</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./extraClasses.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Additional Classes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./extraRaces.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Additional Races</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./extraRules.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Aditional and Alternate Rules</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#setting" id="toc-setting" class="nav-link active" data-scroll-target="#setting">Setting</a></li>
+  <li><a href="#wandering-monsters" id="toc-wandering-monsters" class="nav-link" data-scroll-target="#wandering-monsters">Wandering Monsters</a></li>
+  <li><a href="#area-key" id="toc-area-key" class="nav-link" data-scroll-target="#area-key">Area Key</a>
+  <ul>
+  <li><a href="#room-1" id="toc-room-1" class="nav-link" data-scroll-target="#room-1">1. Insect Graveyard</a></li>
+  <li><a href="#room-2" id="toc-room-2" class="nav-link" data-scroll-target="#room-2">2. Tree Of Woe</a></li>
+  <li><a href="#room-3" id="toc-room-3" class="nav-link" data-scroll-target="#room-3">3. Spiders Galore</a></li>
+  <li><a href="#room-4" id="toc-room-4" class="nav-link" data-scroll-target="#room-4">4. Wood Eating Beetles</a></li>
+  <li><a href="#room-5" id="toc-room-5" class="nav-link" data-scroll-target="#room-5">5. Hunting Tiger Beetles</a></li>
+  <li><a href="#room-6" id="toc-room-6" class="nav-link" data-scroll-target="#room-6">6. Ants</a></li>
+  <li><a href="#room-7" id="toc-room-7" class="nav-link" data-scroll-target="#room-7">7. Grassy Death</a></li>
+  <li><a href="#room-8" id="toc-room-8" class="nav-link" data-scroll-target="#room-8">8. Pool</a></li>
+  <li><a href="#room-9" id="toc-room-9" class="nav-link" data-scroll-target="#room-9">9. Mosquitoes</a></li>
+  <li><a href="#room-10" id="toc-room-10" class="nav-link" data-scroll-target="#room-10">10. Centipedes</a></li>
+  <li><a href="#room-11" id="toc-room-11" class="nav-link" data-scroll-target="#room-11">11. Giant Shrews</a></li>
+  <li><a href="#room-12" id="toc-room-12" class="nav-link" data-scroll-target="#room-12">12. Guard Fern</a></li>
+  <li><a href="#room-13" id="toc-room-13" class="nav-link" data-scroll-target="#room-13">13. Skeletons</a></li>
+  <li><a href="#room-14" id="toc-room-14" class="nav-link" data-scroll-target="#room-14">14. Spider Fox Holes</a></li>
+  <li><a href="#room-15" id="toc-room-15" class="nav-link" data-scroll-target="#room-15">15. Litter Box</a></li>
+  <li><a href="#room-16" id="toc-room-16" class="nav-link" data-scroll-target="#room-16">16. Waterfall</a></li>
+  <li><a href="#room-17" id="toc-room-17" class="nav-link" data-scroll-target="#room-17">17. Worm Beds</a></li>
+  <li><a href="#room-18" id="toc-room-18" class="nav-link" data-scroll-target="#room-18">18. Hissing Attack</a></li>
+  <li><a href="#room-19" id="toc-room-19" class="nav-link" data-scroll-target="#room-19">19. Gem Bed</a></li>
+  <li><a href="#room-20" id="toc-room-20" class="nav-link" data-scroll-target="#room-20">20. Blister Attack</a></li>
+  <li><a href="#room-21" id="toc-room-21" class="nav-link" data-scroll-target="#room-21">21. Giant Bee Nest</a></li>
+  <li><a href="#room-22" id="toc-room-22" class="nav-link" data-scroll-target="#room-22">22. Ant Annoyance</a></li>
+  <li><a href="#room-23" id="toc-room-23" class="nav-link" data-scroll-target="#room-23">23. Cave Locust Minefield</a></li>
+  <li><a href="#room-24" id="toc-room-24" class="nav-link" data-scroll-target="#room-24">24. Guard Fern</a></li>
+  <li><a href="#room-25" id="toc-room-25" class="nav-link" data-scroll-target="#room-25">25. Fruits And Berries</a></li>
+  <li><a href="#room-26" id="toc-room-26" class="nav-link" data-scroll-target="#room-26">26. Giant Ants</a></li>
+  <li><a href="#room-27" id="toc-room-27" class="nav-link" data-scroll-target="#room-27">27. Leg Breakers</a></li>
+  </ul></li>
+  <li><a href="#insect-valhalla-map" id="toc-insect-valhalla-map" class="nav-link" data-scroll-target="#insect-valhalla-map">Insect Valhalla Map</a></li>
+  <li><a href="#source-and-license" id="toc-source-and-license" class="nav-link" data-scroll-target="#source-and-license">Source and License</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ruin-of-darkfir-castle.html">Ready-to-play Adventures</a></li><li class="breadcrumb-item"><a href="./insect-valhalla.html"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Insect Valhalla</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Insect Valhalla</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>By <strong>J. D. Neal</strong><br>
+An adventure for 4 to 8 characters of levels 3 to 6</p>
+<div class="callout callout-style-default callout-note callout-titled" title="For the Game Master">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>For the Game Master
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This chapter contains adventure secrets. Blockquoted passages can be read aloud or paraphrased. Area numbers match the <a href="#insect-valhalla-map">map</a>.</p>
+<p>The source refers to the Basic Fantasy Field Guide, Volume 1 for giant praying mantises, giant mosquitoes, guard ferns, and giant trapdoor spiders. The encounter statistics supplied in this adventure are preserved here; review creature descriptions, especially poison, blood drain, and special attacks, before play. This preparation note is an addition to the web edition.</p>
+</div>
+</div>
+<section id="setting" class="level2">
+<h2 class="anchored" data-anchor-id="setting">Setting</h2>
+<p>This warren of caves is a mixture of roughly hewed mines and natural, water-worn chutes and tubes. It has never been the home of a humanoid tribe, although miners have traveled to it on occasion. The stonework is mostly soft lime (white or yellowish) and some granite, amid hard packed earth, roots and rock.</p>
+<p>There are no “ceilings” for most of the tunnels – they are open, letting in light and water. Plant life and small life forms thrive in the rich loam that has spilled down (or been washed down by rain fall) from the upper surfaces. Plants thrive in the surrounding area, growing down into the tunnels and casting seeds onto the floor.</p>
+<p>The inhabitants of this maze are a “warring” collection of giant insects, arachnids, worms and such creatures. They haven’t been disturbed in a long time and have settled into a domestic life, often as not never leaving the area they have staked out, preying off each other and anything that passes by.</p>
+<p>There aren’t any doors and many of the areas are open enough to spill in light, so unless the players decide to go through it at night they will have less to deal with in terms of lighting (although deep shadows would make carrying light wise). While the crevices would (in real life) be winding and crooked, they were kept fairly straight to make it easier to map and describe.</p>
+<p>The tunnels could be explored by walking outside, but (a) many of the monsters in it can certainly come crawling or flying out at fresh meat, and (b) during the growth season the crevices will be lined by plants and vines that make it difficult to see down into them. If party tries to skirt along the rim, the GM chances of being surprised should be increased. Many insects rely less on eyesight than they do chemical senses or vibrations to detect potential prey and intruders. Mucking around in the brush and trees outside the tunnels is an open invitation to ambush.</p>
+</section>
+<section id="wandering-monsters" class="level2">
+<h2 class="anchored" data-anchor-id="wandering-monsters">Wandering Monsters</h2>
+<p>Roll: 1 on 1d6 every 3 turns (30 minutes)</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Roll</th>
+<th>Encounter</th>
+<th>Statistics</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td>1d6 Giant Ants</td>
+<td><a href="#room-6">As in #6</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td>1d3 Giant Crab Spiders</td>
+<td><a href="#room-3">As in #3</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td>1d6 Giant Shrews</td>
+<td><a href="#room-11">As in #11</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td>1d6 Giant Bees</td>
+<td><a href="#room-21">As in #21</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td>1d6 Cave Locusts</td>
+<td><a href="#room-23">As in #23</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">6</td>
+<td>2d6 Giant Centipedes</td>
+<td><a href="#room-10">As in #10</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="area-key" class="level2">
+<h2 class="anchored" data-anchor-id="area-key">Area Key</h2>
+<section id="room-1" class="level3">
+<h3 class="anchored" data-anchor-id="room-1">1. Insect Graveyard</h3>
+<blockquote class="blockquote">
+<p>This rough, crudely hewed room is full of insect skeletons and bits and pieces of body parts – legs, wings, etc.</p>
+</blockquote>
+<p>These are the dried, empty corpses of beetles, spiders, and ants scattered in odd heaps here and there. Most are old and brittle. A few are fresher; one or two are moist to touch. As insects from other areas die, they are sometimes drug here to be eaten or disposed of.</p>
+</section>
+<section id="room-2" class="level3">
+<h3 class="anchored" data-anchor-id="room-2">2. Tree Of Woe</h3>
+<blockquote class="blockquote">
+<p>A great tree has driven its massive roots down into the wide opening here.</p>
+</blockquote>
+<p>A devilish pair of black widow spiders has claimed this nook as their territory. They remain hidden in the darkness of the tangled roots of the tree overhead, motionless and nearly invisible, hunting mainly by noting movement. Anyone moving into the nook has a high chance of becoming entangled in the nearly invisible webs that they have strung across the front. If they detect prey, the spiders come scuttling quickly down, causing any daylight from above to be blotted out and perhaps disorienting prey.</p>
+<p>Slumped against the lower roots is the mummified, skeletal figure of a human kept together by webs and dried tissues. It is wearing a silver holy symbol, a magical Mace +1 attached by a thong around one wrist, and a backpack full of ordinary gear including decayed food, and a small pouch with 3 gems worth 100 gp each and coins totaling 15 gp.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Statistic</th>
+<th>2 Giant Black Widow Spiders</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AC</td>
+<td>14</td>
+</tr>
+<tr class="even">
+<td>HD</td>
+<td>3*</td>
+</tr>
+<tr class="odd">
+<td>#At</td>
+<td>1 bite</td>
+</tr>
+<tr class="even">
+<td>Dam</td>
+<td>2d6 + poison</td>
+</tr>
+<tr class="odd">
+<td>Mv</td>
+<td>20’ Web 40’</td>
+</tr>
+<tr class="even">
+<td>Sv</td>
+<td>F3</td>
+</tr>
+<tr class="odd">
+<td>Ml</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>XP</td>
+<td>175 ea.</td>
+</tr>
+<tr class="odd">
+<td>HP</td>
+<td>16, 17</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="room-3" class="level3">
+<h3 class="anchored" data-anchor-id="room-3">3. Spiders Galore</h3>
+<blockquote class="blockquote">
+<p>Plants are thick here, with leaf covered vines and shrubs growing down into the crevice. The husks of dead insects are scattered here and there on the floor.</p>
+</blockquote>
+<p>This rough hallway is the lair of a number of spiders fighting an unplanned war against the other insects. They are holding their ground, catching, killing and eating ants and beetles that come prowling around. The presence of carcasses on the floor will make it obvious who is here. Anyone who takes the time to investigate before entering might see something vague moving about now and then, although the spiders tend to be well camouflaged and strike from ambush. Someone patient enough may even witness a kill.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Statistic</th>
+<th>6 Giant Crab Spiders</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AC</td>
+<td>13</td>
+</tr>
+<tr class="even">
+<td>HD</td>
+<td>2*</td>
+</tr>
+<tr class="odd">
+<td>#At</td>
+<td>1 bite</td>
+</tr>
+<tr class="even">
+<td>Dam</td>
+<td>1d8 + poison</td>
+</tr>
+<tr class="odd">
+<td>Mv</td>
+<td>40’</td>
+</tr>
+<tr class="even">
+<td>Sv</td>
+<td>F2</td>
+</tr>
+<tr class="odd">
+<td>Ml</td>
+<td>7</td>
+</tr>
+<tr class="even">
+<td>XP</td>
+<td>100 ea.</td>
+</tr>
+<tr class="odd">
+<td>HP</td>
+<td>13, 8, 5, 8, 4, 7</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="room-4" class="level3">
+<h3 class="anchored" data-anchor-id="room-4">4. Wood Eating Beetles</h3>
+<blockquote class="blockquote">
+<p>The floor of this area is thick with old leaves and rich earth. The smell of freshly turned over soil comes to the nose, as well as the smell of raw wood.</p>
+</blockquote>
+<p>A collection of giant bombardier beetles are thriving in the mixture of leaf foliage and crumbled wood on the floor here. If attacked (or someone gets too close) they attack.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Statistic</th>
+<th>8 Giant Bombardier Beetles</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AC</td>
+<td>16</td>
+</tr>
+<tr class="even">
+<td>HD</td>
+<td>2*</td>
+</tr>
+<tr class="odd">
+<td>#At</td>
+<td>1 bite + special</td>
+</tr>
+<tr class="even">
+<td>Dam</td>
+<td>1d6 + special</td>
+</tr>
+<tr class="odd">
+<td>Mv</td>
+<td>40’</td>
+</tr>
+<tr class="even">
+<td>Sv</td>
+<td>F2</td>
+</tr>
+<tr class="odd">
+<td>Ml</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>XP</td>
+<td>100 ea.</td>
+</tr>
+<tr class="odd">
+<td>HP</td>
+<td>15, 12, 12, 8, 5, 8, 4, 6</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="room-5" class="level3">
+<h3 class="anchored" data-anchor-id="room-5">5. Hunting Tiger Beetles</h3>
+<blockquote class="blockquote">
+<p>Plant growth is lush here, especially along the rim. A long opening in the ceiling will shed bright light into this area during the day, especially at noon.</p>
+</blockquote>
+<p>At the opposite end of this tunnel lurks three tiger beetles, careful and quiet. They will attack any movement in an attempt to secure prey, lunging out with a good chance of surprise, unless the player characters have some method of illuminating it from a distance to reveal them.</p>
+<p>Several humanoid bones lie among the litter in this nest, as well as scraps of armor and clothing. A pouch with 300 gp has spilled onto the ground, alongside a rusted short sword and dagger (how rusted they are is up to the Game Master).</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Statistic</th>
+<th>3 Giant Tiger Beetles</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AC</td>
+<td>17</td>
+</tr>
+<tr class="even">
+<td>HD</td>
+<td>3+1</td>
+</tr>
+<tr class="odd">
+<td>#At</td>
+<td>1 bite</td>
+</tr>
+<tr class="even">
+<td>Dam</td>
+<td>2d6</td>
+</tr>
+<tr class="odd">
+<td>Mv</td>
+<td>60’ (10’)</td>
+</tr>
+<tr class="even">
+<td>Sv</td>
+<td>F3</td>
+</tr>
+<tr class="odd">
+<td>Ml</td>
+<td>9</td>
+</tr>
+<tr class="even">
+<td>XP</td>
+<td>145 ea.</td>
+</tr>
+<tr class="odd">
+<td>HP</td>
+<td>21, 15, 14</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="room-6" class="level3">
+<h3 class="anchored" data-anchor-id="room-6">6. Ants</h3>
+<blockquote class="blockquote">
+<p>Ahead of you are twin openings in the north face of the crevice. The openings are rounded, cleared of roots and brush, some of which has been snipped off close to the root. There are no large rocks and something has evened out the walls and floors.</p>
+</blockquote>
+<p>Scurrying in constant activity around these tunnels are giant ants. They are so busy keeping the tunnels clean that they will usually be seen outright.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Statistic</th>
+<th>5 Giant Ants</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AC</td>
+<td>17</td>
+</tr>
+<tr class="even">
+<td>HD</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>#At</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>Dam</td>
+<td>2d6</td>
+</tr>
+<tr class="odd">
+<td>Mv</td>
+<td>60’ (10’)</td>
+</tr>
+<tr class="even">
+<td>Sv</td>
+<td>F4</td>
+</tr>
+<tr class="odd">
+<td>Ml</td>
+<td>7 on first sighting, 12 after engaged</td>
+</tr>
+<tr class="even">
+<td>XP</td>
+<td>240 ea.</td>
+</tr>
+<tr class="odd">
+<td>HP</td>
+<td>27, 23, 22, 22, 19</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="room-7" class="level3">
+<h3 class="anchored" data-anchor-id="room-7">7. Grassy Death</h3>
+<blockquote class="blockquote">
+<p>Thin, young trees dot this relatively open area, which is grown up with tall grasses and cane.</p>
+</blockquote>
+<p>This is home to two giant praying mantises, which stalk prey by blending in with the vegetation. They have a high chance of surprising unwary characters (1-4 on 1d6); a lower chance of surprising those who might be looking for one.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Statistic</th>
+<th>2 Giant Praying Mantises</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AC</td>
+<td>16</td>
+</tr>
+<tr class="even">
+<td>HD</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>#At</td>
+<td>1 bite</td>
+</tr>
+<tr class="even">
+<td>Dam</td>
+<td>1d12 bite</td>
+</tr>
+<tr class="odd">
+<td>Mv</td>
+<td>40’ Fly 120’</td>
+</tr>
+<tr class="even">
+<td>Sv</td>
+<td>F5</td>
+</tr>
+<tr class="odd">
+<td>Ml</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>XP</td>
+<td>360 ea.</td>
+</tr>
+<tr class="odd">
+<td>HP</td>
+<td>28, 22</td>
+</tr>
+</tbody>
+</table>
+<p>More detailed information about giant praying mantises can be found in the Basic Fantasy Field Guide Volume 1.</p>
+</section>
+<section id="room-8" class="level3">
+<h3 class="anchored" data-anchor-id="room-8">8. Pool</h3>
+<blockquote class="blockquote">
+<p>The north side of this alcove has a pool of water in it, clear, clean and cool. It lies placid, perhaps the run off of rain water or something that is fed by a gentle underground seep. There is a scattering of cane about, but overhanging ledges keep the area dark much of the time.</p>
+</blockquote>
+<p>There might be an occasional insect here drinking, but few inhabit this area. The pool disappears under a shelf, opening out into the “secret” chamber to the north. Award the party a pocket award of (for example) 50 to 100 experience points for finding it and swimming to the other side.</p>
+</section>
+<section id="room-9" class="level3">
+<h3 class="anchored" data-anchor-id="room-9">9. Mosquitoes</h3>
+<blockquote class="blockquote">
+<p>You see a pool of clear, clean and cool water filling much of this chamber. It is placid, perhaps a cistern formed by the run-off of rain water or fed by a gentle underground seep. The roof is open in this alcove and skinny but tall canes stretch thirty feet high around the rim. An annoying, buzzing whine can be heard, growing more intense second by second.</p>
+</blockquote>
+<p>Here we have giant mosquitoes, which ravage the animals in the outlying area at night. They will come buzzing in to attack warm blooded prey any time of the day. There are a total of 20 + 2d6 of them, although rarely will more than 1d6+1 discover each adventurer at any time.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Statistic</th>
+<th>22 to 32 Giant Mosquitoes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AC</td>
+<td>11</td>
+</tr>
+<tr class="even">
+<td>HD</td>
+<td>1d4 HP*</td>
+</tr>
+<tr class="odd">
+<td>#At</td>
+<td>1 bite</td>
+</tr>
+<tr class="even">
+<td>Dam</td>
+<td>1d3 bite + 1d3/round blood drain</td>
+</tr>
+<tr class="odd">
+<td>Mv</td>
+<td>50’</td>
+</tr>
+<tr class="even">
+<td>Sv</td>
+<td>F1</td>
+</tr>
+<tr class="odd">
+<td>Ml</td>
+<td>9</td>
+</tr>
+<tr class="even">
+<td>XP</td>
+<td>13 ea.</td>
+</tr>
+<tr class="odd">
+<td>HP</td>
+<td>3, 1, 3, 3, 2, 3, 1, 3, 2, 4, 1, 1, 2, 3, 2, 1, 3, 4, 2, 1, 3, 1, 4, 2, 4, 4, 2, 3, 3, 2, 3, 2</td>
+</tr>
+</tbody>
+</table>
+<p>More detailed information about giant mosquitoes can be found in the Basic Fantasy Field Guide Volume 1.</p>
+</section>
+<section id="room-10" class="level3">
+<h3 class="anchored" data-anchor-id="room-10">10. Centipedes</h3>
+<blockquote class="blockquote">
+<p>Now and then something scuttles in the dry leaves carpeting this grassy, overgrown area.</p>
+</blockquote>
+<p>The leaf litter and muck in this area is infested by giant centipedes. Roll to determine how many are encountered each minute of exploration. 1d6: 1-3 = 1, 4-5 = 2, 6 = 3. There is a maximum of 1d6+6 (7 – 12).</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Statistic</th>
+<th>7 to 12 Giant Centipedes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AC</td>
+<td>11</td>
+</tr>
+<tr class="even">
+<td>HD</td>
+<td>1d4 HP*</td>
+</tr>
+<tr class="odd">
+<td>#At</td>
+<td>1 bite</td>
+</tr>
+<tr class="even">
+<td>Dam</td>
+<td>poison</td>
+</tr>
+<tr class="odd">
+<td>Mv</td>
+<td>40’</td>
+</tr>
+<tr class="even">
+<td>Sv</td>
+<td>NM</td>
+</tr>
+<tr class="odd">
+<td>Ml</td>
+<td>7</td>
+</tr>
+<tr class="even">
+<td>XP</td>
+<td>13 ea.</td>
+</tr>
+<tr class="odd">
+<td>HP</td>
+<td>2, 4, 2, 3, 4, 1, 2, 2, 3, 3, 1, 1</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="room-11" class="level3">
+<h3 class="anchored" data-anchor-id="room-11">11. Giant Shrews</h3>
+<blockquote class="blockquote">
+<p>This tunnel is fairly open, but overgrown along the rim. Large ferns and bushes are growing thick along the floor. A frantic squeaking like overgrown mice can be heard from amid the weeds.</p>
+</blockquote>
+<p>Attracted by worms and insects, the giant shrews here are voracious and strike at any form of food they detect. Two silver-headed hand axes lie among rubbish on the ground.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Statistic</th>
+<th>12 Giant Shrews</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AC</td>
+<td>16</td>
+</tr>
+<tr class="even">
+<td>HD</td>
+<td>1*</td>
+</tr>
+<tr class="odd">
+<td>#At</td>
+<td>2 bites</td>
+</tr>
+<tr class="even">
+<td>Dam</td>
+<td>1d6/1d6</td>
+</tr>
+<tr class="odd">
+<td>Mv</td>
+<td>60’</td>
+</tr>
+<tr class="even">
+<td>Sv</td>
+<td>F2</td>
+</tr>
+<tr class="odd">
+<td>Ml</td>
+<td>10</td>
+</tr>
+<tr class="even">
+<td>XP</td>
+<td>37 ea.</td>
+</tr>
+<tr class="odd">
+<td>HP</td>
+<td>8, 7, 1, 4, 6, 3, 4, 6, 3, 5, 6, 4</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="room-12" class="level3">
+<h3 class="anchored" data-anchor-id="room-12">12. Guard Fern</h3>
+<blockquote class="blockquote">
+<p>Large ferns and brush grow thick along the floor here.</p>
+</blockquote>
+<p>This area is defended by a guard fern.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Statistic</th>
+<th>Guard Fern</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AC</td>
+<td>14</td>
+</tr>
+<tr class="even">
+<td>HD</td>
+<td>6*</td>
+</tr>
+<tr class="odd">
+<td>#At</td>
+<td>3 thorn, acid, leaves</td>
+</tr>
+<tr class="even">
+<td>Dam</td>
+<td>1d4 thorn, 3d8 acid, 1d8 leaves</td>
+</tr>
+<tr class="odd">
+<td>Mv</td>
+<td>0’ (immobile)</td>
+</tr>
+<tr class="even">
+<td>Sv</td>
+<td>F6</td>
+</tr>
+<tr class="odd">
+<td>Ml</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td>XP</td>
+<td>555</td>
+</tr>
+<tr class="odd">
+<td>HP</td>
+<td>27</td>
+</tr>
+</tbody>
+</table>
+<p>More detailed information about guard ferns can be found in the Basic Fantasy Field Guide Volume 1.</p>
+</section>
+<section id="room-13" class="level3">
+<h3 class="anchored" data-anchor-id="room-13">13. Skeletons</h3>
+<blockquote class="blockquote">
+<p>You can tell that this channel was once much more narrower but has collapsed into a heap of rock and earth some time ago. Mixed in with the rubble are grasses and shrubs, growing up amid white, bone-like sticks and rounded rocks.</p>
+</blockquote>
+<p>The sticks are bones and the rocks are skulls. Here lie the remnants of a human mining party killed by a cave-in, uncovered by weathering and insects. There are about six skeletons, 3 or 4 of which are suitable for being animated. Included among the bones are 180 cp, 13 sp, 13 gp, and 5 pp.</p>
+</section>
+<section id="room-14" class="level3">
+<h3 class="anchored" data-anchor-id="room-14">14. Spider Fox Holes</h3>
+<blockquote class="blockquote">
+<p>You see a long tunnel open to the sky and grown over with grass on the floor and long vines along the walls.</p>
+</blockquote>
+<p>Hidden in the north wall of the tunnel are two trapdoor spiders. They have made extremely good covers for their burrows, and rely mostly on sound and vibrations to detect prey. Consider the covers to be well-made secret doors. An aggressive physical search will reveal the coverings (they are soft while the walls and floors are hard). A probing search will also cause the spider within to attack. If they are not discovered beforehand, roll 1d6 for each person passing by an opening; on a 5 or 6 a spider has noted them and decides to attack.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Statistic</th>
+<th>2 Giant Trapdoor Spiders</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AC</td>
+<td>15</td>
+</tr>
+<tr class="even">
+<td>HD</td>
+<td>4*</td>
+</tr>
+<tr class="odd">
+<td>#At</td>
+<td>1 bite</td>
+</tr>
+<tr class="even">
+<td>Dam</td>
+<td>1d8 bite + poison or wrestling</td>
+</tr>
+<tr class="odd">
+<td>Mv</td>
+<td>50’</td>
+</tr>
+<tr class="even">
+<td>Sv</td>
+<td>F4</td>
+</tr>
+<tr class="odd">
+<td>Ml</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>XP</td>
+<td>280 ea.</td>
+</tr>
+<tr class="odd">
+<td>HP</td>
+<td>18, 15</td>
+</tr>
+</tbody>
+</table>
+<p>More detailed information about giant trapdoor spiders can be found in the Basic Fantasy Field Guide Volume 1.</p>
+</section>
+<section id="room-15" class="level3">
+<h3 class="anchored" data-anchor-id="room-15">15. Litter Box</h3>
+<blockquote class="blockquote">
+<p>A collection of many different insect corpses have been gathered in this area, punctured and drained of internal fluids and organs.</p>
+</blockquote>
+<p>Buried under the bodies will be ten pounds of gold nuggets (at 10 coins per pound, they can be valued at 10 gp per pound) and two rough gems, whose uncut values are 200 gp each, but will approach 500 gp each once cut.</p>
+</section>
+<section id="room-16" class="level3">
+<h3 class="anchored" data-anchor-id="room-16">16. Waterfall</h3>
+<blockquote class="blockquote">
+<p>The constant splatter of water announces this pool of water. A stream gushes out of a small hole up top and splatters down into the pool.</p>
+</blockquote>
+<p>The pool is shallow and fresh. The hole up top and is too small for anyone to get into. It slowly drains into the porous rock below.</p>
+</section>
+<section id="room-17" class="level3">
+<h3 class="anchored" data-anchor-id="room-17">17. Worm Beds</h3>
+<blockquote class="blockquote">
+<p>Both branches of this Y-intersection are thick with loam and earth. Something moves through the leaves now and then with a snake-like slither.</p>
+</blockquote>
+<p>These areas are occupied by entirely inoffensive earthworms of quiet large size: a foot or two long, sometimes three or four. They live their blind life enriching the soil and providing food for moles and insects and such. Curious players might find 5d6 x 5 pounds of worms in each place.</p>
+</section>
+<section id="room-18" class="level3">
+<h3 class="anchored" data-anchor-id="room-18">18. Hissing Attack</h3>
+<blockquote class="blockquote">
+<p>The walls are gown over with tall, narrow trees and vines. Winding down from the roof is a large snake!</p>
+</blockquote>
+<p>Once the hungry inhabitant is dealt with, two crushed and mostly digested ancient corpses of dwarves can be found with a careful search, hidden among brush and leaves. A Potion of Healing and a Potion of Gaseous Form can be found in a smallish wooden casket underneath one. A mostly-digested leather bag contains 3 gems worth 100 gp each, 12 platinum pieces, and 230 gp.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Statistic</th>
+<th>Python Snake</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AC</td>
+<td>14</td>
+</tr>
+<tr class="even">
+<td>HD</td>
+<td>5*</td>
+</tr>
+<tr class="odd">
+<td>#At</td>
+<td>1 bite + constrict</td>
+</tr>
+<tr class="even">
+<td>Dam</td>
+<td>1d4 + 2d4</td>
+</tr>
+<tr class="odd">
+<td>Mv</td>
+<td>30’</td>
+</tr>
+<tr class="even">
+<td>Sv</td>
+<td>F5</td>
+</tr>
+<tr class="odd">
+<td>Ml</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>XP</td>
+<td>590</td>
+</tr>
+<tr class="odd">
+<td>HP</td>
+<td>22</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="room-19" class="level3">
+<h3 class="anchored" data-anchor-id="room-19">19. Gem Bed</h3>
+<blockquote class="blockquote">
+<p>This narrow tube leads to a wet tunnel that ends in an area which seems to have been cut by humanoid hands. A broken, rusted iron pick and a very old, rotten leather sock-like shoe are visible amid spilled rocks and clumps of earth. The tunnel walls narrow sharply overhead, almost obscuring any light. Moisture drips down now and then and the floor is muddy and squishy. Sometimes you sink ankle deep in a random mud hole.</p>
+</blockquote>
+<p>Here is what attracted occasional miners: encrusted into the soft matrix of the walls are gem stones. With a few hours of work the characters can recover the following uncut gems (cut values in parenthesis):</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Number</th>
+<th>Uncut Value</th>
+<th>Cut Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">3d8</td>
+<td>10 gp</td>
+<td>25 gp</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2d8</td>
+<td>100 gp</td>
+<td>200 gp</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1d8</td>
+<td>250 gp</td>
+<td>500 gp</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="room-20" class="level3">
+<h3 class="anchored" data-anchor-id="room-20">20. Blister Attack</h3>
+<blockquote class="blockquote">
+<p>Trees and brush are thick overhead, creating a dark morass of shadows amid roots, vines, and ferns.</p>
+</blockquote>
+<p>Three giant bombardier beetles lurk in the shadows, preying on whatever passes. Among the litter of their kills is a torn leather necklace with 10 small gems worth 50 gp each lashed to it.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Statistic</th>
+<th>3 Giant Bombardier Beetles</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AC</td>
+<td>16</td>
+</tr>
+<tr class="even">
+<td>HD</td>
+<td>2*</td>
+</tr>
+<tr class="odd">
+<td>#At</td>
+<td>1 bite + special</td>
+</tr>
+<tr class="even">
+<td>Dam</td>
+<td>1d6 + special</td>
+</tr>
+<tr class="odd">
+<td>Mv</td>
+<td>40’</td>
+</tr>
+<tr class="even">
+<td>Sv</td>
+<td>F2</td>
+</tr>
+<tr class="odd">
+<td>Ml</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>XP</td>
+<td>100 ea.</td>
+</tr>
+<tr class="odd">
+<td>HP</td>
+<td>13, 11, 5</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="room-21" class="level3">
+<h3 class="anchored" data-anchor-id="room-21">21. Giant Bee Nest</h3>
+<blockquote class="blockquote">
+<p>The opening to this cubicle is fairly open, with random trees and brush providing some shade. Nestled amid tree roots against the south wall is a curious, extremely large lump of gray wood.</p>
+</blockquote>
+<p>A hive of giant bees has built its nest here – a massive structure of beeswax and paper. In general, the party will encounter them in waves of 1d6 or 1d8, unless the PCs do something to irritate the entire nest. Usually 1d6 or 1d8 will be inside the nest itself at any time and as such safe (or at least with a bonus to saves) from various area attack spells. The hive contains 2d6 x 10 gallons of honey which might be priced at 20 to 40 gp per gallon (about 5 to 10 gp per pound).</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Statistic</th>
+<th>15 Giant Bees</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AC</td>
+<td>13</td>
+</tr>
+<tr class="even">
+<td>HD</td>
+<td>1d4 HP*</td>
+</tr>
+<tr class="odd">
+<td>#At</td>
+<td>1 sting</td>
+</tr>
+<tr class="even">
+<td>Dam</td>
+<td>1d4 + poison</td>
+</tr>
+<tr class="odd">
+<td>Mv</td>
+<td>10’ Fly 50’</td>
+</tr>
+<tr class="even">
+<td>Sv</td>
+<td>F1</td>
+</tr>
+<tr class="odd">
+<td>Ml</td>
+<td>9</td>
+</tr>
+<tr class="even">
+<td>XP</td>
+<td>13 ea.</td>
+</tr>
+<tr class="odd">
+<td>HP</td>
+<td>2, 3, 3, 1, 2, 4, 1, 1, 1, 4, 2, 4, 2, 2, 4</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="room-22" class="level3">
+<h3 class="anchored" data-anchor-id="room-22">22. Ant Annoyance</h3>
+<blockquote class="blockquote">
+<p>The floor of this passage is cluttered by leaf litter and the remains of old trees.</p>
+</blockquote>
+<p>If the party enters this alcove, they will be swarmed by ants that are much larger than normal ants but are in no way giant ants. They make up two swarms of insects that attack in close combat.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Statistic</th>
+<th>2 Insect Swarms</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AC</td>
+<td>13</td>
+</tr>
+<tr class="even">
+<td>HD</td>
+<td>4*</td>
+</tr>
+<tr class="odd">
+<td>#At</td>
+<td>1 swarm</td>
+</tr>
+<tr class="even">
+<td>Dam</td>
+<td>1d3 (double against no armor)</td>
+</tr>
+<tr class="odd">
+<td>Mv</td>
+<td>10’</td>
+</tr>
+<tr class="even">
+<td>Sv</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td>Ml</td>
+<td>11</td>
+</tr>
+<tr class="even">
+<td>XP</td>
+<td>280 ea.</td>
+</tr>
+<tr class="odd">
+<td>HP</td>
+<td>14, 13</td>
+</tr>
+</tbody>
+</table>
+<p>Getting rid of them will allow a search of the area, revealing five uncut gems worth 50 gp each (100 gp if properly cut).</p>
+</section>
+<section id="room-23" class="level3">
+<h3 class="anchored" data-anchor-id="room-23">23. Cave Locust Minefield</h3>
+<blockquote class="blockquote">
+<p>Vines, brush, and ferns are scattered along this hall. Leaf litter and rotten wood covers the floor. An occasional grinding noise is heard and the pop of something stepping on dry leaves.</p>
+</blockquote>
+<p>Chewing on leaves and browse are giant cave locusts. They bite, jump, shriek, spit goo and so on per the rule book. There is a 1 in 1d6 chance that anyone passing through stealthily will spook them and cause them to react.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Statistic</th>
+<th>7 Giant Cave Locusts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AC</td>
+<td>16</td>
+</tr>
+<tr class="even">
+<td>HD</td>
+<td>2**</td>
+</tr>
+<tr class="odd">
+<td>#At</td>
+<td>1 bite or 1 bump or 1 spit</td>
+</tr>
+<tr class="even">
+<td>Dam</td>
+<td>1d2 or 1d4* or special</td>
+</tr>
+<tr class="odd">
+<td>Mv</td>
+<td>20’ Fly 60’ (15’)</td>
+</tr>
+<tr class="even">
+<td>Sv</td>
+<td>F2</td>
+</tr>
+<tr class="odd">
+<td>Ml</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td>XP</td>
+<td>125 ea.</td>
+</tr>
+<tr class="odd">
+<td>HP</td>
+<td>8, 11, 12, 7, 8, 10, 8</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="room-24" class="level3">
+<h3 class="anchored" data-anchor-id="room-24">24. Guard Fern</h3>
+<blockquote class="blockquote">
+<p>Vines, brush, and ferns are scattered along this hall. The ferns are especially thick near the intersection.</p>
+</blockquote>
+<p>This collection of fern-like plants has developed a series of defenses against animals that might try to eat it.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Statistic</th>
+<th>Guard Fern</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AC</td>
+<td>14</td>
+</tr>
+<tr class="even">
+<td>HD</td>
+<td>6*</td>
+</tr>
+<tr class="odd">
+<td>#At</td>
+<td>3 thorn, acid, leaves</td>
+</tr>
+<tr class="even">
+<td>Dam</td>
+<td>1d4 thorn, 3d8 acid, 1d8 leaves</td>
+</tr>
+<tr class="odd">
+<td>Mv</td>
+<td>0’ (immobile)</td>
+</tr>
+<tr class="even">
+<td>Sv</td>
+<td>F6</td>
+</tr>
+<tr class="odd">
+<td>Ml</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td>XP</td>
+<td>555</td>
+</tr>
+<tr class="odd">
+<td>HP</td>
+<td>27</td>
+</tr>
+</tbody>
+</table>
+<p>More detailed information about guard ferns can be found in the Basic Fantasy Field Guide Volume 1.</p>
+</section>
+<section id="room-25" class="level3">
+<h3 class="anchored" data-anchor-id="room-25">25. Fruits And Berries</h3>
+<blockquote class="blockquote">
+<p>There are no ferns here and the vines are laden with red and green berries. Several small bushes covered by purple berries can also be seen. A fig tree is towering overhead and nearby you see a small pear tree.</p>
+</blockquote>
+<p>Several of the plants here produce perfectly edible (and harmless) fruits and berries during the growing season. Around 1 week of rations for one person can be gathered each week during the growing season.</p>
+<p>The Game Master must decide when the growing season is.</p>
+</section>
+<section id="room-26" class="level3">
+<h3 class="anchored" data-anchor-id="room-26">26. Giant Ants</h3>
+<blockquote class="blockquote">
+<p>Overhanging plant growth along the rim of this hall makes the tunnel dark. The tunnel seems to have been neatly cleaned of roots, rocks, and other obstructions, perhaps with even more diligence than human miners would put into the chore.</p>
+</blockquote>
+<p>A nest of giant ants has this corridor staked out and are renovating it. Piled back inside the nest are small rocks including eight uncut gemstones worth 50 gp (100 gp cut).</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Statistic</th>
+<th>5 Giant Ants</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AC</td>
+<td>17</td>
+</tr>
+<tr class="even">
+<td>HD</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>#At</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>Dam</td>
+<td>2d6</td>
+</tr>
+<tr class="odd">
+<td>Mv</td>
+<td>60’ (10’)</td>
+</tr>
+<tr class="even">
+<td>Sv</td>
+<td>F4</td>
+</tr>
+<tr class="odd">
+<td>Ml</td>
+<td>7 on first sighting, 12 after engaged</td>
+</tr>
+<tr class="even">
+<td>XP</td>
+<td>240 ea.</td>
+</tr>
+<tr class="odd">
+<td>HP</td>
+<td>23, 18, 16, 18, 14</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="room-27" class="level3">
+<h3 class="anchored" data-anchor-id="room-27">27. Leg Breakers</h3>
+<blockquote class="blockquote">
+<p>The floor of this passage is carpeted in leaves, roots, brush, and a long dead, immature pecan tree resting on its side.</p>
+</blockquote>
+<p>A number of one-foot and two-foot wide holes are hidden under the clutter. If the players take care they can discover them and mark them or even fill them with large rocks or some such contrivance. If they aren’t careful, there’s a 1 in 6 chance of putting a leg through one and taking damage (1d6 points). Once they are revealed, anyone being careful can move through them safely, but someone running through the area has to make a random 1d6 roll versus Dexterity (or as the GM desires) or they will step into one.</p>
+</section>
+</section>
+<section id="insect-valhalla-map" class="level2">
+<h2 class="anchored" data-anchor-id="insect-valhalla-map">Insect Valhalla Map</h2>
+<div id="fig-insect-map" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Original Insect Valhalla map, with north at the top and a scale of 10 feet per square.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-insect-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/insect-valhalla-map.png" class="img-fluid figure-img" alt="Original Insect Valhalla map, with north at the top and a scale of 10 feet per square.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-insect-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;25.1: Original Insect Valhalla map by J. D. Neal, showing the cave and mine network, trees, pools, and areas 1 through 27.
+</figcaption>
+</figure>
+</div>
+<p>North is at the top. Each square represents 10 feet (3 meters in the Hebrew edition). Map copyright © 2009 J. D. Neal, as credited on the map itself.</p>
+</section>
+<section id="source-and-license" class="level2">
+<h2 class="anchored" data-anchor-id="source-and-license">Source and License</h2>
+<p><em>Insect Valhalla</em>, by J. D. Neal, in <em>Adventure Anthology One</em>, first edition, release 21, printed pages 64–70 (PDF pages 66–72). Copyright © 2009–2012 J. D. Neal.</p>
+<p>This web edition preserves encounter numbers, hit points, and XP, reorganizes statistics into tables, and replaces printed HP boxes with numeric lists. It adds internal references and preparation notes. The Hebrew translation converts distances at 10 feet = 3 meters, uses approximately 0.45 kg per pound and 3.8 liters per gallon, and preserves the original honey prices by volume and weight as separate estimates. The unusual 1d6 roll versus Dexterity in area 27 is retained as written.</p>
+<p>The adventure text and its Hebrew translation are identified as Open Game Content under OGL v1.0a, separately from the site’s CC-BY-SA license. The original map is reproduced here; the source excludes artwork from Open Game Content and retains its copyright holders’ rights.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Original source notice and complete license">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Original source notice and complete license
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Designation of Open Game Content: The entire text of Adventure Anthology One (except the Open Game License, as explained below) is Open Game Content, released under the Open Game License, Version 1.0a (reproduced below) as described in Section 1(d) of the License. Artwork incorporated in this document is not Open Game Content, and remains the property of the copyright holder.</p>
+<p>Designation of Product Identity: Product identity is not Open Game Content. The following is designated as product identity pursuant to OGL v1.0a(1)(e) and (7): (A) product and product line names, including Basic Fantasy Role-Playing Game; (B) all artwork, logos, symbols, graphic designs, depictions, likenesses, formats, poses, concepts, themes and graphic, photographic and other visual representations, including the “eye” logo, which is the personal trademark of Chris Gonnerman for his various products; (C) logos and trademarks, including any trademark or registered trademark clearly identified as product identity by the owner of the product identity, and which specifically excludes the open game content.</p>
+<p>More information on the Open Game License can be found at: http://www.wizards.com/d20</p>
+<p>The terms of the Open Game License Version 1.0a are as follows:</p>
+<p>The following text is the property of Wizards of the Coast, Inc.&nbsp;and is Copyright 2000 Wizards of the Coast, Inc (“Wizards”). All Rights Reserved.</p>
+<ol type="1">
+<li>Definitions: (a)“Contributors” means the copyright and/or trademark owners who have contributed Open Game Content; (b)“Derivative Material” means copyrighted material including derivative works and translations (including into other computer languages), potation, modification, correction, addition, extension, upgrade, improvement, compilation, abridgment or other form in which an existing work may be recast, transformed or adapted;</li>
+</ol>
+<ol start="3" type="a">
+<li>“Distribute” means to reproduce, license, rent, lease, sell, broadcast, publicly display, transmit or otherwise distribute; (d)“Open Game Content” means the game mechanic and includes the methods, procedures, processes and routines to the extent such content does not embody the Product Identity and is an enhancement over the prior art and any additional content clearly identified as Open Game Content by the Contributor, and means any work covered by this License, including translations and derivative works under copyright law, but specifically excludes Product Identity. (e) “Product Identity” means product and product line names, logos and identifying marks including trade dress; artifacts; creatures characters; stories, storylines, plots, thematic elements, dialogue, incidents, language, artwork, symbols, designs, depictions, likenesses, formats, poses, concepts, themes and graphic, photographic and other visual or audio representations; names and descriptions of characters, spells, enchantments, personalities, teams, personas, likenesses and special abilities; places, locations, environments, creatures, equipment, magical or supernatural abilities or effects, logos, symbols, or graphic designs; and any other trademark or registered trademark clearly identified as Product identity by the owner of the Product Identity, and which specifically excludes the Open Game Content; (f) “Trademark” means the logos, names, mark, sign, motto, designs that are used by a Contributor to identify itself or its products or the associated products contributed to the Open Game License by the Contributor (g) “Use”, “Used” or “Using” means to use, Distribute, copy, edit, format, modify, translate and otherwise create Derivative Material of Open Game Content. (h) “You” or “Your” means the licensee in terms of this agreement.</li>
+</ol>
+<ol start="2" type="1">
+<li>The License: This License applies to any Open Game Content that contains a notice indicating that the Open Game Content may only be Used under and in terms of this License. You must affix such a notice to any Open Game Content that you Use. No terms may be added to or subtracted from this License except as described by the License itself. No other terms or conditions may be applied to any Open Game Content distributed using this License.</li>
+</ol>
+<p>3.Offer and Acceptance: By Using the Open Game Content You indicate Your acceptance of the terms of this License.</p>
+<ol start="4" type="1">
+<li>Grant and Consideration: In consideration for agreeing to use this License, the Contributors grant You a perpetual, worldwide, royalty-free, non-exclusive license with the exact terms of this License to Use, the Open Game Content.</li>
+</ol>
+<p>5.Representation of Authority to Contribute: If You are contributing original material as Open Game Content, You represent that Your Contributions are Your original creation and/or You have sufficient rights to grant the rights conveyed by this License.</p>
+<p>6.Notice of License Copyright: You must update the COPYRIGHT NOTICE portion of this License to include the exact text of the COPYRIGHT NOTICE of any Open Game Content You are copying, modifying or distributing, and You must add the title, the copyright date, and the copyright holder’s name to the COPYRIGHT NOTICE of any original Open Game Content you Distribute.</p>
+<ol start="7" type="1">
+<li><p>Use of Product Identity: You agree not to Use any Product Identity, including as an indication as to compatibility, except as expressly licensed in another, independent Agreement with the owner of each element of that Product Identity. You agree not to indicate compatibility or co-adaptability with any Trademark or Registered Trademark in conjunction with a work containing Open Game Content except as expressly licensed in another, independent Agreement with the owner of such Trademark or Registered Trademark. The use of any Product Identity in Open Game Content does not constitute a challenge to the ownership of that Product Identity. The owner of any Product Identity used in Open Game Content shall retain all rights, title and interest in and to that Product Identity.</p></li>
+<li><p>Identification: If you distribute Open Game Content You must clearly indicate which portions of the work that you are distributing are Open Game Content.</p></li>
+<li><p>Updating the License: Wizards or its designated Agents may publish updated versions of this License. You may use any authorized version of this License to copy, modify and distribute any Open Game Content originally distributed under any version of this License.</p></li>
+<li><p>Copy of this License: You MUST include a copy of this License with every copy of the Open Game Content You Distribute.</p></li>
+<li><p>Use of Contributor Credits: You may not market or advertise the Open Game Content using the name of any Contributor unless You have written permission from the Contributor to do so.</p></li>
+</ol>
+<p>12 Inability to Comply: If it is impossible for You to comply with any of the terms of this License with respect to some or all of the Open Game Content due to statute, judicial order, or governmental regulation then You may not Use any Open Game Material so affected.</p>
+<p>13 Termination: This License will terminate automatically if You fail to comply with all terms herein and fail to cure such breach within 30 days of becoming aware of the breach. All sublicenses shall survive the termination of this License.</p>
+<p>14 Reformation: If any provision of this License is held to be unenforceable, such provision shall be reformed only to the extent necessary to make it enforceable.</p>
+<p><strong>15 COPYRIGHT NOTICE</strong> Open Game License v 1.0 Copyright 2000, Wizards of the Coast, Inc. System Reference Document Copyright 2000-2003, Wizards of the Coast, Inc.; Authors Jonathan Tweet, Monte Cook, Skip Williams, Rich Baker, Andy Collins, David Noonan, Rich Redman, Bruce R. Cordell, John D. Rateliff, Thomas Reid, James Wyatt, based on original material by E. Gary Gygax and Dave Arneson. Castles &amp; Crusades: Players Handbook, Copyright 2004, Troll Lord Games; Authors Davis Chenault and Mac Golden. Castles &amp; Crusades: Monsters Product Support, Copyright 2005, Troll Lord Games. Basic Fantasy Role-Playing Game Copyright © 2006-2016 Chris Gonnerman. The Basic Fantasy Field Guide Copyright © 2010-2016 Chris Gonnerman, R. Kevin Smoot, James Lemon, and Contributors. Gold In The Hills Copyright © 2007 Ray Allen Merilla’s Magic Tower Copyright © 2007-2009 Rob Pinnell Pipe Beast Copyright © 2013 Dave Gerard. The Zombraire’s Estate Copyright © 2007 Russ Westbrook Beneath Brymassen Copyright © 2008-2012 Eldrad Wolfsbane, Mak, The Expert, skisko, Thomas Kolter, Maliki, Jim Bobb, Stuart Marshall, hjmartin70, J.D. Neal, David Gerard, and Chris Gonnerman Ruin of Darkfir Castle Copyright © 2008 Onno Tasler. Shepherds of Pineford Copyright © 2008 Jason Reilly Shepherds of Pineford Maps Copyright © 2008-2011 J.D. Neal Deathcrypt of Khaldun Copyright © 2009 Scott A. Murray. Vault of Thaire Copyright © 2009 David Grant Sinclair. Slaver’s Fortress Copyright © 2011-2012 Chris Gonnerman. Taming the Flames Copyright © 2011 Dave Gerard. The Lost Tome Copyright © 2011-2012 Dave Gerard. Insect Valhalla Copyright © 2009-2012 J.D. Neal. Island in River Copyright © 2009-2011 J.D. Neal. Night of the Necromancer, Copyright © 2007 Ray Allen. Adventure Anthology One, Copyright © 2007-2017, 2020 Chris Gonnerman and Contributors.</p>
+<p>END OF LICENSE</p>
+</div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./deathcrypt-of-khaldun.html" class="pagination-link" aria-label="Deathcrypt of Khaldun">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Deathcrypt of Khaldun</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./appendix_interactive.html" class="pagination-link" aria-label="Interactive tools">
+        <span class="nav-page-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Interactive tools</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
