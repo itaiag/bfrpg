@@ -376,7 +376,57 @@ export const css = `
   font-weight: 600;
 }
 
+.dg-toolbar {
+  margin: 0.4rem 0;
+}
+
 @media print {
+  /* Only the dungeon goes on paper: no site chrome, form or buttons. */
+  #quarto-header,
+  #quarto-sidebar,
+  #quarto-margin-sidebar,
+  .quarto-title-breadcrumbs,
+  .page-navigation,
+  .nav-footer,
+  .lang-toggle-btn,
+  main form,
+  main > p,
+  .dg-toolbar,
+  .dg-btn,
+  .dg-legend-scale {
+    display: none !important;
+  }
+
+  #quarto-content,
+  main.content {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: none !important;
+  }
+
+  .dg-level {
+    break-before: page;
+  }
+
+  .dg-map {
+    max-height: 17cm;
+    width: auto;
+  }
+
+  .dg-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .dg-root a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .dg-status {
+    position: static;
+  }
+
   .dg-card {
     break-inside: avoid;
   }

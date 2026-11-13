@@ -5,6 +5,7 @@
  */
 
 import { css } from './style.js';
+import { dungeonToPrompt } from './export.js';
 
 const CELL = 24;
 
@@ -378,6 +379,7 @@ export function renderDungeon(dungeon, t, links = {}) {
   });
   return `<div class="dg-root" dir="rtl"><style>${css}</style>`
     + `<p class="dg-seed">${esc(t.seedUsed)} <code>${esc(dungeon.seed)}</code></p>`
+    + `<p class="dg-toolbar">${['link', 'print', 'prompt'].map((tool) => `<button type="button" class="dg-btn" data-tool="${tool}">${esc(t.tools[tool])}</button>`).join('')}</p>`
     + storyHtml(dungeon, t, links)
     + renderLegend(t)
     + levels.join('')
@@ -388,11 +390,46 @@ export function renderDungeon(dungeon, t, links = {}) {
 // Browser only
 // ---------------------------------------------------------------------------
 
+/** Copy text to the clipboard, with a fallback for browsers that refuse the modern way. */
+export async function copyText(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch (error) {
+    const area = document.createElement('textarea');
+    area.value = text;
+    document.body.appendChild(area);
+    area.select();
+    const ok = document.execCommand('copy');
+    area.remove();
+    return ok;
+  }
+}
+
+/** Show a short confirmation on a button, then put its label back. */
+export function flash(button, text) {
+  const label = button.textContent;
+  button.textContent = text;
+  setTimeout(() => { button.textContent = label; }, 1500);
+}
+
 /** Build the DOM node for a dungeon; clicking a room on the map jumps to its card. */
 export function mount(dungeon, t, links = {}) {
   const el = document.createElement('div');
   el.innerHTML = renderDungeon(dungeon, t, links);
   el.addEventListener('click', (event) => {
+    const tool = event.target.closest('[data-tool]');
+    if (tool) {
+      if (tool.dataset.tool === 'print') {
+        // Collapsed sections would print empty, so open them first.
+        el.querySelectorAll('details').forEach((d) => { d.open = true; });
+        window.print();
+      } else {
+        const text = tool.dataset.tool === 'link' ? window.location.href : dungeonToPrompt(dungeon, t);
+        copyText(text).then((ok) => flash(tool, ok ? t.tools.copied : t.tools.failed));
+      }
+      return;
+    }
     const hit = event.target.closest('.dg-room-hit');
     if (!hit) return;
     const card = el.querySelector(`#dg-room-${hit.dataset.room}`);

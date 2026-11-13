@@ -13,6 +13,7 @@ import { makeRng, randomSeed } from './generator.js';
 import { wanderingEncounter } from './stock.js';
 import { css } from './style.js';
 import { esc, fill, linked, num, treasureHtml, monsterStatsHtml, factionChip, renderLevelSvg } from './render.js';
+import { dungeonParams } from './export.js';
 
 const CORRIDOR = -1;
 const STEPS = [[1, 0], [-1, 0], [0, 1], [0, -1]];
@@ -48,6 +49,7 @@ export function mountSolo(dungeon, t, links, data) {
   const el = document.createElement('div');
   const maps = dungeon.levels.map(analyse);
 
+  let restarting = false;
   const S = {
     level: 0,
     room: 1,
@@ -68,6 +70,27 @@ export function mountSolo(dungeon, t, links, data) {
     oracle: null,
     settings: { str: 0, cha: 0, secret: 1, traps: '1' },
   };
+
+  // ── Saving ───────────────────────────────────────────────────────────────
+  // The game is kept in the browser's storage under the dungeon's own settings,
+  // so reopening the same dungeon resumes it.
+  const params = dungeonParams(dungeon);
+  const storageKey = `bfrpg-dungeon-solo:${params}`;
+  const snapshot = () => ({ ...S, v: 1, confirmRestart: false, rooms: [...S.rooms], comps: [...S.comps], open: [...S.open], found: [...S.found], keys: [...S.keys], log: S.log.slice(0, 200) });
+  function save() {
+    try { localStorage.setItem(storageKey, JSON.stringify(snapshot())); } catch (error) { /* storage full or blocked: play on unsaved */ }
+  }
+  function restore() {
+    try {
+      const saved = JSON.parse(localStorage.getItem(storageKey) || 'null');
+      if (!saved || saved.v !== 1) return false;
+      Object.assign(S, saved, { rooms: new Map(saved.rooms), comps: new Set(saved.comps), open: new Set(saved.open), found: new Set(saved.found), keys: new Set(saved.keys) });
+      delete S.v;
+      return true;
+    } catch (error) {
+      return false;
+    }
+  }
 
   const key = (levelIndex, id) => `${levelIndex}-${id}`;
   const level = () => dungeon.levels[S.level];
@@ -301,6 +324,22 @@ export function mountSolo(dungeon, t, links, data) {
       if (S.previous !== null) { const back = S.previous; passTurns(1, true); enter(back); }
     },
 
+    saveFile() {
+      const file = { app: 'bfrpg-dungeon', v: 1, params, key: storageKey, state: snapshot() };
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob([JSON.stringify(file)], { type: 'application/json' }));
+      a.download = `dungeon-${dungeon.seed}.json`;
+      a.click();
+      URL.revokeObjectURL(a.href);
+    },
+    restartAsk() { S.confirmRestart = true; },
+    restartNo() { S.confirmRestart = false; },
+    restartYes() {
+      try { localStorage.removeItem(storageKey); } catch (error) { /* nothing was saved */ }
+      restarting = true;
+      el.replaceWith(mountSolo(dungeon, t, links, data));
+    },
+
     oracle(odds) {
       const roll = d6() + d6();
       const total = roll + { likely: 2, even: 0, unlikely: -2 }[odds];
@@ -502,6 +541,9 @@ export function mountSolo(dungeon, t, links, data) {
       + `<section class="dg-level"><h3>${esc(title)}</h3><div class="dg-map-wrap">${renderLevelSvg(L, title, mapView())}</div></section>`
       + `<section class="dg-card dg-solo-room">${roomHtml()}</section>`
       + oracle + magic
+      + `<p class="dg-toolbar">${S.confirmRestart
+        ? `${esc(s.save.confirm)} ${btn('restartYes', s.save.yes)}${btn('restartNo', s.save.no)}`
+        : `${btn('saveFile', s.save.file)}<label class="dg-btn">${esc(s.save.load)}<input type="file" accept=".json,application/json" data-load hidden></label>${btn('restartAsk', s.save.restart)} <span class="dg-card-label">${esc(s.save.auto)}</span>`}</p>`
       + `<details class="dg-log" open><summary>${esc(s.log.title)}</summary><ol>${S.log.slice(0, 60).map((e) => `<li><span class="dg-log-turn">${esc(fill(s.log.turn, { n: e.turn }))}</span> ${esc(e.text)}</li>`).join('')}</ol></details>`
       + '</div>';
   }
@@ -511,20 +553,34 @@ export function mountSolo(dungeon, t, links, data) {
     if (!button || !actions[button.dataset.act]) return;
     const arg = button.dataset.arg;
     actions[button.dataset.act](arg === '' ? undefined : (/^\d+$/.test(arg) ? Number(arg) : arg));
+    if (restarting) return;
     render();
+    save();
   });
   el.addEventListener('change', (event) => {
     const target = event.target;
+    if (target.dataset.load !== undefined && target.files[0]) {
+      // A saved game names its dungeon; store it, point the page at that dungeon and reload.
+      target.files[0].text().then((text) => {
+        const file = JSON.parse(text);
+        if (file.app !== 'bfrpg-dungeon' || !file.key || !file.state) throw new Error('not a saved dungeon');
+        localStorage.setItem(file.key, JSON.stringify(file.state));
+        window.location.hash = `${file.params}&view=solo`;
+        window.location.reload();
+      }).catch(() => { log(s.save.badFile); render(); });
+      return;
+    }
     if (target.dataset.setting) {
       S.settings[target.dataset.setting] = target.dataset.setting === 'traps' ? target.value : Number(target.value);
     } else if (target.dataset.hp !== undefined) {
       const enc = activeEncounter();
       if (enc) enc.hp[Number(target.dataset.hp)] = Number(target.value);
     }
+    save();
   });
 
-  log(s.log.start);
-  enter(1, 0);
+  if (restore()) log(s.save.resumed);
+  else { log(s.log.start); enter(1, 0); }
   render();
   return el;
 }
