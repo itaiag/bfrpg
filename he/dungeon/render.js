@@ -170,6 +170,79 @@ export function renderLegend(t) {
     + `<li class="dg-legend-scale">${esc(t.legend.scale)}</li></ul>`;
 }
 
+const num = (n) => Number(n).toLocaleString('en-US');
+const linked = (text, href) => (href ? `<a href="${esc(href)}">${esc(text)}</a>` : esc(text));
+
+function treasureHtml(tr, t, heading) {
+  if (!tr || tr.isEmpty) return '';
+  const lines = [];
+  const coins = ['pp', 'gp', 'ep', 'sp', 'cp'].filter((c) => tr.coins[c] > 0).map((c) => `${num(tr.coins[c])} ${t.coins[c]}`);
+  if (coins.length) lines.push(`<li>${esc(t.treasure.coins)}: ${esc(coins.join(', '))}</li>`);
+  if (tr.gems.length) {
+    const gems = tr.gems.map((g) => `${g.qty > 1 ? `${g.qty} × ` : ''}${g.name} (${g.quality}, ${num(g.value)} ${t.coins.gp})`);
+    lines.push(`<li>${esc(t.treasure.gems)}: ${esc(gems.join('; '))}</li>`);
+  }
+  if (tr.jewelry.length) {
+    const jewelry = tr.jewelry.map((j) => `${j.name} (${num(j.value)} ${t.coins.gp})`);
+    lines.push(`<li>${esc(t.treasure.jewelry)}: ${esc(jewelry.join('; '))}</li>`);
+  }
+  for (const item of tr.magic) {
+    let text = fill(t.magic[item.category], { name: item.text, form: item.form || '' });
+    if (item.spellLevels) text += ` ${fill(t.magic.spellLevels, { levels: item.spellLevels.join(', ') })}`;
+    let note = '';
+    if (item.cursedNote === 'ac11') note = ` <span class="dg-cursed">${esc(t.magic.cursedAc11)}</span>`;
+    else if (item.cursed) note = ` <span class="dg-cursed">${esc(t.magic.cursed)}</span>`;
+    lines.push(`<li>${esc(t.treasure.magic)}: ${linked(text, item.link)}${note}</li>`);
+  }
+  if (tr.notes.includes('special')) lines.push(`<li>${esc(t.treasure.special)}</li>`);
+  if (tr.guard) {
+    const trap = tr.guardTrap ? linked(tr.guardTrap.name, tr.guardTrap.link) : '';
+    lines.push(`<li>${fill(esc(t.treasure.guard[tr.guard]), { trap })}</li>`);
+  }
+  if (tr.totalGp > 0) lines.push(`<li class="dg-total">${esc(fill(t.treasure.total, { gp: num(tr.totalGp) }))}</li>`);
+  return `<p class="dg-card-label">${esc(heading)}</p><ul>${lines.join('')}</ul>`;
+}
+
+function contentHtml(room, t, links) {
+  const c = room.content;
+  if (!c) return '';
+  let out = `<p class="dg-content dg-content-${c.type}"><span class="dg-badge">${esc(t.content[c.type])}</span>`;
+
+  if (c.type === 'empty') return `${out} ${esc(t.content.emptyText)}</p>`;
+  if (c.type === 'special') return `${out} ${esc(t.content.specialText)} ${linked(t.content.specialLink, links.stocking)}</p>`;
+
+  if (c.type === 'monster') {
+    const m = c.monster;
+    if (m.npcParty || !m.count) {
+      return `${out} ${linked(m.name, m.link)}</p><p class="dg-note">${esc(t.monster.npcParty)}</p>`;
+    }
+    out += ` ${linked(m.name, m.link)} <span class="dg-count" dir="ltr">×${m.count}</span></p>`;
+    const stats = [
+      [t.monster.ac, m.ac], [t.monster.hd, m.hdText], [t.monster.attacks, m.attacks], [t.monster.damage, m.damage],
+      [t.monster.move, m.move], [t.monster.save, m.saveText], [t.monster.morale, m.moraleText],
+    ].map(([label, value]) => `<span><b>${esc(label)}</b> ${esc(value)}</span>`).join(' ');
+    out += `<p class="dg-stats">${stats}</p>`;
+    out += `<p class="dg-hp"><b>${esc(t.monster.hp)}</b> <span dir="ltr">${m.hp.join(', ')}</span></p>`;
+    if (m.xpTotal) out += `<p class="dg-xp">${esc(fill(m.count > 1 ? t.monster.xpMany : t.monster.xpOne, { each: num(m.xpEach), total: num(m.xpTotal) }))}</p>`;
+    return out + treasureHtml(m.treasure, t, m.lair ? t.treasure.lair : t.treasure.carried);
+  }
+
+  if (c.type === 'trap') {
+    out += ` ${linked(c.trap.name, c.trap.link)}</p><p class="dg-note">${esc(c.trap.text)}</p>`;
+    return out + treasureHtml(c.treasure, t, t.treasure.guarded);
+  }
+
+  return `${out}</p>` + treasureHtml(c.treasure, t, t.treasure.heading);
+}
+
+function wanderingHtml(level, t) {
+  const w = level.wandering;
+  if (!w) return '';
+  const rows = w.entries.map((e) => `<li value="${e.roll}">${linked(e.name, e.link)}</li>`).join('');
+  return `<details class="dg-wandering"><summary>${esc(t.wandering.title)}</summary>`
+    + `<p>${esc(fill(t.wandering.rule, { turns: w.everyTurns, chance: w.chanceIn6, die: w.die }))} ${linked(t.wandering.link, w.link)}</p><ol>${rows}</ol></details>`;
+}
+
 function roomCard(dungeon, level, room, t, links) {
   const m = dungeon.squareMeters;
   const lines = [];
@@ -196,6 +269,7 @@ function roomCard(dungeon, level, room, t, links) {
   return `<section class="dg-card" id="dg-room-${level.index + 1}-${room.id}">`
     + `<h4>${esc(fill(t.card.room, { n: room.id }))} <span class="dg-card-size">${esc(fill(t.card.size, { w: room.w * m, h: room.h * m }))}</span></h4>`
     + (lines.length ? `<ul class="dg-card-features">${lines.join('')}</ul>` : '')
+    + contentHtml(room, t, links)
     + `<p class="dg-card-label">${esc(t.card.exits)}</p><ul class="dg-card-exits">${exits.join('')}</ul>`
     + '</section>';
 }
@@ -210,6 +284,7 @@ export function renderDungeon(dungeon, t, links = {}) {
     const title = fill(many ? t.level.titleMany : t.level.titleOne, { n: level.index + 1, dl: level.dungeonLevel });
     return `<section class="dg-level"><h3>${esc(title)}</h3>`
       + `<div class="dg-map-wrap">${renderLevelSvg(level, title)}</div>`
+      + wanderingHtml(level, t)
       + `<div class="dg-cards">${level.rooms.map((r) => roomCard(dungeon, level, r, t, links)).join('')}</div>`
       + '</section>';
   });

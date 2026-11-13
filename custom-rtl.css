@@ -297,7 +297,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .dg-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
   gap: 0.75rem;
 }
 
@@ -335,6 +335,65 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-size: 0.85rem;
   color: #666;
+}
+
+.dg-content {
+  margin: 0 0 0.3rem;
+}
+
+.dg-badge {
+  display: inline-block;
+  padding: 0 0.45rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+  background: #7a7466;
+}
+
+.dg-content-monster .dg-badge { background: #9b2c2c; }
+.dg-content-trap .dg-badge { background: #b7791f; }
+.dg-content-treasure .dg-badge { background: #2f855a; }
+.dg-content-special .dg-badge { background: #553c9a; }
+
+.dg-count {
+  font-weight: 700;
+}
+
+.dg-stats,
+.dg-hp,
+.dg-xp,
+.dg-note {
+  margin: 0 0 0.3rem;
+  font-size: 0.85rem;
+}
+
+.dg-stats span {
+  display: inline-block;
+  margin-inline-end: 0.5rem;
+}
+
+.dg-cursed {
+  color: #9b2c2c;
+}
+
+.dg-total {
+  list-style: none;
+  color: #555;
+  font-size: 0.85rem;
+}
+
+.dg-wandering {
+  margin: 0 0 1rem;
+}
+
+.dg-wandering summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.dg-wandering ol {
+  columns: 2;
 }
 
 .dg-feature {
