@@ -199,14 +199,23 @@ export function stockDungeon(dungeon, data) {
   const types = data.treasure.types;
   const partyScale = dungeon.party.count / REFERENCE_PARTY;
 
-  function monsterFor(level, lair) {
-    const entry = roller.on(bandFor(data.encounters.levels, level.dungeonLevel).entries, '1d12');
+  function monsterFor(level, lair, room) {
+    // Inside a faction's territory most monsters are the faction's own; its seat always is.
+    const faction = room.faction !== null && room.faction !== undefined ? dungeon.factions[room.faction] : null;
+    const own = faction && (room.hq || rng.chance(0.9));
+    // Only a faction's seat holds its hoard; its other rooms are guard posts.
+    if (own && !room.hq) lair = false;
+    const entry = own
+      ? { type: 'monster', monster: faction.monster, name: faction.monster }
+      : roller.on(bandFor(data.encounters.levels, level.dungeonLevel).entries, '1d12');
     if (entry.type === 'npcParty' || !monsters.has(entry.monster)) {
       return { npcParty: entry.type === 'npcParty', name: entry.name, link: entry.link };
     }
     const m = monsters.get(entry.monster);
-    const rolled = rng.roll(m.appearing.dungeon || m.appearing.wild || '1');
-    const count = Math.max(1, Math.round(rolled * partyScale));
+    const dice = m.appearing.dungeon || m.appearing.wild || '1';
+    // A faction's seat is never caught with fewer than an average showing.
+    const rolled = room.hq ? Math.max(rng.roll(dice), Math.ceil(average(dice))) : rng.roll(dice);
+    const count = Math.max(1, Math.round(rolled * partyScale * (own ? faction.strength : 1)));
     const hd = m.hdMax > m.hd ? rng.int(m.hd, m.hdMax) : m.hd;
     const hpDice = m.hdMax > m.hd ? `${hd}d8` : m.hpDice;
     const hp = Array.from({ length: count }, () => Math.max(1, rng.roll(hpDice)));
@@ -218,14 +227,15 @@ export function stockDungeon(dungeon, data) {
       for (let i = 0; i < count; i++) treasure.addRow(loot, types[letter]);
     }
     if (lair) {
-      const scale = m.appearing.lair ? Math.min(1, count / average(m.appearing.lair)) : 1;
+      // Measured on the number the book's dice gave, before a faction's extra numbers.
+      const scale = m.appearing.lair ? Math.min(1, Math.max(1, rolled * partyScale) / average(m.appearing.lair)) : 1;
       for (const letter of m.treasure.lair) treasure.addRow(loot, types[letter], scale);
       if (m.treasure.bonusGp) loot.coins.gp += Math.round(rng.roll(m.treasure.bonusGp.dice) * m.treasure.bonusGp.mult * scale);
       if (m.treasure.special) loot.notes.push('special');
     }
 
     return {
-      name: m.name, link: m.link, tableName: entry.name, count, hp, lair,
+      name: m.name, link: m.link, tableName: entry.name, count, hp, lair, faction: own ? faction.id : null,
       ac: m.ac, hdText: hd === m.hd ? m.hdText : String(hd), attacks: m.attacks, damage: m.damage, move: m.move,
       saveText: m.saveText, moraleText: m.moraleText, xpEach: m.xp, xpTotal: m.xp ? m.xp * count : null,
       treasure: treasure.finish(loot),
@@ -255,12 +265,14 @@ export function stockDungeon(dungeon, data) {
   for (const level of dungeon.levels) {
     for (const room of level.rooms) {
       // The way in is always quiet, so the party can get its bearings.
-      const kind = room.entrance && level.index === 0
+      let kind = room.entrance && level.index === 0
         ? { type: 'empty', treasure: false }
         : roller.on(data.stocking.entries, data.stocking.die);
+      // A faction's seat is always its lair, whatever the table said.
+      if (room.hq) kind = { type: 'monster', treasure: true };
 
       const content = { type: kind.type };
-      if (kind.type === 'monster') content.monster = monsterFor(level, kind.treasure);
+      if (kind.type === 'monster') content.monster = monsterFor(level, kind.treasure, room);
       if (kind.type === 'trap') {
         content.trap = rng.pick(data.traps);
         if (kind.treasure) content.treasure = unguarded(level, true);

@@ -4,11 +4,13 @@
 
 כל חדר מאוכלס לפי טבלת האכלוס שב[יצירת הרפתקאות](gm02.qmd): מפלצות מטבלאות המפגשים במבוך, מלכודות ואוצרות, וכולם מקושרים אל הכללים שלהם. המפלס הראשון מתאים לדרגת החבורה, וכל מפלס שמתחתיו קשה בדרגה אחת. מספר המפלצות בכל חדר מותאם לגודל החבורה: הגלגול שבכללים משמש לחבורה של ארבע דמויות.
 
+למבוך יש גם סיפור: מי בנה אותו, מדוע ננטש, ואילו פלגים נאבקים עליו כיום. לכל פלג יש שטח משלו (צבוע במפה), מנהיג, מטרה ויחס אל הרפתקנים. המתאם לגלגול התגובה שמוצע לכל פלג הוא הצעה של המחולל ואינו חלק מהכללים.
+
 ```{ojs}
 //| output: false
-import {generateDungeon} from "./dungeon/generator.js"
+import {createDungeon} from "./dungeon/index.js"
 import {mount} from "./dungeon/render.js"
-import {stockDungeon} from "./dungeon/stock.js"
+import {content} from "./dungeon/content-he.js"
 import {t} from "./dungeon/strings-he.js"
 
 dungeonData = FileAttachment("dungeon-data.json").json()
@@ -31,12 +33,12 @@ viewof dungeonRequest = Inputs.button(t.form.generate)
 dungeon = {
   dungeonRequest; // a new dungeon on every press, not on every change to the form
   const config = viewof dungeonConfig.value;
-  return stockDungeon(generateDungeon({
+  return createDungeon({
     seed: config.seed.trim(),
     size: config.size,
     levels: config.levels,
     party: {count: config.partyCount, level: config.partyLevel, classes: config.classes}
-  }), dungeonData);
+  }, dungeonData, content);
 }
 
 mount(dungeon, t, {...dungeonData.rules, stocking: dungeonData.stocking.link})

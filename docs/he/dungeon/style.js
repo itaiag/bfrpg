@@ -163,6 +163,90 @@ export const css = `
   columns: 2;
 }
 
+.dg-story {
+  border: 1px solid #d5cfc0;
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  margin: 0.5rem 0 1rem;
+  background: #fffdf8;
+}
+
+.dg-story h3 {
+  margin-top: 0;
+}
+
+.dg-story h4 {
+  margin: 0.8rem 0 0.3rem;
+  font-size: 1.05rem;
+}
+
+.dg-factions {
+  list-style: none;
+  padding: 0;
+}
+
+.dg-faction {
+  margin-bottom: 0.6rem;
+}
+
+.dg-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0 0.5rem;
+  border: 1px solid;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: #fff;
+}
+
+.dg-swatch {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  flex: none;
+}
+
+.dg-room-faction,
+.dg-detail,
+.dg-safe,
+.dg-hook {
+  margin: 0 0 0.3rem;
+  font-size: 0.9rem;
+}
+
+.dg-detail {
+  font-style: italic;
+  color: #555;
+}
+
+.dg-safe .dg-badge {
+  background: #2c7a7b;
+}
+
+.dg-hook {
+  border-inline-start: 3px solid #b7791f;
+  padding-inline-start: 0.5rem;
+}
+
+.dg-truth {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.dg-truth-true { color: #2f855a; }
+.dg-truth-false { color: #9b2c2c; }
+
+.dg-rumors summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.dg-special-title {
+  font-weight: 700;
+}
+
 .dg-feature {
   font-weight: 600;
 }

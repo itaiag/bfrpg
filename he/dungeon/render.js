@@ -131,7 +131,11 @@ export function renderLevelSvg(level, title = '') {
 
   let labels = '';
   let hit = '';
+  let tint = '';
   for (const r of rooms) {
+    if (r.faction !== null && r.faction !== undefined) {
+      tint += `<rect x="${px(r.x)}" y="${py(r.y)}" width="${r.w * CELL}" height="${r.h * CELL}" fill="${factionColor(r.faction)}" fill-opacity="0.16"/>`;
+    }
     for (const f of r.features) symbols += stairsSymbol(f.type, px(f.x), py(f.y));
     labels += `<text x="${px(r.label.x) + CELL / 2}" y="${py(r.label.y) + CELL / 2}" text-anchor="middle" dominant-baseline="central" `
       + `font-size="${CELL * 0.58}" font-weight="700" font-family="sans-serif" fill="${COLOR.ink}">${r.id}</text>`;
@@ -142,6 +146,7 @@ export function renderLevelSvg(level, title = '') {
   return `<svg class="dg-map" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${esc(title)}">`
     + `<rect width="${W}" height="${H}" fill="${COLOR.rock}"/>`
     + `<path d="${floor}" fill="${COLOR.floor}" stroke="${COLOR.grid}" stroke-width="0.6"/>`
+    + tint
     + `<path d="${[...walls].join('')}" fill="none" stroke="${COLOR.wall}" stroke-width="2.4" stroke-linecap="square"/>`
     + symbols + labels + hit
     + '</svg>';
@@ -211,7 +216,10 @@ function contentHtml(room, t, links) {
   let out = `<p class="dg-content dg-content-${c.type}"><span class="dg-badge">${esc(t.content[c.type])}</span>`;
 
   if (c.type === 'empty') return `${out} ${esc(t.content.emptyText)}</p>`;
-  if (c.type === 'special') return `${out} ${esc(t.content.specialText)} ${linked(t.content.specialLink, links.stocking)}</p>`;
+  if (c.type === 'special') {
+    if (c.special) return `${out} <span class="dg-special-title">${esc(c.special.title)}</span></p><p class="dg-note">${esc(c.special.text)}</p>`;
+    return `${out} ${esc(t.content.specialText)} ${linked(t.content.specialLink, links.stocking)}</p>`;
+  }
 
   if (c.type === 'monster') {
     const m = c.monster;
@@ -245,6 +253,60 @@ function wanderingHtml(level, t) {
     + `<p>${esc(fill(t.wandering.rule, { turns: w.everyTurns, chance: w.chanceIn6, die: w.die }))} ${linked(t.wandering.link, w.link)}</p><ol>${rows}</ol></details>`;
 }
 
+const FACTION_COLORS = ['#c53030', '#2b6cb0', '#2f855a', '#b7791f', '#6b46c1', '#b83280'];
+const factionColor = (id) => FACTION_COLORS[id % FACTION_COLORS.length];
+
+function factionChip(faction) {
+  return `<span class="dg-chip" style="border-color:${factionColor(faction.id)}"><span class="dg-swatch" style="background:${factionColor(faction.id)}"></span>${esc(faction.name)}</span>`;
+}
+
+const roomLink = (levelIndex, id) => `<a href="#dg-room-${levelIndex + 1}-${id}">${id}</a>`;
+
+/** The dungeon's name, past, factions and rumours, shown above the maps. */
+function storyHtml(dungeon, t, links) {
+  const s = dungeon.story;
+  if (!s) return '';
+  const many = dungeon.levels.length > 1;
+  const where = (levelIndex) => (many ? ` (${esc(fill(t.story.level, { n: levelIndex + 1 }))})` : '');
+
+  const factions = (dungeon.factions || []).map((f) => {
+    const sign = f.reaction > 0 ? `+${f.reaction}` : String(f.reaction);
+    return `<li class="dg-faction">${factionChip(f)}${where(f.level)}`
+      + `<ul>`
+      + `<li>${linked(f.monster, f.monsterLink)}. ${esc(fill(t.story.hq, {}))} ${roomLink(f.level, f.hq)}; ${esc(t.story.territory)} ${f.rooms.map((id) => roomLink(f.level, id)).join(', ')}.</li>`
+      + `<li>${esc(fill(t.story.leader, { title: f.leader.title, name: f.leader.name, trait: f.leader.trait }))}</li>`
+      + `<li>${esc(fill(t.story.goal, { goal: f.goal }))}</li>`
+      + `<li>${esc(fill(t.story.attitude, { text: f.attitude }))} ${f.reaction ? `(${linked(t.story.reaction, links.reactions)} <span dir="ltr">${sign}</span>)` : ''}</li>`
+      + `</ul></li>`;
+  }).join('');
+
+  const relations = s.relations.map((r) => {
+    const room = r.room ? ` (${esc(fill(t.card.room, { n: '' }))}${roomLink(r.level, r.room)})` : '';
+    return `<li>${esc(r.text)}${room}</li>`;
+  }).join('');
+
+  const hookRoom = s.hook.room ? ` (${many ? `${esc(fill(t.story.level, { n: s.hook.room.level + 1 }))}, ` : ''}${esc(fill(t.card.room, { n: '' }))}${roomLink(s.hook.room.level, s.hook.room.id)})` : '';
+  const rumors = s.rumors.map((r) => `<li>${esc(r.text)} <span class="dg-truth dg-truth-${r.true}">${esc(r.true ? t.story.trueMark : t.story.falseMark)}</span></li>`).join('');
+
+  return `<section class="dg-story"><h3>${esc(s.name)}</h3>`
+    + `<p>${esc(s.origin.join(' '))}</p>`
+    + `<p><b>${esc(t.story.hook)}</b> ${esc(s.hook.text)}${hookRoom}</p>`
+    + (factions ? `<h4>${esc(t.story.factions)}</h4><ul class="dg-factions">${factions}</ul>` : '')
+    + (relations ? `<h4>${esc(t.story.relations)}</h4><ul>${relations}</ul>` : '')
+    + `<details class="dg-rumors"><summary>${esc(t.story.rumors)}</summary><p>${esc(t.story.rumorsHint)}</p><ol>${rumors}</ol></details>`
+    + '</section>';
+}
+
+/** Story lines on a room card: faction, safe room, notes that point elsewhere. */
+function roomStoryHtml(dungeon, room, t, links) {
+  let out = '';
+  if (room.faction !== null && room.faction !== undefined) out += `<p class="dg-room-faction">${factionChip(dungeon.factions[room.faction])}</p>`;
+  if (room.detail) out += `<p class="dg-detail">${esc(room.detail)}</p>`;
+  if (room.safe) out += `<p class="dg-safe"><span class="dg-badge">${esc(t.story.safe)}</span> ${esc(t.story.safeText)} ${linked(t.story.restLink, links.restAndHealing)}</p>`;
+  for (const note of room.notes || []) out += `<p class="dg-hook">${esc(note)}</p>`;
+  return out;
+}
+
 function roomCard(dungeon, level, room, t, links) {
   const m = dungeon.squareMeters;
   const lines = [];
@@ -269,8 +331,9 @@ function roomCard(dungeon, level, room, t, links) {
   });
 
   return `<section class="dg-card" id="dg-room-${level.index + 1}-${room.id}">`
-    + `<h4>${esc(fill(t.card.room, { n: room.id }))} <span class="dg-card-size">${esc(fill(t.card.size, { w: room.w * m, h: room.h * m }))}</span></h4>`
+    + `<h4>${esc(fill(t.card.room, { n: room.id }))}${room.purpose ? `: ${esc(room.purpose)}` : ''} <span class="dg-card-size">${esc(fill(t.card.size, { w: room.w * m, h: room.h * m }))}</span></h4>`
     + (lines.length ? `<ul class="dg-card-features">${lines.join('')}</ul>` : '')
+    + roomStoryHtml(dungeon, room, t, links)
     + contentHtml(room, t, links)
     + `<p class="dg-card-label">${esc(t.card.exits)}</p><ul class="dg-card-exits">${exits.join('')}</ul>`
     + '</section>';
@@ -292,6 +355,7 @@ export function renderDungeon(dungeon, t, links = {}) {
   });
   return `<div class="dg-root" dir="rtl"><style>${css}</style>`
     + `<p class="dg-seed">${esc(t.seedUsed)} <code>${esc(dungeon.seed)}</code></p>`
+    + storyHtml(dungeon, t, links)
     + renderLegend(t)
     + levels.join('')
     + '</div>';
