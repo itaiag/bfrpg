@@ -14,6 +14,14 @@
     return window.location.pathname.indexOf('/he/') !== -1;
   }
 
+  // Hebrew pages with no English counterpart: no toggle is shown on them.
+  var HEBREW_ONLY = ['dungeonGenerator.html'];
+
+  function hasCounterpart() {
+    var page = window.location.pathname.split('/').pop();
+    return !(isHebrew() && HEBREW_ONLY.indexOf(page) !== -1);
+  }
+
   function getTargetUrl() {
     var path = window.location.pathname;
     if (isHebrew()) {
@@ -44,6 +52,8 @@
   }
 
   function init() {
+    if (!hasCounterpart()) return;
+
     // Inject button styles if not already present
     if (!document.getElementById('lang-toggle-style')) {
       var style = document.createElement('style');

@@ -1,0 +1,42 @@
+# מחולל מבוכים
+
+המחולל יוצר מפת מבוך אקראית לפי הכללים של בייסיק פנטזי. בחרי את גודל המבוך ואת הרכב החבורה ולחצי על הכפתור. אותו קוד מבוך, עם אותן הגדרות, יוצר תמיד את אותו מבוך, כך שאפשר לשמור את הקוד ולחזור אליו.
+
+בשלב זה המחולל מצייר את המפה בלבד: חדרים, מסדרונות, דלתות ומדרגות. אכלוס החדרים במפלצות, במלכודות ובאוצרות יתווסף בהמשך.
+
+```{ojs}
+//| output: false
+import {generateDungeon} from "./dungeon/generator.js"
+import {mount} from "./dungeon/render.js"
+import {t} from "./dungeon/strings-he.js"
+
+dungeonData = FileAttachment("dungeon-data.json").json()
+```
+
+```{ojs}
+viewof dungeonConfig = Inputs.form({
+  size: Inputs.select(["small", "medium", "large"], {label: t.form.size, value: "medium", format: (key) => t.form.sizes[key]}),
+  levels: Inputs.range([1, 3], {label: t.form.levels, step: 1, value: 1}),
+  partyCount: Inputs.range([1, 8], {label: t.form.partyCount, step: 1, value: 4}),
+  partyLevel: Inputs.range([1, 10], {label: t.form.partyLevel, step: 1, value: 1}),
+  classes: Inputs.checkbox(Object.keys(t.form.classNames), {label: t.form.classes, value: Object.keys(t.form.classNames), format: (key) => t.form.classNames[key]}),
+  seed: Inputs.text({label: t.form.seed, placeholder: t.form.seedHint})
+})
+
+viewof dungeonRequest = Inputs.button(t.form.generate)
+```
+
+```{ojs}
+dungeon = {
+  dungeonRequest; // a new dungeon on every press, not on every change to the form
+  const config = viewof dungeonConfig.value;
+  return generateDungeon({
+    seed: config.seed.trim(),
+    size: config.size,
+    levels: config.levels,
+    party: {count: config.partyCount, level: config.partyLevel, classes: config.classes}
+  });
+}
+
+mount(dungeon, t, dungeonData.rules)
+```

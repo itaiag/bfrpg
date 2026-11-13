@@ -237,3 +237,112 @@ h1, h2, h3, h4, h5, h6 {
 .lang-toggle-btn:hover {
   background: #285e61;
 }
+
+/* ── Dungeon generator (he/dungeonGenerator.qmd) ─────────────────────────── */
+/* Its output sits inside .observablehq, which is forced LTR above. */
+.dg-root {
+  direction: rtl;
+  text-align: right;
+}
+
+.dg-seed {
+  margin: 0.5rem 0;
+}
+
+.dg-map-wrap {
+  direction: ltr;
+  margin: 0.5rem 0 1rem;
+}
+
+.dg-map {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #b7ae9b;
+}
+
+.dg-room-hit {
+  cursor: pointer;
+}
+
+.dg-room-hit:hover {
+  fill: rgba(44, 122, 123, 0.14);
+}
+
+.dg-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 1rem;
+  font-size: 0.9rem;
+}
+
+.dg-legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.dg-legend-icon {
+  border: 1px solid #ddd6c6;
+  flex: none;
+}
+
+.dg-legend-scale {
+  flex-basis: 100%;
+  color: #555;
+}
+
+.dg-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 0.75rem;
+}
+
+.dg-card {
+  border: 1px solid #d5cfc0;
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  background: #fffdf8;
+  scroll-margin-top: 5rem;
+}
+
+.dg-card-active {
+  border-color: #2c7a7b;
+  box-shadow: 0 0 0 2px rgba(44, 122, 123, 0.35);
+}
+
+.dg-card h4 {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+}
+
+.dg-card-size {
+  font-weight: normal;
+  font-size: 0.85rem;
+  color: #666;
+  margin-inline-start: 0.4rem;
+}
+
+.dg-card ul {
+  margin: 0 0 0.4rem;
+  padding-inline-start: 1.1rem;
+}
+
+.dg-card-label {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.dg-feature {
+  font-weight: 600;
+}
+
+@media print {
+  .dg-card {
+    break-inside: avoid;
+  }
+}

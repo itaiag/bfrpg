@@ -27,7 +27,7 @@ const BOOK_STRUCTURE = [
   { part: 'אוצר', chapters: ['treasure.qmd', 'magicItems.qmd'] },
   { part: 'מידע למנחת המשחק', chapters: ['gm01.qmd', 'gm02.qmd'] },
   { part: 'הרפתקאות מוכנות', chapters: ['ruin-of-darkfir-castle.qmd', 'beneath-brymassen.qmd', 'deathcrypt-of-khaldun.qmd', 'insect-valhalla.qmd'] },
-  { part: 'נספחים', chapters: ['appendix_interactive.qmd', 'appendixMapmaker.qmd', 'char_sheet.qmd', 'printable_sheets.qmd'] },
+  { part: 'נספחים', chapters: ['appendix_interactive.qmd', 'appendixMapmaker.qmd', 'dungeonGenerator.qmd', 'char_sheet.qmd', 'printable_sheets.qmd'] },
   { part: 'תוספות', chapters: ['extraClasses.qmd', 'extraRaces.qmd', 'extraRules.qmd'] },
 ];
 
@@ -135,6 +135,9 @@ function buildHe() {
   // — a file only a full English `quarto render` refreshes. Sync it here so the
   // Hebrew build never runs against a stale copy.
   cpSync(join(__dirname, 'custom.js'), join(__dirname, 'docs', 'custom.js'), { force: true });
+
+  // Same for the language toggle: the pages load docs/translator/lang-switch.js.
+  cpSync(join(__dirname, 'translator', 'lang-switch.js'), join(__dirname, 'docs', 'translator', 'lang-switch.js'), { force: true });
 
   log('\n✓ Hebrew site built → docs/he/');
 }
