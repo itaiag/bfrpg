@@ -4,6 +4,8 @@
  * touches the DOM.
  */
 
+import { css } from './style.js';
+
 const CELL = 24;
 
 const COLOR = {
@@ -288,7 +290,7 @@ export function renderDungeon(dungeon, t, links = {}) {
       + `<div class="dg-cards">${level.rooms.map((r) => roomCard(dungeon, level, r, t, links)).join('')}</div>`
       + '</section>';
   });
-  return `<div class="dg-root" dir="rtl">`
+  return `<div class="dg-root" dir="rtl"><style>${css}</style>`
     + `<p class="dg-seed">${esc(t.seedUsed)} <code>${esc(dungeon.seed)}</code></p>`
     + renderLegend(t)
     + levels.join('')
