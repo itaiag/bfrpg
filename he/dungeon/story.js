@@ -182,7 +182,7 @@ export function finishStory(dungeon, data, content) {
       if (room.content && room.content.type === 'special') room.content.special = nextSpecial();
       if (room.hq) {
         const f = factionById.get(room.faction);
-        room.notes.push(fill(f.leader.gender === 'f' ? content.notes.hqF : content.notes.hq, { title: f.leader.title, name: f.leader.name }));
+        room.notes.push({ kind: 'hq', text: fill(f.leader.gender === 'f' ? content.notes.hqF : content.notes.hq, { title: f.leader.title, name: f.leader.name }) });
       }
     }
 
@@ -216,8 +216,10 @@ export function finishStory(dungeon, data, content) {
       const pool = lively.length ? lively : (before.length ? before : others);
       if (pool.length) {
         const keyRoom = rng.pick(pool);
-        keyRoom.notes.push(fill(content.notes.keyHere, { room: doorRoom.id }));
-        doorRoom.notes.push(fill(content.notes.keyElsewhere, { room: keyRoom.id }));
+        keyRoom.notes.push({ kind: 'key', text: fill(content.notes.keyHere, { room: doorRoom.id }) });
+        doorRoom.notes.push({ kind: 'keyHint', text: fill(content.notes.keyElsewhere, { room: keyRoom.id }) });
+        keyRoom.keyFor = doorRoom.id;
+        door.keyRoom = keyRoom.id;
       }
     }
   }
@@ -231,7 +233,7 @@ export function finishStory(dungeon, data, content) {
     rel.text = fill(template, { a: a.name, b: b ? b.name : '' });
     if (rel.id === 'prisoner') {
       rel.room = a.hq;
-      roomOf(a.level, a.hq).notes.push(fill(content.notes.prisonerHere, { faction: b.name }));
+      roomOf(a.level, a.hq).notes.push({ kind: 'prisoner', text: fill(content.notes.prisonerHere, { faction: b.name }) });
     }
   }
 
@@ -241,14 +243,14 @@ export function finishStory(dungeon, data, content) {
   hook.text = fill(content.hooks.find((h) => h.id === hook.id).text, { faction: hookFaction ? hookFaction.name : '', dungeon: dungeon.story.name });
   if (hook.id === 'rescue') {
     hook.room = { level: hookFaction.level, id: hookFaction.hq };
-    roomOf(hookFaction.level, hookFaction.hq).notes.push(content.notes.captiveHere);
+    roomOf(hookFaction.level, hookFaction.hq).notes.push({ kind: 'captive', text: content.notes.captiveHere });
   }
   if (hook.id === 'quest') {
     const last = dungeon.levels[dungeon.levels.length - 1];
     const deep = [...last.rooms].sort((x, y) => y.depth - x.depth);
     const guarded = deep.slice(0, 4).find((r) => r.content && r.content.type !== 'empty') || deep[0];
     hook.room = { level: last.index, id: guarded.id };
-    guarded.notes.push(content.notes.relicHere);
+    guarded.notes.push({ kind: 'relic', text: content.notes.relicHere });
   }
 
   // Rumours: true ones drawn from what is really in the dungeon, plus some false.

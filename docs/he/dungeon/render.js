@@ -18,11 +18,11 @@ const COLOR = {
   accent: '#2c7a7b',
 };
 
-const esc = (text) => String(text)
+export const esc = (text) => String(text)
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 /** Fill "{name}" placeholders in a string. */
-const fill = (template, values) => template.replace(/\{(\w+)\}/g, (_, k) => (k in values ? values[k] : ''));
+export const fill = (template, values) => template.replace(/\{(\w+)\}/g, (_, k) => (k in values ? values[k] : ''));
 
 // ---------------------------------------------------------------------------
 // Map symbols
@@ -84,24 +84,33 @@ function stairsSymbol(type, px, py) {
 // One level as SVG
 // ---------------------------------------------------------------------------
 
-export function renderLevelSvg(level, title = '') {
+/**
+ * `view` limits the drawing to what a solo party has seen:
+ * { cells: Set('x,y'), rooms: Set(id), doors: Set(index), current: roomId }.
+ */
+export function renderLevelSvg(level, title = '', view = null) {
   const { cells, rooms, doors } = level;
 
   // Draw only the part of the grid that is in use, with one square of margin.
   let minX = level.width, minY = level.height, maxX = 0, maxY = 0;
   for (let y = 0; y < level.height; y++) {
     for (let x = 0; x < level.width; x++) {
-      if (cells[y][x] === 0) continue;
+      if (cells[y][x] === 0 || (view && !view.cells.has(`${x},${y}`))) continue;
       minX = Math.min(minX, x); maxX = Math.max(maxX, x);
       minY = Math.min(minY, y); maxY = Math.max(maxY, y);
     }
   }
-  minX -= 1; minY -= 1; maxX += 1; maxY += 1;
+  // A fogged map gets a wider margin, hinting that there is more to find.
+  const margin = view ? 3 : 1;
+  minX -= margin; minY -= margin; maxX += margin; maxY += margin;
   const W = (maxX - minX + 1) * CELL;
   const H = (maxY - minY + 1) * CELL;
   const px = (x) => (x - minX) * CELL;
   const py = (y) => (y - minY) * CELL;
-  const at = (x, y) => (cells[y] && cells[y][x] !== undefined ? cells[y][x] : 0);
+  const at = (x, y) => {
+    if (view && !view.cells.has(`${x},${y}`)) return 0;
+    return cells[y] && cells[y][x] !== undefined ? cells[y][x] : 0;
+  };
 
   const doorAt = new Set(doors.map((d) => `${d.x},${d.y}>${d.ox},${d.oy}`));
   const hasDoor = (x, y, nx, ny) => doorAt.has(`${x},${y}>${nx},${ny}`) || doorAt.has(`${nx},${ny}>${x},${y}`);
@@ -122,7 +131,8 @@ export function renderLevelSvg(level, title = '') {
   }
 
   let symbols = '';
-  for (const d of doors) {
+  for (const [i, d] of doors.entries()) {
+    if (view && !view.doors.has(i)) continue;
     const vertical = d.ox !== d.x;
     const cx = vertical ? px(Math.max(d.x, d.ox)) : px(d.x) + CELL / 2;
     const cy = vertical ? py(d.y) + CELL / 2 : py(Math.max(d.y, d.oy));
@@ -133,7 +143,11 @@ export function renderLevelSvg(level, title = '') {
   let hit = '';
   let tint = '';
   for (const r of rooms) {
-    if (r.faction !== null && r.faction !== undefined) {
+    if (view && !view.rooms.has(r.id)) continue;
+    if (view && view.current === r.id) {
+      tint += `<rect x="${px(r.x)}" y="${py(r.y)}" width="${r.w * CELL}" height="${r.h * CELL}" fill="${COLOR.accent}" fill-opacity="0.22"/>`;
+    }
+    if (!view && r.faction !== null && r.faction !== undefined) {
       tint += `<rect x="${px(r.x)}" y="${py(r.y)}" width="${r.w * CELL}" height="${r.h * CELL}" fill="${factionColor(r.faction)}" fill-opacity="0.16"/>`;
     }
     for (const f of r.features) symbols += stairsSymbol(f.type, px(f.x), py(f.y));
@@ -177,10 +191,10 @@ export function renderLegend(t) {
     + `<li class="dg-legend-scale">${esc(t.legend.scale)}</li></ul>`;
 }
 
-const num = (n) => Number(n).toLocaleString('en-US');
-const linked = (text, href) => (href ? `<a href="${esc(href)}">${esc(text)}</a>` : esc(text));
+export const num = (n) => Number(n).toLocaleString('en-US');
+export const linked = (text, href) => (href ? `<a href="${esc(href)}">${esc(text)}</a>` : esc(text));
 
-function treasureHtml(tr, t, heading) {
+export function treasureHtml(tr, t, heading) {
   if (!tr || tr.isEmpty) return '';
   const lines = [];
   const coins = ['pp', 'gp', 'ep', 'sp', 'cp'].filter((c) => tr.coins[c] > 0).map((c) => `${num(tr.coins[c])} ${t.coins[c]}`);
@@ -208,6 +222,15 @@ function treasureHtml(tr, t, heading) {
   }
   if (tr.totalGp > 0) lines.push(`<li class="dg-total">${esc(fill(t.treasure.total, { gp: num(tr.totalGp) }))}</li>`);
   return `<p class="dg-card-label">${esc(heading)}</p><ul>${lines.join('')}</ul>`;
+}
+
+/** The one-line stat block of a stocked monster group. */
+export function monsterStatsHtml(m, t) {
+  const stats = [
+    [t.monster.ac, m.ac], [t.monster.hd, m.hdText], [t.monster.attacks, m.attacks], [t.monster.damage, m.damage],
+    [t.monster.move, m.move], [t.monster.save, m.saveText], [t.monster.morale, m.moraleText],
+  ].map(([label, value]) => `<span><b>${esc(label)}</b> ${esc(value)}</span>`).join(' ');
+  return `<p class="dg-stats">${stats}</p>`;
 }
 
 function contentHtml(room, t, links) {
@@ -256,7 +279,7 @@ function wanderingHtml(level, t) {
 const FACTION_COLORS = ['#c53030', '#2b6cb0', '#2f855a', '#b7791f', '#6b46c1', '#b83280'];
 const factionColor = (id) => FACTION_COLORS[id % FACTION_COLORS.length];
 
-function factionChip(faction) {
+export function factionChip(faction) {
   return `<span class="dg-chip" style="border-color:${factionColor(faction.id)}"><span class="dg-swatch" style="background:${factionColor(faction.id)}"></span>${esc(faction.name)}</span>`;
 }
 
@@ -303,7 +326,7 @@ function roomStoryHtml(dungeon, room, t, links) {
   if (room.faction !== null && room.faction !== undefined) out += `<p class="dg-room-faction">${factionChip(dungeon.factions[room.faction])}</p>`;
   if (room.detail) out += `<p class="dg-detail">${esc(room.detail)}</p>`;
   if (room.safe) out += `<p class="dg-safe"><span class="dg-badge">${esc(t.story.safe)}</span> ${esc(t.story.safeText)} ${linked(t.story.restLink, links.restAndHealing)}</p>`;
-  for (const note of room.notes || []) out += `<p class="dg-hook">${esc(note)}</p>`;
+  for (const note of room.notes || []) out += `<p class="dg-hook">${esc(note.text)}</p>`;
   return out;
 }
 

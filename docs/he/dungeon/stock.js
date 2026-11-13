@@ -190,8 +190,7 @@ function createTreasure(rng, roller, data, magicItem) {
  *   { type: 'empty' | 'monster' | 'trap' | 'treasure' | 'special',
  *     monster?, trap?, treasure? }
  */
-export function stockDungeon(dungeon, data) {
-  const rng = makeRng(`${dungeon.seed}:stock`);
+function createStocker(dungeon, data, rng) {
   const roller = createRoller(rng);
   const magicItem = createMagicItems(rng, roller, data);
   const treasure = createTreasure(rng, roller, data, magicItem);
@@ -261,6 +260,18 @@ export function stockDungeon(dungeon, data) {
     }
     return treasure.finish(loot);
   }
+
+  return { roller, monsterFor, unguarded };
+}
+
+/** A wandering monster group for this level, rolled the same way as a room's monsters. */
+export function wanderingEncounter(dungeon, data, level, rng) {
+  return createStocker(dungeon, data, rng).monsterFor(level, false, { faction: null });
+}
+
+export function stockDungeon(dungeon, data) {
+  const rng = makeRng(`${dungeon.seed}:stock`);
+  const { roller, monsterFor, unguarded } = createStocker(dungeon, data, rng);
 
   for (const level of dungeon.levels) {
     for (const room of level.rooms) {

@@ -6,10 +6,13 @@
 
 למבוך יש גם סיפור: מי בנה אותו, מדוע ננטש, ואילו פלגים נאבקים עליו כיום. לכל פלג יש שטח משלו (צבוע במפה), מנהיג, מטרה ויחס אל הרפתקנים. המתאם לגלגול התגובה שמוצע לכל פלג הוא הצעה של המחולל ואינו חלק מהכללים.
 
+ב**משחק סולו** המחולל ממלא את תפקיד המנחה: הוא מסתיר את מה שהחבורה טרם גילתה, מגלגל הפתעה, תגובה, מורל ומפלצות נודדות, ועוקב אחר התורות ואחר מקור האור. את הקרבות עצמם מנהלים ליד השולחן לפי [הכללים](combat.qmd), ומדווחים למחולל כיצד הסתיימו.
+
 ```{ojs}
 //| output: false
 import {createDungeon} from "./dungeon/index.js"
 import {mount} from "./dungeon/render.js"
+import {mountSolo} from "./dungeon/solo.js"
 import {content} from "./dungeon/content-he.js"
 import {t} from "./dungeon/strings-he.js"
 
@@ -26,6 +29,8 @@ viewof dungeonConfig = Inputs.form({
   seed: Inputs.text({label: t.form.seed, placeholder: t.form.seedHint})
 })
 
+viewof dungeonView = Inputs.radio(["gm", "solo"], {label: t.view.label, value: "gm", format: (key) => t.view[key]})
+
 viewof dungeonRequest = Inputs.button(t.form.generate)
 ```
 
@@ -41,5 +46,7 @@ dungeon = {
   }, dungeonData, content);
 }
 
-mount(dungeon, t, {...dungeonData.rules, stocking: dungeonData.stocking.link})
+dungeonLinks = ({...dungeonData.rules, stocking: dungeonData.stocking.link})
+
+dungeonView === "solo" ? mountSolo(dungeon, t, dungeonLinks, dungeonData) : mount(dungeon, t, dungeonLinks)
 ```

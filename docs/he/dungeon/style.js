@@ -247,6 +247,131 @@ export const css = `
   font-weight: 700;
 }
 
+.dg-status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem 1.2rem;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid #d5cfc0;
+  border-radius: 6px;
+  background: #fffdf8;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.dg-warn {
+  color: #9b2c2c;
+  font-weight: 600;
+}
+
+.dg-btn {
+  margin: 0.15rem 0 0.15rem 0.35rem;
+  padding: 0.2rem 0.65rem;
+  border: 1px solid #a89f8b;
+  border-radius: 4px;
+  background: #fff;
+  color: #2a2622;
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.dg-btn:hover {
+  background: #f1ece0;
+}
+
+.dg-btn-main {
+  border-color: #2c7a7b;
+  background: #2c7a7b;
+  color: #fff;
+}
+
+.dg-btn-main:hover {
+  background: #285e61;
+}
+
+.dg-actions {
+  margin: 0.4rem 0;
+}
+
+.dg-solo-room {
+  margin: 0 0 1rem;
+  border-color: #2c7a7b;
+}
+
+.dg-solo-room h4 {
+  font-size: 1.2rem;
+}
+
+.dg-encounter {
+  border: 1px solid #c9a3a3;
+  border-radius: 6px;
+  padding: 0.5rem 0.7rem;
+  margin: 0.4rem 0;
+  background: #fff8f6;
+}
+
+.dg-roll {
+  margin: 0 0 0.3rem;
+  font-size: 0.9rem;
+}
+
+.dg-hp-input {
+  width: 3.4rem;
+  padding: 0 0.2rem;
+  direction: ltr;
+  text-align: center;
+}
+
+.dg-exits {
+  list-style: none;
+  padding: 0;
+}
+
+.dg-exits li {
+  margin-bottom: 0.25rem;
+}
+
+.dg-settings,
+.dg-log,
+.dg-oracle {
+  margin: 0.5rem 0;
+}
+
+.dg-settings summary,
+.dg-log summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.dg-settings label {
+  display: block;
+  margin: 0.25rem 0;
+}
+
+.dg-root select {
+  direction: rtl;
+}
+
+.dg-oracle-answer {
+  font-weight: 700;
+  color: #553c9a;
+}
+
+.dg-log ol {
+  list-style: none;
+  padding: 0;
+  max-height: 16rem;
+  overflow-y: auto;
+  font-size: 0.9rem;
+}
+
+.dg-log-turn {
+  color: #777;
+}
+
 .dg-feature {
   font-weight: 600;
 }
