@@ -14,6 +14,15 @@ import { makeRng } from './generator.js';
 /** Number of characters the "number appearing" dice are taken to be meant for. */
 const REFERENCE_PARTY = 4;
 
+/**
+ * Share of the "number appearing" a party of this average level meets. The
+ * book's numbers can overwhelm brand-new characters, so levels 1 and 2 face
+ * smaller groups; from level 3 on the book's numbers stand.
+ */
+function levelScaleFor(partyLevel) {
+  return Math.min(1, 0.6 + 0.2 * (Math.max(1, partyLevel) - 1));
+}
+
 const COIN_GP = { cp: 0.01, sp: 0.1, ep: 0.5, gp: 1, pp: 5 };
 const COINS = ['pp', 'gp', 'ep', 'sp', 'cp'];
 
@@ -197,6 +206,7 @@ function createStocker(dungeon, data, rng) {
   const monsters = new Map(data.monsters.map((m) => [m.name, m]));
   const types = data.treasure.types;
   const partyScale = dungeon.party.count / REFERENCE_PARTY;
+  const levelScale = levelScaleFor(dungeon.party.level);
 
   function monsterFor(level, lair, room) {
     // Inside a faction's territory most monsters are the faction's own; its seat always is.
@@ -212,9 +222,8 @@ function createStocker(dungeon, data, rng) {
     }
     const m = monsters.get(entry.monster);
     const dice = m.appearing.dungeon || m.appearing.wild || '1';
-    // A faction's seat is never caught with fewer than an average showing.
-    const rolled = room.hq ? Math.max(rng.roll(dice), Math.ceil(average(dice))) : rng.roll(dice);
-    const count = Math.max(1, Math.round(rolled * partyScale * (own ? faction.strength : 1)));
+    const rolled = rng.roll(dice);
+    const count = Math.max(1, Math.round(rolled * partyScale * levelScale * (own ? faction.strength : 1)));
     const hd = m.hdMax > m.hd ? rng.int(m.hd, m.hdMax) : m.hd;
     const hpDice = m.hdMax > m.hd ? `${hd}d8` : m.hpDice;
     const hp = Array.from({ length: count }, () => Math.max(1, rng.roll(hpDice)));
