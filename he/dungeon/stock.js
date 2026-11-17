@@ -23,7 +23,18 @@ function levelScaleFor(partyLevel) {
   return Math.min(1, 0.6 + 0.2 * (Math.max(1, partyLevel) - 1));
 }
 
-const COIN_GP = { cp: 0.01, sp: 0.1, ep: 0.5, gp: 1, pp: 5 };
+/**
+ * How a room's monster is chosen. In a faction's territory, the share of
+ * rooms (other than its seat) held by the faction's own kind. Elsewhere, the
+ * share picked from all dungeon monsters by Hit Dice, and the share rolled on
+ * the encounter table one level up or down; the rest use the level's table.
+ */
+const VARIETY = { factionOwn: 0.6, byHitDice: 0.25, nearbyTable: 1 / 6 };
+
+/** Monsters with a dungeon number appearing that still make no sense in a dungeon room. */
+const NOT_IN_ROOMS = /^(בז|ינשוף|עיט|עיט ענק|ספרייט|פיקסי|היינודון|בבון סלע|יגואר|נמר \(פנתר\)|ננס)$|^(דינוזאור|דרקון)/;
+
+const COIN_GP ={ cp: 0.01, sp: 0.1, ep: 0.5, gp: 1, pp: 5 };
 const COINS = ['pp', 'gp', 'ep', 'sp', 'cp'];
 
 const MISSILE_WEAPON = /קשת|חץ|בריח|קליע/;
@@ -207,23 +218,53 @@ function createStocker(dungeon, data, rng) {
   const types = data.treasure.types;
   const partyScale = dungeon.party.count / REFERENCE_PARTY;
   const levelScale = levelScaleFor(dungeon.party.level);
+  // Monsters that can turn up in a dungeon room outside the encounter tables;
+  // swarms (bats, rats) that come by the dozen are left to the book's tables.
+  const roomMonsters = data.monsters.filter((m) => m.appearing && m.appearing.dungeon && !m.appearing.special
+    && average(m.appearing.dungeon) <= 12 && !NOT_IN_ROOMS.test(m.name));
+
+  /**
+   * Which monster lives in a room the factions do not hold. Mostly the book's
+   * encounter table for the level; sometimes the table one level up or down;
+   * sometimes any dungeon monster of about the level's Hit Dice, for variety.
+   * Wandering monsters keep to the level's own table, which the page shows.
+   */
+  function pickEntry(dungeonLevel, wandering) {
+    const levels = data.encounters.levels;
+    const r = wandering ? 1 : rng.next();
+    if (r < VARIETY.byHitDice) {
+      const pool = roomMonsters.filter((m) => m.hd >= dungeonLevel - 1 && m.hd <= dungeonLevel);
+      if (pool.length) {
+        const m = rng.pick(pool);
+        return { entry: { type: 'monster', monster: m.name, name: m.name, link: m.link }, scale: 1 };
+      }
+    }
+    if (r < VARIETY.byHitDice + VARIETY.nearbyTable) {
+      const deeper = dungeonLevel === 1 || rng.chance(0.5);
+      const entry = roller.on(bandFor(levels, dungeonLevel + (deeper ? 1 : -1)).entries, '1d12');
+      // A tougher table's monsters come in smaller groups, a weaker one's in larger.
+      return { entry, scale: deeper ? 0.7 : 1.3 };
+    }
+    return { entry: roller.on(bandFor(levels, dungeonLevel).entries, '1d12'), scale: 1 };
+  }
 
   function monsterFor(level, lair, room) {
     // Inside a faction's territory most monsters are the faction's own; its seat always is.
+    // The rest are pets, prisoners, vermin or squatters, picked like any other room's.
     const faction = room.faction !== null && room.faction !== undefined ? dungeon.factions[room.faction] : null;
-    const own = faction && (room.hq || rng.chance(0.9));
+    const own = faction && (room.hq || rng.chance(VARIETY.factionOwn));
     // Only a faction's seat holds its hoard; its other rooms are guard posts.
     if (own && !room.hq) lair = false;
-    const entry = own
-      ? { type: 'monster', monster: faction.monster, name: faction.monster }
-      : roller.on(bandFor(data.encounters.levels, level.dungeonLevel).entries, '1d12');
+    const { entry, scale } = own
+      ? { entry: { type: 'monster', monster: faction.monster, name: faction.monster }, scale: 1 }
+      : pickEntry(level.dungeonLevel, room.wandering);
     if (entry.type === 'npcParty' || !monsters.has(entry.monster)) {
       return { npcParty: entry.type === 'npcParty', name: entry.name, link: entry.link };
     }
     const m = monsters.get(entry.monster);
     const dice = m.appearing.dungeon || m.appearing.wild || '1';
     const rolled = rng.roll(dice);
-    const count = Math.max(1, Math.round(rolled * partyScale * levelScale * (own ? faction.strength : 1)));
+    const count = Math.max(1, Math.round(rolled * partyScale * levelScale * scale * (own ? faction.strength : 1)));
     const hd = m.hdMax > m.hd ? rng.int(m.hd, m.hdMax) : m.hd;
     const hpDice = m.hdMax > m.hd ? `${hd}d8` : m.hpDice;
     const hp = Array.from({ length: count }, () => Math.max(1, rng.roll(hpDice)));
@@ -275,7 +316,7 @@ function createStocker(dungeon, data, rng) {
 
 /** A wandering monster group for this level, rolled the same way as a room's monsters. */
 export function wanderingEncounter(dungeon, data, level, rng) {
-  return createStocker(dungeon, data, rng).monsterFor(level, false, { faction: null });
+  return createStocker(dungeon, data, rng).monsterFor(level, false, { faction: null, wandering: true });
 }
 
 export function stockDungeon(dungeon, data) {
