@@ -5,7 +5,7 @@
  */
 
 import { css } from './style.js';
-import { dungeonToPrompt } from './export.js';
+import { dungeonToPrompt, dungeonToSoloPrompt } from './export.js';
 
 const CELL = 24;
 
@@ -379,7 +379,7 @@ export function renderDungeon(dungeon, t, links = {}) {
   });
   return `<div class="dg-root" dir="rtl"><style>${css}</style>`
     + `<p class="dg-seed">${esc(t.seedUsed)} <code>${esc(dungeon.seed)}</code></p>`
-    + `<p class="dg-toolbar">${['link', 'print', 'prompt'].map((tool) => `<button type="button" class="dg-btn" data-tool="${tool}">${esc(t.tools[tool])}</button>`).join('')}</p>`
+    + `<p class="dg-toolbar">${['link', 'print', 'prompt', 'soloPrompt'].map((tool) => `<button type="button" class="dg-btn" data-tool="${tool}">${esc(t.tools[tool])}</button>`).join('')}</p>`
     + storyHtml(dungeon, t, links)
     + renderLegend(t)
     + levels.join('')
@@ -425,7 +425,7 @@ export function mount(dungeon, t, links = {}) {
         el.querySelectorAll('details').forEach((d) => { d.open = true; });
         window.print();
       } else {
-        const text = tool.dataset.tool === 'link' ? window.location.href : dungeonToPrompt(dungeon, t);
+        const text = { link: () => window.location.href, prompt: () => dungeonToPrompt(dungeon, t), soloPrompt: () => dungeonToSoloPrompt(dungeon, t) }[tool.dataset.tool]();
         copyText(text).then((ok) => flash(tool, ok ? t.tools.copied : t.tools.failed));
       }
       return;

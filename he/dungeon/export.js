@@ -2,9 +2,10 @@
  * Dungeon generator — plain-text export. Pure logic, no DOM.
  *
  * dungeonToPrompt writes the whole dungeon as text, headed by a request to
- * expand it into read-aloud prose. Pasted into any AI chat, it gives the
- * narrative depth the generator's tables cannot, without the site itself
- * depending on an AI service.
+ * expand it into read-aloud prose. dungeonToSoloPrompt heads the same text
+ * with instructions for an AI to run it as the GM for a solo player. Pasted
+ * into any AI chat, either gives what the generator's tables cannot, without
+ * the site itself depending on an AI service.
  */
 
 const fill = (template, values) => template.replace(/\{(\w+)\}/g, (_, k) => (k in values ? values[k] : ''));
@@ -41,7 +42,12 @@ function roomText(dungeon, level, room, t) {
     const mo = c.monster;
     if (mo.npcParty || !mo.count) lines.push(`  ${t.content.monster}: ${mo.name}`);
     else {
-      lines.push(`  ${t.content.monster}: ${mo.name} ×${mo.count} (${t.monster.hp} ${mo.hp.join(', ')}; ${t.monster.ac} ${mo.ac}; ${t.monster.morale} ${mo.moraleText})`);
+      const stats = [
+        `${t.monster.hp} ${mo.hp.join(', ')}`, `${t.monster.ac} ${mo.ac}`, `${t.monster.hd} ${mo.hdText}`,
+        `${t.monster.attacks} ${mo.attacks}`, `${t.monster.damage} ${mo.damage}`, `${t.monster.move} ${mo.move}`,
+        `${t.monster.save} ${mo.saveText}`, `${t.monster.morale} ${mo.moraleText}`,
+      ];
+      lines.push(`  ${t.content.monster}: ${mo.name} ×${mo.count} (${stats.join('; ')})`);
       const loot = treasureText(mo.treasure, t);
       if (loot) lines.push(`  ${mo.lair ? t.treasure.lair : t.treasure.carried}: ${loot}`);
     }
@@ -60,6 +66,18 @@ function roomText(dungeon, level, room, t) {
   });
   lines.push(`  ${t.card.exits}: ${exits.join('; ')}`);
   return lines.join('\n');
+}
+
+/** A level's wandering monster check and table, as text. */
+function wanderingText(level, t) {
+  const w = level.wandering;
+  if (!w) return [];
+  const rows = w.entries.map((e, i) => {
+    const next = w.entries[i + 1];
+    const range = next && next.roll - 1 > e.roll ? `${e.roll}–${next.roll - 1}` : String(e.roll);
+    return `  ${range}: ${e.name}`;
+  });
+  return [`${t.wandering.title}: ${fill(t.wandering.rule, { turns: w.everyTurns, chance: w.chanceIn6, die: w.die })}`, ...rows, ''];
 }
 
 /** The settings that reproduce this dungeon, as URL parameters ("seed=...&size=..."). */
@@ -90,6 +108,7 @@ export function dungeonToText(dungeon, t) {
   }
   for (const level of dungeon.levels) {
     out.push(`== ${fill(many ? t.level.titleMany : t.level.titleOne, { n: level.index + 1, dl: level.dungeonLevel })} ==`, '');
+    out.push(...wanderingText(level, t));
     for (const room of level.rooms) out.push(roomText(dungeon, level, room, t), '');
   }
   return out.join('\n');
@@ -98,4 +117,15 @@ export function dungeonToText(dungeon, t) {
 /** The text above, headed by the request to an AI assistant. */
 export function dungeonToPrompt(dungeon, t) {
   return `${t.export.prompt}\n\n${dungeonToText(dungeon, t)}`;
+}
+
+/** The text above, headed by instructions for an AI to run it as the GM for a solo player. */
+export function dungeonToSoloPrompt(dungeon, t) {
+  const p = dungeon.party;
+  const head = fill(t.export.soloPrompt.join('\n'), {
+    count: p.count,
+    level: p.level,
+    classes: p.classes.length ? fill(t.export.soloClasses, { classes: p.classes.join(', ') }) : '',
+  });
+  return `${head}\n\n${dungeonToText(dungeon, t)}`;
 }
